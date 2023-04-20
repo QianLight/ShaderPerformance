@@ -1,0 +1,55 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40e1cbd74443f2b4a9ea8cdee05aef60, type: 3}
+  m_Name: ShaderGUIConfig_SFX_Uber
+  m_EditorClassIdentifier: 
+  shader: {fileID: 4800000, guid: 919c99e786513a3488e42ad663cfb2f7, type: 3}
+  dummyMatType: 1
+  lsType: 0
+  shaderFeatures:
+  - hash: 
+    sfg: {fileID: 11400000, guid: a04ace874d58ce6419d1698094d0202a, type: 2}
+    shaderFeatures:
+    - SFX_MainTex
+    - SFX_UVST
+    - SFX_Color
+    - SFX_BackColorMask
+    - SFX_BackColor
+    - SFX_ColorModify
+    - SFX_WidthColor
+    - SFX_AlphaModify
+    - SFX_AlphaTest
+    - SFX_Cutout
+    - SFX_MaskEnable
+    - SFX_MaskTex
+    - SFX_MaskUVST
+    - SFX_ClipEnable
+    - SFX_ClipHardness
+    - SFX_CustomData0
+    - SFX_CustomData1
+    - SFX_TurbulenceTex
+    - SFX_TurbulenceEnable
+    - SFX_FresnelEnable
+    - SFX_Fresnel
+    - SFX_RampEnable
+    - SFX_RampColor0
+    - SFX_RampColor1
+    - SFX_RampColor2
+    - SFX_RampParam0
+    - SFX_RampParam1
+    - SFX_RampParam2
+    - SFX_RampParam3
+    - SFX_empty
+    - SFX_TurbulenceParameter
+    - SFX_TurbulenceEnable_UVST
+    - SFX_MatDataEnable
+    - SFX_CameraFade

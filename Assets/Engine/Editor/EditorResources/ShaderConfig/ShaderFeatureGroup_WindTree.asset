@@ -1,0 +1,213 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 646143184789ad04bb6d1f7feb898645, type: 3}
+  m_Name: ShaderFeatureGroup_WindTree
+  m_EditorClassIdentifier: 
+  shaderFeatureBlocks:
+  - hash: abc707e8-1c9e-42f5-8617-fdb2f31b9d29
+    bundleName: NoiseControl
+    shaderFeatures:
+    - name: Noise
+      propertyName: _Param2
+      type: 5
+      defaultColor: {r: 1, g: 1, b: 1, a: 1}
+      flag: 0
+      customProperty:
+      - valid: 1
+        desc: Magnitude
+        defaultValue: 0
+        min: 0
+        max: 10
+        index: -1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      - valid: 1
+        desc: Frenquency
+        defaultValue: 0
+        min: 0
+        max: 10
+        index: -1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      - valid: 1
+        desc: ModelScaleCorrection
+        defaultValue: 0
+        min: 0
+        max: 10
+        index: -1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      - valid: 1
+        desc: MaskRange
+        defaultValue: 0
+        min: 0
+        max: 1
+        index: -1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      dependencyPropertys:
+        isNor: 0
+        dependencyType: 0
+        dependencyShaderProperty: []
+      hash: c33577f1-3f36-46a7-bab3-16792d7045d2
+  - hash: 62f97c2d-830e-46e6-b2d6-d588fbf4dde1
+    bundleName: Offset
+    shaderFeatures:
+    - name: WindOffset
+      propertyName: _Param3
+      type: 3
+      defaultColor: {r: 1, g: 1, b: 1, a: 1}
+      flag: 0
+      customProperty:
+      - valid: 0
+        desc: 
+        defaultValue: 0
+        min: 0
+        max: 1
+        index: -1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      - valid: 0
+        desc: 
+        defaultValue: 0
+        min: 0
+        max: 1
+        index: -1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      - valid: 0
+        desc: 
+        defaultValue: 0
+        min: 0
+        max: 1
+        index: -1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      - valid: 0
+        desc: 
+        defaultValue: 0
+        min: 0
+        max: 1
+        index: -1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      dependencyPropertys:
+        isNor: 0
+        dependencyType: 0
+        dependencyShaderProperty: []
+      hash: 0eccf56f-406c-460f-bc91-a911c6af68f0
+  - hash: a6ee4cfd-a2f7-4051-8b6f-04b089f58555
+    bundleName: Range
+    shaderFeatures:
+    - name: 
+      propertyName: _Param4
+      type: 5
+      defaultColor: {r: 1, g: 1, b: 1, a: 1}
+      flag: 0
+      customProperty:
+      - valid: 1
+        desc: Range
+        defaultValue: 0
+        min: -1
+        max: 1
+        index: -1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      - valid: 0
+        desc: 
+        defaultValue: 0
+        min: 0
+        max: 1
+        index: -1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      - valid: 0
+        desc: 
+        defaultValue: 0
+        min: 0
+        max: 1
+        index: -1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      - valid: 0
+        desc: 
+        defaultValue: 0
+        min: 0
+        max: 1
+        index: -1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      dependencyPropertys:
+        isNor: 0
+        dependencyType: 0
+        dependencyShaderProperty: []
+      hash: 236d664e-5e19-44e8-b9a2-60fe1fc504c6

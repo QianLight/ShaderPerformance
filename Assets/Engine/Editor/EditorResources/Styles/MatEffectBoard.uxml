@@ -1,0 +1,12 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements">
+    <ui:VisualElement picking-mode="Ignore">
+        <Style path="Assets/Engine/Editor/EditorResources/Styles/MatEffectBoard.uss" />
+        <ui:Label text="MatEffect" name="title" picking-mode="Ignore" />
+        <uie:Toolbar picking-mode="Ignore" style="-unity-background-image-tint-color: rgb(72, 72, 72);">
+            <uie:ToolbarButton text="Save" name="save" style="border-color: rgb(0, 0, 0); -unity-background-image-tint-color: rgb(72, 72, 72); color: rgb(255, 255, 255);" />
+        </uie:Toolbar>
+    </ui:VisualElement>
+    <CFEngine.Editor.ResizableElement picking-mode="Ignore">
+        <Style path="Assets/Engine/Editor/EditorResources/Styles/MatEffectBoard.uss" />
+    </CFEngine.Editor.ResizableElement>
+</ui:UXML>

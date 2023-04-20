@@ -1,0 +1,460 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 646143184789ad04bb6d1f7feb898645, type: 3}
+  m_Name: ShaderFeatureGroup_Glass03
+  m_EditorClassIdentifier: 
+  shaderFeatureBlocks:
+  - hash: 02005cf4-5772-48dd-abe9-94fd0345ff1e
+    bundleName: 
+    shaderFeatures:
+    - name: NormalThicknessTex
+      propertyName: _ProcedureTex0
+      type: 1
+      defaultColor: {r: 1, g: 1, b: 1, a: 1}
+      flag: 0
+      customProperty:
+      - valid: 0
+        desc: 
+        defaultValue: 0
+        min: 0
+        max: 1
+        index: -1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      - valid: 0
+        desc: 
+        defaultValue: 0
+        min: 0
+        max: 1
+        index: -1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      - valid: 0
+        desc: 
+        defaultValue: 0
+        min: 0
+        max: 1
+        index: -1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      - valid: 0
+        desc: 
+        defaultValue: 0
+        min: 0
+        max: 1
+        index: -1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      dependencyPropertys:
+        isNor: 0
+        dependencyType: 0
+        dependencyShaderProperty: []
+      hash: df58f0a2-c1a8-4e33-a8c6-39f76f6bb80b
+    - name: MatCap
+      propertyName: _ProcedureTex1
+      type: 1
+      defaultColor: {r: 1, g: 1, b: 1, a: 1}
+      flag: 0
+      customProperty:
+      - valid: 0
+        desc: 
+        defaultValue: 0
+        min: 0
+        max: 1
+        index: -1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      - valid: 0
+        desc: 
+        defaultValue: 0
+        min: 0
+        max: 1
+        index: -1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      - valid: 0
+        desc: 
+        defaultValue: 0
+        min: 0
+        max: 1
+        index: -1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      - valid: 0
+        desc: 
+        defaultValue: 0
+        min: 0
+        max: 1
+        index: -1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      dependencyPropertys:
+        isNor: 0
+        dependencyType: 0
+        dependencyShaderProperty: []
+      hash: 9986850d-e6f2-420d-b997-62d47abcdc85
+    - name: SpecularColor
+      propertyName: _Color1
+      type: 2
+      defaultColor: {r: 1, g: 1, b: 1, a: 1}
+      flag: 0
+      customProperty:
+      - valid: 0
+        desc: 
+        defaultValue: 0
+        min: 0
+        max: 1
+        index: -1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      - valid: 0
+        desc: 
+        defaultValue: 0
+        min: 0
+        max: 1
+        index: -1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      - valid: 0
+        desc: 
+        defaultValue: 0
+        min: 0
+        max: 1
+        index: -1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      - valid: 0
+        desc: 
+        defaultValue: 0
+        min: 0
+        max: 1
+        index: -1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      dependencyPropertys:
+        isNor: 0
+        dependencyType: 0
+        dependencyShaderProperty: []
+      hash: e08f4975-24ee-4f8b-914d-7ef45581a79f
+    - name: GlassParam
+      propertyName: _Param0
+      type: 5
+      defaultColor: {r: 1, g: 1, b: 1, a: 1}
+      flag: 0
+      customProperty:
+      - valid: 1
+        desc: FresnelEdge
+        defaultValue: 1
+        min: 0
+        max: 2
+        index: -1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      - valid: 1
+        desc: FresnelIntensity
+        defaultValue: -1
+        min: -50
+        max: 0
+        index: -1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      - valid: 1
+        desc: RefIntensity
+        defaultValue: 0
+        min: -2
+        max: 2
+        index: -1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      - valid: 1
+        desc: BumpMapIntensity
+        defaultValue: 1
+        min: -20
+        max: 20
+        index: -1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      dependencyPropertys:
+        isNor: 0
+        dependencyType: 0
+        dependencyShaderProperty: []
+      hash: c7d24ef3-41a0-4614-bbe7-c8f43fe07ca1
+    - name: LaserEnable
+      propertyName: _USE_LASER
+      type: 4
+      defaultColor: {r: 1, g: 1, b: 1, a: 1}
+      flag: 0
+      customProperty:
+      - valid: 0
+        desc: 
+        defaultValue: 0
+        min: 0
+        max: 1
+        index: -1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      - valid: 0
+        desc: 
+        defaultValue: 0
+        min: 0
+        max: 1
+        index: -1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      - valid: 0
+        desc: 
+        defaultValue: 0
+        min: 0
+        max: 1
+        index: -1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      - valid: 0
+        desc: 
+        defaultValue: 0
+        min: 0
+        max: 1
+        index: -1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      dependencyPropertys:
+        isNor: 0
+        dependencyType: 0
+        dependencyShaderProperty: []
+      hash: b26073fb-aecd-4a4a-90ae-361c00dd075f
+    - name: Laser
+      propertyName: _Param1
+      type: 5
+      defaultColor: {r: 1, g: 1, b: 1, a: 1}
+      flag: 0
+      customProperty:
+      - valid: 1
+        desc: LaserContrast
+        defaultValue: 0
+        min: 0
+        max: 1
+        index: -1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      - valid: 1
+        desc: LaserInt
+        defaultValue: 0
+        min: 0
+        max: 1
+        index: -1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      - valid: 1
+        desc: LaserTiling
+        defaultValue: 0
+        min: 0
+        max: 30
+        index: -1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      - valid: 0
+        desc: 
+        defaultValue: 0
+        min: 0
+        max: 1
+        index: -1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      dependencyPropertys:
+        isNor: 0
+        dependencyType: 0
+        dependencyShaderProperty:
+        - LaserEnable
+      hash: 443f4a9d-9ac6-44ad-b105-dfd79f0130f0
+    - name: Laser2
+      propertyName: _Param1
+      type: 5
+      defaultColor: {r: 1, g: 1, b: 1, a: 1}
+      flag: 0
+      customProperty:
+      - valid: 1
+        desc: LaserContrast
+        defaultValue: 0
+        min: 0
+        max: 1
+        index: -1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      - valid: 1
+        desc: LaserInt
+        defaultValue: 0
+        min: 0
+        max: 1
+        index: -1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      - valid: 1
+        desc: LaserTiling
+        defaultValue: 0
+        min: 0
+        max: 30
+        index: -1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      - valid: 0
+        desc: 
+        defaultValue: 0
+        min: 0
+        max: 1
+        index: -1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      dependencyPropertys:
+        isNor: 0
+        dependencyType: 0
+        dependencyShaderProperty: []
+      hash: 412e7928-a3b9-4e1c-af6e-775421349e2d

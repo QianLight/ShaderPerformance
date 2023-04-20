@@ -1,0 +1,7 @@
+{
+  "description": "Zeus Core",
+  "displayName": "Zeus Core",
+  "name": "com.pwrd.zeus-framework.core",
+  "version": "2.0.0",
+  "type": "library"
+}

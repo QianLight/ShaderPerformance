@@ -1,0 +1,98 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: TreeXPivotPainter 1
+  m_Shader: {fileID: 4800000, guid: 4241dc4a59d84c0478653ee46ef1f04b, type: 3}
+  m_ShaderKeywords: _ALPHA_TEST _MASSIVE
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: 2450
+  stringTagMap:
+    RenderType: Cutout
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _MainTex:
+        m_Texture: {fileID: 2800000, guid: 66e1c8fdd89166e4e8e0bf776d902fdb, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex1:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex2:
+        m_Texture: {fileID: 2800000, guid: 8c485c31bd788214b971becab2487792, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex3:
+        m_Texture: {fileID: 2800000, guid: df33f02257990a94a82e5836019cb29e, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ProcedureTex0:
+        m_Texture: {fileID: 2800000, guid: a137e4505fbfae2489ae0ba3357f7700, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ProcedureTex1:
+        m_Texture: {fileID: 2800000, guid: daff08a593e9b094b97c5e35e51c7c3b, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - _DampingRadiusMultipiler0: 1
+    - _DampingRadiusMultipiler1: 1
+    - _DampingRadiusMultipiler2: 1
+    - _DampingRadiusMultipiler3: 1
+    - _DebugMode: 0
+    - _DstBlend: 0
+    - _MaxRotation0: 0.1
+    - _MaxRotation1: 0.1
+    - _MaxRotation2: 0.1
+    - _MaxRotation3: 0.1
+    - _ParentRotationAngleInfulence0: 0
+    - _ParentRotationAngleInfulence1: 0
+    - _ParentRotationAngleInfulence2: 0
+    - _ParentRotationAngleInfulence3: 0
+    - _RandomRotationInfulence0: 1
+    - _RandomRotationInfulence1: 1
+    - _RandomRotationInfulence2: 1
+    - _RandomRotationInfulence3: 1
+    - _SrcBlend: 1
+    - _WindGustOffset0: 0
+    - _WindGustOffset1: 0
+    - _WindGustOffset2: 0
+    - _WindGustOffset3: 0
+    - _WindGustWorldScale: 1
+    - _WindHorizontalSpeed: 1
+    - _WindRandomRotationChangeRate0: 1
+    - _WindRandomRotationChangeRate1: 1
+    - _WindRandomRotationChangeRate2: 1
+    - _WindRandomRotationChangeRate3: 1
+    - _WindSpeed: 1
+    - _ZWrite: 1
+    m_Colors:
+    - _Color: {r: 0.58799994, g: 0.58799994, b: 0.58799994, a: 1}
+    - _Color0: {r: 0.745283, g: 0.56277066, b: 0.4324048, a: 0.88235295}
+    - _Color1: {r: 0.23106563, g: 0.4433962, b: 0, a: 1}
+    - _Layer0Control_0: {r: 0, g: 2, b: 0.23, a: 0}
+    - _Layer0Control_1: {r: 0, g: 0, b: 0, a: 0}
+    - _Layer1Control_0: {r: 0, g: 0, b: 0.79, a: 0}
+    - _Layer1Control_1: {r: 0, g: 0, b: 0, a: 0}
+    - _Layer2Control_0: {r: 0, g: 0, b: 1.45, a: 0}
+    - _Layer2Control_1: {r: 0, g: 0, b: 0, a: 0}
+    - _Layer3Control_0: {r: 0, g: 0, b: 0.33, a: 0}
+    - _Layer3Control_1: {r: 0, g: 0, b: 0, a: 0}
+    - _Param0: {r: 0.6, g: 1, b: 1, a: 0.15}
+    - _Param1: {r: 0.1, g: 0, b: 0.059, a: 0.5}
+    - _Param2: {r: 0, g: 0, b: -0.717, a: 2}
+    - _ScaleTest: {r: 0.33, g: 1, b: 0, a: 0}
+    - _UVST0: {r: 1, g: 1, b: 0, a: 0}
+    - _WindControl: {r: 0.01, g: 1, b: 0.1, a: 0}
+    - _WindXAxis: {r: 1, g: 0, b: 0, a: 0}
+    - _WindYAxis: {r: 0, g: 1, b: 0, a: 0}

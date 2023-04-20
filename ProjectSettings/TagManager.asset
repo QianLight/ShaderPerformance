@@ -3,7 +3,22 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - UI
+  - AirWall
+  - AirWallNotCamera
+  - BindedRes
+  - LevelDynamic
+  - Timeline
+  - Weapon
+  - Role
+  - AirWallGrid
+  - AimThrowGrid
+  - Interactive
+  - ProjectionMeshBox
+  - UICamera
+  - UISceneCamera
+  - MonsterGrid
   layers:
   - Default
   - TransparentFX
@@ -13,31 +28,34 @@ TagManager:
   - UI
   - 
   - 
+  - UIScene
+  - Terrain
+  - Enemy
+  - Role
+  - Opposer
+  - BigGuy
+  - CameraBlock
+  - Airwall
+  - DynamicCulling
+  - Npc
+  - 
+  - Dummy
+  - 
+  - Player
   - 
   - 
   - 
+  - Camera
+  - CULL_LOD0
+  - CULL_LOD1
+  - CULL_LOD2
   - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - LayerEdit
+  - InVisiblity
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: UISorting
+    uniqueID: 1411885903
     locked: 0

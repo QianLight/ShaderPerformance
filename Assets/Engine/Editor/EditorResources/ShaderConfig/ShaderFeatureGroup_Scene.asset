@@ -1,0 +1,1044 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 646143184789ad04bb6d1f7feb898645, type: 3}
+  m_Name: ShaderFeatureGroup_Scene
+  m_EditorClassIdentifier: 
+  shaderFeatureBlocks:
+  - hash: b6a12c75-f3de-44cd-b878-e55fa3ae26e5
+    bundleName: Emissive
+    shaderFeatures:
+    - name: Emissive
+      propertyName: _Param2
+      type: 6
+      defaultColor: {r: 1, g: 1, b: 1, a: 1}
+      flag: 0
+      customProperty:
+      - valid: 0
+        desc: 
+        defaultValue: 0
+        min: 0
+        max: 1
+        index: 3
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 2
+        thresholdValue: 0.5
+      - valid: 0
+        desc: 
+        defaultValue: 0
+        min: 0
+        max: 1
+        index: -1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      - valid: 0
+        desc: 
+        defaultValue: 0
+        min: 0
+        max: 1
+        index: -1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      - valid: 1
+        desc: Enable
+        defaultValue: 0
+        min: 0
+        max: 1
+        index: -1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      dependencyPropertys:
+        isNor: 0
+        dependencyType: 0
+        dependencyShaderProperty: []
+      hash: c3a6ede9-f139-48ca-a670-72525e904358
+    - name: EmiParam
+      propertyName: _Param2
+      type: 5
+      defaultColor: {r: 1, g: 1, b: 1, a: 1}
+      flag: 0
+      customProperty:
+      - valid: 1
+        desc: Intensity
+        defaultValue: 0
+        min: 0
+        max: 10
+        index: -1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      - valid: 1
+        desc: FlowSpeed
+        defaultValue: 0
+        min: 0
+        max: 10
+        index: -1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      - valid: 1
+        desc: Amplitude
+        defaultValue: 0
+        min: 0
+        max: 10
+        index: -1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      - valid: 0
+        desc: 
+        defaultValue: 0
+        min: 0
+        max: 1
+        index: -1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 2
+        thresholdValue: 0.5
+      dependencyPropertys:
+        isNor: 0
+        dependencyType: 0
+        dependencyShaderProperty:
+        - Emissive
+      hash: 7cbb0c81-4db8-4771-81f1-7060a437dcc1
+    - name: EmiColor
+      propertyName: _Color1
+      type: 2
+      defaultColor: {r: 1, g: 1, b: 1, a: 1}
+      flag: 0
+      customProperty:
+      - valid: 0
+        desc: 
+        defaultValue: 0
+        min: 0
+        max: 1
+        index: -1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      - valid: 0
+        desc: 
+        defaultValue: 0
+        min: 0
+        max: 1
+        index: -1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      - valid: 0
+        desc: 
+        defaultValue: 0
+        min: 0
+        max: 1
+        index: -1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      - valid: 0
+        desc: 
+        defaultValue: 0
+        min: 0
+        max: 1
+        index: -1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      dependencyPropertys:
+        isNor: 0
+        dependencyType: 0
+        dependencyShaderProperty:
+        - Emissive
+      hash: 55f9488b-638e-410b-96b2-54c60f84d583
+    - name: UseTex
+      propertyName: _Color1
+      type: 6
+      defaultColor: {r: 1, g: 1, b: 1, a: 1}
+      flag: 0
+      customProperty:
+      - valid: 0
+        desc: 
+        defaultValue: 0
+        min: 0
+        max: 1
+        index: 3
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 2
+        thresholdValue: 0.5
+      - valid: 0
+        desc: 
+        defaultValue: 0
+        min: 0
+        max: 1
+        index: -1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      - valid: 0
+        desc: 
+        defaultValue: 0
+        min: 0
+        max: 1
+        index: -1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      - valid: 1
+        desc: UseTex
+        defaultValue: 0
+        min: 0
+        max: 1
+        index: -1
+        intValue: 0
+        toggleType: 1
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 2
+        thresholdValue: 0.5
+      dependencyPropertys:
+        isNor: 0
+        dependencyType: 0
+        dependencyShaderProperty: []
+      hash: f44c2c98-62e5-47b2-82ff-95e1bb0b3532
+    - name: EmiTex
+      propertyName: _ProcedureTex3
+      type: 1
+      defaultColor: {r: 1, g: 1, b: 1, a: 1}
+      flag: 0
+      customProperty:
+      - valid: 0
+        desc: 
+        defaultValue: 0
+        min: 0
+        max: 1
+        index: -1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      - valid: 0
+        desc: 
+        defaultValue: 0
+        min: 0
+        max: 1
+        index: -1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      - valid: 0
+        desc: 
+        defaultValue: 0
+        min: 0
+        max: 1
+        index: -1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      - valid: 0
+        desc: 
+        defaultValue: 0
+        min: 0
+        max: 1
+        index: -1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      dependencyPropertys:
+        isNor: 0
+        dependencyType: 0
+        dependencyShaderProperty:
+        - UseTex
+      hash: e2c4a6df-e0dc-47a9-80c5-1756bebef091
+  - hash: 9638b428-7b18-42f9-ae6b-6ddd0cb63279
+    bundleName: Effect
+    shaderFeatures:
+    - name: CustomEffect
+      propertyName: _CUSTOM_EFFECT
+      type: 4
+      defaultColor: {r: 1, g: 1, b: 1, a: 1}
+      flag: 0
+      customProperty:
+      - valid: 0
+        desc: 
+        defaultValue: 0
+        min: 0
+        max: 1
+        index: -1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      - valid: 0
+        desc: 
+        defaultValue: 0
+        min: 0
+        max: 1
+        index: -1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      - valid: 0
+        desc: 
+        defaultValue: 0
+        min: 0
+        max: 1
+        index: -1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      - valid: 0
+        desc: 
+        defaultValue: 0
+        min: 0
+        max: 1
+        index: -1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      dependencyPropertys:
+        isNor: 0
+        dependencyType: 0
+        dependencyShaderProperty: []
+      hash: e728baa3-330a-4cdd-8322-c43601cf404a
+    - name: OverLayEnable
+      propertyName: _Param3
+      type: 6
+      defaultColor: {r: 1, g: 1, b: 1, a: 1}
+      flag: 0
+      customProperty:
+      - valid: 0
+        desc: 
+        defaultValue: 0
+        min: 0
+        max: 1
+        index: 3
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 2
+        thresholdValue: 0.5
+      - valid: 0
+        desc: 
+        defaultValue: 0
+        min: 0
+        max: 1
+        index: -1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      - valid: 0
+        desc: 
+        defaultValue: 0
+        min: 0
+        max: 1
+        index: -1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      - valid: 0
+        desc: 
+        defaultValue: 0
+        min: 0
+        max: 1
+        index: -1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      dependencyPropertys:
+        isNor: 0
+        dependencyType: 0
+        dependencyShaderProperty:
+        - CustomEffect
+      hash: 1138c697-783a-4fd7-9416-d7945612538d
+    - name: OverLayParam
+      propertyName: _Param3
+      type: 5
+      defaultColor: {r: 1, g: 1, b: 1, a: 1}
+      flag: 0
+      customProperty:
+      - valid: 0
+        desc: 
+        defaultValue: 0
+        min: 0
+        max: 1
+        index: 3
+        intValue: 0
+        toggleType: 1
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 2
+        thresholdValue: 0.5
+      - valid: 1
+        desc: EdgeSmooth
+        defaultValue: 0
+        min: -1
+        max: 1
+        index: 0
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      - valid: 1
+        desc: Ratio
+        defaultValue: 0
+        min: -0.5
+        max: 0.5
+        index: 1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      - valid: 1
+        desc: UVScale
+        defaultValue: 0
+        min: 0
+        max: 100
+        index: 2
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      dependencyPropertys:
+        isNor: 0
+        dependencyType: 1
+        dependencyShaderProperty:
+        - CustomEffect
+        - OverLayEnable
+      hash: 574bbfaa-3427-4a74-b111-4c4b5f2e1dd9
+    - name: OverLayTex
+      propertyName: _ProcedureTex1
+      type: 1
+      defaultColor: {r: 1, g: 1, b: 1, a: 1}
+      flag: 0
+      customProperty:
+      - valid: 0
+        desc: 
+        defaultValue: 0
+        min: 0
+        max: 1
+        index: -1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      - valid: 0
+        desc: 
+        defaultValue: 0
+        min: 0
+        max: 1
+        index: -1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      - valid: 0
+        desc: 
+        defaultValue: 0
+        min: 0
+        max: 1
+        index: -1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      - valid: 0
+        desc: 
+        defaultValue: 0
+        min: 0
+        max: 1
+        index: -1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      dependencyPropertys:
+        isNor: 0
+        dependencyType: 1
+        dependencyShaderProperty:
+        - CustomEffect
+        - OverLayEnable
+      hash: 6437feeb-5a7c-4feb-a0ef-9dae208006e7
+    - name: OverLayColor
+      propertyName: _Color2
+      type: 2
+      defaultColor: {r: 1, g: 1, b: 1, a: 1}
+      flag: 0
+      customProperty:
+      - valid: 0
+        desc: 
+        defaultValue: 0
+        min: 0
+        max: 1
+        index: -1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      - valid: 0
+        desc: 
+        defaultValue: 0
+        min: 0
+        max: 1
+        index: -1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      - valid: 0
+        desc: 
+        defaultValue: 0
+        min: 0
+        max: 1
+        index: -1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      - valid: 0
+        desc: 
+        defaultValue: 0
+        min: 0
+        max: 1
+        index: -1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      dependencyPropertys:
+        isNor: 0
+        dependencyType: 1
+        dependencyShaderProperty:
+        - CustomEffect
+        - OverLayEnable
+      hash: d75ba7b9-35d6-48cf-99b3-5ebc8bf37893
+    - name: DetailEnable
+      propertyName: _Param4
+      type: 6
+      defaultColor: {r: 1, g: 1, b: 1, a: 1}
+      flag: 0
+      customProperty:
+      - valid: 0
+        desc: 
+        defaultValue: 0
+        min: 0
+        max: 1
+        index: 3
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 2
+        thresholdValue: 0.5
+      - valid: 0
+        desc: 
+        defaultValue: 0
+        min: 0
+        max: 1
+        index: -1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      - valid: 0
+        desc: 
+        defaultValue: 0
+        min: 0
+        max: 1
+        index: -1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      - valid: 0
+        desc: 
+        defaultValue: 0
+        min: 0
+        max: 1
+        index: -1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      dependencyPropertys:
+        isNor: 0
+        dependencyType: 0
+        dependencyShaderProperty:
+        - CustomEffect
+      hash: 5d5fb9ee-54e1-48af-afe7-0ea5b4560529
+    - name: DetailParam
+      propertyName: _Param4
+      type: 5
+      defaultColor: {r: 1, g: 1, b: 1, a: 1}
+      flag: 0
+      customProperty:
+      - valid: 0
+        desc: 
+        defaultValue: 0
+        min: 0
+        max: 1
+        index: 3
+        intValue: 0
+        toggleType: 1
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 2
+        thresholdValue: 0.5
+      - valid: 1
+        desc: ScaleU
+        defaultValue: 1
+        min: 0
+        max: 100
+        index: 0
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      - valid: 1
+        desc: ScaleV
+        defaultValue: 1
+        min: 0
+        max: 100
+        index: 1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      - valid: 1
+        desc: NormalWeight
+        defaultValue: 1
+        min: 0
+        max: 2
+        index: 2
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      dependencyPropertys:
+        isNor: 0
+        dependencyType: 1
+        dependencyShaderProperty:
+        - CustomEffect
+        - DetailEnable
+      hash: 35b44c1e-efc6-44a1-b847-c86f263cd88b
+    - name: DetailTex
+      propertyName: _ProcedureTex2
+      type: 1
+      defaultColor: {r: 1, g: 1, b: 1, a: 1}
+      flag: 0
+      customProperty:
+      - valid: 0
+        desc: 
+        defaultValue: 0
+        min: 0
+        max: 1
+        index: -1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      - valid: 0
+        desc: 
+        defaultValue: 0
+        min: 0
+        max: 1
+        index: -1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      - valid: 0
+        desc: 
+        defaultValue: 0
+        min: 0
+        max: 1
+        index: -1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      - valid: 0
+        desc: 
+        defaultValue: 0
+        min: 0
+        max: 1
+        index: -1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      dependencyPropertys:
+        isNor: 0
+        dependencyType: 1
+        dependencyShaderProperty:
+        - CustomEffect
+        - DetailEnable
+      hash: 0cf4dd3f-2744-4546-a7ac-9c8362f7a6f8
+    - name: IsFlower
+      propertyName: _FLOWER
+      type: 4
+      defaultColor: {r: 1, g: 1, b: 1, a: 1}
+      flag: 0
+      customProperty:
+      - valid: 0
+        desc: 
+        defaultValue: 0
+        min: 0
+        max: 1
+        index: -1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      - valid: 0
+        desc: 
+        defaultValue: 0
+        min: 0
+        max: 1
+        index: -1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      - valid: 0
+        desc: 
+        defaultValue: 0
+        min: 0
+        max: 1
+        index: -1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      - valid: 0
+        desc: 
+        defaultValue: 0
+        min: 0
+        max: 1
+        index: -1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      dependencyPropertys:
+        isNor: 0
+        dependencyType: 0
+        dependencyShaderProperty: []
+      hash: 04e0c6d4-19ba-4cd8-adfc-06859dac35e5
+    - name: Grass_Collision
+      propertyName: _GrassCollisionParam
+      type: 5
+      defaultColor: {r: 1, g: 1, b: 1, a: 1}
+      flag: 0
+      customProperty:
+      - valid: 1
+        desc: _PushAngle
+        defaultValue: 80
+        min: 30
+        max: 90
+        index: 0
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      - valid: 0
+        desc: _PushValue
+        defaultValue: 1
+        min: 0
+        max: 1
+        index: -1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      - valid: 0
+        desc: 
+        defaultValue: 0
+        min: 0
+        max: 1
+        index: -1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      - valid: 0
+        desc: 
+        defaultValue: 0
+        min: 0
+        max: 1
+        index: -1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      dependencyPropertys:
+        isNor: 0
+        dependencyType: 0
+        dependencyShaderProperty: []
+      hash: bb24c062-fcc0-4ca4-980d-5481df87cbdf
+    - name: FlagValue
+      propertyName: _FlagValue
+      type: 5
+      defaultColor: {r: 1, g: 1, b: 1, a: 1}
+      flag: 0
+      customProperty:
+      - valid: 1
+        desc: _FlagWaveInt
+        defaultValue: 0
+        min: 0
+        max: 3
+        index: -1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      - valid: 1
+        desc: _FlagWaveSpeed
+        defaultValue: 0
+        min: 0
+        max: 10
+        index: -1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      - valid: 1
+        desc: _FlagWaveMove
+        defaultValue: 0
+        min: -10
+        max: 10
+        index: -1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      - valid: 1
+        desc: _FlagFixed
+        defaultValue: 0
+        min: 0
+        max: 1
+        index: -1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      dependencyPropertys:
+        isNor: 0
+        dependencyType: 0
+        dependencyShaderProperty: []
+      hash: 8d57c33f-406c-495a-afb1-0fe6de4ec7b2

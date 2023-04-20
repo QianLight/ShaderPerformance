@@ -1,0 +1,84 @@
+﻿// Each #kernel tells which function to compile; you can have many kernels
+#pragma warning(disable : 3568)
+//#pragma exclude_renderers gles gles3 d3d11_9x
+
+#pragma kernel VoxelLightIndexCS
+//#define DEBUG_RT
+
+#include "../StdLib.hlsl"
+#include "../Include/LightingHead.hlsl"
+
+RWTexture2D<float4> _Output;
+
+#ifdef ANDROID
+#else//!ANDROID
+
+StructuredBuffer<LightInfo> _LightInfos;
+
+[numthreads(8,8,1)]
+void VoxelLightIndexCS (int2 dti : SV_DispatchThreadID)
+{
+	uint2 pos = uint2(dti.x,dti.y);
+	float2 halfGridSize = float2(_GridSize*0.5,_GridSize*0.5);
+	float2 gridCenter = float2(pos)*_GridSize + halfGridSize;
+	uint lightCount = _StaticLightCount;
+
+	uint gridLightCount = 0;
+	float lightGridIndex[CELL_DYNAMIC_LIGHT_COUNT];
+	float minWeight = 99999;
+	int minWeightIndex = -1;
+	float weights[CELL_DYNAMIC_LIGHT_COUNT];
+
+	UNITY_LOOP
+	for (uint i = 0; i < lightCount; ++i) 
+	{
+		LightInfo li = _LightInfos[i];
+		float2 deltaVector = li.lightPos.xz - _StaticLightGridXZ - gridCenter;
+		float sqrDist = dot(deltaVector,deltaVector);
+		float range = sqrt(1 / _DynamicLightInvSqrRange);
+		float dist2Circle = halfGridSize.x + range;
+		dist2Circle *= dist2Circle;
+		float luminance = dot(li.lightColor.rgb, float3(0.0396819152, 0.458021790, 0.00609653955));
+		float weight = luminance * (1 - sqrDist / dist2Circle);
+		
+		// 距离剔除
+		if (sqrDist < dist2Circle)
+		{
+			if (gridLightCount < CELL_DYNAMIC_LIGHT_COUNT)
+			{
+				// Refresh min weight.
+				weights[gridLightCount] = weight;
+				if (weight < minWeight)
+				{
+					minWeight = weight;
+					minWeightIndex = gridLightCount;
+				}
+
+				// Set light.
+				lightGridIndex[gridLightCount] = (i + 1) / 255.0;
+				gridLightCount++;
+			}
+			else if (weight > minWeight)
+			{
+				// Set light.
+				lightGridIndex[minWeightIndex] = (i + 1) / 255.0;
+
+				// Refresh min weight.
+				minWeight = 99999;
+				UNITY_LOOP
+				for (int slot = 0; slot < CELL_DYNAMIC_LIGHT_COUNT; slot++)
+				{
+					float w = weights[slot];
+					if (w < minWeight)
+					{
+						minWeight = w;
+						minWeightIndex = slot;
+					}
+				}
+			}
+		}
+	}
+	_Output[uint2(dti)] = float4(lightGridIndex[0],lightGridIndex[1],lightGridIndex[2],lightGridIndex[3]);
+}
+#endif
+

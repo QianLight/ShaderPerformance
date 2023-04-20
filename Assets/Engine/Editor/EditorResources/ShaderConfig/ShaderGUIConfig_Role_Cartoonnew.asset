@@ -1,0 +1,94 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40e1cbd74443f2b4a9ea8cdee05aef60, type: 3}
+  m_Name: ShaderGUIConfig_Role_Cartoonnew
+  m_EditorClassIdentifier: 
+  shader: {fileID: 4800000, guid: f4462d835fc28eb4397adaa7e1798c0e, type: 3}
+  dummyMatType: 1
+  lsType: 2
+  shaderFeatures:
+  - hash: 
+    sfg: {fileID: 11400000, guid: eea36573a8677db4aa8aeb87a8c8a5c0, type: 2}
+    shaderFeatures:
+    - Default_BlendMode
+    - Default_Shadow
+    - Default_SelfShadow
+    - Default_MultiLight
+  - hash: 
+    sfg: {fileID: 11400000, guid: d78bb4bdc436929448c59d32983f75f9, type: 2}
+    shaderFeatures:
+    - Debug_DebugShader
+    - Debug_Debug
+  - hash: 
+    sfg: {fileID: 11400000, guid: cf68945b14efc0d448b4e1db37a88223, type: 2}
+    shaderFeatures:
+    - Base_MainTex
+    - Base_MainColor
+    - Base_AO
+    - Base_PbrFromParam
+    - Base_PbsTex
+    - Base_NormalUVST
+    - Base_MetallicParam
+    - Base_PBRScale
+    - Base_NormalScale
+    - Base_AdjustPBR
+    - Base_PbrParam
+  - hash: 
+    sfg: {fileID: 11400000, guid: 3488152ece049b8478edd17e53b1eb58, type: 2}
+    shaderFeatures:
+    - Roleadd_
+    - Roleadd_Mainlight
+    - Roleadd_GradientColor
+    - Roleadd_Gradient
+    - Roleadd_RimColor
+    - Roleadd_Rim
+    - Roleadd_DetailNormal
+  - hash: 
+    sfg: {fileID: 11400000, guid: 83b06c831dd54cc47ba9edd966ac08af, type: 2}
+    shaderFeatures:
+    - Role_RampParam
+    - Role_ShadowColorMultiply
+    - Role_RampTex
+    - Role_Transparency
+    - Role_MaskTex(R:Rim G:Emissive B:Shadow)
+    - Role_EmissiveEnable
+    - Role_EmissiveColor
+    - Role_CustomShadow
+    - Role_MaskEnable
+    - Role_Dirty
+    - Role_Toon
+    - Role_ToonAO
+    - Role_ToonAO Scale
+    - Role_Toon AO
+  - hash: 
+    sfg: {fileID: 11400000, guid: dffa7239a61ce7e4db85645b5749af93, type: 2}
+    shaderFeatures:
+    - Rim_NearRim
+    - Rim_RimColor
+    - Rim_RimDistanceAndIntensity
+    - Rim_RimMixParam
+    - Rim_RimDistanceAndIntensityEnd
+    - Rim_DarkRimParam
+    - Rim_empty
+    - Rim_FarRimParam
+    - Rim_DarkRimLightColor
+    - Rim_RimDir
+    - Rim_RimInt
+    - Rim_DarkRim
+  - hash: 
+    sfg: {fileID: 11400000, guid: 0adbe4e210260dc4287a5591ed8f7319, type: 2}
+    shaderFeatures:
+    - Outline_OutlineParam
+    - Outline_OutlineColor
+    - Outline_OutlineWidth
+    - Outline_
+    - Outline_OutlineFeature

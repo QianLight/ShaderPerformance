@@ -1,0 +1,1615 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc11458067879e24899574d5f5c23452, type: 3}
+  m_Name: AssetsConfig
+  m_EditorClassIdentifier: 
+  ResourcePath: Assets/BundleRes
+  SceneLibPath: Assets/Scenes/Scenelib
+  EngineResPath: Assets/Engine/Editor/EditorResources
+  sfxDir: Assets/BundleRes/Runtime/SFX/
+  sfxJianxiuDir: Assets/Jianxiu/BundleRes/Runtime/SFX/
+  MatEffectPath: Assets/Engine/Editor/EditorResources/MatEffectConfig.asset
+  Bandpose_Str: Bandpose
+  Fbx_Ext: .fbx
+  Creature_Path: Assets/Creatures
+  ResourceAnimationPath: Assets/BundleRes/Animation
+  ResourceEditorAnimationPath: Assets/BundleRes/EditorAnimation
+  ResourceAnimation: Animation
+  DummyMatFolder: MatShader
+  Table_Path: Assets/Table/
+  Table_Bytes_Path: Assets/BundleRes/Table/
+  TerrainDirStr: Terrain
+  ConfigStr: _Config
+  SceneConfigStr: _SceneConfig
+  SceneChunkStr: Chunk_
+  TerrainBlockStr: Block_
+  AtlasDirStr: Assets/Scenes/modlelib/atlas
+  SpriteAtlasExt: .spriteatlas
+  ReadableMeshSuffix: _readable.asset
+  LightmapParam:
+  - {fileID: 111300000, guid: aa6983af0a121e3459b89b09aa94e573, type: 2}
+  - {fileID: 111300000, guid: 87d5f50f22c086b48a6a25defcd0725a, type: 2}
+  - {fileID: 111300000, guid: 9b0e4ad3343ece94f8f9e5d12f96d3de, type: 2}
+  commonFolder: 0
+  TerrainEditMat: {fileID: 2100000, guid: 1fa1cd73a1adeb74ab16eefaff83aeab, type: 2}
+  TerrainMergeMat: {fileID: 2100000, guid: d17ac6201abe4444eb91ebddb83daef2, type: 2}
+  TerrainMeshMat: {fileID: 2100000, guid: e4c5b89f92bfa214ab23216110c5b603, type: 2}
+  TerrainBakeBaseMap: {fileID: 2100000, guid: 304a9b805c1f1f94c9d5597a45103d07, type: 2}
+  TerrainPreviewMat:
+  - {fileID: 2100000, guid: 780e2da0baf2f964db75d57eb8f1eabc, type: 2}
+  - {fileID: 2100000, guid: ffb3e01ddd951734d8a37f43567676f0, type: 2}
+  - {fileID: 2100000, guid: 86cfcdf6eb80ff44296455b9a98d6e6d, type: 2}
+  - {fileID: 2100000, guid: 4dba437c642bdbd4293d16d07c81c3f2, type: 2}
+  ShadowCaster: {fileID: 2100000, guid: 29f49654f288fba4e91542a0a30149d5, type: 2}
+  ShadowCasterCutout: {fileID: 2100000, guid: 14f05a30d732cb64cb02d287d61eb8ee, type: 2}
+  Outline: {fileID: 2100000, guid: accd0691cf3c9f74c8f1e9925c9d79e1, type: 2}
+  PreviewInstance: {fileID: 2100000, guid: 83e86a5664f559f44ad4ba99f3aa05a6, type: 2}
+  PreviewTerrainQuad: {fileID: 2100000, guid: 8056ab676218e054aa68f2c40166ae7f, type: 2}
+  DrawLightIndex: {fileID: 2100000, guid: 6010f8a7bbee61440b8f253ed301f48f, type: 2}
+  TerrainBake: {fileID: 2100000, guid: 304a9b805c1f1f94c9d5597a45103d07, type: 2}
+  PreviewSH: {fileID: 2100000, guid: 2380a6cda1d2ff54f92c4ba3cab5b2a5, type: 2}
+  PreviewSH2: {fileID: 2100000, guid: becbee777c87ec64aa9531f7caa70b46, type: 2}
+  LightProbeAreaEdit: {fileID: 2100000, guid: 6ff75bb88a441b345a0c6505d615b92b, type: 2}
+  SceneViewPreZ: {fileID: 2100000, guid: 027c884540e3ab7429832ffbb43bb366, type: 2}
+  CopyMat: {fileID: 2100000, guid: a1e1d4f432d5fe949b2e05257fed76ba, type: 2}
+  OverdrawOpaque: {fileID: 2100000, guid: c3b9837423f68484085f730398e74982, type: 2}
+  OverdrawTransparent: {fileID: 2100000, guid: 0f503f045251cfe40a92059995aaf96d, type: 2}
+  OverdrawCompute: {fileID: 7200000, guid: 6b16a59e069c0994baf99b7ed4ef56d9, type: 3}
+  ShadedWireframe: {fileID: 2100000, guid: 4b826c5af6aee6548906b1904d2fca65, type: 2}
+  sphereMesh: {fileID: 4300000, guid: c20a04e95b550474396618665ba047f1, type: 2}
+  lightIndex: {fileID: 4300000, guid: c2eeb25572d84d54fa6592e553b6e7b3, type: 2}
+  TextureBake: {fileID: 4800000, guid: ea7ca340c75094a4b9b7fc367b209e44, type: 3}
+  TextureArrayBake: {fileID: 4800000, guid: 3a5fa68d824b3be418c5bce4d83f19cb, type: 3}
+  defaultRoleShader: {fileID: 4800000, guid: 314d3f03d7df8d64e954c75002a52c4a, type: 3}
+  CombineLightmap: {fileID: 4800000, guid: 8a39c58d6be70f24db009ad2a3df9284, type: 3}
+  BakeTexChanel: {fileID: 4800000, guid: 1ed86b9edef83dd4898257eafc4a274c, type: 3}
+  CombineNormal: {fileID: 4800000, guid: 8dd6f884b6c3129418460fe90cb9b8c9, type: 3}
+  DrawShadowMap: {fileID: 4800000, guid: 45cd7c6b5e039604bac2ba4043cd136e, type: 3}
+  DrawShadowMapExtra: {fileID: 4800000, guid: 648f3ef88037cd640bffa1a9e8c278fc, type: 3}
+  ScenePreview: {fileID: 4800000, guid: e3c8256e339914647afdbe97c8449ff6, type: 3}
+  PreviewTex: {fileID: 4800000, guid: 0493b6694f8cbd446be021fd11464515, type: 3}
+  PreviewTex2dArray: {fileID: 4800000, guid: 10dc9a9a679121e43be3f01475a011fd, type: 3}
+  Preview3D: {fileID: 4800000, guid: 83f0b1dc60e3a5c49bc0b4fac00f1eba, type: 3}
+  LightIndexPreview: {fileID: 4800000, guid: a7508282ad20820428e13677dcec305d, type: 3}
+  iblShaders:
+  - {fileID: 4800000, guid: b47519f1a94892d43a175c361c514d02, type: 3}
+  layerShader:
+  - {fileID: 4800000, guid: 17f80ac88add76e4496b42d4139381f4, type: 3}
+  shBaker: {fileID: 7200000, guid: 3f426fa1ae665e04b982f988641557d8, type: 3}
+  dyanmicLights: {fileID: 6071980724848354226, guid: 61faee9294f36664d8d634aeb8a28065,
+    type: 3}
+  meshConfig:
+    name: MeshConfig
+    meshConfigs:
+    - hash: c512e6f7-2686-4427-99e7-d34cdb89eea7
+      name: Collider
+      exportDir: Assets/BundleRes/EditorAssetRes
+      isExport: 0
+      isReadable: 1
+      exportReadable: 0
+      removeUV2: 1
+      removeColor: 1
+      rotate90: 0
+      resample: 0
+      importCamera: 0
+      overrideImportNormals: 0
+      overrideImportTangents: 0
+      overrideImportBlendShapeNormals: 0
+      type: 0
+      importNormal: 0
+      importTangent: 0
+      importBlendShapeNormals: 0
+      filters:
+      - _collider
+    - hash: 5e744013-75b9-4d96-a147-007dcd961799
+      name: SceneMesh
+      exportDir: Assets/BundleRes/EditorAssetRes
+      isExport: 0
+      isReadable: 1
+      exportReadable: 0
+      removeUV2: 0
+      removeColor: 1
+      rotate90: 0
+      resample: 0
+      importCamera: 0
+      overrideImportNormals: 0
+      overrideImportTangents: 0
+      overrideImportBlendShapeNormals: 0
+      type: 0
+      importNormal: 0
+      importTangent: 0
+      importBlendShapeNormals: 0
+      filters:
+      - /Scenes
+      - /Creatures/Scene
+    - hash: 0ff788b3-be9e-4a34-a92d-e95e877e0ad9
+      name: CameraAnim
+      exportDir: 
+      isExport: 0
+      isReadable: 0
+      exportReadable: 0
+      removeUV2: 0
+      removeColor: 1
+      rotate90: 0
+      resample: 0
+      importCamera: 1
+      overrideImportNormals: 0
+      overrideImportTangents: 0
+      overrideImportBlendShapeNormals: 0
+      type: 0
+      importNormal: 0
+      importTangent: 0
+      importBlendShapeNormals: 0
+      filters:
+      - _fov
+    - hash: cf833fce-bcf2-460a-bd64-37d5ebf9c046
+      name: SFXMesh
+      exportDir: 
+      isExport: 0
+      isReadable: 1
+      exportReadable: 1
+      removeUV2: 0
+      removeColor: 0
+      rotate90: 0
+      resample: 0
+      importCamera: 0
+      overrideImportNormals: 0
+      overrideImportTangents: 0
+      overrideImportBlendShapeNormals: 0
+      type: 0
+      importNormal: 0
+      importTangent: 0
+      importBlendShapeNormals: 0
+      filters:
+      - 
+  texConfig:
+    name: TexConfig
+    texConfigs:
+    - hash: 4f1ebe3c-b545-43d6-8fcf-d69a9db34fd5
+      vaild: 1
+      name: BaseTex
+      priority: 0
+      type: 0
+      compressFilters:
+      - str: _base
+      - str: Atlas_
+      importType: 0
+      importShape: 1
+      sRGB: 1
+      attrOverride: 1
+      mipMap: 1
+      minBias: 0
+      isReadable: 0
+      filterMode: 1
+      isOverride: 1
+      wrapMode: 0
+      anisoLevel: 0
+      iosSetting:
+        maxTextureSize: 10
+        format: 50
+        alphaFormat: 50
+        texCompressorQuality: 100
+      androidSetting:
+        maxTextureSize: 10
+        format: 51
+        alphaFormat: 51
+        texCompressorQuality: 100
+      standaloneSetting:
+        maxTextureSize: 11
+        format: 10
+        alphaFormat: 12
+        texCompressorQuality: 100
+    - hash: 57da4f79-7143-4917-9011-5509fca589c7
+      vaild: 1
+      name: PbsTex
+      priority: 0
+      type: 0
+      compressFilters:
+      - str: _pbs
+      importType: 0
+      importShape: 1
+      sRGB: 0
+      attrOverride: 1
+      mipMap: 1
+      minBias: 0
+      isReadable: 0
+      filterMode: 1
+      isOverride: 1
+      wrapMode: 0
+      anisoLevel: 0
+      iosSetting:
+        maxTextureSize: 10
+        format: 49
+        alphaFormat: 49
+        texCompressorQuality: 100
+      androidSetting:
+        maxTextureSize: 9
+        format: 50
+        alphaFormat: 50
+        texCompressorQuality: 100
+      standaloneSetting:
+        maxTextureSize: 10
+        format: 3
+        alphaFormat: 4
+        texCompressorQuality: 100
+    - hash: 534fabaf-914f-4c84-8b85-28ee0c1f864f
+      vaild: 1
+      name: SceneBase
+      priority: 1
+      type: 1
+      compressFilters:
+      - str: _d
+      importType: 0
+      importShape: 1
+      sRGB: 1
+      attrOverride: 1
+      mipMap: 1
+      minBias: 0
+      isReadable: 0
+      filterMode: 1
+      isOverride: 1
+      wrapMode: 0
+      anisoLevel: 2
+      iosSetting:
+        maxTextureSize: 10
+        format: 52
+        alphaFormat: 51
+        texCompressorQuality: 100
+      androidSetting:
+        maxTextureSize: 10
+        format: 52
+        alphaFormat: 51
+        texCompressorQuality: 100
+      standaloneSetting:
+        maxTextureSize: 11
+        format: 10
+        alphaFormat: 12
+        texCompressorQuality: 100
+    - hash: 09f8c917-5fc2-4156-a8b0-bc805d1784f9
+      vaild: 1
+      name: SceneBaseHigh
+      priority: 1
+      type: 1
+      compressFilters:
+      - str: _d_h
+      importType: 0
+      importShape: 1
+      sRGB: 1
+      attrOverride: 1
+      mipMap: 1
+      minBias: 0
+      isReadable: 0
+      filterMode: 1
+      isOverride: 1
+      wrapMode: 0
+      anisoLevel: 2
+      iosSetting:
+        maxTextureSize: 10
+        format: 48
+        alphaFormat: 48
+        texCompressorQuality: 100
+      androidSetting:
+        maxTextureSize: 10
+        format: 48
+        alphaFormat: 48
+        texCompressorQuality: 100
+      standaloneSetting:
+        maxTextureSize: 10
+        format: 10
+        alphaFormat: 12
+        texCompressorQuality: 100
+    - hash: d3b164a1-715b-4838-bf99-7d3764eb6517
+      vaild: 1
+      name: PbsScene
+      priority: 1
+      type: 1
+      compressFilters:
+      - str: _n
+      importType: 0
+      importShape: 1
+      sRGB: 0
+      attrOverride: 1
+      mipMap: 1
+      minBias: 0
+      isReadable: 0
+      filterMode: 1
+      isOverride: 1
+      wrapMode: 0
+      anisoLevel: 2
+      iosSetting:
+        maxTextureSize: 10
+        format: 49
+        alphaFormat: 49
+        texCompressorQuality: 100
+      androidSetting:
+        maxTextureSize: 10
+        format: 50
+        alphaFormat: 50
+        texCompressorQuality: 100
+      standaloneSetting:
+        maxTextureSize: 11
+        format: 10
+        alphaFormat: 12
+        texCompressorQuality: 100
+    - hash: 1f8ec5d7-d029-433d-8b44-9c2f8ad85c84
+      vaild: 1
+      name: ReflectionProbe
+      priority: 0
+      type: 0
+      compressFilters:
+      - str: ReflectionProbe-
+      importType: 0
+      importShape: 2
+      sRGB: 1
+      attrOverride: 1
+      mipMap: 1
+      minBias: 0
+      isReadable: 0
+      filterMode: 1
+      isOverride: 1
+      wrapMode: 1
+      anisoLevel: -1
+      iosSetting:
+        maxTextureSize: 9
+        format: 50
+        alphaFormat: 50
+        texCompressorQuality: 100
+      androidSetting:
+        maxTextureSize: 8
+        format: 50
+        alphaFormat: 50
+        texCompressorQuality: 100
+      standaloneSetting:
+        maxTextureSize: 10
+        format: 10
+        alphaFormat: 12
+        texCompressorQuality: 100
+    - hash: 8d38e0cc-811b-4694-89bf-be355695ae75
+      vaild: 1
+      name: CubeHDR
+      priority: 0
+      type: 0
+      compressFilters:
+      - str: _CubeHDR
+      importType: 0
+      importShape: 2
+      sRGB: 1
+      attrOverride: 1
+      mipMap: 1
+      minBias: 0
+      isReadable: 0
+      filterMode: 2
+      isOverride: 1
+      wrapMode: 1
+      anisoLevel: 0
+      iosSetting:
+        maxTextureSize: 7
+        format: 50
+        alphaFormat: 50
+        texCompressorQuality: 100
+      androidSetting:
+        maxTextureSize: 7
+        format: 51
+        alphaFormat: 51
+        texCompressorQuality: 100
+      standaloneSetting:
+        maxTextureSize: 10
+        format: 24
+        alphaFormat: 24
+        texCompressorQuality: 100
+    - hash: 5c566acb-f958-4797-bc69-122ead506ef7
+      vaild: 1
+      name: CubeLDR
+      priority: 0
+      type: 0
+      compressFilters:
+      - str: _CubeLDR
+      importType: 0
+      importShape: 2
+      sRGB: 1
+      attrOverride: 1
+      mipMap: 1
+      minBias: 0
+      isReadable: 0
+      filterMode: 1
+      isOverride: 1
+      wrapMode: 1
+      anisoLevel: 0
+      iosSetting:
+        maxTextureSize: 8
+        format: 50
+        alphaFormat: 50
+        texCompressorQuality: 100
+      androidSetting:
+        maxTextureSize: 8
+        format: 51
+        alphaFormat: 51
+        texCompressorQuality: 100
+      standaloneSetting:
+        maxTextureSize: 10
+        format: 10
+        alphaFormat: 12
+        texCompressorQuality: 100
+    - hash: 5758ee0d-be29-4719-8c41-13373eca1100
+      vaild: 1
+      name: SkyCube
+      priority: 0
+      type: 0
+      compressFilters:
+      - str: sky_
+      - str: Sky_
+      importType: 0
+      importShape: 2
+      sRGB: 1
+      attrOverride: 1
+      mipMap: 0
+      minBias: 0
+      isReadable: 0
+      filterMode: 1
+      isOverride: 1
+      wrapMode: 1
+      anisoLevel: 0
+      iosSetting:
+        maxTextureSize: 11
+        format: 51
+        alphaFormat: 51
+        texCompressorQuality: 100
+      androidSetting:
+        maxTextureSize: 11
+        format: 51
+        alphaFormat: 51
+        texCompressorQuality: 100
+      standaloneSetting:
+        maxTextureSize: 11
+        format: 10
+        alphaFormat: 12
+        texCompressorQuality: 100
+    - hash: 47d7545a-ab78-4ac3-82e3-2e01bfa6a521
+      vaild: 1
+      name: WaterCube
+      priority: 0
+      type: 0
+      compressFilters:
+      - str: _watercube
+      importType: 0
+      importShape: 2
+      sRGB: 1
+      attrOverride: 1
+      mipMap: 0
+      minBias: 0
+      isReadable: 0
+      filterMode: 1
+      isOverride: 1
+      wrapMode: 1
+      anisoLevel: 1
+      iosSetting:
+        maxTextureSize: 9
+        format: 68
+        alphaFormat: 68
+        texCompressorQuality: 100
+      androidSetting:
+        maxTextureSize: 9
+        format: 69
+        alphaFormat: 69
+        texCompressorQuality: 100
+      standaloneSetting:
+        maxTextureSize: 10
+        format: 24
+        alphaFormat: 24
+        texCompressorQuality: 100
+    - hash: fb0969cc-c449-4a80-ae4e-614ca58415b5
+      vaild: 1
+      name: BlendTex
+      priority: 0
+      type: 0
+      compressFilters:
+      - str: _Blend
+      importType: 0
+      importShape: 1
+      sRGB: 0
+      attrOverride: 1
+      mipMap: 1
+      minBias: 0
+      isReadable: 0
+      filterMode: 1
+      isOverride: 1
+      wrapMode: 1
+      anisoLevel: 0
+      iosSetting:
+        maxTextureSize: 10
+        format: 13
+        alphaFormat: 13
+        texCompressorQuality: 100
+      androidSetting:
+        maxTextureSize: 10
+        format: 13
+        alphaFormat: 13
+        texCompressorQuality: 100
+      standaloneSetting:
+        maxTextureSize: 10
+        format: 10
+        alphaFormat: 12
+        texCompressorQuality: 100
+    - hash: c460384f-308c-469e-8283-eb2bba223bc1
+      vaild: 1
+      name: LightMap
+      priority: 0
+      type: 0
+      compressFilters:
+      - str: regex:\b\S*Lightmap_\S*.exr\b
+      importType: 6
+      importShape: 1
+      sRGB: 1
+      attrOverride: 1
+      mipMap: 1
+      minBias: 0
+      isReadable: 0
+      filterMode: 1
+      isOverride: 1
+      wrapMode: 1
+      anisoLevel: 0
+      iosSetting:
+        maxTextureSize: 11
+        format: 50
+        alphaFormat: 50
+        texCompressorQuality: 100
+      androidSetting:
+        maxTextureSize: 11
+        format: 50
+        alphaFormat: 50
+        texCompressorQuality: 100
+      standaloneSetting:
+        maxTextureSize: 11
+        format: 10
+        alphaFormat: 12
+        texCompressorQuality: 100
+    - hash: 2ab8a3fb-285e-4c6f-90d9-be1ac8b6df85
+      vaild: 1
+      name: Mask
+      priority: 0
+      type: 0
+      compressFilters:
+      - str: _mask
+      importType: 0
+      importShape: 1
+      sRGB: 0
+      attrOverride: 1
+      mipMap: 1
+      minBias: 0
+      isReadable: 0
+      filterMode: 1
+      isOverride: 1
+      wrapMode: 1
+      anisoLevel: 0
+      iosSetting:
+        maxTextureSize: 10
+        format: 50
+        alphaFormat: 50
+        texCompressorQuality: 100
+      androidSetting:
+        maxTextureSize: 10
+        format: 51
+        alphaFormat: 51
+        texCompressorQuality: 100
+      standaloneSetting:
+        maxTextureSize: 10
+        format: 28
+        alphaFormat: 29
+        texCompressorQuality: 100
+    - hash: 1b2022f8-bdca-452c-b606-c85b9c111e40
+      vaild: 1
+      name: Ramp
+      priority: 0
+      type: 0
+      compressFilters:
+      - str: _ramp
+      importType: 0
+      importShape: 1
+      sRGB: 0
+      attrOverride: 1
+      mipMap: 1
+      minBias: 0
+      isReadable: 0
+      filterMode: 1
+      isOverride: 1
+      wrapMode: 1
+      anisoLevel: 0
+      iosSetting:
+        maxTextureSize: 10
+        format: 3
+        alphaFormat: 4
+        texCompressorQuality: 100
+      androidSetting:
+        maxTextureSize: 10
+        format: 3
+        alphaFormat: 4
+        texCompressorQuality: 100
+      standaloneSetting:
+        maxTextureSize: 10
+        format: 3
+        alphaFormat: 4
+        texCompressorQuality: 100
+    - hash: b0d26fb8-7d7a-4f8b-950a-957093658524
+      vaild: 1
+      name: GrassRamdom
+      priority: 0
+      type: 0
+      compressFilters:
+      - str: _color
+      importType: 0
+      importShape: 1
+      sRGB: 1
+      attrOverride: 1
+      mipMap: 1
+      minBias: 0
+      isReadable: 0
+      filterMode: 1
+      isOverride: 1
+      wrapMode: 0
+      anisoLevel: 0
+      iosSetting:
+        maxTextureSize: 9
+        format: 50
+        alphaFormat: 50
+        texCompressorQuality: 100
+      androidSetting:
+        maxTextureSize: 9
+        format: 51
+        alphaFormat: 51
+        texCompressorQuality: 100
+      standaloneSetting:
+        maxTextureSize: 10
+        format: 10
+        alphaFormat: 12
+        texCompressorQuality: 100
+    - hash: 0e54c0e1-589a-49c9-88e0-2e375c5a2f00
+      vaild: 1
+      name: FlowSpeedNoise
+      priority: 0
+      type: 0
+      compressFilters:
+      - str: _FlowNoise
+      importType: 0
+      importShape: 1
+      sRGB: 0
+      attrOverride: 1
+      mipMap: 1
+      minBias: 0
+      isReadable: 0
+      filterMode: 1
+      isOverride: 1
+      wrapMode: 0
+      anisoLevel: 0
+      iosSetting:
+        maxTextureSize: 10
+        format: 50
+        alphaFormat: 50
+        texCompressorQuality: 100
+      androidSetting:
+        maxTextureSize: 10
+        format: 51
+        alphaFormat: 51
+        texCompressorQuality: 100
+      standaloneSetting:
+        maxTextureSize: 10
+        format: 10
+        alphaFormat: 12
+        texCompressorQuality: 100
+    - hash: 0804b41a-288a-4679-84c1-c8d360f59ac1
+      vaild: 1
+      name: CommonNormal
+      priority: 0
+      type: 0
+      compressFilters:
+      - str: _nn
+      importType: 0
+      importShape: 1
+      sRGB: 0
+      attrOverride: 1
+      mipMap: 1
+      minBias: 0
+      isReadable: 0
+      filterMode: 1
+      isOverride: 1
+      wrapMode: 0
+      anisoLevel: 0
+      iosSetting:
+        maxTextureSize: 10
+        format: 49
+        alphaFormat: 49
+        texCompressorQuality: 100
+      androidSetting:
+        maxTextureSize: 10
+        format: 50
+        alphaFormat: 50
+        texCompressorQuality: 100
+      standaloneSetting:
+        maxTextureSize: 10
+        format: 10
+        alphaFormat: 12
+        texCompressorQuality: 100
+    - hash: 1340b6c9-817f-4c79-8e41-7d04cc4917b9
+      vaild: 1
+      name: TreeRamp
+      priority: 0
+      type: 0
+      compressFilters:
+      - str: _TreeRamp
+      importType: 0
+      importShape: 1
+      sRGB: 0
+      attrOverride: 1
+      mipMap: 0
+      minBias: 0
+      isReadable: 0
+      filterMode: 1
+      isOverride: 1
+      wrapMode: 1
+      anisoLevel: 0
+      iosSetting:
+        maxTextureSize: 10
+        format: 49
+        alphaFormat: 49
+        texCompressorQuality: 100
+      androidSetting:
+        maxTextureSize: 10
+        format: 50
+        alphaFormat: 50
+        texCompressorQuality: 100
+      standaloneSetting:
+        maxTextureSize: 10
+        format: 10
+        alphaFormat: 12
+        texCompressorQuality: 100
+    - hash: 9dbd3292-23d0-4890-8761-3037bb220dfe
+      vaild: 1
+      name: NoiseTex
+      priority: 0
+      type: 0
+      compressFilters:
+      - str: _Noise
+      importType: 0
+      importShape: 1
+      sRGB: 0
+      attrOverride: 1
+      mipMap: 0
+      minBias: 0
+      isReadable: 0
+      filterMode: 1
+      isOverride: 1
+      wrapMode: 0
+      anisoLevel: 0
+      iosSetting:
+        maxTextureSize: 8
+        format: 49
+        alphaFormat: 49
+        texCompressorQuality: 100
+      androidSetting:
+        maxTextureSize: 8
+        format: 50
+        alphaFormat: 50
+        texCompressorQuality: 100
+      standaloneSetting:
+        maxTextureSize: 8
+        format: 10
+        alphaFormat: 12
+        texCompressorQuality: 100
+    - hash: f74d411e-2181-4663-baa2-2a4d4671e896
+      vaild: 1
+      name: HariShift
+      priority: 0
+      type: 0
+      compressFilters:
+      - str: _shift
+      importType: 0
+      importShape: 1
+      sRGB: 0
+      attrOverride: 1
+      mipMap: 0
+      minBias: 0
+      isReadable: 0
+      filterMode: 1
+      isOverride: 1
+      wrapMode: 0
+      anisoLevel: 0
+      iosSetting:
+        maxTextureSize: 9
+        format: 49
+        alphaFormat: 49
+        texCompressorQuality: 100
+      androidSetting:
+        maxTextureSize: 9
+        format: 50
+        alphaFormat: 50
+        texCompressorQuality: 100
+      standaloneSetting:
+        maxTextureSize: 10
+        format: 10
+        alphaFormat: 12
+        texCompressorQuality: 100
+    - hash: b2baebe5-f0c4-4427-8fc2-a0f7cde55a70
+      vaild: 1
+      name: BlendEditTex
+      priority: 0
+      type: 0
+      compressFilters:
+      - str: _Blend_Editor
+      importType: 0
+      importShape: 1
+      sRGB: 0
+      attrOverride: 1
+      mipMap: 0
+      minBias: 0
+      isReadable: 1
+      filterMode: 1
+      isOverride: 1
+      wrapMode: 0
+      anisoLevel: 0
+      iosSetting:
+        maxTextureSize: 9
+        format: 13
+        alphaFormat: 13
+        texCompressorQuality: 100
+      androidSetting:
+        maxTextureSize: 9
+        format: 13
+        alphaFormat: 13
+        texCompressorQuality: 100
+      standaloneSetting:
+        maxTextureSize: 9
+        format: 4
+        alphaFormat: 4
+        texCompressorQuality: 100
+    - hash: 2fade10d-fef6-4528-bd10-fae90d648767
+      vaild: 1
+      name: Matcap
+      priority: 0
+      type: 0
+      compressFilters:
+      - str: _matcap
+      importType: 0
+      importShape: 1
+      sRGB: 1
+      attrOverride: 1
+      mipMap: 0
+      minBias: 0
+      isReadable: 0
+      filterMode: 1
+      isOverride: 1
+      wrapMode: 0
+      anisoLevel: -1
+      iosSetting:
+        maxTextureSize: 9
+        format: 49
+        alphaFormat: 49
+        texCompressorQuality: 100
+      androidSetting:
+        maxTextureSize: 9
+        format: 49
+        alphaFormat: 49
+        texCompressorQuality: 100
+      standaloneSetting:
+        maxTextureSize: 10
+        format: 10
+        alphaFormat: 12
+        texCompressorQuality: 100
+    - hash: 645fcf86-41df-483e-80d0-5211ec2f420b
+      vaild: 1
+      name: AnimationTex
+      priority: 0
+      type: 0
+      compressFilters: []
+      importType: 0
+      importShape: 1
+      sRGB: 0
+      attrOverride: 1
+      mipMap: 0
+      minBias: 0
+      isReadable: 0
+      filterMode: 0
+      isOverride: 1
+      wrapMode: 1
+      anisoLevel: -1
+      iosSetting:
+        maxTextureSize: 11
+        format: 4
+        alphaFormat: 4
+        texCompressorQuality: 100
+      androidSetting:
+        maxTextureSize: 11
+        format: 4
+        alphaFormat: 4
+        texCompressorQuality: 100
+      standaloneSetting:
+        maxTextureSize: 11
+        format: 4
+        alphaFormat: 4
+        texCompressorQuality: 100
+    - hash: b50a35fb-fc7f-4a3b-b05e-09bcaa0714cf
+      vaild: 1
+      name: Luts
+      priority: 0
+      type: 0
+      compressFilters:
+      - str: /Engine/Runtime/Res/Textures/LUTs
+      importType: 0
+      importShape: 1
+      sRGB: 0
+      attrOverride: 1
+      mipMap: 0
+      minBias: 0
+      isReadable: 0
+      filterMode: 1
+      isOverride: 1
+      wrapMode: 1
+      anisoLevel: 0
+      iosSetting:
+        maxTextureSize: 10
+        format: 3
+        alphaFormat: 4
+        texCompressorQuality: 100
+      androidSetting:
+        maxTextureSize: 10
+        format: 3
+        alphaFormat: 4
+        texCompressorQuality: 100
+      standaloneSetting:
+        maxTextureSize: 10
+        format: 3
+        alphaFormat: 4
+        texCompressorQuality: 100
+    - hash: 6f5ad60a-8a88-46c7-907e-20d9798e09ed
+      vaild: 1
+      name: BaseTex
+      priority: 0
+      type: 0
+      compressFilters:
+      - str: _base_H
+      importType: 0
+      importShape: 1
+      sRGB: 1
+      attrOverride: 1
+      mipMap: 0
+      minBias: 0
+      isReadable: 0
+      filterMode: 1
+      isOverride: 1
+      wrapMode: 0
+      anisoLevel: -1
+      iosSetting:
+        maxTextureSize: 10
+        format: 50
+        alphaFormat: 50
+        texCompressorQuality: 100
+      androidSetting:
+        maxTextureSize: 10
+        format: 51
+        alphaFormat: 51
+        texCompressorQuality: 100
+      standaloneSetting:
+        maxTextureSize: 11
+        format: 10
+        alphaFormat: 12
+        texCompressorQuality: 100
+    - hash: 02857b78-d09f-4a72-afcd-8bbd9d7158a5
+      vaild: 1
+      name: Shadowmask
+      priority: 0
+      type: 0
+      compressFilters:
+      - str: regex:\b\S*Lightmap_\S*.png\b
+      importType: 11
+      importShape: 1
+      sRGB: 1
+      attrOverride: 1
+      mipMap: 1
+      minBias: 0
+      isReadable: 0
+      filterMode: 1
+      isOverride: 1
+      wrapMode: 1
+      anisoLevel: 0
+      iosSetting:
+        maxTextureSize: 11
+        format: 51
+        alphaFormat: 51
+        texCompressorQuality: 100
+      androidSetting:
+        maxTextureSize: 11
+        format: 51
+        alphaFormat: 51
+        texCompressorQuality: 100
+      standaloneSetting:
+        maxTextureSize: 11
+        format: 10
+        alphaFormat: 12
+        texCompressorQuality: 100
+    - hash: 964c1010-66b8-4002-a902-e8213b21682f
+      vaild: 1
+      name: LightmapCombine
+      priority: 0
+      type: 0
+      compressFilters:
+      - str: regex:\b\S*Lightmap_Combine_\S*.tga\b
+      importType: 0
+      importShape: 1
+      sRGB: 1
+      attrOverride: 1
+      mipMap: 1
+      minBias: 0
+      isReadable: 0
+      filterMode: 1
+      isOverride: 1
+      wrapMode: 1
+      anisoLevel: 0
+      iosSetting:
+        maxTextureSize: 11
+        format: 51
+        alphaFormat: 51
+        texCompressorQuality: 100
+      androidSetting:
+        maxTextureSize: 11
+        format: 51
+        alphaFormat: 51
+        texCompressorQuality: 100
+      standaloneSetting:
+        maxTextureSize: 11
+        format: 10
+        alphaFormat: 12
+        texCompressorQuality: 100
+    - hash: cc24e1d3-c469-4c0c-89d8-f888cf5a5863
+      vaild: 1
+      name: FaceMask
+      priority: 0
+      type: 0
+      compressFilters:
+      - str: _fmask
+      importType: 0
+      importShape: 1
+      sRGB: 0
+      attrOverride: 1
+      mipMap: 1
+      minBias: 0
+      isReadable: 0
+      filterMode: 1
+      isOverride: 1
+      wrapMode: 0
+      anisoLevel: 0
+      iosSetting:
+        maxTextureSize: 9
+        format: 50
+        alphaFormat: 50
+        texCompressorQuality: 100
+      androidSetting:
+        maxTextureSize: 9
+        format: 50
+        alphaFormat: 50
+        texCompressorQuality: 100
+      standaloneSetting:
+        maxTextureSize: 9
+        format: 3
+        alphaFormat: 3
+        texCompressorQuality: 100
+    - hash: c4820bbf-70ff-40d7-bbff-e53dd2d8c6b3
+      vaild: 1
+      name: GroundColor
+      priority: 0
+      type: 0
+      compressFilters:
+      - str: GroundColor
+      importType: 0
+      importShape: 1
+      sRGB: 0
+      attrOverride: 1
+      mipMap: 1
+      minBias: 0
+      isReadable: 0
+      filterMode: 1
+      isOverride: 1
+      wrapMode: 0
+      anisoLevel: -1
+      iosSetting:
+        maxTextureSize: 10
+        format: 50
+        alphaFormat: 50
+        texCompressorQuality: 100
+      androidSetting:
+        maxTextureSize: 9
+        format: 49
+        alphaFormat: 49
+        texCompressorQuality: 100
+      standaloneSetting:
+        maxTextureSize: 10
+        format: 10
+        alphaFormat: 12
+        texCompressorQuality: 100
+    - hash: f67a0b92-6358-422e-935d-ddc3d0a9ebba
+      vaild: 1
+      name: _bakeshadow
+      priority: 0
+      type: 0
+      compressFilters:
+      - str: _bakeshadow
+      importType: 0
+      importShape: 1
+      sRGB: 0
+      attrOverride: 1
+      mipMap: 1
+      minBias: 0
+      isReadable: 0
+      filterMode: 1
+      isOverride: 1
+      wrapMode: 0
+      anisoLevel: 1
+      iosSetting:
+        maxTextureSize: 10
+        format: 50
+        alphaFormat: 50
+        texCompressorQuality: 100
+      androidSetting:
+        maxTextureSize: 10
+        format: 50
+        alphaFormat: 50
+        texCompressorQuality: 100
+      standaloneSetting:
+        maxTextureSize: 10
+        format: 10
+        alphaFormat: 12
+        texCompressorQuality: 100
+    - hash: 8181e39c-bb68-4c2f-9ebc-0269194daf42
+      vaild: 1
+      name: UIRepeatTex512_6
+      priority: 0
+      type: 0
+      compressFilters:
+      - str: texRep_
+      importType: 0
+      importShape: 1
+      sRGB: 1
+      attrOverride: 1
+      mipMap: 0
+      minBias: 0
+      isReadable: 0
+      filterMode: 1
+      isOverride: 1
+      wrapMode: 0
+      anisoLevel: 0
+      iosSetting:
+        maxTextureSize: 9
+        format: 50
+        alphaFormat: 50
+        texCompressorQuality: 100
+      androidSetting:
+        maxTextureSize: 9
+        format: 51
+        alphaFormat: 51
+        texCompressorQuality: 100
+      standaloneSetting:
+        maxTextureSize: 9
+        format: 10
+        alphaFormat: 12
+        texCompressorQuality: 100
+    - hash: 225d0ba2-7d44-40fa-b7e2-02d2f9158e83
+      vaild: 1
+      name: maskH
+      priority: 0
+      type: 0
+      compressFilters:
+      - str: _maskH
+      importType: 0
+      importShape: 1
+      sRGB: 1
+      attrOverride: 1
+      mipMap: 0
+      minBias: 0
+      isReadable: 0
+      filterMode: 1
+      isOverride: 1
+      wrapMode: 1
+      anisoLevel: 0
+      iosSetting:
+        maxTextureSize: 10
+        format: 49
+        alphaFormat: 49
+        texCompressorQuality: 100
+      androidSetting:
+        maxTextureSize: 10
+        format: 49
+        alphaFormat: 49
+        texCompressorQuality: 100
+      standaloneSetting:
+        maxTextureSize: 10
+        format: 3
+        alphaFormat: 4
+        texCompressorQuality: 100
+    - hash: 0f157209-b403-484f-b9a5-f0258b4abb18
+      vaild: 1
+      name: Spine2D
+      priority: 0
+      type: 0
+      compressFilters:
+      - str: /BundleRes/Spine2D
+      importType: 0
+      importShape: 1
+      sRGB: 1
+      attrOverride: 1
+      mipMap: 0
+      minBias: 0
+      isReadable: 0
+      filterMode: 1
+      isOverride: 1
+      wrapMode: 1
+      anisoLevel: -1
+      iosSetting:
+        maxTextureSize: 11
+        format: 49
+        alphaFormat: 49
+        texCompressorQuality: 100
+      androidSetting:
+        maxTextureSize: 11
+        format: 49
+        alphaFormat: 49
+        texCompressorQuality: 100
+      standaloneSetting:
+        maxTextureSize: 11
+        format: 10
+        alphaFormat: 12
+        texCompressorQuality: 100
+    - hash: c3ce69b4-953c-46b2-a18c-29541bc04e4a
+      vaild: 1
+      name: tex_2davatar_
+      priority: 0
+      type: 0
+      compressFilters:
+      - str: tex_2davatar_
+      - str: /BundleRes/UIBackground/ui_duel
+      importType: 0
+      importShape: 1
+      sRGB: 1
+      attrOverride: 1
+      mipMap: 0
+      minBias: 0
+      isReadable: 0
+      filterMode: 1
+      isOverride: 1
+      wrapMode: 1
+      anisoLevel: -1
+      iosSetting:
+        maxTextureSize: 11
+        format: 51
+        alphaFormat: 50
+        texCompressorQuality: 100
+      androidSetting:
+        maxTextureSize: 11
+        format: 51
+        alphaFormat: 50
+        texCompressorQuality: 100
+      standaloneSetting:
+        maxTextureSize: 11
+        format: 10
+        alphaFormat: 12
+        texCompressorQuality: 100
+    - hash: 0e060a78-0218-44a9-b846-fff0de597613
+      vaild: 1
+      name: UISprite1024_8
+      priority: 0
+      type: 0
+      compressFilters:
+      - str: 2davatar_
+      importType: 8
+      importShape: 1
+      sRGB: 1
+      attrOverride: 1
+      mipMap: 0
+      minBias: 0
+      isReadable: 0
+      filterMode: 1
+      isOverride: 1
+      wrapMode: 1
+      anisoLevel: -1
+      iosSetting:
+        maxTextureSize: 10
+        format: 51
+        alphaFormat: 50
+        texCompressorQuality: 100
+      androidSetting:
+        maxTextureSize: 10
+        format: 51
+        alphaFormat: 50
+        texCompressorQuality: 100
+      standaloneSetting:
+        maxTextureSize: 10
+        format: 10
+        alphaFormat: 12
+        texCompressorQuality: 100
+    - hash: 5f101801-3ee1-458b-bc99-a758e22bf9a5
+      vaild: 1
+      name: UIAtlasNofilter
+      priority: 0
+      type: 1
+      compressFilters:
+      - str: ui_
+      - str: _nofilter
+      importType: 8
+      importShape: 1
+      sRGB: 1
+      attrOverride: 1
+      mipMap: 0
+      minBias: 0
+      isReadable: 0
+      filterMode: 0
+      isOverride: 1
+      wrapMode: 1
+      anisoLevel: -1
+      iosSetting:
+        maxTextureSize: 11
+        format: 50
+        alphaFormat: 50
+        texCompressorQuality: 100
+      androidSetting:
+        maxTextureSize: 10
+        format: 50
+        alphaFormat: 50
+        texCompressorQuality: 100
+      standaloneSetting:
+        maxTextureSize: 11
+        format: 10
+        alphaFormat: 12
+        texCompressorQuality: 100
+    - hash: 57f27c1a-fa58-4baa-a2d1-4c55b1ace2b2
+      vaild: 1
+      name: UISprite2048_8
+      priority: 0
+      type: 0
+      compressFilters:
+      - str: ui_2davatar_full_
+      importType: 8
+      importShape: 1
+      sRGB: 1
+      attrOverride: 1
+      mipMap: 0
+      minBias: 0
+      isReadable: 0
+      filterMode: 1
+      isOverride: 1
+      wrapMode: 1
+      anisoLevel: -1
+      iosSetting:
+        maxTextureSize: 11
+        format: 51
+        alphaFormat: 50
+        texCompressorQuality: 100
+      androidSetting:
+        maxTextureSize: 11
+        format: 51
+        alphaFormat: 50
+        texCompressorQuality: 100
+      standaloneSetting:
+        maxTextureSize: 11
+        format: 10
+        alphaFormat: 12
+        texCompressorQuality: 100
+    - hash: 82853f43-d4a4-4b95-bba9-770a86ee846c
+      vaild: 1
+      name: TexUICompress2048_8
+      priority: 0
+      type: 0
+      compressFilters:
+      - str: tex_Loading_
+      - str: tex_story_
+      - str: tex_cutscene_
+      - str: tex_2davatar_
+      - str: /BundleRes/UIBackground/ui_characterbg
+      - str: /BundleRes/UIBackground/ui_common
+      importType: 0
+      importShape: 1
+      sRGB: 1
+      attrOverride: 1
+      mipMap: 0
+      minBias: 0
+      isReadable: 0
+      filterMode: 1
+      isOverride: 1
+      wrapMode: 1
+      anisoLevel: 0
+      iosSetting:
+        maxTextureSize: 11
+        format: 51
+        alphaFormat: 50
+        texCompressorQuality: 100
+      androidSetting:
+        maxTextureSize: 11
+        format: 51
+        alphaFormat: 50
+        texCompressorQuality: 100
+      standaloneSetting:
+        maxTextureSize: 11
+        format: 3
+        alphaFormat: 4
+        texCompressorQuality: 100
+    - hash: 3d344c75-d3bb-4dad-a72d-426b728f131d
+      vaild: 1
+      name: UISpriteNoCompress1024_RGBA
+      priority: 0
+      type: 0
+      compressFilters:
+      - str: /BundleRes/UI/UISource
+      importType: 8
+      importShape: 1
+      sRGB: 1
+      attrOverride: 1
+      mipMap: 0
+      minBias: 0
+      isReadable: 0
+      filterMode: 1
+      isOverride: 1
+      wrapMode: 1
+      anisoLevel: 0
+      iosSetting:
+        maxTextureSize: 10
+        format: 3
+        alphaFormat: 4
+        texCompressorQuality: 100
+      androidSetting:
+        maxTextureSize: 10
+        format: 3
+        alphaFormat: 4
+        texCompressorQuality: 100
+      standaloneSetting:
+        maxTextureSize: 10
+        format: 3
+        alphaFormat: 4
+        texCompressorQuality: 100
+    - hash: 68004955-0a67-427c-b880-c3ca912671af
+      vaild: 1
+      name: UISprite2048_6
+      priority: 0
+      type: 0
+      compressFilters:
+      - str: /BundleRes/UIBackground/ui_fleet_bg
+      - str: /BundleRes/UIBackground/ui_login
+      - str: /BundleRes/UIBackground/ui_fleet_flag
+      importType: 8
+      importShape: 1
+      sRGB: 1
+      attrOverride: 1
+      mipMap: 0
+      minBias: 0
+      isReadable: 0
+      filterMode: 1
+      isOverride: 1
+      wrapMode: 1
+      anisoLevel: 0
+      iosSetting:
+        maxTextureSize: 11
+        format: 50
+        alphaFormat: 50
+        texCompressorQuality: 100
+      androidSetting:
+        maxTextureSize: 11
+        format: 50
+        alphaFormat: 50
+        texCompressorQuality: 100
+      standaloneSetting:
+        maxTextureSize: 11
+        format: 10
+        alphaFormat: 12
+        texCompressorQuality: 100
+    - hash: 424dd0e1-9a54-4311-bb16-4578a7aaefe6
+      vaild: 1
+      name: SFXTex
+      priority: 0
+      type: 1
+      compressFilters:
+      - str: /Effects/Textures
+      - str: T_
+      importType: 0
+      importShape: 1
+      sRGB: 1
+      attrOverride: 0
+      mipMap: 0
+      minBias: 0
+      isReadable: 0
+      filterMode: 1
+      isOverride: 0
+      wrapMode: 1
+      anisoLevel: 0
+      iosSetting:
+        maxTextureSize: 10
+        format: 50
+        alphaFormat: 50
+        texCompressorQuality: 100
+      androidSetting:
+        maxTextureSize: 10
+        format: 50
+        alphaFormat: 50
+        texCompressorQuality: 100
+      standaloneSetting:
+        maxTextureSize: 10
+        format: 10
+        alphaFormat: 12
+        texCompressorQuality: 100
+    - hash: f3d8e8f7-5e7b-4539-b3b4-75bc6da7e8a3
+      vaild: 1
+      name: shadowmask_32
+      priority: 0
+      type: 0
+      compressFilters:
+      - str: regex:\b\S*Lightmap-\S*.png\b
+      importType: 11
+      importShape: 1
+      sRGB: 1
+      attrOverride: 1
+      mipMap: 0
+      minBias: 0
+      isReadable: 0
+      filterMode: 1
+      isOverride: 1
+      wrapMode: 1
+      anisoLevel: 0
+      iosSetting:
+        maxTextureSize: 5
+        format: 53
+        alphaFormat: 53
+        texCompressorQuality: 100
+      androidSetting:
+        maxTextureSize: 5
+        format: 53
+        alphaFormat: 53
+        texCompressorQuality: 100
+      standaloneSetting:
+        maxTextureSize: 5
+        format: 10
+        alphaFormat: 12
+        texCompressorQuality: 100
+    - hash: 3906a0b0-6ecf-40de-bb3f-6e5c9941ca6b
+      vaild: 1
+      name: lightmap_32
+      priority: 0
+      type: 0
+      compressFilters:
+      - str: regex:\b\S*Lightmap-\S*.exr\b
+      importType: 6
+      importShape: 1
+      sRGB: 1
+      attrOverride: 1
+      mipMap: 0
+      minBias: 0
+      isReadable: 0
+      filterMode: 1
+      isOverride: 1
+      wrapMode: 1
+      anisoLevel: 0
+      iosSetting:
+        maxTextureSize: 5
+        format: 53
+        alphaFormat: 53
+        texCompressorQuality: 100
+      androidSetting:
+        maxTextureSize: 5
+        format: 53
+        alphaFormat: 53
+        texCompressorQuality: 100
+      standaloneSetting:
+        maxTextureSize: 5
+        format: 10
+        alphaFormat: 12
+        texCompressorQuality: 100
+    unResizePath:
+    - Assets/Scenes/Scenelib/OP_beginnerLevel/OP_Syrupvillage_Kuro/Config/SceneLightmapBackup/Chunk_0_1/Lightmap_Chunk_0_1-2.png
+    - Assets/Scenes/Scenelib/OP_Skypiea/OP_Skypiea_Tile/Config/SceneLightmapBackup/CustomVolumn_rock/Lightmap_CustomVolumn_rock-0.png
+    - Assets/Scenes/Scenelib/OP_beginnerLevel/OP_OrangeTown/Config/SceneLightmapBackup/Chunk_0_0/Lightmap_Chunk_0_0-0.png
+    - Assets/Scenes/Scenelib/OP_beginnerLevel/OP_Syrupvillage_Usopp/Config/SceneLightmapBackup/Chunk_0_0/Lightmap_Chunk_0_0-0.png
+    - Assets/Creatures/Scene/System_DIY/Bandpose/Material_OP_MLH_DIY/OP_MLH_01_d.tga
+    - Assets/Creatures/Scene/System_DIY/Bandpose/Material_OP_MLH_DIY/OP_MLH_01_n.tga
+  debugFile: {fileID: 10900000, guid: a39a8788a094b5644a872d757843b5f8, type: 3}
+  ppDebugFile: {fileID: 10900000, guid: f8018e9ccfdc7254788f72c8ef4e4f2e, type: 3}

@@ -1,0 +1,64 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40e1cbd74443f2b4a9ea8cdee05aef60, type: 3}
+  m_Name: ShaderGUIConfig_Scene_Layer
+  m_EditorClassIdentifier: 
+  shader: {fileID: 4800000, guid: 7de63f4719d5ed449b035ef0e5943c25, type: 3}
+  dummyMatType: 0
+  lsType: 1
+  shaderFeatures:
+  - hash: 
+    sfg: {fileID: 11400000, guid: eea36573a8677db4aa8aeb87a8c8a5c0, type: 2}
+    shaderFeatures:
+    - Default_SelfShadow
+  - hash: 
+    sfg: {fileID: 11400000, guid: d78bb4bdc436929448c59d32983f75f9, type: 2}
+    shaderFeatures:
+    - Debug_DebugShader
+    - Debug_Debug
+  - hash: 
+    sfg: {fileID: 11400000, guid: cf68945b14efc0d448b4e1db37a88223, type: 2}
+    shaderFeatures:
+    - Base_PBRScale
+    - Base_NormalScale
+    - Base_MetallicParam
+    - Base_PbrParam
+    - Base_AO
+  - hash: 
+    sfg: {fileID: 11400000, guid: aef698c1bf150b744b5f1a51a9ba83da, type: 2}
+    shaderFeatures:
+    - Blend_BlendTex
+    - Blend_Splat0
+    - Blend_Splat1
+    - Blend_Splat2
+    - Blend_Pbs0
+    - Blend_Pbs1
+    - Blend_Pbs2
+    - Blend_Control
+    - Blend_Scale
+    - Blend_2Layer
+    - Blend_UVST1
+    - Blend_Color2
+    - Blend_Color0
+    - Blend_UVST2
+    - Blend_Color1
+    - Blend_UVST0
+    - Blend_HeightBlend
+    - Blend_empty
+    - Blend_VCMode
+    - Blend_BlendMask
+    - Blend_TextureIntensity
+  - hash: 
+    sfg: {fileID: 11400000, guid: f77f48b04d6db684797677796ceff587, type: 2}
+    shaderFeatures:
+    - Bloom__BloomParam
+    - Bloom_

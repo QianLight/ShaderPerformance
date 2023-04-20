@@ -1,0 +1,651 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 646143184789ad04bb6d1f7feb898645, type: 3}
+  m_Name: ShaderFeatureGroup_Rim
+  m_EditorClassIdentifier: 
+  shaderFeatureBlocks:
+  - hash: aba1dd97-234a-47af-b14d-838f7f16a60f
+    bundleName: RimMultiply
+    shaderFeatures:
+    - name: RimLight
+      propertyName: _Param4
+      type: 5
+      defaultColor: {r: 1, g: 1, b: 1, a: 1}
+      flag: 0
+      customProperty:
+      - valid: 1
+        desc: RimNormalMapWeight
+        defaultValue: 0.4
+        min: 0
+        max: 1
+        index: -1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      - valid: 1
+        desc: OrientLight
+        defaultValue: 0.8
+        min: 0
+        max: 1
+        index: -1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      - valid: 0
+        desc: NormalMapWeight
+        defaultValue: 0.4
+        min: 0
+        max: 1
+        index: -1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      - valid: 0
+        desc: OrientLight
+        defaultValue: 0.8
+        min: 0
+        max: 1
+        index: -1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      dependencyPropertys:
+        isNor: 0
+        dependencyType: 0
+        dependencyShaderProperty: []
+      hash: d1bc843d-756a-4298-89d8-8ce5f9842f0c
+    - name: RimFade
+      propertyName: _Param5
+      type: 5
+      defaultColor: {r: 1, g: 1, b: 1, a: 1}
+      flag: 0
+      customProperty:
+      - valid: 1
+        desc: RimFadeBegin
+        defaultValue: 49
+        min: 0
+        max: 49.99
+        index: -1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      - valid: 1
+        desc: RimFadeEnd
+        defaultValue: 50
+        min: 0
+        max: 50
+        index: -1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      - valid: 0
+        desc: FarNormalMapWeight
+        defaultValue: 0.4
+        min: 0
+        max: 1
+        index: -1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      - valid: 0
+        desc: FarOrientLight
+        defaultValue: 0.8
+        min: 0
+        max: 1
+        index: -1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      dependencyPropertys:
+        isNor: 0
+        dependencyType: 0
+        dependencyShaderProperty: []
+      hash: f0248b5d-0546-4724-a3b9-93cb0187bc3d
+    - name: DarkRimLightColor
+      propertyName: _Color4
+      type: 2
+      defaultColor: {r: 1, g: 1, b: 1, a: 1}
+      flag: 0
+      customProperty:
+      - valid: 1
+        desc: RimDisFadeBegin
+        defaultValue: 0
+        min: 0
+        max: 1
+        index: -1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      - valid: 1
+        desc: RimDisFadeEnd
+        defaultValue: 0.07
+        min: 0
+        max: 1
+        index: -1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      - valid: 1
+        desc: FarNormalMapWeight
+        defaultValue: 0.4
+        min: 0
+        max: 1
+        index: -1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      - valid: 1
+        desc: FarOrientLight
+        defaultValue: 0.8
+        min: 0
+        max: 1
+        index: -1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      dependencyPropertys:
+        isNor: 0
+        dependencyType: 0
+        dependencyShaderProperty: []
+      hash: 8c661e0e-bc58-4784-80ea-a48f64d724f2
+    - name: DarkRim
+      propertyName: _Color4
+      type: 5
+      defaultColor: {r: 1, g: 1, b: 1, a: 1}
+      flag: 0
+      customProperty:
+      - valid: 0
+        desc: 
+        defaultValue: 0
+        min: 0
+        max: 1
+        index: -1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      - valid: 0
+        desc: 
+        defaultValue: 0
+        min: 0
+        max: 1
+        index: -1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      - valid: 0
+        desc: 
+        defaultValue: 0
+        min: 0
+        max: 1
+        index: -1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      - valid: 1
+        desc: DarkRim
+        defaultValue: 1
+        min: 0.1
+        max: 1
+        index: -1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      dependencyPropertys:
+        isNor: 0
+        dependencyType: 0
+        dependencyShaderProperty: []
+      hash: edd656ee-4fda-43ce-adca-cd66bda5e879
+    - name: RimColor
+      propertyName: _RimColortoon
+      type: 2
+      defaultColor: {r: 0.6, g: 0.6, b: 0.6, a: 1}
+      flag: 0
+      customProperty:
+      - valid: 0
+        desc: 
+        defaultValue: 0
+        min: 0
+        max: 1
+        index: -1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      - valid: 0
+        desc: 
+        defaultValue: 0
+        min: 0
+        max: 1
+        index: -1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      - valid: 0
+        desc: 
+        defaultValue: 0
+        min: 0
+        max: 1
+        index: -1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      - valid: 0
+        desc: 
+        defaultValue: 0
+        min: 0
+        max: 1
+        index: -1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      dependencyPropertys:
+        isNor: 0
+        dependencyType: 0
+        dependencyShaderProperty: []
+      hash: 17fd86f8-456a-4f25-9e38-ede5ff79be74
+    - name: RimMultiply
+      propertyName: _RimColortoon
+      type: 5
+      defaultColor: {r: 1, g: 1, b: 1, a: 1}
+      flag: 0
+      customProperty:
+      - valid: 0
+        desc: 
+        defaultValue: 0
+        min: 0
+        max: 1
+        index: -1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      - valid: 0
+        desc: 
+        defaultValue: 0
+        min: 0
+        max: 1
+        index: -1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      - valid: 0
+        desc: 
+        defaultValue: 0
+        min: 0
+        max: 1
+        index: -1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      - valid: 1
+        desc: RimMultiply
+        defaultValue: 0
+        min: 0
+        max: 1
+        index: 3
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      dependencyPropertys:
+        isNor: 0
+        dependencyType: 0
+        dependencyShaderProperty: []
+      hash: 42d025ac-6b9d-42b6-85de-afd146be0012
+  - hash: 92a4b958-8193-4ec0-9dbc-748917f9df96
+    bundleName: ScreenSpacreRim
+    shaderFeatures:
+    - name: ScreenSpaceRimColor
+      propertyName: _SSRimColor
+      type: 2
+      defaultColor: {r: 1, g: 1, b: 1, a: 0.3019608}
+      flag: 0
+      customProperty:
+      - valid: 0
+        desc: 
+        defaultValue: 0
+        min: 0
+        max: 1
+        index: -1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      - valid: 0
+        desc: 
+        defaultValue: 0
+        min: 0
+        max: 1
+        index: -1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      - valid: 0
+        desc: 
+        defaultValue: 0
+        min: 0
+        max: 1
+        index: -1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      - valid: 0
+        desc: 
+        defaultValue: 0
+        min: 0
+        max: 1
+        index: -1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      dependencyPropertys:
+        isNor: 0
+        dependencyType: 0
+        dependencyShaderProperty: []
+      hash: b5b85c04-3051-4cfa-ba08-d0b87337dfde
+    - name: ScreenSpaceRimIntensity
+      propertyName: _SSRimColor
+      type: 5
+      defaultColor: {r: 1, g: 1, b: 1, a: 1}
+      flag: 0
+      customProperty:
+      - valid: 0
+        desc: 
+        defaultValue: 0
+        min: 0
+        max: 1
+        index: -1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      - valid: 0
+        desc: 
+        defaultValue: 0
+        min: 0
+        max: 1
+        index: -1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      - valid: 0
+        desc: 
+        defaultValue: 0
+        min: 0
+        max: 1
+        index: -1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      - valid: 1
+        desc: ScreenSpaceRimIntensity
+        defaultValue: 0.3
+        min: 0
+        max: 1
+        index: -1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      dependencyPropertys:
+        isNor: 0
+        dependencyType: 0
+        dependencyShaderProperty: []
+      hash: 54482ae9-a235-4259-93f8-0364967262c7
+    - name: ScreenSpaceDistanceThreshold
+      propertyName: _SSRimParam0
+      type: 5
+      defaultColor: {r: 1, g: 1, b: 1, a: 1}
+      flag: 0
+      customProperty:
+      - valid: 1
+        desc: ScreenSpaceDistanceThreshold
+        defaultValue: 0.1
+        min: 0
+        max: 1
+        index: -1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      - valid: 0
+        desc: 
+        defaultValue: 0
+        min: 0
+        max: 1
+        index: -1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      - valid: 0
+        desc: 
+        defaultValue: 0
+        min: 0
+        max: 1
+        index: -1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      - valid: 0
+        desc: 
+        defaultValue: 0
+        min: 0
+        max: 1
+        index: -1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      dependencyPropertys:
+        isNor: 0
+        dependencyType: 0
+        dependencyShaderProperty: []
+      hash: 367973f2-1145-44cc-ad58-a51f0adf6515
+    - name: ScreenSpaceRimScale(Pixel)
+      propertyName: _SSRimParam0
+      type: 5
+      defaultColor: {r: 1, g: 1, b: 1, a: 1}
+      flag: 0
+      customProperty:
+      - valid: 0
+        desc: 
+        defaultValue: 0
+        min: 0
+        max: 1
+        index: -1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      - valid: 0
+        desc: 
+        defaultValue: 0
+        min: 0
+        max: 1
+        index: -1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      - valid: 0
+        desc: 
+        defaultValue: 0
+        min: 0
+        max: 1
+        index: -1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      - valid: 1
+        desc: ScreenSpaceRimScale(Pixel)
+        defaultValue: 2
+        min: 1
+        max: 20
+        index: -1
+        intValue: 1
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      dependencyPropertys:
+        isNor: 0
+        dependencyType: 0
+        dependencyShaderProperty: []
+      hash: e2eeb8d6-d76f-4a67-a8bd-e6fdad432cb1

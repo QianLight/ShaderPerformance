@@ -1,0 +1,2377 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 646143184789ad04bb6d1f7feb898645, type: 3}
+  m_Name: ShaderFeatureGroup_SFX
+  m_EditorClassIdentifier: 
+  shaderFeatureBlocks:
+  - hash: 1872fa06-c2e8-4644-8853-0fa840742815
+    bundleName: RenderTags
+    shaderFeatures:
+    - name: BlendMode
+      propertyName: _DstBlend
+      type: 0
+      defaultColor: {r: 1, g: 1, b: 1, a: 1}
+      flag: 0
+      customProperty:
+      - valid: 0
+        desc: 
+        defaultValue: 0
+        min: 0
+        max: 1
+        index: -1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      - valid: 0
+        desc: 
+        defaultValue: 0
+        min: 0
+        max: 1
+        index: -1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      - valid: 0
+        desc: 
+        defaultValue: 0
+        min: 0
+        max: 1
+        index: -1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      - valid: 0
+        desc: 
+        defaultValue: 0
+        min: 0
+        max: 1
+        index: -1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      dependencyPropertys:
+        isNor: 0
+        dependencyType: 0
+        dependencyShaderProperty: []
+      hash: 0442954d-388d-4736-8426-d6768103c622
+    - name: CullMode
+      propertyName: _CullMode
+      type: 0
+      defaultColor: {r: 1, g: 1, b: 1, a: 1}
+      flag: 0
+      customProperty:
+      - valid: 0
+        desc: 
+        defaultValue: 0
+        min: 0
+        max: 1
+        index: -1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      - valid: 0
+        desc: 
+        defaultValue: 0
+        min: 0
+        max: 1
+        index: -1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      - valid: 0
+        desc: 
+        defaultValue: 0
+        min: 0
+        max: 1
+        index: -1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      - valid: 0
+        desc: 
+        defaultValue: 0
+        min: 0
+        max: 1
+        index: -1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      dependencyPropertys:
+        isNor: 0
+        dependencyType: 0
+        dependencyShaderProperty: []
+      hash: a3f4c201-3058-4b2d-82c6-3930eb6b7f9d
+    - name: ZTest
+      propertyName: _ZTest
+      type: 0
+      defaultColor: {r: 1, g: 1, b: 1, a: 1}
+      flag: 0
+      customProperty:
+      - valid: 1
+        desc: ZTest
+        defaultValue: 0
+        min: 0
+        max: 20
+        index: 0
+        intValue: 1
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      - valid: 0
+        desc: 
+        defaultValue: 0
+        min: 0
+        max: 1
+        index: -1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      - valid: 0
+        desc: 
+        defaultValue: 0
+        min: 0
+        max: 1
+        index: -1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      - valid: 0
+        desc: 
+        defaultValue: 0
+        min: 0
+        max: 1
+        index: -1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      dependencyPropertys:
+        isNor: 0
+        dependencyType: 0
+        dependencyShaderProperty: []
+      hash: d7ffcb89-7fa8-416a-8502-0150db71899f
+    - name: ZWrite
+      propertyName: _ZWrite
+      type: 0
+      defaultColor: {r: 1, g: 1, b: 1, a: 1}
+      flag: 0
+      customProperty:
+      - valid: 1
+        desc: ZWrite
+        defaultValue: 0
+        min: 0
+        max: 1
+        index: 0
+        intValue: 0
+        toggleType: 3
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      - valid: 0
+        desc: 
+        defaultValue: 0
+        min: 0
+        max: 1
+        index: -1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      - valid: 0
+        desc: 
+        defaultValue: 0
+        min: 0
+        max: 1
+        index: -1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      - valid: 0
+        desc: 
+        defaultValue: 0
+        min: 0
+        max: 1
+        index: -1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      dependencyPropertys:
+        isNor: 0
+        dependencyType: 0
+        dependencyShaderProperty: []
+      hash: 3fe3c66d-a372-4002-a596-8b0b6deb53c7
+  - hash: b0be26c2-4efd-4fc7-8a78-ce349010baf2
+    bundleName: Main
+    shaderFeatures:
+    - name: MatDataEnable
+      propertyName: _Param
+      type: 6
+      defaultColor: {r: 1, g: 1, b: 1, a: 1}
+      flag: 0
+      customProperty:
+      - valid: 1
+        desc: MatDataEnable
+        defaultValue: 0
+        min: -200
+        max: 200
+        index: 0
+        intValue: 0
+        toggleType: 3
+        valueName: 
+        disableValue: -101
+        enableValue: 100
+        valueCmpType: 2
+        thresholdValue: -100
+      - valid: 0
+        desc: 
+        defaultValue: 0
+        min: 0
+        max: 1
+        index: -1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      - valid: 0
+        desc: 
+        defaultValue: 0
+        min: 0
+        max: 1
+        index: -1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      - valid: 0
+        desc: 
+        defaultValue: 0
+        min: 0
+        max: 1
+        index: -1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      dependencyPropertys:
+        isNor: 0
+        dependencyType: 0
+        dependencyShaderProperty: []
+      hash: a6656f3a-e264-428c-b44b-833e508888e5
+    - name: MainTex
+      propertyName: _MainTex
+      type: 1
+      defaultColor: {r: 1, g: 1, b: 1, a: 1}
+      flag: 0
+      customProperty:
+      - valid: 0
+        desc: 
+        defaultValue: 0
+        min: 0
+        max: 1
+        index: -1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      - valid: 0
+        desc: 
+        defaultValue: 0
+        min: 0
+        max: 1
+        index: -1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      - valid: 0
+        desc: 
+        defaultValue: 0
+        min: 0
+        max: 1
+        index: -1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      - valid: 0
+        desc: 
+        defaultValue: 0
+        min: 0
+        max: 1
+        index: -1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      dependencyPropertys:
+        isNor: 0
+        dependencyType: 0
+        dependencyShaderProperty: []
+      hash: e1c6b9e3-b572-4087-90aa-4eb4ec21ae4b
+    - name: UVST
+      propertyName: _UVST0
+      type: 3
+      defaultColor: {r: 1, g: 1, b: 1, a: 1}
+      flag: 0
+      customProperty:
+      - valid: 0
+        desc: 
+        defaultValue: 0
+        min: 0
+        max: 1
+        index: -1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      - valid: 0
+        desc: 
+        defaultValue: 0
+        min: 0
+        max: 1
+        index: -1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      - valid: 0
+        desc: 
+        defaultValue: 0
+        min: 0
+        max: 1
+        index: -1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      - valid: 0
+        desc: 
+        defaultValue: 0
+        min: 0
+        max: 1
+        index: -1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      dependencyPropertys:
+        isNor: 0
+        dependencyType: 0
+        dependencyShaderProperty: []
+      hash: 1b7e4e28-880b-41c1-9af7-25d5a33f80d7
+    - name: Color
+      propertyName: _Color0
+      type: 2
+      defaultColor: {r: 1, g: 1, b: 1, a: 1}
+      flag: 4
+      customProperty:
+      - valid: 0
+        desc: 
+        defaultValue: 0
+        min: 0
+        max: 1
+        index: -1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      - valid: 0
+        desc: 
+        defaultValue: 0
+        min: 0
+        max: 1
+        index: -1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      - valid: 0
+        desc: 
+        defaultValue: 0
+        min: 0
+        max: 1
+        index: -1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      - valid: 0
+        desc: 
+        defaultValue: 0
+        min: 0
+        max: 1
+        index: -1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      dependencyPropertys:
+        isNor: 0
+        dependencyType: 0
+        dependencyShaderProperty: []
+      hash: 266db27e-6abe-408f-a4b1-c2dc7c134fa6
+    - name: BackColorMask
+      propertyName: _Color1
+      type: 6
+      defaultColor: {r: 1, g: 1, b: 1, a: 1}
+      flag: 0
+      customProperty:
+      - valid: 0
+        desc: 
+        defaultValue: 0
+        min: 0
+        max: 1
+        index: 3
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 2
+        thresholdValue: 0.5
+      - valid: 0
+        desc: 
+        defaultValue: 0
+        min: 0
+        max: 1
+        index: -1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      - valid: 0
+        desc: 
+        defaultValue: 0
+        min: 0
+        max: 1
+        index: -1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      - valid: 0
+        desc: 
+        defaultValue: 0
+        min: 0
+        max: 1
+        index: -1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      dependencyPropertys:
+        isNor: 0
+        dependencyType: 0
+        dependencyShaderProperty: []
+      hash: 95738c0b-b04d-46f8-9bfc-65dd5fbba914
+    - name: BackColor
+      propertyName: _Color1
+      type: 2
+      defaultColor: {r: 1, g: 1, b: 1, a: 1}
+      flag: 0
+      customProperty:
+      - valid: 0
+        desc: 
+        defaultValue: 0
+        min: 0
+        max: 1
+        index: -1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      - valid: 0
+        desc: 
+        defaultValue: 0
+        min: 0
+        max: 1
+        index: -1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      - valid: 0
+        desc: 
+        defaultValue: 0
+        min: 0
+        max: 1
+        index: -1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      - valid: 0
+        desc: 
+        defaultValue: 0
+        min: 0
+        max: 1
+        index: -1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      dependencyPropertys:
+        isNor: 0
+        dependencyType: 0
+        dependencyShaderProperty:
+        - BackColorMask
+      hash: 6bdd8245-2815-4e53-b84a-487821795f0c
+    - name: ColorModify
+      propertyName: _Param3
+      type: 5
+      defaultColor: {r: 1, g: 1, b: 1, a: 1}
+      flag: 0
+      customProperty:
+      - valid: 0
+        desc: 
+        defaultValue: 0
+        min: 0
+        max: 1
+        index: -1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      - valid: 1
+        desc: Brightness
+        defaultValue: 1
+        min: 0
+        max: 10
+        index: 1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      - valid: 1
+        desc: Contrast
+        defaultValue: 1
+        min: -50
+        max: 50
+        index: 2
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      - valid: 0
+        desc: 
+        defaultValue: 0
+        min: 0
+        max: 1
+        index: -1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      dependencyPropertys:
+        isNor: 0
+        dependencyType: 0
+        dependencyShaderProperty: []
+      hash: 55a4bb03-5b9f-407d-a28f-074daffd4105
+    - name: WidthColor
+      propertyName: _Color5
+      type: 2
+      defaultColor: {r: 1, g: 1, b: 1, a: 1}
+      flag: 0
+      customProperty:
+      - valid: 0
+        desc: 
+        defaultValue: 0
+        min: 0
+        max: 1
+        index: -1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      - valid: 0
+        desc: 
+        defaultValue: 0
+        min: 0
+        max: 1
+        index: -1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      - valid: 0
+        desc: 
+        defaultValue: 0
+        min: 0
+        max: 1
+        index: -1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      - valid: 0
+        desc: 
+        defaultValue: 0
+        min: 0
+        max: 1
+        index: -1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      dependencyPropertys:
+        isNor: 0
+        dependencyType: 0
+        dependencyShaderProperty: []
+      hash: ba568eea-74b7-4488-a1eb-a09cca6e4323
+  - hash: 7249c9a5-14f6-47a1-ac45-71dc2a52ca30
+    bundleName: Alpha
+    shaderFeatures:
+    - name: AlphaModify
+      propertyName: _Param4
+      type: 5
+      defaultColor: {r: 1, g: 1, b: 1, a: 1}
+      flag: 0
+      customProperty:
+      - valid: 1
+        desc: UseRChanel
+        defaultValue: 0
+        min: 0
+        max: 1
+        index: 0
+        intValue: 0
+        toggleType: 3
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 2
+        thresholdValue: 0.5
+      - valid: 1
+        desc: AlphaMultiply
+        defaultValue: 1
+        min: 0
+        max: 10
+        index: 1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      - valid: 1
+        desc: _Cutout
+        defaultValue: 0.5
+        min: 0
+        max: 1
+        index: 2
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      - valid: 1
+        desc: SoftParticle
+        defaultValue: -1
+        min: -1
+        max: 10
+        index: 3
+        intValue: 0
+        toggleType: 1
+        valueName: 
+        disableValue: -1
+        enableValue: 0.5
+        valueCmpType: 2
+        thresholdValue: 0
+      dependencyPropertys:
+        isNor: 0
+        dependencyType: 0
+        dependencyShaderProperty: []
+      hash: 7e89dd23-a5fc-4305-a604-70260218dce2
+    - name: AlphaTest
+      propertyName: _ALPHA_TEST
+      type: 4
+      defaultColor: {r: 1, g: 1, b: 1, a: 1}
+      flag: 0
+      customProperty:
+      - valid: 0
+        desc: 
+        defaultValue: 0
+        min: 0
+        max: 1
+        index: -1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      - valid: 0
+        desc: 
+        defaultValue: 0
+        min: 0
+        max: 1
+        index: -1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      - valid: 0
+        desc: 
+        defaultValue: 0
+        min: 0
+        max: 1
+        index: -1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      - valid: 0
+        desc: 
+        defaultValue: 0
+        min: 0
+        max: 1
+        index: -1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      dependencyPropertys:
+        isNor: 0
+        dependencyType: 0
+        dependencyShaderProperty: []
+      hash: b3437741-8f73-4a06-9553-c778ff3d376b
+    - name: Cutout
+      propertyName: _Param4
+      type: 5
+      defaultColor: {r: 1, g: 1, b: 1, a: 1}
+      flag: 0
+      customProperty:
+      - valid: 0
+        desc: 
+        defaultValue: 0
+        min: 0
+        max: 1
+        index: -1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      - valid: 0
+        desc: 
+        defaultValue: 0
+        min: 0
+        max: 1
+        index: -1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      - valid: 1
+        desc: Coutout
+        defaultValue: 0.5
+        min: 0
+        max: 1
+        index: -1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      - valid: 0
+        desc: 
+        defaultValue: 0
+        min: 0
+        max: 1
+        index: -1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      dependencyPropertys:
+        isNor: 0
+        dependencyType: 0
+        dependencyShaderProperty:
+        - AlphaTest
+      hash: 7ee5a242-7350-4ec4-aa7c-3654c929c5e6
+    - name: MaskEnable
+      propertyName: _Color5
+      type: 6
+      defaultColor: {r: 1, g: 1, b: 1, a: 1}
+      flag: 0
+      customProperty:
+      - valid: 0
+        desc: 
+        defaultValue: 0
+        min: 0
+        max: 1
+        index: 3
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 2
+        thresholdValue: 0.5
+      - valid: 0
+        desc: 
+        defaultValue: 0
+        min: 0
+        max: 1
+        index: -1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      - valid: 0
+        desc: 
+        defaultValue: 0
+        min: 0
+        max: 1
+        index: -1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      - valid: 0
+        desc: 
+        defaultValue: 0
+        min: 0
+        max: 1
+        index: -1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      dependencyPropertys:
+        isNor: 0
+        dependencyType: 0
+        dependencyShaderProperty: []
+      hash: 958e7860-66a4-4d3f-8359-f9cec9978754
+    - name: MaskTex
+      propertyName: _MainTex2
+      type: 1
+      defaultColor: {r: 1, g: 1, b: 1, a: 1}
+      flag: 0
+      customProperty:
+      - valid: 0
+        desc: 
+        defaultValue: 0
+        min: 0
+        max: 1
+        index: -1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      - valid: 0
+        desc: 
+        defaultValue: 0
+        min: 0
+        max: 1
+        index: -1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      - valid: 0
+        desc: 
+        defaultValue: 0
+        min: 0
+        max: 1
+        index: -1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      - valid: 0
+        desc: 
+        defaultValue: 0
+        min: 0
+        max: 1
+        index: -1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      dependencyPropertys:
+        isNor: 0
+        dependencyType: 0
+        dependencyShaderProperty:
+        - MaskEnable
+      hash: 240e62fd-3baf-40d8-922e-f3589d02ed82
+    - name: MaskUVST
+      propertyName: _UVST2
+      type: 3
+      defaultColor: {r: 1, g: 1, b: 1, a: 1}
+      flag: 0
+      customProperty:
+      - valid: 0
+        desc: 
+        defaultValue: 0
+        min: 0
+        max: 1
+        index: -1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      - valid: 0
+        desc: 
+        defaultValue: 0
+        min: 0
+        max: 1
+        index: -1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      - valid: 0
+        desc: 
+        defaultValue: 0
+        min: 0
+        max: 1
+        index: -1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      - valid: 0
+        desc: 
+        defaultValue: 0
+        min: 0
+        max: 1
+        index: -1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      dependencyPropertys:
+        isNor: 0
+        dependencyType: 0
+        dependencyShaderProperty:
+        - MaskEnable
+      hash: cacec134-a645-4312-bde7-302ae255f0f1
+    - name: CameraFade
+      propertyName: _Param5
+      type: 5
+      defaultColor: {r: 1, g: 1, b: 1, a: 1}
+      flag: 0
+      customProperty:
+      - valid: 1
+        desc: CameraFadeEnable
+        defaultValue: 0
+        min: 0
+        max: 1
+        index: 0
+        intValue: 0
+        toggleType: 3
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 2
+        thresholdValue: 0
+      - valid: 1
+        desc: _CameraFadeOffset
+        defaultValue: 0
+        min: 0
+        max: 10
+        index: 0
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      - valid: 1
+        desc: _CameraFadeLength
+        defaultValue: 0
+        min: 0
+        max: 10
+        index: 1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      - valid: 0
+        desc: 
+        defaultValue: 0
+        min: 0
+        max: 1
+        index: -1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      dependencyPropertys:
+        isNor: 0
+        dependencyType: 0
+        dependencyShaderProperty: []
+      hash: d0a9b056-0b8c-4a2d-9534-6cf2504a82ab
+  - hash: 4d66f190-1fb4-4e32-9c2b-d5eb6304b17f
+    bundleName: Clip
+    shaderFeatures:
+    - name: ClipEnable
+      propertyName: _Param5
+      type: 6
+      defaultColor: {r: 1, g: 1, b: 1, a: 1}
+      flag: 0
+      customProperty:
+      - valid: 0
+        desc: 
+        defaultValue: 0
+        min: 0
+        max: 1
+        index: 2
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: -1
+        enableValue: 0
+        valueCmpType: 2
+        thresholdValue: -0.5
+      - valid: 0
+        desc: 
+        defaultValue: 0
+        min: 0
+        max: 1
+        index: -1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      - valid: 0
+        desc: 
+        defaultValue: 0
+        min: 0
+        max: 1
+        index: -1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      - valid: 0
+        desc: 
+        defaultValue: 0
+        min: 0
+        max: 1
+        index: -1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      dependencyPropertys:
+        isNor: 0
+        dependencyType: 0
+        dependencyShaderProperty: []
+      hash: be1d82af-c8a2-49b5-b69c-11a5d46f8d4f
+    - name: ClipHardness
+      propertyName: _Param5
+      type: 5
+      defaultColor: {r: 1, g: 1, b: 1, a: 1}
+      flag: 0
+      customProperty:
+      - valid: 0
+        desc: 
+        defaultValue: 0
+        min: 0
+        max: 1
+        index: -1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      - valid: 0
+        desc: 
+        defaultValue: 0
+        min: 0
+        max: 1
+        index: -1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      - valid: 1
+        desc: ClipHardness
+        defaultValue: 0
+        min: 0
+        max: 0.99
+        index: -1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      - valid: 0
+        desc: 
+        defaultValue: 0
+        min: 0
+        max: 1
+        index: -1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      dependencyPropertys:
+        isNor: 0
+        dependencyType: 0
+        dependencyShaderProperty:
+        - ClipEnable
+      hash: ba27ffbd-b584-466b-b980-68a68bdf2cea
+  - hash: 174512f0-3245-436e-9e7d-13be14024164
+    bundleName: CustomData
+    shaderFeatures:
+    - name: CustomData0
+      propertyName: _Param2
+      type: 5
+      defaultColor: {r: 1, g: 1, b: 1, a: 1}
+      flag: 0
+      customProperty:
+      - valid: 1
+        desc: PannerX
+        defaultValue: 0
+        min: 0
+        max: 32
+        index: 0
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      - valid: 1
+        desc: PannerY
+        defaultValue: 0
+        min: 0
+        max: 32
+        index: 1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      - valid: 1
+        desc: Dissolve
+        defaultValue: 0
+        min: 0
+        max: 1
+        index: 2
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      - valid: 1
+        desc: DistortPower
+        defaultValue: 0
+        min: -50
+        max: 50
+        index: 3
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      dependencyPropertys:
+        isNor: 0
+        dependencyType: 0
+        dependencyShaderProperty: []
+      hash: dce5bd18-edd4-401f-97ca-0e4594b47826
+    - name: CustomData1
+      propertyName: _Param1
+      type: 5
+      defaultColor: {r: 1, g: 1, b: 1, a: 1}
+      flag: 0
+      customProperty:
+      - valid: 0
+        desc: 
+        defaultValue: 0
+        min: 0
+        max: 1
+        index: -1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      - valid: 0
+        desc: 
+        defaultValue: 0
+        min: 0
+        max: 1
+        index: -1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      - valid: 0
+        desc: 
+        defaultValue: 0
+        min: 0
+        max: 1
+        index: -1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      - valid: 1
+        desc: EdgeWidth
+        defaultValue: 0
+        min: 0
+        max: 1
+        index: -1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      dependencyPropertys:
+        isNor: 0
+        dependencyType: 0
+        dependencyShaderProperty: []
+      hash: 2c5c0e51-5209-48a4-b89b-b06ea6d1f442
+    - name: TurbulenceEnable
+      propertyName: _Param3
+      type: 6
+      defaultColor: {r: 1, g: 1, b: 1, a: 1}
+      flag: 0
+      customProperty:
+      - valid: 0
+        desc: 
+        defaultValue: 0
+        min: 0
+        max: 1
+        index: 0
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 2
+        thresholdValue: 0.5
+      - valid: 0
+        desc: 
+        defaultValue: 0
+        min: 0
+        max: 1
+        index: -1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      - valid: 0
+        desc: 
+        defaultValue: 0
+        min: 0
+        max: 1
+        index: -1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      - valid: 0
+        desc: 
+        defaultValue: 0
+        min: 0
+        max: 1
+        index: -1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      dependencyPropertys:
+        isNor: 0
+        dependencyType: 0
+        dependencyShaderProperty: []
+      hash: 6a2dacd9-be12-4905-a049-8f106a57e389
+    - name: TurbulenceTex
+      propertyName: _MainTex1
+      type: 1
+      defaultColor: {r: 1, g: 1, b: 1, a: 1}
+      flag: 0
+      customProperty:
+      - valid: 0
+        desc: 
+        defaultValue: 0
+        min: 0
+        max: 1
+        index: -1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      - valid: 0
+        desc: 
+        defaultValue: 0
+        min: 0
+        max: 1
+        index: -1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      - valid: 0
+        desc: 
+        defaultValue: 0
+        min: 0
+        max: 1
+        index: -1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      - valid: 0
+        desc: 
+        defaultValue: 0
+        min: 0
+        max: 1
+        index: -1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      dependencyPropertys:
+        isNor: 0
+        dependencyType: 0
+        dependencyShaderProperty: []
+      hash: cfac988c-02dd-4f67-87f0-f92b6e0abfa9
+    - name: TurbulenceEnable_UVST
+      propertyName: _UVST1
+      type: 3
+      defaultColor: {r: 1, g: 1, b: 1, a: 1}
+      flag: 0
+      customProperty:
+      - valid: 0
+        desc: 
+        defaultValue: 0
+        min: 0
+        max: 1
+        index: -1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      - valid: 0
+        desc: 
+        defaultValue: 0
+        min: 0
+        max: 1
+        index: -1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      - valid: 0
+        desc: 
+        defaultValue: 0
+        min: 0
+        max: 1
+        index: -1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      - valid: 0
+        desc: 
+        defaultValue: 0
+        min: 0
+        max: 1
+        index: -1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      dependencyPropertys:
+        isNor: 0
+        dependencyType: 0
+        dependencyShaderProperty: []
+      hash: 806b7da4-6bb8-42ca-a088-313a91a110ca
+    - name: FresnelEnable
+      propertyName: _Param1
+      type: 6
+      defaultColor: {r: 1, g: 1, b: 1, a: 1}
+      flag: 0
+      customProperty:
+      - valid: 0
+        desc: 
+        defaultValue: 0
+        min: 0
+        max: 1
+        index: 0
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: -1
+        enableValue: 1
+        valueCmpType: 2
+        thresholdValue: -0.5
+      - valid: 0
+        desc: 
+        defaultValue: 0
+        min: 0
+        max: 1
+        index: -1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      - valid: 0
+        desc: 
+        defaultValue: 0
+        min: 0
+        max: 1
+        index: -1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      - valid: 0
+        desc: 
+        defaultValue: 0
+        min: 0
+        max: 1
+        index: -1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      dependencyPropertys:
+        isNor: 0
+        dependencyType: 0
+        dependencyShaderProperty: []
+      hash: 58b6deac-44f9-461a-9b00-48740ed72725
+    - name: Fresnel
+      propertyName: _Param1
+      type: 5
+      defaultColor: {r: 1, g: 1, b: 1, a: 1}
+      flag: 0
+      customProperty:
+      - valid: 1
+        desc: FresnelFlip
+        defaultValue: 0
+        min: 0
+        max: 1
+        index: -1
+        intValue: 0
+        toggleType: 3
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 2
+        thresholdValue: 0.5
+      - valid: 1
+        desc: FresnelPower
+        defaultValue: 1
+        min: -50
+        max: 50
+        index: -1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      - valid: 1
+        desc: FresnelMultiply
+        defaultValue: 1
+        min: 0
+        max: 3
+        index: -1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      - valid: 0
+        desc: 
+        defaultValue: 0
+        min: 0
+        max: 1
+        index: -1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      dependencyPropertys:
+        isNor: 0
+        dependencyType: 0
+        dependencyShaderProperty:
+        - FresnelEnable
+      hash: a78209cb-68b2-4313-b823-57d1df485dc5
+    - name: TurbulenceParameter
+      propertyName: _Param6
+      type: 5
+      defaultColor: {r: 1, g: 1, b: 1, a: 1}
+      flag: 0
+      customProperty:
+      - valid: 1
+        desc: TurbulencePannerX
+        defaultValue: 0
+        min: -10
+        max: 10
+        index: 0
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      - valid: 1
+        desc: TurbulencePannerY
+        defaultValue: 0
+        min: -10
+        max: 10
+        index: 1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      - valid: 0
+        desc: 
+        defaultValue: 0
+        min: 0
+        max: 1
+        index: -1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      - valid: 0
+        desc: 
+        defaultValue: 0
+        min: 0
+        max: 1
+        index: -1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      dependencyPropertys:
+        isNor: 0
+        dependencyType: 0
+        dependencyShaderProperty: []
+      hash: 7cd6123f-15b1-4184-8ca3-96932707158b
+  - hash: 5b451eda-f336-4285-a40b-7adb05b4460e
+    bundleName: Ramp
+    shaderFeatures:
+    - name: RampEnable
+      propertyName: _Param3
+      type: 6
+      defaultColor: {r: 1, g: 1, b: 1, a: 1}
+      flag: 0
+      customProperty:
+      - valid: 0
+        desc: 
+        defaultValue: 0
+        min: 0
+        max: 1
+        index: 3
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: -1
+        enableValue: 1
+        valueCmpType: 2
+        thresholdValue: 0.5
+      - valid: 0
+        desc: 
+        defaultValue: 0
+        min: 0
+        max: 1
+        index: -1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      - valid: 0
+        desc: 
+        defaultValue: 0
+        min: 0
+        max: 1
+        index: -1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      - valid: 0
+        desc: 
+        defaultValue: 0
+        min: 0
+        max: 1
+        index: -1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      dependencyPropertys:
+        isNor: 0
+        dependencyType: 0
+        dependencyShaderProperty: []
+      hash: a0a5bd19-adf5-4129-bd5a-c5307ae6777d
+    - name: RampColor0
+      propertyName: _Color2
+      type: 2
+      defaultColor: {r: 1, g: 1, b: 1, a: 1}
+      flag: 0
+      customProperty:
+      - valid: 0
+        desc: 
+        defaultValue: 0
+        min: 0
+        max: 1
+        index: -1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      - valid: 0
+        desc: 
+        defaultValue: 0
+        min: 0
+        max: 1
+        index: -1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      - valid: 0
+        desc: 
+        defaultValue: 0
+        min: 0
+        max: 1
+        index: -1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      - valid: 0
+        desc: 
+        defaultValue: 0
+        min: 0
+        max: 1
+        index: -1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      dependencyPropertys:
+        isNor: 0
+        dependencyType: 0
+        dependencyShaderProperty:
+        - RampEnable
+      hash: 1dd0f84e-ee85-40c0-84f1-3c0a3f750e08
+    - name: RampColor1
+      propertyName: _Color3
+      type: 2
+      defaultColor: {r: 1, g: 1, b: 1, a: 1}
+      flag: 0
+      customProperty:
+      - valid: 0
+        desc: 
+        defaultValue: 0
+        min: 0
+        max: 1
+        index: -1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      - valid: 0
+        desc: 
+        defaultValue: 0
+        min: 0
+        max: 1
+        index: -1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      - valid: 0
+        desc: 
+        defaultValue: 0
+        min: 0
+        max: 1
+        index: -1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      - valid: 0
+        desc: 
+        defaultValue: 0
+        min: 0
+        max: 1
+        index: -1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      dependencyPropertys:
+        isNor: 0
+        dependencyType: 0
+        dependencyShaderProperty:
+        - RampEnable
+      hash: 24eac313-985d-4b88-9639-cef5a53a3198
+    - name: RampColor2
+      propertyName: _Color4
+      type: 2
+      defaultColor: {r: 1, g: 1, b: 1, a: 1}
+      flag: 0
+      customProperty:
+      - valid: 0
+        desc: 
+        defaultValue: 0
+        min: 0
+        max: 1
+        index: -1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      - valid: 0
+        desc: 
+        defaultValue: 0
+        min: 0
+        max: 1
+        index: -1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      - valid: 0
+        desc: 
+        defaultValue: 0
+        min: 0
+        max: 1
+        index: -1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      - valid: 0
+        desc: 
+        defaultValue: 0
+        min: 0
+        max: 1
+        index: -1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      dependencyPropertys:
+        isNor: 0
+        dependencyType: 0
+        dependencyShaderProperty:
+        - RampEnable
+      hash: bbfa9320-89b2-4176-866f-36a2478ff2c3
+    - name: RampParam0
+      propertyName: _Color2
+      type: 5
+      defaultColor: {r: 1, g: 1, b: 1, a: 1}
+      flag: 0
+      customProperty:
+      - valid: 0
+        desc: 
+        defaultValue: 0
+        min: 0
+        max: 1
+        index: -1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      - valid: 0
+        desc: 
+        defaultValue: 0
+        min: 0
+        max: 1
+        index: -1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      - valid: 0
+        desc: 
+        defaultValue: 0
+        min: 0
+        max: 1
+        index: -1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      - valid: 1
+        desc: RampParam0
+        defaultValue: 0.3
+        min: 0
+        max: 1
+        index: -1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      dependencyPropertys:
+        isNor: 0
+        dependencyType: 0
+        dependencyShaderProperty:
+        - RampEnable
+      hash: cb2d83ba-958e-41b7-b5d8-4f5772764215
+    - name: RampParam1
+      propertyName: _Color3
+      type: 5
+      defaultColor: {r: 1, g: 1, b: 1, a: 1}
+      flag: 0
+      customProperty:
+      - valid: 0
+        desc: 
+        defaultValue: 0
+        min: 0
+        max: 1
+        index: -1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      - valid: 0
+        desc: 
+        defaultValue: 0
+        min: 0
+        max: 1
+        index: -1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      - valid: 0
+        desc: 
+        defaultValue: 0
+        min: 0
+        max: 1
+        index: -1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      - valid: 1
+        desc: RampParam1
+        defaultValue: 0.33
+        min: 0
+        max: 1
+        index: -1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      dependencyPropertys:
+        isNor: 0
+        dependencyType: 0
+        dependencyShaderProperty:
+        - RampEnable
+      hash: dd793b9f-1540-483b-9942-51623bfa6b91
+    - name: RampParam2
+      propertyName: _Color4
+      type: 5
+      defaultColor: {r: 1, g: 1, b: 1, a: 1}
+      flag: 0
+      customProperty:
+      - valid: 0
+        desc: 
+        defaultValue: 0
+        min: 0
+        max: 1
+        index: -1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      - valid: 0
+        desc: 
+        defaultValue: 0
+        min: 0
+        max: 1
+        index: -1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      - valid: 0
+        desc: 
+        defaultValue: 0
+        min: 0
+        max: 1
+        index: -1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      - valid: 1
+        desc: RampParam2
+        defaultValue: 0.6
+        min: 0
+        max: 1
+        index: -1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      dependencyPropertys:
+        isNor: 0
+        dependencyType: 0
+        dependencyShaderProperty:
+        - RampEnable
+      hash: 9b8804b5-a074-48ee-b4d0-be12531afeb1
+    - name: RampParam3
+      propertyName: _Param3
+      type: 5
+      defaultColor: {r: 1, g: 1, b: 1, a: 1}
+      flag: 0
+      customProperty:
+      - valid: 0
+        desc: 
+        defaultValue: 0
+        min: 0
+        max: 1
+        index: -1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      - valid: 0
+        desc: 
+        defaultValue: 0
+        min: 0
+        max: 1
+        index: -1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      - valid: 0
+        desc: 
+        defaultValue: 0
+        min: 0
+        max: 1
+        index: -1
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      - valid: 1
+        desc: RampParam3
+        defaultValue: 0.66
+        min: 0
+        max: 1
+        index: 3
+        intValue: 0
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      dependencyPropertys:
+        isNor: 0
+        dependencyType: 0
+        dependencyShaderProperty:
+        - RampEnable
+      hash: 6004dd0b-308e-41be-b874-287ac66dbeed

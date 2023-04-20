@@ -1,0 +1,406 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -85470538, guid: a8701fc72a91f814ea6a07ebb465d2b8, type: 3}
+  m_Name: QualitySettings
+  m_EditorClassIdentifier: 
+  custom:
+    mainRTFormat: 22
+    materialquality: 3
+    antialiasinglevel: 3
+    renderQuality: 3
+    bloomQuality: 3
+    dofQuality: 1
+    fogQuality: 3
+    dynamicLightQuality: 3
+    shadowQuality: 3
+    grassQuality: 3
+    volumeEffect: 3
+    sfxEffect: 3
+    postProcessQuality: 3
+    radialBlurQuality:
+      enable: 0
+      downSample: 0
+      times: 1
+      cullDistance: 50
+      lodSize: 0.2
+      fadeOutCurve:
+        serializedVersion: 2
+        m_Curve:
+        - serializedVersion: 3
+          time: 0
+          value: 0
+          inSlope: 0
+          outSlope: 1
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        - serializedVersion: 3
+          time: 1
+          value: 1
+          inSlope: 1
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+    dynamicBoneQuality:
+      m_UpdateRate: 60
+      m_UpdateMode: 0
+      m_DistantDisable: 0
+      m_DistanceToObject: 20
+      m_MovementThreshold: 3
+    lodLevel: 0
+    rtScale: 1
+    flag:
+      flag: 0
+  settings:
+  - mainRTFormat: 22
+    materialquality: 1
+    antialiasinglevel: 2
+    renderQuality: 2
+    bloomQuality: 2
+    dofQuality: 0
+    fogQuality: 1
+    dynamicLightQuality: 1
+    shadowQuality: 0
+    grassQuality: 0
+    volumeEffect: 0
+    sfxEffect: 2
+    postProcessQuality: 3
+    radialBlurQuality:
+      enable: 1
+      downSample: 0
+      times: 1
+      cullDistance: 100
+      lodSize: 0.2
+      fadeOutCurve:
+        serializedVersion: 2
+        m_Curve:
+        - serializedVersion: 3
+          time: 0
+          value: 1.0023499
+          inSlope: 0
+          outSlope: -0.018242598
+          tangentMode: 1
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0.51666665
+        - serializedVersion: 3
+          time: 1
+          value: 0.004699707
+          inSlope: -3.0822198
+          outSlope: 1
+          tangentMode: 1
+          weightedMode: 0
+          inWeight: 0.037500024
+          outWeight: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+    dynamicBoneQuality:
+      m_UpdateRate: 60
+      m_UpdateMode: 0
+      m_DistantDisable: 0
+      m_DistanceToObject: 20
+      m_MovementThreshold: 3
+    lodLevel: 0
+    rtScale: 1
+    flag:
+      flag: 1278
+  - mainRTFormat: 22
+    materialquality: 3
+    antialiasinglevel: 3
+    renderQuality: 3
+    bloomQuality: 0
+    dofQuality: 1
+    fogQuality: 3
+    dynamicLightQuality: 3
+    shadowQuality: 3
+    grassQuality: 3
+    volumeEffect: 3
+    sfxEffect: 3
+    postProcessQuality: 3
+    radialBlurQuality:
+      enable: 1
+      downSample: 1
+      times: 1
+      cullDistance: 100
+      lodSize: 0.2
+      fadeOutCurve:
+        serializedVersion: 2
+        m_Curve:
+        - serializedVersion: 3
+          time: 0
+          value: 1.0039597
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        - serializedVersion: 3
+          time: 0.85270494
+          value: 0.8026219
+          inSlope: -0.63748646
+          outSlope: -0.63748646
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0.33333334
+          outWeight: 1
+        - serializedVersion: 3
+          time: 0.98320395
+          value: 0.460015
+          inSlope: -6.360494
+          outSlope: -6.360494
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0.33333334
+          outWeight: 1
+        - serializedVersion: 3
+          time: 1
+          value: 0
+          inSlope: -3.0154467
+          outSlope: -3.0154467
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0.059337437
+          outWeight: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+    dynamicBoneQuality:
+      m_UpdateRate: 60
+      m_UpdateMode: 0
+      m_DistantDisable: 0
+      m_DistanceToObject: 20
+      m_MovementThreshold: 3
+    lodLevel: 0
+    rtScale: 1
+    flag:
+      flag: 0
+  - mainRTFormat: 22
+    materialquality: 3
+    antialiasinglevel: 3
+    renderQuality: 3
+    bloomQuality: 1
+    dofQuality: 0
+    fogQuality: 3
+    dynamicLightQuality: 3
+    shadowQuality: 3
+    grassQuality: 3
+    volumeEffect: 3
+    sfxEffect: 3
+    postProcessQuality: 3
+    radialBlurQuality:
+      enable: 1
+      downSample: 1
+      times: 1
+      cullDistance: 50
+      lodSize: 0.2
+      fadeOutCurve:
+        serializedVersion: 2
+        m_Curve:
+        - serializedVersion: 3
+          time: 0
+          value: 1.0039597
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        - serializedVersion: 3
+          time: 0.85270494
+          value: 0.8026219
+          inSlope: -0.63748646
+          outSlope: -0.63748646
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0.33333334
+          outWeight: 1
+        - serializedVersion: 3
+          time: 0.98320395
+          value: 0.460015
+          inSlope: -6.360494
+          outSlope: -6.360494
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0.33333334
+          outWeight: 1
+        - serializedVersion: 3
+          time: 1
+          value: 0
+          inSlope: -3.0154467
+          outSlope: -3.0154467
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0.059337437
+          outWeight: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+    dynamicBoneQuality:
+      m_UpdateRate: 60
+      m_UpdateMode: 0
+      m_DistantDisable: 0
+      m_DistanceToObject: 20
+      m_MovementThreshold: 3
+    lodLevel: 0
+    rtScale: 1
+    flag:
+      flag: 14
+  - mainRTFormat: 22
+    materialquality: 3
+    antialiasinglevel: 3
+    renderQuality: 3
+    bloomQuality: 2
+    dofQuality: 0
+    fogQuality: 3
+    dynamicLightQuality: 3
+    shadowQuality: 3
+    grassQuality: 3
+    volumeEffect: 3
+    sfxEffect: 3
+    postProcessQuality: 3
+    radialBlurQuality:
+      enable: 1
+      downSample: 2
+      times: 0
+      cullDistance: 50
+      lodSize: 0.2
+      fadeOutCurve:
+        serializedVersion: 2
+        m_Curve:
+        - serializedVersion: 3
+          time: 0
+          value: 1.0039597
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        - serializedVersion: 3
+          time: 0.85270494
+          value: 0.8026219
+          inSlope: -0.63748646
+          outSlope: -0.63748646
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0.33333334
+          outWeight: 1
+        - serializedVersion: 3
+          time: 0.98320395
+          value: 0.460015
+          inSlope: -6.360494
+          outSlope: -6.360494
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0.33333334
+          outWeight: 1
+        - serializedVersion: 3
+          time: 1
+          value: 0
+          inSlope: -3.0154467
+          outSlope: -3.0154467
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0.059337437
+          outWeight: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+    dynamicBoneQuality:
+      m_UpdateRate: 60
+      m_UpdateMode: 0
+      m_DistantDisable: 0
+      m_DistanceToObject: 20
+      m_MovementThreshold: 3
+    lodLevel: 0
+    rtScale: 1
+    flag:
+      flag: 0
+  - mainRTFormat: 22
+    materialquality: 3
+    antialiasinglevel: 3
+    renderQuality: 3
+    bloomQuality: 3
+    dofQuality: 0
+    fogQuality: 3
+    dynamicLightQuality: 3
+    shadowQuality: 3
+    grassQuality: 3
+    volumeEffect: 3
+    sfxEffect: 3
+    postProcessQuality: 3
+    radialBlurQuality:
+      enable: 0
+      downSample: 0
+      times: 0
+      cullDistance: 30
+      lodSize: 0.2
+      fadeOutCurve:
+        serializedVersion: 2
+        m_Curve:
+        - serializedVersion: 3
+          time: 0
+          value: 1.0039597
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        - serializedVersion: 3
+          time: 0.85270494
+          value: 0.8026219
+          inSlope: -0.63748646
+          outSlope: -0.63748646
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0.33333334
+          outWeight: 1
+        - serializedVersion: 3
+          time: 0.98320395
+          value: 0.460015
+          inSlope: -6.360494
+          outSlope: -6.360494
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0.33333334
+          outWeight: 1
+        - serializedVersion: 3
+          time: 1
+          value: 0
+          inSlope: -3.0154467
+          outSlope: -3.0154467
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0.059337437
+          outWeight: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+    dynamicBoneQuality:
+      m_UpdateRate: 60
+      m_UpdateMode: 0
+      m_DistantDisable: 0
+      m_DistanceToObject: 20
+      m_MovementThreshold: 3
+    lodLevel: 0
+    rtScale: 1
+    flag:
+      flag: 0

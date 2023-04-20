@@ -1,0 +1,1426 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a9003263bb7d8a4789632b1b2e75a1b, type: 3}
+  m_Name: EffectConfig
+  m_EditorClassIdentifier: 
+  testGO:
+  - gameObject: {fileID: 3166136486222108639, guid: 94fd16af840c45d4da657d974df07b42,
+      type: 3}
+    height: 2
+    partTag: 
+  - gameObject: {fileID: 1441357230355097275, guid: bfd81b202b957f24f98281df992309c4,
+      type: 3}
+    height: 2
+    partTag: 
+  - gameObject: {fileID: 79411851418236021, guid: 38d929a0bd4f0b14c83221982844cec0,
+      type: 3}
+    height: 2
+    partTag: 
+  - gameObject: {fileID: 964443382237422438, guid: 7f7d6ad36c3e33543bf0e62e1a09293a,
+      type: 3}
+    height: 2
+    partTag: sanji
+  - gameObject: {fileID: 8241687317425781774, guid: 14bc432cebb59664b9408309da3e1823,
+      type: 3}
+    height: 2
+    partTag: 
+  - gameObject: {fileID: 600343682187617111, guid: 123e59c4b222622448cd74e709e51a67,
+      type: 3}
+    height: 2
+    partTag: 
+  - gameObject: {fileID: 2442737168890919459, guid: dcfd5efc915cb444693b76d89322a942,
+      type: 3}
+    height: 2
+    partTag: 
+  - gameObject: {fileID: 1266552911813979395, guid: 183439e3c7735e947be5a6dd24d856ed,
+      type: 3}
+    height: 2
+    partTag: 
+  matEffects:
+  - hash: 16988f6f-cf9b-4b5f-b2a3-a62b6b6240a6
+    desc: "\u72C2\u66B4\u5E03\u6CBBshader"
+    templateID: HitShader
+    uniqueID: 0
+    priority: 0
+    fadeIn: 0.1
+    fadeOut: 0.3
+    effectTime: -1
+    partTags: 
+    meData:
+    - path: Assets/Effects/Materials/Common/
+      asset: {fileID: 2100000, guid: 117690bae6fea084d949ee0c479aa9e9, type: 2}
+      x: 9
+      y: 0
+      z: 0
+      w: 0
+      param: 0
+      partMask: 4294967295
+    - path: 
+      asset: {fileID: 0}
+      x: 0.59607846
+      y: 0.078431375
+      z: 0.05490196
+      w: 1
+      param: 0
+      partMask: 4294967295
+  - hash: e2f70ea3-8851-43bf-966f-0fb4da80e80b
+    desc: 
+    templateID: HitShader
+    uniqueID: 1
+    priority: 0
+    fadeIn: 0.1
+    fadeOut: 0.3
+    effectTime: -1
+    partTags: 
+    meData:
+    - path: Assets/Effects/Materials/Common/
+      asset: {fileID: 2100000, guid: c51fb3f6bd3c8434385078f50e9ff817, type: 2}
+      x: 9
+      y: 0
+      z: 0
+      w: 0
+      param: 0
+      partMask: 4294967295
+    - path: 
+      asset: {fileID: 0}
+      x: 1.4980392
+      y: 0.4627451
+      z: 0.44705883
+      w: 1
+      param: 0
+      partMask: 4294967295
+  - hash: 83233429-4c9f-44df-b925-52c4b02d3532
+    desc: wudi_middle
+    templateID: HitShader
+    uniqueID: 2
+    priority: 0
+    fadeIn: 0
+    fadeOut: 0.1
+    effectTime: -1
+    partTags: 
+    meData:
+    - path: Assets/Effects/Materials/Common/
+      asset: {fileID: 2100000, guid: 9891af75add43d945a74c71c15b770be, type: 2}
+      x: 9
+      y: 0
+      z: 0
+      w: 0
+      param: 0
+      partMask: 4294967295
+    - path: 
+      asset: {fileID: 0}
+      x: 1.6621785
+      y: 1.6621785
+      z: 1.6621785
+      w: 1
+      param: 0
+      partMask: 4294967295
+  - hash: bd168347-41bc-4f71-96b4-3ded49da0a1a
+    desc: tiekuai
+    templateID: HitShader
+    uniqueID: 3
+    priority: 0
+    fadeIn: 0.1
+    fadeOut: 0.2
+    effectTime: -1
+    partTags: 
+    meData:
+    - path: Assets/Effects/Materials/Common/
+      asset: {fileID: 2100000, guid: 7ab7e76c68baf694898fb2e60a6b7ac4, type: 2}
+      x: 9
+      y: 0
+      z: 0
+      w: 0
+      param: 0
+      partMask: 4294967295
+    - path: 
+      asset: {fileID: 0}
+      x: 0.26119488
+      y: 0.56698406
+      z: 1.2231566
+      w: 1
+      param: 0
+      partMask: 4294967295
+  - hash: f869ac54-0997-4278-b55c-99be02f0a270
+    desc: shuangmianyellow
+    templateID: HitShader
+    uniqueID: 4
+    priority: 4
+    fadeIn: 0.1
+    fadeOut: 0.2
+    effectTime: -1
+    partTags: 
+    meData:
+    - path: Assets/Effects/Materials/Common/
+      asset: {fileID: 2100000, guid: 46135a928fe858b4f9b0f77d06a3c11d, type: 2}
+      x: 9
+      y: 0
+      z: 0
+      w: 0
+      param: 0
+      partMask: 4294967295
+    - path: 
+      asset: {fileID: 0}
+      x: 1.8443027
+      y: 0.8883552
+      z: 0.09656035
+      w: 1
+      param: 0
+      partMask: 4294967295
+  - hash: 8b0d4f07-976a-46f9-9e10-58be3273ae87
+    desc: wudi_weak
+    templateID: HitShader
+    uniqueID: 5
+    priority: 0
+    fadeIn: 0
+    fadeOut: 0.1
+    effectTime: -1
+    partTags: 
+    meData:
+    - path: Assets/Effects/Materials/Common/
+      asset: {fileID: 2100000, guid: 9891af75add43d945a74c71c15b770be, type: 2}
+      x: 9
+      y: 0
+      z: 0
+      w: 0
+      param: 0
+      partMask: 4294967295
+    - path: 
+      asset: {fileID: 0}
+      x: 1.216786
+      y: 1.216786
+      z: 1.216786
+      w: 1
+      param: 0
+      partMask: 4294967295
+  - hash: 56dc543f-503b-4760-b142-c423eb2a026d
+    desc: wudi_strong
+    templateID: HitShader
+    uniqueID: 6
+    priority: 0
+    fadeIn: 0
+    fadeOut: 0.1
+    effectTime: -1
+    partTags: 
+    meData:
+    - path: Assets/Effects/Materials/Common/
+      asset: {fileID: 2100000, guid: aad68edbf73023c46ba34b33c046a695, type: 2}
+      x: 9
+      y: 0
+      z: 0
+      w: 0
+      param: 0
+      partMask: 4294967295
+    - path: 
+      asset: {fileID: 0}
+      x: 2.046382
+      y: 2.046382
+      z: 2.046382
+      w: 1
+      param: 0
+      partMask: 4294967295
+  - hash: 1cef1654-881a-4960-9cf4-21dca1336a08
+    desc: Monster_BlackBeard_angry
+    templateID: RimLight
+    uniqueID: 100
+    priority: 0
+    fadeIn: 0.1
+    fadeOut: 0
+    effectTime: -1
+    partTags: 
+    meData:
+    - path: 
+      asset: {fileID: 0}
+      x: 0.85490197
+      y: 0.043137256
+      z: 0
+      w: 0.9
+      param: 0
+      partMask: 4294967295
+  - hash: 4a453cec-c12c-4236-90ca-d5341f7b5b24
+    desc: dash
+    templateID: RimLight
+    uniqueID: 101
+    priority: 0
+    fadeIn: 0.092
+    fadeOut: 0.308
+    effectTime: 0.3
+    partTags: 
+    meData:
+    - path: 
+      asset: {fileID: 0}
+      x: 0.587
+      y: 0.587
+      z: 0.587
+      w: 0.546
+      param: 0
+      partMask: 4294967295
+  - hash: 7c5fcb4a-e701-400a-9938-67a728d2233f
+    desc: puoSui
+    templateID: RimLight
+    uniqueID: 102
+    priority: 0
+    fadeIn: 0.1
+    fadeOut: 0
+    effectTime: -1
+    partTags: 
+    meData:
+    - path: 
+      asset: {fileID: 0}
+      x: 0.04523078
+      y: 0
+      z: 0.168
+      w: 0.672
+      param: 0
+      partMask: 4294967295
+  - hash: 39ee80c6-f30e-4eb7-9195-9f7c45b6bbb9
+    desc: electrification
+    templateID: RimLight
+    uniqueID: 103
+    priority: 0
+    fadeIn: 0.1
+    fadeOut: 0
+    effectTime: -1
+    partTags: 
+    meData:
+    - path: 
+      asset: {fileID: 0}
+      x: 0.021181917
+      y: 0.26415092
+      z: 0.10811576
+      w: 0.7
+      param: 0
+      partMask: 4294967295
+  - hash: 99e3e3cf-712e-4fa8-83c9-ac9fce9bc7ce
+    desc: jiansu
+    templateID: RimLight
+    uniqueID: 104
+    priority: 0
+    fadeIn: 0
+    fadeOut: 0
+    effectTime: -1
+    partTags: 
+    meData:
+    - path: 
+      asset: {fileID: 0}
+      x: 0.4669811
+      y: 0.8576597
+      z: 1
+      w: 0.518
+      param: 0
+      partMask: 4294967295
+  - hash: 1f566986-a2fd-454b-9325-4fae7d7b79c9
+    desc: 
+    templateID: RimLight
+    uniqueID: 105
+    priority: 0
+    fadeIn: 0.1
+    fadeOut: 0.1
+    effectTime: -1
+    partTags: 
+    meData:
+    - path: 
+      asset: {fileID: 0}
+      x: 0.99864256
+      y: 0.09019607
+      z: 1
+      w: 0.58
+      param: 0
+      partMask: 4294967295
+  - hash: 7fd4ab1a-f9a7-457d-b164-30c992f55112
+    desc: 
+    templateID: RimLight
+    uniqueID: 106
+    priority: 0
+    fadeIn: 0.1
+    fadeOut: 0.1
+    effectTime: -1
+    partTags: 
+    meData:
+    - path: 
+      asset: {fileID: 0}
+      x: 0.9245283
+      y: 0.100302614
+      z: 0.9245283
+      w: 0.54
+      param: 0
+      partMask: 4294967295
+  - hash: 02aa05e3-b07a-4c16-89ba-5e2151b5ca7d
+    desc: FenNU
+    templateID: RimLight
+    uniqueID: 107
+    priority: 0
+    fadeIn: 0.1
+    fadeOut: 0
+    effectTime: -1
+    partTags: 
+    meData:
+    - path: 
+      asset: {fileID: 0}
+      x: 0.29
+      y: 0.0032222222
+      z: 0
+      w: 0.695
+      param: 0
+      partMask: 4294967295
+  - hash: f5eab971-cd45-4e82-aaa3-67f8f4001a9a
+    desc: Role_luccy_damage_kongmu_buff
+    templateID: RimLight
+    uniqueID: 108
+    priority: 0
+    fadeIn: 0
+    fadeOut: 0
+    effectTime: -1
+    partTags: 
+    meData:
+    - path: 
+      asset: {fileID: 0}
+      x: 0.78431374
+      y: 0.6716812
+      z: 0.01568626
+      w: 0.58
+      param: 0
+      partMask: 4294967295
+  - hash: 409adfe8-7108-482c-b7f8-0891d1a695d2
+    desc: TieKuai
+    templateID: RimLight
+    uniqueID: 109
+    priority: 0
+    fadeIn: 0
+    fadeOut: 0.838
+    effectTime: -1
+    partTags: 
+    meData:
+    - path: 
+      asset: {fileID: 0}
+      x: 0.012356324
+      y: 0.037068944
+      z: 0.215
+      w: 0.777
+      param: 0
+      partMask: 4294967295
+  - hash: 93612877-4978-4b63-8072-6da76a201e5b
+    desc: BaTi
+    templateID: RimLight
+    uniqueID: 110
+    priority: 0
+    fadeIn: 0
+    fadeOut: 0
+    effectTime: -1
+    partTags: 
+    meData:
+    - path: 
+      asset: {fileID: 0}
+      x: 0.023529403
+      y: 0.2730609
+      z: 0.3372549
+      w: 0.608
+      param: 0
+      partMask: 4294967295
+  - hash: efad0178-246e-402c-a5a3-7a375b692119
+    desc: TieKuai_plus
+    templateID: RimLight
+    uniqueID: 111
+    priority: 1
+    fadeIn: 0
+    fadeOut: 0
+    effectTime: -1
+    partTags: 
+    meData:
+    - path: 
+      asset: {fileID: 0}
+      x: 0.06528105
+      y: 0
+      z: 0.25490198
+      w: 0.777
+      param: 0
+      partMask: 127
+  - hash: a310e989-e301-4fb4-beb7-a20df1fbcd4d
+    desc: Role_lucci_muya
+    templateID: RimLight
+    uniqueID: 112
+    priority: 0
+    fadeIn: 0
+    fadeOut: 0
+    effectTime: -1
+    partTags: 
+    meData:
+    - path: 
+      asset: {fileID: 0}
+      x: 1
+      y: 0.5833334
+      z: 0
+      w: 0.52
+      param: 0
+      partMask: 4294967295
+  - hash: 0bed6cb3-856d-437a-8e3a-bbb8e375f695
+    desc: 
+    templateID: AddColor
+    uniqueID: 200
+    priority: 0
+    fadeIn: 0
+    fadeOut: 0
+    effectTime: -1
+    partTags: 
+    meData:
+    - path: 
+      asset: {fileID: 0}
+      x: 2.5314422
+      y: 2.5314422
+      z: 2.5314422
+      w: 0.2
+      param: 0
+      partMask: 4294967295
+  - hash: 77c905cd-c1a6-4a09-9748-baa1f31fb038
+    desc: 
+    templateID: AddColor
+    uniqueID: 201
+    priority: 0
+    fadeIn: 0
+    fadeOut: 0
+    effectTime: 3.9
+    partTags: 
+    meData:
+    - path: 
+      asset: {fileID: 0}
+      x: 1
+      y: 1
+      z: 1
+      w: 0.44
+      param: 0
+      partMask: 63
+  - hash: a87c40d8-d914-488f-9017-820c3a6dfe1f
+    desc: Transparent
+    templateID: Fade
+    uniqueID: 300
+    priority: 0
+    fadeIn: 0
+    fadeOut: 0
+    effectTime: -1
+    partTags: 
+    meData:
+    - path: 
+      asset: {fileID: 0}
+      x: 1
+      y: 1
+      z: 1
+      w: 0.274
+      param: 4
+      partMask: 4294967295
+  - hash: ad2ce093-8e3c-493a-940a-eec65edba965
+    desc: blackbeard
+    templateID: Hide
+    uniqueID: 400
+    priority: 0
+    fadeIn: 0.1
+    fadeOut: 0.1
+    effectTime: -1
+    partTags: 
+    meData:
+    - path: 
+      asset: {fileID: 0}
+      x: 0
+      y: 0
+      z: 0
+      w: 0
+      param: 0
+      partMask: 4294967295
+    - path: 
+      asset: {fileID: 0}
+      x: 1
+      y: 1
+      z: 1
+      w: 0
+      param: 4
+      partMask: 4294967295
+  - hash: 37109492-b636-4000-affd-0fcc18d26b5b
+    desc: Role_nami_hide
+    templateID: Hide
+    uniqueID: 401
+    priority: 1
+    fadeIn: 0
+    fadeOut: 0
+    effectTime: -1
+    partTags: 
+    meData:
+    - path: 
+      asset: {fileID: 0}
+      x: 0
+      y: 0
+      z: 0
+      w: 0
+      param: 0
+      partMask: 0
+    - path: 
+      asset: {fileID: 0}
+      x: 0
+      y: 0
+      z: 0
+      w: 0.1
+      param: 4
+      partMask: 4294967295
+  - hash: 50d8761b-b866-4521-8b09-ccbbeb0bdfc0
+    desc: buggy_qiu
+    templateID: Hide
+    uniqueID: 402
+    priority: 0
+    fadeIn: 0
+    fadeOut: 0
+    effectTime: -1
+    partTags: buggy
+    meData:
+    - path: 
+      asset: {fileID: 0}
+      x: 0
+      y: 0
+      z: 0
+      w: 0
+      param: 0
+      partMask: 558080
+    - path: 
+      asset: {fileID: 0}
+      x: 1
+      y: 1
+      z: 1
+      w: 1
+      param: 4
+      partMask: 0
+  - hash: d6c7a095-e817-4c37-b2c8-629012a2d337
+    desc: Usopp_hit
+    templateID: Hide
+    uniqueID: 403
+    priority: 0
+    fadeIn: 0
+    fadeOut: 0
+    effectTime: -1
+    partTags: buggy
+    meData:
+    - path: 
+      asset: {fileID: 0}
+      x: 0
+      y: 0
+      z: 0
+      w: 0
+      param: 0
+      partMask: 16
+    - path: 
+      asset: {fileID: 0}
+      x: 1
+      y: 1
+      z: 1
+      w: 1
+      param: 4
+      partMask: 4294967295
+  - hash: 9e2939a6-260e-4972-aacf-0ce725745d0b
+    desc: role_zoro_weak_show
+    templateID: Hide
+    uniqueID: 404
+    priority: 0
+    fadeIn: 0
+    fadeOut: 0
+    effectTime: -1
+    partTags: zoro
+    meData:
+    - path: 
+      asset: {fileID: 0}
+      x: 1
+      y: 0
+      z: 0
+      w: 0
+      param: 0
+      partMask: 1536
+    - path: 
+      asset: {fileID: 0}
+      x: 1
+      y: 1
+      z: 1
+      w: 1
+      param: 4
+      partMask: 0
+  - hash: 6fc50ef9-3786-41d1-8a04-f3248ce7cb16
+    desc: role_zoro_weak_hide
+    templateID: Hide
+    uniqueID: 405
+    priority: 0
+    fadeIn: 0
+    fadeOut: 0
+    effectTime: -1
+    partTags: zoro
+    meData:
+    - path: 
+      asset: {fileID: 0}
+      x: 0
+      y: 0
+      z: 0
+      w: 0
+      param: 0
+      partMask: 264
+    - path: 
+      asset: {fileID: 0}
+      x: 1
+      y: 1
+      z: 1
+      w: 0
+      param: 4
+      partMask: 264
+  - hash: 836a6aa0-57ed-4828-af35-acbd30c73438
+    desc: luffy_gear2
+    templateID: Gear2
+    uniqueID: 500
+    priority: 0
+    fadeIn: 0
+    fadeOut: 0
+    effectTime: -1
+    partTags: luffy
+    meData:
+    - path: Assets/Creatures/Role_luffy/Bandpose/Gear2/
+      asset: {fileID: 2800000, guid: 06570cd88ea844f4b97dd68fa0fef2ae, type: 3}
+      x: 0
+      y: 0
+      z: 0
+      w: 0
+      param: 0
+      partMask: 4
+    - path: Assets/Creatures/Role_luffy/Bandpose/Gear2/
+      asset: {fileID: 2800000, guid: b85babdee653f924eb6d23a859fce01c, type: 3}
+      x: 0
+      y: 0
+      z: 1.0829278
+      w: 0
+      param: 0
+      partMask: 73217
+    - path: 
+      asset: {fileID: 0}
+      x: 1.7236601
+      y: 0.36097595
+      z: 1.0829278
+      w: 1
+      param: 0
+      partMask: 5
+  - hash: 86e338f9-b914-4fe7-9192-db3814cc5575
+    desc: 
+    templateID: DitherFade
+    uniqueID: 507
+    priority: 0
+    fadeIn: 0.764
+    fadeOut: 0.736
+    effectTime: -1
+    partTags: 
+    meData:
+    - path: 
+      asset: {fileID: 0}
+      x: 1
+      y: 1
+      z: 1
+      w: 0.5
+      param: 5
+      partMask: 4294967295
+  - hash: dfa8c11f-bd5b-4ea0-8010-b87b0ef1cee5
+    desc: 
+    templateID: Disappear
+    uniqueID: 600
+    priority: 0
+    fadeIn: 1
+    fadeOut: 1
+    effectTime: -1
+    partTags: 
+    meData:
+    - path: 
+      asset: {fileID: 0}
+      x: 1
+      y: 1
+      z: 2.5
+      w: 0.1
+      param: 13
+      partMask: 4294967295
+    - path: 
+      asset: {fileID: 0}
+      x: 0
+      y: 0
+      z: 0
+      w: 0
+      param: 0
+      partMask: 4294967295
+    - path: 
+      asset: {fileID: 0}
+      x: 2
+      y: 2
+      z: 0
+      w: 0
+      param: 0
+      partMask: 4294967295
+  - hash: 08c1d6e1-5202-4529-ace0-dfe1d7a2576d
+    desc: 
+    templateID: SfxDisplay
+    uniqueID: 700
+    priority: 0
+    fadeIn: 1.127
+    fadeOut: 1.164
+    effectTime: -1
+    partTags: sanji
+    meData:
+    - path: 
+      asset: {fileID: 0}
+      x: 1
+      y: 1
+      z: 0
+      w: 0
+      param: 0
+      partMask: 256
+    - path: 
+      asset: {fileID: 0}
+      x: 1
+      y: 1
+      z: 1
+      w: 1
+      param: 0
+      partMask: 256
+  - hash: 21e5dcb2-fcd5-4470-a009-f47b79fae66b
+    desc: 
+    templateID: Appear
+    uniqueID: 800
+    priority: 0
+    fadeIn: 1
+    fadeOut: 0
+    effectTime: -1
+    partTags: 
+    meData:
+    - path: 
+      asset: {fileID: 0}
+      x: 1
+      y: 1
+      z: 2.5
+      w: 0.1
+      param: 13
+      partMask: 4294967295
+    - path: 
+      asset: {fileID: 0}
+      x: 1
+      y: 1
+      z: 0
+      w: 0
+      param: 0
+      partMask: 4294967295
+    - path: 
+      asset: {fileID: 0}
+      x: 0
+      y: 0
+      z: 0
+      w: 0
+      param: 0
+      partMask: 4294967295
+    - path: 
+      asset: {fileID: 0}
+      x: 1
+      y: 0.8419701
+      z: 0.033018887
+      w: 0
+      param: 0
+      partMask: 4294967295
+  - hash: 39abeb4a-bcea-4f8d-8afa-89e265d682f3
+    desc: Petrification
+    templateID: Medusa
+    uniqueID: 900
+    priority: 0
+    fadeIn: 0.1
+    fadeOut: 0
+    effectTime: -1
+    partTags: 
+    meData:
+    - path: Assets/Creatures/Res/
+      asset: {fileID: 2100000, guid: e58bddfe3bfbc2f40b907c902b4785db, type: 2}
+      x: 9
+      y: 0
+      z: 0
+      w: 0
+      param: 0
+      partMask: 4294967295
+    - path: 
+      asset: {fileID: 0}
+      x: 1
+      y: 1
+      z: 1
+      w: 0
+      param: 0
+      partMask: 4294967295
+  - hash: 9e9b1ec3-faaa-4040-b435-bd330a93253e
+    desc: Dark
+    templateID: Color
+    uniqueID: 1200
+    priority: 0
+    fadeIn: 0
+    fadeOut: 0
+    effectTime: -1
+    partTags: 
+    meData:
+    - path: 
+      asset: {fileID: 0}
+      x: 0.55
+      y: 0.55
+      z: 0.55
+      w: 1
+      param: 0
+      partMask: 4294967295
+  - hash: d387a30a-0e2e-457c-baac-57d4be88d464
+    desc: 
+    templateID: Dissolve
+    uniqueID: 1400
+    priority: 0
+    fadeIn: 0.791
+    fadeOut: 0.436
+    effectTime: -1
+    partTags: 
+    meData:
+    - path: Assets/Creatures/Res/
+      asset: {fileID: 2100000, guid: a050e9224e5f11741a618a261131e720, type: 2}
+      x: 9
+      y: 0
+      z: 0
+      w: 0
+      param: 0
+      partMask: 3
+    - path: 
+      asset: {fileID: 0}
+      x: 0.9811321
+      y: 0
+      z: 0
+      w: 5
+      param: 0
+      partMask: 3
+    - path: 
+      asset: {fileID: 0}
+      x: 1
+      y: 0.87076914
+      z: 0
+      w: 0
+      param: 0
+      partMask: 3
+    - path: 
+      asset: {fileID: 0}
+      x: 0
+      y: 1
+      z: 0
+      w: 0
+      param: 0
+      partMask: 3
+  - hash: a5f71bdb-cae0-4ceb-9db6-705ded8380d7
+    desc: 
+    templateID: MatAdd
+    uniqueID: 1500
+    priority: 0
+    fadeIn: 0
+    fadeOut: 1
+    effectTime: -1
+    partTags: 
+    meData:
+    - path: Assets/Creatures/Res/
+      asset: {fileID: 2100000, guid: 8f73d6540a6c8d2438fdcae6a7d0c6db, type: 2}
+      x: 9
+      y: 0
+      z: 0
+      w: 0
+      param: 0
+      partMask: 4294967295
+    - path: 
+      asset: {fileID: 0}
+      x: 0.8113208
+      y: 0.8113208
+      z: 0.11863652
+      w: 0.42
+      param: 0
+      partMask: 4294967295
+  - hash: a5f56419-0e7d-4ecb-9607-185d773173a0
+    desc: Outline
+    templateID: MatAdd
+    uniqueID: 1501
+    priority: 0
+    fadeIn: 0
+    fadeOut: 0
+    effectTime: -1
+    partTags: 
+    meData:
+    - path: Assets/Creatures/Res/
+      asset: {fileID: 2100000, guid: 49244094206407448a1521e2c0ea56d2, type: 2}
+      x: 9
+      y: 0
+      z: 0
+      w: 0
+      param: 0
+      partMask: 4294967295
+    - path: 
+      asset: {fileID: 0}
+      x: 1
+      y: 1
+      z: 0
+      w: 0.561
+      param: 0
+      partMask: 4294967295
+  - hash: d6c5ab20-74a9-4865-afef-0af2e7f71a81
+    desc: zhujiaobati
+    templateID: MatAdd
+    uniqueID: 1502
+    priority: 0
+    fadeIn: 0
+    fadeOut: 0
+    effectTime: -1
+    partTags: 
+    meData:
+    - path: Assets/Effects/Materials/Common/
+      asset: {fileID: 2100000, guid: 46135a928fe858b4f9b0f77d06a3c11d, type: 2}
+      x: 9
+      y: 0
+      z: 0
+      w: 0
+      param: 0
+      partMask: 4294967295
+    - path: 
+      asset: {fileID: 0}
+      x: 1
+      y: 1
+      z: 1
+      w: 1
+      param: 0
+      partMask: 4294967295
+  - hash: e4a46950-a220-4c09-a3eb-e0133cbbfbef
+    desc: zhujiaowudi
+    templateID: MatAdd
+    uniqueID: 1503
+    priority: 0
+    fadeIn: 0
+    fadeOut: 0
+    effectTime: -1
+    partTags: 
+    meData:
+    - path: Assets/Effects/Materials/Common/
+      asset: {fileID: 2100000, guid: 9891af75add43d945a74c71c15b770be, type: 2}
+      x: 9
+      y: 0
+      z: 0
+      w: 0
+      param: 0
+      partMask: 4294967295
+    - path: 
+      asset: {fileID: 0}
+      x: 1
+      y: 1
+      z: 1
+      w: 1
+      param: 0
+      partMask: 4294967295
+  - hash: 85290567-ecec-4ab6-9b27-1a6c130d7a86
+    desc: tiekuai
+    templateID: MatAdd
+    uniqueID: 1504
+    priority: 1
+    fadeIn: 0
+    fadeOut: 0
+    effectTime: -1
+    partTags: 
+    meData:
+    - path: Assets/Effects/Materials/Common/
+      asset: {fileID: 2100000, guid: 7ab7e76c68baf694898fb2e60a6b7ac4, type: 2}
+      x: 9
+      y: 0
+      z: 0
+      w: 0
+      param: 0
+      partMask: 4294967295
+    - path: 
+      asset: {fileID: 0}
+      x: 0.26119488
+      y: 0.56698406
+      z: 1.2231566
+      w: 1
+      param: 0
+      partMask: 4294967295
+  - hash: f0fc6a90-e850-414c-8d84-c360e83116d3
+    desc: bossfennu2
+    templateID: MatAdd
+    uniqueID: 1505
+    priority: 0
+    fadeIn: 0
+    fadeOut: 0
+    effectTime: -1
+    partTags: 
+    meData:
+    - path: Assets/Effects/Materials/Common/
+      asset: {fileID: 2100000, guid: 087288cd0a4b39f44bc2e5ba48de769e, type: 2}
+      x: 9
+      y: 0
+      z: 0
+      w: 0
+      param: 0
+      partMask: 4294967295
+    - path: 
+      asset: {fileID: 0}
+      x: 1
+      y: 0
+      z: 0
+      w: 1
+      param: 0
+      partMask: 4294967295
+  - hash: 471317b2-e97e-4e1e-9b1f-6ead3cc8802e
+    desc: bossfennu3
+    templateID: MatAdd
+    uniqueID: 1506
+    priority: 0
+    fadeIn: 0
+    fadeOut: 0
+    effectTime: -1
+    partTags: 
+    meData:
+    - path: Assets/Effects/Materials/Common/
+      asset: {fileID: 2100000, guid: ebe77ccda865e3a45bc588fdd5ba1872, type: 2}
+      x: 9
+      y: 0
+      z: 0
+      w: 0
+      param: 0
+      partMask: 4294967295
+    - path: 
+      asset: {fileID: 0}
+      x: 1
+      y: 1
+      z: 1
+      w: 1
+      param: 0
+      partMask: 4294967295
+  - hash: 5923809d-bc96-4313-9b91-73137e98f674
+    desc: jinhaifennu
+    templateID: MatAdd
+    uniqueID: 1507
+    priority: 0
+    fadeIn: 0
+    fadeOut: 0
+    effectTime: -1
+    partTags: 
+    meData:
+    - path: Assets/Effects/Materials/Common/
+      asset: {fileID: 2100000, guid: bca7d4fa06739e743bc7782ceea91835, type: 2}
+      x: 9
+      y: 0
+      z: 0
+      w: 0
+      param: 0
+      partMask: 4294967295
+    - path: 
+      asset: {fileID: 0}
+      x: 1
+      y: 1
+      z: 1
+      w: 1
+      param: 0
+      partMask: 4294967295
+  - hash: e578c389-cd5e-41f3-a943-51e998a8d30d
+    desc: yichang
+    templateID: MatAdd
+    uniqueID: 1508
+    priority: 0
+    fadeIn: 0
+    fadeOut: 0
+    effectTime: -1
+    partTags: 
+    meData:
+    - path: Assets/Effects/Materials/Common/
+      asset: {fileID: 2100000, guid: a3f76d59da5e0a54786084d67b838b81, type: 2}
+      x: 9
+      y: 0
+      z: 0
+      w: 0
+      param: 0
+      partMask: 4294967295
+    - path: 
+      asset: {fileID: 0}
+      x: 1
+      y: 1
+      z: 1
+      w: 1
+      param: 0
+      partMask: 4294967295
+  - hash: baab43e5-9795-448c-967d-40f97123013b
+    desc: qishou
+    templateID: MatAdd
+    uniqueID: 1509
+    priority: 0
+    fadeIn: 0
+    fadeOut: 0
+    effectTime: -1
+    partTags: 
+    meData:
+    - path: Assets/Effects/Materials/Common/
+      asset: {fileID: 2100000, guid: fd45b44e93b95fa4c812ee6bf2964dfd, type: 2}
+      x: 9
+      y: 0
+      z: 0
+      w: 0
+      param: 0
+      partMask: 4294967295
+    - path: 
+      asset: {fileID: 0}
+      x: 0.4392157
+      y: 0.6901961
+      z: 1.6
+      w: 1
+      param: 0
+      partMask: 4294967295
+  - hash: 8a8035e0-9d79-4673-bdfd-b1d10f790bf7
+    desc: PostProcessMask
+    templateID: MatAdd
+    uniqueID: 1510
+    priority: 0
+    fadeIn: 0
+    fadeOut: 0
+    effectTime: -1
+    partTags: 
+    meData:
+    - path: Assets/Effects/Materials/Common/
+      asset: {fileID: 2100000, guid: 6c19561d372ada6439352ec4e963e069, type: 2}
+      x: 9
+      y: 0
+      z: 0
+      w: 0
+      param: 0
+      partMask: 4294967295
+    - path: 
+      asset: {fileID: 0}
+      x: 1
+      y: 1
+      z: 1
+      w: 1
+      param: 0
+      partMask: 4294967295
+  - hash: 07964250-e4af-470d-870a-42e34fbf8162
+    desc: lahua
+    templateID: MatAdd
+    uniqueID: 1511
+    priority: 0
+    fadeIn: 0
+    fadeOut: 0
+    effectTime: -1
+    partTags: 
+    meData:
+    - path: Assets/Creatures/Res/
+      asset: {fileID: 2100000, guid: f28bed67443293b428684c9ec4cbf1e7, type: 2}
+      x: 9
+      y: 0
+      z: 0
+      w: 0
+      param: 0
+      partMask: 4294967295
+    - path: 
+      asset: {fileID: 0}
+      x: 1
+      y: 1
+      z: 1
+      w: 1
+      param: 0
+      partMask: 4294967295
+  - hash: 9f8c579b-6bca-4bfb-bc3d-c8fae013c7bc
+    desc: bossfennu1
+    templateID: MatAdd
+    uniqueID: 1512
+    priority: 0
+    fadeIn: 0
+    fadeOut: 0
+    effectTime: -1
+    partTags: 
+    meData:
+    - path: Assets/Effects/Materials/Common/
+      asset: {fileID: 2100000, guid: 3d0398b3aa7e1d643a3078086d203214, type: 2}
+      x: 9
+      y: 0
+      z: 0
+      w: 0
+      param: 0
+      partMask: 4294967295
+    - path: 
+      asset: {fileID: 0}
+      x: 1
+      y: 1
+      z: 1
+      w: 1
+      param: 0
+      partMask: 4294967295
+  - hash: 75e3dd2c-e8d7-49a2-841d-f184954e6535
+    desc: ganforrbati
+    templateID: MatAdd
+    uniqueID: 1513
+    priority: 0
+    fadeIn: 0
+    fadeOut: 0
+    effectTime: -1
+    partTags: 
+    meData:
+    - path: Assets/Effects/Materials/Common/
+      asset: {fileID: 2100000, guid: 0df047892385850439797123ed794bc2, type: 2}
+      x: 9
+      y: 0
+      z: 0
+      w: 0
+      param: 0
+      partMask: 4294967295
+    - path: 
+      asset: {fileID: 0}
+      x: 1
+      y: 1
+      z: 1
+      w: 1
+      param: 0
+      partMask: 4294967295
+  - hash: 3c05632d-5058-4710-bf0c-683b6a28c62e
+    desc: enel_mabi
+    templateID: MatAdd
+    uniqueID: 1514
+    priority: 0
+    fadeIn: 0
+    fadeOut: 0
+    effectTime: -1
+    partTags: 
+    meData:
+    - path: Assets/Effects/Materials/Common/
+      asset: {fileID: 2100000, guid: fd45b44e93b95fa4c812ee6bf2964dfd, type: 2}
+      x: 9
+      y: 0
+      z: 0
+      w: 0
+      param: 0
+      partMask: 4294967295
+    - path: 
+      asset: {fileID: 0}
+      x: 0.20778154
+      y: 0.5288985
+      z: 3.6078432
+      w: 1
+      param: 0
+      partMask: 4294967295
+  - hash: 920d5ddf-3666-45a4-8497-4a68f3d33878
+    desc: mianyiyellow
+    templateID: MatAdd
+    uniqueID: 1515
+    priority: 2
+    fadeIn: 0
+    fadeOut: 0
+    effectTime: -1
+    partTags: 
+    meData:
+    - path: Assets/Effects/Materials/Common/
+      asset: {fileID: 2100000, guid: 46135a928fe858b4f9b0f77d06a3c11d, type: 2}
+      x: 9
+      y: 0
+      z: 0
+      w: 0
+      param: 0
+      partMask: 4294967295
+    - path: 
+      asset: {fileID: 0}
+      x: 1.8443027
+      y: 0.8883552
+      z: 0.09656035
+      w: 1
+      param: 0
+      partMask: 4294967295
+  - hash: cb89a486-a393-48e1-b812-303086ee8e08
+    desc: SphereDitherFade
+    templateID: ShaderKeyword
+    uniqueID: 1800
+    priority: 0
+    fadeIn: 0
+    fadeOut: 0
+    effectTime: -1
+    partTags: 
+    meData:
+    - path: _SPHERE_DITHER_FADE
+      asset: {fileID: 0}
+      x: 0
+      y: 0
+      z: 0
+      w: 0
+      param: 4294967295
+      partMask: 4294967295
+    - path: 
+      asset: {fileID: 0}
+      x: 0
+      y: 0
+      z: 0
+      w: 0
+      param: 0
+      partMask: 4294967295
+    - path: 
+      asset: {fileID: 0}
+      x: 0.5
+      y: 1
+      z: 1
+      w: 1
+      param: 0
+      partMask: 4294967295
+  - hash: c26a224b-ec1a-4387-a56e-272697e532fa
+    desc: zhujiaowudi
+    templateID: HitFadeShader
+    uniqueID: 2200
+    priority: 0
+    fadeIn: 0
+    fadeOut: 0.3
+    effectTime: -1
+    partTags: 
+    meData:
+    - path: Assets/Effects/Materials/Common/
+      asset: {fileID: 2100000, guid: 9891af75add43d945a74c71c15b770be, type: 2}
+      x: 0.75
+      y: 0.75
+      z: 0.75
+      w: 1
+      param: 0
+      partMask: 4294967295
+  - hash: 75610ee2-439f-4537-9484-b8aa80855264
+    desc: tiekuai
+    templateID: HitFadeShader
+    uniqueID: 2201
+    priority: 0
+    fadeIn: 0.1
+    fadeOut: 0.2
+    effectTime: -1
+    partTags: 
+    meData:
+    - path: Assets/Effects/Materials/Common/
+      asset: {fileID: 2100000, guid: 7ab7e76c68baf694898fb2e60a6b7ac4, type: 2}
+      x: 0.15749998
+      y: 0.34512508
+      z: 0.75
+      w: 1
+      param: 0
+      partMask: 4294967295
+  - hash: ac259dc3-3f98-452c-8563-d25e09130b5c
+    desc: Mr3lahua
+    templateID: Wax
+    uniqueID: 2300
+    priority: 0
+    fadeIn: 0
+    fadeOut: 0
+    effectTime: -1
+    partTags: 
+    meData:
+    - path: Assets/Creatures/Res/
+      asset: {fileID: 2100000, guid: f28bed67443293b428684c9ec4cbf1e7, type: 2}
+      x: 9
+      y: 0
+      z: 0
+      w: 0
+      param: 0
+      partMask: 4294967295
+    - path: 
+      asset: {fileID: 0}
+      x: 0.92941177
+      y: 0.9372549
+      z: 1
+      w: 0
+      param: 0
+      partMask: 4294967295

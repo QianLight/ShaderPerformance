@@ -1,0 +1,60 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40e1cbd74443f2b4a9ea8cdee05aef60, type: 3}
+  m_Name: ShaderGUIConfig_Scene_Grass02
+  m_EditorClassIdentifier: 
+  shader: {fileID: 4800000, guid: 21c392f888acc034f95a7b28f3d01aa5, type: 3}
+  dummyMatType: 0
+  lsType: 1
+  shaderFeatures:
+  - hash: 
+    sfg: {fileID: 11400000, guid: eea36573a8677db4aa8aeb87a8c8a5c0, type: 2}
+    shaderFeatures:
+    - Default_BlendMode
+    - Default_Shadow
+    - Default_ExtraShadow
+    - Default_MultiLight
+  - hash: 
+    sfg: {fileID: 11400000, guid: d78bb4bdc436929448c59d32983f75f9, type: 2}
+    shaderFeatures:
+    - Debug_Debug
+    - Debug_DebugShader
+  - hash: 
+    sfg: {fileID: 11400000, guid: cf68945b14efc0d448b4e1db37a88223, type: 2}
+    shaderFeatures:
+    - Base_MainColor
+    - Base_MainTex
+  - hash: 
+    sfg: {fileID: 11400000, guid: 9493e23144ace5b4f8c26620f9e77e43, type: 2}
+    shaderFeatures:
+    - Grass_Occ
+    - Grass_GrassSpec
+    - Grass_Normal
+    - Grass_UseRandomTex
+    - Grass_RandomTex
+    - Grass_DarkColor
+  - hash: 
+    sfg: {fileID: 11400000, guid: ac145c280c27f0c468dffdd69b0ba4e8, type: 2}
+    shaderFeatures:
+    - SS_Diffuse
+  - hash: 
+    sfg: {fileID: 11400000, guid: 70e93ea787385ee43897269f5e71fb89, type: 2}
+    shaderFeatures:
+    - Wind2_Final
+    - Wind2_Stiffness
+    - Wind2_Misc
+    - Wind2_empty
+    - Wind2_DetialMove
+    - Wind2_DetialMove0
+    - Wind2_DetialMove1
+    - Wind2_AmbientWindNoise
+    - Wind2_xAxisReduce

@@ -1,0 +1,19 @@
+{
+    "name": "Athena.MeshSimplify",
+    "rootNamespace": "",
+    "references": [
+        "GUID:fbb89535e17e84eae8079c2158650d01",
+        "GUID:2b82e46c4ca0a4eb697ab8ccdfb39af1"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

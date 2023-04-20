@@ -1,0 +1,20 @@
+{
+    "name": "Zeus.Asset.Editor",
+    "references": [
+        "Zeus.Asset",
+        "Zeus.Core.Editor",
+        "Zeus.Core",
+        "Zeus.Http.Editor"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

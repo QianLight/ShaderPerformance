@@ -1,0 +1,10 @@
+{
+  "OutputPath": "zeus_build_filtered_log{time}.txt",
+  "Pattern": [ "Unrecognized assets cannot be included in AssetBundles:", 
+    "The name .* does not exist in the current context", 
+    "Plugin .* is used from several locations:", 
+    "License is not active",
+    "The file .* seems to have merge conflicts. Please open it in a text editor and fix the merge.",
+    "Asset .* has been assigned to more than one Asset Bundle",
+    "error CS"]
+}

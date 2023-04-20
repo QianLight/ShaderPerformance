@@ -1,0 +1,877 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 828261050, guid: a8701fc72a91f814ea6a07ebb465d2b8, type: 3}
+  m_Name: EnvDebug
+  m_EditorClassIdentifier: 
+  groups:
+  - paramList:
+    - hash: 2684303999
+      desc: roleLightColor
+      valueMask: 0
+      min: 0
+      max: 10
+      resType: 5
+    - hash: 384905296
+      desc: DynamicLightIntensity
+      valueMask: 1
+      min: 0.1
+      max: 10
+      resType: 7
+    - hash: 384905296
+      desc: AddLightSpecScope
+      valueMask: 2
+      min: 0
+      max: 1
+      resType: 7
+    - hash: 384905296
+      desc: RoleShadowScale
+      valueMask: 4
+      min: 0
+      max: 1
+      resType: 7
+    - hash: 3916179519
+      desc: MinRoleHAngle
+      valueMask: 1
+      min: -45
+      max: 0
+      resType: 7
+    - hash: 3916179519
+      desc: MaxRoleHAngle
+      valueMask: 2
+      min: -80
+      max: 45
+      resType: 7
+    - hash: 3916179519
+      desc: AddRoleLight
+      valueMask: 4
+      min: 0
+      max: 1
+      resType: 7
+    - hash: 3916179519
+      desc: RoleLightRotOffset
+      valueMask: 8
+      min: 0
+      max: 360
+      resType: 7
+    - hash: 1955477621
+      desc: rimLightColor
+      valueMask: 0
+      min: 0
+      max: 10
+      resType: 5
+    groupName: Lighting
+  - paramList:
+    - hash: 2067170641
+      desc: AmbientMax
+      valueMask: 1
+      min: 0
+      max: 5
+      resType: 7
+    - hash: 2067170641
+      desc: RoleAmbientMax
+      valueMask: 2
+      min: 0
+      max: 5
+      resType: 7
+    - hash: 2067170641
+      desc: LightmapIntensity
+      valueMask: 4
+      min: 0
+      max: 10
+      resType: 7
+    - hash: 3792121762
+      desc: AmbientLightScale
+      valueMask: 2
+      min: 0
+      max: 5
+      resType: 7
+    - hash: 3792121762
+      desc: AmbientDarkScale
+      valueMask: 4
+      min: 0
+      max: 5
+      resType: 7
+    - hash: 3792121763
+      desc: EnvHdr
+      valueMask: 1
+      min: 0
+      max: 100
+      resType: 7
+    - hash: 3792121763
+      desc: EnvGamma
+      valueMask: 2
+      min: 0
+      max: 1
+      resType: 7
+    groupName: Ambient
+  - paramList:
+    - hash: 1003704535
+      desc: fogColor
+      valueMask: 1
+      min: 0
+      max: 1
+      resType: 5
+    - hash: 1014156528
+      desc: HaloSize
+      valueMask: 1
+      min: 1
+      max: 64
+      resType: 7
+    - hash: 1014156528
+      desc: Intensity
+      valueMask: 2
+      min: 0
+      max: 1
+      resType: 7
+    - hash: 275900001
+      desc: DensityHorizontal
+      valueMask: 1
+      min: 0
+      max: 1
+      resType: 7
+    - hash: 275900001
+      desc: StartDistance
+      valueMask: 2
+      min: 0
+      max: 50
+      resType: 7
+    - hash: 275900001
+      desc: HorizontalMax
+      valueMask: 4
+      min: 0
+      max: 1
+      resType: 7
+    - hash: 102086545
+      desc: StartHeight
+      valueMask: 1
+      min: 0
+      max: 200
+      resType: 7
+    - hash: 102086545
+      desc: EndHeight
+      valueMask: 2
+      min: 0
+      max: 500
+      resType: 7
+    - hash: 102086545
+      desc: VerticalDensity
+      valueMask: 4
+      min: 0
+      max: 2
+      resType: 7
+    - hash: 102086545
+      desc: VerticalMax
+      valueMask: 8
+      min: 0
+      max: 1
+      resType: 7
+    - hash: 3423819191
+      desc: StartHeight
+      valueMask: 1
+      min: -2000
+      max: 2000
+      resType: 7
+    - hash: 3423819191
+      desc: EndHeight
+      valueMask: 2
+      min: -2000
+      max: 5000
+      resType: 7
+    - hash: 3423819191
+      desc: VerticalDensity
+      valueMask: 4
+      min: 0
+      max: 3
+      resType: 7
+    - hash: 3423819191
+      desc: HorizontalDensity
+      valueMask: 8
+      min: 0
+      max: 3
+      resType: 7
+    - hash: 533511476
+      desc: farColor
+      valueMask: 1
+      min: 0
+      max: 1
+      resType: 5
+    - hash: 3703782549
+      desc: midColor
+      valueMask: 1
+      min: 0
+      max: 1
+      resType: 5
+    - hash: 2066245016
+      desc: MoveSpeed(min disable)
+      valueMask: 1
+      min: -6
+      max: 5
+      resType: 7
+    - hash: 2066245016
+      desc: Density
+      valueMask: 2
+      min: 0
+      max: 500
+      resType: 7
+    - hash: 2066245016
+      desc: FogDistance
+      valueMask: 4
+      min: 1
+      max: 2500
+      resType: 7
+    - hash: 2066245016
+      desc: StartDistance
+      valueMask: 8
+      min: 0.1
+      max: 200
+      resType: 7
+    - hash: 3761576138
+      desc: HeightDensity
+      valueMask: 1
+      min: 0.001
+      max: 1
+      resType: 7
+    - hash: 3761576138
+      desc: FogHeightFalloff
+      valueMask: 2
+      min: 0.01
+      max: 2
+      resType: 7
+    - hash: 3761576138
+      desc: FogHeight
+      valueMask: 4
+      min: -100
+      max: 600
+      resType: 7
+    - hash: 3761576138
+      desc: InscatterPower
+      valueMask: 8
+      min: 0.1
+      max: 10
+      resType: 7
+    - hash: 3761576139
+      desc: NoiseScale
+      valueMask: 1
+      min: 0.001
+      max: 0.1
+      resType: 7
+    - hash: 3761576139
+      desc: NoiseIntensity
+      valueMask: 2
+      min: 0
+      max: 10
+      resType: 7
+    - hash: 3761576139
+      desc: NoiseIntensityOffset
+      valueMask: 4
+      min: 0
+      max: 1
+      resType: 7
+    - hash: 1175473832
+      desc: inscatterColor
+      valueMask: 0
+      min: 0
+      max: 10
+      resType: 5
+    groupName: Fog
+  - paramList:
+    - hash: 324683309
+      desc: ShadowVolumnSize0
+      valueMask: 1
+      min: 1
+      max: 16
+      resType: 7
+    - hash: 324683309
+      desc: ShadowVolumnSize1
+      valueMask: 2
+      min: 1
+      max: 32
+      resType: 7
+    - hash: 324683309
+      desc: ShadowVolumnSize2
+      valueMask: 4
+      min: 1
+      max: 256
+      resType: 7
+    - hash: 324683309
+      desc: ShadowVolumnSizeExtra
+      valueMask: 8
+      min: 1
+      max: 64
+      resType: 7
+    - hash: 324683310
+      desc: NormalBias0
+      valueMask: 1
+      min: -0.5
+      max: 0.5
+      resType: 7
+    - hash: 324683310
+      desc: NormalBias1
+      valueMask: 2
+      min: -0.5
+      max: 0.5
+      resType: 7
+    - hash: 324683310
+      desc: NormalBias2
+      valueMask: 4
+      min: -0.5
+      max: 0.5
+      resType: 7
+    - hash: 324683310
+      desc: NormalBiasExtra
+      valueMask: 8
+      min: -0.5
+      max: 0.5
+      resType: 7
+    - hash: 1116338424
+      desc: ShadowFade
+      valueMask: 1
+      min: 0
+      max: 1
+      resType: 7
+    - hash: 1116338424
+      desc: BackFarScale
+      valueMask: 2
+      min: 1
+      max: 10
+      resType: 7
+    - hash: 1116338424
+      desc: SceneShadowScale
+      valueMask: 4
+      min: 1
+      max: 2
+      resType: 7
+    - hash: 1116338424
+      desc: RoleShadowScale
+      valueMask: 8
+      min: 1
+      max: 2
+      resType: 7
+    - hash: 1998768005
+      desc: color
+      valueMask: 1
+      min: 0
+      max: 10
+      resType: 5
+    - hash: 2479429673
+      desc: ShadowYOffset
+      valueMask: 1
+      min: -50
+      max: 50
+      resType: 7
+    - hash: 2479429674
+      desc: ExtraShadowBiasX
+      valueMask: 4
+      min: -8
+      max: 8
+      resType: 7
+    - hash: 2479429674
+      desc: ExtraShadowBiasZ
+      valueMask: 8
+      min: -8
+      max: 8
+      resType: 7
+    groupName: Shadow
+  - paramList:
+    - hash: 1786483236
+      desc: fov
+      valueMask: 1
+      min: 1
+      max: 179
+      resType: 7
+    - hash: 1786483236
+      desc: near
+      valueMask: 2
+      min: 0.01
+      max: 100
+      resType: 7
+    - hash: 1786483236
+      desc: far
+      valueMask: 4
+      min: 0.02
+      max: 1000
+      resType: 7
+    - hash: 3246431117
+      desc: WindDir
+      valueMask: 1
+      min: -180
+      max: 180
+      resType: 7
+    - hash: 3246431117
+      desc: WindSpeed
+      valueMask: 2
+      min: 0
+      max: 20
+      resType: 7
+    - hash: 3246431118
+      desc: GustWorldScale
+      valueMask: 1
+      min: 0
+      max: 5
+      resType: 7
+    - hash: 3246431118
+      desc: Speed
+      valueMask: 2
+      min: 0
+      max: 2
+      resType: 7
+    - hash: 3246431118
+      desc: HorizontalSpeed
+      valueMask: 4
+      min: 0
+      max: 2
+      resType: 7
+    - hash: 2421919975
+      desc: sceneColor
+      valueMask: 0
+      min: 0
+      max: 10
+      resType: 5
+    groupName: SceneMisc
+  - paramList:
+    - hash: 1956586595
+      desc: Threshold
+      valueMask: 1
+      min: 0
+      max: 5
+      resType: 7
+    - hash: 1956586595
+      desc: BlurRadius
+      valueMask: 2
+      min: 0
+      max: 2
+      resType: 7
+    - hash: 1956586595
+      desc: Intensity
+      valueMask: 4
+      min: 0
+      max: 10
+      resType: 7
+    - hash: 1956586595
+      desc: Scatter
+      valueMask: 8
+      min: 0
+      max: 1
+      resType: 7
+    - hash: 2266455800
+      desc: color
+      valueMask: 0
+      min: 0
+      max: 10
+      resType: 5
+    groupName: Bloom
+  - paramList:
+    - hash: 3580986349
+      desc: DepthThreshold
+      valueMask: 1
+      min: 0
+      max: 1
+      resType: 7
+    - hash: 3580986349
+      desc: LumThreshold
+      valueMask: 2
+      min: 0
+      max: 1
+      resType: 7
+    - hash: 3580986349
+      desc: LightPower
+      valueMask: 4
+      min: 0.1
+      max: 4
+      resType: 7
+    - hash: 3580986349
+      desc: LightRadius
+      valueMask: 8
+      min: 0
+      max: 5
+      resType: 7
+    - hash: 3580986350
+      desc: SamplerOffset
+      valueMask: 1
+      min: 0
+      max: 200
+      resType: 7
+    - hash: 3580986350
+      desc: BlurCount
+      valueMask: 2
+      min: 0
+      max: 3
+      resType: 7
+    - hash: 3580986350
+      desc: FinalScale
+      valueMask: 4
+      min: 0
+      max: 2
+      resType: 7
+    - hash: 3580986350
+      desc: SunAngleBias
+      valueMask: 8
+      min: -1
+      max: 1
+      resType: 7
+    - hash: 1797142117
+      desc: color
+      valueMask: 0
+      min: 0
+      max: 10
+      resType: 5
+    groupName: GodRay
+  - paramList:
+    - hash: 3852387333
+      desc: color
+      valueMask: 0
+      min: 0
+      max: 10
+      resType: 5
+    - hash: 1591877805
+      desc: CenterX
+      valueMask: 1
+      min: 0
+      max: 1
+      resType: 7
+    - hash: 1591877805
+      desc: CenterY
+      valueMask: 2
+      min: 0
+      max: 1
+      resType: 7
+    - hash: 1591877806
+      desc: Intensity
+      valueMask: 1
+      min: 0
+      max: 1
+      resType: 7
+    - hash: 1591877806
+      desc: Smoothness
+      valueMask: 2
+      min: 0.01
+      max: 1
+      resType: 7
+    - hash: 1591877806
+      desc: Roundness
+      valueMask: 4
+      min: 0
+      max: 1
+      resType: 7
+    - hash: 1591877806
+      desc: Rounded
+      valueMask: 8
+      min: 0
+      max: 1
+      resType: 7
+    groupName: Vignette
+  - paramList:
+    - hash: 2211978044
+      desc: toneCurveToeStrength
+      valueMask: 1
+      min: 0
+      max: 1
+      resType: 7
+    - hash: 2211978044
+      desc: toneCurveToeLength
+      valueMask: 2
+      min: 0
+      max: 1
+      resType: 7
+    - hash: 2211978044
+      desc: toneCurveShoulderStrength
+      valueMask: 4
+      min: 0
+      max: 1
+      resType: 7
+    - hash: 2211978044
+      desc: toneCurveShoulderLength
+      valueMask: 8
+      min: 0
+      max: 10
+      resType: 7
+    - hash: 2211978045
+      desc: toneCurveShoulderAngle
+      valueMask: 1
+      min: 0
+      max: 1
+      resType: 7
+    - hash: 2211978045
+      desc: toneCurveGamma
+      valueMask: 2
+      min: 0.001
+      max: 20
+      resType: 7
+    - hash: 1346380108
+      desc: postExposure
+      valueMask: 1
+      min: -20
+      max: 20
+      resType: 7
+    - hash: 1346380108
+      desc: contrast
+      valueMask: 2
+      min: -100
+      max: 100
+      resType: 7
+    - hash: 1346380108
+      desc: hueShift
+      valueMask: 4
+      min: -180
+      max: 180
+      resType: 7
+    - hash: 1346380108
+      desc: saturation
+      valueMask: 8
+      min: -100
+      max: 100
+      resType: 7
+    - hash: 1958376960
+      desc: colorFilter
+      valueMask: 0
+      min: 0
+      max: 10
+      resType: 5
+    - hash: 769507458
+      desc: temperature
+      valueMask: 1
+      min: -100
+      max: 100
+      resType: 7
+    - hash: 769507458
+      desc: tint
+      valueMask: 2
+      min: -100
+      max: 100
+      resType: 7
+    - hash: 769507458
+      desc: balance
+      valueMask: 4
+      min: -100
+      max: 100
+      resType: 7
+    - hash: 3327967040
+      desc: shadowColor
+      valueMask: 0
+      min: 0
+      max: 1
+      resType: 5
+    - hash: 496052466
+      desc: highlightColor
+      valueMask: 0
+      min: 0
+      max: 1
+      resType: 5
+    - hash: 1213760293
+      desc: redOutRedIn
+      valueMask: 1
+      min: -200
+      max: 200
+      resType: 7
+    - hash: 1213760293
+      desc: redOutGreenIn
+      valueMask: 2
+      min: -200
+      max: 200
+      resType: 7
+    - hash: 1213760293
+      desc: redOutBlueIn
+      valueMask: 4
+      min: -200
+      max: 200
+      resType: 7
+    - hash: 910939003
+      desc: greenOutRedIn
+      valueMask: 1
+      min: -200
+      max: 200
+      resType: 7
+    - hash: 910939003
+      desc: greenOutGreenIn
+      valueMask: 2
+      min: -200
+      max: 200
+      resType: 7
+    - hash: 910939003
+      desc: greenOutBlueIn
+      valueMask: 4
+      min: -200
+      max: 200
+      resType: 7
+    - hash: 2489118802
+      desc: blueOutRedIn
+      valueMask: 1
+      min: -200
+      max: 200
+      resType: 7
+    - hash: 2489118802
+      desc: blueOutGreenIn
+      valueMask: 2
+      min: -200
+      max: 200
+      resType: 7
+    - hash: 2489118802
+      desc: blueOutBlueIn
+      valueMask: 4
+      min: -200
+      max: 200
+      resType: 7
+    - hash: 1897675456
+      desc: ShadowsStart
+      valueMask: 1
+      min: 0
+      max: 1
+      resType: 7
+    - hash: 1897675456
+      desc: ShadowsEnd
+      valueMask: 2
+      min: 0.3
+      max: 2
+      resType: 7
+    - hash: 1897675456
+      desc: HighlightsStart
+      valueMask: 4
+      min: 0
+      max: 2
+      resType: 7
+    - hash: 1897675456
+      desc: HighlightsEnd
+      valueMask: 8
+      min: 0
+      max: 2
+      resType: 7
+    groupName: ColorGrading
+  - paramList:
+    - hash: 4040026842
+      desc: gaussianStart
+      valueMask: 1
+      min: 0
+      max: 40
+      resType: 7
+    - hash: 4040026842
+      desc: gaussianEnd
+      valueMask: 2
+      min: 0
+      max: 300
+      resType: 7
+    - hash: 4040026842
+      desc: gaussianMaxRadius
+      valueMask: 4
+      min: 0.5
+      max: 10
+      resType: 7
+    - hash: 3632872760
+      desc: focusDistance
+      valueMask: 1
+      min: 0.1
+      max: 100
+      resType: 7
+    - hash: 3632872760
+      desc: aperture
+      valueMask: 2
+      min: 1
+      max: 32
+      resType: 7
+    - hash: 3632872760
+      desc: focalLength
+      valueMask: 4
+      min: 1
+      max: 300
+      resType: 7
+    - hash: 3632872760
+      desc: bladeCount
+      valueMask: 8
+      min: 3
+      max: 9
+      resType: 7
+    - hash: 3632872761
+      desc: bladeCurvature
+      valueMask: 1
+      min: 0
+      max: 1
+      resType: 7
+    - hash: 3632872761
+      desc: bladeRotation
+      valueMask: 2
+      min: -180
+      max: 180
+      resType: 7
+    groupName: DepthOfField
+  - paramList:
+    - hash: 1421217500
+      desc: blurDiverge
+      valueMask: 1
+      min: 0
+      max: 3
+      resType: 7
+    - hash: 1421217500
+      desc: intensity
+      valueMask: 2
+      min: 1
+      max: 100
+      resType: 7
+    - hash: 1421217500
+      desc: shakeTime
+      valueMask: 4
+      min: 0
+      max: 10
+      resType: 7
+    - hash: 1421217500
+      desc: blurByCamera
+      valueMask: 8
+      min: 0
+      max: 1
+      resType: 7
+    groupName: MotionBlur
+  - paramList:
+    - hash: 4269828339
+      desc: CleanRadius
+      valueMask: 1
+      min: 0
+      max: 2
+      resType: 7
+    - hash: 4269828339
+      desc: BlurRadius
+      valueMask: 2
+      min: -0.1
+      max: 0.1
+      resType: 7
+    - hash: 4269828339
+      desc: CenterX
+      valueMask: 4
+      min: 0
+      max: 1
+      resType: 7
+    - hash: 4269828339
+      desc: CenterY
+      valueMask: 8
+      min: 0
+      max: 1
+      resType: 7
+    groupName: RadialBlur
+  - paramList: []
+    groupName: RTBlur
+  - paramList:
+    - hash: 2272912288
+      desc: Intensity
+      valueMask: 1
+      min: 0
+      max: 2
+      resType: 7
+    - hash: 2272912288
+      desc: Speed
+      valueMask: 2
+      min: 0
+      max: 10
+      resType: 7
+    - hash: 2272912288
+      desc: Tiling
+      valueMask: 4
+      min: 0.001
+      max: 4
+      resType: 7
+    groupName: DistortionScreen

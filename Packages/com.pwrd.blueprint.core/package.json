@@ -1,0 +1,8 @@
+{
+    "dependencies": {
+    }, 
+    "description": "blueprint core", 
+    "displayName": "blueprint core", 
+    "name": "com.pwrd.blueprint.core",
+    "version": "1.0.0"
+}

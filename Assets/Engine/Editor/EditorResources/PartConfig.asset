@@ -1,0 +1,319 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dde6e124e9e15d444a1242bacd026468, type: 3}
+  m_Name: PartConfig
+  m_EditorClassIdentifier: 
+  parts:
+    name: GlobalParts
+    prefabName: 
+    partSuffix:
+    - _body
+    - _cloth
+    - _face
+    - _hair
+    - _weapon
+    - _wing
+    maxPartCount: 8
+    hash: 
+  prefabParts:
+    name: PrefabParts
+    prefabParts:
+    - name: 
+      prefabName: sanji
+      partSuffix:
+      - _fire
+      - _lighter
+      maxPartCount: 23
+      hash: 74213b3c-8694-414f-910e-12c80d31784d
+    - name: 
+      prefabName: franky
+      partSuffix:
+      - _flyfist
+      - _glasses01
+      - _glasses02
+      - _gun
+      - _l_hand
+      - _r_hand
+      - _starshield
+      - _windarm
+      - _windgun
+      - _fingergun
+      maxPartCount: 23
+      hash: 8954db1a-aeda-4a9c-a526-ee63bd28d9a9
+    - name: 
+      prefabName: zoro
+      partSuffix:
+      - _2_hand
+      - _toujin
+      - _hair1
+      - _guiche_weapon
+      - _hedao_weapon
+      - _qiushui_weapon
+      - _xuezou_weapon
+      maxPartCount: 23
+      hash: c28e07bd-105e-45a1-ac0d-b71ad6bb7366
+    - name: 
+      prefabName: zoro_3head
+      partSuffix:
+      - _guiche_weapon_01
+      - _guiche_weapon_02
+      - _guiche_weapon_03
+      - _hedao_weapon_01
+      - _hedao_weapon_02
+      - _hedao_weapon_03
+      - _qiushui_weapon_01
+      - _qiushui_weapon_02
+      - _qiushui_weapon_03
+      maxPartCount: 23
+      hash: 40cd29f2-54e8-4ce3-978b-87d4996b1475
+    - name: 
+      prefabName: hancock
+      partSuffix:
+      - _snake
+      maxPartCount: 23
+      hash: ef505d6a-4d83-4efc-8208-6208ed7892d5
+    - name: 
+      prefabName: brook
+      partSuffix:
+      - _02_weapon
+      - _01_weapon
+      - _milk
+      maxPartCount: 23
+      hash: 34e31d75-9d7f-48cd-8ea0-4c892af79024
+    - name: 
+      prefabName: buggy
+      partSuffix:
+      - _cloak
+      - _hat
+      - _l_foot
+      - _l_hand
+      - _l_handknife
+      - _l_weapon
+      - _neck
+      - _r_foot
+      - _r_hand
+      - _r_handknife
+      - _r_weapon
+      - _trousers
+      maxPartCount: 23
+      hash: 6552ad03-1ce7-46d6-8289-f38c718a48f6
+    - name: 
+      prefabName: diyflag
+      partSuffix:
+      - op_mlh_fan
+      - op_mlh_fan_q
+      maxPartCount: 23
+      hash: b6c53ea5-4c0e-4254-b1fb-353f00b73937
+    - name: 
+      prefabName: ohm
+      partSuffix:
+      - _01_weapon
+      - _02_weapon
+      - _03_weapon
+      - _04_weapon
+      - ohmholy_01_weapon
+      - ohmholy_02_weapon
+      - ohmholy_04_weapon
+      maxPartCount: 23
+      hash: 538107a8-bcd3-4b1b-8828-19eadbe9161c
+    - name: 
+      prefabName: buggyjoker1
+      partSuffix:
+      - _bomb_black
+      - _bomb_red
+      - _cup
+      maxPartCount: 23
+      hash: b83ced87-3164-4988-897a-d786cd62e687
+    - name: 
+      prefabName: zhucheng_island
+      partSuffix:
+      - _island
+      maxPartCount: 23
+      hash: 0b49ee9f-45e1-4b0c-bfe7-78fd1341f115
+    - name: 
+      prefabName: helmeppo
+      partSuffix:
+      - _tw
+      - _gun
+      maxPartCount: 23
+      hash: a8061ed7-2c49-4a99-bb0f-a65b0736d6c4
+    - name: 
+      prefabName: nami
+      partSuffix:
+      - _bag
+      maxPartCount: 23
+      hash: 1f57a9fe-bf6d-4fde-b002-e3ab0c3e38dc
+    - name: 
+      prefabName: luffy
+      partSuffix:
+      - _arm_screw
+      - _arm_rubber
+      - _leg_rubber
+      - _arm_normal
+      - _leg_normal
+      - _shoes_normal
+      - _shoes_rubber
+      - _body_screw
+      - _neck
+      maxPartCount: 23
+      hash: 19a6927a-96ef-4519-8a10-b0244ba91830
+    - name: 
+      prefabName: ivankov
+      partSuffix:
+      - _cloak
+      - _cloth1
+      - _hair1
+      - _head1
+      maxPartCount: 23
+      hash: 4721165d-b2c8-4be6-ba94-74ba380a4951
+    - name: 
+      prefabName: minibuggy
+      partSuffix:
+      - _cloak
+      maxPartCount: 23
+      hash: 20de1406-0b0e-419f-a920-ec7b0fc69a66
+    - name: 
+      prefabName: morgan
+      partSuffix:
+      - _cloak
+      - _cloak1
+      - _mask
+      maxPartCount: 23
+      hash: c0360688-8e75-4175-b523-dabfdaaf77f1
+    - name: 
+      prefabName: cabaji
+      partSuffix:
+      - _weapon1
+      - _weapon2
+      maxPartCount: 23
+      hash: ba5da4e8-3b64-4546-8eba-53addb72ad60
+    - name: 
+      prefabName: zoro_lod1
+      partSuffix:
+      - _hand
+      - _toujin
+      - _hair1
+      maxPartCount: 23
+      hash: a1a492f4-b709-4728-8de9-298e6e1eeb2e
+    - name: 
+      prefabName: zoro_lod2
+      partSuffix:
+      - _hand
+      - _toujin
+      - _hair1
+      maxPartCount: 23
+      hash: a885c9da-84d9-42ca-a470-1b52a1c386dc
+    - name: 
+      prefabName: galdino
+      partSuffix:
+      - _hand
+      - _sword
+      - _candlehand
+      - _cake
+      maxPartCount: 23
+      hash: 3adb690f-5e7a-4601-9699-c547b497a8b3
+    - name: 
+      prefabName: krieg
+      partSuffix:
+      - _cloak
+      - _cloth01
+      - _weapon01_l
+      - _weapon01_r
+      - _weapon02
+      - _weapon03
+      - _weapon04
+      - _weapon05
+      - _weapon09
+      - _weapon11
+      - _weapon06
+      - _weapon07
+      - _weapon10
+      maxPartCount: 23
+      hash: 6a6c2d2e-e770-4658-8c91-e74f84f8d1d1
+    - name: 
+      prefabName: mr1
+      partSuffix:
+      - _foot
+      - _trousers
+      - _weapon1
+      - _weapon2
+      - _weapon3
+      - _weapon4
+      - _weapon5
+      - _weapon6
+      - _weapon7
+      - _hand1
+      - _hand2
+      - _leg
+      maxPartCount: 23
+      hash: 8d7e13eb-b8d4-4502-bfe8-8c6ec5794f75
+    - name: 
+      prefabName: luccih
+      partSuffix:
+      - _dove
+      maxPartCount: 23
+      hash: 2baa8e5d-a26c-4162-bc02-dd0f1baab7a6
+    - name: 
+      prefabName: _ohmholy
+      partSuffix:
+      - _01_weapon
+      - _02_weapon
+      - _04_weapon
+      maxPartCount: 23
+      hash: e1580cc3-1483-4ae4-a687-41df4af1f38b
+    - name: 
+      prefabName: vivi
+      partSuffix:
+      - _weapon02
+      - _weapon03
+      - _weapon04
+      - _weapon05
+      maxPartCount: 23
+      hash: 92cf7eb2-7b90-418d-aabb-5eb5f361c75c
+    - name: 
+      prefabName: usopp
+      partSuffix:
+      - _01_weapon
+      maxPartCount: 23
+      hash: dd599fb3-23ed-4327-a2ce-4df6b4051a31
+    - name: 
+      prefabName: igaram
+      partSuffix:
+      - _weapon02
+      maxPartCount: 23
+      hash: 177f1c2a-a8c6-4228-a5ac-66c271f6894e
+    - name: 
+      prefabName: smoker
+      partSuffix:
+      - _glasses
+      - _trousers
+      - _l_arm
+      - _r_arm
+      maxPartCount: 23
+      hash: 44c27131-5921-4786-84b9-9ffbeb86efa0
+    - name: 
+      prefabName: chess
+      partSuffix:
+      - _weapon02
+      - _weapon03
+      - _weapon04
+      maxPartCount: 23
+      hash: 0823d1c8-82ad-4594-959e-27ef2fcc4b55
+    - name: 
+      prefabName: mihawk
+      partSuffix:
+      - _weapon01
+      - _weapon02
+      - _s
+      maxPartCount: 23
+      hash: 68b93928-f472-44a5-bff1-1110d1343907
+    maxPartCount: 23

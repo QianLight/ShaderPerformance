@@ -1,0 +1,426 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: badaccfd3407f5d4b9a666b7ecf47792, type: 3}
+  m_Name: checkPathConfigTemp
+  m_EditorClassIdentifier: 
+  ruleCheckAssetPaths:
+  - ruleName: ParticleCalculateMaxCheck
+    ruleClassify: ParticleSystem
+    isOpen: 0
+    content:
+      checkPathsWithParams: []
+  - ruleName: AssetCheck.AnimationDiskSizeCheck
+    ruleClassify: Animation
+    isOpen: 1
+    content:
+      checkPathsWithParams: []
+  - ruleName: AssetCheck.AnimationFrameRateCheck
+    ruleClassify: Animation
+    isOpen: 1
+    content:
+      checkPathsWithParams: []
+  - ruleName: AssetCheck.AnimationLengthCheck
+    ruleClassify: Animation
+    isOpen: 1
+    content:
+      checkPathsWithParams: []
+  - ruleName: AssetCheck.AnimationOptimalCheck
+    ruleClassify: Animation
+    isOpen: 1
+    content:
+      checkPathsWithParams: []
+  - ruleName: AssetCheck.AnimationPrecisionCheck
+    ruleClassify: Animation
+    isOpen: 1
+    content:
+      checkPathsWithParams: []
+  - ruleName: AssetCheck.AnimationResampleCurveCheck
+    ruleClassify: Animation
+    isOpen: 1
+    content:
+      checkPathsWithParams: []
+  - ruleName: AssetCheck.AnimationRuntimeMemoryCheck
+    ruleClassify: Animation
+    isOpen: 1
+    content:
+      checkPathsWithParams: []
+  - ruleName: AssetCheck.AnimationScaleCheck
+    ruleClassify: Animation
+    isOpen: 1
+    content:
+      checkPathsWithParams: []
+  - ruleName: AssetCheck.AnimationStateCheck
+    ruleClassify: Animation
+    isOpen: 1
+    content:
+      checkPathsWithParams: []
+  - ruleName: AssetCheck.AudioDoubleCheck
+    ruleClassify: Audio
+    isOpen: 0
+    content:
+      checkPathsWithParams: []
+  - ruleName: AssetCheck.AudioLengthCheck
+    ruleClassify: Audio
+    isOpen: 0
+    content:
+      checkPathsWithParams: []
+  - ruleName: AssetCheck.AudioPCMCheck
+    ruleClassify: Audio
+    isOpen: 0
+    content:
+      checkPathsWithParams: []
+  - ruleName: AssetCheck.AudioQualityCheck
+    ruleClassify: Audio
+    isOpen: 0
+    content:
+      checkPathsWithParams: []
+  - ruleName: AssetCheck.AudioSampleRateCheck
+    ruleClassify: Audio
+    isOpen: 0
+    content:
+      checkPathsWithParams: []
+  - ruleName: AssetCheck.AudioStreamingCheck
+    ruleClassify: Audio
+    isOpen: 0
+    content:
+      checkPathsWithParams: []
+  - ruleName: AssetCheck.EffectOverDrawCheck
+    ruleClassify: ParticleSystem
+    isOpen: 1
+    content:
+      checkPathsWithParams: []
+  - ruleName: AssetCheck.FileNameCheck
+    ruleClassify: File
+    isOpen: 1
+    content:
+      checkPathsWithParams:
+      - assetPath: Assets/Resources
+        excludePaths: []
+        ruleParams: []
+  - ruleName: AssetCheck.MaterialNullCheck
+    ruleClassify: Material
+    isOpen: 0
+    content:
+      checkPathsWithParams: []
+  - ruleName: AssetCheck.MaterialPropertiesCheck
+    ruleClassify: Material
+    isOpen: 0
+    content:
+      checkPathsWithParams: []
+  - ruleName: AssetCheck.MaterialSameCheck
+    ruleClassify: Material
+    isOpen: 0
+    content:
+      checkPathsWithParams: []
+  - ruleName: AssetCheck.MaterialSolidCheck
+    ruleClassify: Material
+    isOpen: 0
+    content:
+      checkPathsWithParams: []
+  - ruleName: AssetCheck.MaterialStandardCheck
+    ruleClassify: Material
+    isOpen: 0
+    content:
+      checkPathsWithParams: []
+  - ruleName: AssetCheck.MeshVertexNumCheck
+    ruleClassify: Mesh
+    isOpen: 0
+    content:
+      checkPathsWithParams: []
+  - ruleName: AssetCheck.MeshColorCheck
+    ruleClassify: Mesh
+    isOpen: 0
+    content:
+      checkPathsWithParams: []
+  - ruleName: AssetCheck.MeshNormalCheck
+    ruleClassify: Mesh
+    isOpen: 0
+    content:
+      checkPathsWithParams: []
+  - ruleName: AssetCheck.MeshOptimizeMeshCheck
+    ruleClassify: Mesh
+    isOpen: 0
+    content:
+      checkPathsWithParams: []
+  - ruleName: AssetCheck.MeshReadCheck
+    ruleClassify: Mesh
+    isOpen: 0
+    content:
+      checkPathsWithParams: []
+  - ruleName: AssetCheck.MeshTangentCheck
+    ruleClassify: Mesh
+    isOpen: 0
+    content:
+      checkPathsWithParams: []
+  - ruleName: AssetCheck.MeshUV2Check
+    ruleClassify: Mesh
+    isOpen: 0
+    content:
+      checkPathsWithParams: []
+  - ruleName: AssetCheck.MeshUV3Check
+    ruleClassify: Mesh
+    isOpen: 0
+    content:
+      checkPathsWithParams: []
+  - ruleName: AssetCheck.SkinnedMeshBoneCheck
+    ruleClassify: Mesh
+    isOpen: 0
+    content:
+      checkPathsWithParams: []
+  - ruleName: AssetCheck.ParticleEmissionCheck
+    ruleClassify: ParticleSystem
+    isOpen: 0
+    content:
+      checkPathsWithParams: []
+  - ruleName: AssetCheck.ParticleMemoryCheck
+    ruleClassify: ParticleSystem
+    isOpen: 0
+    content:
+      checkPathsWithParams: []
+  - ruleName: AssetCheck.ParticleMeshCheck
+    ruleClassify: ParticleSystem
+    isOpen: 0
+    content:
+      checkPathsWithParams: []
+  - ruleName: AssetCheck.ParticleMeshRWCheck
+    ruleClassify: ParticleSystem
+    isOpen: 0
+    content:
+      checkPathsWithParams: []
+  - ruleName: AssetCheck.ParticleMeshTriangleCheck
+    ruleClassify: ParticleSystem
+    isOpen: 0
+    content:
+      checkPathsWithParams: []
+  - ruleName: AssetCheck.ParticlePrewarmCheck
+    ruleClassify: ParticleSystem
+    isOpen: 0
+    content:
+      checkPathsWithParams: []
+  - ruleName: AssetCheck.ParticleTextureCountCheck
+    ruleClassify: ParticleSystem
+    isOpen: 0
+    content:
+      checkPathsWithParams: []
+  - ruleName: AssetCheck.ParticleTextureSizeCheck
+    ruleClassify: ParticleSystem
+    isOpen: 0
+    content:
+      checkPathsWithParams: []
+  - ruleName: AssetCheck.TransformChildCheck
+    ruleClassify: Prefab
+    isOpen: 0
+    content:
+      checkPathsWithParams: []
+  - ruleName: AssetCheck.PrefabAnimatorCheck
+    ruleClassify: Prefab
+    isOpen: 0
+    content:
+      checkPathsWithParams: []
+  - ruleName: AssetCheck.PrefabAnimatorTransformHierarchyCheck
+    ruleClassify: Prefab
+    isOpen: 0
+    content:
+      checkPathsWithParams: []
+  - ruleName: AssetCheck.PrefabAnimatorOptimizeCheck
+    ruleClassify: Prefab
+    isOpen: 0
+    content:
+      checkPathsWithParams: []
+  - ruleName: AssetCheck.PrefabCollisionCheck
+    ruleClassify: ParticleSystem
+    isOpen: 0
+    content:
+      checkPathsWithParams: []
+  - ruleName: AssetCheck.PrefabMissCheck
+    ruleClassify: Prefab
+    isOpen: 0
+    content:
+      checkPathsWithParams: []
+  - ruleName: AssetCheck.PrefabMissScriptsCheck
+    ruleClassify: Prefab
+    isOpen: 0
+    content:
+      checkPathsWithParams: []
+  - ruleName: AssetCheck.PrefabRendererCheck
+    ruleClassify: Prefab
+    isOpen: 0
+    content:
+      checkPathsWithParams: []
+  - ruleName: AssetCheck.PrefabStandardCheck
+    ruleClassify: Prefab
+    isOpen: 0
+    content:
+      checkPathsWithParams: []
+  - ruleName: AssetCheck.SkinnedMeshRendererUseMotionVectorCheck
+    ruleClassify: Renderer
+    isOpen: 0
+    content:
+      checkPathsWithParams: []
+  - ruleName: AssetCheck.SceneMeshColliderCheck
+    ruleClassify: Scene
+    isOpen: 0
+    content:
+      checkPathsWithParams: []
+  - ruleName: AssetCheck.SceneMissCheck
+    ruleClassify: Scene
+    isOpen: 0
+    content:
+      checkPathsWithParams: []
+  - ruleName: AssetCheck.SceneParticleUseTexturesCountCheck
+    ruleClassify: Scene
+    isOpen: 0
+    content:
+      checkPathsWithParams: []
+  - ruleName: AssetCheck.SceneRuntimeAnimtorControllerMissCheck
+    ruleClassify: Scene
+    isOpen: 0
+    content:
+      checkPathsWithParams: []
+  - ruleName: AssetCheck.SceneTrianglesCountCheck
+    ruleClassify: Scene
+    isOpen: 0
+    content:
+      checkPathsWithParams: []
+  - ruleName: AssetCheck.ShaderBuildCheck
+    ruleClassify: Shader
+    isOpen: 0
+    content:
+      checkPathsWithParams: []
+  - ruleName: AssetCheck.ShaderGlobalKeywordsCountCheck
+    ruleClassify: Shader
+    isOpen: 0
+    content:
+      checkPathsWithParams: []
+  - ruleName: AssetCheck.ShaderTextureCheck
+    ruleClassify: Shader
+    isOpen: 0
+    content:
+      checkPathsWithParams: []
+  - ruleName: AssetCheck.TextureAlphaCheck
+    ruleClassify: Texture
+    isOpen: 0
+    content:
+      checkPathsWithParams: []
+  - ruleName: AssetCheck.TextureAlphaSourceCheck
+    ruleClassify: Texture
+    isOpen: 0
+    content:
+      checkPathsWithParams: []
+  - ruleName: AssetCheck.TextureAnisoCheck
+    ruleClassify: Texture
+    isOpen: 0
+    content:
+      checkPathsWithParams: []
+  - ruleName: AssetCheck.TextureSizeCheck
+    ruleClassify: Texture
+    isOpen: 0
+    content:
+      checkPathsWithParams: []
+  - ruleName: AssetCheck.TextureFormatCheck
+    ruleClassify: Texture
+    isOpen: 0
+    content:
+      checkPathsWithParams: []
+  - ruleName: AssetCheck.TextureMipmapCheck
+    ruleClassify: Texture
+    isOpen: 0
+    content:
+      checkPathsWithParams: []
+  - ruleName: AssetCheck.TextureReadCheck
+    ruleClassify: Texture
+    isOpen: 0
+    content:
+      checkPathsWithParams: []
+  - ruleName: AssetCheck.TextureSRGBCheck
+    ruleClassify: Texture
+    isOpen: 0
+    content:
+      checkPathsWithParams: []
+  - ruleName: AssetCheck.TextureSolidCheck
+    ruleClassify: Texture
+    isOpen: 0
+    content:
+      checkPathsWithParams: []
+  - ruleName: AssetCheck.TextureTrilinearCheck
+    ruleClassify: Texture
+    isOpen: 0
+    content:
+      checkPathsWithParams: []
+  - ruleName: AssetCheck.TextureTypeCheck
+    ruleClassify: Texture
+    isOpen: 0
+    content:
+      checkPathsWithParams: []
+  - ruleName: AssetCheck.ImageInvisibilityCheck
+    ruleClassify: UGUI
+    isOpen: 0
+    content:
+      checkPathsWithParams: []
+  - ruleName: AssetCheck.ImageUseTriledCheck
+    ruleClassify: UGUI
+    isOpen: 0
+    content:
+      checkPathsWithParams: []
+  - ruleName: AssetCheck.RawImageInvisibilityCheck
+    ruleClassify: UGUI
+    isOpen: 0
+    content:
+      checkPathsWithParams: []
+  - ruleName: AssetCheck.RawImageUseDefaultTextureCheck
+    ruleClassify: UGUI
+    isOpen: 0
+    content:
+      checkPathsWithParams: []
+  - ruleName: AssetCheck.TextOutlineCheck
+    ruleClassify: UGUI
+    isOpen: 0
+    content:
+      checkPathsWithParams: []
+  - ruleName: AssetCheck.UICanvasCheck
+    ruleClassify: UGUI
+    isOpen: 0
+    content:
+      checkPathsWithParams: []
+  - ruleName: AssetCheck.WwiseAverageBytesPerSecondCheck
+    ruleClassify: Wwise
+    isOpen: 0
+    content:
+      checkPathsWithParams: []
+  - ruleName: AssetCheck.WwiseFileSizeCheck
+    ruleClassify: Wwise
+    isOpen: 0
+    content:
+      checkPathsWithParams:
+      - assetPath: Assets
+        excludePaths: []
+        ruleParams:
+        - description: "\u78C1\u76D8\u5360\u7528(k)"
+          uiType: Input
+          uiParam: 
+          paramValue: 0
+          paramType: System.Int64
+  - ruleName: AssetCheck.WwiseFormatCheck
+    ruleClassify: Wwise
+    isOpen: 0
+    content:
+      checkPathsWithParams: []
+  - ruleName: AssetCheck.WwisePlayLengthCheck
+    ruleClassify: Wwise
+    isOpen: 0
+    content:
+      checkPathsWithParams: []
+  - ruleName: AssetCheck.WwiseSampleRateCheck
+    ruleClassify: Wwise
+    isOpen: 0
+    content:
+      checkPathsWithParams: []

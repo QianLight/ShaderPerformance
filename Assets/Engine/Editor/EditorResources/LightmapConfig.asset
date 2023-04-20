@@ -1,0 +1,59 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2105b086db57fea46ac0fea0bf7bef77, type: 3}
+  m_Name: LightmapConfig
+  m_EditorClassIdentifier: 
+  configs:
+  - name: Outdoor
+    ambientType: 0
+    ambientLight: {r: 0.71488965, g: 0.7871904, b: 0.8018868, a: 1}
+    ambientSkyColor: {r: 0.21226418, g: 0.42382747, b: 1, a: 1}
+    ambientEquatorColor: {r: 0.2783019, g: 0.8277765, b: 1, a: 1}
+    ambientGroundColor: {r: 0.18640976, g: 0.6698113, b: 0.32634184, a: 1}
+    skyIntensity: 1
+    skyMaterial: {fileID: 2100000, guid: 77aebc5c52f97114999ca3a0b78ca564, type: 2}
+    mis: 0
+    directSampleCount: 50
+    indirectSampleCount: 500
+    environmentSampleCount: 500
+    bounces: 4
+    bakeResolution: 13
+    padding: 2
+    maxAtlasSize: 1024
+    enableAmbientOcclusion: 1
+    aoMaxDistance: 1
+    aoExponentIndirect: 1
+    aoExponentDirect: 1
+    indirectOutputScale: 1
+    bounceBoost: 1.5
+  - name: Indoor
+    ambientType: 0
+    ambientLight: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+    ambientSkyColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+    ambientEquatorColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+    ambientGroundColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+    skyIntensity: 1
+    skyMaterial: {fileID: 2100000, guid: 77aebc5c52f97114999ca3a0b78ca564, type: 2}
+    mis: 0
+    directSampleCount: 50
+    indirectSampleCount: 500
+    environmentSampleCount: 500
+    bounces: 4
+    bakeResolution: 15
+    padding: 2
+    maxAtlasSize: 1024
+    enableAmbientOcclusion: 1
+    aoMaxDistance: 0.3
+    aoExponentIndirect: 1.3
+    aoExponentDirect: 0.3
+    indirectOutputScale: 1
+    bounceBoost: 1.5

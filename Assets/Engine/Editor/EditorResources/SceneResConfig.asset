@@ -1,0 +1,102 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4fa2b52e49d8fe343968529d427030fa, type: 3}
+  m_Name: SceneResConfig
+  m_EditorClassIdentifier: 
+  configs:
+  - resName: LightMap
+    systemName: LightMapSystem
+    hasNode: 0
+    hasSceneTag: 1
+    sceneType: 0
+  - resName: Collider
+    systemName: ColliderSystem
+    hasNode: 1
+    hasSceneTag: 1
+    sceneType: 0
+  - resName: Light
+    systemName: LightSystem
+    hasNode: 1
+    hasSceneTag: 1
+    sceneType: 0
+  - resName: StaticPrefabs
+    systemName: StaticObjectSystem
+    hasNode: 1
+    hasSceneTag: 1
+    sceneType: 0
+  - resName: Prefabs
+    systemName: PrefabObjectSystem
+    hasNode: 1
+    hasSceneTag: 1
+    sceneType: 0
+  - resName: MultiLayer
+    systemName: MultiLayerSystem
+    hasNode: 1
+    hasSceneTag: 1
+    sceneType: 0
+  - resName: Animation
+    systemName: AnimationSystem
+    hasNode: 1
+    hasSceneTag: 1
+    sceneType: 0
+  - resName: Effects
+    systemName: SFXSystem
+    hasNode: 1
+    hasSceneTag: 1
+    sceneType: 0
+  - resName: DynamicObjects
+    systemName: DynamicObjectSystem
+    hasNode: 1
+    hasSceneTag: 1
+    sceneType: 1
+  - resName: LightProbes
+    systemName: LightProbeSystem
+    hasNode: 1
+    hasSceneTag: 1
+    sceneType: 0
+  - resName: Audio
+    systemName: AudioSystem
+    hasNode: 1
+    hasSceneTag: 1
+    sceneType: 0
+  - resName: Instance
+    systemName: InstanceSystem
+    hasNode: 1
+    hasSceneTag: 1
+    sceneType: 0
+  - resName: Enverinment
+    systemName: EnvSystem
+    hasNode: 1
+    hasSceneTag: 1
+    sceneType: 0
+  - resName: MeshTerrain
+    systemName: TerrainSystem
+    hasNode: 1
+    hasSceneTag: 0
+    sceneType: 0
+  - resName: UnityTerrain
+    systemName: UnityTerrainSystem
+    hasNode: 1
+    hasSceneTag: 1
+    sceneType: 0
+  - resName: Debug
+    systemName: DebugSystem
+    hasNode: 0
+    hasSceneTag: 1
+    sceneType: 0
+  - resName: PVS
+    systemName: PVSSystem
+    hasNode: 1
+    hasSceneTag: 0
+    sceneType: 0
+  bakeObjFolderName: StaticPrefabs
+  bakeTerrainFolderName: MeshTerrain

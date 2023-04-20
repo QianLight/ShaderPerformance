@@ -1,0 +1,20 @@
+{
+    "name": "Devops-assetCheck.editor",
+    "rootNamespace": "",
+    "references": [
+        "GUID:71d9ea731d64f334493626e1aa92b56d",
+        "GUID:15e8057a635dbbc40ae190de19b01144",
+        "GUID:6547be105b4705d4ea7e57e84f251db9"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

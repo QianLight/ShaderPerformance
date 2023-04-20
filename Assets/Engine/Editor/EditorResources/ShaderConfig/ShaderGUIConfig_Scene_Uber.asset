@@ -1,0 +1,66 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40e1cbd74443f2b4a9ea8cdee05aef60, type: 3}
+  m_Name: ShaderGUIConfig_Scene_Uber
+  m_EditorClassIdentifier: 
+  shader: {fileID: 4800000, guid: e3098f6a97b0e1f47bd55f4f233aa84b, type: 3}
+  dummyMatType: 0
+  lsType: 1
+  shaderFeatures:
+  - hash: 
+    sfg: {fileID: 11400000, guid: eea36573a8677db4aa8aeb87a8c8a5c0, type: 2}
+    shaderFeatures:
+    - Default_BlendMode
+    - Default_SelfShadow
+  - hash: 
+    sfg: {fileID: 11400000, guid: f77f48b04d6db684797677796ceff587, type: 2}
+    shaderFeatures:
+    - Bloom__BloomParam
+    - Bloom_
+  - hash: 
+    sfg: {fileID: 11400000, guid: d78bb4bdc436929448c59d32983f75f9, type: 2}
+    shaderFeatures:
+    - Debug_DebugShader
+    - Debug_Debug
+    - Debug_empty
+  - hash: 
+    sfg: {fileID: 11400000, guid: cf68945b14efc0d448b4e1db37a88223, type: 2}
+    shaderFeatures:
+    - Base_MainColor
+    - Base_MainTex
+    - Base_MainUVST
+    - Base_Cutout
+    - Base_AO
+    - Base_PbrFromParam
+    - Base_PbsTex
+    - Base_NormalUVST
+    - Base_NormalScale
+    - Base_MetallicParam
+    - Base_PBRScale
+    - Base_PbrParam
+    - Base_TextureIntensity
+  - hash: 
+    sfg: {fileID: 11400000, guid: 569a288f0ed60ce4eb643d126476eacb, type: 2}
+    shaderFeatures:
+    - Scene_Emissive
+    - Scene_EmiParam
+    - Scene_EmiColor
+    - Scene_CustomEffect
+    - Scene_OverLayEnable
+    - Scene_OverLayParam
+    - Scene_OverLayTex
+    - Scene_OverLayColor
+    - Scene_DetailEnable
+    - Scene_DetailParam
+    - Scene_DetailTex
+    - Scene_IsFlower
+    - Scene_Grass_Collision

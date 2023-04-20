@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+      package="com.perfectworld.cfgame"
+      android:versionCode="1"
+      android:versionName="1.0">
+    <uses-sdk android:minSdkVersion="19" android:targetSdkVersion="23" />
+    
+    <!-- 网络通信 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- 获取网络状态 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!-- 获取mac地址 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    
+    <!-- 获取logcat -->
+    <uses-permission android:name="android.permission.READ_LOGS" />
+    <!-- 获取设备信息 -->
+	<uses-permission android:name="android.permission.READ_PHONE_STATE" />
+ 
+	  <uses-permission android:name="android.permission.VIBRATE" />
+	  <uses-permission android:name="android.permission.GET_TASKS"/>
+    <!-- 获取麦克风权限 -->
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+    
+    <application android:icon="@drawable/app_icon" android:label="@string/app_name" android:debuggable="false"  android:usesCleartextTraffic="true">
+
+		<activity android:name="com.sdk.SplashActivity"
+				   android:label="@string/app_name"
+				   android:launchMode="singleTop"
+				   android:theme="@android:style/Theme.Black.NoTitleBar"
+				   android:screenOrientation="landscape"
+				   android:configChanges="keyboardHidden|orientation"
+                    >
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="android.intent.category.LAUNCHER" />
+			</intent-filter>
+		</activity>
+
+		<activity android:name="com.sdk.MainActivity"
+				   android:label="@string/app_name"
+				   android:launchMode="singleTask"
+				   android:theme="@android:style/Theme.Black.NoTitleBar"
+				   android:screenOrientation="landscape"
+				   android:configChanges="keyboardHidden|orientation|screenSize"
+                    >
+		</activity>
+        
+		
+        <activity android:name="com.perfectworld.cfgame.wxapi.WXEntryActivity"
+                  android:exported="true"    
+                  android:screenOrientation="landscape"
+                  android:theme="@android:style/Theme.NoDisplay"	
+            	>
+        </activity>
+		
+		<!-- 友盟 push使用参数 app_secret使用Umeng Message Secret-->
+		<meta-data android:name="ttgame_push_umeng_app_key" android:value="62c2850330121a652b58df49" />
+		<meta-data android:name="ttgame_push_umeng_app_secret" android:value="7f4e67e9d537f06c0e7849f5b6ab61f6" />
+		
+		<!-- 暂时注释掉推送 -->
+	    <activity android:name="com.bytedance.ttgame.module.push.IntransitActivity" android:launchMode="singleTask">
+            <intent-filter>
+                <action android:name="com.ss.android.sdk.snssdkgpush7002"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+			
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="snssdkgpush7002"/>
+            </intent-filter>
+        </activity>
+		<!-- https://www.cnblogs.com/msxh/p/10889484.html -->
+		<!-- 关闭APP启动的时候就默认申请敏感权限的行为，配置这个不影响通过代码去动态申请权限的，只是去掉了一开始申请，只需要在Manifest中中添加下面这行声明就可以了-->
+	    <meta-data android:name="unityplayer.SkipPermissionsDialog" android:value="true" />
+    </application>
+</manifest>

@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40e1cbd74443f2b4a9ea8cdee05aef60, type: 3}
+  m_Name: ShaderGUIConfig_Role_Laser
+  m_EditorClassIdentifier: 
+  shader: {fileID: 4800000, guid: f5f159f494ccc2a40a95211d396b78f3, type: 3}
+  dummyMatType: 1
+  lsType: 1
+  shaderFeatures:
+  - hash: 
+    sfg: {fileID: 11400000, guid: eea36573a8677db4aa8aeb87a8c8a5c0, type: 2}
+    shaderFeatures:
+    - Default_BlendMode
+  - hash: 
+    sfg: {fileID: 11400000, guid: d78bb4bdc436929448c59d32983f75f9, type: 2}
+    shaderFeatures:
+    - Debug_DebugShader
+    - Debug_Debug
+  - hash: 
+    sfg: {fileID: 11400000, guid: cf68945b14efc0d448b4e1db37a88223, type: 2}
+    shaderFeatures:
+    - Base_MainTex
+    - Base_MainColor
+  - hash: 
+    sfg: {fileID: 11400000, guid: bdef8725f6c04bd4686ab8a727f79f0d, type: 2}
+    shaderFeatures:
+    - Glass03_NormalThicknessTex
+    - Glass03_MatCap
+    - Glass03_SpecularColor
+    - Glass03_GlassParam
+    - Glass03_Leishe
+    - Glass03_empty
+    - Glass03_Laser2

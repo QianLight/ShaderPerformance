@@ -1,0 +1,3204 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d85379778c802cb49895f3777ace8e35, type: 3}
+  m_Name: EditorSFXData
+  m_EditorClassIdentifier: 
+  dirs:
+  - Assets/BundleRes/Effects
+  profileLevels: 4
+  settingType:
+  - countInfo: 
+    exampleInfo: "\u7F3A\u7701(\u9ED8\u8BA4\u5C0F\u602A)"
+    profileLevels:
+    - pCount: 30
+      psCount: 4
+      fillrate: 1
+      batches: 4
+      fillrateArea: 0.5
+    - pCount: 25
+      psCount: 3
+      fillrate: 0.8
+      batches: 3
+      fillrateArea: 0.4
+    - pCount: 15
+      psCount: 2
+      fillrate: 0.6
+      batches: 2
+      fillrateArea: 0.3
+  - countInfo: 
+    exampleInfo: Role-Boss
+    profileLevels:
+    - pCount: 150
+      psCount: 25
+      fillrate: 3
+      batches: 25
+      fillrateArea: 2
+    - pCount: 100
+      psCount: 20
+      fillrate: 2.5
+      batches: 20
+      fillrateArea: 1.6
+    - pCount: 75
+      psCount: 15
+      fillrate: 2
+      batches: 15
+      fillrateArea: 1.2
+  - countInfo: 
+    exampleInfo: Elite
+    profileLevels:
+    - pCount: 50
+      psCount: 6
+      fillrate: 1.5
+      batches: 6
+      fillrateArea: 1
+    - pCount: 35
+      psCount: 4
+      fillrate: 1.25
+      batches: 4
+      fillrateArea: 0.8
+    - pCount: 20
+      psCount: 3
+      fillrate: 1
+      batches: 3
+      fillrateArea: 0.6
+  - countInfo: 
+    exampleInfo: Hit
+    profileLevels:
+    - pCount: 6
+      psCount: 2
+      fillrate: 0.5
+      batches: 2
+      fillrateArea: 0.1
+    - pCount: 4
+      psCount: 2
+      fillrate: 0.4
+      batches: 2
+      fillrateArea: 0.08
+    - pCount: 2
+      psCount: 1
+      fillrate: 0.3
+      batches: 1
+      fillrateArea: 0.06
+  skillTypeByFolder:
+  - skillName: Monster_Alvida_
+    skillType: 1
+  - skillName: Monster_Beretcaptain_
+    skillType: 2
+  - skillName: Monster_BlackBeard_
+    skillType: 1
+  - skillName: Monster_Blueno_
+    skillType: 1
+  - skillName: Monster_Buggy_
+    skillType: 1
+  - skillName: Monster_Cabaji_
+    skillType: 1
+  - skillName: Monster_Enel_
+    skillType: 1
+  - skillName: Monster_faquandui_
+    skillType: 1
+  - skillName: Monster_Fukurou_
+    skillType: 1
+  - skillName: Monster_Gedatsu_
+    skillType: 1
+  - skillName: Monster_Haijunfubing_
+    skillType: 0
+  - skillName: Monster_Helmeppo_
+    skillType: 2
+  - skillName: Monster_Jyabura_
+    skillType: 1
+  - skillName: Monster_Kaku_
+    skillType: 1
+  - skillName: Monster_Kalifa_
+    skillType: 1
+  - skillName: Monster_Kaxi_
+    skillType: 1
+  - skillName: Monster_Kumadori_
+    skillType: 1
+  - skillName: Monster_Kuro_
+    skillType: 1
+  - skillName: Monster_Mihawk_
+    skillType: 1
+  - skillName: Monster_Morgan_
+    skillType: 1
+  - skillName: Monster_Ohm_
+    skillType: 1
+  - skillName: Monster_Oimo_
+    skillType: 1
+  - skillName: Monster_Pacifist_
+    skillType: 1
+  - skillName: Monster_Richie_
+    skillType: 1
+  - skillName: Monster_Satori_
+    skillType: 1
+  - skillName: Monster_Sengokubuddha_
+    skillType: 1
+  - skillName: Monster_Sengokuhumen_
+    skillType: 1
+  - skillName: Monster_Shandia1_
+    skillType: 0
+  - skillName: Monster_Shandia2_
+    skillType: 0
+  - skillName: Monster_Shenbing_
+    skillType: 0
+  - skillName: Monster_Shenbing2_
+    skillType: 0
+  - skillName: Monster_Weber_
+    skillType: 1
+  - skillName: Monster_Yama_
+    skillType: 2
+  - skillName: Monster_Zhongwu_
+    skillType: 1
+  - skillName: Monster_Alvidasubordinate1_
+    skillType: 1
+  - skillName: Monster_Alvidasubordinate2_
+    skillType: 1
+  - skillName: Monster_Alvidasubordinate3_
+    skillType: 1
+  - skillName: Monster_Butchi_
+    skillType: 1
+  - skillName: Monster_Sham_
+    skillType: 1
+  skillTypeByDoc:
+  - skillName: Kalifa_yuchi1_broke
+    skillType: 0
+  - skillName: Kalifa_yuchi2_broke
+    skillType: 0
+  - skillName: Kalifa_yuchi3_broke
+    skillType: 0
+  - skillName: Kalifa_yuchi4_broke
+    skillType: 0
+  - skillName: Monster_Alvida_attack01
+    skillType: 1
+  - skillName: Monster_Alvida_attack02
+    skillType: 1
+  - skillName: Monster_Alvida_attack03
+    skillType: 1
+  - skillName: Monster_Alvida_attack031
+    skillType: 1
+  - skillName: Monster_Alvida_attack03_end
+    skillType: 1
+  - skillName: Monster_Alvida_attack03_end2
+    skillType: 1
+  - skillName: Monster_Alvida_BK
+    skillType: 1
+  - skillName: Monster_Alvida_born
+    skillType: 1
+  - skillName: Monster_Alvida_born_chapterone
+    skillType: 1
+  - skillName: Monster_Alvida_leftturn
+    skillType: 1
+  - skillName: Monster_Alvida_moveleft
+    skillType: 1
+  - skillName: Monster_Alvida_moveright
+    skillType: 1
+  - skillName: Monster_Alvida_notwell
+    skillType: 1
+  - skillName: Monster_Alvida_OD
+    skillType: 1
+  - skillName: Monster_Alvida_OD_twochapter
+    skillType: 1
+  - skillName: Monster_Alvida_questioning
+    skillType: 1
+  - skillName: Monster_Alvida_questioning_houxu
+    skillType: 1
+  - skillName: Monster_Alvida_retreat
+    skillType: 1
+  - skillName: Monster_Alvida_retreat_elite
+    skillType: 1
+  - skillName: Monster_Alvida_rightturn
+    skillType: 1
+  - skillName: Monster_Alvida_rush
+    skillType: 1
+  - skillName: Monster_Alvida_rush1
+    skillType: 1
+  - skillName: Monster_Alvida_rush1_elite
+    skillType: 1
+  - skillName: Monster_Alvida_rush_5m
+    skillType: 1
+  - skillName: Monster_Alvida_rush_5m_jie
+    skillType: 1
+  - skillName: Monster_Alvida_rush_elite
+    skillType: 1
+  - skillName: Monster_Alvida_rush_perform
+    skillType: 1
+  - skillName: Monster_Alvida_Shoot
+    skillType: 1
+  - skillName: Monster_Alvida_Shoot_Plus
+    skillType: 1
+  - skillName: Monster_Alvida_tbt
+    skillType: 1
+  - skillName: Monster_Alvida_thump
+    skillType: 1
+  - skillName: Monster_Alvida_thump1
+    skillType: 1
+  - skillName: Monster_Alvida_thump1_elite
+    skillType: 1
+  - skillName: Monster_Alvida_thump_elite
+    skillType: 1
+  - skillName: Monster_Alvidasubordinate1_Attack01
+    skillType: 1
+  - skillName: Monster_Alvidasubordinate1_Attack02
+    skillType: 1
+  - skillName: Monster_Alvidasubordinate1_Born_1
+    skillType: 1
+  - skillName: Monster_Alvidasubordinate1_Born_2
+    skillType: 1
+  - skillName: Monster_Alvidasubordinate1_MoveBack
+    skillType: 1
+  - skillName: Monster_Alvidasubordinate1_MoveLeft
+    skillType: 1
+  - skillName: Monster_Alvidasubordinate1_MoveRight
+    skillType: 1
+  - skillName: Monster_Alvidasubordinate1_Perform
+    skillType: 1
+  - skillName: Monster_Alvidasubordinate1_TurnLeft
+    skillType: 1
+  - skillName: Monster_Alvidasubordinate1_TurnRight
+    skillType: 1
+  - skillName: Monster_Alvidasubordinate2_Attack01
+    skillType: 1
+  - skillName: Monster_Alvidasubordinate2_Born_1
+    skillType: 1
+  - skillName: Monster_Alvidasubordinate2_Born_2
+    skillType: 1
+  - skillName: Monster_Alvidasubordinate2_MoveBack
+    skillType: 1
+  - skillName: Monster_Alvidasubordinate2_MoveLeft
+    skillType: 1
+  - skillName: Monster_Alvidasubordinate2_MoveRight
+    skillType: 1
+  - skillName: Monster_Alvidasubordinate2_Perform
+    skillType: 1
+  - skillName: Monster_Alvidasubordinate2_TurnLeft
+    skillType: 1
+  - skillName: Monster_Alvidasubordinate2_TurnRight
+    skillType: 1
+  - skillName: Monster_Alvidasubordinate3_Attack01
+    skillType: 1
+  - skillName: Monster_Alvidasubordinate3_Born_1
+    skillType: 1
+  - skillName: Monster_Alvidasubordinate3_Born_2
+    skillType: 1
+  - skillName: Monster_Alvidasubordinate3_MoveBack
+    skillType: 1
+  - skillName: Monster_Alvidasubordinate3_MoveLeft
+    skillType: 1
+  - skillName: Monster_Alvidasubordinate3_MoveRight
+    skillType: 1
+  - skillName: Monster_Alvidasubordinate3_Perform
+    skillType: 1
+  - skillName: Monster_Battery_fire
+    skillType: 0
+  - skillName: Monster_Battery_fire1
+    skillType: 0
+  - skillName: Monster_Battery_fire2
+    skillType: 0
+  - skillName: Monster_Battery_fire3
+    skillType: 0
+  - skillName: Monster_Battery_fire4
+    skillType: 0
+  - skillName: Monster_Beretcaptain_command
+    skillType: 2
+  - skillName: Monster_Beretcaptain_fallback
+    skillType: 2
+  - skillName: Monster_Beretcaptain_jac
+    skillType: 2
+  - skillName: Monster_Beretcaptain_jumpback
+    skillType: 2
+  - skillName: Monster_Beretcaptain_jumpback1
+    skillType: 2
+  - skillName: Monster_Beretcaptain_kick
+    skillType: 2
+  - skillName: Monster_Beretswordman_attack
+    skillType: 0
+  - skillName: Monster_Beretswordman_chargeattack
+    skillType: 0
+  - skillName: Monster_Beretswordman_chargeattack2
+    skillType: 0
+  - skillName: Monster_Beretswordman_fight
+    skillType: 0
+  - skillName: Monster_Beretswordman_fight1
+    skillType: 0
+  - skillName: Monster_Beretswordman_fight2
+    skillType: 0
+  - skillName: Monster_Beretswordman_rangeattack
+    skillType: 0
+  - skillName: Monster_Beretswordman_walkleft
+    skillType: 0
+  - skillName: Monster_Beretswordman_walkright
+    skillType: 0
+  - skillName: Monster_Berets_attack01
+    skillType: 0
+  - skillName: Monster_Berets_backwardsomersault
+    skillType: 0
+  - skillName: Monster_Berets_collision
+    skillType: 0
+  - skillName: Monster_Berets_fts
+    skillType: 0
+  - skillName: Monster_Berets_leftwinding
+    skillType: 0
+  - skillName: Monster_Berets_rightwinding
+    skillType: 0
+  - skillName: Monster_Berets_zhuanhuan
+    skillType: 0
+  - skillName: Monster_Beretmusketeer_attack
+    skillType: 0
+  - skillName: Monster_Beretmusketeer_fight
+    skillType: 0
+  - skillName: Monster_Beretmusketeer_heavyattack
+    skillType: 0
+  - skillName: Monster_beretmusketeer_walkleft
+    skillType: 0
+  - skillName: Monster_beretmusketeer_walkright
+    skillType: 0
+  - skillName: Monster_BlackBeard_anwu
+    skillType: 1
+  - skillName: Monster_BlackBeard_anxuedao
+    skillType: 1
+  - skillName: Monster_BlackBeard_attack
+    skillType: 1
+  - skillName: Monster_BlackBeard_attack_od
+    skillType: 1
+  - skillName: Monster_BlackBeard_Break
+    skillType: 1
+  - skillName: Monster_BlackBeard_caidi
+    skillType: 1
+  - skillName: Monster_BlackBeard_ceshi
+    skillType: 1
+  - skillName: Monster_BlackBeard_haizhen
+    skillType: 1
+  - skillName: Monster_BlackBeard_heidong
+    skillType: 1
+  - skillName: Monster_BlackBeard_hide
+    skillType: 1
+  - skillName: Monster_BlackBeard_jiefang
+    skillType: 1
+  - skillName: Monster_BlackBeard_lefttranslation
+    skillType: 1
+  - skillName: Monster_BlackBeard_Normal
+    skillType: 1
+  - skillName: Monster_BlackBeard_OverDirve
+    skillType: 1
+  - skillName: Monster_BlackBeard_palsy_end
+    skillType: 1
+  - skillName: Monster_BlackBeard_palsy_start
+    skillType: 1
+  - skillName: Monster_BlackBeard_righttranslation
+    skillType: 1
+  - skillName: Monster_BlackBeard_turnleft
+    skillType: 1
+  - skillName: Monster_BlackBeard_turnright
+    skillType: 1
+  - skillName: Monster_BlackBeard_xuanwo
+    skillType: 1
+  - skillName: Monster_BlackBeard_zadi
+    skillType: 1
+  - skillName: Monster_BlackBeard_zhendi
+    skillType: 1
+  - skillName: Monster_BlackBeard_zhendi_cutscene
+    skillType: 1
+  - skillName: Monster_BlackBeard_anwulink
+    skillType: 1
+  - skillName: Monster_BlackBeard_anxuedaolink
+    skillType: 1
+  - skillName: Monster_BlackBeard_attacklink
+    skillType: 1
+  - skillName: Monster_BlackBeard_attack_odlink
+    skillType: 1
+  - skillName: Monster_BlackBeard_Breaklink
+    skillType: 1
+  - skillName: Monster_BlackBeard_caidilink
+    skillType: 1
+  - skillName: Monster_BlackBeard_ceshilink
+    skillType: 1
+  - skillName: Monster_BlackBeard_haizhenlink
+    skillType: 1
+  - skillName: Monster_BlackBeard_heidonglink
+    skillType: 1
+  - skillName: Monster_BlackBeard_hidelink
+    skillType: 1
+  - skillName: Monster_BlackBeard_jiefanglink
+    skillType: 1
+  - skillName: Monster_BlackBeard_lefttranslationlink
+    skillType: 1
+  - skillName: Monster_BlackBeard_Normallink
+    skillType: 1
+  - skillName: Monster_BlackBeard_ODjiefanglink
+    skillType: 1
+  - skillName: Monster_BlackBeard_OverDirvelink
+    skillType: 1
+  - skillName: Monster_BlackBeard_palsy_endlink
+    skillType: 1
+  - skillName: Monster_BlackBeard_palsy_startlink
+    skillType: 1
+  - skillName: Monster_BlackBeard_righttranslationlink
+    skillType: 1
+  - skillName: Monster_BlackBeard_turnleftlink
+    skillType: 1
+  - skillName: Monster_BlackBeard_turnrightlink
+    skillType: 1
+  - skillName: Monster_BlackBeard_xuanwolink
+    skillType: 1
+  - skillName: Monster_BlackBeard_zadilink
+    skillType: 1
+  - skillName: Monster_BlackBeard_zhendilink
+    skillType: 1
+  - skillName: Monster_Blueno_biaoqing
+    skillType: 1
+  - skillName: Monster_Blueno_biaoqing_jie
+    skillType: 1
+  - skillName: Monster_Blueno_break
+    skillType: 1
+  - skillName: Monster_Blueno_break_tiekuai
+    skillType: 1
+  - skillName: Monster_Blueno_lanjiao
+    skillType: 1
+  - skillName: Monster_Blueno_lanjiao_combo
+    skillType: 1
+  - skillName: Monster_Blueno_lanjiao_combo_OD
+    skillType: 1
+  - skillName: Monster_Blueno_lanjiao_oneattack
+    skillType: 1
+  - skillName: Monster_Blueno_lanjiao_stand
+    skillType: 1
+  - skillName: Monster_Blueno_lanjiao_stand_OD
+    skillType: 1
+  - skillName: Monster_Blueno_lefttranslation
+    skillType: 1
+  - skillName: Monster_Blueno_lun_OD_jie
+    skillType: 1
+  - skillName: Monster_Blueno_men_cheating_long_OD
+    skillType: 1
+  - skillName: Monster_Blueno_men_chuchang
+    skillType: 1
+  - skillName: Monster_Blueno_men_normal_1_2S
+    skillType: 1
+  - skillName: Monster_Blueno_men_OD_1_2S
+    skillType: 1
+  - skillName: Monster_Blueno_men_OD_2_6S
+    skillType: 1
+  - skillName: Monster_Blueno_men_OD_yuan_baodi
+    skillType: 1
+  - skillName: Monster_Blueno_men_qishou
+    skillType: 1
+  - skillName: Monster_Blueno_pugong
+    skillType: 1
+  - skillName: Monster_Blueno_pugong_left
+    skillType: 1
+  - skillName: Monster_Blueno_righttranslation
+    skillType: 1
+  - skillName: Monster_Blueno_sui_stand
+    skillType: 1
+  - skillName: Monster_Blueno_sui_stand_OD
+    skillType: 1
+  - skillName: Monster_Blueno_ti
+    skillType: 1
+  - skillName: Monster_Blueno_tiekuai
+    skillType: 1
+  - skillName: Monster_Blueno_tiekuai_gang
+    skillType: 1
+  - skillName: Monster_Blueno_tiekuai_gang_until
+    skillType: 1
+  - skillName: Monster_Blueno_tiekuai_lun
+    skillType: 1
+  - skillName: Monster_Blueno_tiekuai_lun_OD
+    skillType: 1
+  - skillName: Monster_Blueno_ti_far
+    skillType: 1
+  - skillName: Monster_Blueno_ti_far_OD
+    skillType: 1
+  - skillName: Monster_Blueno_ti_mid
+    skillType: 1
+  - skillName: Monster_Blueno_ti_mid_OD
+    skillType: 1
+  - skillName: Monster_Blueno_turnleft
+    skillType: 1
+  - skillName: Monster_Blueno_turnright
+    skillType: 1
+  - skillName: Monster_Blueno_yuebu_lanjiao
+    skillType: 1
+  - skillName: Monster_Blueno_yuebu_lanjiao_OD
+    skillType: 1
+  - skillName: Monster_Buggypart_body_gather
+    skillType: 2
+  - skillName: Monster_Buggypart_body_MoveBack
+    skillType: 2
+  - skillName: Monster_Buggypart_body_MoveLeft
+    skillType: 2
+  - skillName: Monster_Buggypart_body_MoveRight
+    skillType: 2
+  - skillName: Monster_BuggyPart_HandL_Circle
+    skillType: 2
+  - skillName: Monster_BuggyPart_HandL_gather
+    skillType: 2
+  - skillName: Monster_BuggyPart_HandL_MoveBack
+    skillType: 2
+  - skillName: Monster_BuggyPart_HandL_MoveLeft
+    skillType: 2
+  - skillName: Monster_BuggyPart_HandL_MoveRight
+    skillType: 2
+  - skillName: Monster_BuggyPart_HandL_Shoot
+    skillType: 2
+  - skillName: Monster_BuggyPart_HandR_Circle
+    skillType: 2
+  - skillName: Monster_BuggyPart_HandR_gather
+    skillType: 2
+  - skillName: Monster_BuggyPart_HandR_MoveBack
+    skillType: 2
+  - skillName: Monster_BuggyPart_HandR_MoveLeft
+    skillType: 2
+  - skillName: Monster_BuggyPart_HandR_MoveRight
+    skillType: 2
+  - skillName: Monster_BuggyPart_HandR_Shoot
+    skillType: 2
+  - skillName: Monster_BuggyPart_Leg_gather
+    skillType: 2
+  - skillName: Monster_BuggyPart_Leg_Kick
+    skillType: 2
+  - skillName: Monster_BuggyPart_Leg_KickPlus
+    skillType: 2
+  - skillName: Monster_BuggyPart_Leg_MoveBack
+    skillType: 2
+  - skillName: Monster_BuggyPart_Leg_MoveLeft
+    skillType: 2
+  - skillName: Monster_BuggyPart_Leg_MoveRight
+    skillType: 2
+  - skillName: Monster_BuggyPart_Leg_Pancake
+    skillType: 2
+  - skillName: Monster_Buggy_Acrobatics
+    skillType: 1
+  - skillName: Monster_Buggy_attack
+    skillType: 1
+  - skillName: Monster_Buggy_attack1
+    skillType: 1
+  - skillName: Monster_Buggy_attack2
+    skillType: 1
+  - skillName: Monster_Buggy_attack3
+    skillType: 1
+  - skillName: Monster_Buggy_Born
+    skillType: 1
+  - skillName: Monster_Buggy_Break
+    skillType: 1
+  - skillName: Monster_Buggy_Carnival
+    skillType: 1
+  - skillName: Monster_Buggy_Carnival2
+    skillType: 1
+  - skillName: Monster_Buggy_car_bianshenA
+    skillType: 1
+  - skillName: Monster_Buggy_car_bianshenB
+    skillType: 1
+  - skillName: Monster_Buggy_car_bianshen_end
+    skillType: 1
+  - skillName: Monster_Buggy_car_bianshen_end2
+    skillType: 1
+  - skillName: Monster_Buggy_car_end
+    skillType: 1
+  - skillName: Monster_Buggy_car_jizhi
+    skillType: 1
+  - skillName: Monster_Buggy_car_loop
+    skillType: 1
+  - skillName: Monster_Buggy_car_start
+    skillType: 1
+  - skillName: Monster_Buggy_Escape
+    skillType: 1
+  - skillName: Monster_Buggy_Escape2
+    skillType: 1
+  - skillName: Monster_Buggy_Gather
+    skillType: 1
+  - skillName: Monster_Buggy_Gun
+    skillType: 1
+  - skillName: Monster_Buggy_Lowflying
+    skillType: 1
+  - skillName: Monster_Buggy_maqidan
+    skillType: 1
+  - skillName: Monster_Buggy_MoveBack
+    skillType: 1
+  - skillName: Monster_Buggy_MoveBack1
+    skillType: 1
+  - skillName: Monster_Buggy_MoveBack2
+    skillType: 1
+  - skillName: Monster_Buggy_MoveLeft
+    skillType: 1
+  - skillName: Monster_Buggy_MoveLeft1
+    skillType: 1
+  - skillName: Monster_Buggy_MoveLeft2
+    skillType: 1
+  - skillName: Monster_Buggy_MoveRight
+    skillType: 1
+  - skillName: Monster_Buggy_MoveRight1
+    skillType: 1
+  - skillName: Monster_Buggy_MoveRight2
+    skillType: 1
+  - skillName: Monster_Buggy_Normal
+    skillType: 1
+  - skillName: Monster_Buggy_Overdirve
+    skillType: 1
+  - skillName: Monster_Buggy_Overdirve_yizhi
+    skillType: 1
+  - skillName: Monster_Buggy_Pancake
+    skillType: 1
+  - skillName: Monster_Buggy_PancakeCombo
+    skillType: 1
+  - skillName: Monster_Buggy_Perform1
+    skillType: 1
+  - skillName: Monster_Buggy_Perform2
+    skillType: 1
+  - skillName: Monster_Buggy_qiu_attack
+    skillType: 1
+  - skillName: Monster_Buggy_sixing
+    skillType: 1
+  - skillName: Monster_Buggy_SpinAttack
+    skillType: 1
+  - skillName: Monster_Buggy_Split
+    skillType: 1
+  - skillName: Monster_Buggy_TurnLeft
+    skillType: 1
+  - skillName: Monster_Buggy_TurnRight
+    skillType: 1
+  - skillName: Monster_BuggyJoker1_Born
+    skillType: 0
+  - skillName: Monster_BuggyJoker1_Dropbombs
+    skillType: 0
+  - skillName: Monster_BuggyJoker1_Foo
+    skillType: 0
+  - skillName: Monster_BuggyJoker1_Lit
+    skillType: 0
+  - skillName: Monster_BuggyJoker1_MoveBack
+    skillType: 0
+  - skillName: Monster_BuggyJoker1_MoveLeft
+    skillType: 0
+  - skillName: Monster_BuggyJoker1_MoveRight
+    skillType: 0
+  - skillName: Monster_BuggyJoker1_Perform
+    skillType: 0
+  - skillName: Monster_BuggyJoker1_Perform2
+    skillType: 0
+  - skillName: Monster_BuggyJoker1_TurnLeft
+    skillType: 0
+  - skillName: Monster_BuggyJoker1_TurnRight
+    skillType: 0
+  - skillName: Monster_BuggyJoker2_Attack
+    skillType: 0
+  - skillName: Monster_BuggyJoker2_Born
+    skillType: 0
+  - skillName: Monster_BuggyJoker2_MoveBack
+    skillType: 0
+  - skillName: Monster_BuggyJoker2_MoveLeft
+    skillType: 0
+  - skillName: Monster_BuggyJoker2_MoveRight
+    skillType: 0
+  - skillName: Monster_BuggyJoker2_Perform
+    skillType: 0
+  - skillName: Monster_BuggyJoker2_TurnLeft
+    skillType: 0
+  - skillName: Monster_BuggyJoker2_TurnRight
+    skillType: 0
+  - skillName: Monster_BuggyJoker4_sixing
+    skillType: 0
+  - skillName: Monster_BuggyJoker4_sixing2
+    skillType: 0
+  - skillName: Monster_Butchi_attack
+    skillType: 1
+  - skillName: Monster_Butchi_back
+    skillType: 2
+  - skillName: Monster_Butchi_Break
+    skillType: 1
+  - skillName: Monster_Butchi_expression1
+    skillType: 1
+  - skillName: Monster_Butchi_hammerattack
+    skillType: 1
+  - skillName: Monster_Butchi_hammerattack_MAX
+    skillType: 1
+  - skillName: Monster_Butchi_heavyattack
+    skillType: 1
+  - skillName: Monster_Butchi_heavyattack_MAX
+    skillType: 1
+  - skillName: Monster_Butchi_jumpattack
+    skillType: 1
+  - skillName: Monster_Butchi_jumpattack_MAX
+    skillType: 1
+  - skillName: Monster_Butchi_lefttranslation
+    skillType: 2
+  - skillName: Monster_Butchi_Overdirve
+    skillType: 1
+  - skillName: Monster_Butchi_punchattack
+    skillType: 1
+  - skillName: Monster_Butchi_punchattack_MAX
+    skillType: 1
+  - skillName: Monster_Butchi_righttranslation
+    skillType: 2
+  - skillName: Monster_Butchi_roar_OD
+    skillType: 1
+  - skillName: Monster_Butchi_TurnLeft
+    skillType: 2
+  - skillName: Monster_Butchi_TurnRight
+    skillType: 2
+  - skillName: Monster_Cabaji_alite_Break
+    skillType: 1
+  - skillName: Monster_Cabaji_alite_Fireworks
+    skillType: 1
+  - skillName: Monster_Cabaji_alite_Foo
+    skillType: 1
+  - skillName: Monster_Cabaji_alite_Gyro
+    skillType: 1
+  - skillName: Monster_Cabaji_alite_Gyro01
+    skillType: 1
+  - skillName: Monster_Cabaji_alite_Lmao
+    skillType: 1
+  - skillName: Monster_Cabaji_alite_Lmao01
+    skillType: 1
+  - skillName: Monster_Cabaji_alite_Overdirve
+    skillType: 1
+  - skillName: Monster_Cabaji_alite_Perform
+    skillType: 1
+  - skillName: Monster_Cabaji_alite_Spikes
+    skillType: 1
+  - skillName: Monster_Cabaji_alite_Spikes01
+    skillType: 1
+  - skillName: Monster_Cabaji_alite_Sword
+    skillType: 1
+  - skillName: Monster_Cabaji_Break
+    skillType: 1
+  - skillName: Monster_Cabaji_Fireworks
+    skillType: 1
+  - skillName: Monster_Cabaji_Foo
+    skillType: 1
+  - skillName: Monster_Cabaji_Gyro
+    skillType: 1
+  - skillName: Monster_Cabaji_MoveBack
+    skillType: 1
+  - skillName: Monster_Cabaji_MoveLeft
+    skillType: 1
+  - skillName: Monster_Cabaji_MoveRight
+    skillType: 1
+  - skillName: Monster_Cabaji_Normal
+    skillType: 1
+  - skillName: Monster_Cabaji_Overdirve
+    skillType: 1
+  - skillName: Monster_Cabaji_Perform
+    skillType: 1
+  - skillName: Monster_Cabaji_Spikes
+    skillType: 1
+  - skillName: Monster_Cabaji_Sword
+    skillType: 1
+  - skillName: Monster_Cabaji_TurnLeft
+    skillType: 1
+  - skillName: Monster_Cabaji_TurnRight
+    skillType: 1
+  - skillName: Monster_Cabaji_VapourKill
+    skillType: 1
+  - skillName: Monster_Compassbird_Play01
+    skillType: 0
+  - skillName: Monster_Compassbird_Play02
+    skillType: 0
+  - skillName: Monster_cp9huoqiangbing_juji
+    skillType: 0
+  - skillName: Monster_cp9huoqiangbing_juji_sp
+    skillType: 0
+  - skillName: Monster_cp9huoqiangbing_jumpshoot
+    skillType: 0
+  - skillName: Monster_cp9huoqiangbing_papingtai
+    skillType: 0
+  - skillName: Monster_cp9huoqiangbing_reload
+    skillType: 0
+  - skillName: Monster_cp9huoqiangbing_shoot
+    skillType: 0
+  - skillName: Monster_cp9huoqiangbing_stepback
+    skillType: 0
+  - skillName: Monster_cp9huoqiangbing_turnLeft
+    skillType: 0
+  - skillName: Monster_cp9huoqiangbing_turnRight
+    skillType: 0
+  - skillName: Monster_cp9huoqiangbing_walkLeft
+    skillType: 0
+  - skillName: Monster_cp9huoqiangbing_walkRight
+    skillType: 0
+  - skillName: Monster_cp9huoqiangbing_weiyi_end
+    skillType: 0
+  - skillName: Monster_cp9huoqiangbing_weiyi_start
+    skillType: 0
+  - skillName: Monster_cp9jinzhanbing_attack
+    skillType: 0
+  - skillName: Monster_cp9jinzhanbing_attack_sp
+    skillType: 0
+  - skillName: Monster_cp9jinzhanbing_doubleattack
+    skillType: 0
+  - skillName: Monster_cp9jinzhanbing_jumpattack
+    skillType: 0
+  - skillName: Monster_cp9jinzhanbing_papingtai
+    skillType: 0
+  - skillName: Monster_cp9jinzhanbing_stepback
+    skillType: 0
+  - skillName: Monster_cp9jinzhanbing_tiaoxin
+    skillType: 0
+  - skillName: Monster_cp9jinzhanbing_turnLeft
+    skillType: 0
+  - skillName: Monster_cp9jinzhanbing_turnRight
+    skillType: 0
+  - skillName: Monster_cp9jinzhanbing_walkLeft
+    skillType: 0
+  - skillName: Monster_cp9jinzhanbing_walkRight
+    skillType: 0
+  - skillName: Monster_crowboat_piaoliu
+    skillType: 0
+  - skillName: Monster_Enelamaru_biaoqing
+    skillType: 1
+  - skillName: Monster_Enelamaru_break
+    skillType: 1
+  - skillName: Monster_Enelamaru_cha1
+    skillType: 1
+  - skillName: Monster_Enelamaru_cha2
+    skillType: 1
+  - skillName: Monster_Enelamaru_cha3
+    skillType: 1
+  - skillName: Monster_Enelamaru_daoqi
+    skillType: 1
+  - skillName: Monster_Enelamaru_left
+    skillType: 1
+  - skillName: Monster_Enelamaru_right
+    skillType: 1
+  - skillName: Monster_Enel_attack
+    skillType: 1
+  - skillName: Monster_Enel_attack01
+    skillType: 1
+  - skillName: Monster_Enel_attack02
+    skillType: 1
+  - skillName: Monster_Enel_attack03
+    skillType: 1
+  - skillName: Monster_Enel_attack04
+    skillType: 1
+  - skillName: Monster_Enel_attack05
+    skillType: 1
+  - skillName: Monster_Enel_attack1
+    skillType: 1
+  - skillName: Monster_Enel_attack1_erzhan
+    skillType: 1
+  - skillName: Monster_Enel_break
+    skillType: 1
+  - skillName: Monster_Enel_break_erzhan
+    skillType: 1
+  - skillName: Monster_Enel_chongneng
+    skillType: 1
+  - skillName: Monster_Enel_chongneng_stop
+    skillType: 1
+  - skillName: Monster_Enel_chuchang
+    skillType: 1
+  - skillName: Monster_Enel_chuchang_biaoxian
+    skillType: 1
+  - skillName: Monster_Enel_chuchang_yizhi
+    skillType: 1
+  - skillName: Monster_Enel_daoqi
+    skillType: 1
+  - skillName: Monster_Enel_daoqi02
+    skillType: 1
+  - skillName: Monster_Enel_daoqi_jie
+    skillType: 1
+  - skillName: Monster_Enel_dash
+    skillType: 1
+  - skillName: Monster_Enel_DashHit_Nm
+    skillType: 1
+  - skillName: Monster_Enel_dash_attack
+    skillType: 1
+  - skillName: Monster_Enel_dash_back
+    skillType: 1
+  - skillName: Monster_Enel_dash_back2
+    skillType: 1
+  - skillName: Monster_Enel_dash_block
+    skillType: 1
+  - skillName: Monster_Enel_dash_erzhan_baodi
+    skillType: 1
+  - skillName: Monster_Enel_dash_erzhan_jie
+    skillType: 1
+  - skillName: Monster_Enel_dash_erzhan_random
+    skillType: 1
+  - skillName: Monster_Enel_dash_ex
+    skillType: 1
+  - skillName: Monster_Enel_dash_jie
+    skillType: 1
+  - skillName: Monster_Enel_dash_leftblock
+    skillType: 1
+  - skillName: Monster_Enel_dash_obstacle
+    skillType: 1
+  - skillName: Monster_Enel_dash_perform
+    skillType: 1
+  - skillName: Monster_Enel_dash_start
+    skillType: 1
+  - skillName: Monster_Enel_dash_summon_Ex
+    skillType: 1
+  - skillName: Monster_Enel_dash_summon_Nm
+    skillType: 1
+  - skillName: Monster_Enel_dash_turnchapter
+    skillType: 1
+  - skillName: Monster_Enel_dash_turnchapter_out
+    skillType: 1
+  - skillName: Monster_Enel_dash_turnchapter_start
+    skillType: 1
+  - skillName: Monster_Enel_dianguang
+    skillType: 1
+  - skillName: Monster_Enel_dianliao
+    skillType: 1
+  - skillName: Monster_Enel_dianneng
+    skillType: 1
+  - skillName: Monster_Enel_dianneng_3zhan
+    skillType: 1
+  - skillName: Monster_Enel_erzhan_jie
+    skillType: 1
+  - skillName: Monster_Enel_erzhan_Special_1
+    skillType: 1
+  - skillName: Monster_Enel_fangdian
+    skillType: 1
+  - skillName: Monster_Enel_fangdianTrans
+    skillType: 1
+  - skillName: Monster_Enel_fangdian_erzhan
+    skillType: 1
+  - skillName: Monster_Enel_fangdian_Nm
+    skillType: 1
+  - skillName: Monster_Enel_Hino
+    skillType: 1
+  - skillName: Monster_Enel_houche
+    skillType: 1
+  - skillName: Monster_Enel_houche_block
+    skillType: 1
+  - skillName: Monster_Enel_houche_erzhan
+    skillType: 1
+  - skillName: Monster_Enel_Jambure
+    skillType: 1
+  - skillName: Monster_Enel_Jambure_yizhi
+    skillType: 1
+  - skillName: Monster_Enel_kiten
+    skillType: 1
+  - skillName: Monster_Enel_kiten_erzhan
+    skillType: 1
+  - skillName: Monster_Enel_kiten_erzhan_jie
+    skillType: 1
+  - skillName: Monster_Enel_kiten_ex
+    skillType: 1
+  - skillName: Monster_Enel_kiten_ex_erzhan
+    skillType: 1
+  - skillName: Monster_Enel_kiten_ex_erzhan_jie
+    skillType: 1
+  - skillName: Monster_Enel_kiten_start
+    skillType: 1
+  - skillName: Monster_Enel_kiten_yizhi
+    skillType: 1
+  - skillName: Monster_Enel_kiten_yizhi02
+    skillType: 1
+  - skillName: Monster_Enel_left
+    skillType: 1
+  - skillName: Monster_Enel_lefttranslation
+    skillType: 1
+  - skillName: Monster_Enel_leiqiu_perform
+    skillType: 1
+  - skillName: Monster_Enel_leishen
+    skillType: 1
+  - skillName: Monster_Enel_leishen1
+    skillType: 1
+  - skillName: Monster_Enel_leishen2
+    skillType: 1
+  - skillName: Monster_Enel_leiying
+    skillType: 1
+  - skillName: Monster_Enel_leiying_OD
+    skillType: 1
+  - skillName: Monster_Enel_nomal
+    skillType: 1
+  - skillName: Monster_Enel_od_leishen
+    skillType: 1
+  - skillName: Monster_Enel_od_shandianren
+    skillType: 1
+  - skillName: Monster_Enel_PerformShockAttack_BeHIt
+    skillType: 1
+  - skillName: Monster_Enel_right
+    skillType: 1
+  - skillName: Monster_Enel_righttranslation
+    skillType: 1
+  - skillName: Monster_Enel_turn
+    skillType: 1
+  - skillName: Monster_Enel_wanlei
+    skillType: 1
+  - skillName: Monster_Enel_wanlei02
+    skillType: 1
+  - skillName: Monster_Enel_wanlei03
+    skillType: 1
+  - skillName: Monster_Enel_wanlei_erzhan_jie
+    skillType: 1
+  - skillName: Monster_Enel_wanlei_ex
+    skillType: 1
+  - skillName: Monster_Enel_xinwang
+    skillType: 1
+  - skillName: Monster_Enel_zhicai
+    skillType: 1
+  - skillName: Monster_Enel_zhicai_01_perform
+    skillType: 1
+  - skillName: Monster_Enel_zhicai_1ex
+    skillType: 1
+  - skillName: Monster_Enel_zhicai_erzhan_jie
+    skillType: 1
+  - skillName: Monster_Enel_zhicai_ex
+    skillType: 1
+  - skillName: Monster_Enel_zhicai_ex2
+    skillType: 1
+  - skillName: Monster_Enel_zhicai_ex_3zhan
+    skillType: 1
+  - skillName: Monster_Enel_zhicai_ex_erzhan_jie
+    skillType: 1
+  - skillName: Monster_Hino_attack
+    skillType: 1
+  - skillName: Monster_Jambure_attack
+    skillType: 1
+  - skillName: Monster_Jambure_attack_ex
+    skillType: 1
+  - skillName: Monster_kiten_attack_bounce
+    skillType: 1
+  - skillName: Monster_kiten_attack_bounce1
+    skillType: 1
+  - skillName: Monster_kiten_attack_line
+    skillType: 1
+  - skillName: Monster_kiten_attack_line1
+    skillType: 1
+  - skillName: Monster_kiten_attack_yizhi
+    skillType: 1
+  - skillName: Role_Enelamaru_attack
+    skillType: 1
+  - skillName: Role_Enelamaru_cha
+    skillType: 1
+  - skillName: Role_Enelamaru_cha1
+    skillType: 1
+  - skillName: Role_Enelamaru_cha2
+    skillType: 1
+  - skillName: Role_Enelamaru_dash
+    skillType: 1
+  - skillName: Role_Enelamaru_jizhi
+    skillType: 1
+  - skillName: Role_Enelamaru_jizhi_end
+    skillType: 1
+  - skillName: Role_Enelamaru_jizhi_end2
+    skillType: 1
+  - skillName: Role_Enelamaru_leilong
+    skillType: 1
+  - skillName: Role_Enelamaru_leilong_yizhi
+    skillType: 1
+  - skillName: Role_Enelamaru_leiying
+    skillType: 1
+  - skillName: Role_Enelamaru_leiying_cs
+    skillType: 1
+  - skillName: Role_Enelamaru_leying2
+    skillType: 1
+  - skillName: Role_Enelamaru_shunyi
+    skillType: 1
+  - skillName: Role_Enelamaru_wanlei
+    skillType: 1
+  - skillName: Role_Enelamaru_wanlei_yizhi
+    skillType: 1
+  - skillName: Monster_Eniesbridge_down
+    skillType: 0
+  - skillName: Monster_Eniespaling_open
+    skillType: 0
+  - skillName: Monster_Eniespaling_02_close
+    skillType: 0
+  - skillName: Monster_Eniesroadblock_HalfIdle
+    skillType: 0
+  - skillName: Monster_Eniesroadblock_loophit
+    skillType: 0
+  - skillName: Monster_Eniesroadblock_Off
+    skillType: 0
+  - skillName: Monster_Eniesroadblock_On
+    skillType: 0
+  - skillName: Monster_Eniesroadblock_On1
+    skillType: 0
+  - skillName: Monster_Eniesroadblock_up
+    skillType: 0
+  - skillName: Monster_faquandui_attack
+    skillType: 1
+  - skillName: Monster_Faquandui_attackLeft
+    skillType: 1
+  - skillName: Monster_Faquandui_attackLeft_NmAD
+    skillType: 1
+  - skillName: Monster_Faquandui_attackRight
+    skillType: 1
+  - skillName: Monster_Faquandui_attackRight_NmAD
+    skillType: 1
+  - skillName: Monster_faquandui_attack_Ad
+    skillType: 1
+  - skillName: Monster_faquandui_attack_NmAD
+    skillType: 1
+  - skillName: Monster_Faquandui_break
+    skillType: 1
+  - skillName: Monster_Faquandui_circle
+    skillType: 1
+  - skillName: Monster_Faquandui_circlerun
+    skillType: 1
+  - skillName: Monster_Faquandui_circle_1
+    skillType: 1
+  - skillName: Monster_Faquandui_circle_2
+    skillType: 1
+  - skillName: Monster_Faquandui_circle_3
+    skillType: 1
+  - skillName: Monster_Faquandui_cutscene
+    skillType: 1
+  - skillName: Monster_Faquandui_IntoOD
+    skillType: 1
+  - skillName: Monster_Faquandui_jumpattack
+    skillType: 1
+  - skillName: Monster_Faquandui_jumpattack_Ad
+    skillType: 1
+  - skillName: Monster_Faquandui_jumpattack_NmAD
+    skillType: 1
+  - skillName: Monster_Faquandui_kuaipao
+    skillType: 1
+  - skillName: Monster_Faquandui_kuaipaohuiji
+    skillType: 1
+  - skillName: Monster_Faquandui_kuaipaohuiji_Ad
+    skillType: 1
+  - skillName: Monster_Faquandui_kuaipaohuiji_NmAD
+    skillType: 1
+  - skillName: Monster_Faquandui_kuaipao_Ad
+    skillType: 1
+  - skillName: Monster_Faquandui_kuaipao_NmAD
+    skillType: 1
+  - skillName: Monster_Faquandui_normal
+    skillType: 1
+  - skillName: Monster_Faquandui_runAway
+    skillType: 1
+  - skillName: Monster_Faquandui_shizizhan
+    skillType: 1
+  - skillName: Monster_Faquandui_shizizhan_Ad
+    skillType: 1
+  - skillName: Monster_Faquandui_shizizhan_NmAD
+    skillType: 1
+  - skillName: Monster_Faquandui_shunyi
+    skillType: 1
+  - skillName: Monster_Faquandui_stepback
+    skillType: 1
+  - skillName: Monster_Faquandui_Stimulate
+    skillType: 1
+  - skillName: Monster_Faquandui_tiaopu
+    skillType: 1
+  - skillName: Monster_Faquandui_tiaopu_Ad
+    skillType: 1
+  - skillName: Monster_Faquandui_tiaopu_NmAD
+    skillType: 1
+  - skillName: Monster_Faquandui_turnLeft
+    skillType: 1
+  - skillName: Monster_Faquandui_turnRight
+    skillType: 1
+  - skillName: Monster_Faquandui_walkLeft
+    skillType: 1
+  - skillName: Monster_Faquandui_walkRight
+    skillType: 1
+  - skillName: Monster_Fukurou_act1
+    skillType: 1
+  - skillName: Monster_Fukurou_act2
+    skillType: 1
+  - skillName: Monster_Fukurou_act3
+    skillType: 1
+  - skillName: Monster_Fukurou_aoyi
+    skillType: 1
+  - skillName: Monster_Fukurou_attack
+    skillType: 1
+  - skillName: Monster_Fukurou_attackMaoxian
+    skillType: 1
+  - skillName: Monster_Fukurou_break
+    skillType: 1
+  - skillName: Monster_Fukurou_breakMaoxian
+    skillType: 1
+  - skillName: Monster_Fukurou_danceL
+    skillType: 1
+  - skillName: Monster_Fukurou_danceLMaoxian
+    skillType: 1
+  - skillName: Monster_Fukurou_danceR
+    skillType: 1
+  - skillName: Monster_Fukurou_danceRMaoxian
+    skillType: 1
+  - skillName: Monster_Fukurou_lanjiao
+    skillType: 1
+  - skillName: Monster_Fukurou_lanjiao_yuebu
+    skillType: 1
+  - skillName: Monster_Fukurou_lanjiao_yuebumaoxian
+    skillType: 1
+  - skillName: Monster_Fukurou_lanjiao_yuebuMaoxian2
+    skillType: 1
+  - skillName: Monster_Fukurou_lefttranslation
+    skillType: 1
+  - skillName: Monster_Fukurou_normal
+    skillType: 1
+  - skillName: Monster_Fukurou_overdrive
+    skillType: 1
+  - skillName: Monster_Fukurou_overdriveMaoxian
+    skillType: 1
+  - skillName: Monster_Fukurou_righttranslation
+    skillType: 1
+  - skillName: Monster_Fukurou_ti
+    skillType: 1
+  - skillName: Monster_Fukurou_tiattack
+    skillType: 1
+  - skillName: Monster_Fukurou_tiekuaiyu
+    skillType: 1
+  - skillName: Monster_Fukurou_tiMaoxian
+    skillType: 1
+  - skillName: Monster_Fukurou_turnleft
+    skillType: 1
+  - skillName: Monster_Fukurou_turnright
+    skillType: 1
+  - skillName: Monster_Gedatsu_blindover
+    skillType: 1
+  - skillName: Monster_Gedatsu_break
+    skillType: 1
+  - skillName: Monster_Gedatsu_chargeattack1
+    skillType: 1
+  - skillName: Monster_Gedatsu_chargeattackplus
+    skillType: 1
+  - skillName: Monster_Gedatsu_flydown
+    skillType: 1
+  - skillName: Monster_Gedatsu_flyup1
+    skillType: 1
+  - skillName: Monster_Gedatsu_flyup2
+    skillType: 1
+  - skillName: Monster_Gedatsu_hamburg1
+    skillType: 1
+  - skillName: Monster_Gedatsu_normal
+    skillType: 1
+  - skillName: Monster_Gedatsu_ODflyup1
+    skillType: 1
+  - skillName: Monster_Gedatsu_ODflyup2
+    skillType: 1
+  - skillName: Monster_Gedatsu_overdrive
+    skillType: 1
+  - skillName: Monster_Gedatsu_pitfall
+    skillType: 1
+  - skillName: Monster_Gedatsu_pitfall2
+    skillType: 1
+  - skillName: Monster_Gedatsu_question
+    skillType: 1
+  - skillName: Monster_Gedatsu_rangeattack
+    skillType: 1
+  - skillName: Monster_Gedatsu_trapon
+    skillType: 1
+  - skillName: Monster_Gedatsu_trapon2
+    skillType: 1
+  - skillName: Monster_Gedatsu_turnleft
+    skillType: 1
+  - skillName: Monster_Gedatsu_turnright
+    skillType: 1
+  - skillName: Monster_Gedatsu_walkleft
+    skillType: 1
+  - skillName: Monster_Gedatsu_walkright
+    skillType: 1
+  - skillName: Monster_Gouliang_born
+    skillType: 0
+  - skillName: Monster_Haijunfubing_attackleft
+    skillType: 0
+  - skillName: Monster_Haijunfubing_attackright
+    skillType: 0
+  - skillName: Monster_Haijunfubing_break
+    skillType: 0
+  - skillName: Monster_Haijunfubing_elite_attackleft
+    skillType: 0
+  - skillName: Monster_Haijunfubing_elite_attackleft01
+    skillType: 0
+  - skillName: Monster_Haijunfubing_elite_attackright
+    skillType: 0
+  - skillName: Monster_Haijunfubing_elite_attackright01
+    skillType: 0
+  - skillName: Monster_Haijunfubing_elite_break
+    skillType: 0
+  - skillName: Monster_Haijunfubing_elite_break01
+    skillType: 0
+  - skillName: Monster_Haijunfubing_elite_erlianza
+    skillType: 0
+  - skillName: Monster_Haijunfubing_elite_erlianza01
+    skillType: 0
+  - skillName: Monster_Haijunfubing_elite_normal
+    skillType: 0
+  - skillName: Monster_Haijunfubing_elite_normal01
+    skillType: 0
+  - skillName: Monster_Haijunfubing_elite_tiaopi
+    skillType: 0
+  - skillName: Monster_Haijunfubing_elite_tiaopi01
+    skillType: 0
+  - skillName: Monster_Haijunfubing_elite_turnleft01
+    skillType: 0
+  - skillName: Monster_Haijunfubing_elite_turnright01
+    skillType: 0
+  - skillName: Monster_Haijunfubing_elite_walkleft01
+    skillType: 0
+  - skillName: Monster_Haijunfubing_elite_walkright01
+    skillType: 0
+  - skillName: Monster_Haijunfubing_elite_xuanfengzhan
+    skillType: 0
+  - skillName: Monster_Haijunfubing_elite_xuanfengzhan01
+    skillType: 0
+  - skillName: Monster_Haijunfubing_erlianza
+    skillType: 0
+  - skillName: Monster_Haijunfubing_normal
+    skillType: 0
+  - skillName: Monster_Haijunfubing_tiaopi
+    skillType: 0
+  - skillName: Monster_Haijunfubing_turnleft
+    skillType: 0
+  - skillName: Monster_Haijunfubing_turnright
+    skillType: 0
+  - skillName: Monster_Haijunfubing_walkleft
+    skillType: 0
+  - skillName: Monster_Haijunfubing_walkright
+    skillType: 0
+  - skillName: Monster_Haijunfubing_xuanfengzhan
+    skillType: 0
+  - skillName: Monster_Helmeppo_born
+    skillType: 2
+  - skillName: Monster_Helmeppo_born1
+    skillType: 2
+  - skillName: Monster_Helmeppo_castdie
+    skillType: 2
+  - skillName: Monster_Helmeppo_charge
+    skillType: 2
+  - skillName: Monster_Helmeppo_cike
+    skillType: 2
+  - skillName: Monster_Helmeppo_elite_break
+    skillType: 2
+  - skillName: Monster_Helmeppo_elite_charge
+    skillType: 2
+  - skillName: Monster_Helmeppo_elite_escape
+    skillType: 2
+  - skillName: Monster_Helmeppo_elite_escape01
+    skillType: 2
+  - skillName: Monster_Helmeppo_elite_escape02
+    skillType: 2
+  - skillName: Monster_Helmeppo_elite_fear
+    skillType: 2
+  - skillName: Monster_Helmeppo_elite_frailAttack
+    skillType: 2
+  - skillName: Monster_Helmeppo_elite_helpMe
+    skillType: 2
+  - skillName: Monster_Helmeppo_elite_overdire
+    skillType: 2
+  - skillName: Monster_Helmeppo_elite_shoot
+    skillType: 2
+  - skillName: Monster_Helmeppo_elite_surrender
+    skillType: 2
+  - skillName: Monster_Helmeppo_elite_threaten
+    skillType: 2
+  - skillName: Monster_Helmeppo_escape
+    skillType: 2
+  - skillName: Monster_Helmeppo_escape1
+    skillType: 2
+  - skillName: Monster_Helmeppo_escapefail
+    skillType: 2
+  - skillName: Monster_Helmeppo_fear
+    skillType: 2
+  - skillName: Monster_Helmeppo_fear1
+    skillType: 2
+  - skillName: Monster_Helmeppo_frailAttack
+    skillType: 2
+  - skillName: Monster_Helmeppo_helpMe
+    skillType: 2
+  - skillName: Monster_Helmeppo_paralysis_end
+    skillType: 2
+  - skillName: Monster_Helmeppo_paralysis_start
+    skillType: 2
+  - skillName: Monster_Helmeppo_shoot
+    skillType: 2
+  - skillName: Monster_Helmeppo_stun_end
+    skillType: 2
+  - skillName: Monster_Helmeppo_stun_start
+    skillType: 2
+  - skillName: Monster_Helmeppo_surrender
+    skillType: 2
+  - skillName: Monster_Helmeppo_surrenderLoop
+    skillType: 2
+  - skillName: Monster_Helmeppo_talk
+    skillType: 2
+  - skillName: Monster_Helmeppo_threaten
+    skillType: 2
+  - skillName: Monster_Helmeppo_turnLeft
+    skillType: 2
+  - skillName: Monster_Helmeppo_turnRight
+    skillType: 2
+  - skillName: Monster_Helmeppo_walkLeft
+    skillType: 2
+  - skillName: Monster_Helmeppo_walkRight
+    skillType: 2
+  - skillName: Monster_Helmeppo_wave
+    skillType: 2
+  - skillName: Monster_houjianpaobing_adv_shootAnim
+    skillType: 0
+  - skillName: Monster_houjianpaobing_cutscene
+    skillType: 0
+  - skillName: Monster_houjianpaobing_dead
+    skillType: 0
+  - skillName: Monster_houjianpaobing_kick
+    skillType: 0
+  - skillName: Monster_houjianpaobing_paojihoutiao
+    skillType: 0
+  - skillName: Monster_houjianpaobing_reload
+    skillType: 0
+  - skillName: Monster_houjianpaobing_roar
+    skillType: 0
+  - skillName: Monster_houjianpaobing_shoot
+    skillType: 0
+  - skillName: Monster_houjianpaobing_shoot_adv_anim
+    skillType: 0
+  - skillName: Monster_houjianpaobing_stepback
+    skillType: 0
+  - skillName: Monster_houjianpaobing_stepbackshoot
+    skillType: 0
+  - skillName: Monster_houjianpaobing_threeshoot
+    skillType: 0
+  - skillName: Monster_houjianpaobing_tiaopingtai
+    skillType: 0
+  - skillName: Monster_houjianpaobing_turnLeft
+    skillType: 0
+  - skillName: Monster_houjianpaobing_turnRight
+    skillType: 0
+  - skillName: Monster_houjianpaobing_walkLeft
+    skillType: 0
+  - skillName: Monster_houjianpaobing_walkRight
+    skillType: 0
+  - skillName: Monster_Ivankov_born
+    skillType: 0
+  - skillName: Monster_Ivankov_castattack
+    skillType: 0
+  - skillName: Monster_Ivankov_castattack2
+    skillType: 0
+  - skillName: Monster_Jozu_freeze_drop
+    skillType: 0
+  - skillName: Monster_Jyabura_attack_ex
+    skillType: 1
+  - skillName: Monster_Jyabura_attack_left
+    skillType: 1
+  - skillName: Monster_Jyabura_attack_left_juqing
+    skillType: 1
+  - skillName: Monster_Jyabura_attack_right
+    skillType: 1
+  - skillName: Monster_Jyabura_attack_right_juqing
+    skillType: 1
+  - skillName: Monster_Jyabura_break
+    skillType: 1
+  - skillName: Monster_Jyabura_gulang
+    skillType: 1
+  - skillName: Monster_Jyabura_gulang_double
+    skillType: 1
+  - skillName: Monster_Jyabura_holdusopp
+    skillType: 1
+  - skillName: Monster_Jyabura_houtiao
+    skillType: 1
+  - skillName: Monster_Jyabura_houtiao_aoyi
+    skillType: 1
+  - skillName: Monster_Jyabura_huilangzhua
+    skillType: 1
+  - skillName: Monster_Jyabura_langhao
+    skillType: 1
+  - skillName: Monster_Jyabura_lefttranslation
+    skillType: 1
+  - skillName: Monster_Jyabura_motianlang
+    skillType: 1
+  - skillName: Monster_Jyabura_normal
+    skillType: 1
+  - skillName: Monster_Jyabura_overdrive
+    skillType: 1
+  - skillName: Monster_Jyabura_qunlang
+    skillType: 1
+  - skillName: Monster_Jyabura_righttranslation
+    skillType: 1
+  - skillName: Monster_Jyabura_shiruo
+    skillType: 1
+  - skillName: Monster_Jyabura_shiruo2
+    skillType: 1
+  - skillName: Monster_Jyabura_shizhiqiang
+    skillType: 1
+  - skillName: Monster_Jyabura_shizhiqiang_ex
+    skillType: 1
+  - skillName: Monster_Jyabura_shizhiqiang_juqing
+    skillType: 1
+  - skillName: Monster_Jyabura_shizhiqiang_yueguang
+    skillType: 1
+  - skillName: Monster_Jyabura_ti
+    skillType: 1
+  - skillName: Monster_Jyabura_tiaoxin
+    skillType: 1
+  - skillName: Monster_Jyabura_tiekuai
+    skillType: 1
+  - skillName: Monster_Jyabura_tiekuaiposui
+    skillType: 1
+  - skillName: Monster_Jyabura_tiekuai_maoxian
+    skillType: 1
+  - skillName: Monster_Jyabura_ti_gl
+    skillType: 1
+  - skillName: Monster_Jyabura_ti_mt
+    skillType: 1
+  - skillName: Monster_Jyabura_ti_szq
+    skillType: 1
+  - skillName: Monster_Jyabura_ti_szq_ex
+    skillType: 1
+  - skillName: Monster_Jyabura_ti_ygszq
+    skillType: 1
+  - skillName: Monster_Jyabura_ti_zb
+    skillType: 1
+  - skillName: Monster_Jyabura_turnleft
+    skillType: 1
+  - skillName: Monster_Jyabura_turnright
+    skillType: 1
+  - skillName: Monster_Jyabura_zhongbulang
+    skillType: 1
+  - skillName: Monster_Jyabura_zhongbulang_juqing
+    skillType: 1
+  - skillName: Monster_Jyabura_zhuizong
+    skillType: 1
+  - skillName: Monster_Kaku_Advtiekuaipo
+    skillType: 1
+  - skillName: Monster_Kaku_attack_01
+    skillType: 1
+  - skillName: Monster_Kaku_attack_02
+    skillType: 1
+  - skillName: Monster_Kaku_attack_03
+    skillType: 1
+  - skillName: Monster_Kaku_attack_05
+    skillType: 1
+  - skillName: Monster_Kaku_attack_4sword_01
+    skillType: 1
+  - skillName: Monster_Kaku_attack_4sword_02
+    skillType: 1
+  - skillName: Monster_Kaku_attack_biqiang_01
+    skillType: 1
+  - skillName: Monster_Kaku_attack_biqiang_02
+    skillType: 1
+  - skillName: Monster_Kaku_bailei
+    skillType: 1
+  - skillName: Monster_Kaku_baoqi_tiekuai
+    skillType: 1
+  - skillName: Monster_Kaku_bianzhulin
+    skillType: 1
+  - skillName: Monster_Kaku_biaoqing_tiaoxin
+    skillType: 1
+  - skillName: Monster_Kaku_biaoqing_tiaoxin2
+    skillType: 1
+  - skillName: Monster_Kaku_biqiang
+    skillType: 1
+  - skillName: Monster_Kaku_Break
+    skillType: 1
+  - skillName: Monster_Kaku_chuchang
+    skillType: 1
+  - skillName: Monster_Kaku_doge
+    skillType: 1
+  - skillName: Monster_Kaku_doge_jin
+    skillType: 1
+  - skillName: Monster_Kaku_doge_maoxian
+    skillType: 1
+  - skillName: Monster_Kaku_doge_maoxian_od
+    skillType: 1
+  - skillName: Monster_Kaku_huikan
+    skillType: 1
+  - skillName: Monster_Kaku_huikan02
+    skillType: 1
+  - skillName: Monster_Kaku_lefttranslation
+    skillType: 1
+  - skillName: Monster_Kaku_lianqilin
+    skillType: 1
+  - skillName: Monster_Kaku_luan
+    skillType: 1
+  - skillName: Monster_Kaku_luoxuanbairen
+    skillType: 1
+  - skillName: Monster_Kaku_mengzhulin
+    skillType: 1
+  - skillName: Monster_Kaku_nilin
+    skillType: 1
+  - skillName: Monster_Kaku_nilin_4sword_01
+    skillType: 1
+  - skillName: Monster_Kaku_Normal
+    skillType: 1
+  - skillName: Monster_Kaku_OD_tiekuai
+    skillType: 1
+  - skillName: Monster_Kaku_OverDirve
+    skillType: 1
+  - skillName: Monster_Kaku_OverDirveAdv
+    skillType: 1
+  - skillName: Monster_Kaku_OverDirveAdvX
+    skillType: 1
+  - skillName: Monster_Kaku_OverDirveX
+    skillType: 1
+  - skillName: Monster_Kaku_OverDirveXtie
+    skillType: 1
+  - skillName: Monster_Kaku_qilinshiyu
+    skillType: 1
+  - skillName: Monster_Kaku_qilinwanshelu
+    skillType: 1
+  - skillName: Monster_Kaku_qilinwanshelu_ex
+    skillType: 1
+  - skillName: Monster_Kaku_qilinwanshelu_stand
+    skillType: 1
+  - skillName: Monster_Kaku_righttranslation
+    skillType: 1
+  - skillName: Monster_Kaku_shoulijian
+    skillType: 1
+  - skillName: Monster_Kaku_ti
+    skillType: 1
+  - skillName: Monster_Kaku_tiaoxin
+    skillType: 1
+  - skillName: Monster_Kaku_tiaoxin2
+    skillType: 1
+  - skillName: Monster_Kaku_tiekuai
+    skillType: 1
+  - skillName: Monster_Kaku_tiekuaipo
+    skillType: 1
+  - skillName: Monster_Kaku_tiekuaiposui
+    skillType: 1
+  - skillName: Monster_Kaku_ti_nm
+    skillType: 1
+  - skillName: Monster_Kaku_ti_shunyi
+    skillType: 1
+  - skillName: Monster_Kaku_turnleft
+    skillType: 1
+  - skillName: Monster_Kaku_turnright
+    skillType: 1
+  - skillName: Monster_Kaku_xian
+    skillType: 1
+  - skillName: Monster_Kaku_zhimianji
+    skillType: 1
+  - skillName: Monster_Kaku_zhouduan
+    skillType: 1
+  - skillName: Monster_Kaku_zhouduan_tiekuai
+    skillType: 1
+  - skillName: Monster_Kalifa_blowbubble
+    skillType: 1
+  - skillName: Monster_Kalifa_blowbubbleOD
+    skillType: 1
+  - skillName: Monster_Kalifa_blowbubbleOD_AD_MobPlus
+    skillType: 1
+  - skillName: Monster_Kalifa_blowbubble_AD_MobPlus
+    skillType: 1
+  - skillName: Monster_Kalifa_Break
+    skillType: 1
+  - skillName: Monster_Kalifa_kick
+    skillType: 1
+  - skillName: Monster_Kalifa_lanjiao
+    skillType: 1
+  - skillName: Monster_Kalifa_lefttranslation
+    skillType: 1
+  - skillName: Monster_Kalifa_OverDirve
+    skillType: 1
+  - skillName: Monster_Kalifa_righttranslation
+    skillType: 1
+  - skillName: Monster_Kalifa_shield
+    skillType: 1
+  - skillName: Monster_Kalifa_shieldbuff
+    skillType: 1
+  - skillName: Monster_Kalifa_swayhair
+    skillType: 1
+  - skillName: Monster_Kalifa_ti_back
+    skillType: 1
+  - skillName: Monster_Kalifa_ti_backOD
+    skillType: 1
+  - skillName: Monster_Kalifa_ti_front
+    skillType: 1
+  - skillName: Monster_Kalifa_ti_frontShanzhi
+    skillType: 1
+  - skillName: Monster_Kalifa_ti_frontyuebujingji
+    skillType: 1
+  - skillName: Monster_Kalifa_turnleft
+    skillType: 1
+  - skillName: Monster_Kalifa_turnright
+    skillType: 1
+  - skillName: Monster_Kalifa_whip_left
+    skillType: 1
+  - skillName: Monster_Kalifa_whip_right
+    skillType: 1
+  - skillName: Monster_Kalifa_yangyun
+    skillType: 1
+  - skillName: Monster_Kalifa_yangyun_AD_MobPlus
+    skillType: 1
+  - skillName: Monster_Kalifa_yuebu
+    skillType: 1
+  - skillName: Monster_Kalifa_yuebujinji
+    skillType: 1
+  - skillName: Monster_Kalifa_yuebujinji_AD_MobPlus
+    skillType: 1
+  - skillName: Monster_Kalifa_yuebu_AD_MobPlus
+    skillType: 1
+  - skillName: Monster_Kalifa_zhiqiang_left
+    skillType: 1
+  - skillName: Monster_Kalifa_zhiqiang_right
+    skillType: 1
+  - skillName: Monster_Kalifabubble_born
+    skillType: 0
+  - skillName: Monster_karifa_bubble
+    skillType: 0
+  - skillName: Monster_karifa_bubbleOD
+    skillType: 0
+  - skillName: Monster_Kaxi_break
+    skillType: 1
+  - skillName: Monster_Kaxi_chongji
+    skillType: 1
+  - skillName: Monster_Kaxi_chongjiBoost
+    skillType: 1
+  - skillName: Monster_kaxi_DashAttack
+    skillType: 1
+  - skillName: Monster_Kaxi_hengsao
+    skillType: 1
+  - skillName: Monster_Kaxi_huiji
+    skillType: 1
+  - skillName: Monster_Kaxi_jianta_left
+    skillType: 1
+  - skillName: Monster_Kaxi_jianta_left_od
+    skillType: 1
+  - skillName: Monster_Kaxi_jianta_right
+    skillType: 1
+  - skillName: Monster_Kaxi_jianta_right_od
+    skillType: 1
+  - skillName: Monster_Kaxi_juqing
+    skillType: 1
+  - skillName: Monster_Kaxi_lefttranslation
+    skillType: 1
+  - skillName: Monster_Kaxi_normal
+    skillType: 1
+  - skillName: Monster_Kaxi_normal2overdrive
+    skillType: 1
+  - skillName: Monster_Kaxi_pikan
+    skillType: 1
+  - skillName: Monster_Kaxi_qingmie
+    skillType: 1
+  - skillName: Monster_Kaxi_righttranslation
+    skillType: 1
+  - skillName: Monster_Kaxi_tiaoxin
+    skillType: 1
+  - skillName: Monster_Kaxi_turnleft
+    skillType: 1
+  - skillName: Monster_Kaxi_turnright
+    skillType: 1
+  - skillName: Monster_Kaxi_zadi
+    skillType: 1
+  - skillName: Monster_Kaxi_zadi_od
+    skillType: 1
+  - skillName: Boss_sneak_alert
+    skillType: 1
+  - skillName: Boss_sneak_cast
+    skillType: 1
+  - skillName: Boss_sneak_intofight
+    skillType: 1
+  - skillName: Monster_Kuro_attack1
+    skillType: 1
+  - skillName: Monster_Kuro_Break
+    skillType: 1
+  - skillName: Monster_Kuro_charge
+    skillType: 1
+  - skillName: Monster_Kuro_charge_back
+    skillType: 1
+  - skillName: Monster_Kuro_charge_comboattack
+    skillType: 1
+  - skillName: Monster_Kuro_expression1
+    skillType: 1
+  - skillName: Monster_Kuro_jingying_attack1
+    skillType: 1
+  - skillName: Monster_Kuro_jingying_break
+    skillType: 1
+  - skillName: Monster_Kuro_jingying_charge
+    skillType: 1
+  - skillName: Monster_Kuro_jingying_charge_back
+    skillType: 1
+  - skillName: Monster_Kuro_jingying_charge_comboattack
+    skillType: 1
+  - skillName: Monster_Kuro_jingying_invisible
+    skillType: 1
+  - skillName: Monster_Kuro_jingying_invisibleattack
+    skillType: 1
+  - skillName: Monster_Kuro_jingying_overdirve
+    skillType: 1
+  - skillName: Monster_Kuro_jingying_shaozi
+    skillType: 1
+  - skillName: Monster_Kuro_jingying_skillcombo_OD
+    skillType: 1
+  - skillName: Monster_Kuro_lefttranslation
+    skillType: 1
+  - skillName: Monster_Kuro_Overdirve
+    skillType: 1
+  - skillName: Monster_Kuro_righttranslation
+    skillType: 1
+  - skillName: Monster_Kuro_shaosi
+    skillType: 1
+  - skillName: Monster_Kuro_skillcombo_OD
+    skillType: 1
+  - skillName: Monster_Kuro_TurnLeft
+    skillType: 1
+  - skillName: Monster_Kuro_TurnRight
+    skillType: 1
+  - skillName: Monster_Kuro_will_AttackOD1
+    skillType: 1
+  - skillName: Monster_Kuro_will_AttackOD2
+    skillType: 1
+  - skillName: Monster_Kuzan_cast01
+    skillType: 0
+  - skillName: Monster_lixiang_talk
+    skillType: 0
+  - skillName: Monster_LuzhangZhongwei_attack
+    skillType: 0
+  - skillName: Monster_LuzhangZhongwei_hengsao
+    skillType: 0
+  - skillName: Monster_LuzhangZhongwei_jumpattack1
+    skillType: 0
+  - skillName: Monster_LuzhangZhongwei_jumpattack2
+    skillType: 0
+  - skillName: Monster_LuzhangZhongwei_kick
+    skillType: 0
+  - skillName: Monster_LuzhangZhongwei_lianzhan
+    skillType: 0
+  - skillName: Monster_LuzhangZhongwei_stepback
+    skillType: 0
+  - skillName: Monster_LuzhangZhongwei_tiaopingtai
+    skillType: 0
+  - skillName: Monster_LuzhangZhongwei_turnLeft
+    skillType: 0
+  - skillName: Monster_LuzhangZhongwei_turnRight
+    skillType: 0
+  - skillName: Monster_LuzhangZhongwei_walkLeft
+    skillType: 0
+  - skillName: Monster_LuzhangZhongwei_walkRight
+    skillType: 0
+  - skillName: Monster_Zhongwei_attack
+    skillType: 0
+  - skillName: Monster_Zhongwei_break
+    skillType: 0
+  - skillName: Monster_Zhongwei_hengsao
+    skillType: 0
+  - skillName: Monster_Zhongwei_jumpattack1
+    skillType: 0
+  - skillName: Monster_Zhongwei_jumpattack2
+    skillType: 0
+  - skillName: Monster_Zhongwei_kick
+    skillType: 0
+  - skillName: Monster_Zhongwei_lianzhan
+    skillType: 0
+  - skillName: Monster_Zhongwei_normal
+    skillType: 0
+  - skillName: Monster_Zhongwei_overdrive
+    skillType: 0
+  - skillName: Monster_Zhongwei_stepback
+    skillType: 0
+  - skillName: Monster_Zhongwei_tiaopingtai
+    skillType: 0
+  - skillName: Monster_Zhongwei_turnLeft
+    skillType: 0
+  - skillName: Monster_Zhongwei_turnRight
+    skillType: 0
+  - skillName: Monster_Zhongwei_walkLeft
+    skillType: 0
+  - skillName: Monster_Zhongwei_walkRight
+    skillType: 0
+  - skillName: Monster_MarineMusketeer_alite_pushBack
+    skillType: 0
+  - skillName: Monster_MarineMusketeer_alite_pushBack2
+    skillType: 0
+  - skillName: Monster_MarineMusketeer_alite_reload01
+    skillType: 0
+  - skillName: Monster_MarineMusketeer_alite_shoot
+    skillType: 0
+  - skillName: Monster_MarineMusketeer_born
+    skillType: 0
+  - skillName: Monster_MarineMusketeer_climbin
+    skillType: 0
+  - skillName: Monster_MarineMusketeer_fire
+    skillType: 0
+  - skillName: Monster_MarineMusketeer_kickshoot
+    skillType: 0
+  - skillName: Monster_MarineMusketeer_paralysis_end
+    skillType: 0
+  - skillName: Monster_MarineMusketeer_paralysis_end01
+    skillType: 0
+  - skillName: Monster_MarineMusketeer_paralysis_start
+    skillType: 0
+  - skillName: Monster_MarineMusketeer_paralysis_start01
+    skillType: 0
+  - skillName: Monster_MarineMusketeer_pushBack
+    skillType: 0
+  - skillName: Monster_MarineMusketeer_pushBack01
+    skillType: 0
+  - skillName: Monster_MarineMusketeer_pushBack2
+    skillType: 0
+  - skillName: Monster_MarineMusketeer_reload
+    skillType: 0
+  - skillName: Monster_MarineMusketeer_reload01
+    skillType: 0
+  - skillName: Monster_MarineMusketeer_shoot
+    skillType: 0
+  - skillName: Monster_MarineMusketeer_shoot01
+    skillType: 0
+  - skillName: Monster_MarineMusketeer_shoot_sp
+    skillType: 0
+  - skillName: Monster_MarineMusketeer_stepBack
+    skillType: 0
+  - skillName: Monster_MarineMusketeer_stepBack01
+    skillType: 0
+  - skillName: Monster_MarineMusketeer_stepBack1
+    skillType: 0
+  - skillName: Monster_MarineMusketeer_stun_end
+    skillType: 0
+  - skillName: Monster_MarineMusketeer_stun_start
+    skillType: 0
+  - skillName: Monster_MarineMusketeer_testshoot
+    skillType: 0
+  - skillName: Monster_MarineMusketeer_testshoot01
+    skillType: 0
+  - skillName: Monster_MarineMusketeer_turnLeft
+    skillType: 0
+  - skillName: Monster_MarineMusketeer_turnLeft01
+    skillType: 0
+  - skillName: Monster_MarineMusketeer_turnRight
+    skillType: 0
+  - skillName: Monster_MarineMusketeer_turnRight01
+    skillType: 0
+  - skillName: Monster_MarineMusketeer_walkLeft
+    skillType: 0
+  - skillName: Monster_MarineMusketeer_walkLeft01
+    skillType: 0
+  - skillName: Monster_MarineMusketeer_walkRight
+    skillType: 0
+  - skillName: Monster_MarineMusketeer_walkRight01
+    skillType: 0
+  - skillName: Monster_cp9jinzhanbing_weiyi_start
+    skillType: 0
+  - skillName: Monster_MarineSwordman_attack
+    skillType: 0
+  - skillName: Monster_MarineSwordman_attack01
+    skillType: 0
+  - skillName: Monster_MarineSwordman_attack2
+    skillType: 0
+  - skillName: Monster_MarineSwordman_attackOnce
+    skillType: 0
+  - skillName: Monster_MarineSwordman_attackOnce_sp
+    skillType: 0
+  - skillName: Monster_MarineSwordman_born
+    skillType: 0
+  - skillName: Monster_MarineSwordman_cast
+    skillType: 0
+  - skillName: Monster_MarineSwordman_climbin
+    skillType: 0
+  - skillName: Monster_MarineSwordman_paralysis_end
+    skillType: 0
+  - skillName: Monster_MarineSwordman_paralysis_end01
+    skillType: 0
+  - skillName: Monster_MarineSwordman_paralysis_start
+    skillType: 0
+  - skillName: Monster_MarineSwordman_paralysis_start01
+    skillType: 0
+  - skillName: Monster_MarineSwordman_rangeAttack
+    skillType: 0
+  - skillName: Monster_MarineSwordman_rangeAttack01
+    skillType: 0
+  - skillName: Monster_MarineSwordman_roar
+    skillType: 0
+  - skillName: Monster_MarineSwordman_roar01
+    skillType: 0
+  - skillName: Monster_MarineSwordman_roar_adv_Summon
+    skillType: 0
+  - skillName: Monster_MarineSwordman_roar_shoot
+    skillType: 0
+  - skillName: Monster_MarineSwordman_Salute
+    skillType: 0
+  - skillName: Monster_MarineSwordman_stepBack
+    skillType: 0
+  - skillName: Monster_MarineSwordman_stepBack01
+    skillType: 0
+  - skillName: Monster_MarineSwordman_stepBack1
+    skillType: 0
+  - skillName: Monster_MarineSwordman_stepBack101
+    skillType: 0
+  - skillName: Monster_MarineSwordman_stun_end
+    skillType: 0
+  - skillName: Monster_MarineSwordman_stun_start
+    skillType: 0
+  - skillName: Monster_MarineSwordman_testcombo
+    skillType: 0
+  - skillName: Monster_MarineSwordman_testcombo01
+    skillType: 0
+  - skillName: Monster_MarineSwordman_turnLeft
+    skillType: 0
+  - skillName: Monster_MarineSwordman_turnLeft01
+    skillType: 0
+  - skillName: Monster_MarineSwordman_turnRight
+    skillType: 0
+  - skillName: Monster_MarineSwordman_turnRight01
+    skillType: 0
+  - skillName: Monster_MarineSwordman_walkLeft
+    skillType: 0
+  - skillName: Monster_MarineSwordman_walkLeft01
+    skillType: 0
+  - skillName: Monster_MarineSwordman_walkRight
+    skillType: 0
+  - skillName: Monster_MarineSwordman_walkRight01
+    skillType: 0
+  - skillName: Monster_Rober_attack
+    skillType: 0
+  - skillName: Monster_sneak_alert
+    skillType: 0
+  - skillName: Monster_sneak_alertend
+    skillType: 0
+  - skillName: Monster_sneak_intofight
+    skillType: 0
+  - skillName: Monster_sneak_turnLeft
+    skillType: 0
+  - skillName: Monster_sneak_turnRight
+    skillType: 0
+  - skillName: Monster_Mihawk_born
+    skillType: 1
+  - skillName: Monster_Mihawk_castattack1
+    skillType: 1
+  - skillName: Monster_Mohji_MoveBack
+    skillType: 0
+  - skillName: Monster_Mohji_MoveLeft
+    skillType: 0
+  - skillName: Monster_Mohji_MoveRight
+    skillType: 0
+  - skillName: Monster_Mohji_Perform1
+    skillType: 0
+  - skillName: Monster_Mohji_Perform2
+    skillType: 0
+  - skillName: Monster_Mohji_TurnLeft
+    skillType: 0
+  - skillName: Monster_Mohji_TurnRight
+    skillType: 0
+  - skillName: Monster_Morgan_anger
+    skillType: 1
+  - skillName: Monster_Morgan_angerOD
+    skillType: 1
+  - skillName: Monster_Morgan_attack
+    skillType: 1
+  - skillName: Monster_Morgan_attack_left
+    skillType: 1
+  - skillName: Monster_Morgan_attack_od
+    skillType: 1
+  - skillName: Monster_Morgan_attack_right
+    skillType: 1
+  - skillName: Monster_Morgan_break
+    skillType: 1
+  - skillName: Monster_Morgan_charge2holdattack
+    skillType: 1
+  - skillName: Monster_Morgan_charge2holdattack_od
+    skillType: 1
+  - skillName: Monster_Morgan_chargeAttack
+    skillType: 1
+  - skillName: Monster_Morgan_chargeAttack_n
+    skillType: 1
+  - skillName: Monster_Morgan_chargeAttack_test1
+    skillType: 1
+  - skillName: Monster_Morgan_cloakBorn
+    skillType: 1
+  - skillName: Monster_Morgan_cloakBorn01
+    skillType: 1
+  - skillName: Monster_Morgan_command
+    skillType: 1
+  - skillName: Monster_Morgan_holdAttack
+    skillType: 1
+  - skillName: Monster_Morgan_holdAttacklinshi
+    skillType: 1
+  - skillName: Monster_Morgan_holdAttack_n
+    skillType: 1
+  - skillName: Monster_Morgan_holdAttack_od
+    skillType: 1
+  - skillName: Monster_Morgan_holdAttack_test1
+    skillType: 1
+  - skillName: Monster_Morgan_holdAttack_test2
+    skillType: 1
+  - skillName: Monster_Morgan_holdJumpAttack
+    skillType: 1
+  - skillName: Monster_Morgan_holdJumpAttackDazhao
+    skillType: 1
+  - skillName: Monster_Morgan_holdJumpAttackDazhao2
+    skillType: 1
+  - skillName: Monster_Morgan_holdJumpAttackDazhao3
+    skillType: 1
+  - skillName: Monster_Morgan_holdJumpAttack_od
+    skillType: 1
+  - skillName: Monster_Morgan_holdJumpAttack_test2
+    skillType: 1
+  - skillName: Monster_Morgan_jingying_angerOD
+    skillType: 1
+  - skillName: Monster_Morgan_jingying_attack
+    skillType: 1
+  - skillName: Monster_Morgan_jingying_break
+    skillType: 1
+  - skillName: Monster_Morgan_jingying_chargeAttack
+    skillType: 1
+  - skillName: Monster_Morgan_jingying_command
+    skillType: 1
+  - skillName: Monster_Morgan_jingying_command01
+    skillType: 1
+  - skillName: Monster_Morgan_jingying_holdAttack
+    skillType: 1
+  - skillName: Monster_Morgan_jingying_holdJumpAttack
+    skillType: 1
+  - skillName: Monster_Morgan_jingying_jumpback
+    skillType: 1
+  - skillName: Monster_Morgan_jingying_jumphold
+    skillType: 1
+  - skillName: Monster_Morgan_jingying_jumprangeAttack
+    skillType: 1
+  - skillName: Monster_Morgan_jingying_provoke
+    skillType: 1
+  - skillName: Monster_Morgan_jingying_rangeAttack
+    skillType: 1
+  - skillName: Monster_Morgan_jingying_vortexattack
+    skillType: 1
+  - skillName: Monster_Morgan_jingying_vortexcharge
+    skillType: 1
+  - skillName: Monster_Morgan_jumpback
+    skillType: 1
+  - skillName: Monster_Morgan_jumpback2holdAttack
+    skillType: 1
+  - skillName: Monster_Morgan_normal2overdrive
+    skillType: 1
+  - skillName: Monster_Morgan_overdrive2break_end
+    skillType: 1
+  - skillName: Monster_Morgan_overdrive2break_start
+    skillType: 1
+  - skillName: Monster_Morgan_paralysis_end
+    skillType: 1
+  - skillName: Monster_Morgan_paralysis_start
+    skillType: 1
+  - skillName: Monster_Morgan_provoke
+    skillType: 1
+  - skillName: Monster_Morgan_rangeAttack
+    skillType: 1
+  - skillName: Monster_Morgan_rangeAttack_n
+    skillType: 1
+  - skillName: Monster_Morgan_rangeAttack_od
+    skillType: 1
+  - skillName: Monster_Morgan_rangeAttack_test1
+    skillType: 1
+  - skillName: Monster_Morgan_rangeAttack_test2
+    skillType: 1
+  - skillName: Monster_Morgan_testcombo1
+    skillType: 1
+  - skillName: Monster_Morgan_town_angerOD
+    skillType: 1
+  - skillName: Monster_Morgan_town_attack
+    skillType: 1
+  - skillName: Monster_Morgan_town_chargeAttack
+    skillType: 1
+  - skillName: Monster_Morgan_town_cloakBorn
+    skillType: 1
+  - skillName: Monster_Morgan_town_holdAttack
+    skillType: 1
+  - skillName: Monster_Morgan_town_holdJumpAttack
+    skillType: 1
+  - skillName: Monster_Morgan_town_jumpback
+    skillType: 1
+  - skillName: Monster_Morgan_town_jumpbackAttack
+    skillType: 1
+  - skillName: Monster_Morgan_town_jumpbackOD
+    skillType: 1
+  - skillName: Monster_Morgan_town_jumprangeAttack
+    skillType: 1
+  - skillName: Monster_Morgan_town_lianxie
+    skillType: 1
+  - skillName: Monster_Morgan_town_normal2overdrive
+    skillType: 1
+  - skillName: Monster_Morgan_town_normal2overdrive01
+    skillType: 1
+  - skillName: Monster_Morgan_town_rangeAttack
+    skillType: 1
+  - skillName: Monster_Morgan_turnLeft
+    skillType: 1
+  - skillName: Monster_Morgan_turnRight
+    skillType: 1
+  - skillName: Monster_Morgan_walkatbegging
+    skillType: 1
+  - skillName: Monster_Morgan_walkLeft
+    skillType: 1
+  - skillName: Monster_Morgan_walkRight
+    skillType: 1
+  - skillName: Monster_Ohmholy_Attack01
+    skillType: 1
+  - skillName: Monster_Ohmholy_Attack02
+    skillType: 1
+  - skillName: Monster_Ohmholy_Attack03
+    skillType: 1
+  - skillName: Monster_Ohmholy_Attack04
+    skillType: 1
+  - skillName: Monster_Ohmholy_Attack05
+    skillType: 1
+  - skillName: Monster_Ohmholy_Attack06
+    skillType: 1
+  - skillName: Monster_Ohmholy_Attack07
+    skillType: 1
+  - skillName: Monster_Ohmholy_MoveBack
+    skillType: 1
+  - skillName: Monster_Ohmholy_MoveLeft
+    skillType: 1
+  - skillName: Monster_Ohmholy_MoveRight
+    skillType: 1
+  - skillName: Monster_Ohmholy_Storyline
+    skillType: 1
+  - skillName: Monster_Ohmholy_TurnLeft
+    skillType: 1
+  - skillName: Monster_Ohmholy_TurnRight
+    skillType: 1
+  - skillName: Monster_Ohm_Attack01
+    skillType: 1
+  - skillName: Monster_Ohm_Attack01_b
+    skillType: 1
+  - skillName: Monster_Ohm_Attack02
+    skillType: 1
+  - skillName: Monster_Ohm_Attack03
+    skillType: 1
+  - skillName: Monster_Ohm_Attack05
+    skillType: 1
+  - skillName: Monster_Ohm_Attack05_b
+    skillType: 1
+  - skillName: Monster_Ohm_Attack06
+    skillType: 1
+  - skillName: Monster_Ohm_Attack06_b
+    skillType: 1
+  - skillName: Monster_Ohm_Attack07
+    skillType: 1
+  - skillName: Monster_Ohm_Attack07_b
+    skillType: 1
+  - skillName: Monster_Ohm_Attack08
+    skillType: 1
+  - skillName: Monster_Ohm_Attack09
+    skillType: 1
+  - skillName: Monster_Ohm_Attack10
+    skillType: 1
+  - skillName: Monster_Ohm_Break
+    skillType: 1
+  - skillName: Monster_Ohm_Cslink
+    skillType: 1
+  - skillName: Monster_Ohm_MoveBack
+    skillType: 1
+  - skillName: Monster_Ohm_MoveLeft
+    skillType: 1
+  - skillName: Monster_Ohm_MoveRight
+    skillType: 1
+  - skillName: Monster_Ohm_Normal
+    skillType: 1
+  - skillName: Monster_Ohm_Overdirve
+    skillType: 1
+  - skillName: Monster_Ohm_Stroyline
+    skillType: 1
+  - skillName: Monster_Ohm_turnleft
+    skillType: 1
+  - skillName: Monster_Ohm_turnright
+    skillType: 1
+  - skillName: Monster_AdvOimo_Attack_hold
+    skillType: 1
+  - skillName: Monster_AdvOimo_Attack_left
+    skillType: 1
+  - skillName: Monster_AdvOimo_Attack_left02
+    skillType: 1
+  - skillName: Monster_AdvOimo_Attack_leftEX
+    skillType: 1
+  - skillName: Monster_AdvOimo_Attack_leftEXnormal
+    skillType: 1
+  - skillName: Monster_AdvOimo_Attack_mid
+    skillType: 1
+  - skillName: Monster_AdvOimo_Attack_midnormal
+    skillType: 1
+  - skillName: Monster_AdvOimo_Attack_right
+    skillType: 1
+  - skillName: Monster_AdvOimo_Attack_right02
+    skillType: 1
+  - skillName: Monster_AdvOimo_Attack_rightEX
+    skillType: 1
+  - skillName: Monster_AdvOimo_Attack_xuanyun
+    skillType: 1
+  - skillName: Monster_AdvOimo_born
+    skillType: 1
+  - skillName: Monster_AdvOimo_break
+    skillType: 1
+  - skillName: Monster_AdvOimo_break_BK
+    skillType: 1
+  - skillName: Monster_AdvOimo_overdrive
+    skillType: 1
+  - skillName: Monster_Oimo_Attack
+    skillType: 1
+  - skillName: Monster_Oimo_Attackleft_force
+    skillType: 1
+  - skillName: Monster_Oimo_Attackright_force
+    skillType: 1
+  - skillName: Monster_Oimo_Attack_hold
+    skillType: 1
+  - skillName: Monster_Oimo_Attack_left
+    skillType: 1
+  - skillName: Monster_Oimo_Attack_left02
+    skillType: 1
+  - skillName: Monster_Oimo_Attack_leftEX
+    skillType: 1
+  - skillName: Monster_Oimo_Attack_leftEXnormal
+    skillType: 1
+  - skillName: Monster_Oimo_Attack_mid
+    skillType: 1
+  - skillName: Monster_Oimo_Attack_midnormal
+    skillType: 1
+  - skillName: Monster_Oimo_Attack_right
+    skillType: 1
+  - skillName: Monster_Oimo_Attack_right02
+    skillType: 1
+  - skillName: Monster_Oimo_Attack_rightEX
+    skillType: 1
+  - skillName: Monster_Oimo_Attack_xuanyun
+    skillType: 1
+  - skillName: Monster_Oimo_born
+    skillType: 1
+  - skillName: Monster_Oimo_break
+    skillType: 1
+  - skillName: Monster_Oimo_break_BK
+    skillType: 1
+  - skillName: Monster_Oimo_overdrive
+    skillType: 1
+  - skillName: Monster_Pacifist_born
+    skillType: 1
+  - skillName: Monster_Pacifist_onfire
+    skillType: 1
+  - skillName: Monster_paobing_kick
+    skillType: 0
+  - skillName: Monster_paobing_reload
+    skillType: 0
+  - skillName: Monster_paobing_shoot
+    skillType: 0
+  - skillName: Monster_paobing_stepback
+    skillType: 0
+  - skillName: Monster_paobing_turnLeft
+    skillType: 0
+  - skillName: Monster_paobing_turnRight
+    skillType: 0
+  - skillName: Monster_paobing_walkLeft
+    skillType: 0
+  - skillName: Monster_paobing_walkRight
+    skillType: 0
+  - skillName: Monster_elite_MohjiRichie_Claw
+    skillType: 1
+  - skillName: Monster_elite_MohjiRichie_Cull
+    skillType: 1
+  - skillName: Monster_elite_MohjiRichie_JumpBlack
+    skillType: 1
+  - skillName: Monster_elite_MohjiRichie_Perform
+    skillType: 1
+  - skillName: Monster_elite_MohjiRichie_stimuli
+    skillType: 1
+  - skillName: Monster_elite_Richie_AddBuff1
+    skillType: 1
+  - skillName: Monster_elite_Richie_AddBuff2
+    skillType: 1
+  - skillName: Monster_elite_Richie_Charge
+    skillType: 1
+  - skillName: Monster_elite_Richie_Claw
+    skillType: 1
+  - skillName: Monster_elite_Richie_ClawCombo
+    skillType: 1
+  - skillName: Monster_elite_Richie_ClawWhirlwind
+    skillType: 1
+  - skillName: Monster_elite_Richie_Cull
+    skillType: 1
+  - skillName: Monster_elite_Richie_Jumpback
+    skillType: 1
+  - skillName: Monster_elite_Richie_JumpCombo
+    skillType: 1
+  - skillName: Monster_elite_Richie_LeftJump
+    skillType: 1
+  - skillName: Monster_elite_Richie_LeftJumpCombo
+    skillType: 1
+  - skillName: Monster_elite_Richie_LeftjumpCull
+    skillType: 1
+  - skillName: Monster_elite_Richie_Overdirve
+    skillType: 1
+  - skillName: Monster_elite_Richie_RightJumpCombo
+    skillType: 1
+  - skillName: Monster_elite_Richie_RightjumpCull
+    skillType: 1
+  - skillName: Monster_MohjiRichie_Claw
+    skillType: 1
+  - skillName: Monster_MohjiRichie_Cull
+    skillType: 1
+  - skillName: Monster_MohjiRichie_MoveBack
+    skillType: 1
+  - skillName: Monster_MohjiRichie_MoveLeft
+    skillType: 1
+  - skillName: Monster_MohjiRichie_MoveRight
+    skillType: 1
+  - skillName: Monster_MohjiRichie_Perform
+    skillType: 1
+  - skillName: Monster_MohjiRichie_stimuli
+    skillType: 1
+  - skillName: Monster_MohjiRichie_TurnLeft
+    skillType: 1
+  - skillName: Monster_MohjiRichie_TurnRight
+    skillType: 1
+  - skillName: Monster_Richie_Break
+    skillType: 1
+  - skillName: Monster_Richie_Charge
+    skillType: 1
+  - skillName: Monster_Richie_Claw
+    skillType: 1
+  - skillName: Monster_Richie_ClawCombo
+    skillType: 1
+  - skillName: Monster_Richie_ClawWhirlwind
+    skillType: 1
+  - skillName: Monster_Richie_Cull
+    skillType: 1
+  - skillName: Monster_Richie_Cull2
+    skillType: 1
+  - skillName: Monster_Richie_Jumpback
+    skillType: 1
+  - skillName: Monster_Richie_LeftjumpCull
+    skillType: 1
+  - skillName: Monster_Richie_MoveBack
+    skillType: 1
+  - skillName: Monster_Richie_MoveLeft
+    skillType: 1
+  - skillName: Monster_Richie_MoveRight
+    skillType: 1
+  - skillName: Monster_Richie_Normal
+    skillType: 1
+  - skillName: Monster_Richie_Overdirve
+    skillType: 1
+  - skillName: Monster_Richie_Perform1
+    skillType: 1
+  - skillName: Monster_Richie_Perform2
+    skillType: 1
+  - skillName: Monster_Richie_Perform3
+    skillType: 1
+  - skillName: Monster_Richie_RightjumpCull
+    skillType: 1
+  - skillName: Monster_Richie_TurnLeft
+    skillType: 1
+  - skillName: Monster_Richie_TurnRight
+    skillType: 1
+  - skillName: Monster_Satori_break
+    skillType: 1
+  - skillName: Monster_Satori_feiti
+    skillType: 1
+  - skillName: Monster_Satori_idle_dance
+    skillType: 1
+  - skillName: Monster_Satori_interim1
+    skillType: 1
+  - skillName: Monster_Satori_lefttranslation
+    skillType: 1
+  - skillName: Monster_Satori_lianquan
+    skillType: 1
+  - skillName: Monster_Satori_normal
+    skillType: 1
+  - skillName: Monster_Satori_overdrive
+    skillType: 1
+  - skillName: Monster_Satori_Perform_Born1
+    skillType: 1
+  - skillName: Monster_Satori_qiulong
+    skillType: 1
+  - skillName: Monster_Satori_righttranslation
+    skillType: 1
+  - skillName: Monster_Satori_tiaowu
+    skillType: 1
+  - skillName: Monster_Satori_touzhi
+    skillType: 1
+  - skillName: Monster_Satori_turnleft
+    skillType: 1
+  - skillName: Monster_Satori_turnright
+    skillType: 1
+  - skillName: Monster_Satori_xinwang
+    skillType: 1
+  - skillName: Monster_Satori_zhaohuan
+    skillType: 1
+  - skillName: Monster_Satori_zhaohuan1
+    skillType: 1
+  - skillName: Monster_Satori_qiulong_01
+    skillType: 1
+  - skillName: Monster_Seabird_appear
+    skillType: 0
+  - skillName: Monster_Seabird_die
+    skillType: 0
+  - skillName: Monster_Seabird_fly
+    skillType: 0
+  - skillName: Monster_Seabird_move
+    skillType: 0
+  - skillName: Monster_Sengokubuddha_bk
+    skillType: 1
+  - skillName: Monster_Sengokubuddha_chujue
+    skillType: 1
+  - skillName: Monster_Sengokubuddha_houtiao
+    skillType: 1
+  - skillName: Monster_Sengokubuddha_houtiaoback
+    skillType: 1
+  - skillName: Monster_Sengokubuddha_houtiaochongjibo
+    skillType: 1
+  - skillName: Monster_Sengokubuddha_houtiaopudu
+    skillType: 1
+  - skillName: Monster_Sengokubuddha_lianmin
+    skillType: 1
+  - skillName: Monster_Sengokubuddha_lianminchongjibo
+    skillType: 1
+  - skillName: Monster_Sengokubuddha_lianminpudu
+    skillType: 1
+  - skillName: Monster_Sengokubuddha_moveback
+    skillType: 1
+  - skillName: Monster_Sengokubuddha_moveleft
+    skillType: 1
+  - skillName: Monster_Sengokubuddha_moveright
+    skillType: 1
+  - skillName: Monster_Sengokubuddha_pudu
+    skillType: 1
+  - skillName: Monster_Sengokubuddha_turnleft
+    skillType: 1
+  - skillName: Monster_Sengokubuddha_turnright
+    skillType: 1
+  - skillName: Monster_Sengokubuddha_youhengsao
+    skillType: 1
+  - skillName: Monster_Sengokubuddha_zuohengsao
+    skillType: 1
+  - skillName: Monster_Sengokuhumen_chongjibo
+    skillType: 1
+  - skillName: Monster_Sengokuhumen_dachujue
+    skillType: 1
+  - skillName: Monster_Sengokuhumen_attack
+    skillType: 1
+  - skillName: Monster_Sengokuhumen_attackshoudao
+    skillType: 1
+  - skillName: Monster_Sengokuhumen_biaoqing
+    skillType: 1
+  - skillName: Monster_Sengokuhumen_bk
+    skillType: 1
+  - skillName: Monster_Sengokuhumen_chongci
+    skillType: 1
+  - skillName: Monster_Sengokuhumen_moveback
+    skillType: 1
+  - skillName: Monster_Sengokuhumen_moveleft
+    skillType: 1
+  - skillName: Monster_Sengokuhumen_moveright
+    skillType: 1
+  - skillName: Monster_Sengokuhumen_normal
+    skillType: 1
+  - skillName: Monster_Sengokuhumen_shoudao
+    skillType: 1
+  - skillName: Monster_Sengokuhumen_turnleft
+    skillType: 1
+  - skillName: Monster_Sengokuhumen_turnright
+    skillType: 1
+  - skillName: Monster_Sham_attack
+    skillType: 2
+  - skillName: Monster_Sham_back
+    skillType: 2
+  - skillName: Monster_Sham_back_attack
+    skillType: 1
+  - skillName: Monster_Sham_Break
+    skillType: 1
+  - skillName: Monster_Sham_catattack_start
+    skillType: 1
+  - skillName: Monster_Sham_cheating
+    skillType: 1
+  - skillName: Monster_Sham_cheating_attack_far
+    skillType: 1
+  - skillName: Monster_Sham_cheating_attack_nearly
+    skillType: 1
+  - skillName: Monster_Sham_lefttranslation
+    skillType: 1
+  - skillName: Monster_Sham_Overdirve
+    skillType: 1
+  - skillName: Monster_Sham_righttranslation
+    skillType: 2
+  - skillName: Monster_Sham_TurnLeft
+    skillType: 2
+  - skillName: Monster_Sham_TurnRight
+    skillType: 2
+  - skillName: Monster_Shandia1_Attack01
+    skillType: 0
+  - skillName: Monster_Shandia1_Attack01_normal
+    skillType: 0
+  - skillName: Monster_Shandia1_Attack02
+    skillType: 0
+  - skillName: Monster_Shandia1_Attack03
+    skillType: 0
+  - skillName: Monster_Shandia1_Attack04
+    skillType: 0
+  - skillName: Monster_Shandia1_Attack05
+    skillType: 0
+  - skillName: Monster_Shandia1_Born
+    skillType: 0
+  - skillName: Monster_Shandia1_Break
+    skillType: 0
+  - skillName: Monster_Shandia1_MoveBack
+    skillType: 0
+  - skillName: Monster_Shandia1_MoveLeft
+    skillType: 0
+  - skillName: Monster_Shandia1_MoveRight
+    skillType: 0
+  - skillName: Monster_Shandia2_Attack01
+    skillType: 0
+  - skillName: Monster_Shandia2_Attack01_normal
+    skillType: 0
+  - skillName: Monster_Shandia2_Attack02
+    skillType: 0
+  - skillName: Monster_Shandia2_Attack03
+    skillType: 0
+  - skillName: Monster_Shandia2_Attack04
+    skillType: 0
+  - skillName: Monster_Shandia2_Attack05
+    skillType: 0
+  - skillName: Monster_Shandia2_Born
+    skillType: 0
+  - skillName: Monster_Shandia2_Break
+    skillType: 0
+  - skillName: Monster_Shandia2_MoveBack
+    skillType: 0
+  - skillName: Monster_Shandia2_MoveLeft
+    skillType: 0
+  - skillName: Monster_Shandia2_MoveRight
+    skillType: 0
+  - skillName: Monster_Shenbing_Born
+    skillType: 0
+  - skillName: Monster_Shenbing_Break
+    skillType: 0
+  - skillName: Monster_Shenbing_cast1
+    skillType: 0
+  - skillName: Monster_Shenbing_cast2
+    skillType: 0
+  - skillName: Monster_Shenbing_Fire
+    skillType: 0
+  - skillName: Monster_Shenbing_Fire02
+    skillType: 0
+  - skillName: Monster_Shenbing_MoveBack
+    skillType: 0
+  - skillName: Monster_Shenbing_MoveLeft
+    skillType: 0
+  - skillName: Monster_Shenbing_MoveRight
+    skillType: 0
+  - skillName: Monster_Shenbing_Shock
+    skillType: 0
+  - skillName: Monster_Shenbing_Slash
+    skillType: 0
+  - skillName: Monster_Shenbing_Slashfar
+    skillType: 0
+  - skillName: Monster_Shenbing_Slashfar02
+    skillType: 0
+  - skillName: Monster_Shenbing_Slashfar_normal
+    skillType: 0
+  - skillName: Monster_Shenbing2_Born
+    skillType: 0
+  - skillName: Monster_Shenbing2_Fire
+    skillType: 0
+  - skillName: Monster_Shenbing2_MoveBack
+    skillType: 0
+  - skillName: Monster_Shenbing2_MoveLeft
+    skillType: 0
+  - skillName: Monster_Shenbing2_MoveRight
+    skillType: 0
+  - skillName: Monster_Shenbing2_Shock
+    skillType: 0
+  - skillName: Monster_Shenbing2_Slash
+    skillType: 0
+  - skillName: Monster_Shenbing2_Slashfar
+    skillType: 0
+  - skillName: Monster_shenzhizhicai_attack1
+    skillType: 0
+  - skillName: Monster_shenzhizhicai_attack11
+    skillType: 0
+  - skillName: Monster_shenzhizhicai_attack12
+    skillType: 0
+  - skillName: Monster_shenzhizhicai_attack13
+    skillType: 0
+  - skillName: Monster_siqiu_AdPerform
+    skillType: 0
+  - skillName: Monster_Siqiu_attack
+    skillType: 0
+  - skillName: Monster_siqiu_chongfeng
+    skillType: 0
+  - skillName: Monster_siqiu_chongfeng_Sub1
+    skillType: 0
+  - skillName: Monster_siqiu_chongfeng_Sub2
+    skillType: 0
+  - skillName: Monster_siqiu_cutscene
+    skillType: 0
+  - skillName: Monster_siqiu_hengsao1
+    skillType: 0
+  - skillName: Monster_siqiu_hengsao2
+    skillType: 0
+  - skillName: Monster_siqiu_hengsao3
+    skillType: 0
+  - skillName: Monster_siqiu_jianding
+    skillType: 0
+  - skillName: Monster_Siqiu_lianqiufangyu
+    skillType: 0
+  - skillName: Monster_Siqiu_lianqiufangyu_wudi
+    skillType: 0
+  - skillName: Monster_siqiu_roar
+    skillType: 0
+  - skillName: Monster_Siqiu_strike
+    skillType: 0
+  - skillName: Monster_Siqiu_strike2
+    skillType: 0
+  - skillName: Monster_siqiu_SuroundBall
+    skillType: 0
+  - skillName: Monster_siqiu_turnLeft
+    skillType: 0
+  - skillName: Monster_siqiu_turnRight
+    skillType: 0
+  - skillName: Monster_siqiu_walkLeft
+    skillType: 0
+  - skillName: Monster_siqiu_walkRight
+    skillType: 0
+  - skillName: Monster_siqiu_zhichui
+    skillType: 0
+  - skillName: Monster_Thornstrap_a_off
+    skillType: 0
+  - skillName: Monster_Thornstrap_a_on
+    skillType: 0
+  - skillName: Monster_Thornstrap_b_off
+    skillType: 0
+  - skillName: Monster_Thornstrap_b_on
+    skillType: 0
+  - skillName: Monster_Thornstrap_c_off
+    skillType: 0
+  - skillName: Monster_Thornstrap_c_on
+    skillType: 0
+  - skillName: Monster_Thornstrap_cast
+    skillType: 0
+  - skillName: Monster_Thornstrap_c_loophit
+    skillType: 0
+  - skillName: Monster_thornswall_loophit
+    skillType: 0
+  - skillName: Monster_Weber_Backflip
+    skillType: 1
+  - skillName: Monster_Weber_Bicyclekick
+    skillType: 1
+  - skillName: Monster_Weber_Bicyclekickrocket
+    skillType: 1
+  - skillName: Monster_Weber_Bicyclekickrocket_Normal
+    skillType: 1
+  - skillName: Monster_Weber_Bicyclekick_Normal
+    skillType: 1
+  - skillName: Monster_Weber_Bicyclekick_Normal1
+    skillType: 1
+  - skillName: Monster_Weber_Block
+    skillType: 1
+  - skillName: Monster_Weber_Born
+    skillType: 1
+  - skillName: Monster_Weber_Break
+    skillType: 1
+  - skillName: Monster_Weber_DashForward
+    skillType: 1
+  - skillName: Monster_Weber_DashForward_Normal
+    skillType: 1
+  - skillName: Monster_Weber_Flyingkick
+    skillType: 1
+  - skillName: Monster_Weber_Leftflash
+    skillType: 1
+  - skillName: Monster_Weber_MoveBack
+    skillType: 1
+  - skillName: Monster_Weber_MoveLeft
+    skillType: 1
+  - skillName: Monster_Weber_MoveRight
+    skillType: 1
+  - skillName: Monster_Weber_Normal
+    skillType: 1
+  - skillName: Monster_Weber_Overdirve
+    skillType: 1
+  - skillName: Monster_Weber_PerformShockAttack
+    skillType: 1
+  - skillName: Monster_Weber_Rightflash
+    skillType: 1
+  - skillName: Monster_Weber_Rocket
+    skillType: 1
+  - skillName: Monster_Weber_RocketEX
+    skillType: 1
+  - skillName: Monster_Weber_Rocketinair
+    skillType: 1
+  - skillName: Monster_Weber_Rocketinair_Normal
+    skillType: 1
+  - skillName: Monster_Weber_Rocketinair_Normal1
+    skillType: 1
+  - skillName: Monster_Weber_Rocketleft
+    skillType: 1
+  - skillName: Monster_Weber_Rocketleft_Normal
+    skillType: 1
+  - skillName: Monster_Weber_RocketRight
+    skillType: 1
+  - skillName: Monster_Weber_RocketRight_Normal
+    skillType: 1
+  - skillName: Monster_Weber_Rockettwice
+    skillType: 1
+  - skillName: Monster_Weber_Rockettwice_Normal
+    skillType: 1
+  - skillName: Monster_Weber_Rocket_Normal
+    skillType: 1
+  - skillName: Monster_Weber_Rocket_Normal1
+    skillType: 1
+  - skillName: Monster_Weber_Shockwave
+    skillType: 1
+  - skillName: Monster_Weber_Shockwaveheavy
+    skillType: 1
+  - skillName: Monster_Weber_Tms
+    skillType: 1
+  - skillName: Monster_Weber_Tmsrocket
+    skillType: 1
+  - skillName: Monster_Weber_Tmsrocket_Normal
+    skillType: 1
+  - skillName: Monster_Weber_Turningkick
+    skillType: 1
+  - skillName: Monster_Weber_TurnLeft
+    skillType: 1
+  - skillName: Monster_Weber_TurnRight
+    skillType: 1
+  - skillName: Monster_Yama_Backflip
+    skillType: 2
+  - skillName: Monster_Yama_Born
+    skillType: 2
+  - skillName: Monster_Yama_Boxing
+    skillType: 2
+  - skillName: Monster_Yama_Break
+    skillType: 2
+  - skillName: Monster_Yama_Drop
+    skillType: 2
+  - skillName: Monster_Yama_MoveBack
+    skillType: 2
+  - skillName: Monster_Yama_MoveLeft
+    skillType: 2
+  - skillName: Monster_Yama_MoveRight
+    skillType: 2
+  - skillName: Monster_Yama_Normal
+    skillType: 2
+  - skillName: Monster_Yama_Shocking
+    skillType: 2
+  - skillName: Monster_Yama_Slash
+    skillType: 2
+  - skillName: Monster_Zhongwei_axe_attack
+    skillType: 0
+  - skillName: Monster_Zhongwei_axe_lefttranslation
+    skillType: 0
+  - skillName: Monster_Zhongwei_axe_rangeattack
+    skillType: 0
+  - skillName: Monster_Zhongwei_axe_rangeattackplus
+    skillType: 0
+  - skillName: Monster_Zhongwei_axe_righttranslation
+    skillType: 0
+  - skillName: Monster_Zhongwei_castdie
+    skillType: 0
+  - skillName: Monster_Zhongwei_shoot
+    skillType: 0
+  - skillName: Monster_Zhongwei_shunyi
+    skillType: 0
+  - skillName: Monster_Zhongwei_gun_reload
+    skillType: 0
+  - skillName: Monster_Zhongwei_gun_shoot
+    skillType: 0
+  - skillName: Monster_Zhongwei_gun_shootplus
+    skillType: 0
+  - skillName: Monster_Zhongwei_gun_Walkleft
+    skillType: 0
+  - skillName: Monster_Zhongwei_gun_Walkright
+    skillType: 0
+  - skillName: Monster_Zhongwu_Attack
+    skillType: 1
+  - skillName: Monster_Zhongwu_Attack_Xiaowu
+    skillType: 1
+  - skillName: Monster_Zhongwu_Bomb
+    skillType: 1
+  - skillName: Monster_Zhongwu_Bomb_Xiaowu
+    skillType: 1
+  - skillName: Monster_Zhongwu_Break
+    skillType: 1
+  - skillName: Monster_Zhongwu_Dance01
+    skillType: 1
+  - skillName: Monster_Zhongwu_Dance01_Xiaowu
+    skillType: 1
+  - skillName: Monster_Zhongwu_Dance02
+    skillType: 1
+  - skillName: Monster_Zhongwu_Dance02_Xiaowu
+    skillType: 1
+  - skillName: Monster_Zhongwu_Fire
+    skillType: 1
+  - skillName: Monster_Zhongwu_MoveBack
+    skillType: 1
+  - skillName: Monster_Zhongwu_MoveLeft
+    skillType: 1
+  - skillName: Monster_Zhongwu_MoveRight
+    skillType: 1
+  - skillName: Monster_Zhongwu_Normal
+    skillType: 1
+  - skillName: Monster_Zhongwu_Overdrive
+    skillType: 1
+  - skillName: Monster_Zhongwu_Overdrive_Xiaowu
+    skillType: 1
+  - skillName: Monster_Zhongwu_Rotate
+    skillType: 1
+  - skillName: Monster_Zhongwu_Rotate_Xiaowu
+    skillType: 1
+  - skillName: Monster_Zhongwu_Shockwave
+    skillType: 1
+  - skillName: Monster_Zhongwu_Shoot
+    skillType: 1
+  - skillName: Monster_Zhongwu_Shoot_Xiaowu
+    skillType: 1
+  - skillName: Monster_Zhongwu_Slashfar
+    skillType: 1
+  - skillName: Monster_Zhongwu_Smell
+    skillType: 1
+  - skillName: Monster_BlackBeard_heidong_empty
+    skillType: 1
+  - skillName: Monster_BlackBeard_jiefang_empty
+    skillType: 1
+  - skillName: Monster_Buggy_xuanfeng
+    skillType: 1
+  - skillName: Monster_Buggy_xuanfeng_baoqi
+    skillType: 1
+  - skillName: Monster_enel_Cohesion_continuous
+    skillType: 1
+  - skillName: Monster_enel_Cohesion_continuous_target
+    skillType: 1
+  - skillName: Monster_enel_Cohesion_continuous_target_count
+    skillType: 1
+  - skillName: Monster_enel_Cohesion_empty
+    skillType: 1
+  - skillName: Monster_enel_Cohesion_target
+    skillType: 1
+  - skillName: Monster_enel_Cohesion_target_count
+    skillType: 1
+  - skillName: Monster_enel_Trap
+    skillType: 1
+  - skillName: Monster_enel_Trap_ball
+    skillType: 1
+  - skillName: Monster_enel_Trap_chapter2
+    skillType: 1
+  - skillName: Monster_enel_Trap_Line
+    skillType: 1
+  - skillName: Monster_Sengokubuddha_chuchang
+    skillType: 1
+  - skillName: Monster_Zhongwu_Boom
+    skillType: 1
+  - skillName: Gomora_camerashake
+    skillType: 0
+  - skillName: Gomora_camerashake1
+    skillType: 0
+  - skillName: Monster_baozhatong_shoot
+    skillType: 0
+  - skillName: Monster_Door_open
+    skillType: 0
+  - skillName: Monster_empty_gedatsupaoji
+    skillType: 0
+  - skillName: Monster_empty_gemora
+    skillType: 0
+  - skillName: Monster_empty_gomora
+    skillType: 0
+  - skillName: Monster_empty_Gomorapaoji
+    skillType: 0
+  - skillName: Monster_empty_LuffyPaoji
+    skillType: 0
+  - skillName: Monster_empty_LuffyPaojiAttack
+    skillType: 0
+  - skillName: Monster_empty_qiangbing
+    skillType: 0
+  - skillName: Monster_empty_shakeonce
+    skillType: 0
+  - skillName: Monster_empty_Spinning_Top
+    skillType: 0
+  - skillName: Monster_empty_Usopp_barrelboom
+    skillType: 0
+  - skillName: Monster_empty_Usopp_barrelboom_manual
+    skillType: 0
+  - skillName: Monster_Enelamaru_leidianxian1
+    skillType: 0
+  - skillName: Monster_Enelamaru_leidianxian2
+    skillType: 0
+  - skillName: Monster_Enelamaru_leidianxian3
+    skillType: 0
+  - skillName: Monster_Gomora_hit
+    skillType: 0
+  - skillName: Monster_houjianpaobing_boom
+    skillType: 0
+  - skillName: Monster_houjianpaobing_boom2
+    skillType: 0
+  - skillName: Monster_jingqiqiu_boom
+    skillType: 0
+  - skillName: Monster_Lucci_C_RanPaoji
+    skillType: 0
+  - skillName: Monster_Lucci_fireboom
+    skillType: 0
+  - skillName: Monster_Lucci_fireRandom
+    skillType: 0
+  - skillName: Monster_Lucci_fireTarget
+    skillType: 0
+  - skillName: Monster_nami_leiyundianguangqiang
+    skillType: 0
+  - skillName: Monster_nami_leiyundianguangqiang_attack
+    skillType: 0
+  - skillName: Monster_nami_leiyundianguangqiang_end
+    skillType: 0
+  - skillName: Monster_nami_leiyuntianhou_biaoxian
+    skillType: 0
+  - skillName: Monster_nami_leiyunxianjing_shizi
+    skillType: 0
+  - skillName: Monster_nami_thunderclonds
+    skillType: 0
+  - skillName: Monster_nami_thunderclonds_end
+    skillType: 0
+  - skillName: Monster_shoot_fire
+    skillType: 0
+  - skillName: Monster_slope_fire
+    skillType: 0
+  - skillName: Monster_Top_slope
+    skillType: 0
+  - skillName: Monster_Top_slope2
+    skillType: 0
+  - skillName: Monster_xez_door_close
+    skillType: 0
+  - skillName: Monster_xez_door_open
+    skillType: 0
+  - skillName: Monster_zoro_longjuanfeng
+    skillType: 0
+  - skillName: Role_Enelamaru_zhicai
+    skillType: 0
+  - skillName: Role_marine_door_close
+    skillType: 0
+  - skillName: Role_marine_door_open
+    skillType: 0
+  - skillName: Role_Spandam_angry
+    skillType: 0
+  - skillName: Role_Spandam_talk
+    skillType: 0
+  - skillName: fx_battery_hit_adventure
+    skillType: 2
+  - skillName: Role_Ace_attack0
+    skillType: 1
+  - skillName: Role_zoro_attack_01
+    skillType: 1
+  - skillName: hit01
+    skillType: 1
+  - skillName: hit02
+    skillType: 0
+  - skillName: Role_LucciC_Skill03_02
+    skillType: 1
+  - skillName: Role_LucciC_Skill02_02
+    skillType: 1
+  - skillName: Role_LucciC_Skill02_01
+    skillType: 1
+  - skillName: Role_LucciC_Skill01
+    skillType: 1
+  - skillName: Role_LucciC_Charge
+    skillType: 1
+  - skillName: Role_LucciC_Atk05
+    skillType: 1
+  - skillName: Role_LucciH_Atk04
+    skillType: 1
+  - skillName: Role_LucciH_Charge
+    skillType: 1
+  - skillName: Role_LucciH_Skill01
+    skillType: 1
+  - skillName: Role_LucciH_Skill02
+    skillType: 1
+  - skillName: Role_LucciH_Skill03_02
+    skillType: 1
+  - skillName: Role_LucciH_Skill03_01
+    skillType: 1
+  - skillName: Role_LucciC_Skill03_01
+    skillType: 1
+  - skillName: Monster_Butchi_fatattack_elite
+    skillType: 1
+  - skillName: Monster_Zhongwu_Born
+    skillType: 0
+  - skillName: Monster_Ohm_Attack04
+    skillType: 1
+  - skillName: Monster_Ohm_IronDgogeStart
+    skillType: 0
+  - skillName: Monster_Ohm_IronDgogeEnd
+    skillType: 0
+  - skillName: Monster_Ohmholy_Overdirve
+    skillType: 1
+  - skillName: Role_Crocodile_sandsword
+    skillType: 1
+  - skillName: Role_Crocodile_switch_die
+    skillType: 1
+  - skillName: Role_Crocodile_charge_baoqi
+    skillType: 1
+  - skillName: Role_Crocodile_dash
+    skillType: 1
+  - skillName: Role_Crocodile_dashattack
+    skillType: 1
+  - skillName: Role_Crocodile_charge
+    skillType: 1
+  - skillName: Role_hancock_snake_skill_pistolnewfast
+    skillType: 1
+  - skillName: Role_hancock_attack_01
+    skillType: 1
+  - skillName: Role_hancock_snake_skill_pistolnew
+    skillType: 1
+  - skillName: Role_hancock_snake_skill_arrow
+    skillType: 1
+  - skillName: Monster_Gin_Attack
+    skillType: 0
+  - skillName: Monster_Gin_ChargeAttack
+    skillType: 0
+  - skillName: Monster_Gin_FlashAttack
+    skillType: 0
+  - skillName: Monster_Gin_FlashAttackEX
+    skillType: 0
+  - skillName: Monster_Gin_JumpAttack
+    skillType: 0
+  - skillName: Monster_Gin_JumpAttackEX
+    skillType: 0
+  - skillName: Monster_Gin_JumpAttackPlus
+    skillType: 0
+  - skillName: Monster_Gin_elite_JumpAttackPlus
+    skillType: 0
+  - skillName: Monster_Gin_Pursuit
+    skillType: 0
+  - skillName: Monster_Gin_RangeAttack
+    skillType: 0
+  - skillName: Role_Sanji_baoqi
+    skillType: 1
+  - skillName: Monster_Ohm_Holyattack
+    skillType: 0
+  - skillName: Monster_Ohm_Attack04_Elite
+    skillType: 0
+  - skillName: Monster_Ohm_Deathmatch
+    skillType: 0
+  - skillName: Monster_Satori_jingying_lianquan
+    skillType: 0
+  - skillName: Monster_Satori_jingying_chongjibei
+    skillType: 0
+  - skillName: Monster_Satori_tianchong
+    skillType: 0
+  - skillName: Monster_Satori_baozha
+    skillType: 0
+  - skillName: Monster_Gedatsu_shufu2
+    skillType: 0
+  - skillName: Monster_Satori_zhoushen
+    skillType: 0
+  - skillName: Monster_Gedatsu_attack
+    skillType: 0
+  - skillName: Monster_Gedatsu_chongci
+    skillType: 0
+  - skillName: Monster_Gedatsu_rangeattackplus
+    skillType: 1
+  - skillName: Monster_Gedatsu_hamburg2
+    skillType: 1
+  - skillName: Monster_Gedatsu_zhuanquan
+    skillType: 0
+  - skillName: Monster_Gedatsu_shufu4
+    skillType: 0
+  - skillName: Monster_Gedatsu_chongquan
+    skillType: 0
+  - skillName: Monster_qiulong_boom
+    skillType: 0
+  - skillName: Monster_Satori_qiulong_start
+    skillType: 0
+  - skillName: Monster_Satori_jingying_touzhi
+    skillType: 0
+  - skillName: Monster_Satori_qiulong_jz
+    skillType: 0
+  - skillName: Monster_Satori_xinwang_jz
+    skillType: 0
+  - skillName: Monster_Satori_jingying_feiti
+    skillType: 0
+  - skillName: Monster_Satori_quanpingqiu
+    skillType: 0
+  - skillName: Monster_Gedatsu_shufu1
+    skillType: 0
+  - skillName: Monster_Jyabura_langbashi
+    skillType: 0
+  - skillName: Monster_Jyabura_T_start
+    skillType: 0
+  - skillName: Monster_Jyabura_jizhi_yueguang
+    skillType: 0
+  - skillName: Monster_Jyabura_simianbafang_start
+    skillType: 0

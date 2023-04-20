@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Zeus资源框架说明</title>
+        <style>
+</style>
+        
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/markdown.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/highlight.css">
+<style>
+            body {
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', system-ui, 'Ubuntu', 'Droid Sans', sans-serif;
+                font-size: 14px;
+                line-height: 1.6;
+            }
+        </style>
+        <style>
+.task-list-item { list-style-type: none; } .task-list-item-checkbox { margin-left: -20px; vertical-align: middle; }
+</style>
+        
+        
+        
+    </head>
+    <body class="vscode-light">
+        <h1 id="zeus资源框架说明">Zeus资源框架说明</h1>
+<ul>
+<li><a href="#zeus%E8%B5%84%E6%BA%90%E6%A1%86%E6%9E%B6%E8%AF%B4%E6%98%8E">Zeus资源框架说明</a>
+<ul>
+<li><a href="#%E4%B8%80%E8%B5%84%E6%BA%90%E6%A1%86%E6%9E%B6%E5%8A%9F%E8%83%BD%E7%89%B9%E7%82%B9%E4%BB%8B%E7%BB%8D">一.资源框架功能特点介绍</a></li>
+<li><a href="#%E4%BA%8C%E8%B5%84%E6%BA%90%E7%AE%A1%E7%90%86">二.资源管理</a>
+<ul>
+<li><a href="#1-%E9%85%8D%E7%BD%AE">1. 配置</a></li>
+<li><a href="#2%E5%88%9D%E5%A7%8B%E5%8C%96">2.初始化</a></li>
+<li><a href="#3assetmanager-api">3.AssetManager API</a></li>
+</ul>
+</li>
+<li><a href="#%E4%B8%89%E5%88%86%E5%8C%85%E5%8A%9F%E8%83%BD">三.分包功能</a>
+<ul>
+<li><a href="#1%E8%B5%84%E6%BA%90%E8%AE%B0%E5%BD%95%E5%B7%A5%E5%85%B7%E7%9A%84%E4%BD%BF%E7%94%A8">1.资源记录工具的使用</a></li>
+<li><a href="#2%E5%88%86%E5%8C%85%E6%89%93%E5%8C%85%E6%B5%81%E7%A8%8B">2.分包打包流程</a></li>
+<li><a href="#3%E5%88%86%E5%8C%85%E5%8A%9F%E8%83%BD%E6%8E%A5%E5%8F%A3%E8%AF%B4%E6%98%8E">3.分包功能接口说明</a>
+<ul>
+<li><a href="#31-subpackagestate">3.1. SubpackageState</a></li>
+<li><a href="#32-subpackageerror">3.2 SubpackageError</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#%E5%9B%9B%E6%89%93%E5%8C%85">四.打包</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="一资源框架功能特点介绍">一.资源框架功能特点介绍</h2>
+<ul>
+<li>逻辑上完全屏蔽bundle概念，逻辑层直接使用asset,无需关心bundle概念，简化使用逻辑。</li>
+<li>图形化配置方式，方便根据业务特点定制打包策略。</li>
+<li>同一套接口支持Resource和Bundle方式无缝切换，编辑器下使用Resource模式，正式打包使用bundle方式，解决开发期build bundle慢影响开发迭代速度问题</li>
+<li>多种类型接口，支持同步/异步/加急异步等方式加载资源。自动处理依赖资源</li>
+<li>支持分包功能
+<ul>
+<li>编辑器下分包工具，不用打包即可快速分包。</li>
+<li>支持边玩边下，在独立线程中处理，不影响正常游戏，极低内存和CPU开销。</li>
+<li>经过专业优化的下载策略，大量碎小bundle也不会影响下载速度。</li>
+</ul>
+</li>
+<li>提供资源和代码分离方案，资源和代码逻辑分开GIT/SVN仓库，方便权限管理</li>
+<li>提供LUA层接口</li>
+<li>启动速度和内存占用经过严格优化，解决大规模项目启动和内存占用问题。</li>
+<li>可根据需求定制多种风格接口，适配项目组使用习惯和既有逻辑代码。</li>
+</ul>
+<h2 id="二资源管理">二.资源管理</h2>
+<h3 id="1-配置">1. 配置</h3>
+<p>在EditorMenu中选择<code>Zeus-&gt;Setting-&gt;Asset-&gt;ResourceSettingWindow</code>打开设置窗口，进行资源模块的相关设置.</p>
+<p><img src="Images\%E8%AE%BE%E7%BD%AE%E7%AA%97%E5%8F%A3.png" alt="设置窗口"></p>
+<ul>
+<li><code>选择资源加载方式</code>：用于切换资源加载方式AssetBundle/Resources</li>
+<li><code>启用Bundle分散</code> ：解决android平台加载bundle变慢问题</li>
+<li><code>启用分包功能</code>：控制分包功能的开启和关闭</li>
+<li><code>启用流量下载</code>：是否默认开启流量下载功能</li>
+<li><code>首包标签</code>：决定哪些内容将打入首包，选中的标签及之前的标签对应的内容都会打入首包中</li>
+<li><code>URL</code>：二包资源下载地址（运行时可以更改）</li>
+<li><code>Add URL</code>：添加二包资源下载地址（支持多个下载地址）</li>
+<li><code>Build SoftLink</code>：提供软连接工具，提供资源和代码分离方案。</li>
+</ul>
+<h3 id="2初始化">2.初始化</h3>
+<p>使用资源管理功能之前需要调用AssetManager.Init进行初始化，初始化应在框架启动之后进行。调用方法可参考StartGame.cs</p>
+<pre><code class="language-c#"><div>AssetManager.Init();
+</div></code></pre>
+<h3 id="3assetmanager-api">3.AssetManager API</h3>
+<p>资源管理实现了以下几个接口（默认推荐接口风格，可以支持其他风格）</p>
+<details>
+<summary><font color="red">LoadAsset</font> 同步加载资源</summary>
+<pre><code class="language-C#"><div><span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;summary&gt;</span></span>
+<span class="hljs-comment"><span class="hljs-doctag">///</span> 同步方式加载资源</span>
+<span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;/summary&gt;</span></span>
+<span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;param name="path"&gt;</span>资源路径<span class="hljs-doctag">&lt;/param&gt;</span></span>
+<span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;returns&gt;</span>资源引用<span class="hljs-doctag">&lt;/returns&gt;</span></span>
+<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> IAssetRef <span class="hljs-title">LoadAsset</span>(<span class="hljs-params"><span class="hljs-keyword">string</span> path</span>)</span>;
+
+<span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;summary&gt;</span></span>
+<span class="hljs-comment"><span class="hljs-doctag">///</span> 同步方式加载资源</span>
+<span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;/summary&gt;</span></span>
+<span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;param name="path"&gt;</span>资源路径<span class="hljs-doctag">&lt;/param&gt;</span></span>
+<span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;param name="type"&gt;</span>资源类型<span class="hljs-doctag">&lt;/param&gt;</span></span>
+<span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;returns&gt;</span>资源引用<span class="hljs-doctag">&lt;/returns&gt;</span></span>
+<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> IAssetRef <span class="hljs-title">LoadAsset</span>(<span class="hljs-params"><span class="hljs-keyword">string</span> path, Type type</span>)</span>;
+</div></code></pre>
+</details>
+<details>
+<summary><font color="red">LoadAssetAsync</font> 异步加载资源</summary>
+<pre><code class="language-C#"><div><span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;summary&gt;</span></span>
+<span class="hljs-comment"><span class="hljs-doctag">///</span> 异步方式加载资源</span>
+<span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;/summary&gt;</span></span>
+<span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;param name="path"&gt;</span>资源路径<span class="hljs-doctag">&lt;/param&gt;</span></span>
+<span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;param name="callback"&gt;</span>回调函数<span class="hljs-doctag">&lt;/param&gt;</span></span>
+<span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;param name="param"&gt;</span>透传参数<span class="hljs-doctag">&lt;/param&gt;</span></span>
+<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">LoadAssetAsync</span>(<span class="hljs-params"><span class="hljs-keyword">string</span> path, Action&lt;IAssetRef, <span class="hljs-keyword">object</span>&gt; callback, <span class="hljs-keyword">object</span> param</span>)</span>;
+
+<span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;summary&gt;</span></span>
+<span class="hljs-comment"><span class="hljs-doctag">///</span> 异步方式加载资源</span>
+<span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;/summary&gt;</span></span>
+<span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;param name="path"&gt;</span>资源路径<span class="hljs-doctag">&lt;/param&gt;</span></span>
+<span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;param name="type"&gt;</span>资源类型<span class="hljs-doctag">&lt;/param&gt;</span></span>
+<span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;param name="callback"&gt;</span>回调函数<span class="hljs-doctag">&lt;/param&gt;</span></span>
+<span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;param name="param"&gt;</span>透传参数<span class="hljs-doctag">&lt;/param&gt;</span></span>
+<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">LoadAssetAsync</span>(<span class="hljs-params"><span class="hljs-keyword">string</span> path, Type type, Action&lt;IAssetRef, <span class="hljs-keyword">object</span>&gt; callback, <span class="hljs-keyword">object</span> param</span>)</span>;
+</div></code></pre>
+</details>
+<details>
+<summary><font color="red">LoadAssetUrgent</font> 加急方式异步加载资源</summary>
+<pre><code class="language-C#"><div><span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;summary&gt;</span></span>
+<span class="hljs-comment"><span class="hljs-doctag">///</span> 加急方式加载资源</span>
+<span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;/summary&gt;</span></span>
+<span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;param name="path"&gt;</span>资源路径<span class="hljs-doctag">&lt;/param&gt;</span></span>
+<span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;param name="callback"&gt;</span>回调函数<span class="hljs-doctag">&lt;/param&gt;</span></span>
+<span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;param name="param"&gt;</span>透传参数<span class="hljs-doctag">&lt;/param&gt;</span></span>
+<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">LoadAssetUrgent</span>(<span class="hljs-params"><span class="hljs-keyword">string</span> path, Action&lt;IAssetRef, <span class="hljs-keyword">object</span>&gt; callback, <span class="hljs-keyword">object</span> param</span>)</span>;
+
+<span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;summary&gt;</span></span>
+<span class="hljs-comment"><span class="hljs-doctag">///</span> 加急方式加载资源</span>
+<span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;/summary&gt;</span></span>
+<span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;param name="path"&gt;</span>资源路径<span class="hljs-doctag">&lt;/param&gt;</span></span>
+<span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;param name="type"&gt;</span>资源类型<span class="hljs-doctag">&lt;/param&gt;</span></span>
+<span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;param name="callback"&gt;</span>回调函数<span class="hljs-doctag">&lt;资源引用，透传参数&gt;</span><span class="hljs-doctag">&lt;/param&gt;</span></span>
+<span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;param name="param"&gt;</span>透传参数<span class="hljs-doctag">&lt;/param&gt;</span></span>
+<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">LoadAssetUrgent</span>(<span class="hljs-params"><span class="hljs-keyword">string</span> path, Type type, Action&lt;IAssetRef, <span class="hljs-keyword">object</span>&gt; callback, <span class="hljs-keyword">object</span> param</span>)</span>;
+</div></code></pre>
+</details>
+<details>
+<summary><font color="red">LoadScene</font> 同步加载场景</summary>
+<pre><code class="language-C#"><div><span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;summary&gt;</span></span>
+<span class="hljs-comment"><span class="hljs-doctag">///</span> 同步加载场景方法</span>
+<span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;/summary&gt;</span></span>
+<span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;param name="path"&gt;</span>资源路径<span class="hljs-doctag">&lt;/param&gt;</span></span>
+<span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;param name="loadMode"&gt;</span>LoadSceneMode<span class="hljs-doctag">&lt;/param&gt;</span></span>
+<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">LoadScene</span>(<span class="hljs-params"><span class="hljs-keyword">string</span> path, LoadSceneMode loadMode</span>)</span>;
+</div></code></pre>
+</details>
+<details>
+<summary><font color="red">LoadSceneAsync</font> 异步加载场景</summary>
+<pre><code class="language-C#"><div><span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;summary&gt;</span></span>
+<span class="hljs-comment"><span class="hljs-doctag">///</span> 异步加载场景方法</span>
+<span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;/summary&gt;</span></span>
+<span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;param name="path"&gt;</span><span class="hljs-doctag">&lt;/param&gt;</span></span>
+<span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;param name="loadMode"&gt;</span><span class="hljs-doctag">&lt;/param&gt;</span></span>
+<span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;param name="callback"&gt;</span><span class="hljs-doctag">&lt;/param&gt;</span>Action<span class="hljs-doctag">&lt;是否加载完成, 加载进度, 透传参数&gt;</span></span>
+<span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;param name="param"&gt;</span><span class="hljs-doctag">&lt;/param&gt;</span>透传参数</span>
+<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">LoadSceneAsync</span>(<span class="hljs-params"><span class="hljs-keyword">string</span> path, LoadSceneMode loadMode, Action&lt;<span class="hljs-keyword">bool</span>, <span class="hljs-keyword">float</span>, <span class="hljs-keyword">object</span>&gt; callback, <span class="hljs-keyword">object</span> param</span>)</span>;
+</div></code></pre>
+</details>
+<details>
+<summary><font color="red">UnloadSceneAsync</font> 异步卸载场景</summary>
+<pre><code class="language-C#"><div><span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;summary&gt;</span></span>
+<span class="hljs-comment"><span class="hljs-doctag">///</span> 卸载场景方法</span>
+<span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;/summary&gt;</span></span>
+<span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;param name="path"&gt;</span>资源路径<span class="hljs-doctag">&lt;/param&gt;</span></span>
+<span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;param name="callback"&gt;</span> 回调Action<span class="hljs-doctag">&lt;是否完成, 加载进度, 透传参数&gt;</span><span class="hljs-doctag">&lt;/param&gt;</span></span>
+<span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;param name="param"&gt;</span>透传参数<span class="hljs-doctag">&lt;/param&gt;</span></span>
+<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">UnloadSceneAsync</span>(<span class="hljs-params"><span class="hljs-keyword">string</span> path, Action&lt;<span class="hljs-keyword">bool</span>, <span class="hljs-keyword">float</span>, <span class="hljs-keyword">object</span>&gt; callback, <span class="hljs-keyword">object</span> param</span>)</span>;
+</div></code></pre>
+</details>
+<details>
+<summary><font color="red">UnloadAsset</font> 卸载资源</summary>
+<pre><code class="language-C#"><div><span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;summary&gt;</span></span>
+<span class="hljs-comment"><span class="hljs-doctag">///</span> 卸载资源方法，可以在切换场景等场合主动调用</span>
+<span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;/summary&gt;</span></span>
+<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">UnloadAsset</span>(<span class="hljs-params"></span>)</span>;
+</div></code></pre>
+</details>
+<details>
+<summary><font color="red">UnloadBundleAndReInit</font> 重新初始化Bundle相关数据</summary>
+<pre><code class="language-C#"><div><span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;summary&gt;</span></span>
+<span class="hljs-comment"><span class="hljs-doctag">///</span> 重新初始化bundle相关数据，一般配合热更新逻辑使用</span>
+<span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;/summary&gt;</span></span>
+<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">UnloadBundleAndReInit</span>(<span class="hljs-params"></span>)</span>;
+</div></code></pre>
+</details>
+<p>资源加载接口会返回一个资源引用对象（IAssetRef），通过AssetObject属性获取加载的Asset对象。如果需要持有该资源时，调用Retain方法，不再使用该资源时调用Release接口释放资源。Retain()和Release()需要配对使用。下面为资源加载使用样例：</p>
+<pre><code class="language-C#"><div><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title">AssetExampleScript</span> : <span class="hljs-title">MonoBehaviour</span>
+{
+    Material _material;
+    IAssetRef _textureRef;
+    
+    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">Start</span>(<span class="hljs-params"></span>)</span>
+    {
+        <span class="hljs-comment">//异步加载资源</span>
+        AssetManager.LoadAssetAsync(<span class="hljs-string">"SomeDir/texture2"</span>, <span class="hljs-keyword">this</span>.LoadAssetAction, <span class="hljs-literal">null</span>);
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">void</span> <span class="hljs-title">LoadAssetAction</span>(<span class="hljs-params">IAssetRef assetRef, <span class="hljs-keyword">object</span> param</span>)</span>
+    {
+        <span class="hljs-comment">//保持对资源的引用</span>
+        assetRef.Retain();
+        _textureRef = assetRef;
+        <span class="hljs-comment">//获取资源对象并使用</span>
+        _material.mainTexture = assetRef.AssetObject <span class="hljs-keyword">as</span> Texture2D;
+    }
+
+    
+    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">OnDestory</span>(<span class="hljs-params"></span>)</span>
+    {
+        <span class="hljs-comment">//解决对资源的引用，资源管理器会及时释放该资源</span>
+        _textureRef.Release();
+        _textureRef = <span class="hljs-literal">null</span>;
+    }
+}
+</div></code></pre>
+<h2 id="三分包功能">三.分包功能</h2>
+<h3 id="1资源记录工具的使用">1.资源记录工具的使用</h3>
+<ol>
+<li>在EditorMenu中选择Zeus-&gt;Setting-&gt;分包-&gt;分包工具</li>
+</ol>
+<p><img src="Images\%E5%88%86%E5%8C%85%E5%B7%A5%E5%85%B7.png" alt="分包工具"></p>
+<ol start="2">
+<li>点击“开始记录资源”，当按钮文字显示“停止记录资源”则表示记录资源功能已开启，启动游戏就可以开始记录资源</li>
+<li>AssetListTag中设置此次资源记录的标签，标签用于标记资源使用顺序</li>
+<li>Asset Output Path栏设置记录保存路径，路径使用相对于工程目录的相对路径名。</li>
+<li>点击“保存Asset Log”会将记录保存到上一项设置的路径中，文件以“Tag_精确到毫秒的时间.json”命名来避免提交冲突。Editor下退出游戏时，如果没有手动保存Asset Log则会自动保存一次</li>
+</ol>
+<h3 id="2分包打包流程">2.分包打包流程</h3>
+<p>通过资源模块设置窗口(<code>ResourceSettingWindow</code>)可以设置分包相关的参数，包括首包标签和二包资源下载地址。首包标签对应的是资源记录时的记录标签，打包时会把该标签包括在内的所有小于该标签的资源记录文件中记录的资源引用的AssetBundle打入首包内。</p>
+<p>开启分包功能并成功打包之后，输出路径下会有<code>packagename.apk</code>和<code>packagename.subpackage</code>两个文件，后者对应的是二包资源。</p>
+<h3 id="3分包功能接口说明">3.分包功能接口说明</h3>
+<p>AssetManager中也提供了一系列分包功能的接口</p>
+<details>
+<summary><font color="red">DownloadSubpackageBundles</font> 多线程不限速下载二包资源</summary>
+<pre><code class="language-C#"><div><span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;summary&gt;</span></span>
+<span class="hljs-comment"><span class="hljs-doctag">///</span> 下载分包资源，使用多线程</span>
+<span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;/summary&gt;</span></span>
+<span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;param name="maxDownloadingCount"&gt;</span>最大线程数<span class="hljs-doctag">&lt;/param&gt;</span></span>
+<span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;param name="downloadingProgressCallback"&gt;</span>回调函数参数分别为已下载大小(Byte)，总大小(Byte)，平均速度(Byte/S)，是否完成下载，是否有异常(返回优先级最高的异常)。完成下载并且异常为None才表示成功下载<span class="hljs-doctag">&lt;/param&gt;</span></span>
+<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">DownloadSubpackageBundles</span>(<span class="hljs-params"><span class="hljs-keyword">int</span> maxDownloadingCount = <span class="hljs-number">4</span>, Action&lt;<span class="hljs-keyword">double</span>, <span class="hljs-keyword">double</span>, <span class="hljs-keyword">double</span>, SubpackageState, SubpackageError&gt; downloadingProgressCallback = <span class="hljs-literal">null</span></span>)</span>;
+</div></code></pre>
+</details>
+<details>
+<summary><font color="red">DownloadSubpackageInBackground</font> 后台限速下载二包资源</summary>
+<pre><code class="language-C#"><div><span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;summary&gt;</span></span>
+<span class="hljs-comment"><span class="hljs-doctag">///</span> 后台下载分包资源，使用两个线程并限速</span>
+<span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;/summary&gt;</span></span>
+<span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;param name="limitSpeed"&gt;</span>限制最大下载速度，单位为Byte/s<span class="hljs-doctag">&lt;/param&gt;</span></span>
+<span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;param name="downloadingProgressCallback"&gt;</span>回调函数参数分别为已下载大小(Byte)，总大小(Byte)，平均速度(Byte/S)，是否完成下载，是否有异常(返回优先级最高的异常)。完成下载并且异常为None才表示成功下载<span class="hljs-doctag">&lt;/param&gt;</span></span>
+<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">DownloadSubpackageInBackground</span>(<span class="hljs-params"><span class="hljs-keyword">double</span> limitSpeed, Action&lt;<span class="hljs-keyword">double</span>, <span class="hljs-keyword">double</span>, <span class="hljs-keyword">double</span>, SubpackageState, SubpackageError&gt; downloadingProgressCallback = <span class="hljs-literal">null</span></span>)</span>;
+</div></code></pre>
+</details>
+<details>
+<summary><font color="red">IsSubpackageReady</font> 二包资源是否准备完毕</summary>
+<pre><code class="language-C#"><div><span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;summary&gt;</span></span>
+<span class="hljs-comment"><span class="hljs-doctag">///</span> 分包资源是否就绪(已经下载完成)</span>
+<span class="hljs-comment"><span class="hljs-doctag">///</span> 返回false需要调用DownloadSubpackageBundles下载分包资源。</span>
+<span class="hljs-comment"><span class="hljs-doctag">///</span> 返回true 分包资源已经准备好。</span>
+<span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;/summary&gt;</span></span>
+<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">bool</span> <span class="hljs-title">IsSubpackageReady</span>(<span class="hljs-params"></span>)</span>;
+</div></code></pre>
+</details>
+<details>
+<summary><font color="red">PauseDownloading</font> 暂停下载</summary>
+<pre><code class="language-C#"><div><span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;summary&gt;</span></span>
+<span class="hljs-comment"><span class="hljs-doctag">///</span> 暂停下载</span>
+<span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;/summary&gt;</span></span>
+<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">PauseDownloading</span>(<span class="hljs-params"></span>)</span>;
+</div></code></pre>
+</details>
+<details>
+<summary><font color="red">SetCarrierDataNetworkDownloading</font> 设置是否允许使用流量下载</summary>
+<pre><code class="language-C#"><div><span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;summary&gt;</span></span>
+<span class="hljs-comment"><span class="hljs-doctag">///</span> 设置是否允许流量下载</span>
+<span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;/summary&gt;</span></span>
+<span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;param name="isAllowed"&gt;</span><span class="hljs-doctag">&lt;/param&gt;</span></span>
+<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">SetCarrierDataNetworkDownloading</span>(<span class="hljs-params"><span class="hljs-keyword">bool</span> isAllowed</span>)</span>;
+</div></code></pre>
+</details>
+<details>
+<summary><font color="red">GetCarrierDataNetworkDownloadingAllowed</font> 获取流量下载设置</summary>
+<pre><code class="language-C#"><div><span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;summary&gt;</span></span>
+<span class="hljs-comment"><span class="hljs-doctag">///</span> 获取是否允许流量下载</span>
+<span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;/summary&gt;</span></span>
+<span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;returns&gt;</span><span class="hljs-doctag">&lt;/returns&gt;</span></span>
+<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">bool</span> <span class="hljs-title">GetCarrierDataNetworkDownloadingAllowed</span>(<span class="hljs-params"></span>)</span>;     
+</div></code></pre>
+</details>
+<details>
+<summary><font color="red">SetCdnUrl</font> 修改下载地址</summary>
+<pre><code class="language-C#"><div><span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;summary&gt;</span></span>
+<span class="hljs-comment"><span class="hljs-doctag">///</span> 修改二包资源下载Url</span>
+<span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;/summary&gt;</span></span>
+<span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;param name="urlsStr"&gt;</span>用';'分割多个Url<span class="hljs-doctag">&lt;/param&gt;</span></span>
+<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">SetCdnUrl</span>(<span class="hljs-params"><span class="hljs-keyword">string</span> urlsStr</span>)</span>;
+</div></code></pre>
+</details>
+<h4 id="31-subpackagestate">3.1. SubpackageState</h4>
+<pre><code class="language-C#"><div>    <span class="hljs-keyword">enum</span> SubpackageState
+    {
+        <span class="hljs-comment">//空闲阶段，不用处理</span>
+        Idle,
+        <span class="hljs-comment">//准备好开始下载</span>
+        Ready,
+        <span class="hljs-comment">//下载阶段，提供进度</span>
+        Downloading,
+        <span class="hljs-comment">//WIFI切换到运营商网络的自动暂停状态</span>
+        WaitLocalAreaNetwork,
+        <span class="hljs-comment">//错误处理阶段</span>
+        DownloadingError,
+        <span class="hljs-comment">//错误处理阶段</span>
+        SplitingError,
+        <span class="hljs-comment">//暂停</span>
+        Pause,
+        <span class="hljs-comment">//文件分割阶段，提供进度</span>
+        Spliting,
+        <span class="hljs-comment">//出现错误，根据SubpackageError参数弹窗提示</span>
+        Abort,
+        <span class="hljs-comment">//下载并且分割完成</span>
+        Complete
+    }
+</div></code></pre>
+<p>其中<code>Downloading</code>, <code>WaitLocalAreaNetwork</code>, <code>Pause</code>, <code>Abort</code>四个阶段可能会作为参数回调给上层，<code>Downloading</code>会多次回调，其余的只会回调一次</p>
+<h4 id="32-subpackageerror">3.2 SubpackageError</h4>
+<pre><code class="language-C#"><div><span class="hljs-keyword">public</span> <span class="hljs-keyword">enum</span> SubpackageError
+    {
+        <span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;summary&gt;</span></span>
+        <span class="hljs-comment"><span class="hljs-doctag">///</span> 没有错误</span>
+        <span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;/summary&gt;</span></span>
+        None = <span class="hljs-number">0</span>,
+        <span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;summary&gt;</span></span>
+        <span class="hljs-comment"><span class="hljs-doctag">///</span>暂停</span>
+        Pause,
+        <span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;summary&gt;</span></span>
+        <span class="hljs-comment"><span class="hljs-doctag">///</span>没有开启非WIFI环境自动下载时，WIFI切换到运营商网络会回调这个错误</span>
+        <span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;/summary&gt;</span></span>
+        NetworkChange,
+        <span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;summary&gt;</span></span>
+        <span class="hljs-comment"><span class="hljs-doctag">///</span> 下载的分包资源解压或是分割失败。提示用户重试或联系客服。</span>
+        <span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;/summary&gt;</span></span>
+        DecodeError,
+        <span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;summary&gt;</span></span>
+        <span class="hljs-comment"><span class="hljs-doctag">///</span> 下载的分包资源文件MD5值不正确,校验失败。提示用户重试或联系客服。</span>
+        <span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;/summary&gt;</span></span>
+        MD5Error,
+        <span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;summary&gt;</span></span>
+        <span class="hljs-comment"><span class="hljs-doctag">///</span> 下载分包资源文件失败。提示用户检查网络并重试。</span>
+        <span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;/summary&gt;</span></span>
+        DownloadError,
+        <span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;summary&gt;</span></span>
+        <span class="hljs-comment"><span class="hljs-doctag">///</span> 找不到要下载的文件错误。提示用户联系客服。</span>
+        <span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;/summary&gt;</span></span>
+        HttpStatusCode404Error,
+        <span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;summary&gt;</span></span>
+        <span class="hljs-comment"><span class="hljs-doctag">///</span> 磁盘空间不足错误。提示用户清理磁盘空间。</span>
+        <span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;/summary&gt;</span></span>
+        HardDiskFullError,
+        <span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;summary&gt;</span></span>
+        <span class="hljs-comment"><span class="hljs-doctag">///</span> bundlelist中找不到bundle。(这个错误一般不会出现)</span>
+        <span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;/summary&gt;</span></span>
+        MissingError
+    }
+</div></code></pre>
+<p>其中错误类型<code>SubpackageError.Pause</code>和状态<code>SubpackageState.Pause</code>, 错误类型<code>SubpackageError.NetworkChange</code>和状态<code>SubpackageState.WaitLocalAreaNetwork</code> 是成对出现的，无论对状态还是错误类型进行判断都可，其余的错误类型需要在状态为<code>SubpackageState.Abort</code>的时候去判断和处理。</p>
+<p>补充说明:</p>
+<ul>
+<li>无论是前台还是后台下载，当状态为<code>SubpackageState.WaitLocalAreaNetwork</code>都表示当前处于运营商(4G/5G)网络，并且没有开启流量下载功能，如果此时切换为Wifi环境，会自动切换为下载状态，不需要再次调用下载接口</li>
+<li>前台下载时遇到下载错误都会将状态切换为<code>SubpackageState.Abort</code>并回调，如需继续下载需要重新调用下载接口; 后台下载时遇到网络环境问题如弱网，网络连接断开不会回调给上层，而是每隔两秒自动重试一次。</li>
+</ul>
+<h2 id="四打包">四.打包</h2>
+<p>基于图形化配置的打包方案，方便根据资源和业务特点定制bundle打包策略。
+<img src="Images\Bundle%E6%89%93%E5%8C%85%E7%AA%97%E5%8F%A3.png" alt="打包窗口"></p>
+
+    </body>
+    </html>

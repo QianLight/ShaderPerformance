@@ -1,0 +1,61 @@
+// Each #kernel tells which function to compile; you can have many kernels
+
+#pragma kernel CSMain1Thread
+#pragma kernel CSMain8Thread
+#pragma kernel CSMain64Thread
+#pragma kernel CSMain1024Thread
+
+struct MeshData
+{
+    float4 meshVertexColor;
+    float2 meshUV;
+};
+
+RWStructuredBuffer<MeshData> _DstMeshDataBuffer;
+RWStructuredBuffer<MeshData> _SrcMeshDataBuffer;
+RWStructuredBuffer<float4> _ResultColorBuffer;
+
+int _LOD0VertexCount;
+int _DstVertexCount;
+
+float4 GetVertexColor(MeshData DstMeshData)
+{
+    float tempDistance = 100000;
+    float4 resultColor = DstMeshData.meshVertexColor;
+    for (int i = 0; i < _LOD0VertexCount; i ++)
+    {
+        float2 tempLOD0UV = _SrcMeshDataBuffer[i].meshUV;
+        float2 deltaUV = DstMeshData.meshUV - tempLOD0UV;
+        float sqrDistance = dot(deltaUV, deltaUV);
+
+        float isMax = step(tempDistance, sqrDistance); // sqrDistance >= tempDistance :: 1
+        tempDistance = lerp(sqrDistance, tempDistance, isMax);
+        resultColor = lerp(_SrcMeshDataBuffer[i].meshVertexColor, resultColor, isMax);
+    }
+
+    return resultColor;
+}
+
+[numthreads(1,1,1)]
+void CSMain1Thread(uint3 id : SV_DispatchThreadID)
+{
+    _ResultColorBuffer[id.x] = GetVertexColor(_DstMeshDataBuffer[id.x]);
+}
+
+[numthreads(8,1,1)]
+void CSMain8Thread(uint3 id : SV_DispatchThreadID)
+{
+    _ResultColorBuffer[id.x] = GetVertexColor(_DstMeshDataBuffer[id.x]);
+}
+
+[numthreads(64,1,1)]
+void CSMain64Thread(uint3 id : SV_DispatchThreadID)
+{
+    _ResultColorBuffer[id.x] = GetVertexColor(_DstMeshDataBuffer[id.x]);
+}
+
+[numthreads(1024,1,1)]
+void CSMain1024Thread(uint3 id : SV_DispatchThreadID)
+{
+    _ResultColorBuffer[id.x] = GetVertexColor(_DstMeshDataBuffer[id.x]);
+}

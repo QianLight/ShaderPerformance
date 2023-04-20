@@ -1,0 +1,296 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fefe62ebaf157754e8ef2518cbc97c4b, type: 3}
+  m_Name: BuildBundleConfig
+  m_EditorClassIdentifier: 
+  configs:
+  - hash: 8f307c0e-1d0c-4657-a800-2a0f0925b62e
+    dir: Assets/BundleRes/Animation
+    assetBundleName: 
+    rules:
+    - path: .anim
+      op: 1
+      buildPlatform: 7
+    enable: 1
+  - hash: ddd8b5f0-0a28-4642-8d48-654d68c95ce0
+    dir: Assets/BundleRes/AvatarMask
+    assetBundleName: 
+    rules:
+    - path: .mask
+      op: 1
+      buildPlatform: 4294967295
+    enable: 1
+  - hash: c8308d0c-95df-41f0-ab26-49f4cd60fe02
+    dir: Assets/BundleRes/Config
+    assetBundleName: 
+    rules:
+    - path: .asset
+      op: 1
+      buildPlatform: 4294967295
+    - path: .xml
+      op: 1
+      buildPlatform: 4294967295
+    - path: .bytes
+      op: 7
+      buildPlatform: 4294967295
+    - path: .mat
+      op: 1
+      buildPlatform: 4294967295
+    enable: 1
+  - hash: 29a31360-4c05-4856-ad26-2c67ba79465f
+    dir: Assets/BundleRes/Controller
+    assetBundleName: 
+    rules:
+    - path: .controller
+      op: 1
+      buildPlatform: 7
+    enable: 1
+  - hash: c822e1f7-d8cb-4518-9358-c52eaed60839
+    dir: Assets/BundleRes/Curve
+    assetBundleName: 
+    rules:
+    - path: .asset
+      op: 1
+      buildPlatform: 4294967295
+    enable: 1
+  - hash: 732656e4-2ba7-4e2e-bede-34cf9c8309cb
+    dir: Assets/BundleRes/Diy
+    assetBundleName: 
+    rules:
+    - path: .tga
+      op: 1
+      buildPlatform: 4294967295
+    enable: 1
+  - hash: aafaa8a5-e97e-46fd-a0cd-dfba899741e4
+    dir: Assets/BundleRes/EditorAssetRes/Config
+    assetBundleName: 
+    rules:
+    - path: .resbytes
+      op: 8
+      buildPlatform: 4294967295
+    - path: .asset
+      op: 5
+      buildPlatform: 4294967295
+    enable: 1
+  - hash: 77540a56-17eb-4131-a4ca-1d206e2af213
+    dir: Assets/BundleRes/LOD
+    assetBundleName: 
+    rules:
+    - path: .mesh
+      op: 1
+      buildPlatform: 4294967295
+    - path: .bytes
+      op: 1
+      buildPlatform: 4294967295
+    enable: 1
+  - hash: 32066eb7-6c85-4bf8-9e24-5b215cc1847b
+    dir: Assets/BundleRes/Prefabs/Cinemachine
+    assetBundleName: 
+    rules:
+    - path: .prefab
+      op: 1
+      buildPlatform: 4294967295
+    - path: .asset
+      op: 1
+      buildPlatform: 4294967295
+    enable: 1
+  - hash: 9e1daa33-535f-463d-bce7-ff5738b44e22
+    dir: Assets/BundleRes/Runtime/SFX
+    assetBundleName: 
+    rules:
+    - path: .prefab
+      op: 1
+      buildPlatform: 4294967295
+    enable: 1
+  - hash: e2c3030b-4ebb-464d-9a45-45f1479575f3
+    dir: Assets/BundleRes/Scene
+    assetBundleName: 
+    rules: []
+    enable: 1
+  - hash: 89e924c5-a7a4-4353-8877-e8c23ea9d41d
+    dir: Assets/BundleRes/Scene
+    assetBundleName: 
+    rules:
+    - path: .unity
+      op: 1
+      buildPlatform: 4294967295
+    enable: 1
+  - hash: 51fbdc5a-c727-4a57-bcc7-5e08ecfaa4a1
+    dir: Assets/BundleRes/Table
+    assetBundleName: 
+    rules:
+    - path: .txt
+      op: 1
+      buildPlatform: 7
+    enable: 1
+  - hash: 0e792768-394d-4b55-b0c5-436b0755d885
+    dir: Assets/BundleRes/Timeline
+    assetBundleName: 
+    rules:
+    - path: .prefab
+      op: 1
+      buildPlatform: 7
+    - path: .playable
+      op: 2
+      buildPlatform: 7
+    enable: 1
+  - hash: f7c40925-194c-4d3d-9e0e-d555cf64b6ee
+    dir: Assets/BundleRes/UI
+    assetBundleName: 
+    rules:
+    - path: .prefab
+      op: 1
+      buildPlatform: 7
+    - path: .mat
+      op: 1
+      buildPlatform: 7
+    - path: .shader
+      op: 1
+      buildPlatform: 7
+    - path: .ttf
+      op: 1
+      buildPlatform: 7
+    - path: .otf
+      op: 1
+      buildPlatform: 7
+    - path: .spriteatlas
+      op: 1
+      buildPlatform: 7
+    enable: 1
+  - hash: 0a65df39-a6df-4d76-93be-af4c6ecd242c
+    dir: Assets/BundleRes/UIBackground
+    assetBundleName: 
+    rules:
+    - path: .png
+      op: 1
+      buildPlatform: 7
+    - path: .tga
+      op: 1
+      buildPlatform: 4294967295
+    enable: 1
+  - hash: 31d68e93-ef8f-4078-8bed-54573b45c246
+    dir: Assets/BundleRes/Version
+    assetBundleName: 
+    rules:
+    - path: .bytes
+      op: 1
+      buildPlatform: 4294967295
+    enable: 1
+  - hash: b5f2d2aa-af96-4f08-811e-8ea00024e201
+    dir: Assets/Engine/Editor/EditorResources
+    assetBundleName: 
+    rules:
+    - path: EditorPrefabData.asset
+      op: 9
+      buildPlatform: 4294967295
+    enable: 1
+  - hash: b794e52d-74c2-4b47-81a1-4baa60a27648
+    dir: Assets/Engine/Runtime/Res
+    assetBundleName: CFPostProcess
+    rules:
+    - path: EngineResources.asset
+      op: 3
+      buildPlatform: 7
+    enable: 1
+  - hash: aa157dba-d2c3-4b5c-8bfc-c4d4890cfa40
+    dir: Assets/Engine/Runtime/Res/Config
+    assetBundleName: 
+    rules:
+    - path: .bytes
+      op: 7
+      buildPlatform: 4294967295
+    enable: 1
+  - hash: fa610c4b-02d9-4da5-8916-7345ab5f2847
+    dir: Assets/Engine/Runtime/Res/EditorConfig
+    assetBundleName: 
+    rules:
+    - path: .asset
+      op: 5
+      buildPlatform: 7
+    enable: 1
+  - hash: c771616f-7d11-4ae9-ad71-2ed5b9d591be
+    dir: Assets/Engine/Runtime/Res/MatShader
+    assetBundleName: CFShader
+    rules:
+    - path: .mat
+      op: 3
+      buildPlatform: 7
+    enable: 1
+  - hash: 43ff6e6a-6b20-49dc-889f-0a469ffe7c6b
+    dir: Assets/Engine/Runtime/Shaders
+    assetBundleName: CFShader
+    rules:
+    - path: .shader
+      op: 3
+      buildPlatform: 7
+    enable: 1
+  - hash: 9d657429-b28b-4db5-8acd-3c3832f3bf2c
+    dir: Assets/Scenes/Default
+    assetBundleName: 
+    rules:
+    - path: .unity
+      op: 1
+      buildPlatform: 4294967295
+    enable: 1
+  - hash: ad04fde7-c31b-46c0-98b2-8ece7fac5d6d
+    dir: Assets/BundleRes/SceneConfig
+    assetBundleName: 
+    rules:
+    - path: .asset
+      op: 1
+      buildPlatform: 4294967295
+    enable: 1
+  - hash: 61aff30a-2a94-4f1e-918f-b34a0259d167
+    dir: Assets/BundleRes/SpecialAction
+    assetBundleName: 
+    rules:
+    - path: .asset
+      op: 1
+      buildPlatform: 4294967295
+    enable: 1
+  - hash: d765c181-6b0e-42b8-87e5-8f344610d5ee
+    dir: Assets/BundleRes/Timeline/Materials
+    assetBundleName: 
+    rules:
+    - path: .mat
+      op: 1
+      buildPlatform: 4294967295
+    enable: 1
+  - hash: 3830322c-ff18-4199-a6c7-f185d6e95f3e
+    dir: Assets/BundleRes/Spine2D
+    assetBundleName: 
+    rules:
+    - path: .asset
+      op: 1
+      buildPlatform: 4294967295
+    enable: 1
+  - hash: b3466f26-b90b-42f9-b4ab-50ed899f9242
+    dir: Assets/BundleRes/CommonData
+    assetBundleName: 
+    rules:
+    - path: .txt
+      op: 1
+      buildPlatform: 4294967295
+    enable: 1
+  - hash: 27386128-8e5b-43a0-8d94-8e66603b162b
+    dir: Assets/BundleRes/Prefabs/StreamerWorld
+    assetBundleName: 
+    rules:
+    - path: .prefab
+      op: 1
+      buildPlatform: 4294967295
+    - path: .asset
+      op: 1
+      buildPlatform: 4294967295
+    enable: 1
+  outPackagePath: []
+  timeHash: 132599117548019050

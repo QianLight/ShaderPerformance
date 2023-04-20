@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de3b789ba9d32b44282a8e02c0f5b3cc, type: 3}
+  m_Name: LookDev_Lightmap
+  m_EditorClassIdentifier: 
+  volumns:
+  - name: GlobalVolum
+    ligthmapRes: []
+  - name: Chunk_0_0
+    ligthmapRes:
+    - color: {fileID: 2800000, guid: 7ca22c21b6714ea4293f6bed11e0cded, type: 3}
+      shadowMask: {fileID: 0}
+      dir: {fileID: 0}
+      combine: {fileID: 2800000, guid: 0ff41ebcf6958ec42a780a0445a0b5ad, type: 3}

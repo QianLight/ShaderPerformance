@@ -1,0 +1,12 @@
+fileFormatVersion: 2
+guid: fae4bb2e3ef84ac4d86ef083c66dc276
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - flareSprite: {fileID: 2800000, guid: 17151e29ca71d0642a362d153c446b50, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

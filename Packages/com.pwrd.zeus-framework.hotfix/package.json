@@ -1,0 +1,11 @@
+{
+    "dependencies": {
+    "com.pwrd.zeus-framework.core": "2.0.0",
+    "com.pwrd.zeus-framework.http": "2.0.0",
+    "com.pwrd.zeus-framework.assets": "2.0.0"
+	}, 
+    "description": "Zeus Hotfix", 
+    "displayName": "Zeus Hotfix", 
+    "name": "com.pwrd.zeus-framework.hotfix",
+    "version": "2.0.0"
+}

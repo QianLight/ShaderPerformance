@@ -1,0 +1,1116 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-2995776625501243105
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48a79b01ea5641d4aa6daa2e23605641, type: 3}
+  m_Name: Bloom
+  m_EditorClassIdentifier: 
+  active:
+    overrideState: 1
+    value: 1
+    curve:
+      name: 
+      mask: 1
+      data: []
+  key: 
+  flag:
+    flag: 2
+  bloomParam:
+    overrideState: 1
+    value: {x: 0.6, y: 1, z: 1, w: 0}
+    curve0:
+      name: 
+      mask: 1
+      data: []
+    curve1:
+      name: 
+      mask: 2
+      data: []
+    curve2:
+      name: 
+      mask: 4
+      data: []
+    curve3:
+      name: 
+      mask: 8
+      data: []
+  color:
+    overrideState: 1
+    value: {r: 1, g: 1, b: 1, a: 1}
+    curve:
+      name: 
+      mask: 1
+      data: []
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91ec29a510eeae34cabacf001f2a35d0, type: 3}
+  m_Name: LookDev_Profiles
+  m_EditorClassIdentifier: 
+  settings:
+  - {fileID: 114867208163800748}
+  - {fileID: 114220333380892564}
+  - {fileID: 114887055228128398}
+  - {fileID: 114432476186627708}
+  - {fileID: 114401545951992762}
+  - {fileID: 114897181816069096}
+  - {fileID: -2995776625501243105}
+--- !u!114 &114220333380892564
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e2fbc579c8583544b861221b248a3c7, type: 3}
+  m_Name: Lighting
+  m_EditorClassIdentifier: 
+  active:
+    overrideState: 1
+    value: 1
+    curve:
+      name: 
+      mask: 1
+      data: []
+  key: 
+  flag:
+    flag: 2
+  mainLightInfo:
+    overrideState: 1
+    value:
+      lightDir: {x: 0.4803952, y: 0.5224638, z: 0.7044517, w: 2.8}
+      lightColor: {r: 1, g: 0.9991296, b: 0.8915094, a: 1}
+    curve0:
+      name: 
+      mask: 1
+      data: []
+    curve1:
+      name: 
+      mask: 2
+      data: []
+  addLightInfo:
+    overrideState: 1
+    value:
+      lightDir: {x: 0.118024394, y: 0.66199243, z: 0.74015963, w: 0.3}
+      lightColor: {r: 0.48215556, g: 0.50052917, b: 0.5188679, a: 1}
+    curve0:
+      name: 
+      mask: 1
+      data: []
+    curve1:
+      name: 
+      mask: 2
+      data: []
+  roleLightColor:
+    overrideState: 1
+    value: {r: 1.6081778, g: 1.5993278, b: 1.5550777, a: 1}
+    curve:
+      name: 
+      mask: 1
+      data: []
+  lightParam:
+    overrideState: 1
+    value: {x: 0, y: 5, z: 1, w: 328}
+    curve0:
+      name: 
+      mask: 1
+      data: []
+    curve1:
+      name: 
+      mask: 2
+      data: []
+    curve2:
+      name: 
+      mask: 4
+      data: []
+    curve3:
+      name: 
+      mask: 8
+      data: []
+  roleLightDirParam:
+    overrideState: 1
+    value: {x: 1, y: 0, z: 0, w: 0}
+    curve0:
+      name: 
+      mask: 1
+      data: []
+    curve1:
+      name: 
+      mask: 2
+      data: []
+    curve2:
+      name: 
+      mask: 4
+      data: []
+    curve3:
+      name: 
+      mask: 8
+      data: []
+  lightParam1:
+    overrideState: 1
+    value: {x: 1, y: 0, z: 0, w: 0}
+    curve0:
+      name: 
+      mask: 1
+      data: []
+    curve1:
+      name: 
+      mask: 2
+      data: []
+    curve2:
+      name: 
+      mask: 4
+      data: []
+    curve3:
+      name: 
+      mask: 8
+      data: []
+  rimLightColor:
+    overrideState: 1
+    value: {r: 1, g: 1, b: 1, a: 1}
+    curve:
+      name: 
+      mask: 1
+      data: []
+  waterLightInfo:
+    overrideState: 1
+    value:
+      lightDir: {x: -0.96832764, y: 0.24533987, z: -0.04636697, w: 0}
+      lightColor: {r: 0, g: 0, b: 0, a: 1}
+    curve0:
+      name: 
+      mask: 1
+      data: []
+    curve1:
+      name: 
+      mask: 2
+      data: []
+--- !u!114 &114401545951992762
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5cb060d42ddb55240863cb44c76ec9d0, type: 3}
+  m_Name: SceneMisc
+  m_EditorClassIdentifier: 
+  active:
+    overrideState: 1
+    value: 1
+    curve:
+      name: 
+      mask: 1
+      data: []
+  key: 
+  flag:
+    flag: 2
+  cameraParam0:
+    overrideState: 1
+    value: {x: 60, y: 0.1, z: 1000, w: -1}
+    curve0:
+      name: 
+      mask: 1
+      data: []
+    curve1:
+      name: 
+      mask: 2
+      data: []
+    curve2:
+      name: 
+      mask: 4
+      data: []
+    curve3:
+      name: 
+      mask: 8
+      data: []
+  windParam0:
+    overrideState: 1
+    value: {x: 0, y: 1, z: 1, w: 0.1}
+    curve0:
+      name: 
+      mask: 1
+      data: []
+    curve1:
+      name: 
+      mask: 2
+      data: []
+    curve2:
+      name: 
+      mask: 4
+      data: []
+    curve3:
+      name: 
+      mask: 8
+      data: []
+  windParam1:
+    overrideState: 1
+    value: {x: 0.01, y: 0.04, z: 0.13, w: 0.1}
+    curve0:
+      name: 
+      mask: 1
+      data: []
+    curve1:
+      name: 
+      mask: 2
+      data: []
+    curve2:
+      name: 
+      mask: 4
+      data: []
+    curve3:
+      name: 
+      mask: 8
+      data: []
+  ambientWindMap:
+    overrideState: 1
+    value: AmbientWind_Noise
+    resType: 0
+    resOffset: 100
+    asset: {fileID: 2800000, guid: be62a7a9e07569045b8f71cbf95cf733, type: 3}
+  sceneColor:
+    overrideState: 1
+    value: {r: 1, g: 1, b: 1, a: 1}
+    curve:
+      name: 
+      mask: 1
+      data: []
+--- !u!114 &114432476186627708
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62e2b920ea5fcaa4982e7fc50bf690a8, type: 3}
+  m_Name: Fog
+  m_EditorClassIdentifier: 
+  active:
+    overrideState: 1
+    value: 1
+    curve:
+      name: 
+      mask: 1
+      data: []
+  key: 
+  flag:
+    flag: 2
+  baseDistance:
+    overrideState: 1
+    value:
+      start: 0
+      end: 0
+      intensityMin: 0
+      intensityMax: 0
+      intensityScale: 0
+      fallOff: 0
+  baseHeight:
+    overrideState: 1
+    value:
+      start: 0
+      end: 0
+      intensityMin: 0
+      intensityMax: 0
+      intensityScale: 0
+      fallOff: 0
+  noiseDistance:
+    overrideState: 1
+    value:
+      start: 0
+      end: 0
+      intensityMin: 0
+      intensityMax: 0
+      intensityScale: 0
+      fallOff: 0
+  noiseHeight:
+    overrideState: 1
+    value:
+      start: 0
+      end: 0
+      intensityMin: 0
+      intensityMax: 0
+      intensityScale: 0
+      fallOff: 0
+  noiseScaleOffset:
+    overrideState: 1
+    value: {x: 0, y: 0, z: 0, w: 0}
+    curve0:
+      name: 
+      mask: 1
+      data: []
+    curve1:
+      name: 
+      mask: 2
+      data: []
+    curve2:
+      name: 
+      mask: 4
+      data: []
+    curve3:
+      name: 
+      mask: 8
+      data: []
+  noiseParams:
+    overrideState: 1
+    value: {x: 0, y: 0, z: 0, w: 0}
+    curve0:
+      name: 
+      mask: 1
+      data: []
+    curve1:
+      name: 
+      mask: 2
+      data: []
+    curve2:
+      name: 
+      mask: 4
+      data: []
+    curve3:
+      name: 
+      mask: 8
+      data: []
+  scatterParams:
+    overrideState: 1
+    value: {x: 0, y: 0, z: 0, w: 0}
+    curve0:
+      name: 
+      mask: 1
+      data: []
+    curve1:
+      name: 
+      mask: 2
+      data: []
+    curve2:
+      name: 
+      mask: 4
+      data: []
+    curve3:
+      name: 
+      mask: 8
+      data: []
+  startColor:
+    overrideState: 1
+    value: {r: 1, g: 1, b: 1, a: 1}
+    curve:
+      name: 
+      mask: 1
+      data: []
+  endColor:
+    overrideState: 1
+    value: {r: 1, g: 1, b: 1, a: 1}
+    curve:
+      name: 
+      mask: 1
+      data: []
+  scatterColor:
+    overrideState: 1
+    value: {r: 1, g: 0.91, b: 0.7, a: 1}
+    curve:
+      name: 
+      mask: 1
+      data: []
+--- !u!114 &114867208163800748
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 563a3be639a9e454da3419cb53dd4eb6, type: 3}
+  m_Name: Ambient
+  m_EditorClassIdentifier: 
+  active:
+    overrideState: 1
+    value: 1
+    curve:
+      name: 
+      mask: 1
+      data: []
+  key: 
+  flag:
+    flag: 2
+  sceneSH:
+    overrideState: 1
+    value:
+      shAr: {x: -0.00021178072, y: 0.0063487613, z: 0.0012043951, w: 0.1793931}
+      shAg: {x: -0.00047769427, y: 0.053653087, z: 0.0023738022, w: 0.29509073}
+      shAb: {x: -0.0005919628, y: 0.14656742, z: 0.0032285934, w: 0.4027065}
+      shBr: {x: 0.000013945168, y: 0.0001896167, z: -0.01385642, w: -0.00020104082}
+      shBg: {x: 0.00003028016, y: 0.00039515595, z: 0.0030889385, w: -0.00056724675}
+      shBb: {x: 0.000101043915, y: 0.00061176694, z: 0.0013001817, w: -0.015386243}
+      shC: {x: -0.015386243, y: 0.0031690612, z: 0.0011345573, w: 1}
+      ambientMode: 1
+      flatColor: {r: 0, g: 0, b: 0, a: 1}
+      skyColor: {r: 0.23985404, g: 0.38002855, b: 0.6603774, a: 1}
+      equatorColor: {r: 0.1473389, g: 0.30233178, b: 0.4056604, a: 1}
+      groundColor: {r: 0.21698111, g: 0.18829022, b: 0.13612494, a: 1}
+      skyCube: {fileID: 0}
+      skyIntensity: 1
+      debug: 0
+    curve:
+      name: 
+      mask: 1
+      data: []
+  roleSH:
+    overrideState: 1
+    value:
+      shAr: {x: 0, y: 0, z: 0, w: 0}
+      shAg: {x: 0, y: 0, z: 0, w: 0}
+      shAb: {x: 0, y: 0, z: 0, w: 0}
+      shBr: {x: 0, y: 0, z: 0, w: 0}
+      shBg: {x: 0, y: 0, z: 0, w: 0}
+      shBb: {x: 0, y: 0, z: 0, w: 0}
+      shC: {x: 0, y: 0, z: 0, w: 0}
+      ambientMode: 0
+      flatColor: {r: 0.21176471, g: 0.22745098, b: 0.25882354, a: 1}
+      skyColor: {r: 0.21176471, g: 0.22745098, b: 0.25882354, a: 1}
+      equatorColor: {r: 0.11372549, g: 0.1254902, b: 0.13333334, a: 1}
+      groundColor: {r: 0.047058824, g: 0.043137256, b: 0.03529412, a: 1}
+      skyCube: {fileID: 0}
+      skyIntensity: 1
+      debug: 0
+    curve:
+      name: 
+      mask: 1
+      data: []
+  ambientParam:
+    overrideState: 1
+    value: {x: 1, y: 0.5, z: 1, w: 0}
+    curve0:
+      name: 
+      mask: 1
+      data: []
+    curve1:
+      name: 
+      mask: 2
+      data: []
+    curve2:
+      name: 
+      mask: 4
+      data: []
+    curve3:
+      name: 
+      mask: 8
+      data: []
+  skyBoxMat:
+    overrideState: 1
+    value: Scene/skybox/sky/sky_15
+    resType: 9
+    resOffset: 1
+    asset: {fileID: 2100000, guid: efa2f6390782dde459b2fc4ca9b0d05f, type: 2}
+  envCube:
+    overrideState: 1
+    value: Env_PanBake_CubeHDR
+    resType: 13
+    resOffset: 0
+    asset: {fileID: 8900000, guid: 9a6a20c63cb6dfa4eaa7c77076fd6d9c, type: 3}
+  ambientParam1:
+    overrideState: 1
+    value: {x: 1, y: 1, z: 0.5, w: 10}
+    curve0:
+      name: 
+      mask: 1
+      data: []
+    curve1:
+      name: 
+      mask: 2
+      data: []
+    curve2:
+      name: 
+      mask: 4
+      data: []
+    curve3:
+      name: 
+      mask: 8
+      data: []
+  ambientParam2:
+    overrideState: 1
+    value: {x: 4.594794, y: 1, z: 0, w: 1}
+    curve0:
+      name: 
+      mask: 1
+      data: []
+    curve1:
+      name: 
+      mask: 2
+      data: []
+    curve2:
+      name: 
+      mask: 4
+      data: []
+    curve3:
+      name: 
+      mask: 8
+      data: []
+--- !u!114 &114887055228128398
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5bd94603842707e4a8292dab74320674, type: 3}
+  m_Name: Shadow
+  m_EditorClassIdentifier: 
+  active:
+    overrideState: 1
+    value: 1
+    curve:
+      name: 
+      mask: 1
+      data: []
+  key: 
+  flag:
+    flag: 2
+  shadowMode:
+    overrideState: 1
+    value: 2
+  shadowParam0:
+    overrideState: 1
+    value: {x: 16, y: 32, z: 64, w: 10}
+    curve0:
+      name: 
+      mask: 1
+      data: []
+    curve1:
+      name: 
+      mask: 2
+      data: []
+    curve2:
+      name: 
+      mask: 4
+      data: []
+    curve3:
+      name: 
+      mask: 8
+      data: []
+  shadowParam1:
+    overrideState: 1
+    value: {x: 0.1, y: 0.2, z: 0.3, w: 0.2}
+    curve0:
+      name: 
+      mask: 1
+      data: []
+    curve1:
+      name: 
+      mask: 2
+      data: []
+    curve2:
+      name: 
+      mask: 4
+      data: []
+    curve3:
+      name: 
+      mask: 8
+      data: []
+  shadowMisc:
+    overrideState: 1
+    value: {x: 0, y: 1, z: 1, w: 1}
+    curve0:
+      name: 
+      mask: 1
+      data: []
+    curve1:
+      name: 
+      mask: 2
+      data: []
+    curve2:
+      name: 
+      mask: 4
+      data: []
+    curve3:
+      name: 
+      mask: 8
+      data: []
+  color:
+    overrideState: 1
+    value: {r: 0, g: 0, b: 0, a: 1}
+    curve:
+      name: 
+      mask: 1
+      data: []
+  shadowMisc1:
+    overrideState: 1
+    value: {x: 0.08, y: 0, z: 0, w: 1}
+    curve0:
+      name: 
+      mask: 1
+      data: []
+    curve1:
+      name: 
+      mask: 2
+      data: []
+    curve2:
+      name: 
+      mask: 4
+      data: []
+    curve3:
+      name: 
+      mask: 8
+      data: []
+  shadowMisc2:
+    overrideState: 1
+    value: {x: 0.3, y: 0, z: 0, w: 0}
+    curve0:
+      name: 
+      mask: 1
+      data: []
+    curve1:
+      name: 
+      mask: 2
+      data: []
+    curve2:
+      name: 
+      mask: 4
+      data: []
+    curve3:
+      name: 
+      mask: 8
+      data: []
+  cloudMap:
+    overrideState: 1
+    value: 
+    resType: 255
+    resOffset: 2
+    asset: {fileID: 0}
+--- !u!114 &114897181816069096
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: adb84e30e02715445aeb9959894e3b4d, type: 3}
+  m_Name: ColorGrading
+  m_EditorClassIdentifier: 
+  active:
+    overrideState: 1
+    value: 1
+    curve:
+      name: 
+      mask: 1
+      data: []
+  key: 
+  flag:
+    flag: 2
+  tonemapper:
+    overrideState: 1
+    value: 0
+  customTone0:
+    overrideState: 1
+    value: {x: 0.3, y: 0.5, z: 0.5, w: 1}
+    curve0:
+      name: 
+      mask: 1
+      data: []
+    curve1:
+      name: 
+      mask: 2
+      data: []
+    curve2:
+      name: 
+      mask: 4
+      data: []
+    curve3:
+      name: 
+      mask: 8
+      data: []
+  customTone1:
+    overrideState: 1
+    value: {x: 0.1, y: 1, z: 0, w: 0}
+    curve0:
+      name: 
+      mask: 1
+      data: []
+    curve1:
+      name: 
+      mask: 2
+      data: []
+    curve2:
+      name: 
+      mask: 4
+      data: []
+    curve3:
+      name: 
+      mask: 8
+      data: []
+  colorAdjustments:
+    overrideState: 1
+    value: {x: 0, y: 5, z: 0, w: 0}
+    curve0:
+      name: 
+      mask: 1
+      data: []
+    curve1:
+      name: 
+      mask: 2
+      data: []
+    curve2:
+      name: 
+      mask: 4
+      data: []
+    curve3:
+      name: 
+      mask: 8
+      data: []
+  colorFilter:
+    overrideState: 1
+    value: {r: 1, g: 1, b: 1, a: 1}
+    curve:
+      name: 
+      mask: 1
+      data: []
+  whiteBalance:
+    overrideState: 1
+    value: {x: 0, y: 0, z: 0, w: 0}
+    curve0:
+      name: 
+      mask: 1
+      data: []
+    curve1:
+      name: 
+      mask: 2
+      data: []
+    curve2:
+      name: 
+      mask: 4
+      data: []
+    curve3:
+      name: 
+      mask: 8
+      data: []
+  shadowColor:
+    overrideState: 1
+    value: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+    curve:
+      name: 
+      mask: 1
+      data: []
+  highlightColor:
+    overrideState: 1
+    value: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+    curve:
+      name: 
+      mask: 1
+      data: []
+  redInOut:
+    overrideState: 1
+    value: {x: 100, y: 0, z: 0, w: 0}
+    curve0:
+      name: 
+      mask: 1
+      data: []
+    curve1:
+      name: 
+      mask: 2
+      data: []
+    curve2:
+      name: 
+      mask: 4
+      data: []
+    curve3:
+      name: 
+      mask: 8
+      data: []
+  greenInOut:
+    overrideState: 1
+    value: {x: 0, y: 100, z: 0, w: 0}
+    curve0:
+      name: 
+      mask: 1
+      data: []
+    curve1:
+      name: 
+      mask: 2
+      data: []
+    curve2:
+      name: 
+      mask: 4
+      data: []
+    curve3:
+      name: 
+      mask: 8
+      data: []
+  blueInOut:
+    overrideState: 1
+    value: {x: 0, y: 0, z: 100, w: 0}
+    curve0:
+      name: 
+      mask: 1
+      data: []
+    curve1:
+      name: 
+      mask: 2
+      data: []
+    curve2:
+      name: 
+      mask: 4
+      data: []
+    curve3:
+      name: 
+      mask: 8
+      data: []
+  lift:
+    overrideState: 1
+    value: {x: 1, y: 1, z: 1, w: 0}
+    curve0:
+      name: 
+      mask: 1
+      data: []
+    curve1:
+      name: 
+      mask: 2
+      data: []
+    curve2:
+      name: 
+      mask: 4
+      data: []
+    curve3:
+      name: 
+      mask: 8
+      data: []
+  gamma:
+    overrideState: 1
+    value: {x: 1, y: 1, z: 1, w: 0}
+    curve0:
+      name: 
+      mask: 1
+      data: []
+    curve1:
+      name: 
+      mask: 2
+      data: []
+    curve2:
+      name: 
+      mask: 4
+      data: []
+    curve3:
+      name: 
+      mask: 8
+      data: []
+  gain:
+    overrideState: 1
+    value: {x: 1, y: 1, z: 1, w: 0}
+    curve0:
+      name: 
+      mask: 1
+      data: []
+    curve1:
+      name: 
+      mask: 2
+      data: []
+    curve2:
+      name: 
+      mask: 4
+      data: []
+    curve3:
+      name: 
+      mask: 8
+      data: []
+  shadows:
+    overrideState: 1
+    value: {x: 1, y: 1, z: 1, w: 0}
+    curve0:
+      name: 
+      mask: 1
+      data: []
+    curve1:
+      name: 
+      mask: 2
+      data: []
+    curve2:
+      name: 
+      mask: 4
+      data: []
+    curve3:
+      name: 
+      mask: 8
+      data: []
+  midtones:
+    overrideState: 1
+    value: {x: 1, y: 1, z: 1, w: 0}
+    curve0:
+      name: 
+      mask: 1
+      data: []
+    curve1:
+      name: 
+      mask: 2
+      data: []
+    curve2:
+      name: 
+      mask: 4
+      data: []
+    curve3:
+      name: 
+      mask: 8
+      data: []
+  highlights:
+    overrideState: 1
+    value: {x: 1, y: 1, z: 1, w: 0}
+    curve0:
+      name: 
+      mask: 1
+      data: []
+    curve1:
+      name: 
+      mask: 2
+      data: []
+    curve2:
+      name: 
+      mask: 4
+      data: []
+    curve3:
+      name: 
+      mask: 8
+      data: []
+  shadowHightlights:
+    overrideState: 1
+    value: {x: 0, y: 0.3, z: 0.55, w: 1}
+    curve0:
+      name: 
+      mask: 1
+      data: []
+    curve1:
+      name: 
+      mask: 2
+      data: []
+    curve2:
+      name: 
+      mask: 4
+      data: []
+    curve3:
+      name: 
+      mask: 8
+      data: []
+  master:
+    overrideState: 1
+    value:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: 1
+        outSlope: 1
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: 1
+        outSlope: 1
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    curveType: 0
+    loop: 0
+    defaultCurveType: 0
+  red:
+    overrideState: 1
+    value:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    curveType: 0
+    loop: 0
+    defaultCurveType: 0
+  green:
+    overrideState: 1
+    value:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    curveType: 0
+    loop: 0
+    defaultCurveType: 0
+  blue:
+    overrideState: 1
+    value:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    curveType: 0
+    loop: 0
+    defaultCurveType: 0
+  hueVsHue:
+    overrideState: 1
+    value:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    curveType: 1
+    loop: 1
+    defaultCurveType: 0
+  hueVsSat:
+    overrideState: 1
+    value:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    curveType: 1
+    loop: 1
+    defaultCurveType: 0
+  satVsSat:
+    overrideState: 1
+    value:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    curveType: 1
+    loop: 0
+    defaultCurveType: 0
+  lumVsSat:
+    overrideState: 1
+    value:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    curveType: 1
+    loop: 0
+    defaultCurveType: 0

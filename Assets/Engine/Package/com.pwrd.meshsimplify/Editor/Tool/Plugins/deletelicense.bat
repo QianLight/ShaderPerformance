@@ -1,0 +1,1 @@
+del "C:\ProgramData\Microsoft\SimplygonSDK\Simplygon_license.dat"

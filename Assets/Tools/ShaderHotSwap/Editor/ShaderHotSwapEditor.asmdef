@@ -1,0 +1,10 @@
+{
+    "name": "ShaderHotSwapEditor",
+    "references": [
+        "ShaderHotSwapRuntime"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": []
+}

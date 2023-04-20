@@ -1,0 +1,84 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d81b381093e6d254994d75a065fccabe, type: 3}
+  m_Name: ShaderKeywordConfig
+  m_EditorClassIdentifier: 
+  keywordData:
+    name: ShaderKeywords
+    groups:
+    - hash: 23c10d1e-0e55-4b7d-9140-58af08c76e26
+      name: Light
+      keywords:
+      - idKeyword: 0
+        str: _ADD_LIGHT
+      - idKeyword: 0
+        str: _ARRAY_LIGHTBUFFER
+    - hash: d5309c5b-6ab0-46ea-91b3-e7ec6796199a
+      name: Shadow
+      keywords:
+      - idKeyword: 0
+        str: _SHADOW_MAP
+      - idKeyword: 0
+        str: _EXTRA_SHADOW
+      - idKeyword: 0
+        str: _NO_CSM
+    - hash: d3cd20c3-bde0-455b-9814-58d36f83a259
+      name: Debug
+      keywords:
+      - idKeyword: 0
+        str: _DEBUG_APP
+    - hash: 714be15e-2cb0-4e7b-b998-f6999d424b04
+      name: Terrain
+      keywords:
+      - idKeyword: 1
+        str: _SPLAT1
+      - idKeyword: 1
+        str: _SPLAT2
+      - idKeyword: 1
+        str: _SPLAT3
+      - idKeyword: 1
+        str: _SPLAT4
+      - idKeyword: 0
+        str: _TERRAIN_LODCULL
+    - hash: 5e8cb68a-08a6-43be-88f7-57d8b0d6dd6d
+      name: Scene
+      keywords:
+      - idKeyword: 1
+        str: _CUSTOM_EFFECT
+      - idKeyword: 0
+        str: _INSTANCE
+      - idKeyword: 0
+        str: _COMBINE_MESH
+      - idKeyword: 1
+        str: _VERTEX_COLOR
+      - idKeyword: 1
+        str: _USE_LIGHTNING
+      - idKeyword: 1
+        str: _USE_LASER
+      - idKeyword: 1
+        str: _FLOWER
+      - idKeyword: 1
+        str: _GRADIENT_ON
+    - hash: 16d07976-42c5-4510-b904-b21308536901
+      name: Misc
+      keywords:
+      - idKeyword: 0
+        str: _BASE_FROM_COLOR
+      - idKeyword: 0
+        str: _PBS_FROM_PARAM
+      - idKeyword: 1
+        str: _DITHER_TRANSPARENT
+    - hash: 51903213-0557-4060-ad04-4616830c0e7b
+      name: Role
+      keywords:
+      - idKeyword: 0
+        str: _TOON_AO_FACE

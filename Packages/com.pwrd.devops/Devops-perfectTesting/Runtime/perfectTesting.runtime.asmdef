@@ -1,0 +1,16 @@
+{
+    "name": "perfectTesting.runtime",
+    "references": [
+        "GUID:2271bbd1f91561e4a9ca918c8657a3ea",
+        "GUID:15e8057a635dbbc40ae190de19b01144"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

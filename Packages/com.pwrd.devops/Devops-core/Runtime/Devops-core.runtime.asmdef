@@ -1,0 +1,19 @@
+{
+    "name": "Devops-core.runtime",
+    "references": [],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": true,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [
+        {
+            "name": "com.pwrd.devops",
+            "expression": "0.0.0",
+            "define": "Devops_debug"
+        }
+    ],
+    "noEngineReferences": false
+}

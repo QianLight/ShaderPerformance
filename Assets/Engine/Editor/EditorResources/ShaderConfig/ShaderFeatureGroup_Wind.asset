@@ -1,0 +1,735 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 646143184789ad04bb6d1f7feb898645, type: 3}
+  m_Name: ShaderFeatureGroup_Wind
+  m_EditorClassIdentifier: 
+  shaderFeatureBlocks:
+  - hash: 1332b9a3-f7ff-43fc-90af-fce102ed7a4e
+    bundleName: PivotTex
+    shaderFeatures:
+    - hide: 0
+      readOnly: 0
+      name: PivotEnable
+      subGroupType: 2
+      propertyName: _Param0
+      type: 6
+      showAlpha: 1
+      needSpace: 0
+      defaultColor: {r: 1, g: 1, b: 1, a: 1}
+      flag: 0
+      customProperty:
+      - valid: 0
+        desc: 
+        defaultValue: 0
+        min: 0
+        max: 1
+        index: 3
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 2
+        thresholdValue: 0.5
+      - valid: 0
+        desc: 
+        defaultValue: 0
+        min: 0
+        max: 1
+        index: -1
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      - valid: 0
+        desc: 
+        defaultValue: 0
+        min: 0
+        max: 1
+        index: -1
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      - valid: 0
+        desc: 
+        defaultValue: 0
+        min: 0
+        max: 1
+        index: -1
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      dependencyPropertys:
+        isNor: 0
+        dependencyType: 0
+        dependencyShaderProperty: []
+      hash: 6800b5cf-28a0-4653-9093-444679233635
+    - hide: 0
+      readOnly: 0
+      name: PosAndIndex
+      subGroupType: 2
+      propertyName: _ProcedureTex1
+      type: 1
+      showAlpha: 1
+      needSpace: 0
+      defaultColor: {r: 1, g: 1, b: 1, a: 1}
+      flag: 0
+      customProperty:
+      - valid: 0
+        desc: 
+        defaultValue: 0
+        min: 0
+        max: 1
+        index: -1
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      - valid: 0
+        desc: 
+        defaultValue: 0
+        min: 0
+        max: 1
+        index: -1
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      - valid: 0
+        desc: 
+        defaultValue: 0
+        min: 0
+        max: 1
+        index: -1
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      - valid: 0
+        desc: 
+        defaultValue: 0
+        min: 0
+        max: 1
+        index: -1
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      dependencyPropertys:
+        isNor: 0
+        dependencyType: 0
+        dependencyShaderProperty: []
+      hash: 89ee92f0-8b9f-486e-bec1-11de1099e907
+    - hide: 0
+      readOnly: 0
+      name: XExtentVector
+      subGroupType: 2
+      propertyName: _ProcedureTex2
+      type: 1
+      showAlpha: 1
+      needSpace: 0
+      defaultColor: {r: 1, g: 1, b: 1, a: 1}
+      flag: 0
+      customProperty:
+      - valid: 0
+        desc: 
+        defaultValue: 0
+        min: 0
+        max: 1
+        index: -1
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      - valid: 0
+        desc: 
+        defaultValue: 0
+        min: 0
+        max: 1
+        index: -1
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      - valid: 0
+        desc: 
+        defaultValue: 0
+        min: 0
+        max: 1
+        index: -1
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      - valid: 0
+        desc: 
+        defaultValue: 0
+        min: 0
+        max: 1
+        index: -1
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      dependencyPropertys:
+        isNor: 0
+        dependencyType: 0
+        dependencyShaderProperty: []
+      hash: 9e26b921-1d09-41e4-8f06-c60bdba00376
+  - hash: 65e6c473-68d7-4896-b8fb-9e582215aefb
+    bundleName: Layer0
+    shaderFeatures:
+    - hide: 0
+      readOnly: 0
+      name: Layer0_0
+      subGroupType: 2
+      propertyName: _Param2
+      type: 5
+      showAlpha: 1
+      needSpace: 0
+      defaultColor: {r: 1, g: 1, b: 1, a: 1}
+      flag: 0
+      customProperty:
+      - valid: 1
+        desc: RandomRotationInfulence
+        defaultValue: 0
+        min: 0
+        max: 4
+        index: -1
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      - valid: 1
+        desc: DampingRadiusMultipiler
+        defaultValue: 4
+        min: 0
+        max: 4
+        index: -1
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      - valid: 1
+        desc: MaxRotation
+        defaultValue: 0
+        min: 0
+        max: 4
+        index: -1
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      - valid: 1
+        desc: WindRandomRotationChangeRate
+        defaultValue: 0
+        min: 0
+        max: 4
+        index: -1
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      dependencyPropertys:
+        isNor: 0
+        dependencyType: 0
+        dependencyShaderProperty: []
+      hash: 57a9cdae-c25d-43f2-aeed-399648c5e1fc
+    - hide: 0
+      readOnly: 0
+      name: Layer0_1
+      subGroupType: 3
+      propertyName: _Param6
+      type: 5
+      showAlpha: 1
+      needSpace: 0
+      defaultColor: {r: 1, g: 1, b: 1, a: 1}
+      flag: 0
+      customProperty:
+      - valid: 1
+        desc: WindGustOffset
+        defaultValue: 0
+        min: 0
+        max: 4
+        index: -1
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      - valid: 1
+        desc: ParentRotationAngleInfulence
+        defaultValue: 0
+        min: 0
+        max: 4
+        index: -1
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      - valid: 0
+        desc: 
+        defaultValue: 0
+        min: 0
+        max: 1
+        index: -1
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      - valid: 0
+        desc: 
+        defaultValue: 0
+        min: 0
+        max: 1
+        index: -1
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      dependencyPropertys:
+        isNor: 0
+        dependencyType: 0
+        dependencyShaderProperty: []
+      hash: 695b5a66-211b-4aea-9cf2-fd894c585eb6
+  - hash: 9633cd11-079d-4913-9043-db8346cae15c
+    bundleName: Layer1
+    shaderFeatures:
+    - hide: 0
+      readOnly: 0
+      name: Layer1_0
+      subGroupType: 2
+      propertyName: _Param3
+      type: 5
+      showAlpha: 1
+      needSpace: 0
+      defaultColor: {r: 1, g: 1, b: 1, a: 1}
+      flag: 0
+      customProperty:
+      - valid: 1
+        desc: RandomRotationInfulence
+        defaultValue: 0
+        min: 0
+        max: 4
+        index: -1
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      - valid: 1
+        desc: DampingRadiusMultipiler
+        defaultValue: 4
+        min: 0
+        max: 4
+        index: -1
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      - valid: 1
+        desc: MaxRotation
+        defaultValue: 0
+        min: 0
+        max: 4
+        index: -1
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      - valid: 1
+        desc: WindRandomRotationChangeRate
+        defaultValue: 0
+        min: 0
+        max: 4
+        index: -1
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      dependencyPropertys:
+        isNor: 0
+        dependencyType: 0
+        dependencyShaderProperty: []
+      hash: 3532bfcf-1bb0-4703-add0-4bb9eb08d61b
+    - hide: 0
+      readOnly: 0
+      name: Layer1_1
+      subGroupType: 3
+      propertyName: _Param6
+      type: 5
+      showAlpha: 1
+      needSpace: 0
+      defaultColor: {r: 1, g: 1, b: 1, a: 1}
+      flag: 0
+      customProperty:
+      - valid: 1
+        desc: WindGustOffset
+        defaultValue: 0
+        min: 0
+        max: 4
+        index: 2
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      - valid: 1
+        desc: ParentRotationAngleInfulence
+        defaultValue: 0
+        min: 0
+        max: 4
+        index: 3
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      - valid: 0
+        desc: 
+        defaultValue: 0
+        min: 0
+        max: 1
+        index: -1
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      - valid: 0
+        desc: 
+        defaultValue: 0
+        min: 0
+        max: 1
+        index: -1
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      dependencyPropertys:
+        isNor: 0
+        dependencyType: 0
+        dependencyShaderProperty: []
+      hash: 578c62fe-2042-4adc-be34-f49946181170
+  - hash: 99f42e18-5b13-41ee-8767-7c332e9e284a
+    bundleName: Layer2
+    shaderFeatures:
+    - hide: 0
+      readOnly: 0
+      name: Layer2_0
+      subGroupType: 2
+      propertyName: _Param4
+      type: 5
+      showAlpha: 1
+      needSpace: 0
+      defaultColor: {r: 1, g: 1, b: 1, a: 1}
+      flag: 0
+      customProperty:
+      - valid: 1
+        desc: RandomRotationInfulence
+        defaultValue: 0
+        min: 0
+        max: 4
+        index: -1
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      - valid: 1
+        desc: DampingRadiusMultipiler
+        defaultValue: 4
+        min: 0
+        max: 4
+        index: -1
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      - valid: 1
+        desc: MaxRotation
+        defaultValue: 0
+        min: 0
+        max: 4
+        index: -1
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      - valid: 1
+        desc: WindRandomRotationChangeRate
+        defaultValue: 0
+        min: 0
+        max: 4
+        index: -1
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      dependencyPropertys:
+        isNor: 0
+        dependencyType: 0
+        dependencyShaderProperty: []
+      hash: 6c13ff35-b9c7-4073-b5d2-dcda2837e1b5
+    - hide: 0
+      readOnly: 0
+      name: Layer2_1
+      subGroupType: 3
+      propertyName: _Param7
+      type: 5
+      showAlpha: 1
+      needSpace: 0
+      defaultColor: {r: 1, g: 1, b: 1, a: 1}
+      flag: 0
+      customProperty:
+      - valid: 1
+        desc: WindGustOffset
+        defaultValue: 0
+        min: 0
+        max: 4
+        index: -1
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      - valid: 1
+        desc: ParentRotationAngleInfulence
+        defaultValue: 0
+        min: 0
+        max: 4
+        index: -1
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      - valid: 0
+        desc: 
+        defaultValue: 0
+        min: 0
+        max: 1
+        index: -1
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      - valid: 0
+        desc: 
+        defaultValue: 0
+        min: 0
+        max: 1
+        index: -1
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      dependencyPropertys:
+        isNor: 0
+        dependencyType: 0
+        dependencyShaderProperty: []
+      hash: d19b66e9-23ae-461e-a234-c8a4cebfb395
+  - hash: ec19cd15-a0c4-4590-894a-19738b49d418
+    bundleName: Layer3
+    shaderFeatures:
+    - hide: 0
+      readOnly: 0
+      name: Layer3_0
+      subGroupType: 2
+      propertyName: _Param5
+      type: 5
+      showAlpha: 1
+      needSpace: 0
+      defaultColor: {r: 1, g: 1, b: 1, a: 1}
+      flag: 0
+      customProperty:
+      - valid: 1
+        desc: RandomRotationInfulence
+        defaultValue: 0
+        min: 0
+        max: 4
+        index: -1
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      - valid: 1
+        desc: DampingRadiusMultipiler
+        defaultValue: 4
+        min: 0
+        max: 4
+        index: -1
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      - valid: 1
+        desc: MaxRotation
+        defaultValue: 0
+        min: 0
+        max: 4
+        index: -1
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      - valid: 1
+        desc: WindRandomRotationChangeRate
+        defaultValue: 0
+        min: 0
+        max: 4
+        index: -1
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      dependencyPropertys:
+        isNor: 0
+        dependencyType: 0
+        dependencyShaderProperty: []
+      hash: c64ee1e4-f358-4381-8bae-e9fb4ac2ae9e
+    - hide: 0
+      readOnly: 0
+      name: Layer3_1
+      subGroupType: 3
+      propertyName: _Param7
+      type: 5
+      showAlpha: 1
+      needSpace: 0
+      defaultColor: {r: 1, g: 1, b: 1, a: 1}
+      flag: 0
+      customProperty:
+      - valid: 1
+        desc: WindGustOffset
+        defaultValue: 0
+        min: 0
+        max: 4
+        index: 2
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      - valid: 1
+        desc: ParentRotationAngleInfulence
+        defaultValue: 0
+        min: 0
+        max: 4
+        index: 3
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      - valid: 0
+        desc: 
+        defaultValue: 0
+        min: 0
+        max: 1
+        index: -1
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      - valid: 0
+        desc: 
+        defaultValue: 0
+        min: 0
+        max: 1
+        index: -1
+        toggleType: 0
+        valueName: 
+        disableValue: 0
+        enableValue: 1
+        valueCmpType: 0
+        thresholdValue: 0
+      dependencyPropertys:
+        isNor: 0
+        dependencyType: 0
+        dependencyShaderProperty: []
+      hash: 7b5269e9-3c91-4f94-89fb-0dbbf48fcddb
+  shaderFeatures: []

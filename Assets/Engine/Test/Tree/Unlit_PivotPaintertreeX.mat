@@ -1,0 +1,109 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Unlit_PivotPaintertreeX
+  m_Shader: {fileID: 4800000, guid: d20ae68b525d28741aaf3c126eadebeb, type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _MainTex:
+        m_Texture: {fileID: 2800000, guid: 66e1c8fdd89166e4e8e0bf776d902fdb, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex1:
+        m_Texture: {fileID: 2800000, guid: a137e4505fbfae2489ae0ba3357f7700, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex2:
+        m_Texture: {fileID: 2800000, guid: 8c485c31bd788214b971becab2487792, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex3:
+        m_Texture: {fileID: 2800000, guid: df33f02257990a94a82e5836019cb29e, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _PosAndIndexTex:
+        m_Texture: {fileID: 2800000, guid: 8c485c31bd788214b971becab2487792, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ProcedureTex0:
+        m_Texture: {fileID: 2800000, guid: a137e4505fbfae2489ae0ba3357f7700, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ProcedureTex1:
+        m_Texture: {fileID: 2800000, guid: daff08a593e9b094b97c5e35e51c7c3b, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _WindMap:
+        m_Texture: {fileID: 2800000, guid: daff08a593e9b094b97c5e35e51c7c3b, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _XExtentTex:
+        m_Texture: {fileID: 2800000, guid: df33f02257990a94a82e5836019cb29e, type: 3}
+        m_Scale: {x: 0, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - _DampingRadiusMultipiler0: 2
+    - _DampingRadiusMultipiler1: 0
+    - _DampingRadiusMultipiler2: 0
+    - _DampingRadiusMultipiler3: 0
+    - _DebugMode: 0
+    - _DstBlend: 0
+    - _MaxRotation0: 0.23
+    - _MaxRotation1: 0.79
+    - _MaxRotation2: 1.45
+    - _MaxRotation3: 0
+    - _MotionDamppingFalloffRadius: 1
+    - _ParentRotationAngleInfulence: 1.67
+    - _ParentRotationAngleInfulence0: 0
+    - _ParentRotationAngleInfulence1: 0
+    - _ParentRotationAngleInfulence2: 0
+    - _ParentRotationAngleInfulence3: 0
+    - _RandomRotationInfulence: 1
+    - _RandomRotationInfulence0: 0
+    - _RandomRotationInfulence1: 0
+    - _RandomRotationInfulence2: 0
+    - _RandomRotationInfulence3: 0
+    - _RandomRotationTextureSampleScale: 1
+    - _SrcBlend: 1
+    - _WindGustAngleRotation: 1
+    - _WindGustOffset: 1.87
+    - _WindGustOffset0: 0
+    - _WindGustOffset1: 0
+    - _WindGustOffset2: 0
+    - _WindGustOffset3: 0
+    - _WindGustWorldScale: 0.01
+    - _WindHorizontalSpeed: 0.1
+    - _WindRandomRotationChangeRate0: 0
+    - _WindRandomRotationChangeRate1: 0
+    - _WindRandomRotationChangeRate2: 0
+    - _WindRandomRotationChangeRate3: 0
+    - _WindSpeed: 1
+    - _ZWrite: 1
+    - sss: 1
+    m_Colors:
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _Color0: {r: 1, g: 1, b: 1, a: 1}
+    - _Color1: {r: 0, g: 0, b: 0, a: 0}
+    - _Param0: {r: 1, g: 0, b: 1, a: 0}
+    - _Param1: {r: 1, g: 0.5, b: 0, a: 0.5}
+    - _Param2: {r: 25, g: 0, b: 0, a: 0.5}
+    - _UVST0: {r: 1, g: 1, b: 0, a: 0}
+    - _WindXAxis: {r: 1, g: 0, b: 0, a: 0}
+    - _WindYAxis: {r: 0, g: 1, b: 0, a: 0}
+    - _test: {r: 1.75, g: 1.16, b: 1, a: 1}
+    - _test2: {r: 1, g: 0, b: 0, a: 0}
+  m_BuildTextureStacks: []

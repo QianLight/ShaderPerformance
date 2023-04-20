@@ -1,0 +1,15 @@
+{
+    "name": "HLOD",
+    "references": [
+        "GUID:20f6c78ff47d45b40ab399cb95caf2f1"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

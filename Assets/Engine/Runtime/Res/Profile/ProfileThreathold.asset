@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 313742073, guid: a8701fc72a91f814ea6a07ebb465d2b8, type: 3}
+  m_Name: ProfileThreathold
+  m_EditorClassIdentifier: 
+  defaultThreadhold:
+    sceneName: 
+    record:
+      start: 0
+      end: 0
+      fps: 20
+      sceneDrawCalls: 300
+      sceneTriangle: 300000
+      skinDrawCalls: 100
+      skinTriangle: 300000
+      dynamicShadow: 50
+      fxCount: 100
+      psCount: 250
+      meshCount: 300
+      meshMemory: 104857600
+      texCount: 200
+      texMemory: 419430400
+      resCount: 300
+      resMemory: 52428800
+      cameraRange:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+  sceneThreathold: []

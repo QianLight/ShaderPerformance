@@ -1,0 +1,55 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1556738730, guid: a8701fc72a91f814ea6a07ebb465d2b8, type: 3}
+  m_Name: ResRedirectConfig
+  m_EditorClassIdentifier: 
+  resPath:
+  - name: materialconfig
+    ext: .asset
+    physicPath: Assets/Engine/Runtime/Res/Config/
+    targetPath: config/
+    toLower: 0
+    resDir: 1
+    asset: {fileID: 11400000, guid: fe74444a5ac26b04bbe618ad28ec38b0, type: 2}
+    buildBundle: 1
+  - name: miscconfig
+    ext: .asset
+    physicPath: Assets/Engine/Runtime/Res/Config/
+    targetPath: config/
+    toLower: 0
+    resDir: 1
+    asset: {fileID: 11400000, guid: 7d5b8c12f92d6c64b9a0f72b17bfbaaa, type: 2}
+    buildBundle: 1
+  - name: qualitysettings
+    ext: .asset
+    physicPath: Assets/Engine/Runtime/Res/Config/
+    targetPath: config/
+    toLower: 0
+    resDir: 1
+    asset: {fileID: 11400000, guid: d5781015276443e42b7ea2d17f389615, type: 2}
+    buildBundle: 1
+  - name: srpasset
+    ext: .asset
+    physicPath: Assets/Engine/Runtime/Res/Config/
+    targetPath: config/
+    toLower: 0
+    resDir: 1
+    asset: {fileID: 11400000, guid: 1d90148a2d9591842956432821f5d090, type: 2}
+    buildBundle: 1
+  - name: effectdata
+    ext: .bytes
+    physicPath: Assets/Engine/Runtime/Res/Config/
+    targetPath: config/
+    toLower: 0
+    resDir: 1
+    asset: {fileID: 4900000, guid: aef8ac472c0f6d645a1f5546b381014a, type: 3}
+    buildBundle: 0

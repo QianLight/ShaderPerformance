@@ -1,0 +1,4006 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<XReactData>
+  <PresentID>10040</PresentID>
+  <Name>React_Monster_Alvida</Name>
+  <Length>0</Length>
+  <IgnoreAttackScriptFx>false</IgnoreAttackScriptFx>
+  <Time>0.5</Time>
+  <AnimTime>0</AnimTime>
+  <PoseFrame>0</PoseFrame>
+  <ClipName2 />
+  <AnimLayerType>None</AnimLayerType>
+  <Fx>
+    <XFxData>
+      <Type>FirerBased</Type>
+      <Fx>Effects/Prefabs/Generic/Hit_strength_b</Fx>
+      <ScaleX>2</ScaleX>
+      <ScaleZ>2</ScaleZ>
+      <OffsetY>1.7</OffsetY>
+      <Destroy_Delay>1</Destroy_Delay>
+    </XFxData>
+  </Fx>
+  <ShaderEffData>
+    <XShaderEffData>
+      <uniqueID>200</uniqueID>
+    </XShaderEffData>
+  </ShaderEffData>
+  <BoneShakeData />
+</XReactData>﻿<?xml version="1.0" encoding="utf-8"?>
+<XReactData>
+  <PresentID>12206</PresentID>
+  <Name>React_Monster_Beretcaptain</Name>
+  <Length>0</Length>
+  <IgnoreAttackScriptFx>false</IgnoreAttackScriptFx>
+  <Time>0.5</Time>
+  <AnimTime>0</AnimTime>
+  <PoseFrame>0</PoseFrame>
+  <ClipName2 />
+  <AnimLayerType>None</AnimLayerType>
+  <Fx>
+    <XFxData>
+      <Type>FirerBased</Type>
+      <End>0.5</End>
+      <Fx>Effects/Prefabs/Generic/Hit_strength_b</Fx>
+      <ScaleZ>2</ScaleZ>
+      <OffsetY>1</OffsetY>
+      <Destroy_Delay>1</Destroy_Delay>
+    </XFxData>
+  </Fx>
+  <ShaderEffData>
+    <XShaderEffData>
+      <LifeTime>0.03</LifeTime>
+      <FadeOut>0.1</FadeOut>
+      <uniqueID>200</uniqueID>
+      <x>2.828427</x>
+      <y>2.828427</y>
+      <z>2.828427</z>
+      <w>0.083</w>
+    </XShaderEffData>
+  </ShaderEffData>
+  <BoneShakeData />
+</XReactData>﻿<?xml version="1.0" encoding="utf-8"?>
+<XReactData>
+  <Name>React_Monster_BlackBeard</Name>
+  <Length>0</Length>
+  <IgnoreAttackScriptFx>false</IgnoreAttackScriptFx>
+  <ClipName>Animation/Monster_BlackBeard/Monster_BlackBeard_superarmour_hit</ClipName>
+  <Time>0.5</Time>
+  <AnimTime>0.5</AnimTime>
+  <PoseFrame>4</PoseFrame>
+  <ClipName2 />
+  <AdditiveWeight>0.6</AdditiveWeight>
+  <AnimLayerType>Additive</AnimLayerType>
+  <LayerWeight>0.3</LayerWeight>
+  <AvatarMask>AvatarMask/BlackBeard_upper</AvatarMask>
+  <Fx>
+    <XFxData>
+      <Type>FirerBased</Type>
+      <End>0.166666672</End>
+      <Fx>Effects/Prefabs/Generic/Hit_strength_a</Fx>
+      <ScaleX>1.3</ScaleX>
+      <ScaleY>1.3</ScaleY>
+      <ScaleZ>1.3</ScaleZ>
+      <OffsetY>1.2</OffsetY>
+      <Destroy_Delay>1</Destroy_Delay>
+    </XFxData>
+  </Fx>
+  <ShaderEffData>
+    <XShaderEffData>
+      <LifeTime>0.03</LifeTime>
+      <FadeOut>0.1</FadeOut>
+      <uniqueID>200</uniqueID>
+      <w>0.44</w>
+      <partMask>127</partMask>
+    </XShaderEffData>
+  </ShaderEffData>
+  <BoneShakeData />
+</XReactData>﻿<?xml version="1.0" encoding="utf-8"?>
+<XReactData>
+  <Name>React_Monster_BlackBeard</Name>
+  <Length>0</Length>
+  <IgnoreAttackScriptFx>false</IgnoreAttackScriptFx>
+  <ClipName>Animation/Monster_BlackBeard/Monster_BlackBeard_superarmour_hit</ClipName>
+  <Time>0.5</Time>
+  <AnimTime>0.5</AnimTime>
+  <PoseFrame>4</PoseFrame>
+  <ClipName2 />
+  <AdditiveWeight>0.6</AdditiveWeight>
+  <AnimLayerType>Additive</AnimLayerType>
+  <LayerWeight>0.3</LayerWeight>
+  <AvatarMask>AvatarMask/BlackBeard_upper</AvatarMask>
+  <Fx>
+    <XFxData>
+      <Type>FirerBased</Type>
+      <End>0.166666672</End>
+      <Fx>Effects/Prefabs/Generic/Hit_strength_a</Fx>
+      <ScaleX>1.3</ScaleX>
+      <ScaleY>1.3</ScaleY>
+      <ScaleZ>1.3</ScaleZ>
+      <OffsetY>1.2</OffsetY>
+      <Destroy_Delay>1</Destroy_Delay>
+    </XFxData>
+  </Fx>
+  <ShaderEffData>
+    <XShaderEffData>
+      <LifeTime>0.03</LifeTime>
+      <FadeOut>0.1</FadeOut>
+      <uniqueID>200</uniqueID>
+      <w>0.44</w>
+      <partMask>127</partMask>
+    </XShaderEffData>
+  </ShaderEffData>
+  <BoneShakeData />
+</XReactData>﻿<?xml version="1.0" encoding="utf-8"?>
+<XReactData>
+  <CopyFrom />
+  <PresentID>13151</PresentID>
+  <Name>React_Monster_Blueno</Name>
+  <Length>0</Length>
+  <IgnoreAttackScriptFx>false</IgnoreAttackScriptFx>
+  <ClipName>Animation/Monster_Blueno/Monster_Blueno_damage_superarmo</ClipName>
+  <Time>0.5</Time>
+  <AnimTime>0.900000036</AnimTime>
+  <PoseFrame>0</PoseFrame>
+  <ClipName2 />
+  <AnimLayerType>Additive</AnimLayerType>
+  <AvatarMask>AvatarMask/Monster_Blueno</AvatarMask>
+  <ExtraScript />
+  <Fx>
+    <XFxData>
+      <Type>FirerBased</Type>
+      <End>0.5</End>
+      <Fx>Effects/Prefabs/Generic/Hit_strength_b</Fx>
+      <OffsetY>1.5</OffsetY>
+      <Destroy_Delay>1</Destroy_Delay>
+    </XFxData>
+  </Fx>
+  <ShaderEffData>
+    <XShaderEffData>
+      <LifeTime>0.03</LifeTime>
+      <FadeOut>0.1</FadeOut>
+      <uniqueID>200</uniqueID>
+      <x>2.12963915</x>
+      <y>2.12963915</y>
+      <z>2.12963915</z>
+      <w>0.083</w>
+      <Data3>1</Data3>
+      <Data7>1</Data7>
+    </XShaderEffData>
+  </ShaderEffData>
+  <BoneShakeData />
+</XReactData>﻿<?xml version="1.0" encoding="utf-8"?>
+<XReactData>
+  <CopyFrom />
+  <PresentID>13151</PresentID>
+  <Name>React_Monster_Blueno_JZ</Name>
+  <Length>0</Length>
+  <IgnoreAttackScriptFx>true</IgnoreAttackScriptFx>
+  <Time>0.5</Time>
+  <AnimTime>0</AnimTime>
+  <PoseFrame>0</PoseFrame>
+  <ClipName2 />
+  <AnimLayerType>None</AnimLayerType>
+  <AvatarMask />
+  <ExtraScript />
+  <Fx>
+    <XFxData>
+      <Type>FirerBased</Type>
+      <End>0.5</End>
+      <Fx>Effects/Prefabs/Roles/Jyabura/Monster_jiabula_tiekuai_hit</Fx>
+      <UsingAttackScriptOffset>true</UsingAttackScriptOffset>
+      <OffsetY>1.5</OffsetY>
+      <Destroy_Delay>1</Destroy_Delay>
+    </XFxData>
+  </Fx>
+  <Audio>
+    <XAudioData>
+      <Clip>Hit/Tiekuai_hit</Clip>
+      <Channel>Action</Channel>
+    </XAudioData>
+  </Audio>
+  <ShaderEffData />
+  <BoneShakeData />
+</XReactData>﻿<?xml version="1.0" encoding="utf-8"?>
+<XReactData>
+  <PresentID>12942</PresentID>
+  <Name>React_Monster_cp9huoqiangbing</Name>
+  <Length>0</Length>
+  <IgnoreAttackScriptFx>false</IgnoreAttackScriptFx>
+  <AnimTime>0</AnimTime>
+  <PoseFrame>0</PoseFrame>
+  <ClipName2 />
+  <AnimLayerType>None</AnimLayerType>
+  <ShaderEffData />
+  <BoneShakeData />
+</XReactData>﻿<?xml version="1.0" encoding="utf-8"?>
+<XReactData>
+  <PresentID>12946</PresentID>
+  <Name>React_Monster_cp9huoqiangbing1</Name>
+  <Length>0</Length>
+  <IgnoreAttackScriptFx>false</IgnoreAttackScriptFx>
+  <AnimTime>0</AnimTime>
+  <PoseFrame>0</PoseFrame>
+  <ClipName2 />
+  <AnimLayerType>None</AnimLayerType>
+  <ShaderEffData />
+  <BoneShakeData />
+</XReactData>﻿<?xml version="1.0" encoding="utf-8"?>
+<XReactData>
+  <CopyFrom />
+  <PresentID>12935</PresentID>
+  <Name>React_Monster_cp9huoqiangbing_JZ</Name>
+  <Length>0</Length>
+  <IgnoreAttackScriptFx>false</IgnoreAttackScriptFx>
+  <Time>1</Time>
+  <AnimTime>0</AnimTime>
+  <PoseFrame>0</PoseFrame>
+  <ClipName2 />
+  <AnimLayerType>None</AnimLayerType>
+  <AvatarMask />
+  <ExtraScript />
+  <Fx>
+    <XFxData>
+      <Type>FirerBased</Type>
+      <End>1</End>
+      <Fx>Effects/Prefabs/Roles/usopp/Role_usopp_charge_hit_zl</Fx>
+      <OffsetY>1</OffsetY>
+      <Destroy_Delay>1.5</Destroy_Delay>
+    </XFxData>
+  </Fx>
+  <ShaderEffData>
+    <XShaderEffData>
+      <LifeTime>0.03</LifeTime>
+      <FadeOut>0.1</FadeOut>
+      <uniqueID>200</uniqueID>
+      <x>2.11854744</x>
+      <y>2.11854744</y>
+      <z>2.11854744</z>
+      <w>0.083</w>
+      <partMask>127</partMask>
+    </XShaderEffData>
+  </ShaderEffData>
+  <BoneShakeData />
+</XReactData>﻿<?xml version="1.0" encoding="utf-8"?>
+<XReactData>
+  <PresentID>12941</PresentID>
+  <Name>React_Monster_cp9jinzhanbing</Name>
+  <Length>0</Length>
+  <IgnoreAttackScriptFx>false</IgnoreAttackScriptFx>
+  <AnimTime>0</AnimTime>
+  <PoseFrame>0</PoseFrame>
+  <ClipName2 />
+  <AnimLayerType>None</AnimLayerType>
+  <ShaderEffData />
+  <BoneShakeData />
+</XReactData>﻿<?xml version="1.0" encoding="utf-8"?>
+<XReactData>
+  <PresentID>12945</PresentID>
+  <Name>React_Monster_cp9jinzhanbing1</Name>
+  <Length>0</Length>
+  <IgnoreAttackScriptFx>false</IgnoreAttackScriptFx>
+  <AnimTime>0</AnimTime>
+  <PoseFrame>0</PoseFrame>
+  <ClipName2 />
+  <AnimLayerType>None</AnimLayerType>
+  <ShaderEffData />
+  <BoneShakeData />
+</XReactData>﻿<?xml version="1.0" encoding="utf-8"?>
+<XReactData>
+  <PresentID>13172</PresentID>
+  <Name>React_monster_empty</Name>
+  <Length>0</Length>
+  <IgnoreAttackScriptFx>false</IgnoreAttackScriptFx>
+  <AnimTime>0</AnimTime>
+  <PoseFrame>0</PoseFrame>
+  <ClipName2 />
+  <AnimLayerType>None</AnimLayerType>
+  <ShaderEffData />
+  <BoneShakeData />
+</XReactData>﻿<?xml version="1.0" encoding="utf-8"?>
+<XReactData>
+  <CopyFrom />
+  <PresentID>12301</PresentID>
+  <Name>React_Monster_Enel</Name>
+  <Length>0</Length>
+  <IgnoreAttackScriptFx>false</IgnoreAttackScriptFx>
+  <Time>0.5</Time>
+  <AnimTime>0</AnimTime>
+  <PoseFrame>0</PoseFrame>
+  <ClipName2 />
+  <AnimLayerType>None</AnimLayerType>
+  <AvatarMask />
+  <ExtraScript />
+  <Fx>
+    <XFxData>
+      <Type>FirerBased</Type>
+      <End>0.5</End>
+      <Fx>Effects/Prefabs/Generic/Hit_strength_b</Fx>
+      <ScaleX>2</ScaleX>
+      <ScaleZ>2</ScaleZ>
+      <OffsetY>1.7</OffsetY>
+    </XFxData>
+  </Fx>
+  <ShaderEffData>
+    <XShaderEffData>
+      <LifeTime>0.03</LifeTime>
+      <FadeOut>0.1</FadeOut>
+      <uniqueID>200</uniqueID>
+      <x>2.11854744</x>
+      <y>2.11854744</y>
+      <z>2.11854744</z>
+      <w>0.083</w>
+    </XShaderEffData>
+  </ShaderEffData>
+  <BoneShakeData />
+</XReactData>﻿<?xml version="1.0" encoding="utf-8"?>
+<XReactData>
+  <CopyFrom />
+  <PresentID>12302</PresentID>
+  <Name>React_Role_Enelamaru</Name>
+  <Length>0</Length>
+  <IgnoreAttackScriptFx>false</IgnoreAttackScriptFx>
+  <Time>0.5</Time>
+  <AnimTime>0</AnimTime>
+  <PoseFrame>0</PoseFrame>
+  <ClipName2 />
+  <AnimLayerType>None</AnimLayerType>
+  <AvatarMask />
+  <ExtraScript />
+  <Fx>
+    <XFxData>
+      <Type>FirerBased</Type>
+      <End>0.5</End>
+      <Fx>Effects/Prefabs/Generic/Hit_strength_b</Fx>
+      <ScaleX>5.5</ScaleX>
+      <ScaleY>3</ScaleY>
+      <ScaleZ>5.5</ScaleZ>
+      <OffsetY>3</OffsetY>
+    </XFxData>
+  </Fx>
+  <ShaderEffData>
+    <XShaderEffData>
+      <LifeTime>0.03</LifeTime>
+      <FadeOut>0.1</FadeOut>
+      <uniqueID>200</uniqueID>
+      <x>2.11854744</x>
+      <y>2.11854744</y>
+      <z>2.11854744</z>
+      <w>0.083</w>
+    </XShaderEffData>
+  </ShaderEffData>
+  <BoneShakeData />
+</XReactData>﻿<?xml version="1.0" encoding="utf-8"?>
+<XReactData>
+  <PresentID>12952</PresentID>
+  <Name>React_Monster_faquandui</Name>
+  <Length>0</Length>
+  <IgnoreAttackScriptFx>false</IgnoreAttackScriptFx>
+  <Time>0.5</Time>
+  <AnimTime>0</AnimTime>
+  <PoseFrame>0</PoseFrame>
+  <ClipName2 />
+  <AnimLayerType>None</AnimLayerType>
+  <Fx>
+    <XFxData>
+      <Type>FirerBased</Type>
+      <End>0.5</End>
+      <Fx>Effects/Prefabs/Generic/Hit_strength_a</Fx>
+    </XFxData>
+  </Fx>
+  <ShaderEffData>
+    <XShaderEffData>
+      <LifeTime>0.1</LifeTime>
+      <FadeOut>0.4</FadeOut>
+      <uniqueID>200</uniqueID>
+    </XShaderEffData>
+  </ShaderEffData>
+  <BoneShakeData />
+</XReactData>﻿<?xml version="1.0" encoding="utf-8"?>
+<XReactData>
+  <PresentID>12944</PresentID>
+  <Name>React_Monster_Fukurou</Name>
+  <Length>0</Length>
+  <IgnoreAttackScriptFx>false</IgnoreAttackScriptFx>
+  <Time>0.3</Time>
+  <AnimTime>0</AnimTime>
+  <PoseFrame>0</PoseFrame>
+  <ClipName2 />
+  <AnimLayerType>Additive</AnimLayerType>
+  <LayerWeight>0.3</LayerWeight>
+  <AvatarMask>AvatarMask/Monster_Fukurou</AvatarMask>
+  <ShaderEffData>
+    <XShaderEffData>
+      <LifeTime>0.03</LifeTime>
+      <FadeOut>0.1</FadeOut>
+      <uniqueID>200</uniqueID>
+      <x>2.11854744</x>
+      <y>2.11854744</y>
+      <z>2.11854744</z>
+      <w>0.083</w>
+    </XShaderEffData>
+  </ShaderEffData>
+  <BoneShakeData />
+</XReactData>﻿<?xml version="1.0" encoding="utf-8"?>
+<XReactData>
+  <PresentID>12944</PresentID>
+  <Name>React_Monster_Fukurou_danceS</Name>
+  <Length>0</Length>
+  <IgnoreAttackScriptFx>false</IgnoreAttackScriptFx>
+  <ClipName>Animation/Monster_Fukurou/Monster_Fukurou_danceS</ClipName>
+  <Time>2</Time>
+  <AnimTime>2</AnimTime>
+  <PoseFrame>0</PoseFrame>
+  <ClipName2 />
+  <AnimLayerType>None</AnimLayerType>
+  <ShaderEffData />
+  <BoneShakeData />
+</XReactData>﻿<?xml version="1.0" encoding="utf-8"?>
+<XReactData>
+  <PresentID>12155</PresentID>
+  <Name>React_Monster_Gedatsu</Name>
+  <Length>0</Length>
+  <IgnoreAttackScriptFx>false</IgnoreAttackScriptFx>
+  <Time>0.5</Time>
+  <AnimTime>0</AnimTime>
+  <PoseFrame>0</PoseFrame>
+  <ClipName2 />
+  <AnimLayerType>None</AnimLayerType>
+  <Fx>
+    <XFxData>
+      <Type>FirerBased</Type>
+      <End>0.0166666675</End>
+      <Fx>Effects/Prefabs/Generic/Hit_strength_a</Fx>
+      <Follow>false</Follow>
+    </XFxData>
+  </Fx>
+  <ShaderEffData>
+    <XShaderEffData>
+      <LifeTime>0.4</LifeTime>
+      <FadeOut>0.5</FadeOut>
+      <uniqueID>200</uniqueID>
+    </XShaderEffData>
+  </ShaderEffData>
+  <BoneShakeData />
+</XReactData>﻿<?xml version="1.0" encoding="utf-8"?>
+<XReactData>
+  <Name>React_Monster_Helmeppo_0</Name>
+  <Length>0</Length>
+  <Time>0.35</Time>
+  <AnimTime>0</AnimTime>
+  <PoseFrame>0</PoseFrame>
+  <AnimLayerType>None</AnimLayerType>
+  <Fx>
+    <XFxData>
+      <Type>FirerBased</Type>
+      <End>0.35</End>
+      <Fx>Effects/Prefabs/Generic/Hit_cut_strength_b</Fx>
+      <Bone>root</Bone>
+      <OffsetZ>1</OffsetZ>
+    </XFxData>
+  </Fx>
+  <Audio />
+  <ShaderEffData />
+  <BoneShakeData />
+</XReactData>﻿<?xml version="1.0" encoding="utf-8"?>
+<XReactData>
+  <Name>React_Monster_Helmeppo_1</Name>
+  <Length>0</Length>
+  <Time>0.35</Time>
+  <AnimTime>0</AnimTime>
+  <PoseFrame>0</PoseFrame>
+  <AnimLayerType>None</AnimLayerType>
+  <Fx>
+    <XFxData>
+      <Type>FirerBased</Type>
+      <End>0.35</End>
+      <Fx>Effects/Prefabs/Generic/Hit_cut_strength_b</Fx>
+      <Bone>root</Bone>
+      <OffsetZ>1</OffsetZ>
+    </XFxData>
+  </Fx>
+  <Audio />
+  <ShaderEffData />
+  <BoneShakeData />
+</XReactData>﻿<?xml version="1.0" encoding="utf-8"?>
+<XReactData>
+  <Name>React_Monster_Helmeppo_11</Name>
+  <Length>0</Length>
+  <Time>0.35</Time>
+  <AnimTime>0</AnimTime>
+  <PoseFrame>0</PoseFrame>
+  <AnimLayerType>None</AnimLayerType>
+  <Fx>
+    <XFxData>
+      <Type>FirerBased</Type>
+      <End>0.35</End>
+      <Fx>Effects/Prefabs/Generic/Hit_strength_a</Fx>
+      <Bone>root</Bone>
+      <ScaleX>1.5</ScaleX>
+      <ScaleY>1.5</ScaleY>
+      <ScaleZ>1.5</ScaleZ>
+      <OffsetZ>2</OffsetZ>
+    </XFxData>
+  </Fx>
+  <Audio />
+  <ShaderEffData />
+  <BoneShakeData />
+</XReactData>﻿<?xml version="1.0" encoding="utf-8"?>
+<XReactData>
+  <Name>React_Monster_Helmeppo_12</Name>
+  <Length>0</Length>
+  <Time>0.35</Time>
+  <AnimTime>0</AnimTime>
+  <PoseFrame>0</PoseFrame>
+  <AnimLayerType>None</AnimLayerType>
+  <Fx>
+    <XFxData>
+      <Type>FirerBased</Type>
+      <End>0.35</End>
+      <Fx>Effects/Prefabs/Generic/Hit_strength_b</Fx>
+      <Bone>root</Bone>
+      <ScaleX>1.5</ScaleX>
+      <ScaleY>1.5</ScaleY>
+      <ScaleZ>1.5</ScaleZ>
+      <OffsetZ>2</OffsetZ>
+    </XFxData>
+  </Fx>
+  <Audio />
+  <ShaderEffData />
+  <BoneShakeData />
+</XReactData>﻿<?xml version="1.0" encoding="utf-8"?>
+<XReactData>
+  <Name>React_Monster_Helmeppo_13</Name>
+  <Length>0</Length>
+  <Time>0.35</Time>
+  <AnimTime>0</AnimTime>
+  <PoseFrame>0</PoseFrame>
+  <AnimLayerType>None</AnimLayerType>
+  <Fx>
+    <XFxData>
+      <Type>FirerBased</Type>
+      <End>0.35</End>
+      <Fx>Effects/Prefabs/Generic/Hit_strength_c</Fx>
+      <Bone>root</Bone>
+      <ScaleX>1.5</ScaleX>
+      <ScaleY>1.5</ScaleY>
+      <ScaleZ>1.5</ScaleZ>
+      <OffsetZ>2</OffsetZ>
+    </XFxData>
+  </Fx>
+  <Audio />
+  <ShaderEffData />
+  <BoneShakeData />
+</XReactData>﻿<?xml version="1.0" encoding="utf-8"?>
+<XReactData>
+  <Name>React_Monster_Helmeppo_21</Name>
+  <Length>0</Length>
+  <Time>0.35</Time>
+  <AnimTime>0</AnimTime>
+  <PoseFrame>0</PoseFrame>
+  <AnimLayerType>None</AnimLayerType>
+  <Fx>
+    <XFxData>
+      <Type>FirerBased</Type>
+      <End>0.35</End>
+      <Fx>Effects/Prefabs/Generic/Hit_cut_strength_a</Fx>
+      <Bone>root</Bone>
+      <ScaleX>1.5</ScaleX>
+      <ScaleY>1.5</ScaleY>
+      <ScaleZ>1.5</ScaleZ>
+      <OffsetZ>2</OffsetZ>
+    </XFxData>
+  </Fx>
+  <Audio />
+  <ShaderEffData />
+  <BoneShakeData />
+</XReactData>﻿<?xml version="1.0" encoding="utf-8"?>
+<XReactData>
+  <Name>React_Monster_Helmeppo_22</Name>
+  <Length>0</Length>
+  <Time>0.35</Time>
+  <AnimTime>0</AnimTime>
+  <PoseFrame>0</PoseFrame>
+  <AnimLayerType>None</AnimLayerType>
+  <Fx>
+    <XFxData>
+      <Type>FirerBased</Type>
+      <End>0.35</End>
+      <Fx>Effects/Prefabs/Generic/Hit_cut_strength_b</Fx>
+      <Bone>root</Bone>
+      <ScaleX>1.5</ScaleX>
+      <ScaleY>1.5</ScaleY>
+      <ScaleZ>1.5</ScaleZ>
+      <OffsetZ>2</OffsetZ>
+    </XFxData>
+  </Fx>
+  <Audio />
+  <ShaderEffData />
+  <BoneShakeData />
+</XReactData>﻿<?xml version="1.0" encoding="utf-8"?>
+<XReactData>
+  <Name>React_Monster_Helmeppo_23</Name>
+  <Length>0</Length>
+  <Time>0.35</Time>
+  <AnimTime>0</AnimTime>
+  <PoseFrame>0</PoseFrame>
+  <AnimLayerType>None</AnimLayerType>
+  <Fx>
+    <XFxData>
+      <Type>FirerBased</Type>
+      <End>0.35</End>
+      <Fx>Effects/Prefabs/Generic/Hit_cut_strength_c</Fx>
+      <Bone>root</Bone>
+      <ScaleX>1.5</ScaleX>
+      <ScaleY>1.5</ScaleY>
+      <ScaleZ>1.5</ScaleZ>
+      <OffsetZ>2</OffsetZ>
+    </XFxData>
+  </Fx>
+  <Audio />
+  <ShaderEffData />
+  <BoneShakeData />
+</XReactData>﻿<?xml version="1.0" encoding="utf-8"?>
+<XReactData>
+  <PresentID>12947</PresentID>
+  <Name>React_Monster_houjianpaobing</Name>
+  <Length>0</Length>
+  <IgnoreAttackScriptFx>false</IgnoreAttackScriptFx>
+  <ClipName>Animation/Monster_houjianpaobing/Monster_houjianpaobing_superarmour_hit</ClipName>
+  <Time>1</Time>
+  <AnimTime>1</AnimTime>
+  <PoseFrame>0</PoseFrame>
+  <ClipName2 />
+  <AnimLayerType>None</AnimLayerType>
+  <Fx>
+    <XFxData>
+      <Type>FirerBased</Type>
+      <End>1</End>
+      <Fx>Effects/Prefabs/Generic/Hit_strength_a</Fx>
+    </XFxData>
+  </Fx>
+  <Audio>
+    <XAudioData>
+      <Channel>Skill</Channel>
+    </XAudioData>
+  </Audio>
+  <ShaderEffData>
+    <XShaderEffData>
+      <uniqueID>200</uniqueID>
+    </XShaderEffData>
+  </ShaderEffData>
+  <BoneShakeData />
+</XReactData>﻿<?xml version="1.0" encoding="utf-8"?>
+<XReactData>
+  <CopyFrom />
+  <PresentID>12936</PresentID>
+  <Name>React_Monster_houjianpaobing_JZ</Name>
+  <Length>0</Length>
+  <IgnoreAttackScriptFx>false</IgnoreAttackScriptFx>
+  <Time>1</Time>
+  <AnimTime>0</AnimTime>
+  <PoseFrame>0</PoseFrame>
+  <ClipName2 />
+  <AnimLayerType>None</AnimLayerType>
+  <AvatarMask />
+  <ExtraScript />
+  <Fx>
+    <XFxData>
+      <Type>FirerBased</Type>
+      <End>1</End>
+      <Fx>Effects/Prefabs/Roles/usopp/Role_usopp_charge_hit_zl</Fx>
+      <OffsetY>1.2</OffsetY>
+      <Destroy_Delay>1.5</Destroy_Delay>
+    </XFxData>
+  </Fx>
+  <ShaderEffData>
+    <XShaderEffData>
+      <LifeTime>0.03</LifeTime>
+      <FadeOut>0.1</FadeOut>
+      <uniqueID>200</uniqueID>
+      <x>2.11854744</x>
+      <y>2.11854744</y>
+      <z>2.11854744</z>
+      <w>0.083</w>
+      <partMask>127</partMask>
+    </XShaderEffData>
+  </ShaderEffData>
+  <BoneShakeData />
+</XReactData>﻿<?xml version="1.0" encoding="utf-8"?>
+<XReactData>
+  <PresentID>12947</PresentID>
+  <Name>React_Monster_huojianpaobing1</Name>
+  <Length>0</Length>
+  <IgnoreAttackScriptFx>false</IgnoreAttackScriptFx>
+  <Time>1</Time>
+  <AnimTime>0</AnimTime>
+  <PoseFrame>0</PoseFrame>
+  <ClipName2 />
+  <AnimLayerType>None</AnimLayerType>
+  <Fx>
+    <XFxData>
+      <Type>FirerBased</Type>
+      <End>1</End>
+      <Fx>Effects/Prefabs/Generic/Hit_strength_a</Fx>
+    </XFxData>
+  </Fx>
+  <ShaderEffData>
+    <XShaderEffData>
+      <LifeTime>1</LifeTime>
+      <FadeOut>1</FadeOut>
+      <uniqueID>200</uniqueID>
+    </XShaderEffData>
+  </ShaderEffData>
+  <BoneShakeData />
+</XReactData>﻿<?xml version="1.0" encoding="utf-8"?>
+<XReactData>
+  <CopyFrom />
+  <PresentID>12923</PresentID>
+  <Name>React_Monster_Jyabura</Name>
+  <Length>0</Length>
+  <IgnoreAttackScriptFx>false</IgnoreAttackScriptFx>
+  <ClipName>Animation/Monster_Jyabura/Monster_Jyabura_superarmour_hit</ClipName>
+  <Time>0.5</Time>
+  <AnimTime>0.900000036</AnimTime>
+  <PoseFrame>4</PoseFrame>
+  <ClipName2 />
+  <AnimLayerType>Additive</AnimLayerType>
+  <LayerWeight>0.3</LayerWeight>
+  <AvatarMask>AvatarMask/Monster_Jyabura</AvatarMask>
+  <ExtraScript />
+  <Fx>
+    <XFxData>
+      <Type>FirerBased</Type>
+      <End>0.900000036</End>
+      <Fx>Effects/Prefabs/Generic/Hit_strength_b</Fx>
+      <ScaleX>2</ScaleX>
+      <ScaleZ>2</ScaleZ>
+      <OffsetY>1.7</OffsetY>
+      <Destroy_Delay>1</Destroy_Delay>
+    </XFxData>
+  </Fx>
+  <ShaderEffData>
+    <XShaderEffData>
+      <LifeTime>0.03</LifeTime>
+      <FadeOut>0.1</FadeOut>
+      <uniqueID>200</uniqueID>
+      <x>2.11854744</x>
+      <y>2.11854744</y>
+      <z>2.11854744</z>
+      <w>0.083</w>
+      <Data3>1</Data3>
+      <Data7>1</Data7>
+    </XShaderEffData>
+  </ShaderEffData>
+  <BoneShakeData />
+</XReactData>﻿<?xml version="1.0" encoding="utf-8"?>
+<XReactData>
+  <CopyFrom />
+  <PresentID>12923</PresentID>
+  <Name>React_Monster_Jyabura_JZ</Name>
+  <Length>0</Length>
+  <IgnoreAttackScriptFx>true</IgnoreAttackScriptFx>
+  <Time>1</Time>
+  <AnimTime>0</AnimTime>
+  <PoseFrame>0</PoseFrame>
+  <ClipName2 />
+  <AnimLayerType>None</AnimLayerType>
+  <AvatarMask />
+  <ExtraScript />
+  <Fx>
+    <XFxData>
+      <Type>FirerBased</Type>
+      <End>1</End>
+      <Fx>Effects/Prefabs/Roles/Jyabura/Monster_jiabula_tiekuai_hit001</Fx>
+      <OffsetY>2</OffsetY>
+      <Follow>false</Follow>
+      <Destroy_Delay>1</Destroy_Delay>
+    </XFxData>
+  </Fx>
+  <ShaderEffData />
+  <BoneShakeData />
+</XReactData>﻿<?xml version="1.0" encoding="utf-8"?>
+<XReactData>
+  <PresentID>12911</PresentID>
+  <Name>React_Monster_Kaku</Name>
+  <Length>0</Length>
+  <IgnoreAttackScriptFx>false</IgnoreAttackScriptFx>
+  <ClipName>Animation/Monster_Kaku/Monster_Kaku_superarmour_hit</ClipName>
+  <Time>0.5</Time>
+  <AnimTime>0.900000036</AnimTime>
+  <PoseFrame>4</PoseFrame>
+  <ClipName2 />
+  <AnimLayerType>Additive</AnimLayerType>
+  <LayerWeight>0.3</LayerWeight>
+  <AvatarMask>AvatarMask/Monster_Kaku</AvatarMask>
+  <Fx>
+    <XFxData>
+      <Type>FirerBased</Type>
+      <End>0.900000036</End>
+      <Fx>Effects/Prefabs/Generic/Hit_strength_a</Fx>
+      <ScaleX>1.3</ScaleX>
+      <ScaleY>1.3</ScaleY>
+      <ScaleZ>1.3</ScaleZ>
+      <Destroy_Delay>1</Destroy_Delay>
+    </XFxData>
+  </Fx>
+  <ShaderEffData>
+    <XShaderEffData>
+      <LifeTime>0.03</LifeTime>
+      <FadeOut>0.1</FadeOut>
+      <uniqueID>200</uniqueID>
+      <w>0.44</w>
+      <partMask>63</partMask>
+    </XShaderEffData>
+  </ShaderEffData>
+  <BoneShakeData />
+</XReactData>﻿<?xml version="1.0" encoding="utf-8"?>
+<XReactData>
+  <PresentID>12915</PresentID>
+  <Name>React_Monster_Kaku_Box</Name>
+  <Length>0</Length>
+  <AnimTime>0</AnimTime>
+  <PoseFrame>0</PoseFrame>
+  <ClipName2 />
+  <AnimLayerType>None</AnimLayerType>
+  <ShaderEffData />
+  <BoneShakeData />
+</XReactData>﻿<?xml version="1.0" encoding="utf-8"?>
+<XReactData>
+  <CopyFrom />
+  <PresentID>13046</PresentID>
+  <Name>React_Monster_Kalifa</Name>
+  <Length>0</Length>
+  <IgnoreAttackScriptFx>false</IgnoreAttackScriptFx>
+  <Time>0.5</Time>
+  <AnimTime>0</AnimTime>
+  <PoseFrame>0</PoseFrame>
+  <ClipName2 />
+  <AnimLayerType>Additive</AnimLayerType>
+  <AvatarMask>AvatarMask/Monster_Kalifa</AvatarMask>
+  <ExtraScript />
+  <Fx>
+    <XFxData>
+      <Type>FirerBased</Type>
+      <At>NaN</At>
+      <End>NaN</End>
+      <Fx>Effects/Prefabs/Generic/Hit_strength_a</Fx>
+      <OffsetY>1.2</OffsetY>
+      <Destroy_Delay>1</Destroy_Delay>
+    </XFxData>
+  </Fx>
+  <Audio>
+    <XAudioData>
+      <Channel>Skill</Channel>
+    </XAudioData>
+  </Audio>
+  <ShaderEffData>
+    <XShaderEffData>
+      <LifeTime>0.03</LifeTime>
+      <FadeOut>0.1</FadeOut>
+      <uniqueID>200</uniqueID>
+      <w>0.44</w>
+    </XShaderEffData>
+  </ShaderEffData>
+  <BoneShakeData />
+</XReactData>﻿<?xml version="1.0" encoding="utf-8"?>
+<XReactData>
+  <PresentID>12949</PresentID>
+  <Name>React_Monster_Kaxi</Name>
+  <Length>0</Length>
+  <IgnoreAttackScriptFx>false</IgnoreAttackScriptFx>
+  <Time>0.5</Time>
+  <AnimTime>0</AnimTime>
+  <PoseFrame>0</PoseFrame>
+  <ClipName2 />
+  <AnimLayerType>None</AnimLayerType>
+  <LayerWeight>0.3</LayerWeight>
+  <AvatarMask>AvatarMask/Monster_Kaxi</AvatarMask>
+  <ShaderEffData>
+    <XShaderEffData>
+      <LifeTime>0.03</LifeTime>
+      <FadeOut>0.1</FadeOut>
+      <uniqueID>200</uniqueID>
+      <x>2.12963915</x>
+      <y>2.12963915</y>
+      <z>2.12963915</z>
+      <w>0.083</w>
+      <Data3>1</Data3>
+      <Data7>1</Data7>
+    </XShaderEffData>
+  </ShaderEffData>
+  <BoneShakeData />
+</XReactData>﻿<?xml version="1.0" encoding="utf-8"?>
+<XReactData>
+  <PresentID>13199</PresentID>
+  <Name>React_Monster_LuzhangZhongwei</Name>
+  <Length>0</Length>
+  <IgnoreAttackScriptFx>false</IgnoreAttackScriptFx>
+  <AnimTime>0</AnimTime>
+  <PoseFrame>0</PoseFrame>
+  <ClipName2 />
+  <AnimLayerType>None</AnimLayerType>
+  <ShaderEffData />
+  <BoneShakeData />
+</XReactData>﻿<?xml version="1.0" encoding="utf-8"?>
+<XReactData>
+  <PresentID>13199</PresentID>
+  <Name>React_monster_zhongwei</Name>
+  <Length>0</Length>
+  <IgnoreAttackScriptFx>false</IgnoreAttackScriptFx>
+  <AnimTime>0</AnimTime>
+  <PoseFrame>0</PoseFrame>
+  <ClipName2 />
+  <AnimLayerType>None</AnimLayerType>
+  <ShaderEffData />
+  <BoneShakeData />
+</XReactData>﻿<?xml version="1.0" encoding="utf-8"?>
+<XReactData>
+  <PresentID>10001</PresentID>
+  <Name>React_Monster_MarineMusketeer</Name>
+  <Length>0</Length>
+  <AnimTime>0</AnimTime>
+  <PoseFrame>0</PoseFrame>
+  <ClipName2 />
+  <AnimLayerType>None</AnimLayerType>
+  <ShaderEffData />
+  <BoneShakeData />
+</XReactData>﻿<?xml version="1.0" encoding="utf-8"?>
+<XReactData>
+  <PresentID>10002</PresentID>
+  <Name>React_Monster_MarineSwordman</Name>
+  <Length>0</Length>
+  <AnimTime>0</AnimTime>
+  <PoseFrame>0</PoseFrame>
+  <ClipName2 />
+  <AnimLayerType>None</AnimLayerType>
+  <ShaderEffData />
+  <BoneShakeData />
+</XReactData>﻿<?xml version="1.0" encoding="utf-8"?>
+<XReactData>
+  <PresentID>10005</PresentID>
+  <Name>React_Monster_MarineSwordman1</Name>
+  <Length>0</Length>
+  <AnimTime>0</AnimTime>
+  <PoseFrame>0</PoseFrame>
+  <ClipName2 />
+  <AnimLayerType>None</AnimLayerType>
+  <ShaderEffData />
+  <BoneShakeData />
+</XReactData>﻿<?xml version="1.0" encoding="utf-8"?>
+<XReactData>
+  <Name>React_Monster_morgan</Name>
+  <Length>0</Length>
+  <ClipName>Animation/Monster_morgan/Monster_Morgan_superarmour_jitter_big</ClipName>
+  <Time>0.5</Time>
+  <AnimTime>0.5</AnimTime>
+  <PoseFrame>4</PoseFrame>
+  <AdditiveWeight>0.7</AdditiveWeight>
+  <AnimLayerType>Additive</AnimLayerType>
+  <LayerWeight>0.6</LayerWeight>
+  <AvatarMask>AvatarMask/Morgan_upper</AvatarMask>
+  <Fx>
+    <XFxData>
+      <Type>FirerBased</Type>
+      <End>0.5</End>
+      <Fx>Effects/Prefabs/Generic/Hit_cut_strength_b</Fx>
+      <Bone>root</Bone>
+      <ScaleX>1.5</ScaleX>
+      <ScaleY>1.5</ScaleY>
+      <ScaleZ>1.5</ScaleZ>
+      <OffsetZ>2</OffsetZ>
+    </XFxData>
+  </Fx>
+  <Audio />
+  <ShaderEffData>
+    <XShaderEffData>
+      <LifeTime>0.03</LifeTime>
+      <UniqueID>1</UniqueID>
+      <Data0>13.76636</Data0>
+      <Data1>1.44150364</Data1>
+      <Data2>1.44150364</Data2>
+      <Data3>0.02</Data3>
+      <Data4>0</Data4>
+      <Data5>0</Data5>
+      <Data6>-1</Data6>
+      <Data7>-1</Data7>
+      <FadeOut>0.1</FadeOut>
+      <PartFlag>-1</PartFlag>
+    </XShaderEffData>
+  </ShaderEffData>
+  <BoneShakeData />
+</XReactData>﻿<?xml version="1.0" encoding="utf-8"?>
+<XReactData>
+  <PresentID>12118</PresentID>
+  <Name>React_Monster_Ohm</Name>
+  <Length>0</Length>
+  <IgnoreAttackScriptFx>false</IgnoreAttackScriptFx>
+  <Time>0.5</Time>
+  <AnimTime>0</AnimTime>
+  <PoseFrame>0</PoseFrame>
+  <ClipName2 />
+  <AnimLayerType>None</AnimLayerType>
+  <Fx>
+    <XFxData>
+      <Type>FirerBased</Type>
+      <End>0.5</End>
+      <Fx>Effects/Prefabs/Generic/Hit_strength_a</Fx>
+    </XFxData>
+  </Fx>
+  <ShaderEffData>
+    <XShaderEffData>
+      <LifeTime>0.1</LifeTime>
+      <uniqueID>200</uniqueID>
+      <x>2.1295898</x>
+      <y>2.1295898</y>
+      <z>2.1295898</z>
+      <w>0.2</w>
+    </XShaderEffData>
+  </ShaderEffData>
+  <BoneShakeData />
+</XReactData>﻿<?xml version="1.0" encoding="utf-8"?>
+<XReactData>
+  <PresentID>12117</PresentID>
+  <Name>react_Monster_Ohm_Ohmholy</Name>
+  <Length>0</Length>
+  <IgnoreAttackScriptFx>false</IgnoreAttackScriptFx>
+  <Time>0.5</Time>
+  <AnimTime>0</AnimTime>
+  <PoseFrame>0</PoseFrame>
+  <ClipName2 />
+  <AnimLayerType>None</AnimLayerType>
+  <Fx>
+    <XFxData>
+      <Type>FirerBased</Type>
+      <End>0.5</End>
+      <Fx>Effects/Prefabs/Generic/Hit_strength_b</Fx>
+    </XFxData>
+  </Fx>
+  <ShaderEffData>
+    <XShaderEffData>
+      <LifeTime>0.1</LifeTime>
+      <uniqueID>200</uniqueID>
+      <x>2.1295898</x>
+      <y>2.1295898</y>
+      <z>2.1295898</z>
+      <w>0.2</w>
+    </XShaderEffData>
+  </ShaderEffData>
+  <BoneShakeData />
+</XReactData>﻿<?xml version="1.0" encoding="utf-8"?>
+<XReactData>
+  <PresentID>12950</PresentID>
+  <Name>React_Monster_Oimo</Name>
+  <Length>0</Length>
+  <IgnoreAttackScriptFx>false</IgnoreAttackScriptFx>
+  <Time>1</Time>
+  <AnimTime>0</AnimTime>
+  <PoseFrame>0</PoseFrame>
+  <ClipName2 />
+  <AnimLayerType>None</AnimLayerType>
+  <AvatarMask>AvatarMask/Monster_Oimo</AvatarMask>
+  <Fx>
+    <XFxData>
+      <Type>FirerBased</Type>
+      <End>0.166666672</End>
+      <Fx>Effects/Prefabs/Generic/Hit_strength_b</Fx>
+      <ScaleX>2.5</ScaleX>
+      <ScaleY>2.5</ScaleY>
+      <ScaleZ>2.5</ScaleZ>
+      <OffsetY>8</OffsetY>
+      <OffsetZ>3.7</OffsetZ>
+      <Destroy_Delay>1</Destroy_Delay>
+    </XFxData>
+  </Fx>
+  <ShaderEffData>
+    <XShaderEffData>
+      <LifeTime>0.03</LifeTime>
+      <FadeOut>0.1</FadeOut>
+      <uniqueID>200</uniqueID>
+      <x>0.6784</x>
+      <y>0.6784</y>
+      <z>0.6784</z>
+      <w>0.083</w>
+    </XShaderEffData>
+  </ShaderEffData>
+  <BoneShakeData />
+</XReactData>﻿<?xml version="1.0" encoding="utf-8"?>
+<XReactData>
+  <PresentID>12010</PresentID>
+  <Name>React_Monster_Satori</Name>
+  <Length>0</Length>
+  <IgnoreAttackScriptFx>false</IgnoreAttackScriptFx>
+  <AnimTime>0</AnimTime>
+  <PoseFrame>0</PoseFrame>
+  <ClipName2 />
+  <AnimLayerType>None</AnimLayerType>
+  <LayerWeight>0.3</LayerWeight>
+  <AvatarMask />
+  <ShaderEffData>
+    <XShaderEffData>
+      <LifeTime>0.1</LifeTime>
+      <uniqueID>200</uniqueID>
+      <w>0.44</w>
+    </XShaderEffData>
+  </ShaderEffData>
+  <BoneShakeData />
+</XReactData>﻿<?xml version="1.0" encoding="utf-8"?>
+<XReactData>
+  <PresentID>14791</PresentID>
+  <Name>React_Monster_Sengokubuddha</Name>
+  <Length>0</Length>
+  <IgnoreAttackScriptFx>false</IgnoreAttackScriptFx>
+  <AnimTime>0</AnimTime>
+  <PoseFrame>0</PoseFrame>
+  <ClipName2 />
+  <AnimLayerType>None</AnimLayerType>
+  <Fx>
+    <XFxData>
+      <Type>FirerBased</Type>
+      <Fx>Effects/Prefabs/Generic/Hit_strength_b</Fx>
+    </XFxData>
+  </Fx>
+  <ShaderEffData>
+    <XShaderEffData>
+      <LifeTime>0.03</LifeTime>
+      <FadeOut>0.1</FadeOut>
+      <uniqueID>200</uniqueID>
+    </XShaderEffData>
+  </ShaderEffData>
+  <BoneShakeData />
+</XReactData>﻿<?xml version="1.0" encoding="utf-8"?>
+<XReactData>
+  <PresentID>14790</PresentID>
+  <Name>React_Monster_Sengokuhumen</Name>
+  <Length>0</Length>
+  <IgnoreAttackScriptFx>false</IgnoreAttackScriptFx>
+  <AnimTime>0</AnimTime>
+  <PoseFrame>0</PoseFrame>
+  <ClipName2 />
+  <AnimLayerType>None</AnimLayerType>
+  <Fx>
+    <XFxData>
+      <Type>FirerBased</Type>
+      <Fx>Effects/Prefabs/Generic/Hit_strength_b</Fx>
+    </XFxData>
+  </Fx>
+  <ShaderEffData>
+    <XShaderEffData>
+      <LifeTime>0.03</LifeTime>
+      <FadeOut>0.1</FadeOut>
+      <uniqueID>200</uniqueID>
+    </XShaderEffData>
+  </ShaderEffData>
+  <BoneShakeData />
+</XReactData>﻿<?xml version="1.0" encoding="utf-8"?>
+<XReactData>
+  <PresentID>12058</PresentID>
+  <Name>React_Monster_Shandia1</Name>
+  <Length>0</Length>
+  <IgnoreAttackScriptFx>false</IgnoreAttackScriptFx>
+  <Time>0.5</Time>
+  <AnimTime>0</AnimTime>
+  <PoseFrame>0</PoseFrame>
+  <ClipName2 />
+  <AnimLayerType>None</AnimLayerType>
+  <Fx>
+    <XFxData>
+      <Type>FirerBased</Type>
+      <End>0.5</End>
+      <Fx>Effects/Prefabs/Generic/Hit_strength_a</Fx>
+      <OffsetY>1</OffsetY>
+      <Destroy_Delay>1</Destroy_Delay>
+    </XFxData>
+  </Fx>
+  <ShaderEffData>
+    <XShaderEffData>
+      <LifeTime>0.03</LifeTime>
+      <FadeOut>0.1</FadeOut>
+      <uniqueID>200</uniqueID>
+      <x>2.118547</x>
+      <y>2.118547</y>
+      <z>2.118547</z>
+      <w>0.083</w>
+    </XShaderEffData>
+  </ShaderEffData>
+  <BoneShakeData />
+</XReactData>﻿<?xml version="1.0" encoding="utf-8"?>
+<XReactData>
+  <PresentID>12059</PresentID>
+  <Name>React_Monster_Shandia2</Name>
+  <Length>0</Length>
+  <IgnoreAttackScriptFx>false</IgnoreAttackScriptFx>
+  <Time>0.5</Time>
+  <AnimTime>0</AnimTime>
+  <PoseFrame>0</PoseFrame>
+  <ClipName2 />
+  <AnimLayerType>None</AnimLayerType>
+  <Fx>
+    <XFxData>
+      <Type>FirerBased</Type>
+      <End>0.5</End>
+      <Fx>Effects/Prefabs/Generic/Hit_strength_a</Fx>
+      <OffsetY>0.5</OffsetY>
+    </XFxData>
+  </Fx>
+  <ShaderEffData>
+    <XShaderEffData>
+      <LifeTime>0.03</LifeTime>
+      <FadeOut>0.1</FadeOut>
+      <uniqueID>200</uniqueID>
+      <x>2.118547</x>
+      <y>2.118547</y>
+      <z>2.118547</z>
+      <w>0.083</w>
+    </XShaderEffData>
+  </ShaderEffData>
+  <BoneShakeData />
+</XReactData>﻿<?xml version="1.0" encoding="utf-8"?>
+<XReactData>
+  <PresentID>12057</PresentID>
+  <Name>React_Monster_Shenbing</Name>
+  <Length>0</Length>
+  <IgnoreAttackScriptFx>false</IgnoreAttackScriptFx>
+  <Time>0.5</Time>
+  <AnimTime>0</AnimTime>
+  <PoseFrame>0</PoseFrame>
+  <ClipName2 />
+  <AnimLayerType>None</AnimLayerType>
+  <Fx>
+    <XFxData>
+      <Type>FirerBased</Type>
+      <End>0.5</End>
+      <Fx>Effects/Prefabs/Generic/Hit_strength_a</Fx>
+      <Follow>false</Follow>
+    </XFxData>
+  </Fx>
+  <ShaderEffData>
+    <XShaderEffData>
+      <LifeTime>0.03</LifeTime>
+      <FadeOut>0.1</FadeOut>
+      <uniqueID>200</uniqueID>
+      <x>2.118547</x>
+      <y>2.118547</y>
+      <z>2.118547</z>
+      <w>0.083</w>
+    </XShaderEffData>
+  </ShaderEffData>
+  <BoneShakeData />
+</XReactData>﻿<?xml version="1.0" encoding="utf-8"?>
+<XReactData>
+  <PresentID>12951</PresentID>
+  <Name>React_Monster_Siqiu</Name>
+  <Length>0</Length>
+  <IgnoreAttackScriptFx>false</IgnoreAttackScriptFx>
+  <Time>0.5</Time>
+  <AnimTime>0</AnimTime>
+  <PoseFrame>0</PoseFrame>
+  <ClipName2 />
+  <AnimLayerType>None</AnimLayerType>
+  <Fx>
+    <XFxData>
+      <Type>FirerBased</Type>
+      <End>0.5</End>
+      <Fx>Effects/Prefabs/Generic/Hit_strength_a</Fx>
+    </XFxData>
+  </Fx>
+  <ShaderEffData>
+    <XShaderEffData>
+      <FadeOut>0.44</FadeOut>
+      <uniqueID>200</uniqueID>
+    </XShaderEffData>
+  </ShaderEffData>
+  <BoneShakeData />
+</XReactData>﻿<?xml version="1.0" encoding="utf-8"?>
+<XReactData>
+  <CopyFrom />
+  <PresentID>12938</PresentID>
+  <Name>React_Monster_Siqiu_JZ</Name>
+  <Length>0</Length>
+  <IgnoreAttackScriptFx>false</IgnoreAttackScriptFx>
+  <Time>1</Time>
+  <AnimTime>0</AnimTime>
+  <PoseFrame>0</PoseFrame>
+  <ClipName2 />
+  <AnimLayerType>None</AnimLayerType>
+  <AvatarMask />
+  <ExtraScript />
+  <Fx>
+    <XFxData>
+      <Type>FirerBased</Type>
+      <End>1</End>
+      <Fx>Effects/Prefabs/Roles/usopp/Role_usopp_charge_hit_zl</Fx>
+      <ScaleX>2</ScaleX>
+      <ScaleY>2</ScaleY>
+      <ScaleZ>2</ScaleZ>
+      <OffsetY>1.7</OffsetY>
+      <Destroy_Delay>2</Destroy_Delay>
+    </XFxData>
+  </Fx>
+  <ShaderEffData>
+    <XShaderEffData>
+      <LifeTime>0.03</LifeTime>
+      <FadeOut>0.1</FadeOut>
+      <uniqueID>200</uniqueID>
+      <w>0.083</w>
+      <partMask>127</partMask>
+    </XShaderEffData>
+  </ShaderEffData>
+  <BoneShakeData />
+</XReactData>﻿<?xml version="1.0" encoding="utf-8"?>
+<XReactData>
+  <PresentID>12063</PresentID>
+  <Name>React_Monster_Weber</Name>
+  <Length>0</Length>
+  <IgnoreAttackScriptFx>false</IgnoreAttackScriptFx>
+  <AnimTime>0</AnimTime>
+  <PoseFrame>0</PoseFrame>
+  <ClipName2 />
+  <AnimLayerType>None</AnimLayerType>
+  <Fx>
+    <XFxData>
+      <Type>FirerBased</Type>
+      <Fx>Effects/Prefabs/Generic/Hit_shoot_strength_a</Fx>
+      <OffsetY>1</OffsetY>
+    </XFxData>
+  </Fx>
+  <ShaderEffData>
+    <XShaderEffData>
+      <LifeTime>0.03</LifeTime>
+      <FadeOut>0.1</FadeOut>
+      <uniqueID>200</uniqueID>
+      <x>2.118547</x>
+      <y>2.118547</y>
+      <z>2.118547</z>
+      <w>0.083</w>
+    </XShaderEffData>
+  </ShaderEffData>
+  <BoneShakeData />
+</XReactData>﻿<?xml version="1.0" encoding="utf-8"?>
+<XReactData>
+  <PresentID>12062</PresentID>
+  <Name>React_Monster_Yama</Name>
+  <Length>0</Length>
+  <IgnoreAttackScriptFx>false</IgnoreAttackScriptFx>
+  <Time>0.5</Time>
+  <AnimTime>0</AnimTime>
+  <PoseFrame>0</PoseFrame>
+  <ClipName2 />
+  <AnimLayerType>None</AnimLayerType>
+  <Fx>
+    <XFxData>
+      <Type>FirerBased</Type>
+      <End>0.5</End>
+      <Fx>Effects/Prefabs/Generic/Hit_strength_a</Fx>
+    </XFxData>
+  </Fx>
+  <ShaderEffData>
+    <XShaderEffData>
+      <LifeTime>0.03</LifeTime>
+      <FadeOut>0.1</FadeOut>
+      <uniqueID>200</uniqueID>
+      <x>2.118547</x>
+      <y>2.118547</y>
+      <z>2.118547</z>
+      <w>0.083</w>
+    </XShaderEffData>
+  </ShaderEffData>
+  <BoneShakeData />
+</XReactData>﻿<?xml version="1.0" encoding="utf-8"?>
+<XReactData>
+  <PresentID>12943</PresentID>
+  <Name>React_Monster_Zhongwei</Name>
+  <Length>0</Length>
+  <IgnoreAttackScriptFx>false</IgnoreAttackScriptFx>
+  <Time>0.5</Time>
+  <AnimTime>0</AnimTime>
+  <PoseFrame>0</PoseFrame>
+  <ClipName2 />
+  <AnimLayerType>Additive</AnimLayerType>
+  <LayerWeight>0.3</LayerWeight>
+  <AvatarMask>AvatarMask/Monster_Zhongwei</AvatarMask>
+  <ShaderEffData>
+    <XShaderEffData>
+      <LifeTime>0.03</LifeTime>
+      <FadeOut>0.1</FadeOut>
+      <uniqueID>200</uniqueID>
+      <x>2.11854744</x>
+      <y>2.11854744</y>
+      <z>2.11854744</z>
+      <w>0.083</w>
+    </XShaderEffData>
+  </ShaderEffData>
+  <BoneShakeData />
+</XReactData>﻿<?xml version="1.0" encoding="utf-8"?>
+<XReactData>
+  <PresentID>12060</PresentID>
+  <Name>React_Monster_Zhongwu</Name>
+  <Length>0</Length>
+  <IgnoreAttackScriptFx>false</IgnoreAttackScriptFx>
+  <Time>0.5</Time>
+  <AnimTime>0</AnimTime>
+  <PoseFrame>0</PoseFrame>
+  <ClipName2 />
+  <AnimLayerType>None</AnimLayerType>
+  <Fx>
+    <XFxData>
+      <Type>FirerBased</Type>
+      <End>0.5</End>
+      <Fx>Effects/Prefabs/Generic/Hit_strength_a</Fx>
+    </XFxData>
+  </Fx>
+  <ShaderEffData>
+    <XShaderEffData>
+      <LifeTime>0.03</LifeTime>
+      <FadeOut>0.1</FadeOut>
+      <uniqueID>200</uniqueID>
+      <x>2.118547</x>
+      <y>2.118547</y>
+      <z>2.118547</z>
+      <w>0.083</w>
+    </XShaderEffData>
+  </ShaderEffData>
+  <BoneShakeData />
+</XReactData>﻿<?xml version="1.0" encoding="utf-8"?>
+<XReactData>
+  <PresentID>400</PresentID>
+  <Name>Action_Ace_die</Name>
+  <Length>0</Length>
+  <IgnoreAttackScriptFx>false</IgnoreAttackScriptFx>
+  <AnimTime>0</AnimTime>
+  <PoseFrame>0</PoseFrame>
+  <ClipName2 />
+  <AnimLayerType>None</AnimLayerType>
+  <ShaderEffData />
+  <BoneShakeData />
+</XReactData>﻿<?xml version="1.0" encoding="utf-8"?>
+<XReactData>
+  <PresentID>400</PresentID>
+  <Name>Action_Ace_out</Name>
+  <Length>0</Length>
+  <IgnoreAttackScriptFx>false</IgnoreAttackScriptFx>
+  <AnimTime>0</AnimTime>
+  <PoseFrame>0</PoseFrame>
+  <ClipName2 />
+  <AnimLayerType>None</AnimLayerType>
+  <ShaderEffData />
+  <BoneShakeData />
+</XReactData>﻿<?xml version="1.0" encoding="utf-8"?>
+<XReactData>
+  <PresentID>400</PresentID>
+  <Name>React_Role_Ace</Name>
+  <Length>0</Length>
+  <IgnoreAttackScriptFx>false</IgnoreAttackScriptFx>
+  <AnimTime>0</AnimTime>
+  <PoseFrame>0</PoseFrame>
+  <ClipName2 />
+  <AnimLayerType>None</AnimLayerType>
+  <ShaderEffData />
+  <BoneShakeData />
+</XReactData>﻿<?xml version="1.0" encoding="utf-8"?>
+<XReactData>
+  <PresentID>154</PresentID>
+  <Name>Action_Blueno_die</Name>
+  <Length>0</Length>
+  <IgnoreAttackScriptFx>false</IgnoreAttackScriptFx>
+  <ClipName>Animation/Monster_Blueno/Monster_Blueno_dead</ClipName>
+  <Time>2.36666679</Time>
+  <AnimTime>2.36666679</AnimTime>
+  <PoseFrame>0</PoseFrame>
+  <ClipName2 />
+  <AnimLayerType>None</AnimLayerType>
+  <ShaderEffData />
+  <BoneShakeData />
+</XReactData>﻿<?xml version="1.0" encoding="utf-8"?>
+<XReactData>
+  <CopyFrom />
+  <PresentID>154</PresentID>
+  <Name>Action_Blueno_out</Name>
+  <Length>0</Length>
+  <IgnoreAttackScriptFx>false</IgnoreAttackScriptFx>
+  <ClipName>Animation/Role_hancock/Role_hancock_out</ClipName>
+  <Time>0.3</Time>
+  <AnimTime>1</AnimTime>
+  <PoseFrame>0</PoseFrame>
+  <ClipName2 />
+  <AnimLayerType>None</AnimLayerType>
+  <AvatarMask />
+  <ExtraScript />
+  <Fx>
+    <XFxData>
+      <Type>FirerBased</Type>
+      <Fx>Effects/Prefabs/Generic/fx_vanish</Fx>
+      <OffsetZ>-1</OffsetZ>
+      <Destroy_Delay>30</Destroy_Delay>
+    </XFxData>
+  </Fx>
+  <ShaderEffData>
+    <XShaderEffData>
+      <LifeTime>0.5</LifeTime>
+      <FadeIn>0.1</FadeIn>
+      <FadeOut>0.1</FadeOut>
+      <uniqueID>300</uniqueID>
+      <x>0</x>
+      <w>0</w>
+    </XShaderEffData>
+  </ShaderEffData>
+  <BoneShakeData />
+</XReactData>﻿<?xml version="1.0" encoding="utf-8"?>
+<XReactData>
+  <PresentID>154</PresentID>
+  <Name>React_Role_Blueno</Name>
+  <Length>0</Length>
+  <IgnoreAttackScriptFx>false</IgnoreAttackScriptFx>
+  <Time>0.900000036</Time>
+  <AnimTime>0</AnimTime>
+  <PoseFrame>0</PoseFrame>
+  <ClipName2 />
+  <AnimLayerType>None</AnimLayerType>
+  <ShaderEffData />
+  <BoneShakeData />
+</XReactData>﻿<?xml version="1.0" encoding="utf-8"?>
+<XReactData>
+  <PresentID>154</PresentID>
+  <Name>React_Role_Blueno_Tiekuai_Bati</Name>
+  <Length>0</Length>
+  <IgnoreAttackScriptFx>false</IgnoreAttackScriptFx>
+  <Time>0.900000036</Time>
+  <AnimTime>0</AnimTime>
+  <PoseFrame>0</PoseFrame>
+  <ClipName2 />
+  <AnimLayerType>None</AnimLayerType>
+  <LayerWeight>0.3</LayerWeight>
+  <AvatarMask />
+  <ShaderEffData />
+  <BoneShakeData />
+</XReactData>﻿<?xml version="1.0" encoding="utf-8"?>
+<XReactData>
+  <PresentID>9</PresentID>
+  <Name>Action_Brook_die</Name>
+  <Length>0</Length>
+  <IgnoreAttackScriptFx>false</IgnoreAttackScriptFx>
+  <AnimTime>0</AnimTime>
+  <PoseFrame>0</PoseFrame>
+  <ClipName2 />
+  <AnimLayerType>None</AnimLayerType>
+  <ShaderEffData />
+  <BoneShakeData />
+</XReactData>﻿<?xml version="1.0" encoding="utf-8"?>
+<XReactData>
+  <PresentID>9</PresentID>
+  <Name>Action_Brook_out</Name>
+  <Length>0</Length>
+  <IgnoreAttackScriptFx>false</IgnoreAttackScriptFx>
+  <AnimTime>0</AnimTime>
+  <PoseFrame>0</PoseFrame>
+  <ClipName2 />
+  <AnimLayerType>None</AnimLayerType>
+  <ShaderEffData />
+  <BoneShakeData />
+</XReactData>﻿<?xml version="1.0" encoding="utf-8"?>
+<XReactData>
+  <CopyFrom />
+  <PresentID>6</PresentID>
+  <Name>Action_Chopper_die</Name>
+  <Length>0</Length>
+  <IgnoreAttackScriptFx>false</IgnoreAttackScriptFx>
+  <ClipName>Animation/Role_Chopper/Role_Chopper_die</ClipName>
+  <Time>1.50000012</Time>
+  <AnimTime>1.50000012</AnimTime>
+  <PoseFrame>0</PoseFrame>
+  <ClipName2 />
+  <AnimLayerType>None</AnimLayerType>
+  <AvatarMask />
+  <ExtraScript />
+  <ShaderEffData />
+  <BoneShakeData />
+</XReactData>﻿<?xml version="1.0" encoding="utf-8"?>
+<XReactData>
+  <CopyFrom />
+  <PresentID>6</PresentID>
+  <Name>Action_Chopper_out</Name>
+  <Length>0</Length>
+  <IgnoreAttackScriptFx>false</IgnoreAttackScriptFx>
+  <ClipName>Animation/Role_Chopper/Role_Chopper_switch_out</ClipName>
+  <Time>0.8333333</Time>
+  <AnimTime>0.8333333</AnimTime>
+  <PoseFrame>0</PoseFrame>
+  <ClipName2 />
+  <AnimLayerType>None</AnimLayerType>
+  <AvatarMask />
+  <ExtraScript />
+  <ShaderEffData />
+  <BoneShakeData />
+</XReactData>﻿<?xml version="1.0" encoding="utf-8"?>
+<XReactData>
+  <PresentID>2008</PresentID>
+  <Name>Action_Chopper_rxt_die</Name>
+  <Length>0</Length>
+  <IgnoreAttackScriptFx>false</IgnoreAttackScriptFx>
+  <ClipName>Animation/Role_Chopper/Role_Chopper_rxt_die</ClipName>
+  <Time>2.4333334</Time>
+  <AnimTime>2.4333334</AnimTime>
+  <PoseFrame>0</PoseFrame>
+  <ClipName2 />
+  <AnimLayerType>None</AnimLayerType>
+  <ShaderEffData />
+  <BoneShakeData />
+</XReactData>﻿<?xml version="1.0" encoding="utf-8"?>
+<XReactData>
+  <PresentID>6</PresentID>
+  <Name>React_Role_Chopper</Name>
+  <Length>0</Length>
+  <IgnoreAttackScriptFx>false</IgnoreAttackScriptFx>
+  <Time>0.3</Time>
+  <AnimTime>0</AnimTime>
+  <PoseFrame>0</PoseFrame>
+  <ClipName2 />
+  <AnimLayerType>None</AnimLayerType>
+  <ShaderEffData />
+  <BoneShakeData />
+</XReactData>﻿<?xml version="1.0" encoding="utf-8"?>
+<XReactData>
+  <PresentID>2009</PresentID>
+  <Name>React_Role_Chopper_big</Name>
+  <Length>0</Length>
+  <IgnoreAttackScriptFx>false</IgnoreAttackScriptFx>
+  <Time>0.3</Time>
+  <AnimTime>0</AnimTime>
+  <PoseFrame>0</PoseFrame>
+  <ClipName2 />
+  <AnimLayerType>None</AnimLayerType>
+  <ShaderEffData />
+  <BoneShakeData />
+</XReactData>﻿<?xml version="1.0" encoding="utf-8"?>
+<XReactData>
+  <PresentID>2012</PresentID>
+  <Name>React_Role_Chopper_gebo</Name>
+  <Length>0</Length>
+  <IgnoreAttackScriptFx>false</IgnoreAttackScriptFx>
+  <Time>0.3</Time>
+  <AnimTime>0</AnimTime>
+  <PoseFrame>0</PoseFrame>
+  <ClipName2 />
+  <AnimLayerType>None</AnimLayerType>
+  <ShaderEffData />
+  <BoneShakeData />
+</XReactData>﻿<?xml version="1.0" encoding="utf-8"?>
+<XReactData>
+  <PresentID>2013</PresentID>
+  <Name>React_Role_Chopper_qiu</Name>
+  <Length>0</Length>
+  <IgnoreAttackScriptFx>false</IgnoreAttackScriptFx>
+  <Time>0.3</Time>
+  <AnimTime>0</AnimTime>
+  <PoseFrame>0</PoseFrame>
+  <ClipName2 />
+  <AnimLayerType>None</AnimLayerType>
+  <ShaderEffData />
+  <BoneShakeData />
+</XReactData>﻿<?xml version="1.0" encoding="utf-8"?>
+<XReactData>
+  <PresentID>2008</PresentID>
+  <Name>React_Role_Chopper_rxt</Name>
+  <Length>0</Length>
+  <IgnoreAttackScriptFx>false</IgnoreAttackScriptFx>
+  <Time>0.3</Time>
+  <AnimTime>0</AnimTime>
+  <PoseFrame>0</PoseFrame>
+  <ClipName2 />
+  <AnimLayerType>None</AnimLayerType>
+  <ShaderEffData />
+  <BoneShakeData />
+</XReactData>﻿<?xml version="1.0" encoding="utf-8"?>
+<XReactData>
+  <PresentID>8</PresentID>
+  <Name>Action_Franky_die</Name>
+  <Length>0</Length>
+  <IgnoreAttackScriptFx>false</IgnoreAttackScriptFx>
+  <ClipName>Animation/Role_Franky/Role_Franky_dead</ClipName>
+  <Time>1.60000014</Time>
+  <AnimTime>1.60000014</AnimTime>
+  <PoseFrame>0</PoseFrame>
+  <ClipName2 />
+  <AnimLayerType>None</AnimLayerType>
+  <ShaderEffData />
+  <BoneShakeData />
+</XReactData>﻿<?xml version="1.0" encoding="utf-8"?>
+<XReactData>
+  <PresentID>8</PresentID>
+  <Name>Action_Franky_out</Name>
+  <Length>0</Length>
+  <IgnoreAttackScriptFx>false</IgnoreAttackScriptFx>
+  <ClipName>Animation/Role_Franky/Role_Franky_out</ClipName>
+  <Time>0.066</Time>
+  <AnimTime>0.166666672</AnimTime>
+  <PoseFrame>0</PoseFrame>
+  <ClipName2 />
+  <AnimLayerType>None</AnimLayerType>
+  <ShaderEffData />
+  <BoneShakeData />
+</XReactData>﻿<?xml version="1.0" encoding="utf-8"?>
+<XReactData>
+  <PresentID>8</PresentID>
+  <Name>Action_Franky_out_fall</Name>
+  <Length>0</Length>
+  <IgnoreAttackScriptFx>false</IgnoreAttackScriptFx>
+  <ClipName>Animation/Role_Franky/Role_Franky_out</ClipName>
+  <AnimTime>0</AnimTime>
+  <PoseFrame>0</PoseFrame>
+  <AnimLayerType>None</AnimLayerType>
+</XReactData>﻿<?xml version="1.0" encoding="utf-8"?>
+<XReactData>
+  <PresentID>8</PresentID>
+  <Name>React_Franky_shield</Name>
+  <Length>0</Length>
+  <IgnoreAttackScriptFx>true</IgnoreAttackScriptFx>
+  <Time>1</Time>
+  <AnimTime>0</AnimTime>
+  <PoseFrame>0</PoseFrame>
+  <ClipName2 />
+  <AnimLayerType>None</AnimLayerType>
+  <Fx>
+    <XFxData>
+      <Type>FirerBased</Type>
+      <End>1</End>
+      <Fx>Effects/Prefabs/Roles/Franky/Role_Franky_shield_hit</Fx>
+      <OffsetY>1.25</OffsetY>
+      <OffsetZ>1</OffsetZ>
+      <Destroy_Delay>1</Destroy_Delay>
+    </XFxData>
+  </Fx>
+  <ShaderEffData />
+  <BoneShakeData />
+</XReactData>﻿<?xml version="1.0" encoding="utf-8"?>
+<XReactData>
+  <PresentID>8</PresentID>
+  <Name>React_Role_Franky</Name>
+  <Length>0</Length>
+  <IgnoreAttackScriptFx>false</IgnoreAttackScriptFx>
+  <AnimTime>0</AnimTime>
+  <PoseFrame>0</PoseFrame>
+  <ClipName2 />
+  <AnimLayerType>None</AnimLayerType>
+  <ShaderEffData />
+  <BoneShakeData />
+</XReactData>﻿<?xml version="1.0" encoding="utf-8"?>
+<XReactData>
+  <Name>Action_hancock_die</Name>
+  <Length>0</Length>
+  <ClipName>Animation/Role_hancock/Role_hancock_die</ClipName>
+  <Time>2.56666684</Time>
+  <AnimTime>2.56666684</AnimTime>
+  <PoseFrame>0</PoseFrame>
+  <ClipName2 />
+  <AnimLayerType>None</AnimLayerType>
+  <Audio>
+    <XAudioData>
+      <Clip>Role/Hancock/Hancock_die</Clip>
+      <Channel>Skill</Channel>
+    </XAudioData>
+  </Audio>
+  <ShaderEffData />
+  <BoneShakeData />
+</XReactData>﻿<?xml version="1.0" encoding="utf-8"?>
+<XReactData>
+  <Name>Action_hancock_out</Name>
+  <Length>0</Length>
+  <ClipName>Animation/Role_hancock/Role_hancock_out</ClipName>
+  <Time>0.066</Time>
+  <AnimTime>1</AnimTime>
+  <PoseFrame>0</PoseFrame>
+  <AnimLayerType>None</AnimLayerType>
+  <Fx>
+    <XFxData>
+      <Type>FirerBased</Type>
+      <End>1</End>
+      <Fx>Effects/Prefabs/Generic/fx_vanish</Fx>
+      <Follow>false</Follow>
+      <Destroy_Delay>0.5</Destroy_Delay>
+    </XFxData>
+  </Fx>
+  <Audio />
+  <ShaderEffData />
+  <BoneShakeData />
+</XReactData>﻿<?xml version="1.0" encoding="utf-8"?>
+<XReactData>
+  <Name>Action_hancock_out_fall</Name>
+  <Length>0</Length>
+  <ClipName>Animation/Role_hancock/Role_hancock_out_fall</ClipName>
+  <Time>1.8</Time>
+  <AnimationSpeedRatio>0.9</AnimationSpeedRatio>
+  <AnimTime>2</AnimTime>
+  <PoseFrame>0</PoseFrame>
+  <AnimLayerType>None</AnimLayerType>
+  <AvatarMask />
+  <Fx>
+    <XFxData>
+      <Type>FirerBased</Type>
+      <End>1.8</End>
+      <Fx>Effects/Prefabs/Roles/BlackBeard/Monster_BlackBeard_anxuedao03</Fx>
+    </XFxData>
+  </Fx>
+  <Audio />
+  <ShaderEffData />
+  <BoneShakeData />
+</XReactData>﻿<?xml version="1.0" encoding="utf-8"?>
+<XReactData>
+  <PresentID>2500</PresentID>
+  <Name>Action_hancock_snake_die</Name>
+  <Length>0</Length>
+  <IgnoreAttackScriptFx>false</IgnoreAttackScriptFx>
+  <ClipName>Animation/Role_Hancock_snake/Role_Hancock_snake_die</ClipName>
+  <Time>2.56666684</Time>
+  <AnimTime>2.56666684</AnimTime>
+  <PoseFrame>0</PoseFrame>
+  <ClipName2 />
+  <AnimLayerType>None</AnimLayerType>
+  <Audio>
+    <XAudioData>
+      <Clip>Role/Hancock/Hancock_die</Clip>
+      <Channel>Skill</Channel>
+    </XAudioData>
+  </Audio>
+  <ShaderEffData />
+  <BoneShakeData />
+</XReactData>﻿<?xml version="1.0" encoding="utf-8"?>
+<XReactData>
+  <PresentID>500</PresentID>
+  <Name>react_hancock_snake</Name>
+  <Length>0</Length>
+  <IgnoreAttackScriptFx>false</IgnoreAttackScriptFx>
+  <AnimTime>0</AnimTime>
+  <PoseFrame>0</PoseFrame>
+  <AnimLayerType>None</AnimLayerType>
+</XReactData>﻿<?xml version="1.0" encoding="utf-8"?>
+<XReactData>
+  <Name>React_Role_hancock</Name>
+  <Length>0</Length>
+  <Time>0.35</Time>
+  <AnimTime>0</AnimTime>
+  <PoseFrame>0</PoseFrame>
+  <AnimLayerType>None</AnimLayerType>
+  <Fx>
+    <XFxData>
+      <Type>FirerBased</Type>
+      <End>0.35</End>
+      <Fx>Effects/Prefabs/Generic/Hit_strength_b</Fx>
+      <Bone>root</Bone>
+      <OffsetZ>1</OffsetZ>
+    </XFxData>
+  </Fx>
+  <Audio />
+  <ShaderEffData />
+  <BoneShakeData />
+</XReactData>﻿<?xml version="1.0" encoding="utf-8"?>
+<XReactData>
+  <PresentID>500</PresentID>
+  <Name>React_role_hancock_snake</Name>
+  <Length>0</Length>
+  <IgnoreAttackScriptFx>false</IgnoreAttackScriptFx>
+  <AnimTime>0</AnimTime>
+  <PoseFrame>0</PoseFrame>
+  <AnimLayerType>None</AnimLayerType>
+</XReactData>﻿<?xml version="1.0" encoding="utf-8"?>
+<XReactData>
+  <Name>Action_hancock_die</Name>
+  <Length>0</Length>
+  <ClipName>Animation/Role_hancock/Role_hancock_die</ClipName>
+  <Time>2.56666684</Time>
+  <AnimTime>2.56666684</AnimTime>
+  <PoseFrame>0</PoseFrame>
+  <ClipName2 />
+  <AnimLayerType>None</AnimLayerType>
+  <Audio>
+    <XAudioData>
+      <Clip>Role/Hancock/Hancock_die</Clip>
+      <Channel>Skill</Channel>
+    </XAudioData>
+  </Audio>
+  <ShaderEffData />
+  <BoneShakeData />
+</XReactData>﻿<?xml version="1.0" encoding="utf-8"?>
+<XReactData>
+  <Name>Action_hancock_out</Name>
+  <Length>0</Length>
+  <ClipName>Animation/Role_hancock/Role_hancock_out</ClipName>
+  <Time>0.066</Time>
+  <AnimTime>1</AnimTime>
+  <PoseFrame>0</PoseFrame>
+  <AnimLayerType>None</AnimLayerType>
+  <Fx>
+    <XFxData>
+      <Type>FirerBased</Type>
+      <End>1</End>
+      <Fx>Effects/Prefabs/Generic/fx_vanish</Fx>
+      <Follow>false</Follow>
+      <Destroy_Delay>0.5</Destroy_Delay>
+    </XFxData>
+  </Fx>
+  <Audio />
+  <ShaderEffData />
+  <BoneShakeData />
+</XReactData>﻿<?xml version="1.0" encoding="utf-8"?>
+<XReactData>
+  <Name>Action_hancock_out_fall</Name>
+  <Length>0</Length>
+  <ClipName>Animation/Role_hancock/Role_hancock_out_fall</ClipName>
+  <Time>1.8</Time>
+  <AnimationSpeedRatio>0.9</AnimationSpeedRatio>
+  <AnimTime>2</AnimTime>
+  <PoseFrame>0</PoseFrame>
+  <AnimLayerType>None</AnimLayerType>
+  <AvatarMask />
+  <Fx>
+    <XFxData>
+      <Type>FirerBased</Type>
+      <End>1.8</End>
+      <Fx>Effects/Prefabs/Roles/BlackBeard/Monster_BlackBeard_anxuedao03</Fx>
+    </XFxData>
+  </Fx>
+  <Audio />
+  <ShaderEffData />
+  <BoneShakeData />
+</XReactData>﻿<?xml version="1.0" encoding="utf-8"?>
+<XReactData>
+  <Name>React_Role_hancock</Name>
+  <Length>0</Length>
+  <Time>0.35</Time>
+  <AnimTime>0</AnimTime>
+  <PoseFrame>0</PoseFrame>
+  <AnimLayerType>None</AnimLayerType>
+  <Fx>
+    <XFxData>
+      <Type>FirerBased</Type>
+      <End>0.35</End>
+      <Fx>Effects/Prefabs/Generic/Hit_strength_b</Fx>
+      <Bone>root</Bone>
+      <OffsetZ>1</OffsetZ>
+    </XFxData>
+  </Fx>
+  <Audio />
+  <ShaderEffData />
+  <BoneShakeData />
+</XReactData>﻿<?xml version="1.0" encoding="utf-8"?>
+<XReactData>
+  <PresentID>152</PresentID>
+  <Name>Action_Role_Jyabura_wolf_die</Name>
+  <Length>0</Length>
+  <IgnoreAttackScriptFx>false</IgnoreAttackScriptFx>
+  <ClipName>Animation/Role_Jyabura/Role_Jyabura_dead</ClipName>
+  <Time>2.766667</Time>
+  <AnimTime>2.766667</AnimTime>
+  <PoseFrame>0</PoseFrame>
+  <ClipName2 />
+  <AnimLayerType>None</AnimLayerType>
+  <ShaderEffData />
+  <BoneShakeData />
+</XReactData>﻿<?xml version="1.0" encoding="utf-8"?>
+<XReactData>
+  <PresentID>152</PresentID>
+  <Name>Action_Role_Jyabura_wolf_out</Name>
+  <Length>0</Length>
+  <IgnoreAttackScriptFx>false</IgnoreAttackScriptFx>
+  <ClipName>Animation/Role_Jyabura/Role_jyabura_leave</ClipName>
+  <Time>0.6</Time>
+  <AnimTime>0.6</AnimTime>
+  <PoseFrame>0</PoseFrame>
+  <ClipName2 />
+  <AnimLayerType>None</AnimLayerType>
+  <ShaderEffData />
+  <BoneShakeData />
+</XReactData>﻿<?xml version="1.0" encoding="utf-8"?>
+<XReactData>
+  <PresentID>152</PresentID>
+  <Name>React_Role_Jyabura_wolf</Name>
+  <Length>0</Length>
+  <IgnoreAttackScriptFx>true</IgnoreAttackScriptFx>
+  <Time>0.35</Time>
+  <AnimTime>0</AnimTime>
+  <PoseFrame>0</PoseFrame>
+  <ClipName2 />
+  <AnimLayerType>None</AnimLayerType>
+  <ShaderEffData />
+  <BoneShakeData />
+</XReactData>﻿<?xml version="1.0" encoding="utf-8"?>
+<XReactData>
+  <CopyFrom />
+  <PresentID>152</PresentID>
+  <Name>React_Role_Jyabura_wolf_Tiekuai_Bati</Name>
+  <Length>0</Length>
+  <IgnoreAttackScriptFx>true</IgnoreAttackScriptFx>
+  <Time>2</Time>
+  <AnimTime>0</AnimTime>
+  <PoseFrame>0</PoseFrame>
+  <ClipName2 />
+  <AnimLayerType>None</AnimLayerType>
+  <AvatarMask />
+  <ExtraScript />
+  <Fx>
+    <XFxData>
+      <Type>FirerBased</Type>
+      <End>2</End>
+      <Fx>Effects/Prefabs/Roles/Jyabura/Monster_jiabula_tiekuai_hit</Fx>
+      <OffsetY>1.5</OffsetY>
+      <Destroy_Delay>1</Destroy_Delay>
+    </XFxData>
+  </Fx>
+  <Audio>
+    <XAudioData>
+      <Clip>Hit/Tiekuai_hit</Clip>
+      <Channel>Behit</Channel>
+    </XAudioData>
+  </Audio>
+  <ShaderEffData />
+  <BoneShakeData />
+</XReactData>﻿<?xml version="1.0" encoding="utf-8"?>
+<XReactData>
+  <CopyFrom />
+  <PresentID>152</PresentID>
+  <Name>React_Role_Jyabura_wolf_Tiekuai_Hit</Name>
+  <Length>0</Length>
+  <IgnoreAttackScriptFx>true</IgnoreAttackScriptFx>
+  <Time>2</Time>
+  <AnimTime>0</AnimTime>
+  <PoseFrame>0</PoseFrame>
+  <ClipName2 />
+  <AnimLayerType>None</AnimLayerType>
+  <AvatarMask />
+  <ExtraScript />
+  <Fx>
+    <XFxData>
+      <Type>FirerBased</Type>
+      <End>2</End>
+      <Fx>Effects/Prefabs/Roles/Jyabura/Monster_jiabula_tiekuai_hit_posui</Fx>
+      <OffsetY>1.5</OffsetY>
+      <Destroy_Delay>1.5</Destroy_Delay>
+    </XFxData>
+  </Fx>
+  <Audio>
+    <XAudioData>
+      <Clip>Hit/Tiekuai_broken</Clip>
+      <Channel>Behit</Channel>
+    </XAudioData>
+  </Audio>
+  <ShaderEffData />
+  <BoneShakeData />
+</XReactData>﻿<?xml version="1.0" encoding="utf-8"?>
+<XReactData>
+  <PresentID>151</PresentID>
+  <Name>Action_Kaku_die</Name>
+  <Length>0</Length>
+  <IgnoreAttackScriptFx>false</IgnoreAttackScriptFx>
+  <ClipName>Animation/Monster_Kaku/Monster_Kaku_dead</ClipName>
+  <Time>1.4645</Time>
+  <AnimationSpeedRatio>0.505</AnimationSpeedRatio>
+  <AnimTime>2.9</AnimTime>
+  <PoseFrame>0</PoseFrame>
+  <ClipName2 />
+  <AnimLayerType>None</AnimLayerType>
+  <ShaderEffData />
+  <BoneShakeData />
+</XReactData>﻿<?xml version="1.0" encoding="utf-8"?>
+<XReactData>
+  <PresentID>151</PresentID>
+  <Name>Action_Kaku_out</Name>
+  <Length>0</Length>
+  <IgnoreAttackScriptFx>false</IgnoreAttackScriptFx>
+  <ClipName>Animation/Monster_Kaku/Monster_Kaku_ti2</ClipName>
+  <Time>0.333333343</Time>
+  <AnimTime>0.333333343</AnimTime>
+  <PoseFrame>0</PoseFrame>
+  <ClipName2 />
+  <AnimLayerType>None</AnimLayerType>
+  <ShaderEffData />
+  <BoneShakeData />
+</XReactData>﻿<?xml version="1.0" encoding="utf-8"?>
+<XReactData>
+  <PresentID>2004</PresentID>
+  <Name>Monster_Kaku_Box_react</Name>
+  <Length>0</Length>
+  <IgnoreAttackScriptFx>false</IgnoreAttackScriptFx>
+  <AnimTime>0</AnimTime>
+  <PoseFrame>0</PoseFrame>
+  <AnimLayerType>None</AnimLayerType>
+</XReactData>﻿<?xml version="1.0" encoding="utf-8"?>
+<XReactData>
+  <PresentID>151</PresentID>
+  <Name>React_Role_Kaku</Name>
+  <Length>0</Length>
+  <IgnoreAttackScriptFx>false</IgnoreAttackScriptFx>
+  <Time>0.35</Time>
+  <AnimTime>0</AnimTime>
+  <PoseFrame>0</PoseFrame>
+  <ClipName2 />
+  <AnimLayerType>None</AnimLayerType>
+  <ShaderEffData />
+  <BoneShakeData />
+</XReactData>﻿<?xml version="1.0" encoding="utf-8"?>
+<XReactData>
+  <PresentID>2003</PresentID>
+  <Name>Role_Kaku_react</Name>
+  <Length>0</Length>
+  <IgnoreAttackScriptFx>false</IgnoreAttackScriptFx>
+  <ClipName>Animation/Monster_Kaku/Monster_Kaku_superarmour_hit</ClipName>
+  <Time>0.489600062</Time>
+  <AnimationSpeedRatio>0.544</AnimationSpeedRatio>
+  <AnimTime>0.900000036</AnimTime>
+  <PoseFrame>0</PoseFrame>
+  <ClipName2 />
+  <AnimLayerType>None</AnimLayerType>
+  <ShaderEffData />
+  <BoneShakeData />
+</XReactData>﻿<?xml version="1.0" encoding="utf-8"?>
+<XReactData>
+  <PresentID>153</PresentID>
+  <Name>Action_Kalifa_die</Name>
+  <Length>0</Length>
+  <IgnoreAttackScriptFx>false</IgnoreAttackScriptFx>
+  <ClipName>Animation/Role_Kalifa/Role_Kalifa_die</ClipName>
+  <Time>2.50000024</Time>
+  <AnimTime>2.50000024</AnimTime>
+  <PoseFrame>0</PoseFrame>
+  <ClipName2 />
+  <AnimLayerType>None</AnimLayerType>
+  <ShaderEffData />
+  <BoneShakeData />
+</XReactData>﻿<?xml version="1.0" encoding="utf-8"?>
+<XReactData>
+  <PresentID>153</PresentID>
+  <Name>Action_Kalifa_out</Name>
+  <Length>0</Length>
+  <IgnoreAttackScriptFx>false</IgnoreAttackScriptFx>
+  <ClipName>Animation/Role_Kalifa/Role_Kalifa_out</ClipName>
+  <Time>1</Time>
+  <AnimTime>1</AnimTime>
+  <PoseFrame>0</PoseFrame>
+  <ClipName2 />
+  <AnimLayerType>None</AnimLayerType>
+  <ShaderEffData />
+  <BoneShakeData />
+</XReactData>﻿<?xml version="1.0" encoding="utf-8"?>
+<XReactData>
+  <PresentID>153</PresentID>
+  <Name>Action_Kalifa_out_fall</Name>
+  <Length>0</Length>
+  <IgnoreAttackScriptFx>false</IgnoreAttackScriptFx>
+  <ClipName>Animation/Role_Kalifa/Role_Kalifa_out_fall</ClipName>
+  <Time>1</Time>
+  <AnimTime>1</AnimTime>
+  <PoseFrame>0</PoseFrame>
+  <ClipName2 />
+  <AnimLayerType>None</AnimLayerType>
+  <ShaderEffData />
+  <BoneShakeData />
+</XReactData>﻿<?xml version="1.0" encoding="utf-8"?>
+<XReactData>
+  <Name>Action_Katalina_out</Name>
+  <Length>0</Length>
+  <ClipName>Animation/Role_katalina/Role_Katalina_dash</ClipName>
+  <Time>1.56666672</Time>
+  <AnimTime>0</AnimTime>
+  <PoseFrame>0</PoseFrame>
+  <AnimLayerType>None</AnimLayerType>
+  <Fx />
+  <Audio />
+  <ShaderEffData />
+  <BoneShakeData />
+</XReactData>﻿<?xml version="1.0" encoding="utf-8"?>
+<XReactData>
+  <PresentID>2150</PresentID>
+  <Name>Action_lucciC_die</Name>
+  <Length>0</Length>
+  <IgnoreAttackScriptFx>false</IgnoreAttackScriptFx>
+  <Time>2.06666684</Time>
+  <AnimTime>0</AnimTime>
+  <PoseFrame>0</PoseFrame>
+  <ClipName2 />
+  <AnimLayerType>None</AnimLayerType>
+  <ShaderEffData />
+  <BoneShakeData />
+</XReactData>﻿<?xml version="1.0" encoding="utf-8"?>
+<XReactData>
+  <PresentID>2150</PresentID>
+  <Name>Action_lucciC_out</Name>
+  <Length>0</Length>
+  <IgnoreAttackScriptFx>false</IgnoreAttackScriptFx>
+  <ClipName>Animation/Role_Lucci/Role_LucciC_Out</ClipName>
+  <Time>0.1</Time>
+  <AnimTime>0.6666667</AnimTime>
+  <PoseFrame>0</PoseFrame>
+  <ClipName2 />
+  <AnimLayerType>None</AnimLayerType>
+  <ShaderEffData />
+  <BoneShakeData />
+</XReactData>﻿<?xml version="1.0" encoding="utf-8"?>
+<XReactData>
+  <PresentID>150</PresentID>
+  <Name>Action_lucciH_die</Name>
+  <Length>0</Length>
+  <IgnoreAttackScriptFx>false</IgnoreAttackScriptFx>
+  <Time>2.16666675</Time>
+  <AnimTime>0</AnimTime>
+  <PoseFrame>0</PoseFrame>
+  <ClipName2 />
+  <AnimLayerType>None</AnimLayerType>
+  <ShaderEffData />
+  <BoneShakeData />
+</XReactData>﻿<?xml version="1.0" encoding="utf-8"?>
+<XReactData>
+  <PresentID>150</PresentID>
+  <Name>Action_lucciH_out</Name>
+  <Length>0</Length>
+  <IgnoreAttackScriptFx>false</IgnoreAttackScriptFx>
+  <ClipName>Animation/Role_Lucci/Role_LucciH_Out</ClipName>
+  <Time>0.1</Time>
+  <AnimTime>0.733333349</AnimTime>
+  <PoseFrame>0</PoseFrame>
+  <ClipName2 />
+  <AnimLayerType>None</AnimLayerType>
+  <ShaderEffData />
+  <BoneShakeData />
+</XReactData>﻿<?xml version="1.0" encoding="utf-8"?>
+<XReactData>
+  <PresentID>150</PresentID>
+  <Name>React_Role_lucciC</Name>
+  <Length>0</Length>
+  <IgnoreAttackScriptFx>false</IgnoreAttackScriptFx>
+  <Time>0.35</Time>
+  <AnimTime>0</AnimTime>
+  <PoseFrame>0</PoseFrame>
+  <ClipName2 />
+  <AnimLayerType>None</AnimLayerType>
+  <ShaderEffData />
+  <BoneShakeData />
+</XReactData>﻿<?xml version="1.0" encoding="utf-8"?>
+<XReactData>
+  <PresentID>150</PresentID>
+  <Name>React_Role_lucciH</Name>
+  <Length>0</Length>
+  <IgnoreAttackScriptFx>false</IgnoreAttackScriptFx>
+  <Time>0.35</Time>
+  <AnimTime>0</AnimTime>
+  <PoseFrame>0</PoseFrame>
+  <ClipName2 />
+  <AnimLayerType>None</AnimLayerType>
+  <ShaderEffData />
+  <BoneShakeData />
+</XReactData>﻿<?xml version="1.0" encoding="utf-8"?>
+<XReactData>
+  <CopyFrom />
+  <PresentID>12901</PresentID>
+  <Name>React_Role_LucciC</Name>
+  <Length>0</Length>
+  <IgnoreAttackScriptFx>false</IgnoreAttackScriptFx>
+  <ClipName>Animation/Role_LucciC/Role_LucciC_React</ClipName>
+  <Time>0.5004</Time>
+  <AnimationSpeedRatio>0.556</AnimationSpeedRatio>
+  <AnimTime>0.900000036</AnimTime>
+  <PoseFrame>0</PoseFrame>
+  <ClipName2 />
+  <AnimLayerType>Additive</AnimLayerType>
+  <AvatarMask>AvatarMask/Role_LucciC</AvatarMask>
+  <ExtraScript />
+  <ShaderEffData>
+    <XShaderEffData>
+      <LifeTime>0.03</LifeTime>
+      <FadeOut>0.06</FadeOut>
+      <uniqueID>200</uniqueID>
+      <x>2.11854744</x>
+      <y>2.11854744</y>
+      <z>2.11854744</z>
+      <w>0.1</w>
+      <partMask>63</partMask>
+    </XShaderEffData>
+  </ShaderEffData>
+  <BoneShakeData />
+</XReactData>﻿<?xml version="1.0" encoding="utf-8"?>
+<XReactData>
+  <CopyFrom />
+  <PresentID>13081</PresentID>
+  <Name>React_Role_LucciH</Name>
+  <Length>0</Length>
+  <IgnoreAttackScriptFx>false</IgnoreAttackScriptFx>
+  <ClipName>Animation/Role_LucciH/Role_LucciH_React</ClipName>
+  <Time>0.5004</Time>
+  <AnimationSpeedRatio>0.556</AnimationSpeedRatio>
+  <AnimTime>0.900000036</AnimTime>
+  <PoseFrame>0</PoseFrame>
+  <ClipName2 />
+  <AnimLayerType>Additive</AnimLayerType>
+  <AvatarMask>AvatarMask/Role_LucciH</AvatarMask>
+  <ExtraScript />
+  <Fx>
+    <XFxData>
+      <Type>FirerBased</Type>
+      <End>0.5004</End>
+      <Fx>Effects/Prefabs/Generic/Hit_strength_a</Fx>
+      <ScaleX>1.5</ScaleX>
+      <ScaleY>1.5</ScaleY>
+      <ScaleZ>1.5</ScaleZ>
+      <OffsetY>1.7</OffsetY>
+      <Follow>false</Follow>
+      <Destroy_Delay>1</Destroy_Delay>
+    </XFxData>
+  </Fx>
+  <ShaderEffData>
+    <XShaderEffData>
+      <LifeTime>0.02</LifeTime>
+      <FadeOut>0.05</FadeOut>
+      <uniqueID>200</uniqueID>
+      <x>2.11854744</x>
+      <y>2.11854744</y>
+      <z>2.11854744</z>
+      <w>0.083</w>
+    </XShaderEffData>
+  </ShaderEffData>
+  <BoneShakeData />
+</XReactData>﻿<?xml version="1.0" encoding="utf-8"?>
+<XReactData>
+  <CopyFrom />
+  <PresentID>12901</PresentID>
+  <Name>React_Role_luccy</Name>
+  <Length>0</Length>
+  <ClipName>Animation/Role_luccy/Role_luccy_damage_superhit</ClipName>
+  <Time>0.900000036</Time>
+  <AnimTime>0.900000036</AnimTime>
+  <PoseFrame>0</PoseFrame>
+  <ClipName2 />
+  <AnimLayerType>Additive</AnimLayerType>
+  <AvatarMask>AvatarMask/BlackBeard_upper</AvatarMask>
+  <ExtraScript />
+  <Fx>
+    <XFxData>
+      <Type>FirerBased</Type>
+      <End>0.900000036</End>
+      <Fx>Effects/Prefabs/Generic/Hit_strength_a</Fx>
+      <ScaleX>3</ScaleX>
+      <ScaleZ>3</ScaleZ>
+      <OffsetY>1.7</OffsetY>
+    </XFxData>
+  </Fx>
+  <ShaderEffData>
+    <XShaderEffData>
+      <LifeTime>0.03</LifeTime>
+      <UniqueID>1</UniqueID>
+      <Data0>11.984314</Data0>
+      <Data1>1.44313729</Data1>
+      <Data2>1.44313729</Data2>
+      <Data3>0.02</Data3>
+      <Data4>0</Data4>
+      <Data5>0</Data5>
+      <Data6>-1</Data6>
+      <Data7>-1</Data7>
+      <FadeOut>0.1</FadeOut>
+      <PartFlag>-1</PartFlag>
+    </XShaderEffData>
+  </ShaderEffData>
+  <BoneShakeData />
+</XReactData>﻿<?xml version="1.0" encoding="utf-8"?>
+<XReactData>
+  <Name>Action_luffy_cutscene1_01</Name>
+  <Length>0</Length>
+  <ClipName>Animation/Role_luffy/Cutscene_001_final_Luffy</ClipName>
+  <Time>7.00000048</Time>
+  <FadeTime>0.5</FadeTime>
+  <AnimTime>7.00000048</AnimTime>
+  <PoseFrame>0</PoseFrame>
+  <InputFreezed>true</InputFreezed>
+  <AnimLayerType>None</AnimLayerType>
+  <Fx />
+  <Audio />
+  <ShaderEffData />
+  <BoneShakeData />
+</XReactData>﻿<?xml version="1.0" encoding="utf-8"?>
+<XReactData>
+  <Name>Action_luffy_cutscene3_01</Name>
+  <Length>0</Length>
+  <ClipName>Animation/Role_luffy/Cutscene_003_final_luffy</ClipName>
+  <Time>2.83333349</Time>
+  <FadeTime>0.3</FadeTime>
+  <AnimTime>0</AnimTime>
+  <PoseFrame>0</PoseFrame>
+  <AnimLayerType>None</AnimLayerType>
+  <Fx />
+  <Audio />
+  <ShaderEffData />
+  <BoneShakeData />
+</XReactData>﻿<?xml version="1.0" encoding="utf-8"?>
+<XReactData>
+  <Name>Action_luffy_die</Name>
+  <Length>0</Length>
+  <ClipName>Animation/Role_luffy/Role_luffy_die</ClipName>
+  <Time>1.30000007</Time>
+  <AnimTime>1.30000007</AnimTime>
+  <PoseFrame>0</PoseFrame>
+  <ClipName2 />
+  <AnimLayerType>None</AnimLayerType>
+  <Audio>
+    <XAudioData>
+      <Clip>Role/Luffy/Luffy_die</Clip>
+      <Channel>Skill</Channel>
+    </XAudioData>
+  </Audio>
+  <ShaderEffData />
+  <BoneShakeData />
+</XReactData>﻿<?xml version="1.0" encoding="utf-8"?>
+<XReactData>
+  <Name>Action_luffy_opendoor</Name>
+  <Length>0</Length>
+  <ClipName>Animation/Role_luffy/Role_luffy_opendoor</ClipName>
+  <Time>3.08266687</Time>
+  <AnimationSpeedRatio>1.36</AnimationSpeedRatio>
+  <AnimTime>2.266667</AnimTime>
+  <PoseFrame>0</PoseFrame>
+  <InputFreezed>true</InputFreezed>
+  <AnimLayerType>None</AnimLayerType>
+  <Fx />
+  <Audio />
+  <ShaderEffData />
+  <BoneShakeData />
+</XReactData>﻿<?xml version="1.0" encoding="utf-8"?>
+<XReactData>
+  <CopyFrom />
+  <Name>Action_luffy_out</Name>
+  <Length>0</Length>
+  <ClipName>Animation/Role_luffy/Role_luffy_out</ClipName>
+  <Time>0.066</Time>
+  <AnimTime>0.5</AnimTime>
+  <PoseFrame>0</PoseFrame>
+  <ClipName2 />
+  <AnimLayerType>None</AnimLayerType>
+  <AvatarMask />
+  <ExtraScript />
+  <Fx>
+    <XFxData>
+      <Type>FirerBased</Type>
+      <End>0.5</End>
+      <Fx>Effects/Prefabs/Generic/fx_vanish</Fx>
+      <OffsetZ>-0.6</OffsetZ>
+      <Follow>false</Follow>
+      <Destroy_Delay>0.5</Destroy_Delay>
+    </XFxData>
+  </Fx>
+  <ShaderEffData />
+  <BoneShakeData />
+</XReactData>﻿<?xml version="1.0" encoding="utf-8"?>
+<XReactData>
+  <Name>Action_luffy_out_fall</Name>
+  <Length>0</Length>
+  <ClipName>Animation/Role_luffy/Role_luffy_out_fall</ClipName>
+  <Time>1.8</Time>
+  <AnimationSpeedRatio>0.9</AnimationSpeedRatio>
+  <AnimTime>2</AnimTime>
+  <PoseFrame>0</PoseFrame>
+  <AnimLayerType>None</AnimLayerType>
+  <AvatarMask />
+  <Fx>
+    <XFxData>
+      <Type>FirerBased</Type>
+      <End>1.8</End>
+      <Fx>Effects/Prefabs/Roles/BlackBeard/Monster_BlackBeard_anxuedao03</Fx>
+    </XFxData>
+  </Fx>
+  <Audio />
+  <ShaderEffData />
+  <BoneShakeData />
+</XReactData>﻿<?xml version="1.0" encoding="utf-8"?>
+<XReactData>
+  <Name>Action_luffy_out_friend</Name>
+  <Length>0</Length>
+  <ClipName>Animation/Role_luffy/Role_luffy_yoke</ClipName>
+  <Time>1.6</Time>
+  <AnimTime>3.766667</AnimTime>
+  <PoseFrame>0</PoseFrame>
+  <AnimLayerType>None</AnimLayerType>
+  <Fx />
+  <Audio />
+  <ShaderEffData />
+  <BoneShakeData />
+</XReactData>﻿<?xml version="1.0" encoding="utf-8"?>
+<XReactData>
+  <Name>Action_namei_out</Name>
+  <Length>0</Length>
+  <ClipName>Animation/Role_nami/Role_nami_dash_back_new</ClipName>
+  <Time>0.4666667</Time>
+  <AnimTime>0</AnimTime>
+  <PoseFrame>0</PoseFrame>
+  <AnimLayerType>None</AnimLayerType>
+  <Fx>
+    <XFxData>
+      <Type>FirerBased</Type>
+      <At>0.433333337</At>
+      <End>0.4666667</End>
+      <Fx>Effects/Prefabs/Generic/fx_vanish</Fx>
+      <Destroy_Delay>0.5</Destroy_Delay>
+    </XFxData>
+  </Fx>
+  <Audio />
+  <ShaderEffData />
+  <BoneShakeData />
+</XReactData>﻿<?xml version="1.0" encoding="utf-8"?>
+<XReactData>
+  <Name>Action_luffy_out_fall</Name>
+  <Length>0</Length>
+  <ClipName>Animation/Role_luffy/Role_luffy_out_fall</ClipName>
+  <Time>2</Time>
+  <AnimationSpeedRatio>1.5</AnimationSpeedRatio>
+  <AnimTime>0</AnimTime>
+  <PoseFrame>0</PoseFrame>
+  <AnimLayerType>None</AnimLayerType>
+  <Fx />
+  <Audio />
+  <ShaderEffData />
+  <BoneShakeData />
+</XReactData>﻿<?xml version="1.0" encoding="utf-8"?>
+<XReactData>
+  <Name>React_Role_luffy</Name>
+  <Length>0</Length>
+  <Time>0.3</Time>
+  <AnimTime>0</AnimTime>
+  <PoseFrame>0</PoseFrame>
+  <AnimLayerType>None</AnimLayerType>
+  <Fx />
+  <Audio />
+  <ShaderEffData />
+  <BoneShakeData />
+</XReactData>﻿<?xml version="1.0" encoding="utf-8"?>
+<XReactData>
+  <PresentID>1</PresentID>
+  <Name>React_Role_luffy_2</Name>
+  <Length>0</Length>
+  <AnimTime>0</AnimTime>
+  <PoseFrame>0</PoseFrame>
+  <ClipName2 />
+  <AnimLayerType>None</AnimLayerType>
+  <ShaderEffData />
+  <BoneShakeData />
+</XReactData>﻿<?xml version="1.0" encoding="utf-8"?>
+<XReactData>
+  <CopyFrom />
+  <PresentID>1</PresentID>
+  <Name>React_Role_luffy_2_bati</Name>
+  <Length>0</Length>
+  <IgnoreAttackScriptFx>false</IgnoreAttackScriptFx>
+  <Time>0.5</Time>
+  <AnimTime>0</AnimTime>
+  <PoseFrame>0</PoseFrame>
+  <ClipName2 />
+  <AnimLayerType>None</AnimLayerType>
+  <AvatarMask />
+  <ExtraScript />
+  <Fx>
+    <XFxData>
+      <Type>FirerBased</Type>
+      <End>0.5</End>
+      <Fx>Effects/Prefabs/Roles/Jyabura/Monster_jiabula_tiekuai_hit</Fx>
+      <OffsetY>1</OffsetY>
+      <Destroy_Delay>1</Destroy_Delay>
+    </XFxData>
+  </Fx>
+  <ShaderEffData>
+    <XShaderEffData>
+      <LifeTime>0.1</LifeTime>
+      <uniqueID>200</uniqueID>
+      <x>0.06666667</x>
+      <y>0.003921569</y>
+      <z>0.254901975</z>
+      <w>0.0777</w>
+      <partMask>65535</partMask>
+    </XShaderEffData>
+  </ShaderEffData>
+  <BoneShakeData />
+</XReactData>﻿<?xml version="1.0" encoding="utf-8"?>
+<XReactData>
+  <PresentID>1</PresentID>
+  <Name>React_Role_Luffy_topwarcs_1</Name>
+  <Length>0</Length>
+  <IgnoreAttackScriptFx>false</IgnoreAttackScriptFx>
+  <ClipName>Animation/Role_luffy/Role_Luffy_react_topwarcs_1</ClipName>
+  <Time>2.333335</Time>
+  <FadeTime>0.2</FadeTime>
+  <AnimTime>2.333335</AnimTime>
+  <PoseFrame>0</PoseFrame>
+  <ClipName2 />
+  <InputFreezed>true</InputFreezed>
+  <AnimLayerType>None</AnimLayerType>
+  <ShaderEffData />
+  <BoneShakeData />
+</XReactData>﻿<?xml version="1.0" encoding="utf-8"?>
+<XReactData>
+  <PresentID>1</PresentID>
+  <Name>React_Role_Luffy_topwarcs_2</Name>
+  <Length>0</Length>
+  <IgnoreAttackScriptFx>false</IgnoreAttackScriptFx>
+  <ClipName>Animation/Role_luffy/Drama_A00_01_04_006_luffy</ClipName>
+  <Time>1.03333354</Time>
+  <FadeTime>1</FadeTime>
+  <AnimTime>1.03333354</AnimTime>
+  <PoseFrame>0</PoseFrame>
+  <ClipName2 />
+  <InputFreezed>true</InputFreezed>
+  <AnimLayerType>None</AnimLayerType>
+  <ShaderEffData />
+  <BoneShakeData />
+</XReactData>﻿<?xml version="1.0" encoding="utf-8"?>
+<XReactData>
+  <PresentID>1</PresentID>
+  <Name>Role_luffy_run1</Name>
+  <Length>0</Length>
+  <IgnoreAttackScriptFx>false</IgnoreAttackScriptFx>
+  <ClipName>Role_luffy/CutScene/Drama_A00_01_03_008_Luffy_2</ClipName>
+  <Time>1.500001</Time>
+  <AnimTime>1.500001</AnimTime>
+  <PoseFrame>0</PoseFrame>
+  <ClipName2 />
+  <AnimLayerType>None</AnimLayerType>
+  <ShaderEffData />
+  <BoneShakeData />
+</XReactData>﻿<?xml version="1.0" encoding="utf-8"?>
+<XReactData>
+  <PresentID>1</PresentID>
+  <Name>Role_luffy_run2</Name>
+  <Length>0</Length>
+  <IgnoreAttackScriptFx>false</IgnoreAttackScriptFx>
+  <ClipName>Role_luffy/CutScene/Role_luffy_run_cut</ClipName>
+  <Time>2.60000014</Time>
+  <AnimTime>2.60000014</AnimTime>
+  <PoseFrame>0</PoseFrame>
+  <ClipName2 />
+  <AnimLayerType>None</AnimLayerType>
+  <ShaderEffData />
+  <BoneShakeData />
+</XReactData>﻿<?xml version="1.0" encoding="utf-8"?>
+<XReactData>
+  <PresentID>1</PresentID>
+  <Name>ssxx</Name>
+  <Length>0</Length>
+  <AnimTime>0</AnimTime>
+  <PoseFrame>0</PoseFrame>
+  <AnimLayerType>None</AnimLayerType>
+  <Fx />
+  <Audio />
+  <ShaderEffData />
+  <BoneShakeData />
+</XReactData>﻿<?xml version="1.0" encoding="utf-8"?>
+<XReactData>
+  <Name>Test_Luffy</Name>
+  <Length>0</Length>
+  <ClipName>Animation/Role_luffy/role_lufei_PVP_open</ClipName>
+  <Time>1.86666679</Time>
+  <AnimTime>1.86666679</AnimTime>
+  <PoseFrame>0</PoseFrame>
+  <AnimLayerType>Mix</AnimLayerType>
+  <AvatarMask>AvatarMask/BlackBeard_upper</AvatarMask>
+  <Fx>
+    <XFxData>
+      <Type>FirerBased</Type>
+      <Fx>Effects/Prefabs/Roles/luffy/role_luffy_attack01</Fx>
+    </XFxData>
+    <XFxData>
+      <Index>1</Index>
+      <Type>FirerBased</Type>
+      <Fx>Effects/Prefabs/Roles/luffy/role_luffy_attack01_smoke</Fx>
+    </XFxData>
+  </Fx>
+  <Audio>
+    <XAudioData>
+      <Clip>UI/Unlock_skill</Clip>
+      <Channel>Action</Channel>
+    </XAudioData>
+  </Audio>
+  <ShaderEffData>
+    <XShaderEffData>
+      <UniqueID>1</UniqueID>
+      <At>0.15</At>
+      <Data0>0.389573485</Data0>
+      <Data1>0.7609947</Data1>
+      <Data2>0.247682229</Data2>
+      <Data3>0.4</Data3>
+      <Data7>1</Data7>
+      <FadeOut>0.052</FadeOut>
+    </XShaderEffData>
+    <XShaderEffData>
+      <Index>1</Index>
+      <LifeTime>1.07</LifeTime>
+      <At>0.4</At>
+      <Data0>0</Data0>
+      <Data1>0.259113759</Data1>
+      <Data2>0.9433962</Data2>
+      <Data3>0.5552</Data3>
+      <Data7>1</Data7>
+      <FadeIn>0.266</FadeIn>
+      <FadeOut>0.403</FadeOut>
+    </XShaderEffData>
+  </ShaderEffData>
+  <BoneShakeData>
+    <XBoneShakeData>
+      <Bone>root/Bip001/Bip001 Pelvis</Bone>
+      <LifeTime>1</LifeTime>
+      <At>0.2</At>
+      <Frequency>30</Frequency>
+      <AmplitudeX>0.2</AmplitudeX>
+    </XBoneShakeData>
+  </BoneShakeData>
+</XReactData>﻿<?xml version="1.0" encoding="utf-8"?>
+<XReactData>
+  <Name>Action_luffy_die</Name>
+  <Length>0</Length>
+  <ClipName>Animation/Role_luffy/Role_luffy_die</ClipName>
+  <Time>1.30000007</Time>
+  <AnimTime>1.30000007</AnimTime>
+  <PoseFrame>0</PoseFrame>
+  <ClipName2 />
+  <AnimLayerType>None</AnimLayerType>
+  <Audio>
+    <XAudioData>
+      <Clip>Role/Luffy/Luffy_die</Clip>
+      <Channel>Skill</Channel>
+    </XAudioData>
+  </Audio>
+  <ShaderEffData />
+  <BoneShakeData />
+</XReactData>﻿<?xml version="1.0" encoding="utf-8"?>
+<XReactData>
+  <CopyFrom />
+  <Name>Action_luffy_out</Name>
+  <Length>0</Length>
+  <ClipName>Animation/Role_luffy/Role_luffy_out</ClipName>
+  <Time>0.066</Time>
+  <AnimTime>0.5</AnimTime>
+  <PoseFrame>0</PoseFrame>
+  <ClipName2 />
+  <AnimLayerType>None</AnimLayerType>
+  <AvatarMask />
+  <ExtraScript />
+  <Fx>
+    <XFxData>
+      <Type>FirerBased</Type>
+      <End>0.5</End>
+      <Fx>Effects/Prefabs/Generic/fx_vanish</Fx>
+      <OffsetZ>-0.6</OffsetZ>
+      <Follow>false</Follow>
+      <Destroy_Delay>0.5</Destroy_Delay>
+    </XFxData>
+  </Fx>
+  <ShaderEffData />
+  <BoneShakeData />
+</XReactData>﻿<?xml version="1.0" encoding="utf-8"?>
+<XReactData>
+  <Name>Action_luffy_out_fall</Name>
+  <Length>0</Length>
+  <ClipName>Animation/Role_luffy/Role_luffy_out_fall</ClipName>
+  <Time>1.8</Time>
+  <AnimationSpeedRatio>0.9</AnimationSpeedRatio>
+  <AnimTime>2</AnimTime>
+  <PoseFrame>0</PoseFrame>
+  <AnimLayerType>None</AnimLayerType>
+  <AvatarMask />
+  <Fx>
+    <XFxData>
+      <Type>FirerBased</Type>
+      <End>1.8</End>
+      <Fx>Effects/Prefabs/Roles/BlackBeard/Monster_BlackBeard_anxuedao03</Fx>
+    </XFxData>
+  </Fx>
+  <Audio />
+  <ShaderEffData />
+  <BoneShakeData />
+</XReactData>﻿<?xml version="1.0" encoding="utf-8"?>
+<XReactData>
+  <PresentID>1</PresentID>
+  <Name>React_Role_luffy_2</Name>
+  <Length>0</Length>
+  <AnimTime>0</AnimTime>
+  <PoseFrame>0</PoseFrame>
+  <ClipName2 />
+  <AnimLayerType>None</AnimLayerType>
+  <ShaderEffData />
+  <BoneShakeData />
+</XReactData>﻿<?xml version="1.0" encoding="utf-8"?>
+<XReactData>
+  <Name>Action_marine_door_open</Name>
+  <Length>0</Length>
+  <ClipName>Animation/Role_marine_door/Role_marine_door_open</ClipName>
+  <Time>8.033334</Time>
+  <AnimTime>0</AnimTime>
+  <PoseFrame>0</PoseFrame>
+  <StopAnimAtEnd>true</StopAnimAtEnd>
+  <AnimLayerType>None</AnimLayerType>
+  <Fx />
+  <Audio>
+    <XAudioData>
+      <Clip>Mechanism/Door</Clip>
+      <Channel>Skill</Channel>
+    </XAudioData>
+  </Audio>
+  <ShaderEffData />
+  <BoneShakeData />
+</XReactData>﻿<?xml version="1.0" encoding="utf-8"?>
+<XReactData>
+  <Name>Action_namei_die</Name>
+  <Length>0</Length>
+  <ClipName>Animation/Role_nami/Role_nami_die</ClipName>
+  <Time>2.66666675</Time>
+  <AnimTime>2.66666675</AnimTime>
+  <PoseFrame>0</PoseFrame>
+  <AnimLayerType>None</AnimLayerType>
+  <Fx />
+  <Audio>
+    <XAudioData>
+      <Clip>Role/Nami/Role_nami_die</Clip>
+      <Channel>Skill</Channel>
+    </XAudioData>
+  </Audio>
+  <ShaderEffData />
+  <BoneShakeData />
+</XReactData>﻿<?xml version="1.0" encoding="utf-8"?>
+<XReactData>
+  <Name>Action_namei_out</Name>
+  <Length>0</Length>
+  <IgnoreAttackScriptFx>false</IgnoreAttackScriptFx>
+  <ClipName>Animation/Role_nami/Role_nami_back</ClipName>
+  <Time>0.066</Time>
+  <AnimTime>0.700000048</AnimTime>
+  <PoseFrame>0</PoseFrame>
+  <ClipName2 />
+  <AnimLayerType>None</AnimLayerType>
+  <ShaderEffData />
+  <BoneShakeData />
+</XReactData>﻿<?xml version="1.0" encoding="utf-8"?>
+<XReactData>
+  <Name>Action_namei_out_force</Name>
+  <Length>0</Length>
+  <ClipName>Animation/Role_nami/Role_nami_out_force</ClipName>
+  <Time>2</Time>
+  <AnimTime>0</AnimTime>
+  <PoseFrame>0</PoseFrame>
+  <AnimLayerType>None</AnimLayerType>
+  <Fx />
+  <Audio />
+  <ShaderEffData />
+  <BoneShakeData />
+</XReactData>﻿<?xml version="1.0" encoding="utf-8"?>
+<XReactData>
+  <PresentID>3</PresentID>
+  <Name>Action_nami_sneakfinish</Name>
+  <Length>0</Length>
+  <ClipName>Animation/Role_nami/role_system_nami_PVP_open</ClipName>
+  <Time>9000</Time>
+  <AnimTime>4.70000029</AnimTime>
+  <PoseFrame>0</PoseFrame>
+  <ClipName2 />
+  <InputFreezed>true</InputFreezed>
+  <AnimLayerType>None</AnimLayerType>
+  <ShaderEffData />
+  <BoneShakeData />
+</XReactData>﻿<?xml version="1.0" encoding="utf-8"?>
+<XReactData>
+  <Name>React_Role_nami</Name>
+  <Length>0</Length>
+  <Time>0.35</Time>
+  <AnimTime>0</AnimTime>
+  <PoseFrame>0</PoseFrame>
+  <AnimLayerType>None</AnimLayerType>
+  <Fx>
+    <XFxData>
+      <Type>FirerBased</Type>
+      <End>0.35</End>
+      <Fx>Effects/Prefabs/Generic/Hit_strength_b</Fx>
+      <Bone>root</Bone>
+      <OffsetZ>1</OffsetZ>
+    </XFxData>
+  </Fx>
+  <Audio />
+  <ShaderEffData />
+  <BoneShakeData />
+</XReactData>﻿<?xml version="1.0" encoding="utf-8"?>
+<XReactData>
+  <Name>Action_namei_die</Name>
+  <Length>0</Length>
+  <ClipName>Animation/Role_nami/Role_nami_die</ClipName>
+  <Time>2.66666675</Time>
+  <AnimTime>2.66666675</AnimTime>
+  <PoseFrame>0</PoseFrame>
+  <AnimLayerType>None</AnimLayerType>
+  <Fx />
+  <Audio>
+    <XAudioData>
+      <Clip>Role/Nami/Role_nami_die</Clip>
+      <Channel>Skill</Channel>
+    </XAudioData>
+  </Audio>
+  <ShaderEffData />
+  <BoneShakeData />
+</XReactData>﻿<?xml version="1.0" encoding="utf-8"?>
+<XReactData>
+  <Name>Action_namei_out</Name>
+  <Length>0</Length>
+  <ClipName>Animation/Role_nami/Role_nami_back</ClipName>
+  <Time>0.533333361</Time>
+  <AnimTime>0</AnimTime>
+  <PoseFrame>0</PoseFrame>
+  <AnimLayerType>None</AnimLayerType>
+  <Fx>
+    <XFxData>
+      <Type>FirerBased</Type>
+      <At>0.4666667</At>
+      <End>0.533333361</End>
+      <Fx>Effects/Prefabs/Generic/fx_vanish</Fx>
+      <OffsetZ>-4.5</OffsetZ>
+      <Follow>false</Follow>
+      <Destroy_Delay>0.5</Destroy_Delay>
+    </XFxData>
+  </Fx>
+  <Audio />
+  <ShaderEffData />
+  <BoneShakeData />
+</XReactData>﻿<?xml version="1.0" encoding="utf-8"?>
+<XReactData>
+  <Name>Action_namei_out_force</Name>
+  <Length>0</Length>
+  <ClipName>Animation/Role_nami/Role_nami_out_force</ClipName>
+  <Time>2</Time>
+  <AnimTime>0</AnimTime>
+  <PoseFrame>0</PoseFrame>
+  <AnimLayerType>None</AnimLayerType>
+  <Fx />
+  <Audio />
+  <ShaderEffData />
+  <BoneShakeData />
+</XReactData>﻿<?xml version="1.0" encoding="utf-8"?>
+<XReactData>
+  <Name>React_Role_nami</Name>
+  <Length>0</Length>
+  <Time>0.35</Time>
+  <AnimTime>0</AnimTime>
+  <PoseFrame>0</PoseFrame>
+  <AnimLayerType>None</AnimLayerType>
+  <Fx>
+    <XFxData>
+      <Type>FirerBased</Type>
+      <End>0.35</End>
+      <Fx>Effects/Prefabs/Generic/Hit_strength_b</Fx>
+      <Bone>root</Bone>
+      <OffsetZ>1</OffsetZ>
+    </XFxData>
+  </Fx>
+  <Audio />
+  <ShaderEffData />
+  <BoneShakeData />
+</XReactData>﻿<?xml version="1.0" encoding="utf-8"?>
+<XReactData>
+  <PresentID>7</PresentID>
+  <Name>Action_Robin_die</Name>
+  <Length>0</Length>
+  <IgnoreAttackScriptFx>false</IgnoreAttackScriptFx>
+  <ClipName>Animation/Role_Robin/Role_Robin_die</ClipName>
+  <Time>1.76666665</Time>
+  <AnimTime>1.76666665</AnimTime>
+  <PoseFrame>0</PoseFrame>
+  <ClipName2 />
+  <AnimLayerType>None</AnimLayerType>
+  <ShaderEffData />
+  <BoneShakeData />
+</XReactData>﻿<?xml version="1.0" encoding="utf-8"?>
+<XReactData>
+  <PresentID>7</PresentID>
+  <Name>Action_Robin_out</Name>
+  <Length>0</Length>
+  <IgnoreAttackScriptFx>false</IgnoreAttackScriptFx>
+  <ClipName>Animation/Role_Robin/Role_Robin_out</ClipName>
+  <Time>1.06666672</Time>
+  <AnimTime>1.06666672</AnimTime>
+  <PoseFrame>0</PoseFrame>
+  <ClipName2 />
+  <AnimLayerType>None</AnimLayerType>
+  <ShaderEffData />
+  <BoneShakeData />
+</XReactData>﻿<?xml version="1.0" encoding="utf-8"?>
+<XReactData>
+  <CopyFrom />
+  <PresentID>12932</PresentID>
+  <Name>React_Role_Robin</Name>
+  <Length>0</Length>
+  <IgnoreAttackScriptFx>false</IgnoreAttackScriptFx>
+  <Time>0.5</Time>
+  <AnimTime>0</AnimTime>
+  <PoseFrame>0</PoseFrame>
+  <ClipName2 />
+  <AnimLayerType>None</AnimLayerType>
+  <AvatarMask />
+  <ExtraScript />
+  <Fx>
+    <XFxData>
+      <Type>FirerBased</Type>
+      <End>0.5</End>
+      <Fx>Effects/Prefabs/Generic/Hit_strength_b</Fx>
+      <OffsetY>1</OffsetY>
+      <Destroy_Delay>0.5</Destroy_Delay>
+    </XFxData>
+  </Fx>
+  <ShaderEffData>
+    <XShaderEffData>
+      <LifeTime>0.03</LifeTime>
+      <FadeOut>0.1</FadeOut>
+      <uniqueID>200</uniqueID>
+      <x>2.11854744</x>
+      <y>2.11854744</y>
+      <z>2.11854744</z>
+      <w>0.083</w>
+      <partMask>127</partMask>
+    </XShaderEffData>
+  </ShaderEffData>
+  <BoneShakeData />
+</XReactData>﻿<?xml version="1.0" encoding="utf-8"?>
+<XReactData>
+  <PresentID>12932</PresentID>
+  <Name>React_Role_Robin_lock</Name>
+  <Length>0</Length>
+  <AnimTime>0</AnimTime>
+  <PoseFrame>0</PoseFrame>
+  <ClipName2 />
+  <AnimLayerType>None</AnimLayerType>
+  <ShaderEffData />
+  <BoneShakeData />
+</XReactData>﻿<?xml version="1.0" encoding="utf-8"?>
+<XReactData>
+  <PresentID>7</PresentID>
+  <Name>Role_Robin_react</Name>
+  <Length>0</Length>
+  <IgnoreAttackScriptFx>false</IgnoreAttackScriptFx>
+  <AnimTime>0</AnimTime>
+  <PoseFrame>0</PoseFrame>
+  <AnimLayerType>None</AnimLayerType>
+</XReactData>﻿<?xml version="1.0" encoding="utf-8"?>
+<XReactData>
+  <PresentID>5</PresentID>
+  <Name>Action_Sanji_die</Name>
+  <Length>0</Length>
+  <ClipName>Animation/Role_Sanji/Role_Sanji_die</ClipName>
+  <Time>1.53333342</Time>
+  <AnimTime>1.53333342</AnimTime>
+  <PoseFrame>0</PoseFrame>
+  <ClipName2 />
+  <AnimLayerType>None</AnimLayerType>
+  <Audio>
+    <XAudioData>
+      <Clip>Role/Sanji/Sanji_die</Clip>
+      <Channel>Skill</Channel>
+    </XAudioData>
+  </Audio>
+  <ShaderEffData />
+  <BoneShakeData />
+</XReactData>﻿<?xml version="1.0" encoding="utf-8"?>
+<XReactData>
+  <CopyFrom />
+  <PresentID>5</PresentID>
+  <Name>Action_Sanji_out</Name>
+  <Length>0</Length>
+  <IgnoreAttackScriptFx>false</IgnoreAttackScriptFx>
+  <ClipName>Animation/Role_Sanji/Role_Sanji_out</ClipName>
+  <Time>0.5</Time>
+  <AnimTime>0.4666667</AnimTime>
+  <PoseFrame>0</PoseFrame>
+  <ClipName2 />
+  <AnimLayerType>None</AnimLayerType>
+  <AvatarMask />
+  <ExtraScript />
+  <Fx>
+    <XFxData>
+      <Type>FirerBased</Type>
+      <At>0.06666667</At>
+      <End>0.4666667</End>
+      <Fx>Effects/Prefabs/Generic/fx_vanish</Fx>
+      <Destroy_Delay>15</Destroy_Delay>
+    </XFxData>
+  </Fx>
+  <ShaderEffData />
+  <BoneShakeData />
+</XReactData>﻿<?xml version="1.0" encoding="utf-8"?>
+<XReactData>
+  <PresentID>5</PresentID>
+  <Name>Action_Sanji_out_fall</Name>
+  <Length>0</Length>
+  <ClipName>Animation/Role_Sanji/Role_Sanji_out_fall</ClipName>
+  <Time>0.5</Time>
+  <AnimTime>0.5</AnimTime>
+  <PoseFrame>0</PoseFrame>
+  <ClipName2 />
+  <AnimLayerType>None</AnimLayerType>
+  <ShaderEffData />
+  <BoneShakeData />
+</XReactData>﻿<?xml version="1.0" encoding="utf-8"?>
+<XReactData>
+  <PresentID>5</PresentID>
+  <Name>Action_Sanji_out_special</Name>
+  <Length>0</Length>
+  <ClipName>Animation/Role_Sanji/Role_Sanji_switch_special</ClipName>
+  <Time>0.6</Time>
+  <AnimTime>0.6</AnimTime>
+  <PoseFrame>0</PoseFrame>
+  <ClipName2 />
+  <AnimLayerType>None</AnimLayerType>
+  <ShaderEffData />
+  <BoneShakeData />
+</XReactData>﻿<?xml version="1.0" encoding="utf-8"?>
+<XReactData>
+  <PresentID>5</PresentID>
+  <Name>React_Role_Sanji</Name>
+  <Length>0</Length>
+  <Time>0.35</Time>
+  <AnimTime>0</AnimTime>
+  <PoseFrame>0</PoseFrame>
+  <ClipName2 />
+  <AnimLayerType>None</AnimLayerType>
+  <ShaderEffData />
+  <BoneShakeData />
+</XReactData>﻿<?xml version="1.0" encoding="utf-8"?>
+<XReactData>
+  <PresentID>4</PresentID>
+  <Name>Action_Usopp_die</Name>
+  <Length>0</Length>
+  <ClipName>Animation/Role_Usopp/Role_Usopp_die</ClipName>
+  <Time>1.7</Time>
+  <AnimTime>1.7</AnimTime>
+  <PoseFrame>0</PoseFrame>
+  <ClipName2 />
+  <AnimLayerType>None</AnimLayerType>
+  <Audio>
+    <XAudioData>
+      <Clip>Role/Usopp/Usopp_die</Clip>
+      <Channel>Skill</Channel>
+    </XAudioData>
+  </Audio>
+  <ShaderEffData />
+  <BoneShakeData />
+</XReactData>﻿<?xml version="1.0" encoding="utf-8"?>
+<XReactData>
+  <Name>Action_Usopp_out</Name>
+  <Length>0</Length>
+  <IgnoreAttackScriptFx>false</IgnoreAttackScriptFx>
+  <ClipName>Animation/Role_Usopp/Role_Usopp_out</ClipName>
+  <Time>0.066</Time>
+  <AnimTime>0.533333361</AnimTime>
+  <PoseFrame>0</PoseFrame>
+  <ClipName2 />
+  <AnimLayerType>None</AnimLayerType>
+  <ShaderEffData />
+  <BoneShakeData />
+</XReactData>﻿<?xml version="1.0" encoding="utf-8"?>
+<XReactData>
+  <PresentID>4</PresentID>
+  <Name>React_Role_Usopp</Name>
+  <Length>0</Length>
+  <Time>0.35</Time>
+  <AnimTime>0</AnimTime>
+  <PoseFrame>0</PoseFrame>
+  <ClipName2 />
+  <AnimLayerType>None</AnimLayerType>
+  <ShaderEffData />
+  <BoneShakeData />
+</XReactData>﻿<?xml version="1.0" encoding="utf-8"?>
+<XReactData>
+  <PresentID>4</PresentID>
+  <Name>React_Role_Usopp_avatar01</Name>
+  <Length>0</Length>
+  <IgnoreAttackScriptFx>false</IgnoreAttackScriptFx>
+  <AnimTime>0</AnimTime>
+  <PoseFrame>0</PoseFrame>
+  <ClipName2 />
+  <AnimLayerType>None</AnimLayerType>
+  <ShaderEffData />
+  <BoneShakeData />
+</XReactData>﻿<?xml version="1.0" encoding="utf-8"?>
+<XReactData>
+  <PresentID>21</PresentID>
+  <Name>React_Usopp_XuLiShoot</Name>
+  <Length>0</Length>
+  <ClipName>Animation/Role_Usopp/Role_Usopp_lagong_during_up</ClipName>
+  <Time>30</Time>
+  <AnimTime>1.33333337</AnimTime>
+  <PoseFrame>0</PoseFrame>
+  <ClipName2>Animation/Role_Usopp/Role_Usopp_lagong_during_down</ClipName2>
+  <AnimLayerType>Mix</AnimLayerType>
+  <AvatarMask>AvatarMask/Usopp_upper</AvatarMask>
+  <ExtraScript>ReactUsoppShoot</ExtraScript>
+  <ShaderEffData />
+  <BoneShakeData />
+</XReactData>﻿<?xml version="1.0" encoding="utf-8"?>
+<XReactData>
+  <CopyFrom />
+  <AudioTemplate />
+  <AnimTemplate />
+  <PresentID>2200</PresentID>
+  <Name>React_Role_Usopp_shoot</Name>
+  <Length>0</Length>
+  <IgnoreAttackScriptFx>false</IgnoreAttackScriptFx>
+  <Time>0.3</Time>
+  <AnimTime>0</AnimTime>
+  <PoseFrame>0</PoseFrame>
+  <ClipName2 />
+  <AnimLayerType>None</AnimLayerType>
+  <AvatarMask />
+  <ExtraScript />
+  <Fx>
+    <XFxData>
+      <Type>FirerBased</Type>
+      <End>0.3</End>
+      <Fx>Effects/Prefabs/Hit/Role_MarineMusketeer_hit01</Fx>
+      <ScaleX>0.8</ScaleX>
+      <ScaleY>0.8</ScaleY>
+      <ScaleZ>0.8</ScaleZ>
+      <OffsetY>1.2</OffsetY>
+      <Destroy_Delay>0.5</Destroy_Delay>
+    </XFxData>
+    <XFxData>
+      <Type>FirerBased</Type>
+      <End>0.3</End>
+      <Fx>Effects/Perfab/UI/UI_gedatsu_hamburg</Fx>
+      <Destroy_Delay>1</Destroy_Delay>
+    </XFxData>
+  </Fx>
+  <ShaderEffData />
+  <BoneShakeData />
+</XReactData>﻿<?xml version="1.0" encoding="utf-8"?>
+<XReactData>
+  <Name>Action_luffy_opendoor</Name>
+  <Length>0</Length>
+  <ClipName>Animation/Role_luffy/Role_luffy_opendoor</ClipName>
+  <Time>7.033334</Time>
+  <AnimTime>0</AnimTime>
+  <PoseFrame>0</PoseFrame>
+  <InputFreezed>true</InputFreezed>
+  <AnimLayerType>None</AnimLayerType>
+  <Fx />
+  <Audio />
+  <ShaderEffData />
+  <BoneShakeData />
+</XReactData>﻿<?xml version="1.0" encoding="utf-8"?>
+<XReactData>
+  <Name>Action_zoro_cutscene2_01</Name>
+  <Length>0</Length>
+  <ClipName>Animation/Role_zoro/Cutscene_002_final_zoro</ClipName>
+  <Time>4.166667</Time>
+  <FadeTime>2</FadeTime>
+  <AnimTime>0</AnimTime>
+  <PoseFrame>0</PoseFrame>
+  <AnimLayerType>None</AnimLayerType>
+  <Fx />
+  <Audio />
+  <ShaderEffData />
+  <BoneShakeData />
+</XReactData>﻿<?xml version="1.0" encoding="utf-8"?>
+<XReactData>
+  <Name>Action_zoro_die</Name>
+  <Length>0</Length>
+  <ClipName>Animation/Role_zoro/Role_zoro_die_normal</ClipName>
+  <Time>2.06666684</Time>
+  <AnimTime>2.06666684</AnimTime>
+  <PoseFrame>0</PoseFrame>
+  <ClipName2 />
+  <AnimLayerType>None</AnimLayerType>
+  <Audio>
+    <XAudioData>
+      <Clip>Role/Zoro/Role_zoro_die</Clip>
+      <Channel>Skill</Channel>
+    </XAudioData>
+  </Audio>
+  <ShaderEffData />
+  <BoneShakeData />
+</XReactData>﻿<?xml version="1.0" encoding="utf-8"?>
+<XReactData>
+  <Name>Action_zoro_out</Name>
+  <Length>0</Length>
+  <ClipName>Animation/Role_zoro/Role_zoro_out</ClipName>
+  <Time>0.066</Time>
+  <AnimTime>0.6333334</AnimTime>
+  <PoseFrame>0</PoseFrame>
+  <AnimLayerType>None</AnimLayerType>
+  <Fx>
+    <XFxData>
+      <Type>FirerBased</Type>
+      <End>0.6333334</End>
+      <Fx>Effects/Prefabs/Generic/fx_vanish</Fx>
+      <Follow>false</Follow>
+      <Destroy_Delay>0.5</Destroy_Delay>
+    </XFxData>
+  </Fx>
+  <Audio />
+  <ShaderEffData />
+  <BoneShakeData />
+</XReactData>﻿<?xml version="1.0" encoding="utf-8"?>
+<XReactData>
+  <Name>Action_zoro_out_fall</Name>
+  <Length>0</Length>
+  <ClipName>Animation/Role_zoro/Role_zoro_out_fall</ClipName>
+  <Time>1.8</Time>
+  <AnimationSpeedRatio>0.9</AnimationSpeedRatio>
+  <AnimTime>2</AnimTime>
+  <PoseFrame>0</PoseFrame>
+  <AnimLayerType>None</AnimLayerType>
+  <AvatarMask />
+  <Fx>
+    <XFxData>
+      <Type>FirerBased</Type>
+      <End>1.8</End>
+      <Fx>Effects/Prefabs/Roles/BlackBeard/Monster_BlackBeard_anxuedao03</Fx>
+    </XFxData>
+  </Fx>
+  <Audio />
+  <ShaderEffData />
+  <BoneShakeData />
+</XReactData>﻿<?xml version="1.0" encoding="utf-8"?>
+<XReactData>
+  <Name>React_Role_zoro</Name>
+  <Length>0</Length>
+  <Time>0.35</Time>
+  <AnimTime>0</AnimTime>
+  <PoseFrame>0</PoseFrame>
+  <AnimLayerType>None</AnimLayerType>
+  <Fx>
+    <XFxData>
+      <Type>FirerBased</Type>
+      <End>0.35</End>
+      <Fx>Effects/Prefabs/Generic/Hit_strength_b</Fx>
+      <Bone>root</Bone>
+      <OffsetZ>1</OffsetZ>
+    </XFxData>
+  </Fx>
+  <Audio />
+  <ShaderEffData />
+  <BoneShakeData />
+</XReactData>﻿<?xml version="1.0" encoding="utf-8"?>
+<ShipData>
+  <template>Meili</template>
+  <allPathData>
+    <ShipPathData>
+      <pointData>
+        <ShipPointData>
+          <position>
+            <x>-5.289551</x>
+            <y>0.5</y>
+            <z>-0.1963501</z>
+          </position>
+        </ShipPointData>
+        <ShipPointData>
+          <position>
+            <x>5.03570557</x>
+            <y>0.5</y>
+            <z>-0.48236084</z>
+          </position>
+        </ShipPointData>
+      </pointData>
+    </ShipPathData>
+  </allPathData>
+</ShipData>﻿<?xml version="1.0" encoding="utf-8"?>
+<ShipData>
+  <template>Meili</template>
+  <allPathData>
+    <ShipPathData>
+      <pointData>
+        <ShipPointData>
+          <position>
+            <x>-3.98954773</x>
+            <y>9.349085</y>
+            <z>6.59783173</z>
+          </position>
+          <animatinData>
+            <ShipPointAnimationData>
+              <animation>Ship_Show2</animation>
+              <probability>25</probability>
+            </ShipPointAnimationData>
+            <ShipPointAnimationData>
+              <animation>Ship_Show</animation>
+              <probability>25</probability>
+            </ShipPointAnimationData>
+            <ShipPointAnimationData>
+              <animation>Ship_Show2</animation>
+              <probability>25</probability>
+            </ShipPointAnimationData>
+          </animatinData>
+        </ShipPointData>
+        <ShipPointData>
+          <position>
+            <x>-0.8490143</x>
+            <y>9.349085</y>
+            <z>9.927547</z>
+          </position>
+          <animatinData>
+            <ShipPointAnimationData>
+              <animation>Ship_Show2</animation>
+              <probability>25</probability>
+            </ShipPointAnimationData>
+            <ShipPointAnimationData>
+              <animation>Ship_Show</animation>
+              <probability>25</probability>
+            </ShipPointAnimationData>
+            <ShipPointAnimationData>
+              <animation>Ship_Show2</animation>
+              <probability>25</probability>
+            </ShipPointAnimationData>
+          </animatinData>
+        </ShipPointData>
+        <ShipPointData>
+          <position>
+            <x>2.593399</x>
+            <y>9.349085</y>
+            <z>9.329868</z>
+          </position>
+          <animatinData />
+        </ShipPointData>
+        <ShipPointData>
+          <position>
+            <x>4.427452</x>
+            <y>9.349083</y>
+            <z>6.474514</z>
+          </position>
+          <animatinData />
+        </ShipPointData>
+        <ShipPointData>
+          <position>
+            <x>5.09367</x>
+            <y>8.94724</y>
+            <z>5.974251</z>
+          </position>
+          <animatinData />
+        </ShipPointData>
+        <ShipPointData>
+          <position>
+            <x>5.18359375</x>
+            <y>8.494806</y>
+            <z>5.231159</z>
+          </position>
+          <animatinData />
+        </ShipPointData>
+        <ShipPointData>
+          <position>
+            <x>5.278572</x>
+            <y>7.601071</y>
+            <z>4.338619</z>
+          </position>
+          <animatinData />
+        </ShipPointData>
+        <ShipPointData>
+          <position>
+            <x>5.259056</x>
+            <y>6.70902</y>
+            <z>3.47831345</z>
+          </position>
+          <animatinData />
+        </ShipPointData>
+        <ShipPointData>
+          <position>
+            <x>5.19111633</x>
+            <y>6.37860966</y>
+            <z>2.33661652</z>
+          </position>
+          <animatinData />
+        </ShipPointData>
+        <ShipPointData>
+          <position>
+            <x>5.31560135</x>
+            <y>6.37861</y>
+            <z>-0.595039368</z>
+          </position>
+          <animatinData>
+            <ShipPointAnimationData>
+              <animation>Ship_Show2</animation>
+              <probability>50</probability>
+            </ShipPointAnimationData>
+            <ShipPointAnimationData>
+              <animation>Ship_Show</animation>
+              <probability>50</probability>
+            </ShipPointAnimationData>
+          </animatinData>
+        </ShipPointData>
+        <ShipPointData>
+          <position>
+            <x>5.31619263</x>
+            <y>6.378609</y>
+            <z>0.9855614</z>
+          </position>
+          <animatinData>
+            <ShipPointAnimationData>
+              <animation>Ship_Show</animation>
+              <probability>100</probability>
+            </ShipPointAnimationData>
+          </animatinData>
+        </ShipPointData>
+        <ShipPointData>
+          <position>
+            <x>0.315696716</x>
+            <y>6.378609</y>
+            <z>3.219349</z>
+          </position>
+          <animatinData>
+            <ShipPointAnimationData>
+              <animation>Ship_Idle</animation>
+              <probability>100</probability>
+            </ShipPointAnimationData>
+          </animatinData>
+        </ShipPointData>
+        <ShipPointData>
+          <position>
+            <x>-4.96478653</x>
+            <y>6.378609</y>
+            <z>3.24707413</z>
+          </position>
+          <animatinData />
+        </ShipPointData>
+        <ShipPointData>
+          <position>
+            <x>-4.502548</x>
+            <y>6.37861</y>
+            <z>1.16335678</z>
+          </position>
+          <animatinData />
+        </ShipPointData>
+        <ShipPointData>
+          <position>
+            <x>-4.484558</x>
+            <y>6.37861</y>
+            <z>-0.685173035</z>
+          </position>
+          <animatinData />
+        </ShipPointData>
+        <ShipPointData>
+          <position>
+            <x>-5.47619629</x>
+            <y>6.378609</y>
+            <z>-0.9372864</z>
+          </position>
+          <animatinData>
+            <ShipPointAnimationData>
+              <animation>Ship_Idle</animation>
+              <probability>100</probability>
+            </ShipPointAnimationData>
+            <ShipPointAnimationData>
+              <animation>Ship_Show</animation>
+              <probability>100</probability>
+            </ShipPointAnimationData>
+            <ShipPointAnimationData>
+              <animation>Ship_Show2</animation>
+              <probability>100</probability>
+            </ShipPointAnimationData>
+          </animatinData>
+        </ShipPointData>
+      </pointData>
+    </ShipPathData>
+    <ShipPathData>
+      <pointData>
+        <ShipPointData>
+          <position>
+            <x>4.89174652</x>
+            <y>8.892696</y>
+            <z>-9.795189</z>
+          </position>
+          <animatinData>
+            <ShipPointAnimationData>
+              <animation>Ship_Show</animation>
+              <probability>100</probability>
+            </ShipPointAnimationData>
+            <ShipPointAnimationData>
+              <animation>Ship_Show2</animation>
+              <probability>100</probability>
+            </ShipPointAnimationData>
+          </animatinData>
+        </ShipPointData>
+        <ShipPointData>
+          <position>
+            <x>4.97806931</x>
+            <y>8.892696</y>
+            <z>-5.549076</z>
+          </position>
+          <animatinData />
+        </ShipPointData>
+        <ShipPointData>
+          <position>
+            <x>-5.437233</x>
+            <y>8.892696</y>
+            <z>-5.635418</z>
+          </position>
+          <animatinData>
+            <ShipPointAnimationData>
+              <animation>Ship_Idle</animation>
+              <probability>100</probability>
+            </ShipPointAnimationData>
+          </animatinData>
+        </ShipPointData>
+        <ShipPointData>
+          <position>
+            <x>-4.608364</x>
+            <y>9.859519</y>
+            <z>-12.7902832</z>
+          </position>
+          <animatinData />
+        </ShipPointData>
+        <ShipPointData>
+          <position>
+            <x>-0.98197937</x>
+            <y>9.859519</y>
+            <z>-15.71413</z>
+          </position>
+          <animatinData>
+            <ShipPointAnimationData>
+              <animation>Ship_Show2</animation>
+              <probability>100</probability>
+            </ShipPointAnimationData>
+          </animatinData>
+        </ShipPointData>
+        <ShipPointData>
+          <position>
+            <x>2.998516</x>
+            <y>9.859519</y>
+            <z>-15.0748138</z>
+          </position>
+          <animatinData />
+        </ShipPointData>
+        <ShipPointData>
+          <position>
+            <x>4.13616943</x>
+            <y>9.859519</y>
+            <z>-13.3102036</z>
+          </position>
+          <animatinData />
+        </ShipPointData>
+        <ShipPointData>
+          <position>
+            <x>4.5530014</x>
+            <y>9.859519</y>
+            <z>-11.0380669</z>
+          </position>
+          <animatinData>
+            <ShipPointAnimationData>
+              <animation>Ship_Show</animation>
+              <probability>100</probability>
+            </ShipPointAnimationData>
+            <ShipPointAnimationData>
+              <animation>Ship_Show2</animation>
+              <probability>100</probability>
+            </ShipPointAnimationData>
+          </animatinData>
+        </ShipPointData>
+      </pointData>
+    </ShipPathData>
+    <ShipPathData>
+      <pointData>
+        <ShipPointData>
+          <position>
+            <x>-2.8898468</x>
+            <y>6.37861</y>
+            <z>-3.87535858</z>
+          </position>
+          <animatinData>
+            <ShipPointAnimationData>
+              <animation>Ship_Show</animation>
+              <probability>100</probability>
+            </ShipPointAnimationData>
+            <ShipPointAnimationData>
+              <animation>Ship_Show2</animation>
+              <probability>100</probability>
+            </ShipPointAnimationData>
+          </animatinData>
+        </ShipPointData>
+        <ShipPointData>
+          <position>
+            <x>2.31246185</x>
+            <y>6.37860966</y>
+            <z>-4.05357</z>
+          </position>
+          <animatinData />
+        </ShipPointData>
+        <ShipPointData>
+          <position>
+            <x>3.6364212</x>
+            <y>6.37861</y>
+            <z>-3.676735</z>
+          </position>
+          <animatinData />
+        </ShipPointData>
+        <ShipPointData>
+          <position>
+            <x>3.789402</x>
+            <y>6.37861</y>
+            <z>-2.14778137</z>
+          </position>
+          <animatinData>
+            <ShipPointAnimationData>
+              <animation>Ship_Show</animation>
+              <probability>50</probability>
+            </ShipPointAnimationData>
+            <ShipPointAnimationData>
+              <animation>Ship_Show2</animation>
+              <probability>50</probability>
+            </ShipPointAnimationData>
+          </animatinData>
+        </ShipPointData>
+        <ShipPointData>
+          <position>
+            <x>-2.86125946</x>
+            <y>6.37860966</y>
+            <z>-1.95503616</z>
+          </position>
+          <animatinData>
+            <ShipPointAnimationData>
+              <animation>Ship_Show</animation>
+              <probability>100</probability>
+            </ShipPointAnimationData>
+            <ShipPointAnimationData>
+              <animation>Ship_Show2</animation>
+              <probability>100</probability>
+            </ShipPointAnimationData>
+          </animatinData>
+        </ShipPointData>
+        <ShipPointData>
+          <position>
+            <x>-3.14146423</x>
+            <y>6.37861</y>
+            <z>1.75356293</z>
+          </position>
+          <animatinData>
+            <ShipPointAnimationData>
+              <animation>Ship_Show</animation>
+              <probability>50</probability>
+            </ShipPointAnimationData>
+            <ShipPointAnimationData>
+              <animation>Ship_Show2</animation>
+              <probability>50</probability>
+            </ShipPointAnimationData>
+          </animatinData>
+        </ShipPointData>
+        <ShipPointData>
+          <position>
+            <x>3.682087</x>
+            <y>6.378609</y>
+            <z>1.825428</z>
+          </position>
+          <animatinData />
+        </ShipPointData>
+        <ShipPointData>
+          <position>
+            <x>4.062481</x>
+            <y>6.70902967</y>
+            <z>3.6049614</z>
+          </position>
+          <animatinData />
+        </ShipPointData>
+        <ShipPointData>
+          <position>
+            <x>4.071644</x>
+            <y>8.047471</y>
+            <z>4.66861725</z>
+          </position>
+          <animatinData />
+        </ShipPointData>
+        <ShipPointData>
+          <position>
+            <x>4.03360748</x>
+            <y>9.349085</y>
+            <z>5.811306</z>
+          </position>
+          <animatinData />
+        </ShipPointData>
+        <ShipPointData>
+          <position>
+            <x>1.84306717</x>
+            <y>9.349085</y>
+            <z>7.37282944</z>
+          </position>
+          <animatinData />
+        </ShipPointData>
+        <ShipPointData>
+          <position>
+            <x>-0.2370987</x>
+            <y>9.349085</y>
+            <z>7.754589</z>
+          </position>
+          <animatinData />
+        </ShipPointData>
+        <ShipPointData>
+          <position>
+            <x>-0.165798187</x>
+            <y>9.349085</y>
+            <z>6.38235855</z>
+          </position>
+          <animatinData>
+            <ShipPointAnimationData>
+              <animation>Ship_Show</animation>
+              <probability>50</probability>
+            </ShipPointAnimationData>
+            <ShipPointAnimationData>
+              <animation>Ship_Show2</animation>
+              <probability>50</probability>
+            </ShipPointAnimationData>
+          </animatinData>
+        </ShipPointData>
+      </pointData>
+    </ShipPathData>
+    <ShipPathData>
+      <pointData>
+        <ShipPointData>
+          <position>
+            <x>1.30468369</x>
+            <y>6.378609</y>
+            <z>-1.25316238</z>
+          </position>
+          <animatinData />
+        </ShipPointData>
+        <ShipPointData>
+          <position>
+            <x>3.75965881</x>
+            <y>6.37861</y>
+            <z>-1.16622925</z>
+          </position>
+          <animatinData>
+            <ShipPointAnimationData>
+              <animation>Ship_Show</animation>
+              <probability>50</probability>
+            </ShipPointAnimationData>
+            <ShipPointAnimationData>
+              <animation>Ship_Show2</animation>
+              <probability>50</probability>
+            </ShipPointAnimationData>
+          </animatinData>
+        </ShipPointData>
+        <ShipPointData>
+          <position>
+            <x>-3.45582962</x>
+            <y>6.37860966</y>
+            <z>-1.32868576</z>
+          </position>
+          <animatinData>
+            <ShipPointAnimationData>
+              <animation>Ship_Idle</animation>
+              <probability>100</probability>
+            </ShipPointAnimationData>
+            <ShipPointAnimationData>
+              <animation>Ship_Show</animation>
+              <probability>100</probability>
+            </ShipPointAnimationData>
+            <ShipPointAnimationData>
+              <animation>Ship_Show2</animation>
+              <probability>100</probability>
+            </ShipPointAnimationData>
+          </animatinData>
+        </ShipPointData>
+        <ShipPointData>
+          <position>
+            <x>-4.46187973</x>
+            <y>6.37861</y>
+            <z>-2.311493</z>
+          </position>
+          <animatinData />
+        </ShipPointData>
+        <ShipPointData>
+          <position>
+            <x>-4.49041</x>
+            <y>7.261932</y>
+            <z>-3.432598</z>
+          </position>
+          <animatinData />
+        </ShipPointData>
+        <ShipPointData>
+          <position>
+            <x>-4.44235229</x>
+            <y>8.191384</y>
+            <z>-4.46364975</z>
+          </position>
+          <animatinData />
+        </ShipPointData>
+        <ShipPointData>
+          <position>
+            <x>-4.441452</x>
+            <y>8.892696</y>
+            <z>-5.43358231</z>
+          </position>
+          <animatinData />
+        </ShipPointData>
+        <ShipPointData>
+          <position>
+            <x>-4.43951035</x>
+            <y>8.892696</y>
+            <z>-8.634674</z>
+          </position>
+          <animatinData>
+            <ShipPointAnimationData>
+              <animation>Ship_Show</animation>
+              <probability>30</probability>
+            </ShipPointAnimationData>
+            <ShipPointAnimationData>
+              <animation>Ship_Show2</animation>
+              <probability>30</probability>
+            </ShipPointAnimationData>
+          </animatinData>
+        </ShipPointData>
+      </pointData>
+    </ShipPathData>
+    <ShipPathData>
+      <pointData>
+        <ShipPointData>
+          <position>
+            <x>-1.68836975</x>
+            <y>6.37861</y>
+            <z>-3.905239</z>
+          </position>
+          <animatinData>
+            <ShipPointAnimationData>
+              <animation>Ship_Idle</animation>
+              <probability>30</probability>
+            </ShipPointAnimationData>
+            <ShipPointAnimationData>
+              <animation>Ship_Show</animation>
+              <probability>30</probability>
+            </ShipPointAnimationData>
+            <ShipPointAnimationData>
+              <animation>Ship_Show2</animation>
+              <probability>30</probability>
+            </ShipPointAnimationData>
+          </animatinData>
+        </ShipPointData>
+        <ShipPointData>
+          <position>
+            <x>-2.45909119</x>
+            <y>6.378609</y>
+            <z>4.24420166</z>
+          </position>
+          <animatinData>
+            <ShipPointAnimationData>
+              <animation>Ship_Idle</animation>
+              <probability>100</probability>
+            </ShipPointAnimationData>
+          </animatinData>
+        </ShipPointData>
+        <ShipPointData>
+          <position>
+            <x>2.19152832</x>
+            <y>6.378609</y>
+            <z>4.367008</z>
+          </position>
+          <animatinData>
+            <ShipPointAnimationData>
+              <animation>Ship_Show</animation>
+              <probability>50</probability>
+            </ShipPointAnimationData>
+            <ShipPointAnimationData>
+              <animation>Ship_Show2</animation>
+              <probability>50</probability>
+            </ShipPointAnimationData>
+          </animatinData>
+        </ShipPointData>
+        <ShipPointData>
+          <position>
+            <x>2.279068</x>
+            <y>6.378609</y>
+            <z>0.278011322</z>
+          </position>
+          <animatinData />
+        </ShipPointData>
+        <ShipPointData>
+          <position>
+            <x>2.26255417</x>
+            <y>6.37861061</y>
+            <z>-3.18819046</z>
+          </position>
+          <animatinData />
+        </ShipPointData>
+        <ShipPointData>
+          <position>
+            <x>-0.613182068</x>
+            <y>6.37861</y>
+            <z>-2.848896</z>
+          </position>
+          <animatinData>
+            <ShipPointAnimationData>
+              <animation>Ship_Show</animation>
+              <probability>50</probability>
+            </ShipPointAnimationData>
+            <ShipPointAnimationData>
+              <animation>Ship_Show2</animation>
+              <probability>50</probability>
+            </ShipPointAnimationData>
+          </animatinData>
+        </ShipPointData>
+      </pointData>
+    </ShipPathData>
+  </allPathData>
+</ShipData>

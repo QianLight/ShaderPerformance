@@ -1,0 +1,77 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Role_luffy_cloth
+  m_Shader: {fileID: 4800000, guid: 314d3f03d7df8d64e954c75002a52c4a, type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: 2000
+  stringTagMap: {}
+  disabledShaderPasses:
+  - FACE_SHADOW_CASTER
+  - ScreenSpaceRim
+  - FaceShadowCaster
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _MainTex:
+        m_Texture: {fileID: 2800000, guid: b2dd479e3dbdcb74ba1a04d6655c3eb5, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex1:
+        m_Texture: {fileID: 2800000, guid: bfb58de9031e380499cdab0b1386e23c, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ProcedureTex0:
+        m_Texture: {fileID: 2800000, guid: 8c2d1b14ff53bb54b832b319a54a55ac, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ProcedureTex2:
+        m_Texture: {fileID: 2800000, guid: 758d6fa6928e25643bd6a393923d216f, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - _DitherTransparency_On: 0
+    - _DstBlend: 0
+    - _OLZWrite: 1
+    - _OutlineZWrite: 1
+    - _SrcBlend: 1
+    - _Stencil: 0
+    - _ZWrite: 1
+    m_Colors:
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _Color0: {r: 1, g: 1, b: 1, a: 1}
+    - _Color1: {r: 0, g: 0, b: 0, a: 0}
+    - _Color3: {r: 0.6931671, g: 0.6754539, b: 0.8584906, a: 0.011764706}
+    - _Color4: {r: 0.8245283, g: 0.78113204, b: 0.8679245, a: 1}
+    - _Color5: {r: 1, g: 1, b: 1, a: 0}
+    - _Color6: {r: 1, g: 0, b: 0, a: 1}
+    - _ColorOutline: {r: 0.62264144, g: 0.42527586, b: 0.42527586, a: 0.4}
+    - _FaceShadowParam: {r: 0.01, g: 0, b: 0, a: 0}
+    - _HeightGradientColor: {r: 1, g: 1, b: 1, a: 1}
+    - _HeightGradientPreivewColor: {r: 1, g: 1, b: 1, a: 1}
+    - _HeightGradientPreviewParam: {r: 0, g: 1.5, b: 2, a: 0}
+    - _MatEffectOutlineParam: {r: 0, g: 0, b: 0, a: 0}
+    - _PBRParam: {r: 0, g: 1, b: 0, a: 1}
+    - _Param: {r: 1, g: 1, b: 0, a: 0}
+    - _Param0: {r: 0, g: 1, b: 1.5, a: 1}
+    - _Param1: {r: 1, g: 0, b: 1, a: 0.5}
+    - _Param2: {r: 1, g: 0, b: 0, a: 0}
+    - _Param3: {r: 0, g: 0, b: 0, a: 0}
+    - _RimColortoon: {r: 1.4980392, g: 1.4980392, b: 1.4980392, a: 0.98}
+    - _RootPosWS: {r: 0, g: 0, b: 0, a: 0}
+    - _SSRimColor: {r: 1, g: 1, b: 1, a: 0.18}
+    - _SSRimParam0: {r: 0.05, g: 0, b: 0, a: 6}
+    - _SceneColor: {r: 0, g: 0, b: 0, a: 1}
+    - _ShadowPos: {r: 49.07, g: 14.143, b: 196.91, a: 0}
+    - _Tessellation: {r: 1, g: 0, b: 0, a: 0}
+    - _UVST1: {r: 1, g: 1, b: 0, a: 0}
+  m_BuildTextureStacks: []

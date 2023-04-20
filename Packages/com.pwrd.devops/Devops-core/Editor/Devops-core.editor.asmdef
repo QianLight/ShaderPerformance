@@ -1,0 +1,17 @@
+{
+    "name": "Devops-core.editor",
+    "references": [
+        "GUID:15e8057a635dbbc40ae190de19b01144"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

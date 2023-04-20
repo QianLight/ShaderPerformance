@@ -1,0 +1,25 @@
+apply plugin: 'com.android.dynamic-feature'
+
+android {
+    compileSdkVersion{compileSdkVersion}
+    buildToolsVersion{buildToolsVersion}
+
+    defaultConfig {
+        minSdkVersion{minSdkVersion}
+        targetSdkVersion{targetSdkVersion}
+    }
+
+    compileOptions {
+        sourceCompatibility 1.8
+        targetCompatibility 1.8
+    }
+    
+    aaptOptions {
+        noCompress{noCompress}
+        ignoreAssetsPattern = "!.svn:!.git:!.ds_store:!*.scc:.*:!CVS:!thumbs.db:!picasa.ini:!*~"
+    }
+}
+
+dependencies {
+    implementation project("{project}")
+}

@@ -1,0 +1,44 @@
+{
+    "name": "HLOD.Editor",
+    "rootNamespace": "",
+    "references": [
+        "GUID:20ce29deab16e51488c53841002882a5",
+        "GUID:0d8761c04bda79b4e9253a75231ec0c6",
+        "GUID:d52a625d6523ed241992a42f13049505",
+        "GUID:df380645f10b7bc4b97d4f5eb6303d95",
+        "GUID:15fc0a57446b3144c949da3e2b9737a9",
+        "GUID:e9f9a9386a418ba4daaa21a04ca44843",
+        "GUID:396a59801db562140bfe1bea76953228",
+        "GUID:0d6268532d557c045b8821baa00b86f4",
+        "GUID:2b82e46c4ca0a4eb697ab8ccdfb39af1",
+        "GUID:457756d89b35d2941b3e7b37b4ece6f1"
+    ],
+    "includePlatforms": [
+        "Editor",
+        "tvOS"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [
+        {
+            "name": "com.pwrd.athena-render-pipeline",
+            "expression": "",
+            "define": "HLOD_USE_ATHENA_PIPELINE"
+        },
+        {
+            "name": "com.unity.render-pipelines.universal",
+            "expression": "",
+            "define": "HLOD_USE_URP"
+        },
+        {
+            "name": "com.unity.render-pipelines.high-definition",
+            "expression": "",
+            "define": "HLOD_USE_HDRP"
+        }
+    ],
+    "noEngineReferences": false
+}

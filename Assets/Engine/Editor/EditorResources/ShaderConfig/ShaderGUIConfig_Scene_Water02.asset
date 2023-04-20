@@ -1,0 +1,50 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40e1cbd74443f2b4a9ea8cdee05aef60, type: 3}
+  m_Name: ShaderGUIConfig_Scene_Water02
+  m_EditorClassIdentifier: 
+  shader: {fileID: 4800000, guid: 83aacbfd79699e84c87c69f03f7f4de2, type: 3}
+  dummyMatType: 0
+  lsType: 1
+  shaderFeatures:
+  - hash: 
+    sfg: {fileID: 11400000, guid: 1c481ff164d5e5641ab950232176341e, type: 2}
+    shaderFeatures:
+    - Water02_MainColor
+    - Water02_Normal
+    - Water02_MainTex
+    - Water02_MainTransparent
+    - Water02_Tiling
+    - Water02_WaveColor
+    - Water02_Wave
+    - Water02_WaveTiling
+    - Water02_Transparent
+    - Water02_Reflection
+    - Water02_ReflectionContrl
+    - Water02_WaveContrl
+    - Water02_empty
+    - Water02_Roughness
+    - Water2_MainTex
+    - Water2_Normal
+    - Water2_Wave
+    - Water2_Reflection
+    - Water2_WaveContrl
+    - Water2_WaveColor
+    - Water2_WaveTiling
+    - Water2_ReflectionContrl
+    - Water2_Transparent
+    - Water2_MainTransparent
+    - Water2_MainColor
+    - Water02_SpecularColor
+    - Water2_SpecularColor
+    - Water02_CausticsColor
+    - Water02_CausticsCtrl

@@ -1,0 +1,15 @@
+{
+    "name": "TestingEditor",
+    "references": [
+        "GUID:8164ddd283865e34592af02df3568295"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

@@ -1,0 +1,83 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Role_luffy_hair01
+  m_Shader: {fileID: 4800000, guid: 830347ac48666af43a40212832b7956d, type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: 2000
+  stringTagMap: {}
+  disabledShaderPasses:
+  - SHADOWCASTER
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _AnisoShift:
+        m_Texture: {fileID: 2800000, guid: 846f41be217e8104ba9a01cbe6dd73ec, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 2800000, guid: e7786ddaf7b8b154bbebbe2a241df898, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex1:
+        m_Texture: {fileID: 2800000, guid: 5c895ba996dcdcd47b2ea381bf9a197f, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ProcedureTex0:
+        m_Texture: {fileID: 2800000, guid: ea845196f5f54b6458e6aa9a10d6004f, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ProcedureTex2:
+        m_Texture: {fileID: 2800000, guid: a569142abbdaaca4495c26aa836ae061, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - _DstBlend: 0
+    - _OLZWrite: 1
+    - _SrcBlend: 1
+    - _Stencil: 0
+    - _ZWrite: 1
+    m_Colors:
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _Color0: {r: 1, g: 1, b: 1, a: 1}
+    - _Color1: {r: 0.43446067, g: 0.509434, b: 0.49943754, a: 0.61}
+    - _Color2: {r: 0.047169805, g: 0.03359736, b: 0.03865619, a: 0.267}
+    - _Color3: {r: 0, g: 0, b: 0, a: 0.02745098}
+    - _Color4: {r: 0.8, g: 0.8, b: 0.8, a: 1}
+    - _Color5: {r: 1, g: 1, b: 1, a: 1}
+    - _Color6: {r: 1, g: 1, b: 1, a: 1}
+    - _ColorOutline: {r: 0.20754683, g: 0.16721219, b: 0.16721219, a: 0}
+    - _FaceShadowParam: {r: 0.01, g: 0, b: 0, a: 0}
+    - _GlobalFaceShadowParam: {r: 5, g: 5, b: 0, a: 0}
+    - _HeightGradientColor: {r: 1, g: 1, b: 1, a: 1}
+    - _HeightGradientPreivewColor: {r: 1, g: 1, b: 1, a: 1}
+    - _HeightGradientPreviewParam: {r: 0, g: 1.5, b: 2, a: 0}
+    - _KajiyaParam0: {r: 1.98, g: 1, b: -1.44, a: -1.43}
+    - _KajiyaParam1: {r: 0.34, g: 1.18, b: 0.08, a: 0.5}
+    - _MatEffectOutlineParam: {r: 0, g: 0, b: 0, a: 0}
+    - _PBRParam: {r: 1, g: 0, b: 0, a: 0}
+    - _Param: {r: 1, g: 1, b: 1, a: 0}
+    - _Param0: {r: 1, g: 1, b: 0.728, a: 0}
+    - _Param1: {r: 1, g: 0.712, b: 1, a: 0.466}
+    - _Param2: {r: 1, g: 0, b: 0, a: 0}
+    - _Param3: {r: 1, g: 1, b: 1, a: 1}
+    - _RimColortoon: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+    - _RootPosWS: {r: 0, g: 0, b: 0, a: 0}
+    - _SSRimColor: {r: 1, g: 1, b: 1, a: 0.118}
+    - _SSRimParam0: {r: 0.01, g: 0, b: 0, a: 6}
+    - _SceneColor: {r: 0, g: 0, b: 0, a: 1}
+    - _ScreenSpaceRimParam: {r: 5, g: 5, b: 0, a: 0}
+    - _ShadowPos: {r: 0.03680004, g: 999.1724, b: 12.46, a: 0}
+    - _Tessellation: {r: 1, g: 0, b: 0, a: 0}
+    - _UVST0: {r: 1, g: 1, b: 0, a: 0}
+    - _UVST1: {r: 1, g: 1, b: 0, a: 0}
+  m_BuildTextureStacks: []

@@ -1,0 +1,117 @@
+
+{
+    "build_id" : "63329451f44954002b10652d",
+    "dsl"      : {
+        "baseline" : "3.15.2.0",
+        "region"   : "cn",
+        "platform" : "unity",
+        "components" : [
+            {
+                "name" : "Account",
+                "version" : "3.14.0.0",
+                "modules" : [
+                    "AccountBytedance/AccountCommon",
+                    "AccountBytedance/AccountTapTap"
+                ],
+                "android_name" : "account",
+                "unity_name"   : "GMAccount"
+            },
+            {
+                "name" : "Compliance",
+                "version" : "3.12.1.0",
+                "modules" : [
+                    "ComplianceAntiAddiction",
+                    "ComplianceInstallPopup",
+                    "CompliancePermission",
+                    "CompliancePrivacy",
+                    "ComplianceProtocol"
+                ],
+                "android_name" : "compliance",
+                "unity_name"   : "Compliance"
+            },
+            {
+                "name" : "GPM",
+                "version" : "3.14.0.0",
+                "modules" : null
+            },
+            {
+                "name" : "Main",
+                "version" : "3.15.2.0",
+                "modules" : [
+                    "ASR",
+                    "Core",
+                    "Debug",
+                    "DeepLink",
+                    "ForceUpdate",
+                    "IM",
+                    "Location",
+                    "QRCode",
+                    "SSL"
+                ],
+                "android_name" : "",
+                "unity_name"   : ""
+            },
+            {
+                "name" : "Pay",
+                "version" : "3.14.0.0",
+                "modules" : null
+            },
+            {
+                "name" : "Push",
+                "version" : "3.13.0.0",
+                "modules" : null,
+                "android_name" : "push",
+                "unity_name"   : "GMPush"
+            },
+            {
+                "name" : "RN",
+                "version" : "3.15.1.1",
+                "modules" : null,
+                "android_name" : "rn",
+                "unity_name"   : "GMReactNative"
+            },
+            {
+                "name" : "RNCore",
+                "version" : "3.15.1.1",
+                "modules" : null
+            },
+            {
+                "name" : "RTC",
+                "version" : "3.37.203.002002",
+                "modules" : null,
+                "android_name" : "rtc",
+                "unity_name"   : "GMRTC"
+            },
+            {
+                "name" : "Share",
+                "version" : "3.14.0.0",
+                "modules" : [
+                    "ShareDouyin",
+                    "ShareImage",
+                    "ShareQQ",
+                    "ShareWeChat",
+                    "ShareWeibo"
+                ],
+                "android_name" : "share",
+                "unity_name"   : "GMShare"
+            },
+            {
+                "name" : "Voice",
+                "version" : "3.15.2.0",
+                "modules" : null,
+                "android_name" : "voice",
+                "unity_name"   : "GMVoice"
+            },
+            {
+                "name" : "Webview",
+                "version" : "3.13.0.0",
+                "modules" : null,
+                "android_name" : "webview",
+                "unity_name"   : ""
+            }
+        ],
+        "pkg_type"   : "unitypackage"
+    },
+    "version"  : "3.15.2.0",
+    "region"   : "cn"
+}

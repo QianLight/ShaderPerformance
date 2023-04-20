@@ -1,0 +1,11 @@
+{
+  "description": "MeshSimplify",
+  "displayName": "MeshSimplify",
+  "name": "com.pwrd.meshsimplify",
+  "version": "0.0.1",
+  "unity": "2019.3",
+  "dependencies": {
+    "com.unity.formats.usd": "3.0.0-exp.2",
+    "com.autodesk.fbx": "4.1.1"
+  }
+}

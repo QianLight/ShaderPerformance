@@ -1,0 +1,9 @@
+{
+    "dependencies": {
+    	"com.pwrd.zeus-framework.core": "2.0.0"
+    }, 
+    "description": "Zeus Http", 
+    "displayName": "Zeus Http", 
+    "name": "com.pwrd.zeus-framework.http",
+    "version": "2.0.0"
+}

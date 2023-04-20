@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e23d0fc82087af44a4c310a6250fb91, type: 3}
+  m_Name: EngineResources
+  m_EditorClassIdentifier: 
+  fogNoise3d: {fileID: 11700000, guid: 8c0393a3cea647e4aa7cbb5d79326d21, type: 2}
+  distortion0: {fileID: 2800000, guid: be62a7a9e07569045b8f71cbf95cf733, type: 3}
+  distortion1: {fileID: 0}
+  shaders:
+    bloom: {fileID: 4800000, guid: c1e1d3119c6fd4646aea0b4b74cacc1a, type: 3}
+    godRay: {fileID: 4800000, guid: 6083b5b38a7edb44a8dbd8ed7b3e2aed, type: 3}
+    depthOfField: {fileID: 4800000, guid: 415e5fc8b72ed374884c0a91efc5ef90, type: 3}
+    scatter: {fileID: 4800000, guid: 434c3e0b9563d114ab6736f5acf3d2e0, type: 3}
+    fog: {fileID: 4800000, guid: 33c9d93b59aef1e4ea860608152f153f, type: 3}
+    preEffects: {fileID: 4800000, guid: 437b0d488fcca2944816fe614cea97e2, type: 3}
+    uber: {fileID: 4800000, guid: 382151503e2a43a4ebb7366d1632731d, type: 3}
+    rtBlur: {fileID: 4800000, guid: eeecac56cb3aef84ba685760ddaecbe2, type: 3}
+    blurMesh: {fileID: 4800000, guid: 574c7f41b40a09d4985bb4e46ca45a31, type: 3}
+    lutBuilderHdr: {fileID: 4800000, guid: 6cf59f8af28c8c841bbda692f72b0bbf, type: 3}
+    radialBlur: {fileID: 4800000, guid: 50d539d0dbd83f049b62302576735043, type: 3}
+    copy: {fileID: 4800000, guid: cdbdb71de5f9c454b980f6d0e87f0afb, type: 3}
+    lightCulling: {fileID: 7200000, guid: 4b9c3e974e249d5498efe6f96835781b, type: 3}
+  defaultScatterInfo:
+    lut: {fileID: 2800000, guid: 4dcac587b18e63948b14e6973b0838f9, type: 3}
+    param: {x: 0.000000009138148, y: 0.9945219, z: 0.10452819, w: 6.8}

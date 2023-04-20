@@ -1,0 +1,357 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6eec529a5ef7c7d4b9b0662940141f22, type: 3}
+  m_Name: EditorOutlineConfig
+  m_EditorClassIdentifier: 
+  configs:
+  - prefab: {fileID: 6501658157706342829, guid: 0397eaf829560e5499978a7c062111f1,
+      type: 3}
+    outline:
+      outlineColor: {r: 0.627451, g: 0.627451, b: 0.627451, a: 1}
+      outlineWidth: 0.4
+      outlineMinWidth: 0.4
+      outlineMaxWidth: 1
+    partOutlineConfig:
+    - partName: Role_zoro_body
+      isOverride: 0
+    - partName: Role_zoro_cloth
+      isOverride: 0
+    - partName: Role_zoro_face
+      isOverride: 0
+    - partName: Role_zoro_hair
+      isOverride: 0
+    - partName: Role_zoro_weapon
+      isOverride: 0
+  - prefab: {fileID: 8241687317425781774, guid: 14bc432cebb59664b9408309da3e1823,
+      type: 3}
+    outline:
+      outlineColor: {r: 0.627451, g: 0.627451, b: 0.627451, a: 1}
+      outlineWidth: 0.4
+      outlineMinWidth: 0.5
+      outlineMaxWidth: 2
+    partOutlineConfig:
+    - partName: Role_luffy_body
+      isOverride: 0
+    - partName: Role_luffy_cloth
+      isOverride: 0
+    - partName: Role_luffy_face
+      isOverride: 0
+    - partName: Role_luffy_hair
+      isOverride: 0
+    - partName: Role_luffy_2_hair
+      isOverride: 0
+    - partName: Role_luffy_4_body
+      isOverride: 0
+    - partName: Role_luffy_4_cloth
+      isOverride: 0
+    - partName: Role_luffy_4_right
+      isOverride: 0
+  - prefab: {fileID: 8247193494168618882, guid: 123e59c4b222622448cd74e709e51a67,
+      type: 3}
+    outline:
+      outlineColor: {r: 0.6320754, g: 0.6320754, b: 0.6320754, a: 1}
+      outlineWidth: 0.4
+      outlineMinWidth: 0.5
+      outlineMaxWidth: 2
+    partOutlineConfig:
+    - partName: Role_nami_body
+      isOverride: 0
+    - partName: Role_nami_cloth
+      isOverride: 0
+    - partName: Role_nami_face
+      isOverride: 0
+    - partName: Role_nami_hair
+      isOverride: 0
+    - partName: Role_nami_weapon
+      isOverride: 0
+  - prefab: {fileID: 423464800649585626, guid: c34206dbe0c521247a4ef06882e8d048, type: 3}
+    outline:
+      outlineColor: {r: 0.6415094, g: 0.6415094, b: 0.6415094, a: 1}
+      outlineWidth: 0.4
+      outlineMinWidth: 0.5
+      outlineMaxWidth: 2
+    partOutlineConfig:
+    - partName: Monster_Helmeppo_body
+      isOverride: 0
+    - partName: Monster_Helmeppo_cloth
+      isOverride: 0
+    - partName: Monster_Helmeppo_face
+      isOverride: 0
+    - partName: Monster_Helmeppo_hair
+      isOverride: 0
+    - partName: Monster_Helmeppo_weapon
+      isOverride: 0
+  - prefab: {fileID: 1441357230355097275, guid: bfd81b202b957f24f98281df992309c4,
+      type: 3}
+    outline:
+      outlineColor: {r: 0.6320754, g: 0.6320754, b: 0.6320754, a: 1}
+      outlineWidth: 0.4
+      outlineMinWidth: 0.5
+      outlineMaxWidth: 2
+    partOutlineConfig:
+    - partName: Role_hancock_body
+      isOverride: 0
+    - partName: Role_hancock_cloth
+      isOverride: 0
+    - partName: Role_hancock_face
+      isOverride: 0
+    - partName: Role_hancock_hair
+      isOverride: 0
+  - prefab: {fileID: 2703964113774419743, guid: 86a27674b3dc5a5448d39804f3f60c2f,
+      type: 3}
+    outline:
+      outlineColor: {r: 0.6320754, g: 0.6320754, b: 0.6320754, a: 1}
+      outlineWidth: 0.4
+      outlineMinWidth: 0.5
+      outlineMaxWidth: 2
+    partOutlineConfig:
+    - partName: Monster_BlackBeard_body
+      isOverride: 0
+    - partName: Monster_BlackBeard_cloak
+      isOverride: 0
+    - partName: Monster_BlackBeard_cloth
+      isOverride: 0
+    - partName: Monster_BlackBeard_face
+      isOverride: 0
+    - partName: Monster_BlackBeard_hair
+      isOverride: 0
+  - prefab: {fileID: 1453969173899187017, guid: cc6f6def67e165147ab76684c267baf0,
+      type: 3}
+    outline:
+      outlineColor: {r: 0.6509434, g: 0.6509434, b: 0.6509434, a: 1}
+      outlineWidth: 0.4
+      outlineMinWidth: 0.5
+      outlineMaxWidth: 2
+    partOutlineConfig:
+    - partName: model_seabird_home
+      isOverride: 0
+    - partName: model_seabird_home_hat
+      isOverride: 0
+  - prefab: {fileID: 2486051418910918284, guid: 06ed6631ae8f29f4ea70e324b084946a,
+      type: 3}
+    outline:
+      outlineColor: {r: 0.6320754, g: 0.6320754, b: 0.6320754, a: 1}
+      outlineWidth: 0.4
+      outlineMinWidth: 0.5
+      outlineMaxWidth: 2
+    partOutlineConfig:
+    - partName: Monster_Morgan_normal_body
+      isOverride: 0
+    - partName: Monster_Morgan_normal_cloak
+      isOverride: 0
+    - partName: Monster_Morgan_normal_cloth
+      isOverride: 0
+    - partName: Monster_Morgan_normal_face
+      isOverride: 0
+    - partName: Monster_Morgan_normal_hair
+      isOverride: 0
+    - partName: Monster_Morgan_normal_mask
+      isOverride: 0
+  - prefab: {fileID: 520819129394148208, guid: 21a4424a26242c343a7498af9b0bdac1, type: 3}
+    outline:
+      outlineColor: {r: 0.6415094, g: 0.6415094, b: 0.6415094, a: 1}
+      outlineWidth: 0.4
+      outlineMinWidth: 0.5
+      outlineMaxWidth: 2
+    partOutlineConfig:
+    - partName: Monster_MarineMusketeer1_body
+      isOverride: 0
+    - partName: Monster_MarineMusketeer1_cloth
+      isOverride: 0
+    - partName: Monster_MarineMusketeer1_face
+      isOverride: 0
+    - partName: Monster_MarineMusketeer1_hair
+      isOverride: 0
+    - partName: Monster_MarineMusketeer1_weapon
+      isOverride: 0
+  - prefab: {fileID: 520819129394148208, guid: 6aef4d22d15b7ea4a96801e0d9e320f2, type: 3}
+    outline:
+      outlineColor: {r: 0.6320754, g: 0.6320754, b: 0.6320754, a: 1}
+      outlineWidth: 0.4
+      outlineMinWidth: 0.5
+      outlineMaxWidth: 2
+    partOutlineConfig:
+    - partName: Monster_MarineMusketeer2_body
+      isOverride: 0
+    - partName: Monster_MarineMusketeer2_cloth
+      isOverride: 0
+    - partName: Monster_MarineMusketeer2_face
+      isOverride: 0
+    - partName: Monster_MarineMusketeer2_hair
+      isOverride: 0
+    - partName: Monster_MarineMusketeer2_weapon
+      isOverride: 0
+  - prefab: {fileID: 5674148585907536435, guid: 5343984639bbb00498c133c10c088fed,
+      type: 3}
+    outline:
+      outlineColor: {r: 0.6320754, g: 0.6320754, b: 0.6320754, a: 1}
+      outlineWidth: 0.4
+      outlineMinWidth: 0.5
+      outlineMaxWidth: 2
+    partOutlineConfig:
+    - partName: Monster_MarineSuccessorColonel_body
+      isOverride: 0
+    - partName: Monster_MarineSuccessorColonel_cloth
+      isOverride: 0
+    - partName: Monster_MarineSuccessorColonel_face
+      isOverride: 0
+    - partName: Monster_MarineSuccessorColonel_hair
+      isOverride: 0
+  - prefab: {fileID: 8963227500465089025, guid: 1348fa8687dca8c49872e82d4826cea8,
+      type: 3}
+    outline:
+      outlineColor: {r: 0.6320754, g: 0.6320754, b: 0.6320754, a: 1}
+      outlineWidth: 0.4
+      outlineMinWidth: 0.5
+      outlineMaxWidth: 2
+    partOutlineConfig:
+    - partName: Monster_MarineSwordman1_body
+      isOverride: 0
+    - partName: Monster_MarineSwordman1_cloth
+      isOverride: 0
+    - partName: Monster_MarineSwordman1_face
+      isOverride: 0
+    - partName: Monster_MarineSwordman1_hair
+      isOverride: 0
+    - partName: Monster_MarineSwordman1_weapon
+      isOverride: 0
+  - prefab: {fileID: 8963227500465089025, guid: 13faac3b636edea43b0354660b039182,
+      type: 3}
+    outline:
+      outlineColor: {r: 0.6320754, g: 0.6320754, b: 0.6320754, a: 1}
+      outlineWidth: 0.4
+      outlineMinWidth: 0.5
+      outlineMaxWidth: 2
+    partOutlineConfig:
+    - partName: Monster_MarineSwordman2_body
+      isOverride: 0
+    - partName: Monster_MarineSwordman2_cloth
+      isOverride: 0
+    - partName: Monster_MarineSwordman2_face
+      isOverride: 0
+    - partName: Monster_MarineSwordman2_hair
+      isOverride: 0
+    - partName: Monster_MarineSwordman2_weapon
+      isOverride: 0
+  - prefab: {fileID: 8241687317425781774, guid: 634b47ec60408204786675cffb972308,
+      type: 3}
+    outline:
+      outlineColor: {r: 0.6415094, g: 0.6415094, b: 0.6415094, a: 1}
+      outlineWidth: 0.4
+      outlineMinWidth: 0.5
+      outlineMaxWidth: 2
+    partOutlineConfig:
+    - partName: chr0110_damage_A001
+      isOverride: 0
+    - partName: chr0110_form001
+      isOverride: 0
+    - partName: Object006
+      isOverride: 0
+    - partName: Object008
+      isOverride: 0
+    - partName: Object007
+      isOverride: 0
+  - prefab: {fileID: 8241687317425781774, guid: c8c0b378da83c8041899cfcecc01f76f,
+      type: 3}
+    outline:
+      outlineColor: {r: 0.6320754, g: 0.6320754, b: 0.6320754, a: 1}
+      outlineWidth: 0.4
+      outlineMinWidth: 0.5
+      outlineMaxWidth: 2
+    partOutlineConfig:
+    - partName: chr0110_damage_A001
+      isOverride: 0
+    - partName: chr0110_form001
+      isOverride: 0
+    - partName: Object006
+      isOverride: 0
+    - partName: Object008
+      isOverride: 0
+    - partName: Object007
+      isOverride: 0
+  - prefab: {fileID: 6501658157706342829, guid: b62336eaa142ae849b793c74eb1c0393,
+      type: 3}
+    outline:
+      outlineColor: {r: 0, g: 0, b: 0, a: 1}
+      outlineWidth: 0.1
+      outlineMinWidth: 0.5
+      outlineMaxWidth: 2
+    partOutlineConfig:
+    - partName: Role_zoro_body
+      isOverride: 0
+    - partName: Role_zoro_cloth
+      isOverride: 0
+    - partName: Role_zoro_face
+      isOverride: 0
+    - partName: Role_zoro_hair
+      isOverride: 0
+    - partName: Role_zoro_weapon
+      isOverride: 0
+  - prefab: {fileID: 2486051418910918284, guid: 6dc36bdecadb79e4c9d7116257bceeff,
+      type: 3}
+    outline:
+      outlineColor: {r: 0.7075472, g: 0.7075472, b: 0.7075472, a: 1}
+      outlineWidth: 0.4
+      outlineMinWidth: 0.5
+      outlineMaxWidth: 2
+    partOutlineConfig:
+    - partName: Object001
+      isOverride: 0
+    - partName: Role_coby_cloth
+      isOverride: 0
+    - partName: Role_coby_face
+      isOverride: 0
+    - partName: Role_coby_hair
+      isOverride: 0
+    - partName: Role_coby_weapon
+      isOverride: 0
+    - partName: Role_coby_body
+      isOverride: 0
+  - prefab: {fileID: 7718384598213278884, guid: 7ff22df5a78ed794dbcc3583f6e0c8aa,
+      type: 3}
+    outline:
+      outlineColor: {r: 0.6132076, g: 0.6132076, b: 0.6132076, a: 1}
+      outlineWidth: 0.4
+      outlineMinWidth: 0.5
+      outlineMaxWidth: 2
+    partOutlineConfig:
+    - partName: Role_kuina_body
+      isOverride: 0
+    - partName: Role_kuina_cloth
+      isOverride: 0
+    - partName: Role_kuina_face
+      isOverride: 0
+    - partName: Role_kuina_hair
+      isOverride: 0
+  - prefab: {fileID: -927199367670048503, guid: 6e76201f191004744ad959ef7feb4f7a,
+      type: 3}
+    outline:
+      outlineColor: {r: 0.6792453, g: 0.6792453, b: 0.6792453, a: 1}
+      outlineWidth: 0.2
+      outlineMinWidth: 0.5
+      outlineMaxWidth: 2
+    partOutlineConfig:
+    - partName: System_draw_phone_cloth
+      isOverride: 0
+    - partName: System_draw_phone_face
+      isOverride: 0
+  - prefab: {fileID: 7421823980803292833, guid: fe985bbefcb9a76418ba01b95a331312,
+      type: 3}
+    outline:
+      outlineColor: {r: 0, g: 0, b: 0, a: 1}
+      outlineWidth: 0.1
+      outlineMinWidth: 0.5
+      outlineMaxWidth: 2
+    partOutlineConfig: []
+  configFolder: 1
+  offsetY: -1.23
+  dist: 6.4

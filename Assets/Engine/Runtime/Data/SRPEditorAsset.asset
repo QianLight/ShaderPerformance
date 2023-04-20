@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2bc36ca3dbc197d499b35a15d172317e, type: 3}
+  m_Name: SRPEditorAsset
+  m_EditorClassIdentifier: 
+  shaders:
+    autodeskInteractivePS: {fileID: 0}
+    autodeskInteractiveTransparentPS: {fileID: 0}
+    autodeskInteractiveMaskedPS: {fileID: 0}
+    defaultShader: {fileID: 0}
+    defaultSpeedTree7PS: {fileID: 0}
+    defaultSpeedTree8PS: {fileID: 0}
+  materials:
+    lit: {fileID: 0}
+    particleLit: {fileID: 0}
+    terrainLit: {fileID: 0}

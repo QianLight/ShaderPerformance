@@ -1,0 +1,114 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: UniformWater_twin_cape_01
+  m_Shader: {fileID: 4800000, guid: 2ab0a1e8c741ec24a9efda525ba84057, type: 3}
+  m_ShaderKeywords: _APPLYFOG_ON _USEWORLDPOSASUV_ON
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _DepthTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _EnvCube:
+        m_Texture: {fileID: 8900000, guid: d7f35307b0e251c4d903f7365837c1a9, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _FoamMask:
+        m_Texture: {fileID: 2800000, guid: 124af88e3fe1db14a910257486199b61, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _FoamTex:
+        m_Texture: {fileID: 2800000, guid: 6de71f1f38dc19c43b6624343b28bc42, type: 3}
+        m_Scale: {x: 100, y: 100}
+        m_Offset: {x: 0, y: 0}
+    - _FoamTex1:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _NormalTex:
+        m_Texture: {fileID: 2800000, guid: 0c86fdd60e7cfa449bc1dfa85643bc42, type: 3}
+        m_Scale: {x: 20, y: 20}
+        m_Offset: {x: 0, y: 0}
+    - _TextureSample0:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _tex3coord:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _texcoord:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - _AlphaCutoff: 0.5
+    - _ApplyFog: 1
+    - _CSharpSync: 0
+    - _DepthMode: 0
+    - _DistanceFadeFar: 400
+    - _DistanceFadeNear: 193.6
+    - _EnableCloudShadow: 0
+    - _EnableRealtimeShadow: 0
+    - _EnableSmartShadow: 0
+    - _Height: 3
+    - _Height1: 1.5
+    - _Height2: 2
+    - _NormalScale: 1
+    - _NormalScale2: 0.1
+    - _NormalScale3: 0.057
+    - _PlannarRelfectDensity: 0.5
+    - _ReflectionOffset: -1212
+    - _ReflectionSpeed: 0.26
+    - _RefractionDistort: 0
+    - _ShadowIntensity: 0.2
+    - _SpecularPower: 5000
+    - _Transparency: 0.01
+    - _UseWorldPosAsUV: 3
+    - _WaveHeight: 0.3
+    - _WaveNormalDensity: 1
+    - _WaveVertexDensity: 1
+    m_Colors:
+    - _DeepColor: {r: 0.18749252, g: 0.5359608, b: 0.745283, a: 0}
+    - _DeepFar: {r: 0.15882346, g: 0.26470575, b: 0.45, a: 0.8235294}
+    - _DeepMid: {r: 0, g: 0.26710525, b: 0.35, a: 1}
+    - _DeepNear: {r: 0.047191, g: 0.1752809, b: 0.3, a: 1}
+    - _Diffuse: {r: 0, g: 0.20392156, b: 0.39999998, a: 1}
+    - _DiffuseFar: {r: 0, g: 0.24443366, b: 0.6509804, a: 1}
+    - _DiffuseGrazing: {r: 0.047058824, g: 0.25401264, b: 0.29803923, a: 1}
+    - _DiffuseGrazing1: {r: 0.086666666, g: 0.12666667, b: 0.17, a: 1}
+    - _DiffuseGrazing2: {r: 0.09554112, g: 0.1792453, b: 0.16611634, a: 1}
+    - _DiffuseNear: {r: 0.042126425, g: 0.6698113, b: 0.51719767, a: 1}
+    - _DistanceFade: {r: -20, g: 110, b: 100, a: 300}
+    - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
+    - _FoamColor: {r: 0.22500001, g: 0.25037616, b: 0.3, a: 1}
+    - _FoamParam: {r: 4, g: 2, b: 1, a: 0.1}
+    - _FresnelColor: {r: 0, g: 0.014285731, b: 0.05, a: 1}
+    - _FresnelDist: {r: 900, g: 0, b: 1, a: 100}
+    - _NormalSpeed: {r: -0.1, g: 0.03, b: -0.2, a: 0.05}
+    - _PlannarRelfectDistorb: {r: 0.05, g: 0, b: 0.25, a: 0.15}
+    - _ReflectionColor: {r: 0.08156863, g: 0.0917647, b: 0.101960786, a: 1}
+    - _ReflectionColorFar: {r: 0.32, g: 0.34133333, b: 0.4, a: 1}
+    - _ReflectionColorMid: {r: 0.20078433, g: 0.2509804, b: 0.2509804, a: 1}
+    - _RefractionDistort: {r: 5, g: 0.3, b: 0, a: 0}
+    - _ShallowFar: {r: 0.15052766, g: 0.3761252, b: 0.5566037, a: 0}
+    - _ShallowNear: {r: 0.07450981, g: 0.5019608, b: 0.35603836, a: 0}
+    - _Specular: {r: 0.027365854, g: 0.030585364, b: 0.033, a: 1}
+    - _Wave: {r: -0.15, g: -0.12, b: 0.0022, a: 0.0018}
+    - _Wave1: {r: 0.2, g: -0.2, b: 0.02, a: -0.015}
+    - _Wave2: {r: 0.2, g: 1.15, b: -0.5, a: -0.8}
+  m_BuildTextureStacks: []

@@ -1,0 +1,72 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Water
+  m_Shader: {fileID: 4800000, guid: fdc2da6c9e2550b4c980f88ad0c38294, type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _FoamTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ProcedureTex0:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SDF:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats: []
+    m_Colors:
+    - _Color: {r: 0, g: 0.0124, b: 0.5659999, a: 1}
+    - _Color0: {r: 0.18399996, g: 0.39299998, b: 0.51899993, a: 1}
+    - _Color1: {r: 0.18399996, g: 0.39299998, b: 0.51899993, a: 1}
+    - _Color2: {r: 0.18399996, g: 0.39299998, b: 0.51899993, a: 1}
+    - _Color3: {r: 0.18399996, g: 0.39299998, b: 0.51899993, a: 1}
+    - _Param0: {r: 0.3, g: 1, b: 0.6, a: 0.8}
+    - _Param1: {r: 4, g: 3, b: 1, a: 0.1}
+    - _Param10: {r: 0.6, g: 0.9, b: 0.2, a: 20}
+    - _Param11: {r: 8, g: 20, b: 2, a: 0.5}
+    - _Param2: {r: 1, g: 3, b: 128, a: 5}
+    - _Param3: {r: 0.1, g: 0.1, b: 1, a: 1}
+    - _Param4: {r: 0, g: 0, b: 1, a: 1}
+    - _Param5: {r: 0, g: 0.01, b: 1, a: 1}
+    - _Param6: {r: 0, g: 0, b: 0, a: 0}
+    - _Param7: {r: 0, g: 0, b: 0, a: 0}
+    - _Param8: {r: 0.3, g: 1, b: 0.6, a: 0.8}
+    - _Param9: {r: 6, g: 3, b: 100, a: 0}
+    - _ParamA: {r: 0, g: 0, b: 1, a: 1}
+    - _ParamB: {r: 0, g: 0, b: 1, a: 1}
+    - _ParamC: {r: 0, g: 0, b: 1, a: 1}
+    - _SDFBox: {r: 0, g: 0, b: 0, a: 0}
+    - _SDFParam: {r: 0, g: 0, b: 0, a: 0}
+    - _SteepnessFadeout: {r: 0, g: 0, b: 300, a: 2}
+    - _UVST0: {r: 0.36, g: 40, b: 0, a: 0}
+    - _Wave1: {r: 0, g: 0, b: 1, a: 1}
+    - _Wave2: {r: 0, g: 0, b: 1, a: 1}
+    - _Wave3: {r: 0, g: 0, b: 1, a: 1}
+    - _Wave4: {r: 0, g: 0, b: 1, a: 1}
+    - _Wave5: {r: 0, g: 0, b: 1, a: 1}
+    - _Wave6: {r: 0, g: 0, b: 1, a: 1}
+    - _Wave7: {r: 0, g: 0, b: 1, a: 1}
+    - _Wave8: {r: 0, g: 0, b: 1, a: 1}
+    - _Wave9: {r: 0, g: 0, b: 1, a: 1}

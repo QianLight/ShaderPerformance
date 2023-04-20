@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 133569b2da8dd2146bf5c8c1771e922e, type: 3}
+  m_Name: ResScanConfig
+  m_EditorClassIdentifier: 
+  jobs:
+  - folder: Assets/BundleRes/EditorAssetRes/Scene
+    scanType: 1
+  - folder: Assets/BundleRes/EditorAssetRes/Prefab
+    scanType: 0
+  - folder: Assets/BundleRes/Runtime/SFX
+    scanType: 5
+  - folder: Assets/BundleRes/ReactPackage
+    scanType: 2
+  - folder: Assets/BundleRes/SkillPackage
+    scanType: 0
+  - folder: Assets/BundleRes/HitPackage
+    scanType: 1
+  meshSizeThreahold: 1048576
+  texSizeThreahold: 1048576
+  sfxRenderCount: 10
+  sfxMaxParticleCount: 10

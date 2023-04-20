@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 717fb3578919aeb49a3785fefc30fa3d, type: 3}
+  m_Name: SRPAsset
+  m_EditorClassIdentifier: 
+  m_DefaultStencilState:
+    overrideStencilState: 0
+    stencilReference: 0
+    stencilCompareFunction: 8
+    passOperation: 0
+    failOperation: 0
+    zFailOperation: 0
+  enableSRPBatch: 1
+  overdrawView: 0
+  overdrawOpaque: {fileID: 2100000, guid: c3b9837423f68484085f730398e74982, type: 2}
+  overdrawTransparent: {fileID: 2100000, guid: 0f503f045251cfe40a92059995aaf96d, type: 2}

@@ -1,0 +1,517 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -526045071, guid: a8701fc72a91f814ea6a07ebb465d2b8, type: 3}
+  m_Name: PrefabLodConfig
+  m_EditorClassIdentifier: 
+  ignorePrefabNames: []
+  items:
+  - name: monster_alvida
+    lodFlag:
+      flag: 3
+  - name: monster_alvida_thin
+    lodFlag:
+      flag: 3
+  - name: monster_alvidasubordinate1
+    lodFlag:
+      flag: 7
+  - name: monster_alvidasubordinate2
+    lodFlag:
+      flag: 3
+  - name: monster_alvidasubordinate3
+    lodFlag:
+      flag: 7
+  - name: monster_arlong
+    lodFlag:
+      flag: 3
+  - name: monster_arlong_2
+    lodFlag:
+      flag: 3
+  - name: monster_baroqueworksjinzhan1
+    lodFlag:
+      flag: 7
+  - name: monster_baroqueworksjinzhan2
+    lodFlag:
+      flag: 7
+  - name: monster_baroqueworksyuancheng2
+    lodFlag:
+      flag: 7
+  - name: monster_beretcaptain
+    lodFlag:
+      flag: 3
+  - name: monster_beretmusketeer
+    lodFlag:
+      flag: 3
+  - name: monster_beretswordman
+    lodFlag:
+      flag: 3
+  - name: monster_blackcat_xiaobing1
+    lodFlag:
+      flag: 3
+  - name: monster_blackcat_xiaobing2
+    lodFlag:
+      flag: 3
+  - name: monster_blackcat_xiaobing3
+    lodFlag:
+      flag: 3
+  - name: monster_blackcat_xiaobing5
+    lodFlag:
+      flag: 3
+  - name: monster_blueno
+    lodFlag:
+      flag: 3
+  - name: monster_buggyjoker1
+    lodFlag:
+      flag: 7
+  - name: monster_buggyjoker2
+    lodFlag:
+      flag: 7
+  - name: monster_buggyjoker3
+    lodFlag:
+      flag: 7
+  - name: monster_buggyjoker4
+    lodFlag:
+      flag: 7
+  - name: monster_butchi
+    lodFlag:
+      flag: 3
+  - name: monster_butchi_rage
+    lodFlag:
+      flag: 3
+  - name: monster_cabaji
+    lodFlag:
+      flag: 3
+  - name: monster_cook1
+    lodFlag:
+      flag: 3
+  - name: monster_cook2
+    lodFlag:
+      flag: 3
+  - name: monster_cp9huoqiangbing
+    lodFlag:
+      flag: 3
+  - name: monster_cp9huoqiangbing1
+    lodFlag:
+      flag: 3
+  - name: monster_cp9jinzhanbing
+    lodFlag:
+      flag: 3
+  - name: monster_cp9jinzhanbing1
+    lodFlag:
+      flag: 3
+  - name: monster_crocodile
+    lodFlag:
+      flag: 3
+  - name: monster_diner1
+    lodFlag:
+      flag: 7
+  - name: monster_diner2
+    lodFlag:
+      flag: 3
+  - name: monster_eliteglaive
+    lodFlag:
+      flag: 3
+  - name: monster_elitegun
+    lodFlag:
+      flag: 3
+  - name: monster_elitehammer
+    lodFlag:
+      flag: 3
+  - name: monster_elitejitte
+    lodFlag:
+      flag: 3
+  - name: monster_elitemedic
+    lodFlag:
+      flag: 3
+  - name: monster_elitenet
+    lodFlag:
+      flag: 3
+  - name: monster_elitenet_1
+    lodFlag:
+      flag: 3
+  - name: monster_eliteshield
+    lodFlag:
+      flag: 3
+  - name: monster_eliteweight
+    lodFlag:
+      flag: 3
+  - name: monster_enel
+    lodFlag:
+      flag: 3
+  - name: monster_faquandui
+    lodFlag:
+      flag: 3
+  - name: monster_fisherman1
+    lodFlag:
+      flag: 3
+  - name: monster_fisherman2
+    lodFlag:
+      flag: 3
+  - name: monster_fisherman3
+    lodFlag:
+      flag: 3
+  - name: monster_fukurou
+    lodFlag:
+      flag: 3
+  - name: monster_gedatsu
+    lodFlag:
+      flag: 3
+  - name: monster_gin
+    lodFlag:
+      flag: 3
+  - name: monster_haijunfubing
+    lodFlag:
+      flag: 3
+  - name: monster_helmeppo
+    lodFlag:
+      flag: 3
+  - name: monster_helmeppo_1
+    lodFlag:
+      flag: 3
+  - name: monster_huojianpaobing1
+    lodFlag:
+      flag: 7
+  - name: monster_huojianpaobing2
+    lodFlag:
+      flag: 7
+  - name: monster_ivankov
+    lodFlag:
+      flag: 3
+  - name: monster_jango
+    lodFlag:
+      flag: 3
+  - name: monster_jinhaizhiwang
+    lodFlag:
+      flag: 3
+  - name: monster_jozu
+    lodFlag:
+      flag: 3
+  - name: monster_jyabura
+    lodFlag:
+      flag: 3
+  - name: monster_kaku
+    lodFlag:
+      flag: 3
+  - name: monster_kalifa
+    lodFlag:
+      flag: 3
+  - name: monster_kaxi
+    lodFlag:
+      flag: 3
+  - name: monster_krieg
+    lodFlag:
+      flag: 3
+  - name: monster_krieg2
+    lodFlag:
+      flag: 3
+  - name: monster_kriegsubordinate1
+    lodFlag:
+      flag: 3
+  - name: monster_kriegsubordinate2
+    lodFlag:
+      flag: 3
+  - name: monster_kumadori
+    lodFlag:
+      flag: 3
+  - name: monster_kuro
+    lodFlag:
+      flag: 3
+  - name: monster_kuro_steward
+    lodFlag:
+      flag: 3
+  - name: monster_landlady
+    lodFlag:
+      flag: 3
+  - name: monster_marinemusketeer
+    lodFlag:
+      flag: 7
+  - name: monster_marinemusketeer1
+    lodFlag:
+      flag: 7
+  - name: monster_marineswordman
+    lodFlag:
+      flag: 7
+  - name: monster_marineswordman1
+    lodFlag:
+      flag: 7
+  - name: monster_mihawk
+    lodFlag:
+      flag: 3
+  - name: monster_mihawk_1
+    lodFlag:
+      flag: 3
+  - name: monster_minibuggy
+    lodFlag:
+      flag: 3
+  - name: monster_mohji
+    lodFlag:
+      flag: 3
+  - name: monster_mohjirichie
+    lodFlag:
+      flag: 3
+  - name: monster_mohmoo
+    lodFlag:
+      flag: 3
+  - name: monster_morgan
+    lodFlag:
+      flag: 3
+  - name: monster_morgan_overdrive
+    lodFlag:
+      flag: 3
+  - name: monster_ninjin
+    lodFlag:
+      flag: 3
+  - name: monster_ohm
+    lodFlag:
+      flag: 3
+  - name: monster_ohm_ohmholy
+    lodFlag:
+      flag: 3
+  - name: monster_ohmholy
+    lodFlag:
+      flag: 3
+  - name: monster_oimo
+    lodFlag:
+      flag: 3
+  - name: monster_ozzy_dead
+    lodFlag:
+      flag: 3
+  - name: monster_patty
+    lodFlag:
+      flag: 3
+  - name: monster_pearl
+    lodFlag:
+      flag: 3
+  - name: monster_richie
+    lodFlag:
+      flag: 3
+  - name: monster_robber_1
+    lodFlag:
+      flag: 7
+  - name: monster_robber_2
+    lodFlag:
+      flag: 7
+  - name: monster_robber_3
+    lodFlag:
+      flag: 7
+  - name: monster_robber_4
+    lodFlag:
+      flag: 7
+  - name: monster_robber_5
+    lodFlag:
+      flag: 7
+  - name: monster_satori
+    lodFlag:
+      flag: 3
+  - name: monster_satori_qiulong
+    lodFlag:
+      flag: 3
+  - name: monster_sengokubuddha
+    lodFlag:
+      flag: 3
+  - name: monster_sham
+    lodFlag:
+      flag: 3
+  - name: monster_shandia1
+    lodFlag:
+      flag: 3
+  - name: monster_shandia2
+    lodFlag:
+      flag: 3
+  - name: monster_shenbing
+    lodFlag:
+      flag: 3
+  - name: monster_shenbing2
+    lodFlag:
+      flag: 3
+  - name: monster_shenbing_longrange
+    lodFlag:
+      flag: 3
+  - name: monster_siqiu
+    lodFlag:
+      flag: 3
+  - name: monster_smoker
+    lodFlag:
+      flag: 3
+  - name: monster_tamanegi
+    lodFlag:
+      flag: 3
+  - name: monster_tashigi
+    lodFlag:
+      flag: 3
+  - name: monster_vivi
+    lodFlag:
+      flag: 3
+  - name: monster_weber
+    lodFlag:
+      flag: 3
+  - name: monster_yama
+    lodFlag:
+      flag: 3
+  - name: monster_zeff
+    lodFlag:
+      flag: 3
+  - name: monster_zhongwei
+    lodFlag:
+      flag: 3
+  - name: monster_zhongwei_axe
+    lodFlag:
+      flag: 3
+  - name: monster_zhongwei_gun
+    lodFlag:
+      flag: 3
+  - name: monster_zhongwu
+    lodFlag:
+      flag: 3
+  - name: role_ace
+    lodFlag:
+      flag: 3
+  - name: role_blueno
+    lodFlag:
+      flag: 3
+  - name: role_brook
+    lodFlag:
+      flag: 3
+  - name: role_brook_1
+    lodFlag:
+      flag: 3
+  - name: role_buggy_car
+    lodFlag:
+      flag: 3
+  - name: role_chopper
+    lodFlag:
+      flag: 3
+  - name: role_chopper_big
+    lodFlag:
+      flag: 3
+  - name: role_chopper_gebo
+    lodFlag:
+      flag: 3
+  - name: role_chopper_qiu
+    lodFlag:
+      flag: 3
+  - name: role_chopper_rxt
+    lodFlag:
+      flag: 3
+  - name: role_coby
+    lodFlag:
+      flag: 3
+  - name: role_coby_1
+    lodFlag:
+      flag: 3
+  - name: role_enel
+    lodFlag:
+      flag: 3
+  - name: role_enelamaru
+    lodFlag:
+      flag: 3
+  - name: role_franky
+    lodFlag:
+      flag: 3
+  - name: role_galdino
+    lodFlag:
+      flag: 3
+  - name: role_gonforr
+    lodFlag:
+      flag: 3
+  - name: role_hancock
+    lodFlag:
+      flag: 3
+  - name: role_hancock_movie_show
+    lodFlag:
+      flag: 3
+  - name: role_hancock_snake
+    lodFlag:
+      flag: 3
+  - name: role_joseph
+    lodFlag:
+      flag: 3
+  - name: role_jyabura_wolf
+    lodFlag:
+      flag: 3
+  - name: role_kaku
+    lodFlag:
+      flag: 3
+  - name: role_kaku_bandpose
+    lodFlag:
+      flag: 3
+  - name: role_kalifa
+    lodFlag:
+      flag: 3
+  - name: role_kalifa_sheep
+    lodFlag:
+      flag: 3
+  - name: role_luccic
+    lodFlag:
+      flag: 3
+  - name: role_luccic_boss
+    lodFlag:
+      flag: 3
+  - name: role_luccih
+    lodFlag:
+      flag: 3
+  - name: role_luccih_show
+    lodFlag:
+      flag: 3
+  - name: role_luffy
+    lodFlag:
+      flag: 3
+  - name: role_luffy_2dang
+    lodFlag:
+      flag: 3
+  - name: role_luffy_yellow
+    lodFlag:
+      flag: 3
+  - name: role_mihawk
+    lodFlag:
+      flag: 3
+  - name: role_nami
+    lodFlag:
+      flag: 3
+  - name: role_nami_early
+    lodFlag:
+      flag: 3
+  - name: role_nami_ironstick
+    lodFlag:
+      flag: 3
+  - name: role_robin
+    lodFlag:
+      flag: 3
+  - name: role_robin_wing
+    lodFlag:
+      flag: 3
+  - name: role_sanji
+    lodFlag:
+      flag: 3
+  - name: role_smoker
+    lodFlag:
+      flag: 3
+  - name: role_usopp
+    lodFlag:
+      flag: 3
+  - name: role_usopp_avatar01
+    lodFlag:
+      flag: 3
+  - name: role_usopp_show_avatar01
+    lodFlag:
+      flag: 3
+  - name: role_villager1
+    lodFlag:
+      flag: 3
+  - name: role_vivi
+    lodFlag:
+      flag: 3
+  - name: role_zoro
+    lodFlag:
+      flag: 3
+  - name: role_zoro_weak
+    lodFlag:
+      flag: 3

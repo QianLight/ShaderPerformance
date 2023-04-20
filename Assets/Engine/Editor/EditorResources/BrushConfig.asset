@@ -1,0 +1,147 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c794fa63ddcb3143b7d66b6bc90e5b4, type: 3}
+  m_Name: BrushConfig
+  m_EditorClassIdentifier: 
+  vcMode: 0
+  RadiusInc: 0.1
+  Radius: 100
+  Strength: 0.461
+  Falloff: 0.5
+  brushRadiusMin: 0.001
+  brushRadiusMax: 5
+  curve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: -3
+      outSlope: -3
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  showVertexSize: 1
+  showVertexColor: {r: 1, g: 1, b: 1, a: 1}
+  BaseColorMapID:
+  - _MainTex
+  - _MainTex1
+  - _MainTex2
+  - _MainTex3
+  PbsMapID:
+  - _ProcedureTex0
+  - _ProcedureTex1
+  - _ProcedureTex2
+  - _ProcedureTex3
+  BrushTexture:
+  - Brush/Brush_0
+  - Brush/Brush_1
+  - Brush/Brush_2
+  - Brush/Brush_3
+  - Brush/soft_peaks01
+  - Brush/mountain04
+  - Brush/cracked_earth02
+  - Brush/mountain07
+  - Brush/rolling_hills01
+  blendTexID: _BlendTex
+  TextureFolder:
+  - Assets/Scenes/Terraintexture
+  customList:
+    folder: Custom
+    show: 1
+    TextureList: []
+  texWidth: 3
+  texHeight: 3
+  PaintMode: 0
+  weightNormal: 0
+  orientedNormal: 0
+  m_AreaButtonStyle:
+    m_Name: 
+    m_Normal:
+      m_Background: {fileID: 2800000, guid: 4c4aa47c7fa773c44938ecac428c0bfe, type: 3}
+      m_ScaledBackgrounds: []
+      m_TextColor: {r: 1, g: 1, b: 1, a: 1}
+    m_Hover:
+      m_Background: {fileID: 0}
+      m_ScaledBackgrounds: []
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_Active:
+      m_Background: {fileID: 0}
+      m_ScaledBackgrounds: []
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_Focused:
+      m_Background: {fileID: 0}
+      m_ScaledBackgrounds: []
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_OnNormal:
+      m_Background: {fileID: 0}
+      m_ScaledBackgrounds: []
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_OnHover:
+      m_Background: {fileID: 0}
+      m_ScaledBackgrounds: []
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_OnActive:
+      m_Background: {fileID: 0}
+      m_ScaledBackgrounds: []
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_OnFocused:
+      m_Background: {fileID: 0}
+      m_ScaledBackgrounds: []
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_Border:
+      m_Left: 0
+      m_Right: 0
+      m_Top: 0
+      m_Bottom: 0
+    m_Margin:
+      m_Left: 4
+      m_Right: 4
+      m_Top: 4
+      m_Bottom: 4
+    m_Padding:
+      m_Left: 4
+      m_Right: 4
+      m_Top: 4
+      m_Bottom: 4
+    m_Overflow:
+      m_Left: 0
+      m_Right: 0
+      m_Top: 0
+      m_Bottom: 0
+    m_Font: {fileID: 0}
+    m_FontSize: 0
+    m_FontStyle: 0
+    m_Alignment: 0
+    m_WordWrap: 0
+    m_RichText: 1
+    m_TextClipping: 0
+    m_ImagePosition: 0
+    m_ContentOffset: {x: 0, y: 0}
+    m_FixedWidth: 80
+    m_FixedHeight: 22
+    m_StretchWidth: 1
+    m_StretchHeight: 0
+  NormalStrength: 0

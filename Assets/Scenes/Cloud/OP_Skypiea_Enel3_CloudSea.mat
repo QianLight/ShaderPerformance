@@ -1,0 +1,109 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: OP_Skypiea_Enel3_CloudSea
+  m_Shader: {fileID: 4800000, guid: da305d71571c1fd4188725669b8bf09d, type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: 2999
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _CloudTexture:
+        m_Texture: {fileID: 2800000, guid: 9bd90d70d3d56a546845d85b9e442e81, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _NoiseTex:
+        m_Texture: {fileID: 2800000, guid: e20c843fde9b7804c8f4420a6cd794dd, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Texture:
+        m_Texture: {fileID: 2800000, guid: 9bd90d70d3d56a546845d85b9e442e81, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Texture0:
+        m_Texture: {fileID: 2800000, guid: 1503707aac57de2438a43262ee901202, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _TextureSample0:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _TextureSample1:
+        m_Texture: {fileID: 2800000, guid: 9bd90d70d3d56a546845d85b9e442e81, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _cloud:
+        m_Texture: {fileID: 2800000, guid: 1503707aac57de2438a43262ee901202, type: 3}
+        m_Scale: {x: 3, y: 3}
+        m_Offset: {x: 0, y: 0}
+    - _cloud2n:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _cloud_n:
+        m_Texture: {fileID: 2800000, guid: e11d3177fde242042b2d49292482d97c, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _noise01:
+        m_Texture: {fileID: 2800000, guid: e20c843fde9b7804c8f4420a6cd794dd, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _texcoord:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - _AlphaCutoff: 0.5
+    - _CloudDensity: 1.5
+    - _CloudFadeDistacne: 114.1
+    - _CloudFadeWidth: 50.6
+    - _CloudHeight: 1
+    - _DepthDistance: 3.4
+    - _Float0: 50.6
+    - _Float1: 103.8
+    - _PannerSpeed: 0.004
+    - _RimExp: 4.38
+    - _RimIntensity: 0.369
+    - _RimRange: 2.6
+    - _ShadowIntensity: 0.232
+    - _SkylineFadeDistacne: 93.2
+    - _SkylineFadeDistance: 59.7
+    - _SkylineFadeWidth: 381.7
+    - _Speed: 0.015
+    - _TessEdgeLength: 16
+    - _TessMax: 25
+    - _TessMaxDisp: 25
+    - _TessMin: 10
+    - _TessPhongStrength: 0.5
+    - _TessValue: 16
+    - _WorldTile: 317.8
+    - _clouddensity: 0.35
+    - _cloudheight: 2
+    - _rimintensity: 0.377
+    - _speed: 0.004
+    - _speed1: 0.002
+    - _worldtile: 200
+    m_Colors:
+    - _BaseColor: {r: 0.9716981, g: 0.9716981, b: 0.9716981, a: 1}
+    - _Color0: {r: 0.41352752, g: 0.68693477, b: 0.9056604, a: 1}
+    - _Color1: {r: 0.8928622, g: 0.93399394, b: 0.9716981, a: 1}
+    - _DarkColor: {r: 0.46453363, g: 0.5562296, b: 0.6886792, a: 1}
+    - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
+    - _LightColor: {r: 0.7830189, g: 0.7830189, b: 0.7830189, a: 1}
+    - _Tile1_XYDir1_ZW: {r: 10, g: 10, b: 1, a: 1}
+    - _Tile2_XYDir2_ZW: {r: 3.71, g: 2.07, b: 0, a: 0}
+    - _Vector0: {r: 6, g: 6, b: 1, a: 1}
+    - _Vector1: {r: 3, g: 3, b: -1, a: -1}
+    - _basecolor: {r: 0.9020292, g: 0.9658924, b: 0.9716981, a: 0}
+  m_BuildTextureStacks: []

@@ -1,0 +1,17 @@
+{
+    "name": "CloudEditor",
+    "references": [
+        "GUID:026c78c6d30ef5c48a37d191ae6e0705"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

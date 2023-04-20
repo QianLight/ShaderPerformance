@@ -1,0 +1,8 @@
+{
+    "dependencies": {
+    }, 
+    "description": "devops", 
+    "displayName": "Devops", 
+    "name": "com.pwrd.devops",
+    "version": "0.0.1"
+}

@@ -1,0 +1,129 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 090320a8b43a199458f2b72bd517dad8, type: 3}
+  m_Name: AssetsConfig_Folder
+  m_EditorClassIdentifier: 
+  folderStates:
+  - path: MeshTex
+    folder: 1
+  - path: Const
+    folder: 0
+  - path: MeshConfig
+    folder: 0
+  - path: TexConfig
+    folder: 1
+  - path: unResizeTex
+    folder: 0
+  - path: 4f1ebe3c-b545-43d6-8fcf-d69a9db34fd5
+    folder: 0
+  - path: 57da4f79-7143-4917-9011-5509fca589c7
+    folder: 0
+  - path: 534fabaf-914f-4c84-8b85-28ee0c1f864f
+    folder: 0
+  - path: 09f8c917-5fc2-4156-a8b0-bc805d1784f9
+    folder: 0
+  - path: d3b164a1-715b-4838-bf99-7d3764eb6517
+    folder: 0
+  - path: 1f8ec5d7-d029-433d-8b44-9c2f8ad85c84
+    folder: 0
+  - path: 8d38e0cc-811b-4694-89bf-be355695ae75
+    folder: 0
+  - path: 5c566acb-f958-4797-bc69-122ead506ef7
+    folder: 0
+  - path: 5758ee0d-be29-4719-8c41-13373eca1100
+    folder: 0
+  - path: 47d7545a-ab78-4ac3-82e3-2e01bfa6a521
+    folder: 0
+  - path: fb0969cc-c449-4a80-ae4e-614ca58415b5
+    folder: 0
+  - path: c460384f-308c-469e-8283-eb2bba223bc1
+    folder: 0
+  - path: 2ab8a3fb-285e-4c6f-90d9-be1ac8b6df85
+    folder: 0
+  - path: 1b2022f8-bdca-452c-b606-c85b9c111e40
+    folder: 0
+  - path: b0d26fb8-7d7a-4f8b-950a-957093658524
+    folder: 0
+  - path: 0e54c0e1-589a-49c9-88e0-2e375c5a2f00
+    folder: 0
+  - path: 0804b41a-288a-4679-84c1-c8d360f59ac1
+    folder: 0
+  - path: 1340b6c9-817f-4c79-8e41-7d04cc4917b9
+    folder: 0
+  - path: 9dbd3292-23d0-4890-8761-3037bb220dfe
+    folder: 0
+  - path: f74d411e-2181-4663-baa2-2a4d4671e896
+    folder: 0
+  - path: b2baebe5-f0c4-4427-8fc2-a0f7cde55a70
+    folder: 0
+  - path: 2fade10d-fef6-4528-bd10-fae90d648767
+    folder: 0
+  - path: 645fcf86-41df-483e-80d0-5211ec2f420b
+    folder: 0
+  - path: b50a35fb-fc7f-4a3b-b05e-09bcaa0714cf
+    folder: 0
+  - path: 6f5ad60a-8a88-46c7-907e-20d9798e09ed
+    folder: 0
+  - path: 02857b78-d09f-4a72-afcd-8bbd9d7158a5
+    folder: 0
+  - path: 964c1010-66b8-4002-a902-e8213b21682f
+    folder: 0
+  - path: cc24e1d3-c469-4c0c-89d8-f888cf5a5863
+    folder: 0
+  - path: c4820bbf-70ff-40d7-bbff-e53dd2d8c6b3
+    folder: 0
+  - path: f67a0b92-6358-422e-935d-ddc3d0a9ebba
+    folder: 0
+  - path: 8181e39c-bb68-4c2f-9ebc-0269194daf42
+    folder: 0
+  - path: 225d0ba2-7d44-40fa-b7e2-02d2f9158e83
+    folder: 0
+  - path: 0f157209-b403-484f-b9a5-f0258b4abb18
+    folder: 0
+  - path: c3ce69b4-953c-46b2-a18c-29541bc04e4a
+    folder: 0
+  - path: 0e060a78-0218-44a9-b846-fff0de597613
+    folder: 0
+  - path: 5f101801-3ee1-458b-bc99-a758e22bf9a5
+    folder: 0
+  - path: 57f27c1a-fa58-4baa-a2d1-4c55b1ace2b2
+    folder: 0
+  - path: 82853f43-d4a4-4b95-bba9-770a86ee846c
+    folder: 0
+  - path: 3d344c75-d3bb-4dad-a72d-426b728f131d
+    folder: 0
+  - path: 68004955-0a67-427c-b880-c3ca912671af
+    folder: 0
+  - path: 424dd0e1-9a54-4311-bb16-4578a7aaefe6
+    folder: 0
+  - path: f3d8e8f7-5e7b-4539-b3b4-75bc6da7e8a3
+    folder: 0
+  - path: TexPlatform_02857b78-d09f-4a72-afcd-8bbd9d7158a5_iOS
+    folder: 0
+  - path: TexPlatform_02857b78-d09f-4a72-afcd-8bbd9d7158a5_Android
+    folder: 0
+  - path: TexPlatform_02857b78-d09f-4a72-afcd-8bbd9d7158a5_Standalone
+    folder: 0
+  - path: TexPlatform_f3d8e8f7-5e7b-4539-b3b4-75bc6da7e8a3_iOS
+    folder: 1
+  - path: TexPlatform_f3d8e8f7-5e7b-4539-b3b4-75bc6da7e8a3_Android
+    folder: 0
+  - path: TexPlatform_f3d8e8f7-5e7b-4539-b3b4-75bc6da7e8a3_Standalone
+    folder: 1
+  - path: 3906a0b0-6ecf-40de-bb3f-6e5c9941ca6b
+    folder: 0
+  - path: TexPlatform_3906a0b0-6ecf-40de-bb3f-6e5c9941ca6b_iOS
+    folder: 1
+  - path: TexPlatform_3906a0b0-6ecf-40de-bb3f-6e5c9941ca6b_Android
+    folder: 1
+  - path: TexPlatform_3906a0b0-6ecf-40de-bb3f-6e5c9941ca6b_Standalone
+    folder: 1

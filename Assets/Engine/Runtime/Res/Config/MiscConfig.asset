@@ -1,0 +1,73 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1427103822, guid: a8701fc72a91f814ea6a07ebb465d2b8, type: 3}
+  m_Name: MiscConfig
+  m_EditorClassIdentifier: 
+  defaultDist:
+    minDist: 0.7
+    minScale: 0.1
+    maxDist: 8
+    maxScale: 1
+    disapperDist: 20
+  param: {x: 0, y: 0, z: 2, w: 100}
+  defaultShadowConfig:
+    offset: {x: 0, y: 0, z: 0}
+    scale: {x: 1, y: 1, z: 1}
+    lightDir: {x: 0, y: 0, z: 0}
+    flag: 0
+  selfShadowConfig:
+  - offset: {x: 0.3, y: 0.1, z: 0.39}
+    scale: {x: 1, y: 1, z: 1.4}
+    lightDir: {x: 0, y: -1, z: 0}
+    flag: 4
+  runtimeSelfShadowConfig:
+    offset: {x: 151.173, y: 57.14, z: 156.32}
+    scale: {x: 5, y: 2, z: 1}
+    lightDir: {x: 0, y: 0, z: 0}
+    flag: 0
+  skinWidth: 0.01
+  lightFaceRampOffset: -0.15
+  darkFaceRampOffset: 0.25
+  rimParam: {x: 0.45, y: 0.08, z: 0.4, w: 0.05}
+  lightFadePram: {x: 0.05, y: 0.8, z: 14, w: 16}
+  miscParam:
+    x: 4
+    y: 8
+    z: 6
+    w: 300
+  miscParam2: {x: 1, y: 3, z: 0, w: 0}
+  sceneFadeAlpha: 0.3
+  ditherTransparent:
+    minDistance: 1
+    maxDistance: 3
+    offsetDistance: 0.2
+    minAlpha: 0.5
+    maxAlpha: 1
+    boxCastScaleX: 0.1
+    boxCastScaleY: 0.1
+    enterDelayTime: 0
+    enterLerpTime: 0
+    leaveDelayTime: 0
+    sceneEnterDelayTime: 0
+    sceneEnterLerpTime: 0.2
+    sceneLeaveDelayTime: 0
+    minRoleTransparency: 0.5
+    minSceneTransparency: 0.1
+  shaderRenderPriority:
+  - {fileID: 4800000, guid: 830347ac48666af43a40212832b7956d, type: 3}
+  - {fileID: 4800000, guid: 84a129bc6f63ba440afa491143ace27d, type: 3}
+  - {fileID: 4800000, guid: 314d3f03d7df8d64e954c75002a52c4a, type: 3}
+  - {fileID: 4800000, guid: 1addd9b1ad3afa846af4ee6514a66b13, type: 3}
+  - {fileID: 4800000, guid: 17f80ac88add76e4496b42d4139381f4, type: 3}
+  - {fileID: 4800000, guid: aa5e425a2d0a2b1499852a88fdf1b671, type: 3}
+  - {fileID: 4800000, guid: 2ba871bdfc6d1264881486691ab1f5e5, type: 3}
+  - {fileID: 4800000, guid: 26bec0d77974fb243851b047d9a0f962, type: 3}

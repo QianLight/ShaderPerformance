@@ -1,0 +1,10 @@
+{
+    "dependencies": {
+    	"com.pwrd.zeus-framework.core": "2.0.0",
+        "com.pwrd.zeus-framework.http": "2.0.0"
+    }, 
+    "description": "Zeus Asset", 
+    "displayName": "Zeus Asset", 
+    "name": "com.pwrd.zeus-framework.assets",
+    "version": "2.0.0"
+}

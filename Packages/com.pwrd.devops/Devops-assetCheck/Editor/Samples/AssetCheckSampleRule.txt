@@ -1,0 +1,37 @@
+﻿using UnityEditor;
+using UnityEngine;
+
+// 命名空间
+namespace AssetCheck
+{
+    // 分类，标题，filter，描述，权重（默认为1），是否是runtime检查渲染参数的（默认为false）
+    [CheckRuleDescription("Texture", "纹理Read/Write选项是否跟参数相同", "t:Texture2D", "")]
+    // 必须要继承RuleBase
+    public class AssetCheckSampleRule : RuleBase
+    {
+        // 参数描述,展示的UI类型
+        [PublicParam("Read/Write选项", eGUIType.Bool)]
+        // 暴露的参数必须是public
+        public bool readWrite = true;
+        // 逻辑使用参数应为private
+        private bool currentReadWrite = true;
+        // 检测函数
+        [PublicMethod]
+        // 返回值，参数都是固定的，函数名可以任意
+        public bool Check(string path, out string output)
+        {
+            output = string.Empty;
+            Texture tex = AssetDatabase.LoadAssetAtPath<Texture>(path);
+            if (tex == null)
+                return true;
+            TextureImporter importer = AssetImporter.GetAtPath(path) as TextureImporter;
+            if (importer == null)
+                return true;
+            // 返回值为false代表资源没有通过检测
+            currentReadWrite = importer.isReadable;
+            output = $"read/write标记错误,当前为{currentReadWrite}";
+            return currentReadWrite != readWrite;
+        }
+    }
+
+}

@@ -1,0 +1,66 @@
+using System;
+using System.Diagnostics;
+using System.IO;
+using System.Threading;
+using System.Collections.Generic;
+using System.Text.RegularExpressions;
+
+class ShaderCommands
+{
+    static HashSet<string> hash = new HashSet<string>();
+    public static void Main(string[] args)
+    {
+        hash.Clear();
+        Console.WriteLine("Path:" + args[0]);
+        string EndFilePath = args[0].Replace("Assets", "Temp\\End.txt");
+        int end = 0;
+        while(true)
+        {
+            if (end == 0 && File.Exists(@EndFilePath))
+            {
+                Console.WriteLine("Find End File.");
+                end = 1;
+            }
+            Process[] pros = Process.GetProcesses();
+            foreach (var pro in pros)
+            {
+                if (string.IsNullOrEmpty(pro.MainWindowTitle) ||
+                    pro.MainWindowTitle.StartsWith("ÎÞ±êÌâ"))
+                    continue;
+                if (pro.ProcessName == "notepad")
+                {
+                    if (pro.MainWindowTitle.StartsWith("Compiled-"))
+                    {
+                        Console.WriteLine("Kill Process:" + pro.MainWindowTitle);
+                        try
+                        {
+                            pro.Kill();
+                        }
+                        catch(Exception e)
+                        {
+                            Console.WriteLine(e);
+                        }
+                    }
+                    else if(!hash.Contains(pro.MainWindowTitle))
+                    {
+                        hash.Add(pro.MainWindowTitle);
+                        Console.WriteLine("other:" + pro.MainWindowTitle);
+                    }
+                }
+            }
+            Console.WriteLine("Sleep 100ms.");
+            Thread.Sleep(100);
+            if(end > 0)
+            {
+                end++;
+                if (end > 10)
+                {
+                    Console.WriteLine("End.");
+                    break;
+                }
+            }
+        }
+        Console.WriteLine("True End. Exit after 3 second.");
+        Thread.Sleep(3000);
+    }
+}

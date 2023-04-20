@@ -1,0 +1,632 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e02aea658242bf44e8ec6a294fb66788, type: 3}
+  m_Name: LookDev
+  m_EditorClassIdentifier: 
+  chunks:
+  - subPrefabOverrideInfos: []
+    blocks:
+    - instanceObjects: []
+    - instanceObjects: []
+    - instanceObjects: []
+    - instanceObjects: []
+    lightBlockMinH: 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+    meshInfo: {x: 0, y: 0, z: 0}
+  prefabInfos: []
+  gameObjectInfoGroups:
+  - name: ColorChecker
+    path: EditorScene/StaticPrefabs/MainScene/ColorChecker
+    objType: 7
+    tagName: MainScene
+    visible: 1
+  - name: MatBall
+    path: EditorScene/StaticPrefabs/MainScene/MatBall
+    objType: 7
+    tagName: MainScene
+    visible: 1
+  - name: Mat_White
+    path: EditorScene/StaticPrefabs/MainScene/MatBall/Mat_White
+    objType: 7
+    tagName: MainScene
+    visible: 1
+  - name: Mat_White_M0.00_R0.00
+    path: EditorScene/StaticPrefabs/MainScene/MatBall/Mat_White/Mat_White_M0.00_R0.00
+    objType: 7
+    tagName: MainScene
+    visible: 1
+  - name: Mat_White_M0.00_R0.25
+    path: EditorScene/StaticPrefabs/MainScene/MatBall/Mat_White/Mat_White_M0.00_R0.25
+    objType: 7
+    tagName: MainScene
+    visible: 1
+  - name: Mat_White_M0.00_R0.50
+    path: EditorScene/StaticPrefabs/MainScene/MatBall/Mat_White/Mat_White_M0.00_R0.50
+    objType: 7
+    tagName: MainScene
+    visible: 1
+  - name: Mat_White_M0.00_R0.75
+    path: EditorScene/StaticPrefabs/MainScene/MatBall/Mat_White/Mat_White_M0.00_R0.75
+    objType: 7
+    tagName: MainScene
+    visible: 1
+  - name: Mat_White_M0.00_R1.00
+    path: EditorScene/StaticPrefabs/MainScene/MatBall/Mat_White/Mat_White_M0.00_R1.00
+    objType: 7
+    tagName: MainScene
+    visible: 1
+  - name: Mat_White_M0.25_R0.00
+    path: EditorScene/StaticPrefabs/MainScene/MatBall/Mat_White/Mat_White_M0.25_R0.00
+    objType: 7
+    tagName: MainScene
+    visible: 1
+  - name: Mat_White_M0.25_R0.25
+    path: EditorScene/StaticPrefabs/MainScene/MatBall/Mat_White/Mat_White_M0.25_R0.25
+    objType: 7
+    tagName: MainScene
+    visible: 1
+  - name: Mat_White_M0.25_R0.50
+    path: EditorScene/StaticPrefabs/MainScene/MatBall/Mat_White/Mat_White_M0.25_R0.50
+    objType: 7
+    tagName: MainScene
+    visible: 1
+  - name: Mat_White_M0.25_R0.75
+    path: EditorScene/StaticPrefabs/MainScene/MatBall/Mat_White/Mat_White_M0.25_R0.75
+    objType: 7
+    tagName: MainScene
+    visible: 1
+  - name: Mat_White_M0.25_R1.00
+    path: EditorScene/StaticPrefabs/MainScene/MatBall/Mat_White/Mat_White_M0.25_R1.00
+    objType: 7
+    tagName: MainScene
+    visible: 1
+  - name: Mat_White_M0.50_R0.00
+    path: EditorScene/StaticPrefabs/MainScene/MatBall/Mat_White/Mat_White_M0.50_R0.00
+    objType: 7
+    tagName: MainScene
+    visible: 1
+  - name: Mat_White_M0.50_R0.25
+    path: EditorScene/StaticPrefabs/MainScene/MatBall/Mat_White/Mat_White_M0.50_R0.25
+    objType: 7
+    tagName: MainScene
+    visible: 1
+  - name: Mat_White_M0.50_R0.50
+    path: EditorScene/StaticPrefabs/MainScene/MatBall/Mat_White/Mat_White_M0.50_R0.50
+    objType: 7
+    tagName: MainScene
+    visible: 1
+  - name: Mat_White_M0.50_R0.75
+    path: EditorScene/StaticPrefabs/MainScene/MatBall/Mat_White/Mat_White_M0.50_R0.75
+    objType: 7
+    tagName: MainScene
+    visible: 1
+  - name: Mat_White_M0.50_R1.00
+    path: EditorScene/StaticPrefabs/MainScene/MatBall/Mat_White/Mat_White_M0.50_R1.00
+    objType: 7
+    tagName: MainScene
+    visible: 1
+  - name: Mat_White_M0.75_R0.00
+    path: EditorScene/StaticPrefabs/MainScene/MatBall/Mat_White/Mat_White_M0.75_R0.00
+    objType: 7
+    tagName: MainScene
+    visible: 1
+  - name: Mat_White_M0.75_R0.25
+    path: EditorScene/StaticPrefabs/MainScene/MatBall/Mat_White/Mat_White_M0.75_R0.25
+    objType: 7
+    tagName: MainScene
+    visible: 1
+  - name: Mat_White_M0.75_R0.50
+    path: EditorScene/StaticPrefabs/MainScene/MatBall/Mat_White/Mat_White_M0.75_R0.50
+    objType: 7
+    tagName: MainScene
+    visible: 1
+  - name: Mat_White_M0.75_R0.75
+    path: EditorScene/StaticPrefabs/MainScene/MatBall/Mat_White/Mat_White_M0.75_R0.75
+    objType: 7
+    tagName: MainScene
+    visible: 1
+  - name: Mat_White_M0.75_R1.00
+    path: EditorScene/StaticPrefabs/MainScene/MatBall/Mat_White/Mat_White_M0.75_R1.00
+    objType: 7
+    tagName: MainScene
+    visible: 1
+  - name: Mat_White_M1.00_R0.00
+    path: EditorScene/StaticPrefabs/MainScene/MatBall/Mat_White/Mat_White_M1.00_R0.00
+    objType: 7
+    tagName: MainScene
+    visible: 1
+  - name: Mat_White_M1.00_R0.25
+    path: EditorScene/StaticPrefabs/MainScene/MatBall/Mat_White/Mat_White_M1.00_R0.25
+    objType: 7
+    tagName: MainScene
+    visible: 1
+  - name: Mat_White_M1.00_R0.50
+    path: EditorScene/StaticPrefabs/MainScene/MatBall/Mat_White/Mat_White_M1.00_R0.50
+    objType: 7
+    tagName: MainScene
+    visible: 1
+  - name: Mat_White_M1.00_R0.75
+    path: EditorScene/StaticPrefabs/MainScene/MatBall/Mat_White/Mat_White_M1.00_R0.75
+    objType: 7
+    tagName: MainScene
+    visible: 1
+  - name: Mat_White_M1.00_R1.00
+    path: EditorScene/StaticPrefabs/MainScene/MatBall/Mat_White/Mat_White_M1.00_R1.00
+    objType: 7
+    tagName: MainScene
+    visible: 1
+  - name: Mat_Gray
+    path: EditorScene/StaticPrefabs/MainScene/MatBall/Mat_Gray
+    objType: 7
+    tagName: MainScene
+    visible: 1
+  - name: Mat_Gray_M0.00_R0.00
+    path: EditorScene/StaticPrefabs/MainScene/MatBall/Mat_Gray/Mat_Gray_M0.00_R0.00
+    objType: 7
+    tagName: MainScene
+    visible: 1
+  - name: Mat_Gray_M0.00_R0.25
+    path: EditorScene/StaticPrefabs/MainScene/MatBall/Mat_Gray/Mat_Gray_M0.00_R0.25
+    objType: 7
+    tagName: MainScene
+    visible: 1
+  - name: Mat_Gray_M0.00_R0.50
+    path: EditorScene/StaticPrefabs/MainScene/MatBall/Mat_Gray/Mat_Gray_M0.00_R0.50
+    objType: 7
+    tagName: MainScene
+    visible: 1
+  - name: Mat_Gray_M0.00_R0.75
+    path: EditorScene/StaticPrefabs/MainScene/MatBall/Mat_Gray/Mat_Gray_M0.00_R0.75
+    objType: 7
+    tagName: MainScene
+    visible: 1
+  - name: Mat_Gray_M0.00_R1.00
+    path: EditorScene/StaticPrefabs/MainScene/MatBall/Mat_Gray/Mat_Gray_M0.00_R1.00
+    objType: 7
+    tagName: MainScene
+    visible: 1
+  - name: Mat_Gray_M0.25_R0.00
+    path: EditorScene/StaticPrefabs/MainScene/MatBall/Mat_Gray/Mat_Gray_M0.25_R0.00
+    objType: 7
+    tagName: MainScene
+    visible: 1
+  - name: Mat_Gray_M0.25_R0.25
+    path: EditorScene/StaticPrefabs/MainScene/MatBall/Mat_Gray/Mat_Gray_M0.25_R0.25
+    objType: 7
+    tagName: MainScene
+    visible: 1
+  - name: Mat_Gray_M0.25_R0.50
+    path: EditorScene/StaticPrefabs/MainScene/MatBall/Mat_Gray/Mat_Gray_M0.25_R0.50
+    objType: 7
+    tagName: MainScene
+    visible: 1
+  - name: Mat_Gray_M0.25_R0.75
+    path: EditorScene/StaticPrefabs/MainScene/MatBall/Mat_Gray/Mat_Gray_M0.25_R0.75
+    objType: 7
+    tagName: MainScene
+    visible: 1
+  - name: Mat_Gray_M0.25_R1.00
+    path: EditorScene/StaticPrefabs/MainScene/MatBall/Mat_Gray/Mat_Gray_M0.25_R1.00
+    objType: 7
+    tagName: MainScene
+    visible: 1
+  - name: Mat_Gray_M0.50_R0.00
+    path: EditorScene/StaticPrefabs/MainScene/MatBall/Mat_Gray/Mat_Gray_M0.50_R0.00
+    objType: 7
+    tagName: MainScene
+    visible: 1
+  - name: Mat_Gray_M0.50_R0.25
+    path: EditorScene/StaticPrefabs/MainScene/MatBall/Mat_Gray/Mat_Gray_M0.50_R0.25
+    objType: 7
+    tagName: MainScene
+    visible: 1
+  - name: Mat_Gray_M0.50_R0.50
+    path: EditorScene/StaticPrefabs/MainScene/MatBall/Mat_Gray/Mat_Gray_M0.50_R0.50
+    objType: 7
+    tagName: MainScene
+    visible: 1
+  - name: Mat_Gray_M0.50_R0.75
+    path: EditorScene/StaticPrefabs/MainScene/MatBall/Mat_Gray/Mat_Gray_M0.50_R0.75
+    objType: 7
+    tagName: MainScene
+    visible: 1
+  - name: Mat_Gray_M0.50_R1.00
+    path: EditorScene/StaticPrefabs/MainScene/MatBall/Mat_Gray/Mat_Gray_M0.50_R1.00
+    objType: 7
+    tagName: MainScene
+    visible: 1
+  - name: Mat_Gray_M0.75_R0.00
+    path: EditorScene/StaticPrefabs/MainScene/MatBall/Mat_Gray/Mat_Gray_M0.75_R0.00
+    objType: 7
+    tagName: MainScene
+    visible: 1
+  - name: Mat_Gray_M0.75_R0.25
+    path: EditorScene/StaticPrefabs/MainScene/MatBall/Mat_Gray/Mat_Gray_M0.75_R0.25
+    objType: 7
+    tagName: MainScene
+    visible: 1
+  - name: Mat_Gray_M0.75_R0.50
+    path: EditorScene/StaticPrefabs/MainScene/MatBall/Mat_Gray/Mat_Gray_M0.75_R0.50
+    objType: 7
+    tagName: MainScene
+    visible: 1
+  - name: Mat_Gray_M0.75_R0.75
+    path: EditorScene/StaticPrefabs/MainScene/MatBall/Mat_Gray/Mat_Gray_M0.75_R0.75
+    objType: 7
+    tagName: MainScene
+    visible: 1
+  - name: Mat_Gray_M0.75_R1.00
+    path: EditorScene/StaticPrefabs/MainScene/MatBall/Mat_Gray/Mat_Gray_M0.75_R1.00
+    objType: 7
+    tagName: MainScene
+    visible: 1
+  - name: Mat_Gray_M1.00_R0.00
+    path: EditorScene/StaticPrefabs/MainScene/MatBall/Mat_Gray/Mat_Gray_M1.00_R0.00
+    objType: 7
+    tagName: MainScene
+    visible: 1
+  - name: Mat_Gray_M1.00_R0.25
+    path: EditorScene/StaticPrefabs/MainScene/MatBall/Mat_Gray/Mat_Gray_M1.00_R0.25
+    objType: 7
+    tagName: MainScene
+    visible: 1
+  - name: Mat_Gray_M1.00_R0.50
+    path: EditorScene/StaticPrefabs/MainScene/MatBall/Mat_Gray/Mat_Gray_M1.00_R0.50
+    objType: 7
+    tagName: MainScene
+    visible: 1
+  - name: Mat_Gray_M1.00_R0.75
+    path: EditorScene/StaticPrefabs/MainScene/MatBall/Mat_Gray/Mat_Gray_M1.00_R0.75
+    objType: 7
+    tagName: MainScene
+    visible: 1
+  - name: Mat_Gray_M1.00_R1.00
+    path: EditorScene/StaticPrefabs/MainScene/MatBall/Mat_Gray/Mat_Gray_M1.00_R1.00
+    objType: 7
+    tagName: MainScene
+    visible: 1
+  - name: Mat_Black
+    path: EditorScene/StaticPrefabs/MainScene/MatBall/Mat_Black
+    objType: 7
+    tagName: MainScene
+    visible: 1
+  - name: Mat_Black_M0.00_R0.00
+    path: EditorScene/StaticPrefabs/MainScene/MatBall/Mat_Black/Mat_Black_M0.00_R0.00
+    objType: 7
+    tagName: MainScene
+    visible: 1
+  - name: Mat_Black_M0.00_R0.25
+    path: EditorScene/StaticPrefabs/MainScene/MatBall/Mat_Black/Mat_Black_M0.00_R0.25
+    objType: 7
+    tagName: MainScene
+    visible: 1
+  - name: Mat_Black_M0.00_R0.50
+    path: EditorScene/StaticPrefabs/MainScene/MatBall/Mat_Black/Mat_Black_M0.00_R0.50
+    objType: 7
+    tagName: MainScene
+    visible: 1
+  - name: Mat_Black_M0.00_R0.75
+    path: EditorScene/StaticPrefabs/MainScene/MatBall/Mat_Black/Mat_Black_M0.00_R0.75
+    objType: 7
+    tagName: MainScene
+    visible: 1
+  - name: Mat_Black_M0.00_R1.00
+    path: EditorScene/StaticPrefabs/MainScene/MatBall/Mat_Black/Mat_Black_M0.00_R1.00
+    objType: 7
+    tagName: MainScene
+    visible: 1
+  - name: Mat_Black_M0.25_R0.00
+    path: EditorScene/StaticPrefabs/MainScene/MatBall/Mat_Black/Mat_Black_M0.25_R0.00
+    objType: 7
+    tagName: MainScene
+    visible: 1
+  - name: Mat_Black_M0.25_R0.25
+    path: EditorScene/StaticPrefabs/MainScene/MatBall/Mat_Black/Mat_Black_M0.25_R0.25
+    objType: 7
+    tagName: MainScene
+    visible: 1
+  - name: Mat_Black_M0.25_R0.50
+    path: EditorScene/StaticPrefabs/MainScene/MatBall/Mat_Black/Mat_Black_M0.25_R0.50
+    objType: 7
+    tagName: MainScene
+    visible: 1
+  - name: Mat_Black_M0.25_R0.75
+    path: EditorScene/StaticPrefabs/MainScene/MatBall/Mat_Black/Mat_Black_M0.25_R0.75
+    objType: 7
+    tagName: MainScene
+    visible: 1
+  - name: Mat_Black_M0.25_R1.00
+    path: EditorScene/StaticPrefabs/MainScene/MatBall/Mat_Black/Mat_Black_M0.25_R1.00
+    objType: 7
+    tagName: MainScene
+    visible: 1
+  - name: Mat_Black_M0.50_R0.00
+    path: EditorScene/StaticPrefabs/MainScene/MatBall/Mat_Black/Mat_Black_M0.50_R0.00
+    objType: 7
+    tagName: MainScene
+    visible: 1
+  - name: Mat_Black_M0.50_R0.25
+    path: EditorScene/StaticPrefabs/MainScene/MatBall/Mat_Black/Mat_Black_M0.50_R0.25
+    objType: 7
+    tagName: MainScene
+    visible: 1
+  - name: Mat_Black_M0.50_R0.50
+    path: EditorScene/StaticPrefabs/MainScene/MatBall/Mat_Black/Mat_Black_M0.50_R0.50
+    objType: 7
+    tagName: MainScene
+    visible: 1
+  - name: Mat_Black_M0.50_R0.75
+    path: EditorScene/StaticPrefabs/MainScene/MatBall/Mat_Black/Mat_Black_M0.50_R0.75
+    objType: 7
+    tagName: MainScene
+    visible: 1
+  - name: Mat_Black_M0.50_R1.00
+    path: EditorScene/StaticPrefabs/MainScene/MatBall/Mat_Black/Mat_Black_M0.50_R1.00
+    objType: 7
+    tagName: MainScene
+    visible: 1
+  - name: Mat_Black_M0.75_R0.00
+    path: EditorScene/StaticPrefabs/MainScene/MatBall/Mat_Black/Mat_Black_M0.75_R0.00
+    objType: 7
+    tagName: MainScene
+    visible: 1
+  - name: Mat_Black_M0.75_R0.25
+    path: EditorScene/StaticPrefabs/MainScene/MatBall/Mat_Black/Mat_Black_M0.75_R0.25
+    objType: 7
+    tagName: MainScene
+    visible: 1
+  - name: Mat_Black_M0.75_R0.50
+    path: EditorScene/StaticPrefabs/MainScene/MatBall/Mat_Black/Mat_Black_M0.75_R0.50
+    objType: 7
+    tagName: MainScene
+    visible: 1
+  - name: Mat_Black_M0.75_R0.75
+    path: EditorScene/StaticPrefabs/MainScene/MatBall/Mat_Black/Mat_Black_M0.75_R0.75
+    objType: 7
+    tagName: MainScene
+    visible: 1
+  - name: Mat_Black_M0.75_R1.00
+    path: EditorScene/StaticPrefabs/MainScene/MatBall/Mat_Black/Mat_Black_M0.75_R1.00
+    objType: 7
+    tagName: MainScene
+    visible: 1
+  - name: Mat_Black_M1.00_R0.00
+    path: EditorScene/StaticPrefabs/MainScene/MatBall/Mat_Black/Mat_Black_M1.00_R0.00
+    objType: 7
+    tagName: MainScene
+    visible: 1
+  - name: Mat_Black_M1.00_R0.25
+    path: EditorScene/StaticPrefabs/MainScene/MatBall/Mat_Black/Mat_Black_M1.00_R0.25
+    objType: 7
+    tagName: MainScene
+    visible: 1
+  - name: Mat_Black_M1.00_R0.50
+    path: EditorScene/StaticPrefabs/MainScene/MatBall/Mat_Black/Mat_Black_M1.00_R0.50
+    objType: 7
+    tagName: MainScene
+    visible: 1
+  - name: Mat_Black_M1.00_R0.75
+    path: EditorScene/StaticPrefabs/MainScene/MatBall/Mat_Black/Mat_Black_M1.00_R0.75
+    objType: 7
+    tagName: MainScene
+    visible: 1
+  - name: Mat_Black_M1.00_R1.00
+    path: EditorScene/StaticPrefabs/MainScene/MatBall/Mat_Black/Mat_Black_M1.00_R1.00
+    objType: 7
+    tagName: MainScene
+    visible: 1
+  - name: MatLib
+    path: EditorScene/StaticPrefabs/MainScene/MatLib
+    objType: 7
+    tagName: MainScene
+    visible: 1
+  - name: Mat_Aluminium
+    path: EditorScene/StaticPrefabs/MainScene/MatLib/Mat_Aluminium
+    objType: 7
+    tagName: MainScene
+    visible: 1
+  - name: Mat_Concrete
+    path: EditorScene/StaticPrefabs/MainScene/MatLib/Mat_Concrete
+    objType: 7
+    tagName: MainScene
+    visible: 1
+  - name: Mat_Copper
+    path: EditorScene/StaticPrefabs/MainScene/MatLib/Mat_Copper
+    objType: 7
+    tagName: MainScene
+    visible: 1
+  - name: Mat_Fabric
+    path: EditorScene/StaticPrefabs/MainScene/MatLib/Mat_Fabric
+    objType: 7
+    tagName: MainScene
+    visible: 1
+  - name: Mat_Gold
+    path: EditorScene/StaticPrefabs/MainScene/MatLib/Mat_Gold
+    objType: 7
+    tagName: MainScene
+    visible: 1
+  - name: Mat_Iron
+    path: EditorScene/StaticPrefabs/MainScene/MatLib/Mat_Iron
+    objType: 7
+    tagName: MainScene
+    visible: 1
+  - name: Mat_Leather
+    path: EditorScene/StaticPrefabs/MainScene/MatLib/Mat_Leather
+    objType: 7
+    tagName: MainScene
+    visible: 1
+  - name: Mat_Lizard
+    path: EditorScene/StaticPrefabs/MainScene/MatLib/Mat_Lizard
+    objType: 7
+    tagName: MainScene
+    visible: 1
+  - name: Mat_Mortar
+    path: EditorScene/StaticPrefabs/MainScene/MatLib/Mat_Mortar
+    objType: 7
+    tagName: MainScene
+    visible: 1
+  - name: Mat_Plastic
+    path: EditorScene/StaticPrefabs/MainScene/MatLib/Mat_Plastic
+    objType: 7
+    tagName: MainScene
+    visible: 1
+  - name: Mat_PVC
+    path: EditorScene/StaticPrefabs/MainScene/MatLib/Mat_PVC
+    objType: 7
+    tagName: MainScene
+    visible: 1
+  - name: Mat_Rust
+    path: EditorScene/StaticPrefabs/MainScene/MatLib/Mat_Rust
+    objType: 7
+    tagName: MainScene
+    visible: 1
+  - name: Mat_Silver
+    path: EditorScene/StaticPrefabs/MainScene/MatLib/Mat_Silver
+    objType: 7
+    tagName: MainScene
+    visible: 1
+  - name: Mat_Steel
+    path: EditorScene/StaticPrefabs/MainScene/MatLib/Mat_Steel
+    objType: 7
+    tagName: MainScene
+    visible: 1
+  - name: Mat_Wood
+    path: EditorScene/StaticPrefabs/MainScene/MatLib/Mat_Wood
+    objType: 7
+    tagName: MainScene
+    visible: 1
+  gameObjectInfos:
+  - goname: mainLight
+    tagName: MainScene
+    prefabType: 1
+    groupIndex: -1
+    prefabIndex: -1
+    pos: {x: 0, y: 3, z: 0}
+    rotate: {x: -0.19253828, y: 0.35324708, z: -0.91375923, w: 0.05647612}
+    scale: {x: 1, y: 1, z: 1}
+    tag: Untagged
+    layer: 0
+    bound:
+      m_Center: {x: 0, y: 0, z: 0}
+      m_Extent: {x: 0, y: 0, z: 0}
+    subPrefabChunkInfo:
+    - x: 0
+      y: 0
+      z: 0
+      w: 0
+    flag: 3
+  - goname: addLight
+    tagName: MainScene
+    prefabType: 1
+    groupIndex: -1
+    prefabIndex: -1
+    pos: {x: 0, y: 0, z: 0}
+    rotate: {x: -0.89728904, y: 0.2887795, z: 0.15229405, w: 0.29712856}
+    scale: {x: 1, y: 1, z: 1}
+    tag: Untagged
+    layer: 0
+    bound:
+      m_Center: {x: 0, y: 0, z: 0}
+      m_Extent: {x: 0, y: 0, z: 0}
+    subPrefabChunkInfo:
+    - x: 0
+      y: 0
+      z: 1
+      w: 0
+    flag: 3
+  colliderDatas: []
+  lightDatas:
+  - lightType: 1
+    cullingMask: -1
+    lightmapBakeType: 4
+    renderMode: 0
+    color: {r: 1, g: 1, b: 1, a: 1}
+    intensity: 1
+    bounceIntensity: 1
+    colorTemperature: 6570
+    shadows: 2
+    shadowStrength: 1
+    shadowResolution: -1
+    shadowBias: 0.05
+    shadowNormalBias: 0.4
+    shadowNearPlane: 0.2
+    shadowCustomResolution: -1
+    spotAngle: 30
+    range: 10
+    areaSize: {x: 0, y: 0}
+    cookie: {fileID: 0}
+    cookieSize: 0
+  - lightType: 1
+    cullingMask: 0
+    lightmapBakeType: 4
+    renderMode: 0
+    color: {r: 0.254717, g: 0.254717, b: 0.254717, a: 1}
+    intensity: 0
+    bounceIntensity: 1
+    colorTemperature: 6570
+    shadows: 0
+    shadowStrength: 1
+    shadowResolution: -1
+    shadowBias: 0.05
+    shadowNormalBias: 0.4
+    shadowNearPlane: 0.2
+    shadowCustomResolution: -1
+    spotAngle: 30
+    range: 10
+    areaSize: {x: 0, y: 0}
+    cookie: {fileID: 0}
+    cookieSize: 0
+  dynamicObjectDatas: []
+  envProfiles: []
+  globalObjectInfo: []
+  dynamicSceneNames: []
+  grassRot:
+  - rot: []
+    offset: 0
+  - rot: []
+    offset: 0
+  - rot: []
+    offset: 0
+  - rot: []
+    offset: 0
+  - rot: []
+    offset: 0
+  - rot: []
+    offset: 0
+  - rot: []
+    offset: 0
+  - rot: []
+    offset: 0
+  - rot: []
+    offset: 0
+  - rot: []
+    offset: 0
+  - rot: []
+    offset: 0
+  - rot: []
+    offset: 0
+  - rot: []
+    offset: 0
+  - rot: []
+    offset: 0
+  - rot: []
+    offset: 0
+  - rot: []
+    offset: 0
+  - rot: []
+    offset: 0
+  - rot: []
+    offset: 0
+  - rot: []
+    offset: 0
+  - rot: []
+    offset: 0
+  meshInfo: {x: 0, y: 0, z: 0}
+  totalMeshInfo: {x: 0, y: 0, z: 0}

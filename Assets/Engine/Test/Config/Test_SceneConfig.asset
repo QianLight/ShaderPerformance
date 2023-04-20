@@ -1,0 +1,62 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c638445e8f4df74f92b40d37b5f841f, type: 3}
+  m_Name: Test_SceneConfig
+  m_EditorClassIdentifier: 
+  chunks:
+  - mesh: {fileID: 4300000, guid: ca7a7cd5eb90cb74e8f2411fd9a2e89b, type: 2}
+    aabb0:
+      m_Center: {x: 64, y: 5.8597326, z: 64}
+      m_Extent: {x: 64, y: 5.8597326, z: 64}
+    aabb1:
+      m_Center: {x: 0, y: 0, z: 0}
+      m_Extent: {x: 0, y: 0, z: 0}
+    aabb2:
+      m_Center: {x: 0, y: 0, z: 0}
+      m_Extent: {x: 0, y: 0, z: 0}
+    aabb3:
+      m_Center: {x: 0, y: 0, z: 0}
+      m_Extent: {x: 0, y: 0, z: 0}
+    terrainObjData:
+      isValid: 1
+      blendTex: {fileID: 0}
+      splatTex:
+      - {fileID: 2800000, guid: 1e1cef4d085059c4d9d815300c863a2b, type: 3}
+      - {fileID: 0}
+      - {fileID: 0}
+      - {fileID: 0}
+      pbsTex:
+      - {fileID: 0}
+      - {fileID: 0}
+      - {fileID: 0}
+      - {fileID: 0}
+      blendTexScale: {x: 0.0625, y: 0.125, z: 0.125, w: 0.125}
+      splatCount: 1
+      areaId: 0
+      needCollider: 1
+    splatID: 00ffffff
+  bundles:
+  - tex: {fileID: 2800000, guid: 1e1cef4d085059c4d9d815300c863a2b, type: 3}
+    pbs: {fileID: 0}
+    scale: 16
+  terrainParam: {x: 1, y: 0.1, z: 1, w: 0.1}
+  baseMapMesh: {fileID: 0}
+  baseMapTex: {fileID: 0}
+  widthCount: 1
+  heightCount: 1
+  blendErrorCount: 10
+  mergeCountThreshold: 3
+  mergeSizeThreshold: 10
+  mergeSizePercentThreshold: 0.5
+  useCombineMesh: 0
+  sceneEditorTag:
+  - MainScene

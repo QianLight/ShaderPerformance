@@ -1,0 +1,309 @@
+<?xml version="1.0"?>
+<root>
+	<group id="1" name="常用">
+		<cmd id="1" name="OnePiece" cmd="drop 1;stopguide;opensys 0"/>
+		<cmd id="2" name="功能全开" cmd="stopguide;opensys 0;levellist 21406"/>
+		<cmd id="3" name="出新手关" cmd="stopguide;sceneend 1;"/>
+		<cmd id="4" name="关闭引导" cmd="stopguide"/>
+		<cmd id="5" name="钻石贝里" cmd="drop 2"/>
+		<cmd id="6" name="体力指针" cmd="drop 4"/>
+		<cmd id="7" name="副本次数" cmd="stage clear"/>
+		<cmd id="8" name="航海船满级" cmd="additem 401 999999;additem 402 999999;pirateship 0;ship"/>
+		<cmd id="9" name="伙伴碎片" cmd="drop 5"/>
+		<cmd id="10" name="全技能点" cmd="drop 6"/>
+		<cmd id="11" name="技能全学" cmd="allskill 100"/>
+		<cmd id="12" name="意志素材" cmd="drop 7;additem 303 500;additem 304 500;additem 305 500;additem 306 500;"/>
+		<cmd id="13" name="回响素材" cmd="additem 311 5000;additem 312 5000;additem 313 5000;additem 314 5000;additem 330 500;additem 331 500;additem 332 500;additem 333 500;additem 334 500;additem 335 500;additem 336 500;additem 337 500;additem 338 500;additem 339 500;additem 340 500;additem 341 500;additem 342 500;additem 343 500;additem 344 500;additem 350 500;additem 351 500;"/>
+		<cmd id="14" name="伙伴素材" cmd="drop 8"/>
+		<cmd id="15" name="我要突破" cmd="additem 3 30000;addexp all 3000000;drop 9;drop 2;drop 6"/>
+		<cmd id="16" name="玩家满级" cmd="additem 3 35000"/>
+		<cmd id="17" name="增加经验" cmd="additem 3 1000"/>
+		<cmd id="18" name="二星意志" cmd="drop 102"/>
+		<cmd id="19" name="三星意志" cmd="drop 103"/>
+		<cmd id="20" name="四星意志" cmd="drop 104"/>
+		<cmd id="21" name="五星意志" cmd="drop 105"/>
+		<cmd id="22" name="六星意志" cmd="drop 106"/>
+		<cmd id="23" name="隐藏FPS" cmd="hidefps"/>
+		<cmd id="24" name="图鉴" cmd="archive 2"/>
+		<cmd id="25" name="Remote" cmd="remote"/>
+		<cmd id="26" name="竞技场分数" cmd="1v1 set point"/>
+		<cmd id="27" name="竞技场连败" cmd="1v1 set losecontinue"/>
+		<cmd id="28" name="竞技场连胜" cmd="1v1 set wincontinue"/>
+		<cmd id="29" name="完成日常周常" cmd="bptaskfinish 0"/>
+		<cmd id="30" name="清除设备号" cmd="cleartutorial"/>
+		<cmd id="31" name="解锁意志副本-属性" cmd="openinstance 14"/>
+		<cmd id="32" name="解锁意志副本-物理" cmd="openinstance 17"/>
+		<cmd id="33" name="解锁羁绊对决-前篇" cmd="duel 1"/>
+		<cmd id="34" name="解锁羁绊对决-后篇" cmd="duel 2"/>
+		<cmd id="34" name="解锁回响副本" cmd="openinstance 27"/>
+		<cmd id="34" name="完成赏金任务" cmd="bountytask"/>
+	
+	</group>
+	<group id="2" name="伙伴">
+		<cmd id="1" name="全部伙伴" cmd="partner add 400;partner add 500;partner add 210;partner add 150;partner add 601;partner add 1;partner add 2;partner add 3;partner add 4;partner add 5;partner add 6;partner add 7;partner add 8;partner add 9;partner add 502;partner add 151;partner add 153;partner add 154;partner add 101;partner add 211;partner add 213;partner add 152;partner add 114;partner add 112;partner add 913;partner add 914;partner add 905;partner add 501;partner add 270;partner add 19;"/>
+		<cmd id="2" name="++++艾斯" cmd="partner add 400"/>
+		<cmd id="3" name="++++女帝" cmd="partner add 500"/>
+		<cmd id="4" name="+++沙鳄鱼" cmd="partner add 210"/>
+		<cmd id="5" name="++++路奇" cmd="partner add 150"/>
+		<cmd id="6" name="++伊娃科夫" cmd="partner add 601"/>
+		<cmd id="7" name="++++路飞" cmd="partner add 1"/>
+		<cmd id="8" name="++++佐罗" cmd="partner add 2"/>
+		<cmd id="9" name="++++奈美" cmd="partner add 3"/>
+		<cmd id="10" name="+++撒谎布" cmd="partner add 4"/>
+		<cmd id="11" name="++++山智" cmd="partner add 5"/>
+		<cmd id="12" name="++++乔巴" cmd="partner add 6"/>
+		<cmd id="13" name="++++罗宾" cmd="partner add 7"/>
+		<cmd id="14" name="+++弗兰奇" cmd="partner add 8"/>
+		<cmd id="15" name="+++布鲁克" cmd="partner add 9"/>
+		<cmd id="16" name="++++巴奇" cmd="partner add 502"/>
+		<cmd id="17" name="++++卡库" cmd="partner add 151"/>
+		<cmd id="18" name="+++卡莉法" cmd="partner add 153"/>
+		<cmd id="19" name="+++布鲁诺" cmd="partner add 154"/>
+		<cmd id="20" name="+++塔希米" cmd="partner add 101"/>
+		<cmd id="21" name="+++Mr1" cmd="partner add 211"/>
+		<cmd id="22" name="+++Mr3" cmd="partner add 213"/>
+		<cmd id="23" name="+++加布拉" cmd="partner add 152"/>
+		<cmd id="24" name="++希路麦波" cmd="partner add 114"/>
+		<cmd id="25" name="++++克比" cmd="partner add 112"/>
+		<cmd id="26" name="++++约撒" cmd="partner add 913"/>
+		<cmd id="27" name="++++强尼" cmd="partner add 914"/>
+		<cmd id="28" name="++++克洛" cmd="partner add 905"/>
+		<cmd id="28" name="++++鹰眼" cmd="partner add 501"/>
+		<cmd id="28" name="++++艾尼路" cmd="partner add 270"/>
+        <cmd id="28" name="++++薇薇" cmd="partner add 19"/>
+		<cmd id="22" name="路飞（画质测试）" cmd="partner add 55"/>
+		<cmd id="23" name="角色养成" cmd="characterdevelop"/>
+		
+		<cmd id="24" name="物理输出38级" cmd="partnerdesign 1 38 3 3 210141 12 10130 1 2 10730 1 2 10430 1 1 10330 1 1 210241 12 10130 1 2 10730 1 2 10430 1 1 10330 1 1 212341 12 10130 1 2 10530 1 2 10730 1 1 10830 1 1 212446 12 10130 1 2 10530 1 2 10730 1 1 10830 1 1 210542 12 10130 1 2 10730 1 2 10430 1 1 10330 1 1 210642 12 10130 1 2 10730 1 2 10430 1 1 10330 1 1"/>
+		<cmd id="25" name="物理输出50级" cmd="partnerdesign 1 50 3 3 232151 12 10140 1 2 10440 1 2 10740 1 1 10540 1 1 232251 12 10140 1 2 10440 1 2 10740 1 1 10540 1 1 232351 12 10140 1 2 10440 1 2 10740 1 1 10540 1 1 232456 12 10140 1 2 10440 1 2 10740 1 1 10540 1 1 230552 12 10140 1 2 10440 1 2 10740 1 1 10840 1 1 230652 12 10140 1 2 10440 1 2 10740 1 1 10840 1 1"/>
+		<cmd id="26" name="辅助38级" cmd="partnerdesign 502 38 3 3 213141 12 10130 1 2 10230 1 2 10330 1 1 10630 1 1 213241 12 10130 1 2 10230 1 2 10330 1 1 10630 1 1 213341 12 10130 1 2 10230 1 2 10330 1 1 10630 1 1 213444 12 10130 1 2 10230 1 2 10330 1 1 10630 1 1 213544 12 10130 1 2 10230 1 2 10330 1 1 10630 1 1 213644 12 10130 1 2 10230 1 2 10330 1 1 10630 1 1"/>
+		<cmd id="27" name="辅助50级" cmd="partnerdesign 502 38 3 3 235151 12 10140 1 2 10240 1 2 10440 1 1 10540 1 1 235251 12 10140 1 2 10240 1 2 10440 1 1 10540 1 1 235351 12 10140 1 2 10240 1 2 10440 1 1 10540 1 1 235454 12 10140 1 2 10240 1 2 10440 1 1 10540 1 1 235554 12 10140 1 2 10240 1 2 10440 1 1 10540 1 1 235654 12 10140 1 2 10240 1 2 10440 1 1 10540 1 1"/>
+		<cmd id="28" name="坦克38级" cmd="partnerdesign 6 38 3 3 211141 12 10130 1 2 10830 1 2 10430 1 1 10230 1 1 211241 12 10130 1 2 10830 1 2 10430 1 1 10230 1 1 212341 12 10130 1 2 10530 1 2 10730 1 1 10830 1 1 212447 12 10130 1 2 10530 1 2 10730 1 1 10830 1 1 211543 12 10130 1 2 10830 1 2 10430 1 1 10230 1 1 211643 12 10130 1 2 10830 1 2 10430 1 1 10230 1 1"/>
+		<cmd id="29" name="坦克50级" cmd="partnerdesign 6 38 3 3 233151 12 10140 1 2 10540 1 2 10840 1 1 10440 1 1 233251 12 10140 1 2 10540 1 2 10840 1 1 10440 1 1 233351 12 10140 1 2 10540 1 2 10840 1 1 10440 1 1 233457 12 10140 1 2 10540 1 2 10840 1 1 10440 1 1 230553 12 10140 1 2 10440 1 2 10740 1 1 10840 1 1 230653 12 10140 1 2 10440 1 2 10740 1 1 10840 1 1"/>
+
+
+	</group>
+	<group id="3" name="战斗">
+		<cmd id="1" name="测试场景" cmd="mm 50001"/>
+		<cmd id="2" name="木桩" cmd="mob 5004"/>
+		<cmd id="3" name="护盾buff" cmd="buff 176181 1"/>
+		<cmd id="4" name="结算胜利" cmd="sceneend 1"/>
+		<cmd id="5" name="结算失败" cmd="sceneend 0"/>
+		<cmd id="6" name="杀死全部" cmd="killall"/>
+		<cmd id="7" name="1V1胜利" cmd="1v1 end 1"/>
+		<cmd id="8" name="1V1失败" cmd="1v1 end 0"/>
+		<cmd id="9" name="1V1平局" cmd="1v1 end 2"/>
+		<cmd id="10" name="修改物攻" cmd="setattr 11 2000"/>
+		<cmd id="11" name="修改物防" cmd="setattr 21 1500"/>
+		<cmd id="12" name="修改生命" cmd="setattr 101 100000;setattr 105 100000"/>
+		<cmd id="13" name="修改法攻" cmd="setattr 311 2000"/>
+		<cmd id="14" name="修改法防" cmd="setattr 321 800"/>
+		<cmd id="15" name="物理护盾" cmd="buff 176181 1"/>
+		<cmd id="16" name="凯多附体" cmd="setattr 101 500000;setattr 105 500000;setattr 21 50000;setattr 321 50000"/>
+		<cmd id="17" name="减少CD" cmd="buff 27 1"/>
+		<cmd id="18" name="增加能量" cmd="setattr 124 4000"/>
+		<cmd id="19" name="持续能量" cmd="buff 4 1"/>
+		<cmd id="20" name="减少攻击" cmd="setattr 11 1"/>
+		<cmd id="21" name="skilldebug" cmd="skilldebug"/>
+		<cmd id="22" name="切人CD" cmd="setswitch 0;setswitchcd 0"/>
+		<cmd id="23" name="技能列表" cmd="showskill"/>
+		<cmd id="24" name="绑定技能" cmd="slotskill"/>
+		<cmd id="25" name="skillversion" cmd="skillversion"/>
+		<cmd id="26" name="显示能量" cmd="listattr 124"/>
+		<cmd id="27" name="能量清空" cmd="setattr 124 0"/>
+		<cmd id="28" name="身上buff" cmd="listbuff"/>
+		<cmd id="29" name="客户端ecs版本" cmd="clientecs"/>
+		<cmd id="30" name="服务器ecs版本" cmd="serverecs"/>
+		<cmd id="31" name="锁30帧" cmd="frame 30"/>
+		<cmd id="32" name="不会死亡" cmd="buff 3 1"/>
+    	<cmd id="33" name="设置速度" cmd="ffall 9999 0.1"/>
+    	<cmd id="34" name="学会全技能" cmd="allskill"/>
+    	<cmd id="35" name="镜头切换1" cmd="freelook 0"/>
+    	<cmd id="36" name="镜头切换2" cmd="freelook 1"/>
+    	<cmd id="37" name="镜头切换3" cmd="freelook 2"/>
+	</group>
+	<group id="4" name="系统">
+		<cmd id="1" name="探险" cmd="Exploration"/>
+		<cmd id="2" name="抽卡界面" cmd="DrawCards"/>
+		<cmd id="3" name="电话虫动画" cmd="PlaySnailAni"/>
+		<cmd id="4" name="退出动画虫" cmd="ExitSnailAni"/>
+		<cmd id="5" name="增加普池券" cmd="additem 301 100"/>
+		<cmd id="6" name="增加活动券" cmd="additem 302 100"/>
+		<cmd id="7" name="神秘商店" cmd="shop mysterious"/>
+		<cmd id="8" name="查看手机设备型号" cmd="ShowSystemInfo"/>
+		<cmd id="9" name="完成赏金任务" cmd="bounty 1 1000"/>
+		<cmd id="10" name="挑战商店" cmd="ChallengeStore"/>
+		<cmd id="11" name="跳过史诗战役阶段" cmd="epic_aimok"/>
+		<cmd id="12" name="冒险东海" cmd="advend 1 1"/>
+		<cmd id="13" name="冒险罗格" cmd="advend 7 1"/>
+		<cmd id="14" name="冒险空岛" cmd="advend 2 1"/>
+		<cmd id="15" name="冒险司法" cmd="advend 3 1"/>
+		<cmd id="16" name="困难东海" cmd="advend 11 1"/>
+		<cmd id="17" name="困难罗格" cmd="advend 17 1"/>
+		<cmd id="18" name="困难空岛" cmd="advend 12 1"/>
+		<cmd id="19" name="困难司法" cmd="advend 13 1"/>
+	</group>
+	<group id="5" name="剧情">
+		<cmd id="1" name="接指定任务" cmd="chapter take 1001"/>
+		<cmd id="2" name="打印完成和当前任务" cmd="chapter dump"/>
+		<cmd id="3" name="清除所有任务" cmd="chapter clear"/>
+		<cmd id="4" name="任务完成" cmd="chapter finish"/>
+		<cmd id="5" name="当前任务失败" cmd="chapter failed"/>
+	</group>
+	<group id="6" name="关卡">
+		<cmd id="1" name="试炼关卡" cmd="mm 24;hidefps"/>
+		<cmd id="2" name="司法序章" cmd="mm 967"/>
+		<cmd id="3" name="巨人卡西" cmd="mm 951"/>
+		<cmd id="4" name="巨欧伊摩" cmd="mm 951"/>
+		<cmd id="5" name="新的战场" cmd="mm 952"/>
+		<cmd id="6" name="炮火连天" cmd="mm 952"/>
+		<cmd id="7" name="干法犬队" cmd="mm 953"/>
+		<cmd id="8" name="海兽背上" cmd="mm 954"/>
+		<cmd id="9" name="保护海兽" cmd="mm 955"/>
+		<cmd id="10" name="斗布鲁诺" cmd="mm 955"/>
+		<cmd id="11" name="猫头鹰无" cmd="mm 956"/>
+		<cmd id="12" name="潜行关卡" cmd="mm 957"/>
+		<cmd id="13" name="卡莉法一" cmd="mm 958"/>
+		<cmd id="14" name="卡莉法二" cmd="mm 966"/>
+		<cmd id="15" name="鹿狼合击" cmd="mm 960"/>
+		<cmd id="16" name="卡库佐罗" cmd="mm 961"/>
+		<cmd id="17" name="射击关卡" cmd="mm 963"/>
+		<cmd id="18" name="路奇战一" cmd="mm 962"/>
+		<cmd id="19" name="路奇战二" cmd="mm 964"/>
+		<cmd id="20" name="弱点物理" cmd="mm 22"/>
+		<cmd id="21" name="弱点法术" cmd="mm 23"/>
+		<cmd id="22" name="关卡时间暂停" cmd="setleveltimer stop"/>
+		<cmd id="23" name="设置关卡时间" cmd="setleveltimer start 100"/>
+	</group>
+	<group id="7" name="数值">
+		<cmd id="1" name="常用组合" cmd="hidefps;stopguide;be;p;opensys 0;sceneend 1;additem 3 35000"/>
+		<cmd id="2" name="输出测试" cmd="mm 24;hidefps"/>
+		<cmd id="3" name="结算胜利" cmd="sceneend 1"/>
+		<cmd id="4" name="怪物查看" cmd="listattrx mid attrid "/>
+		<cmd id="5" name="缩放查询" cmd="applyscale"/>
+		<cmd id="6" name="战斗打印" cmd="see"/>
+		<cmd id="7" name="查看物攻" cmd="listattr 11;listattr 12;listattr 13;"/>
+		<cmd id="8" name="查看属攻" cmd="listattr 311;listattr 312;listattr 313;"/>
+		<cmd id="9" name="查看生命" cmd="listattr 101;listattr 102;listattr 103;"/>
+		<cmd id="10" name="查看物防" cmd="listattr 21;listattr 22;listattr 23;"/>
+		<cmd id="11" name="查看属防" cmd="listattr 321;listattr 322;listattr 323;"/>
+		<cmd id="12" name="查看BUFF" cmd="listbuff"/>
+		<cmd id="13" name="清除BUFF" cmd="clearbuff"/>
+		<cmd id="14" name="蒙卡转转" cmd="monstercastskill 75002 Monster_Morgan_jingying_rangeAttack"/>
+		<cmd id="15" name="主线全开" cmd="chapter all;quit"/>
+		<cmd id="16" name="物理白板" cmd="setattr 11 100;setattr 31 0"/>
+		<cmd id="17" name="法术白板" cmd="setattr 311 100;setattr 331 0;setattr 336 0"/>
+	</group>
+	<group id="8" name="赏金">
+		<cmd id="1" name="跳到N+1章" cmd="bountychapter 1"/>
+		<cmd id="2" name="完成本章任务" cmd="bountychapter 1"/>
+		<cmd id="3" name="领取奖励" cmd="bountychapter 1"/>
+		<cmd id="4" name="赏金完成第1章" cmd="bountychapter 1"/>
+		<cmd id="5" name="赏金第1章任务" cmd="bountytask 101;bountytask 102;bountytask 103;bountytask 104;bountytask 105"/>
+		<cmd id="6" name="赏金1章" cmd="drop 401"/>
+		<cmd id="7" name="赏金完成第2章" cmd="bountychapter 2"/>
+		<cmd id="8" name="赏金第2章任务" cmd="bountytask 201;bountytask 202;bountytask 203;bountytask 204;bountytask 205;bountytask 206"/>
+		<cmd id="9" name="赏金2章" cmd="drop 402"/>
+		<cmd id="10" name="赏金完成第3章" cmd="bountychapter 3"/>
+		<cmd id="11" name="赏金第3章任务" cmd="bountytask 301;bountytask 302;bountytask 303;bountytask 304;bountytask 305;bountytask 306;bountytask 307"/>
+		<cmd id="12" name="赏金3章" cmd="drop 403"/>
+		<cmd id="13" name="赏金完成第4章" cmd="bountychapter 4"/>
+		<cmd id="14" name="赏金第4章任务" cmd="bountytask 401;bountytask 402;bountytask 403;bountytask 404;bountytask 405;bountytask 406;bountytask 407"/>
+		<cmd id="15" name="赏金4章" cmd="drop 404"/>
+		<cmd id="16" name="赏金完成第5章" cmd="bountychapter 5"/>
+		<cmd id="17" name="赏金第5章任务" cmd="bountytask 501;bountytask 502;bountytask 503;bountytask 504;bountytask 505;bountytask 506;bountytask 507"/>
+		<cmd id="18" name="赏金5章" cmd="drop 405"/>
+		<cmd id="19" name="赏金完成第6章" cmd="bountychapter 6"/>
+		<cmd id="20" name="赏金第6章任务" cmd="bountytask 601;bountytask 602;bountytask 603;bountytask 604;bountytask 605;bountytask 606;bountytask 607"/>
+		<cmd id="21" name="赏金6章" cmd="drop 406"/>
+		<cmd id="22" name="赏金完成第7章" cmd="bountychapter 7"/>
+		<cmd id="23" name="赏金第7章任务" cmd="bountytask 701;bountytask 702;bountytask 703;bountytask 704;bountytask 705;bountytask 706;bountytask 707"/>
+		<cmd id="24" name="赏金7章" cmd="drop 407"/>
+		<cmd id="25" name="赏金完成第8章" cmd="bountychapter 8"/>
+		<cmd id="26" name="赏金第8章任务" cmd="bountytask 801;bountytask 802;bountytask 803;bountytask 804;bountytask 805;bountytask 806;bountytask 807"/>
+		<cmd id="27" name="赏金8章" cmd="drop 408"/>
+		<cmd id="28" name="赏金完成第9章" cmd="bountychapter 9"/>
+		<cmd id="29" name="赏金第9章任务" cmd="bountytask 901;bountytask 902;bountytask 903;bountytask 904;bountytask 905;bountytask 906;bountytask 907"/>
+		<cmd id="30" name="赏金9章" cmd="drop 409"/>
+		<cmd id="31" name="赏金完成第10章" cmd="bountychapter 10"/>
+		<cmd id="32" name="赏金第10章任务" cmd="bountytask 1001;bountytask 1002;bountytask 1003;bountytask 1004;bountytask 1005;bountytask 1006;bountytask 1007"/>
+		<cmd id="33" name="赏金10章" cmd="drop 410"/>
+		<cmd id="34" name="赏金完成第11章" cmd="bountychapter 11"/>
+		<cmd id="35" name="赏金第11章任务" cmd="bountytask 1101;bountytask 1102;bountytask 1103;bountytask 1104;bountytask 1105;bountytask 1106;bountytask 1107"/>
+		<cmd id="36" name="赏金11章" cmd="drop 411"/>
+		<cmd id="37" name="赏金完成第12章" cmd="bountychapter 12"/>
+		<cmd id="38" name="赏金第12章任务" cmd="bountytask 1201;bountytask 1202;bountytask 1203;bountytask 1204;bountytask 1205;bountytask 1206;bountytask 1207"/>
+		<cmd id="39" name="赏金12章" cmd="drop 412"/>
+		<cmd id="40" name="赏金完成第13章" cmd="bountychapter 13"/>
+		<cmd id="41" name="赏金第13章任务" cmd="bountytask 1301;bountytask 1302;bountytask 1303;bountytask 1304;bountytask 1305;bountytask 1306;bountytask 1307"/>
+		<cmd id="42" name="赏金13章" cmd="drop 413"/>
+		<cmd id="43" name="赏金完成第14章" cmd="bountychapter 14"/>
+		<cmd id="44" name="赏金第14章任务" cmd="bountytask 1401;bountytask 1402;bountytask 1403;bountytask 1404;bountytask 1405;bountytask 1406;bountytask 1407"/>
+		<cmd id="45" name="赏金14章" cmd="drop 414"/>
+		<cmd id="46" name="赏金完成第15章" cmd="bountychapter 15"/>
+		<cmd id="47" name="赏金第15章任务" cmd="bountytask 1501;bountytask 1502;bountytask 1503;bountytask 1504;bountytask 1505;bountytask 1506;bountytask 1507"/>
+		<cmd id="48" name="赏金15章" cmd="drop 415"/>
+		<cmd id="49" name="赏金完成第16章" cmd="bountychapter 16"/>
+		<cmd id="50" name="赏金第16章任务" cmd="bountytask 1601;bountytask 1602;bountytask 1603;bountytask 1604;bountytask 1605;bountytask 1606;bountytask 1607"/>
+		<cmd id="51" name="赏金16章" cmd="drop 416"/>
+	</group>
+	<group id="9" name="掉落">
+		<cmd id="1" name="全部主线首+箱" cmd="drop 1"/>
+	</group>
+	<group id="10" name="流程">
+		<cmd id="1" name="出新手关" cmd="stopguide;sceneend 1;"/>
+		<cmd id="2" name="通谢尔兹" cmd="additem 3 40; levellist 10204;delitem 8 40;addexp 1 40;"/>
+		<cmd id="3" name="通橘子镇" cmd="additem 3 50; levellist 10305;delitem 8 50;addexp 1 40;addexp 2 20;"/>
+		<cmd id="5" name="精英一章" cmd="additem 3 40; levellist 20102;delitem 8 40;addexp 1 40;addexp 2 40;addexp 502 20;"/>
+		<cmd id="6" name="通西罗布" cmd="additem 3 60; levellist 10406;delitem 8 60;addexp 1 40;addexp 2 30;addexp 502 30;"/>
+		<cmd id="7" name="经验一层" cmd="additem 3 20; level 211;      delitem 8 20;addexp 1 20;addexp 2 20;addexp 502 20;"/>	
+		<cmd id="8" name="专武一层" cmd="additem 3 20; level 271;      delitem 8 20;addexp 1 20;addexp 2 20;addexp 502 20;"/>
+		<cmd id="9" name="精英二章" cmd="additem 3 40; levellist 20202;delitem 8 40;addexp 1 40;addexp 2 40;addexp 502 40;"/>
+		<cmd id="11" name="精英三章" cmd="additem 3 60;levellist 20303;delitem 8 60;addexp 1 60;addexp 2 60;addexp 502 60;"/>
+		<cmd id="12" name="海上餐厅" cmd="additem 3 60;levellist 10506;delitem 8 60"/>
+		<cmd id="13" name="精英四章" cmd="additem 3 60;levellist 20403;delitem 8 60"/>
+		<cmd id="14" name="阿龙公园" cmd="levellist 10606;"/>
+		<cmd id="15" name="精英五章" cmd="levellist 20503;"/>
+		<cmd id="16" name="通罗格镇" cmd="levellist 10706;"/>
+		<cmd id="17" name="精英六章" cmd="levellist 20603;"/>
+		<cmd id="18" name="通双子峡" cmd="levellist 10806;"/>
+		<cmd id="19" name="精英七章" cmd="levellist 20703;"/>
+		<cmd id="20" name="通空岛上" cmd="levellist 11205;"/>
+		<cmd id="21" name="精英八章" cmd="levellist 20803;"/>
+		<cmd id="22" name="通空岛下" cmd="levellist 11211;"/>
+		<cmd id="23" name="精英九章" cmd="levellist 21203;"/>
+		<cmd id="24" name="通司法上" cmd="levellist 11410;"/>
+		<cmd id="25" name="精英十章" cmd="levellist 11206;"/>
+		<cmd id="27" name="精英十一" cmd="levellist 21403;"/>
+		<cmd id="28" name="通司法下" cmd="levellist 11420;"/>
+		<cmd id="29" name="精英十二" cmd="levellist 21406;"/>
+		<cmd id="10" name="教学关一" cmd="levellist 60004;levellist 60011;levellist 60019;"/>
+	</group>
+	<group id="11" name="工具">
+		<cmd id="1" name="热更重载" cmd="reload skill;reload ai;reload Adventure;Configreload level;reload alltable"/>
+		<cmd id="2" name="openlogview" cmd="openlogview"/>
+		<cmd id="3" name="显示关卡墙" cmd="walldebuger true"/>
+		<cmd id="4" name="取消显示关卡墙" cmd="walldebuger false"/>
+		<cmd id="5" name="跳过新手引导" cmd="skipbegin"/>
+		<cmd id="6" name="碰撞圈" cmd="showservercollider"/>
+		<cmd id="7" name="AI圈" cmd="showaiinfo"/>
+		<cmd id="8" name="隐藏圈" cmd="clearservercollider"/>
+		<cmd id="9" name="画地形格子" cmd="drawgrid"/>
+		<cmd id="10" name="隐藏地形格子" cmd="cleargrid"/>
+		<cmd id="11" name="相机debug" cmd="caminfo"/>
+	</group>
+	<group id="12" name="sdk">
+		<cmd id="1" name="保密协议账号" cmd="checksecretlist"/>
+		<cmd id="2" name="云端画质分档" cmd="checkrenderlevel"/>
+		<cmd id="3" name="GetRNDebug" cmd="getrndebug"/>
+		<cmd id="4" name="SetRNDebug" cmd="setrndebug"/>
+		<cmd id="5" name="RNOpenPage" cmd="rnopenpage"/>
+		<cmd id="6" name="九尾入口" cmd="rnentrance"/>
+	</group>
+	<group id="13" name="账号">
+		<cmd id="35" name="高级账号设置" cmd="additem 3 39265;elitelist 21406;levellist 11420;level 101;level 151;level 102;level 152;level 103;level 153;level 104;level 154;level 105;level 155;level 106;level 156;level 107;level 157;level 108;level 158;level 109;level 159;additem 401 999999;additem 402 999999;pirateship 0;ship;shiparea 1 70;shiptask 40;bountychapter 19;level 211;level 212;level 213;level 214;level 215;level 216;level 217;level 218;level 219;level 220;level 301;level 302;level 303;level 304;level 305;level 306;level 307;level 308;level 60006;level 60013;level 60008;level 60015;level 60020;level 60026;level 60030;level 60035;level 60040;level 60045;level 60050;level 60055;level 60096;level 60098;level 60059;level 60063;level 60067;level 60071;level 60075;level 60001;level 60014;level 60009;level 60016;level 60021;level 60027;level 60031;level 60036;level 60041;level 60046;level 60051;level 60056;level 60097;level 60060;level 60064;level 60068;level 60072;level 60076;level 60004;level 60012;level 60010;level 60017;level 60022;level 60025;level 60032;level 60037;level 60042;level 60047;level 60052;level 60057;level 60061;level 60065;level 60069;level 60073;level 60077;level 60011;level 60018;level 60023;level 60028;level 60033;level 60038;level 60043;level 60048;level 60053;level 60058;level 60062;level 60066;level 60070;level 60074;level 60078;level 60039;level 60044;level 60049;level 60054;level 60079;partner add 112;partner add 114;partner add 913;partner add 914;additem 1112 330;additem 1114 330;additem 1913 330;additem 1914 330;partner add 19;partner add 152;partner add 101;partner add 213;partner add 211;additem 1019 330;additem 1152 330;additem 1101 330;additem 1213 330;additem 1211 330;partner add 1;partner add 2;partner add 3;partner add 4;partner add 5;partner add 6;partner add 7;partner add 8;partner add 502;partner add 151;partner add 153;partner add 154;partner add 9;additem 1001 320;additem 1002 320;additem 1003 320;additem 1004 320;additem 1005 320;additem 1006 320;additem 1007 320;additem 1008 320;additem 1502 320;additem 1151 320;additem 1153 320;additem 1154 320;additem 1009 320;partner add 150;partner add 210;partner add 500;partner add 270;partner add 400;partner add 501;partner add 601;additem 1150 300;additem 1210 300;additem 1500 300;additem 1270 300;additem 1400 300;additem 1501 300;additem 1601 300;addexp all 359900;additem 135 40;additem 136 40;additem 137 40;additem 138 40;additem 133 40;additem 129 40;additem 132 40;additem 131 40;additem 112 40;additem 113 40;additem 114 40;additem 115 40;additem 116 40;additem 117 40;additem 118 40;additem 119 40;additem 122 40;additem 126 40;additem 127 40;additem 128 40;additem 110 40;additem 106 40;additem 105 40;additem 102 40;additem 107 40;additem 101 40;additem 130 40;additem 111 40;additem 120 40;additem 311 5000;additem 312 5000;additem 313 5000;additem 314 5000;additem 330 500;additem 331 500;additem 332 500;additem 333 500;additem 334 500;additem 335 500;additem 336 500;additem 337 500;additem 338 500;additem 339 500;additem 340 500;additem 341 500;additem 342 500;additem 343 500;additem 344 500;additem 350 500;additem 351 500;additem 350 500;additem 351 500;additem 202 100;additem 1 100000;additem 201 1000;additem 8 50000;additem 203 100000;additem 200005 1000;additem 200006 1000;additem 200007 1000;additem 200008 1000;additem 481 100;additem 482 100;additem 483 100;additem 5 100000;additem 6 100000;additem 7 100000;additem 10 100000;additem 403 100000;additem 4017 999;additem 4018 999;additem 4019 999;additem 4020 999;additem 2 100000000;additem 315 1000;additem 316 1000;additem 317 1000;additem 318 1000;additem 319 1000;additem 320 1000;additem 321 1000;additem 322 1000;additem 323 1000;additem 324 1000;additem 325 1000;additem 326 1000;additem 303 1000;additem 304 1000;additem 305 1000;additem 306 1000;drop 1012;drop 1022;drop 1103;drop 1113;drop 1123;drop 1133;drop 1143;drop 1153;drop 1104;drop 1114;drop 1124;drop 1134;drop 1144;drop 1154;drop 1305;drop 1315;drop 1325;drop 1335;drop 1345;drop 1355;drop 1365;drop 1375;drop 1306;drop 1316;drop 1326;drop 1336;drop 1346;drop 1356;drop 1366;drop 1376;stopguide;"/>
+		<cmd id="5" name="两档体力" cmd="additem 6 120;delitem 1 100;"/>
+		<cmd id="6" name="三档体力" cmd="additem 6 60;delitem 1 100;"/>
+		<cmd id="7" name="五档体力" cmd="additem 6 120;delitem 1 400;"/>
+	</group>
+</root>

@@ -1,0 +1,1066 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d40825ce6419be439f13b0235b6092e, type: 3}
+  m_Name: LookDev_MainScene
+  m_EditorClassIdentifier: 
+  chunks:
+  - lpo:
+      probPostions: []
+    pointLights: []
+    audios: []
+    groupObjects: []
+    sceneObjects:
+    - renderIndex: 0
+      resName: op_c1bd_a_0
+      mat: {fileID: 2100000, guid: 57828becfe1638f4e957a33660c2b5dd, type: 2}
+      aabb:
+        min: {x: 57.231537, y: -0.012079716, z: 61.096977}
+        max: {x: 64.63764, y: 11.137312, z: 68.81522}
+      pos: {x: 60.24, y: 0, z: 65.15}
+      rotate: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
+      scale: {x: 1, y: 1.0000007, z: 1.0000007}
+      localScale: {x: 1, y: 1.0000005, z: 1.0000005}
+      exString: 
+      blockId: 14
+      lodDist:
+        lodDist2: 2035.6973
+        fadeDist2: 8142.789
+      groupObjectIndex: -1
+      lightMapScale: 1
+      lightMapIndex: -1
+      lightMapVolumnIndex: 1
+      lightmapUVST: {x: 1, y: 1, z: 0, w: 0}
+      shadowID: -1
+      virtualChunkID: 0
+      flag:
+        flag: 1879048192
+      areaMask: 4294967295
+      gameObjectID: 15
+      id: 0
+    - renderIndex: 0
+      resName: op_c1bd_a_0
+      mat: {fileID: 2100000, guid: 57828becfe1638f4e957a33660c2b5dd, type: 2}
+      aabb:
+        min: {x: 104.33153, y: -0.012079716, z: 114.06697}
+        max: {x: 111.737625, y: 11.137312, z: 121.78523}
+      pos: {x: 107.34, y: 0, z: 118.12}
+      rotate: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
+      scale: {x: 1, y: 1.0000007, z: 1.0000007}
+      localScale: {x: 1, y: 1.0000005, z: 1.0000005}
+      exString: 
+      blockId: 20
+      lodDist:
+        lodDist2: 2035.6973
+        fadeDist2: 8142.789
+      groupObjectIndex: -1
+      lightMapScale: 1
+      lightMapIndex: -1
+      lightMapVolumnIndex: 1
+      lightmapUVST: {x: 1, y: 1, z: 0, w: 0}
+      shadowID: -1
+      virtualChunkID: 0
+      flag:
+        flag: 1879048192
+      areaMask: 4294967295
+      gameObjectID: 16
+      id: 1
+    - renderIndex: 0
+      resName: op_ty_bucket_0
+      mat: {fileID: 2100000, guid: 33e4fe41061b9e3419d78847004b1c3b, type: 2}
+      aabb:
+        min: {x: 63.48239, y: -0.00023293495, z: 77.52597}
+        max: {x: 63.984474, y: 0.62841713, z: 78.028046}
+      pos: {x: 63.731003, y: 0, z: 77.777}
+      rotate: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
+      scale: {x: 1, y: 1.0000002, z: 1.0000002}
+      localScale: {x: 1, y: 1, z: 1}
+      exString: 
+      blockId: 14
+      lodDist:
+        lodDist2: 163.84001
+        fadeDist2: 655.36005
+      groupObjectIndex: -1
+      lightMapScale: 1
+      lightMapIndex: -1
+      lightMapVolumnIndex: -1
+      lightmapUVST: {x: 1, y: 1, z: 0, w: 0}
+      shadowID: -1
+      virtualChunkID: 0
+      flag:
+        flag: 1879048192
+      areaMask: 4294967295
+      gameObjectID: 22
+      id: 2
+    - renderIndex: 0
+      resName: op_c1_meilihao_pao_0
+      mat: {fileID: 2100000, guid: e58fb095d0a002a4e9878423bfdc7b6d, type: 2}
+      aabb:
+        min: {x: 65.099594, y: -0.0020273328, z: 77.22034}
+        max: {x: 67.122025, y: 1.4204004, z: 78.14035}
+      pos: {x: 66.08, y: 0, z: 77.669}
+      rotate: {x: -0.5, y: -0.5, z: -0.5, w: 0.5}
+      scale: {x: 0.1, y: 0.1, z: 0.1}
+      localScale: {x: 0.1, y: 0.1, z: 0.1}
+      exString: 
+      blockId: 17
+      lodDist:
+        lodDist2: 167.53561
+        fadeDist2: 670.14246
+      groupObjectIndex: -1
+      lightMapScale: 1
+      lightMapIndex: -1
+      lightMapVolumnIndex: -1
+      lightmapUVST: {x: 1, y: 1, z: 0, w: 0}
+      shadowID: -1
+      virtualChunkID: 0
+      flag:
+        flag: 1879048192
+      areaMask: 4294967295
+      gameObjectID: 23
+      id: 3
+    - renderIndex: 0
+      resName: op_c1_xiaochang_0
+      mat: {fileID: 2100000, guid: 48556d978901b4548a0c18763ca1f070, type: 2}
+      aabb:
+        min: {x: 48.935333, y: -0.00909555, z: 53.26976}
+        max: {x: 89.20535, y: 3.5401673, z: 93.22296}
+      pos: {x: 69.09404, y: 0.39449182, z: 73.69309}
+      rotate: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
+      scale: {x: 1, y: 1.0000002, z: 1.0000002}
+      localScale: {x: 1, y: 1, z: 1}
+      exString: 
+      blockId: 4
+      lodDist:
+        lodDist2: 4096
+        fadeDist2: 3.4028235e+38
+      groupObjectIndex: -1
+      lightMapScale: 1
+      lightMapIndex: -1
+      lightMapVolumnIndex: -1
+      lightmapUVST: {x: 1, y: 1, z: 0, w: 0}
+      shadowID: -1
+      virtualChunkID: 0
+      flag:
+        flag: 1879048192
+      areaMask: 4294967295
+      gameObjectID: 24
+      id: 4
+    - renderIndex: 1
+      resName: op_c1_xiaochang_1
+      mat: {fileID: 2100000, guid: 6a90b20ec35e54d4690836042d4340c9, type: 2}
+      aabb:
+        min: {x: 55.44319, y: 0.06785393, z: 52.98961}
+        max: {x: 89.09119, y: 2.7585468, z: 93.13199}
+      pos: {x: 69.09404, y: 0.39449182, z: 73.69309}
+      rotate: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
+      scale: {x: 1, y: 1.0000002, z: 1.0000002}
+      localScale: {x: 1, y: 1, z: 1}
+      exString: 
+      blockId: 4
+      lodDist:
+        lodDist2: 4096
+        fadeDist2: 3.4028235e+38
+      groupObjectIndex: -1
+      lightMapScale: 1
+      lightMapIndex: -1
+      lightMapVolumnIndex: -1
+      lightmapUVST: {x: 1, y: 1, z: 0, w: 0}
+      shadowID: -1
+      virtualChunkID: 0
+      flag:
+        flag: 1879048192
+      areaMask: 4294967295
+      gameObjectID: 24
+      id: 5
+    - renderIndex: 2
+      resName: op_c1_xiaochang_2
+      mat: {fileID: 2100000, guid: fe6022aa25ca044459b688195f0fff99, type: 2}
+      aabb:
+        min: {x: 48.052185, y: 0.13632321, z: 92.64766}
+        max: {x: 89.723816, y: 5.674075, z: 94.26799}
+      pos: {x: 69.09404, y: 0.39449182, z: 73.69309}
+      rotate: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
+      scale: {x: 1, y: 1.0000002, z: 1.0000002}
+      localScale: {x: 1, y: 1, z: 1}
+      exString: 
+      blockId: 4
+      lodDist:
+        lodDist2: 4096
+        fadeDist2: 3.4028235e+38
+      groupObjectIndex: -1
+      lightMapScale: 1
+      lightMapIndex: -1
+      lightMapVolumnIndex: -1
+      lightmapUVST: {x: 1, y: 1, z: 0, w: 0}
+      shadowID: -1
+      virtualChunkID: 0
+      flag:
+        flag: 1879048192
+      areaMask: 4294967295
+      gameObjectID: 24
+      id: 6
+    - renderIndex: 3
+      resName: op_c1_xiaochang_3
+      mat: {fileID: 2100000, guid: 6e58ae5b4e48e40439f181c98e936654, type: 2}
+      aabb:
+        min: {x: 48.467278, y: 0.17841625, z: 53.09439}
+        max: {x: 70.70673, y: 5.555523, z: 94.01758}
+      pos: {x: 69.09404, y: 0.39449182, z: 73.69309}
+      rotate: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
+      scale: {x: 1, y: 1.0000002, z: 1.0000002}
+      localScale: {x: 1, y: 1, z: 1}
+      exString: 
+      blockId: 3
+      lodDist:
+        lodDist2: 4096
+        fadeDist2: 3.4028235e+38
+      groupObjectIndex: -1
+      lightMapScale: 1
+      lightMapIndex: -1
+      lightMapVolumnIndex: -1
+      lightmapUVST: {x: 1, y: 1, z: 0, w: 0}
+      shadowID: -1
+      virtualChunkID: 0
+      flag:
+        flag: 1879048192
+      areaMask: 4294967295
+      gameObjectID: 24
+      id: 7
+    instanceObjects: []
+    multiLayerObjects: []
+    hasCollider: 0
+    colliderMesh: []
+  - lpo:
+      probPostions: []
+    pointLights: []
+    audios: []
+    groupObjects: []
+    sceneObjects: []
+    instanceObjects: []
+    multiLayerObjects: []
+    hasCollider: 0
+    colliderMesh: []
+  - lpo:
+      probPostions: []
+    pointLights: []
+    audios: []
+    groupObjects: []
+    sceneObjects: []
+    instanceObjects: []
+    multiLayerObjects: []
+    hasCollider: 0
+    colliderMesh: []
+  - lpo:
+      probPostions: []
+    pointLights: []
+    audios: []
+    groupObjects: []
+    sceneObjects: []
+    instanceObjects: []
+    multiLayerObjects: []
+    hasCollider: 0
+    colliderMesh: []
+  global:
+    lpo:
+      probPostions: []
+    pointLights: []
+    audios: []
+    groupObjects: []
+    sceneObjects: []
+    instanceObjects: []
+    multiLayerObjects: []
+    hasCollider: 0
+    colliderMesh: []
+  prefabs:
+  - prefab: {fileID: -927199367670048503, guid: f67e3b05c245ec941b8ebb780a6641a1,
+      type: 3}
+    id: 0
+  - prefab: {fileID: -927199367670048503, guid: 00292f435fa56e74ca53bada4c1f569f,
+      type: 3}
+    id: 1
+  - prefab: {fileID: -927199367670048503, guid: b7eeda73e6656264f8a72dfa28ccee40,
+      type: 3}
+    id: 2
+  - prefab: {fileID: -927199367670048503, guid: ca89e259f917ce9478ac2740ab41048f,
+      type: 3}
+    id: 3
+  groups:
+  - name: MainScene
+    scenePath: EditorScene/MultiLayer/MainScene
+    visible: 1
+    parentID: -1
+    id: 0
+  - name: MainScene
+    scenePath: EditorScene/Animation/MainScene
+    visible: 1
+    parentID: -1
+    id: 1
+  - name: MainScene
+    scenePath: EditorScene/Effects/MainScene
+    visible: 1
+    parentID: -1
+    id: 2
+  - name: MainScene
+    scenePath: EditorScene/Enverinment/MainScene
+    visible: 1
+    parentID: -1
+    id: 3
+  - name: MainScene
+    scenePath: EditorScene/Collider/MainScene
+    visible: 1
+    parentID: -1
+    id: 4
+  - name: MainScene
+    scenePath: EditorScene/Light/MainScene
+    visible: 1
+    parentID: -1
+    id: 5
+  - name: mainLight
+    scenePath: EditorScene/Light/MainScene/mainLight
+    visible: 1
+    parentID: -1
+    id: 7
+  - name: addLight
+    scenePath: EditorScene/Light/MainScene/addLight
+    visible: 1
+    parentID: -1
+    id: 9
+  - name: MainScene
+    scenePath: EditorScene/StaticPrefabs/MainScene
+    visible: 1
+    parentID: -1
+    id: 10
+  - name: GlobalVolum
+    scenePath: EditorScene/StaticPrefabs/MainScene/GlobalVolum
+    visible: 1
+    parentID: -1
+    id: 11
+  - name: LightmapCombineObject_0
+    scenePath: EditorScene/StaticPrefabs/MainScene/GlobalVolum/LightmapCombineObject_0
+    visible: 1
+    parentID: -1
+    id: 12
+  - name: Chunk_0_0
+    scenePath: EditorScene/StaticPrefabs/MainScene/Chunk_0_0
+    visible: 1
+    parentID: -1
+    id: 13
+  - name: LightmapCombineObject_0
+    scenePath: EditorScene/StaticPrefabs/MainScene/Chunk_0_0/LightmapCombineObject_0
+    visible: 1
+    parentID: -1
+    id: 14
+  - name: RoundedCube
+    scenePath: EditorScene/StaticPrefabs/MainScene/RoundedCube
+    visible: 1
+    parentID: -1
+    id: 17
+  - name: Shaderball
+    scenePath: EditorScene/StaticPrefabs/MainScene/Shaderball
+    visible: 1
+    parentID: -1
+    id: 18
+  - name: RoundedCube (1)
+    scenePath: EditorScene/StaticPrefabs/MainScene/RoundedCube (1)
+    visible: 1
+    parentID: -1
+    id: 19
+  - name: RoundedCube (3)
+    scenePath: EditorScene/StaticPrefabs/MainScene/RoundedCube (3)
+    visible: 1
+    parentID: -1
+    id: 20
+  - name: Shaderball (1)
+    scenePath: EditorScene/StaticPrefabs/MainScene/Shaderball (1)
+    visible: 1
+    parentID: -1
+    id: 21
+  - name: Plane
+    scenePath: EditorScene/StaticPrefabs/MainScene/Plane
+    visible: 0
+    parentID: -1
+    id: 25
+  - name: MainScene
+    scenePath: EditorScene/Prefabs/MainScene
+    visible: 1
+    parentID: -1
+    id: 26
+  - name: ColorChecker
+    scenePath: EditorScene/Prefabs/MainScene/ColorChecker
+    visible: 1
+    parentID: -1
+    id: 27
+  - name: MatBall
+    scenePath: EditorScene/Prefabs/MainScene/MatBall
+    visible: 1
+    parentID: -1
+    id: 28
+  - name: Mat_White
+    scenePath: EditorScene/Prefabs/MainScene/MatBall/Mat_White
+    visible: 0
+    parentID: -1
+    id: 29
+  - name: Mat_White_M0.00_R0.00
+    scenePath: EditorScene/Prefabs/MainScene/MatBall/Mat_White/Mat_White_M0.00_R0.00
+    visible: 1
+    parentID: -1
+    id: 30
+  - name: Mat_White_M0.00_R0.25
+    scenePath: EditorScene/Prefabs/MainScene/MatBall/Mat_White/Mat_White_M0.00_R0.25
+    visible: 1
+    parentID: -1
+    id: 31
+  - name: Mat_White_M0.00_R0.50
+    scenePath: EditorScene/Prefabs/MainScene/MatBall/Mat_White/Mat_White_M0.00_R0.50
+    visible: 1
+    parentID: -1
+    id: 32
+  - name: Mat_White_M0.00_R0.75
+    scenePath: EditorScene/Prefabs/MainScene/MatBall/Mat_White/Mat_White_M0.00_R0.75
+    visible: 1
+    parentID: -1
+    id: 33
+  - name: Mat_White_M0.00_R1.00
+    scenePath: EditorScene/Prefabs/MainScene/MatBall/Mat_White/Mat_White_M0.00_R1.00
+    visible: 1
+    parentID: -1
+    id: 34
+  - name: Mat_White_M0.25_R0.00
+    scenePath: EditorScene/Prefabs/MainScene/MatBall/Mat_White/Mat_White_M0.25_R0.00
+    visible: 1
+    parentID: -1
+    id: 35
+  - name: Mat_White_M0.25_R0.25
+    scenePath: EditorScene/Prefabs/MainScene/MatBall/Mat_White/Mat_White_M0.25_R0.25
+    visible: 1
+    parentID: -1
+    id: 36
+  - name: Mat_White_M0.25_R0.50
+    scenePath: EditorScene/Prefabs/MainScene/MatBall/Mat_White/Mat_White_M0.25_R0.50
+    visible: 1
+    parentID: -1
+    id: 37
+  - name: Mat_White_M0.25_R0.75
+    scenePath: EditorScene/Prefabs/MainScene/MatBall/Mat_White/Mat_White_M0.25_R0.75
+    visible: 1
+    parentID: -1
+    id: 38
+  - name: Mat_White_M0.25_R1.00
+    scenePath: EditorScene/Prefabs/MainScene/MatBall/Mat_White/Mat_White_M0.25_R1.00
+    visible: 1
+    parentID: -1
+    id: 39
+  - name: Mat_White_M0.50_R0.00
+    scenePath: EditorScene/Prefabs/MainScene/MatBall/Mat_White/Mat_White_M0.50_R0.00
+    visible: 1
+    parentID: -1
+    id: 40
+  - name: Mat_White_M0.50_R0.25
+    scenePath: EditorScene/Prefabs/MainScene/MatBall/Mat_White/Mat_White_M0.50_R0.25
+    visible: 1
+    parentID: -1
+    id: 41
+  - name: Mat_White_M0.50_R0.50
+    scenePath: EditorScene/Prefabs/MainScene/MatBall/Mat_White/Mat_White_M0.50_R0.50
+    visible: 1
+    parentID: -1
+    id: 42
+  - name: Mat_White_M0.50_R0.75
+    scenePath: EditorScene/Prefabs/MainScene/MatBall/Mat_White/Mat_White_M0.50_R0.75
+    visible: 1
+    parentID: -1
+    id: 43
+  - name: Mat_White_M0.50_R1.00
+    scenePath: EditorScene/Prefabs/MainScene/MatBall/Mat_White/Mat_White_M0.50_R1.00
+    visible: 1
+    parentID: -1
+    id: 44
+  - name: Mat_White_M0.75_R0.00
+    scenePath: EditorScene/Prefabs/MainScene/MatBall/Mat_White/Mat_White_M0.75_R0.00
+    visible: 1
+    parentID: -1
+    id: 45
+  - name: Mat_White_M0.75_R0.25
+    scenePath: EditorScene/Prefabs/MainScene/MatBall/Mat_White/Mat_White_M0.75_R0.25
+    visible: 1
+    parentID: -1
+    id: 46
+  - name: Mat_White_M0.75_R0.50
+    scenePath: EditorScene/Prefabs/MainScene/MatBall/Mat_White/Mat_White_M0.75_R0.50
+    visible: 1
+    parentID: -1
+    id: 47
+  - name: Mat_White_M0.75_R0.75
+    scenePath: EditorScene/Prefabs/MainScene/MatBall/Mat_White/Mat_White_M0.75_R0.75
+    visible: 1
+    parentID: -1
+    id: 48
+  - name: Mat_White_M0.75_R1.00
+    scenePath: EditorScene/Prefabs/MainScene/MatBall/Mat_White/Mat_White_M0.75_R1.00
+    visible: 1
+    parentID: -1
+    id: 49
+  - name: Mat_White_M1.00_R0.00
+    scenePath: EditorScene/Prefabs/MainScene/MatBall/Mat_White/Mat_White_M1.00_R0.00
+    visible: 1
+    parentID: -1
+    id: 50
+  - name: Mat_White_M1.00_R0.25
+    scenePath: EditorScene/Prefabs/MainScene/MatBall/Mat_White/Mat_White_M1.00_R0.25
+    visible: 1
+    parentID: -1
+    id: 51
+  - name: Mat_White_M1.00_R0.50
+    scenePath: EditorScene/Prefabs/MainScene/MatBall/Mat_White/Mat_White_M1.00_R0.50
+    visible: 1
+    parentID: -1
+    id: 52
+  - name: Mat_White_M1.00_R0.75
+    scenePath: EditorScene/Prefabs/MainScene/MatBall/Mat_White/Mat_White_M1.00_R0.75
+    visible: 1
+    parentID: -1
+    id: 53
+  - name: Mat_White_M1.00_R1.00
+    scenePath: EditorScene/Prefabs/MainScene/MatBall/Mat_White/Mat_White_M1.00_R1.00
+    visible: 1
+    parentID: -1
+    id: 54
+  - name: Mat_Gray
+    scenePath: EditorScene/Prefabs/MainScene/MatBall/Mat_Gray
+    visible: 0
+    parentID: -1
+    id: 55
+  - name: Mat_Gray_M0.00_R0.00
+    scenePath: EditorScene/Prefabs/MainScene/MatBall/Mat_Gray/Mat_Gray_M0.00_R0.00
+    visible: 1
+    parentID: -1
+    id: 56
+  - name: Mat_Gray_M0.00_R0.25
+    scenePath: EditorScene/Prefabs/MainScene/MatBall/Mat_Gray/Mat_Gray_M0.00_R0.25
+    visible: 1
+    parentID: -1
+    id: 57
+  - name: Mat_Gray_M0.00_R0.50
+    scenePath: EditorScene/Prefabs/MainScene/MatBall/Mat_Gray/Mat_Gray_M0.00_R0.50
+    visible: 1
+    parentID: -1
+    id: 58
+  - name: Mat_Gray_M0.00_R0.75
+    scenePath: EditorScene/Prefabs/MainScene/MatBall/Mat_Gray/Mat_Gray_M0.00_R0.75
+    visible: 1
+    parentID: -1
+    id: 59
+  - name: Mat_Gray_M0.00_R1.00
+    scenePath: EditorScene/Prefabs/MainScene/MatBall/Mat_Gray/Mat_Gray_M0.00_R1.00
+    visible: 1
+    parentID: -1
+    id: 60
+  - name: Mat_Gray_M0.25_R0.00
+    scenePath: EditorScene/Prefabs/MainScene/MatBall/Mat_Gray/Mat_Gray_M0.25_R0.00
+    visible: 1
+    parentID: -1
+    id: 61
+  - name: Mat_Gray_M0.25_R0.25
+    scenePath: EditorScene/Prefabs/MainScene/MatBall/Mat_Gray/Mat_Gray_M0.25_R0.25
+    visible: 1
+    parentID: -1
+    id: 62
+  - name: Mat_Gray_M0.25_R0.50
+    scenePath: EditorScene/Prefabs/MainScene/MatBall/Mat_Gray/Mat_Gray_M0.25_R0.50
+    visible: 1
+    parentID: -1
+    id: 63
+  - name: Mat_Gray_M0.25_R0.75
+    scenePath: EditorScene/Prefabs/MainScene/MatBall/Mat_Gray/Mat_Gray_M0.25_R0.75
+    visible: 1
+    parentID: -1
+    id: 64
+  - name: Mat_Gray_M0.25_R1.00
+    scenePath: EditorScene/Prefabs/MainScene/MatBall/Mat_Gray/Mat_Gray_M0.25_R1.00
+    visible: 1
+    parentID: -1
+    id: 65
+  - name: Mat_Gray_M0.50_R0.00
+    scenePath: EditorScene/Prefabs/MainScene/MatBall/Mat_Gray/Mat_Gray_M0.50_R0.00
+    visible: 1
+    parentID: -1
+    id: 66
+  - name: Mat_Gray_M0.50_R0.25
+    scenePath: EditorScene/Prefabs/MainScene/MatBall/Mat_Gray/Mat_Gray_M0.50_R0.25
+    visible: 1
+    parentID: -1
+    id: 67
+  - name: Mat_Gray_M0.50_R0.50
+    scenePath: EditorScene/Prefabs/MainScene/MatBall/Mat_Gray/Mat_Gray_M0.50_R0.50
+    visible: 1
+    parentID: -1
+    id: 68
+  - name: Mat_Gray_M0.50_R0.75
+    scenePath: EditorScene/Prefabs/MainScene/MatBall/Mat_Gray/Mat_Gray_M0.50_R0.75
+    visible: 1
+    parentID: -1
+    id: 69
+  - name: Mat_Gray_M0.50_R1.00
+    scenePath: EditorScene/Prefabs/MainScene/MatBall/Mat_Gray/Mat_Gray_M0.50_R1.00
+    visible: 1
+    parentID: -1
+    id: 70
+  - name: Mat_Gray_M0.75_R0.00
+    scenePath: EditorScene/Prefabs/MainScene/MatBall/Mat_Gray/Mat_Gray_M0.75_R0.00
+    visible: 1
+    parentID: -1
+    id: 71
+  - name: Mat_Gray_M0.75_R0.25
+    scenePath: EditorScene/Prefabs/MainScene/MatBall/Mat_Gray/Mat_Gray_M0.75_R0.25
+    visible: 1
+    parentID: -1
+    id: 72
+  - name: Mat_Gray_M0.75_R0.50
+    scenePath: EditorScene/Prefabs/MainScene/MatBall/Mat_Gray/Mat_Gray_M0.75_R0.50
+    visible: 1
+    parentID: -1
+    id: 73
+  - name: Mat_Gray_M0.75_R0.75
+    scenePath: EditorScene/Prefabs/MainScene/MatBall/Mat_Gray/Mat_Gray_M0.75_R0.75
+    visible: 1
+    parentID: -1
+    id: 74
+  - name: Mat_Gray_M0.75_R1.00
+    scenePath: EditorScene/Prefabs/MainScene/MatBall/Mat_Gray/Mat_Gray_M0.75_R1.00
+    visible: 1
+    parentID: -1
+    id: 75
+  - name: Mat_Gray_M1.00_R0.00
+    scenePath: EditorScene/Prefabs/MainScene/MatBall/Mat_Gray/Mat_Gray_M1.00_R0.00
+    visible: 1
+    parentID: -1
+    id: 76
+  - name: Mat_Gray_M1.00_R0.25
+    scenePath: EditorScene/Prefabs/MainScene/MatBall/Mat_Gray/Mat_Gray_M1.00_R0.25
+    visible: 1
+    parentID: -1
+    id: 77
+  - name: Mat_Gray_M1.00_R0.50
+    scenePath: EditorScene/Prefabs/MainScene/MatBall/Mat_Gray/Mat_Gray_M1.00_R0.50
+    visible: 1
+    parentID: -1
+    id: 78
+  - name: Mat_Gray_M1.00_R0.75
+    scenePath: EditorScene/Prefabs/MainScene/MatBall/Mat_Gray/Mat_Gray_M1.00_R0.75
+    visible: 1
+    parentID: -1
+    id: 79
+  - name: Mat_Gray_M1.00_R1.00
+    scenePath: EditorScene/Prefabs/MainScene/MatBall/Mat_Gray/Mat_Gray_M1.00_R1.00
+    visible: 1
+    parentID: -1
+    id: 80
+  - name: Mat_Black
+    scenePath: EditorScene/Prefabs/MainScene/MatBall/Mat_Black
+    visible: 0
+    parentID: -1
+    id: 81
+  - name: Mat_Black_M0.00_R0.00
+    scenePath: EditorScene/Prefabs/MainScene/MatBall/Mat_Black/Mat_Black_M0.00_R0.00
+    visible: 1
+    parentID: -1
+    id: 82
+  - name: Mat_Black_M0.00_R0.25
+    scenePath: EditorScene/Prefabs/MainScene/MatBall/Mat_Black/Mat_Black_M0.00_R0.25
+    visible: 1
+    parentID: -1
+    id: 83
+  - name: Mat_Black_M0.00_R0.50
+    scenePath: EditorScene/Prefabs/MainScene/MatBall/Mat_Black/Mat_Black_M0.00_R0.50
+    visible: 1
+    parentID: -1
+    id: 84
+  - name: Mat_Black_M0.00_R0.75
+    scenePath: EditorScene/Prefabs/MainScene/MatBall/Mat_Black/Mat_Black_M0.00_R0.75
+    visible: 1
+    parentID: -1
+    id: 85
+  - name: Mat_Black_M0.00_R1.00
+    scenePath: EditorScene/Prefabs/MainScene/MatBall/Mat_Black/Mat_Black_M0.00_R1.00
+    visible: 1
+    parentID: -1
+    id: 86
+  - name: Mat_Black_M0.25_R0.00
+    scenePath: EditorScene/Prefabs/MainScene/MatBall/Mat_Black/Mat_Black_M0.25_R0.00
+    visible: 1
+    parentID: -1
+    id: 87
+  - name: Mat_Black_M0.25_R0.25
+    scenePath: EditorScene/Prefabs/MainScene/MatBall/Mat_Black/Mat_Black_M0.25_R0.25
+    visible: 1
+    parentID: -1
+    id: 88
+  - name: Mat_Black_M0.25_R0.50
+    scenePath: EditorScene/Prefabs/MainScene/MatBall/Mat_Black/Mat_Black_M0.25_R0.50
+    visible: 1
+    parentID: -1
+    id: 89
+  - name: Mat_Black_M0.25_R0.75
+    scenePath: EditorScene/Prefabs/MainScene/MatBall/Mat_Black/Mat_Black_M0.25_R0.75
+    visible: 1
+    parentID: -1
+    id: 90
+  - name: Mat_Black_M0.25_R1.00
+    scenePath: EditorScene/Prefabs/MainScene/MatBall/Mat_Black/Mat_Black_M0.25_R1.00
+    visible: 1
+    parentID: -1
+    id: 91
+  - name: Mat_Black_M0.50_R0.00
+    scenePath: EditorScene/Prefabs/MainScene/MatBall/Mat_Black/Mat_Black_M0.50_R0.00
+    visible: 1
+    parentID: -1
+    id: 92
+  - name: Mat_Black_M0.50_R0.25
+    scenePath: EditorScene/Prefabs/MainScene/MatBall/Mat_Black/Mat_Black_M0.50_R0.25
+    visible: 1
+    parentID: -1
+    id: 93
+  - name: Mat_Black_M0.50_R0.50
+    scenePath: EditorScene/Prefabs/MainScene/MatBall/Mat_Black/Mat_Black_M0.50_R0.50
+    visible: 1
+    parentID: -1
+    id: 94
+  - name: Mat_Black_M0.50_R0.75
+    scenePath: EditorScene/Prefabs/MainScene/MatBall/Mat_Black/Mat_Black_M0.50_R0.75
+    visible: 1
+    parentID: -1
+    id: 95
+  - name: Mat_Black_M0.50_R1.00
+    scenePath: EditorScene/Prefabs/MainScene/MatBall/Mat_Black/Mat_Black_M0.50_R1.00
+    visible: 1
+    parentID: -1
+    id: 96
+  - name: Mat_Black_M0.75_R0.00
+    scenePath: EditorScene/Prefabs/MainScene/MatBall/Mat_Black/Mat_Black_M0.75_R0.00
+    visible: 1
+    parentID: -1
+    id: 97
+  - name: Mat_Black_M0.75_R0.25
+    scenePath: EditorScene/Prefabs/MainScene/MatBall/Mat_Black/Mat_Black_M0.75_R0.25
+    visible: 1
+    parentID: -1
+    id: 98
+  - name: Mat_Black_M0.75_R0.50
+    scenePath: EditorScene/Prefabs/MainScene/MatBall/Mat_Black/Mat_Black_M0.75_R0.50
+    visible: 1
+    parentID: -1
+    id: 99
+  - name: Mat_Black_M0.75_R0.75
+    scenePath: EditorScene/Prefabs/MainScene/MatBall/Mat_Black/Mat_Black_M0.75_R0.75
+    visible: 1
+    parentID: -1
+    id: 100
+  - name: Mat_Black_M0.75_R1.00
+    scenePath: EditorScene/Prefabs/MainScene/MatBall/Mat_Black/Mat_Black_M0.75_R1.00
+    visible: 1
+    parentID: -1
+    id: 101
+  - name: Mat_Black_M1.00_R0.00
+    scenePath: EditorScene/Prefabs/MainScene/MatBall/Mat_Black/Mat_Black_M1.00_R0.00
+    visible: 1
+    parentID: -1
+    id: 102
+  - name: Mat_Black_M1.00_R0.25
+    scenePath: EditorScene/Prefabs/MainScene/MatBall/Mat_Black/Mat_Black_M1.00_R0.25
+    visible: 1
+    parentID: -1
+    id: 103
+  - name: Mat_Black_M1.00_R0.50
+    scenePath: EditorScene/Prefabs/MainScene/MatBall/Mat_Black/Mat_Black_M1.00_R0.50
+    visible: 1
+    parentID: -1
+    id: 104
+  - name: Mat_Black_M1.00_R0.75
+    scenePath: EditorScene/Prefabs/MainScene/MatBall/Mat_Black/Mat_Black_M1.00_R0.75
+    visible: 1
+    parentID: -1
+    id: 105
+  - name: Mat_Black_M1.00_R1.00
+    scenePath: EditorScene/Prefabs/MainScene/MatBall/Mat_Black/Mat_Black_M1.00_R1.00
+    visible: 1
+    parentID: -1
+    id: 106
+  - name: MatLib
+    scenePath: EditorScene/Prefabs/MainScene/MatLib
+    visible: 0
+    parentID: -1
+    id: 107
+  - name: Mat_Aluminium
+    scenePath: EditorScene/Prefabs/MainScene/MatLib/Mat_Aluminium
+    visible: 1
+    parentID: -1
+    id: 108
+  - name: Mat_Concrete
+    scenePath: EditorScene/Prefabs/MainScene/MatLib/Mat_Concrete
+    visible: 1
+    parentID: -1
+    id: 109
+  - name: Mat_Copper
+    scenePath: EditorScene/Prefabs/MainScene/MatLib/Mat_Copper
+    visible: 1
+    parentID: -1
+    id: 110
+  - name: Mat_Fabric
+    scenePath: EditorScene/Prefabs/MainScene/MatLib/Mat_Fabric
+    visible: 1
+    parentID: -1
+    id: 111
+  - name: Mat_Gold
+    scenePath: EditorScene/Prefabs/MainScene/MatLib/Mat_Gold
+    visible: 1
+    parentID: -1
+    id: 112
+  - name: Mat_Iron
+    scenePath: EditorScene/Prefabs/MainScene/MatLib/Mat_Iron
+    visible: 1
+    parentID: -1
+    id: 113
+  - name: Mat_Leather
+    scenePath: EditorScene/Prefabs/MainScene/MatLib/Mat_Leather
+    visible: 1
+    parentID: -1
+    id: 114
+  - name: Mat_Lizard
+    scenePath: EditorScene/Prefabs/MainScene/MatLib/Mat_Lizard
+    visible: 1
+    parentID: -1
+    id: 115
+  - name: Mat_Mortar
+    scenePath: EditorScene/Prefabs/MainScene/MatLib/Mat_Mortar
+    visible: 1
+    parentID: -1
+    id: 116
+  - name: Mat_Plastic
+    scenePath: EditorScene/Prefabs/MainScene/MatLib/Mat_Plastic
+    visible: 1
+    parentID: -1
+    id: 117
+  - name: Mat_PVC
+    scenePath: EditorScene/Prefabs/MainScene/MatLib/Mat_PVC
+    visible: 1
+    parentID: -1
+    id: 118
+  - name: Mat_Rust
+    scenePath: EditorScene/Prefabs/MainScene/MatLib/Mat_Rust
+    visible: 1
+    parentID: -1
+    id: 119
+  - name: Mat_Silver
+    scenePath: EditorScene/Prefabs/MainScene/MatLib/Mat_Silver
+    visible: 1
+    parentID: -1
+    id: 120
+  - name: Mat_Steel
+    scenePath: EditorScene/Prefabs/MainScene/MatLib/Mat_Steel
+    visible: 1
+    parentID: -1
+    id: 121
+  - name: Mat_Wood
+    scenePath: EditorScene/Prefabs/MainScene/MatLib/Mat_Wood
+    visible: 1
+    parentID: -1
+    id: 122
+  - name: MainScene
+    scenePath: EditorScene/MultiLayer/MainScene
+    visible: 1
+    parentID: -1
+    id: 123
+  - name: MainScene
+    scenePath: EditorScene/Effects/MainScene
+    visible: 1
+    parentID: -1
+    id: 124
+  - name: MainScene
+    scenePath: EditorScene/LightProbes/MainScene
+    visible: 1
+    parentID: -1
+    id: 125
+  - name: MainScene
+    scenePath: EditorScene/Audio/MainScene
+    visible: 1
+    parentID: -1
+    id: 126
+  - name: Chunk_0_0
+    scenePath: EditorScene/MeshTerrain/Chunk_0_0
+    visible: 1
+    parentID: -1
+    id: 127
+  - name: Chunk_1_0
+    scenePath: EditorScene/MeshTerrain/Chunk_1_0
+    visible: 1
+    parentID: -1
+    id: 128
+  - name: Chunk_0_1
+    scenePath: EditorScene/MeshTerrain/Chunk_0_1
+    visible: 1
+    parentID: -1
+    id: 129
+  - name: Chunk_1_1
+    scenePath: EditorScene/MeshTerrain/Chunk_1_1
+    visible: 1
+    parentID: -1
+    id: 130
+  gameObjects:
+  - name: mainLight
+    pos: {x: 0, y: 3, z: 0}
+    rotate: {x: -0.2323943, y: 0.8934309, z: -0.20836273, w: -0.3230467}
+    scale: {x: 1, y: 1, z: 1}
+    aabb:
+      min: {x: 0, y: 0, z: 0}
+      max: {x: 0, y: 0, z: 0}
+    tag: Untagged
+    layer: 0
+    prefabID: -1
+    parentID: 5
+    flag:
+      flag: 805306368
+    id: 6
+  - name: addLight
+    pos: {x: 0, y: 0, z: 0}
+    rotate: {x: 0.9317122, y: 0.044633616, z: -0.08017189, w: 0.35141522}
+    scale: {x: 1, y: 1, z: 1}
+    aabb:
+      min: {x: 0, y: 0, z: 0}
+      max: {x: 0, y: 0, z: 0}
+    tag: Untagged
+    layer: 0
+    prefabID: -1
+    parentID: 5
+    flag:
+      flag: 805306368
+    id: 8
+  - name: OP_C1bd_a_fbx_0
+    pos: {x: 60.24, y: 0, z: 65.15}
+    rotate: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
+    scale: {x: 1, y: 1.0000005, z: 1.0000005}
+    aabb:
+      min: {x: 0, y: 0, z: 0}
+      max: {x: 0, y: 0, z: 0}
+    tag: Untagged
+    layer: 0
+    prefabID: 0
+    parentID: 14
+    flag:
+      flag: 805306368
+    id: 15
+  - name: OP_C1bd_a_fbx_1
+    pos: {x: 107.34, y: 0, z: 118.12}
+    rotate: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
+    scale: {x: 1, y: 1.0000005, z: 1.0000005}
+    aabb:
+      min: {x: 0, y: 0, z: 0}
+      max: {x: 0, y: 0, z: 0}
+    tag: Untagged
+    layer: 0
+    prefabID: 0
+    parentID: 14
+    flag:
+      flag: 805306368
+    id: 16
+  - name: OP_TY_bucket_fbx_0
+    pos: {x: 63.731003, y: 0, z: 77.777}
+    rotate: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
+    scale: {x: 1, y: 1, z: 1}
+    aabb:
+      min: {x: 0, y: 0, z: 0}
+      max: {x: 0, y: 0, z: 0}
+    tag: Untagged
+    layer: 0
+    prefabID: 1
+    parentID: 10
+    flag:
+      flag: 805306368
+    id: 22
+  - name: OP_C1_meilihao_pao_fbx_0
+    pos: {x: 66.08, y: 0, z: 77.669}
+    rotate: {x: -0.5, y: -0.5, z: -0.5, w: 0.5}
+    scale: {x: 0.1, y: 0.1, z: 0.1}
+    aabb:
+      min: {x: 0, y: 0, z: 0}
+      max: {x: 0, y: 0, z: 0}
+    tag: Untagged
+    layer: 0
+    prefabID: 2
+    parentID: 10
+    flag:
+      flag: 805306368
+    id: 23
+  - name: OP_C1_xiaochang_fbx_0
+    pos: {x: 69.1, y: 0.39, z: 73.74}
+    rotate: {x: -0, y: -0, z: -0, w: 1}
+    scale: {x: 1, y: 1, z: 1}
+    aabb:
+      min: {x: 0, y: 0, z: 0}
+      max: {x: 0, y: 0, z: 0}
+    tag: Untagged
+    layer: 0
+    prefabID: 3
+    parentID: 10
+    flag:
+      flag: 805306368
+    id: 24
+  colliderDatas: []
+  lightDatas:
+  - objID: 6
+    lightType: 1
+    cullingMask: -1
+    lightmapBakeType: 1
+    renderMode: 0
+    color: {r: 1, g: 0.9991296, b: 0.8915094, a: 1}
+    intensity: 2.8
+    bounceIntensity: 1
+    colorTemperature: 6570
+    shadows: 0
+    shadowStrength: 1
+    shadowResolution: -1
+    shadowBias: 0
+    shadowNormalBias: 0
+    shadowNearPlane: 0.2
+    shadowCustomResolution: -1
+    spotAngle: 30
+    range: 10
+    areaSize: {x: 0, y: 0}
+    cookie: {fileID: 0}
+    cookieSize: 0
+  - objID: 8
+    lightType: 1
+    cullingMask: 0
+    lightmapBakeType: 4
+    renderMode: 0
+    color: {r: 0.48215556, g: 0.50052917, b: 0.5188679, a: 1}
+    intensity: 0.3
+    bounceIntensity: 1
+    colorTemperature: 6570
+    shadows: 0
+    shadowStrength: 1
+    shadowResolution: -1
+    shadowBias: 0.05
+    shadowNormalBias: 0.4
+    shadowNearPlane: 0.2
+    shadowCustomResolution: -1
+    spotAngle: 30
+    range: 10
+    areaSize: {x: 0, y: 0}
+    cookie: {fileID: 0}
+    cookieSize: 0
+  animationDatas: []
+  envObjects: []
+  localReflectionProbes: []
+  instances: []
+  chunkXZ: {x: 0, y: 0}
+  saveFlag:
+    flag: 0

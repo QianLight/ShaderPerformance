@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40e1cbd74443f2b4a9ea8cdee05aef60, type: 3}
+  m_Name: ShaderGUIConfig_SFX_Distortion1
+  m_EditorClassIdentifier: 
+  shader: {fileID: 4800000, guid: a16738ad748f4bf4986c12d8e341c46b, type: 3}
+  dummyMatType: 2
+  lsType: 0
+  shaderFeatures:
+  - hash: 
+    sfg: {fileID: 11400000, guid: cf68945b14efc0d448b4e1db37a88223, type: 2}
+    shaderFeatures:
+    - Base_MainTex
+  - hash: 
+    sfg: {fileID: 11400000, guid: 682c830b02ade6544ae1f9e0666433f7, type: 2}
+    shaderFeatures:
+    - Distortion_UVScale_Speed
+    - Distortion_Scale
+    - Distortion_Alpha Scale
+    - Distortion_UV Scale Offset
+  - hash: 
+    sfg: {fileID: 11400000, guid: 5b91b59f61104d84184c6d4e29827ba8, type: 2}
+    shaderFeatures:
+    - DistortionMask_HasMaskTex
+    - DistortionMask_MaskTex
+    - DistortionMask_UseRChannel

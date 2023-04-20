@@ -1,0 +1,38 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 114342593, guid: a8701fc72a91f814ea6a07ebb465d2b8, type: 3}
+  m_Name: SFXNoTransparency
+  m_EditorClassIdentifier: 
+  items:
+  - monster_enel_leidian_zheng
+  - monster_enel_leidian_fu
+  - fx_ui_monster_aimtarget
+  - fx_ui_monster_aimtarget02
+  - fx_warning_fensan
+  - fx_warning_fentan_juxing
+  - fx_warning_fentan_yuan
+  - monster_gedatsu_zhaoyun
+  - fx_ui_teamid_1
+  - fx_ui_teamid_2
+  - fx_ui_teamid_3
+  - fx_ui_teamid_4
+  - ui_fentan_1
+  - ui_fentan_2
+  - ui_fentan_3
+  - ui_fentan_4
+  - ui_fentan_safe
+  - ui_fentan_waikuang
+  - ui_fentan_fadeout_1
+  - ui_fentan_fadeout_2
+  - ui_fentan_fadeout_3
+  - ui_fentan_fadeout_4
+  - ui_fentan_fadeout_safe

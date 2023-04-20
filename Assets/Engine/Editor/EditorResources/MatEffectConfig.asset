@@ -1,0 +1,2473 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 825e822329c36ba4c94ae9f4225adec6, type: 3}
+  m_Name: MatEffectConfig
+  m_EditorClassIdentifier: 
+  nodes:
+  - id: 0
+  - id: 1
+  - id: 2
+  - id: 3
+  - id: 4
+  - id: 5
+  - id: 6
+  - id: 7
+  - id: 8
+  - id: 9
+  - id: 10
+  - id: 11
+  - id: 12
+  - id: 13
+  - id: 14
+  - id: 15
+  - id: 16
+  - id: 17
+  - id: 18
+  - id: 19
+  - id: 20
+  - id: 21
+  - id: 22
+  - id: 23
+  - id: 24
+  - id: 25
+  - id: 26
+  - id: 27
+  - id: 28
+  - id: 29
+  - id: 30
+  - id: 31
+  - id: 32
+  - id: 33
+  - id: 34
+  - id: 35
+  - id: 36
+  - id: 37
+  - id: 38
+  - id: 39
+  - id: 40
+  - id: 41
+  - id: 42
+  - id: 43
+  - id: 44
+  - id: 45
+  - id: 46
+  - id: 47
+  - id: 48
+  - id: 49
+  - id: 50
+  - id: 51
+  - id: 52
+  - id: 53
+  - id: 54
+  - id: 55
+  - id: 56
+  - id: 57
+  - id: 58
+  - id: 59
+  - id: 60
+  - id: 61
+  - id: 62
+  - id: 63
+  - id: 64
+  - id: 65
+  comments: []
+  effectTemplate:
+  - id: 0
+  - id: 1
+  - id: 2
+  - id: 3
+  - id: 4
+  - id: 5
+  - id: 6
+  - id: 7
+  - id: 8
+  - id: 9
+  - id: 10
+  - id: 11
+  - id: 12
+  - id: 13
+  - id: 34
+  - id: 41
+  - id: 46
+  - id: 48
+  - id: 50
+  - id: 54
+  - id: 57
+  - id: 59
+  - id: 61
+  - id: 65
+  templates:
+  - effectIndex: 0
+    nodeList:
+    - t: ShaderColor
+      index: 14
+      uniqueID: 100
+  - effectIndex: 1
+    nodeList:
+    - t: ShaderColor
+      index: 15
+      uniqueID: 200
+  - effectIndex: 2
+    nodeList:
+    - t: RenderActive
+      index: 23
+      uniqueID: 400
+    - t: MatSwitch
+      index: 30
+      uniqueID: 401
+  - effectIndex: 3
+    nodeList:
+    - t: ShaderTexture
+      index: 20
+      uniqueID: 500
+    - t: ShaderTexture
+      index: 21
+      uniqueID: 501
+    - t: ShaderColor
+      index: 16
+      uniqueID: 502
+  - effectIndex: 4
+    nodeList:
+    - t: MatLoad
+      index: 26
+      uniqueID: 900
+    - t: ShaderColor
+      index: 17
+      uniqueID: 901
+  - effectIndex: 5
+    nodeList:
+    - t: MatSwitch
+      index: 27
+      uniqueID: 507
+  - effectIndex: 6
+    nodeList:
+    - t: MatSwitch
+      index: 28
+      uniqueID: 300
+  - effectIndex: 7
+    nodeList:
+    - t: MatSwitch
+      index: 29
+      uniqueID: 600
+    - t: GetPos
+      index: 39
+      uniqueID: 601
+    - t: ShaderColor
+      index: 45
+      uniqueID: 602
+  - effectIndex: 8
+    nodeList:
+    - t: ShaderTexture
+      index: 22
+      uniqueID: 1000
+  - effectIndex: 9
+    nodeList:
+    - t: RenderActive
+      index: 24
+      uniqueID: 700
+    - t: ShaderColor
+      index: 18
+      uniqueID: 701
+  - effectIndex: 10
+    nodeList:
+    - t: MatSwitch
+      index: 31
+      uniqueID: 800
+    - t: RenderActive
+      index: 25
+      uniqueID: 801
+    - t: GetPos
+      index: 40
+      uniqueID: 802
+    - t: ShaderColor
+      index: 44
+      uniqueID: 803
+  - effectIndex: 11
+    nodeList:
+    - t: ScaleParam
+      index: 32
+      uniqueID: 1100
+  - effectIndex: 12
+    nodeList:
+    - t: ShaderColor
+      index: 19
+      uniqueID: 1200
+  - effectIndex: 13
+    nodeList:
+    - t: ShaderRT
+      index: 33
+      uniqueID: 1300
+  - effectIndex: 14
+    nodeList:
+    - t: MatLoad
+      index: 35
+      uniqueID: 1400
+    - t: ShaderColor
+      index: 36
+      uniqueID: 1401
+    - t: ShaderColor
+      index: 37
+      uniqueID: 1402
+    - t: GetPos
+      index: 38
+      uniqueID: 1403
+  - effectIndex: 15
+    nodeList:
+    - t: MatAdd
+      index: 42
+      uniqueID: 1500
+    - t: ShaderColor
+      index: 43
+      uniqueID: 1501
+  - effectIndex: 16
+    nodeList:
+    - t: ShaderColor
+      index: 47
+      uniqueID: 1600
+  - effectIndex: 17
+    nodeList:
+    - t: ShaderColor
+      index: 49
+      uniqueID: 1700
+  - effectIndex: 18
+    nodeList:
+    - t: ShaderKeyWord
+      index: 51
+      uniqueID: 1800
+    - t: GetPos
+      index: 52
+      uniqueID: 1801
+    - t: ShaderParam
+      index: 53
+      uniqueID: 1802
+  - effectIndex: 19
+    nodeList:
+    - t: MatAdd
+      index: 55
+      uniqueID: 0
+    - t: ShaderColor
+      index: 56
+      uniqueID: 1
+  - effectIndex: 20
+    nodeList:
+    - t: RenderActive
+      index: 58
+      uniqueID: 2000
+  - effectIndex: 21
+    nodeList:
+    - t: RenderActive
+      index: 60
+      uniqueID: 2100
+  - effectIndex: 22
+    nodeList:
+    - t: MatLoad
+      index: 62
+      uniqueID: 2300
+    - t: ShaderColor
+      index: 63
+      uniqueID: 2301
+  - effectIndex: 23
+    nodeList:
+    - t: MatAddAndLerp
+      index: 64
+      uniqueID: 2200
+  references:
+    version: 1
+    00000000:
+      type: {class: EffectTemplate, ns: CFEngine, asm: Assembly-CSharp}
+      data:
+        id: 98bb1ca7-493c-4ab8-bb67-2118c6113eda
+        name: Effect Template
+        graph: {fileID: 11400000}
+        graphPosition: {x: 1004.0327, y: -520.0955}
+        m_Ports:
+        - name: Next
+          fieldName: 
+          acceptsMultipleConnections: 1
+          isInput: 0
+          m_Connections:
+          - nodeId: a16eb855-ab1d-4f59-ab46-9be2dbe8012e
+            portName: Pre
+          - nodeId: a16eb855-ab1d-4f59-ab46-9be2dbe8012e
+            portName: Pre
+          m_SerializedType: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+            PublicKeyToken=b77a5c561934e089
+        effectName: RimLight
+        groupID: 100
+        valid: 1
+        applyOnReplaceMat: 0
+        applyOnAddMat: 0
+        hideShadow: 0
+        next: 0
+    00000001:
+      type: {class: EffectTemplate, ns: CFEngine, asm: Assembly-CSharp}
+      data:
+        id: 57b7b797-aa13-4e3c-8fa9-99ae58dc6745
+        name: Effect Template
+        graph: {fileID: 11400000}
+        graphPosition: {x: 1162.7, y: -183.37604}
+        m_Ports:
+        - name: Next
+          fieldName: 
+          acceptsMultipleConnections: 1
+          isInput: 0
+          m_Connections:
+          - nodeId: 02bcfd06-c91b-4d98-8c70-5255aa10d34f
+            portName: Pre
+          m_SerializedType: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+            PublicKeyToken=b77a5c561934e089
+        effectName: AddColor
+        groupID: 200
+        valid: 1
+        applyOnReplaceMat: 0
+        applyOnAddMat: 0
+        hideShadow: 0
+        next: 0
+    00000002:
+      type: {class: EffectTemplate, ns: CFEngine, asm: Assembly-CSharp}
+      data:
+        id: 905aaf04-8bde-4e90-853e-f3e63b67668b
+        name: Effect Template
+        graph: {fileID: 11400000}
+        graphPosition: {x: 1863.8754, y: 625.29517}
+        m_Ports:
+        - name: Next
+          fieldName: 
+          acceptsMultipleConnections: 1
+          isInput: 0
+          m_Connections:
+          - nodeId: d1ef9b37-9ddd-485c-8ef5-a394751c49f2
+            portName: Pre
+          m_SerializedType: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+            PublicKeyToken=b77a5c561934e089
+        effectName: Hide
+        groupID: 400
+        valid: 1
+        applyOnReplaceMat: 1
+        applyOnAddMat: 0
+        hideShadow: 0
+        next: 0
+    00000003:
+      type: {class: EffectTemplate, ns: CFEngine, asm: Assembly-CSharp}
+      data:
+        id: bef819fb-4c7f-4a19-b144-c9928d69aeb7
+        name: Effect Template
+        graph: {fileID: 11400000}
+        graphPosition: {x: 988.91644, y: 959.77136}
+        m_Ports:
+        - name: Next
+          fieldName: 
+          acceptsMultipleConnections: 1
+          isInput: 0
+          m_Connections:
+          - nodeId: de55bbc1-9999-4228-9e42-014954322d08
+            portName: Pre
+          m_SerializedType: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+            PublicKeyToken=b77a5c561934e089
+        effectName: Gear2
+        groupID: 500
+        valid: 1
+        applyOnReplaceMat: 0
+        applyOnAddMat: 0
+        hideShadow: 0
+        next: 0
+    00000004:
+      type: {class: EffectTemplate, ns: CFEngine, asm: Assembly-CSharp}
+      data:
+        id: 99f765dc-3c45-4629-87cf-8532954d058d
+        name: Effect Template
+        graph: {fileID: 11400000}
+        graphPosition: {x: 872.4335, y: 1203.1138}
+        m_Ports:
+        - name: Next
+          fieldName: 
+          acceptsMultipleConnections: 1
+          isInput: 0
+          m_Connections:
+          - nodeId: 053c2c82-02d3-4f2e-ab60-5bb3e93d6a0d
+            portName: Pre
+          m_SerializedType: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+            PublicKeyToken=b77a5c561934e089
+        effectName: Medusa
+        groupID: 900
+        valid: 1
+        applyOnReplaceMat: 1
+        applyOnAddMat: 0
+        hideShadow: 0
+        next: 0
+    00000005:
+      type: {class: EffectTemplate, ns: CFEngine, asm: Assembly-CSharp}
+      data:
+        id: 55c12486-3d53-46e4-94e1-9c863a5eae4c
+        name: Effect Template
+        graph: {fileID: 11400000}
+        graphPosition: {x: 1163.4573, y: 275.8743}
+        m_Ports:
+        - name: Next
+          fieldName: 
+          acceptsMultipleConnections: 1
+          isInput: 0
+          m_Connections:
+          - nodeId: fc56b67f-639c-4339-80a3-9f1ddd363242
+            portName: Pre
+          m_SerializedType: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+            PublicKeyToken=b77a5c561934e089
+        effectName: DitherFade
+        groupID: 507
+        valid: 1
+        applyOnReplaceMat: 1
+        applyOnAddMat: 0
+        hideShadow: 0
+        next: 0
+    00000006:
+      type: {class: EffectTemplate, ns: CFEngine, asm: Assembly-CSharp}
+      data:
+        id: 8b7118fc-cb33-40ec-b617-ee7e102abd60
+        name: Effect Template
+        graph: {fileID: 11400000}
+        graphPosition: {x: 1909.7449, y: -124.04685}
+        m_Ports:
+        - name: Next
+          fieldName: 
+          acceptsMultipleConnections: 1
+          isInput: 0
+          m_Connections:
+          - nodeId: d52bdbf9-ff08-46c1-ba9b-cfc17eff0d7a
+            portName: Pre
+          m_SerializedType: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+            PublicKeyToken=b77a5c561934e089
+        effectName: Fade
+        groupID: 300
+        valid: 1
+        applyOnReplaceMat: 1
+        applyOnAddMat: 0
+        hideShadow: 0
+        next: 0
+    00000007:
+      type: {class: EffectTemplate, ns: CFEngine, asm: Assembly-CSharp}
+      data:
+        id: e8a94e5b-17ed-471b-8017-9000c31e942b
+        name: Effect Template
+        graph: {fileID: 11400000}
+        graphPosition: {x: 844, y: 1583}
+        m_Ports:
+        - name: Next
+          fieldName: 
+          acceptsMultipleConnections: 1
+          isInput: 0
+          m_Connections:
+          - nodeId: 90fde693-49fb-4bf2-a13f-eb43078d45f8
+            portName: Pre
+          m_SerializedType: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+            PublicKeyToken=b77a5c561934e089
+        effectName: Disappear
+        groupID: 600
+        valid: 1
+        applyOnReplaceMat: 1
+        applyOnAddMat: 0
+        hideShadow: 1
+        next: 0
+    00000008:
+      type: {class: EffectTemplate, ns: CFEngine, asm: Assembly-CSharp}
+      data:
+        id: 7848b948-309d-41bf-bc67-e749d08a439a
+        name: Effect Template
+        graph: {fileID: 11400000}
+        graphPosition: {x: 888.191, y: 2276.75}
+        m_Ports:
+        - name: Next
+          fieldName: 
+          acceptsMultipleConnections: 1
+          isInput: 0
+          m_Connections:
+          - nodeId: 8fe80695-464a-4169-a62d-4b9dbc367e2e
+            portName: Pre
+          m_SerializedType: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+            PublicKeyToken=b77a5c561934e089
+        effectName: TexSwitch
+        groupID: 1000
+        valid: 1
+        applyOnReplaceMat: 0
+        applyOnAddMat: 0
+        hideShadow: 0
+        next: 0
+    00000009:
+      type: {class: EffectTemplate, ns: CFEngine, asm: Assembly-CSharp}
+      data:
+        id: 086f9d93-a1bf-433c-866f-f0f7d7a42d9d
+        name: Effect Template
+        graph: {fileID: 11400000}
+        graphPosition: {x: 860, y: 2541}
+        m_Ports:
+        - name: Next
+          fieldName: 
+          acceptsMultipleConnections: 1
+          isInput: 0
+          m_Connections:
+          - nodeId: dbe36836-925c-4494-92a6-03a5411f3a96
+            portName: Pre
+          m_SerializedType: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+            PublicKeyToken=b77a5c561934e089
+        effectName: SfxDisplay
+        groupID: 700
+        valid: 1
+        applyOnReplaceMat: 0
+        applyOnAddMat: 0
+        hideShadow: 0
+        next: 0
+    0000000A:
+      type: {class: EffectTemplate, ns: CFEngine, asm: Assembly-CSharp}
+      data:
+        id: a70786e0-4fa1-4545-a40a-124cedac30d5
+        name: Effect Template
+        graph: {fileID: 11400000}
+        graphPosition: {x: 656, y: 2813}
+        m_Ports:
+        - name: Next
+          fieldName: 
+          acceptsMultipleConnections: 1
+          isInput: 0
+          m_Connections:
+          - nodeId: ef92b28b-8fdc-4731-bd3d-f51ce4d945ff
+            portName: Pre
+          m_SerializedType: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+            PublicKeyToken=b77a5c561934e089
+        effectName: Appear
+        groupID: 800
+        valid: 1
+        applyOnReplaceMat: 1
+        applyOnAddMat: 0
+        hideShadow: 0
+        next: 0
+    0000000B:
+      type: {class: EffectTemplate, ns: CFEngine, asm: Assembly-CSharp}
+      data:
+        id: 061331e3-f734-4df9-99f9-66f28ef1191e
+        name: Effect Template
+        graph: {fileID: 11400000}
+        graphPosition: {x: 672, y: 3542}
+        m_Ports:
+        - name: Next
+          fieldName: 
+          acceptsMultipleConnections: 1
+          isInput: 0
+          m_Connections:
+          - nodeId: 04005be4-8fad-4597-bea7-d28371525a7d
+            portName: Pre
+          m_SerializedType: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+            PublicKeyToken=b77a5c561934e089
+        effectName: Scale
+        groupID: 1100
+        valid: 1
+        applyOnReplaceMat: 0
+        applyOnAddMat: 0
+        hideShadow: 0
+        next: 0
+    0000000C:
+      type: {class: EffectTemplate, ns: CFEngine, asm: Assembly-CSharp}
+      data:
+        id: 4863c127-4d4c-43ff-874c-553f3589d406
+        name: Effect Template
+        graph: {fileID: 11400000}
+        graphPosition: {x: 624, y: 3816}
+        m_Ports:
+        - name: Next
+          fieldName: 
+          acceptsMultipleConnections: 1
+          isInput: 0
+          m_Connections:
+          - nodeId: 342d3e38-a67d-4004-ba6e-69a8952bad80
+            portName: Pre
+          m_SerializedType: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+            PublicKeyToken=b77a5c561934e089
+        effectName: Color
+        groupID: 1200
+        valid: 1
+        applyOnReplaceMat: 0
+        applyOnAddMat: 0
+        hideShadow: 0
+        next: 0
+    0000000D:
+      type: {class: EffectTemplate, ns: CFEngine, asm: Assembly-CSharp}
+      data:
+        id: a614ec87-1525-4704-8b18-79c8975c1936
+        name: Effect Template
+        graph: {fileID: 11400000}
+        graphPosition: {x: 624.4155, y: 4189.7617}
+        m_Ports:
+        - name: Next
+          fieldName: 
+          acceptsMultipleConnections: 1
+          isInput: 0
+          m_Connections:
+          - nodeId: 3749c543-c4a2-4d22-9f1f-3775b00f43fd
+            portName: Pre
+          m_SerializedType: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+            PublicKeyToken=b77a5c561934e089
+        effectName: RnederTarget
+        groupID: 1300
+        valid: 1
+        applyOnReplaceMat: 0
+        applyOnAddMat: 0
+        hideShadow: 0
+        next: 0
+    0000000E:
+      type: {class: ShaderColor, ns: CFEngine, asm: Assembly-CSharp}
+      data:
+        id: a16eb855-ab1d-4f59-ab46-9be2dbe8012e
+        name: Shader Color
+        graph: {fileID: 11400000}
+        graphPosition: {x: 1380.0325, y: -569.0956}
+        m_Ports:
+        - name: Pre
+          fieldName: pre
+          acceptsMultipleConnections: 0
+          isInput: 1
+          m_Connections:
+          - nodeId: 98bb1ca7-493c-4ab8-bb67-2118c6113eda
+            portName: Next
+          - nodeId: 98bb1ca7-493c-4ab8-bb67-2118c6113eda
+            portName: Next
+          m_SerializedType: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+            PublicKeyToken=b77a5c561934e089
+        - name: Next
+          fieldName: 
+          acceptsMultipleConnections: 1
+          isInput: 0
+          m_Connections: []
+          m_SerializedType: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+            PublicKeyToken=b77a5c561934e089
+        pre: 0
+        next: 0
+        runOnDisable: 0
+        key: _Color
+        lerpType: 0
+        maskLerpType: 7
+        fadeInType: 1
+        fadeOutType: 2
+        color: {r: 1, g: 1, b: 1, a: 1}
+        hdr: 1
+        copySrcParam: 0
+        alpha: 0
+        alphaDesc: Intensity
+        alphaModifyType: 2
+        defaultAlpha: 0.6
+        minA: 0.5
+        maxA: 0.9
+    0000000F:
+      type: {class: ShaderColor, ns: CFEngine, asm: Assembly-CSharp}
+      data:
+        id: 02bcfd06-c91b-4d98-8c70-5255aa10d34f
+        name: Shader Color
+        graph: {fileID: 11400000}
+        graphPosition: {x: 1439.7, y: -195.37604}
+        m_Ports:
+        - name: Pre
+          fieldName: pre
+          acceptsMultipleConnections: 0
+          isInput: 1
+          m_Connections:
+          - nodeId: 57b7b797-aa13-4e3c-8fa9-99ae58dc6745
+            portName: Next
+          m_SerializedType: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+            PublicKeyToken=b77a5c561934e089
+        - name: Next
+          fieldName: 
+          acceptsMultipleConnections: 1
+          isInput: 0
+          m_Connections: []
+          m_SerializedType: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+            PublicKeyToken=b77a5c561934e089
+        pre: 0
+        next: 0
+        runOnDisable: 0
+        key: _Color
+        lerpType: 0
+        maskLerpType: 7
+        fadeInType: 4
+        fadeOutType: 8
+        color: {r: 1, g: 1, b: 1, a: 1}
+        hdr: 1
+        copySrcParam: 0
+        alpha: 0
+        alphaDesc: Intensity
+        alphaModifyType: 2
+        defaultAlpha: 0.1
+        minA: 0
+        maxA: 0.44
+    00000010:
+      type: {class: ShaderColor, ns: CFEngine, asm: Assembly-CSharp}
+      data:
+        id: e2ecae2b-64fd-49f4-b7fd-968cb4322d44
+        name: Shader Color
+        graph: {fileID: 11400000}
+        graphPosition: {x: 1968, y: 858}
+        m_Ports:
+        - name: Pre
+          fieldName: pre
+          acceptsMultipleConnections: 0
+          isInput: 1
+          m_Connections:
+          - nodeId: 2d6fc7b3-e419-46d2-ac4d-102a02e300bf
+            portName: Next
+          m_SerializedType: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+            PublicKeyToken=b77a5c561934e089
+        - name: Next
+          fieldName: 
+          acceptsMultipleConnections: 1
+          isInput: 0
+          m_Connections: []
+          m_SerializedType: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+            PublicKeyToken=b77a5c561934e089
+        pre: 0
+        next: 0
+        runOnDisable: 0
+        key: _Color5
+        lerpType: 255
+        maskLerpType: 0
+        fadeInType: 0
+        fadeOutType: 0
+        color: {r: 1, g: 1, b: 1, a: 0}
+        hdr: 1
+        copySrcParam: 0
+        alpha: 1
+        alphaDesc: Enable
+        alphaModifyType: 1
+        defaultAlpha: 0
+        minA: 0
+        maxA: 1
+    00000011:
+      type: {class: ShaderColor, ns: CFEngine, asm: Assembly-CSharp}
+      data:
+        id: 7f15a80d-6e32-4fde-b7dd-dedb1846f800
+        name: Shader Color
+        graph: {fileID: 11400000}
+        graphPosition: {x: 1626, y: 1245.2001}
+        m_Ports:
+        - name: Pre
+          fieldName: pre
+          acceptsMultipleConnections: 0
+          isInput: 1
+          m_Connections:
+          - nodeId: 053c2c82-02d3-4f2e-ab60-5bb3e93d6a0d
+            portName: Next
+          m_SerializedType: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+            PublicKeyToken=b77a5c561934e089
+        - name: Next
+          fieldName: 
+          acceptsMultipleConnections: 1
+          isInput: 0
+          m_Connections: []
+          m_SerializedType: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+            PublicKeyToken=b77a5c561934e089
+        pre: 0
+        next: 0
+        runOnDisable: 1
+        key: _Color0
+        lerpType: 8
+        maskLerpType: 0
+        fadeInType: 0
+        fadeOutType: 0
+        color: {r: 1, g: 1, b: 1, a: 1}
+        hdr: 0
+        copySrcParam: 0
+        alpha: 1
+        alphaDesc: 
+        alphaModifyType: 0
+        defaultAlpha: 0
+        minA: 0
+        maxA: 1
+    00000012:
+      type: {class: ShaderColor, ns: CFEngine, asm: Assembly-CSharp}
+      data:
+        id: 84be200b-f1c9-446a-97a2-a1e16558e382
+        name: Shader Color
+        graph: {fileID: 11400000}
+        graphPosition: {x: 1472, y: 2475}
+        m_Ports:
+        - name: Pre
+          fieldName: pre
+          acceptsMultipleConnections: 0
+          isInput: 1
+          m_Connections:
+          - nodeId: dbe36836-925c-4494-92a6-03a5411f3a96
+            portName: Next
+          m_SerializedType: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+            PublicKeyToken=b77a5c561934e089
+        - name: Next
+          fieldName: 
+          acceptsMultipleConnections: 1
+          isInput: 0
+          m_Connections: []
+          m_SerializedType: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+            PublicKeyToken=b77a5c561934e089
+        pre: 0
+        next: 0
+        runOnDisable: 0
+        key: _MainColor
+        lerpType: 0
+        maskLerpType: 8
+        fadeInType: 1
+        fadeOutType: 2
+        color: {r: 1, g: 1, b: 1, a: 1}
+        hdr: 1
+        copySrcParam: 1
+        alpha: 1
+        alphaDesc: Transparent
+        alphaModifyType: 2
+        defaultAlpha: 0
+        minA: 0
+        maxA: 1
+    00000013:
+      type: {class: ShaderColor, ns: CFEngine, asm: Assembly-CSharp}
+      data:
+        id: 342d3e38-a67d-4004-ba6e-69a8952bad80
+        name: Shader Color
+        graph: {fileID: 11400000}
+        graphPosition: {x: 902, y: 3798}
+        m_Ports:
+        - name: Pre
+          fieldName: pre
+          acceptsMultipleConnections: 0
+          isInput: 1
+          m_Connections:
+          - nodeId: 4863c127-4d4c-43ff-874c-553f3589d406
+            portName: Next
+          m_SerializedType: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+            PublicKeyToken=b77a5c561934e089
+        - name: Next
+          fieldName: 
+          acceptsMultipleConnections: 1
+          isInput: 0
+          m_Connections: []
+          m_SerializedType: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+            PublicKeyToken=b77a5c561934e089
+        pre: 0
+        next: 0
+        runOnDisable: 0
+        key: _Color
+        lerpType: 8
+        maskLerpType: 0
+        fadeInType: 0
+        fadeOutType: 0
+        color: {r: 1, g: 1, b: 1, a: 1}
+        hdr: 0
+        copySrcParam: 0
+        alpha: 1
+        alphaDesc: 
+        alphaModifyType: 1
+        defaultAlpha: 0
+        minA: 0
+        maxA: 1
+    00000014:
+      type: {class: ShaderTexture, ns: CFEngine, asm: Assembly-CSharp}
+      data:
+        id: de55bbc1-9999-4228-9e42-014954322d08
+        name: Shader Texture
+        graph: {fileID: 11400000}
+        graphPosition: {x: 1265.9165, y: 960.77136}
+        m_Ports:
+        - name: Pre
+          fieldName: pre
+          acceptsMultipleConnections: 0
+          isInput: 1
+          m_Connections:
+          - nodeId: bef819fb-4c7f-4a19-b144-c9928d69aeb7
+            portName: Next
+          m_SerializedType: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+            PublicKeyToken=b77a5c561934e089
+        - name: Next
+          fieldName: 
+          acceptsMultipleConnections: 1
+          isInput: 0
+          m_Connections:
+          - nodeId: 2d6fc7b3-e419-46d2-ac4d-102a02e300bf
+            portName: Pre
+          m_SerializedType: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+            PublicKeyToken=b77a5c561934e089
+        pre: 0
+        next: 0
+        runOnDisable: 1
+        key: _MainTex
+    00000015:
+      type: {class: ShaderTexture, ns: CFEngine, asm: Assembly-CSharp}
+      data:
+        id: 2d6fc7b3-e419-46d2-ac4d-102a02e300bf
+        name: Shader Texture
+        graph: {fileID: 11400000}
+        graphPosition: {x: 1568.9165, y: 969.77136}
+        m_Ports:
+        - name: Pre
+          fieldName: pre
+          acceptsMultipleConnections: 0
+          isInput: 1
+          m_Connections:
+          - nodeId: de55bbc1-9999-4228-9e42-014954322d08
+            portName: Next
+          m_SerializedType: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+            PublicKeyToken=b77a5c561934e089
+        - name: Next
+          fieldName: 
+          acceptsMultipleConnections: 1
+          isInput: 0
+          m_Connections:
+          - nodeId: e2ecae2b-64fd-49f4-b7fd-968cb4322d44
+            portName: Pre
+          m_SerializedType: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+            PublicKeyToken=b77a5c561934e089
+        pre: 0
+        next: 0
+        runOnDisable: 1
+        key: _MainTex
+    00000016:
+      type: {class: ShaderTexture, ns: CFEngine, asm: Assembly-CSharp}
+      data:
+        id: 8fe80695-464a-4169-a62d-4b9dbc367e2e
+        name: Shader Texture
+        graph: {fileID: 11400000}
+        graphPosition: {x: 1241, y: 2258}
+        m_Ports:
+        - name: Pre
+          fieldName: pre
+          acceptsMultipleConnections: 0
+          isInput: 1
+          m_Connections:
+          - nodeId: 7848b948-309d-41bf-bc67-e749d08a439a
+            portName: Next
+          m_SerializedType: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+            PublicKeyToken=b77a5c561934e089
+        - name: Next
+          fieldName: 
+          acceptsMultipleConnections: 1
+          isInput: 0
+          m_Connections: []
+          m_SerializedType: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+            PublicKeyToken=b77a5c561934e089
+        pre: 0
+        next: 0
+        runOnDisable: 0
+        key: _MainTex
+    00000017:
+      type: {class: RenderActive, ns: CFEngine, asm: Assembly-CSharp}
+      data:
+        id: d1ef9b37-9ddd-485c-8ef5-a394751c49f2
+        name: Render Active
+        graph: {fileID: 11400000}
+        graphPosition: {x: 2138.9, y: 659.3501}
+        m_Ports:
+        - name: Pre
+          fieldName: pre
+          acceptsMultipleConnections: 0
+          isInput: 1
+          m_Connections:
+          - nodeId: 905aaf04-8bde-4e90-853e-f3e63b67668b
+            portName: Next
+          m_SerializedType: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+            PublicKeyToken=b77a5c561934e089
+        - name: Next
+          fieldName: 
+          acceptsMultipleConnections: 1
+          isInput: 0
+          m_Connections:
+          - nodeId: 080f4123-a41c-440f-ad57-14ea7629d8cb
+            portName: Pre
+          m_SerializedType: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+            PublicKeyToken=b77a5c561934e089
+        pre: 0
+        next: 0
+        runOnDisable: 0
+        active: 0
+        activeOnStart: 0
+    00000018:
+      type: {class: RenderActive, ns: CFEngine, asm: Assembly-CSharp}
+      data:
+        id: dbe36836-925c-4494-92a6-03a5411f3a96
+        name: Render Active
+        graph: {fileID: 11400000}
+        graphPosition: {x: 1177, y: 2524}
+        m_Ports:
+        - name: Pre
+          fieldName: pre
+          acceptsMultipleConnections: 0
+          isInput: 1
+          m_Connections:
+          - nodeId: 086f9d93-a1bf-433c-866f-f0f7d7a42d9d
+            portName: Next
+          m_SerializedType: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+            PublicKeyToken=b77a5c561934e089
+        - name: Next
+          fieldName: 
+          acceptsMultipleConnections: 1
+          isInput: 0
+          m_Connections:
+          - nodeId: 84be200b-f1c9-446a-97a2-a1e16558e382
+            portName: Pre
+          m_SerializedType: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+            PublicKeyToken=b77a5c561934e089
+        pre: 0
+        next: 0
+        runOnDisable: 0
+        active: 1
+        activeOnStart: 1
+    00000019:
+      type: {class: RenderActive, ns: CFEngine, asm: Assembly-CSharp}
+      data:
+        id: 344b24c0-ecf9-4d85-bcce-a0a68064c24b
+        name: Render Active
+        graph: {fileID: 11400000}
+        graphPosition: {x: 1351, y: 2933}
+        m_Ports:
+        - name: Pre
+          fieldName: pre
+          acceptsMultipleConnections: 0
+          isInput: 1
+          m_Connections:
+          - nodeId: ef92b28b-8fdc-4731-bd3d-f51ce4d945ff
+            portName: Next
+          m_SerializedType: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+            PublicKeyToken=b77a5c561934e089
+        - name: Next
+          fieldName: 
+          acceptsMultipleConnections: 1
+          isInput: 0
+          m_Connections:
+          - nodeId: 429f6424-373c-412f-98ad-6f686d08fe20
+            portName: Pre
+          m_SerializedType: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+            PublicKeyToken=b77a5c561934e089
+        pre: 0
+        next: 0
+        runOnDisable: 0
+        active: 1
+        activeOnStart: 1
+    0000001A:
+      type: {class: MatLoad, ns: CFEngine, asm: Assembly-CSharp}
+      data:
+        id: 053c2c82-02d3-4f2e-ab60-5bb3e93d6a0d
+        name: Mat Load
+        graph: {fileID: 11400000}
+        graphPosition: {x: 1226.8501, y: 1213.3003}
+        m_Ports:
+        - name: Pre
+          fieldName: pre
+          acceptsMultipleConnections: 0
+          isInput: 1
+          m_Connections:
+          - nodeId: 99f765dc-3c45-4629-87cf-8532954d058d
+            portName: Next
+          m_SerializedType: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+            PublicKeyToken=b77a5c561934e089
+        - name: Next
+          fieldName: 
+          acceptsMultipleConnections: 1
+          isInput: 0
+          m_Connections:
+          - nodeId: 7f15a80d-6e32-4fde-b7dd-dedb1846f800
+            portName: Pre
+          m_SerializedType: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+            PublicKeyToken=b77a5c561934e089
+        pre: 0
+        next: 0
+        runOnDisable: 1
+        needMainTex: 0
+        needNormal: 0
+        copyFromSrc: 0
+        defaultMat: {fileID: 2100000, guid: e58bddfe3bfbc2f40b907c902b4785db, type: 2}
+        matCanEdit: 0
+    0000001B:
+      type: {class: MatSwitch, ns: CFEngine, asm: Assembly-CSharp}
+      data:
+        id: fc56b67f-639c-4339-80a3-9f1ddd363242
+        name: Mat Switch
+        graph: {fileID: 11400000}
+        graphPosition: {x: 1548.6879, y: 219.24411}
+        m_Ports:
+        - name: Pre
+          fieldName: pre
+          acceptsMultipleConnections: 0
+          isInput: 1
+          m_Connections:
+          - nodeId: 55c12486-3d53-46e4-94e1-9c863a5eae4c
+            portName: Next
+          m_SerializedType: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+            PublicKeyToken=b77a5c561934e089
+        - name: Next
+          fieldName: 
+          acceptsMultipleConnections: 1
+          isInput: 0
+          m_Connections: []
+          m_SerializedType: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+            PublicKeyToken=b77a5c561934e089
+        pre: 0
+        next: 0
+        runOnDisable: 0
+        key: _Color
+        lerpType: 0
+        maskLerpType: 8
+        fadeInType: 4
+        fadeOutType: 8
+        maskX: 0
+        xDesc: 
+        X: 1
+        minX: 0
+        maxX: 0
+        maskY: 0
+        yDesc: 
+        Y: 1
+        minY: 0
+        maxY: 0
+        maskZ: 0
+        zDesc: 
+        Z: 1
+        minZ: 0
+        maxZ: 0
+        maskW: 2
+        wDesc: Transparent
+        W: 1
+        minW: 0
+        maxW: 1
+        effectMat: 5
+        canEdit: 1
+        needMainTex: 1
+        needNormal: 0
+    0000001C:
+      type: {class: MatSwitch, ns: CFEngine, asm: Assembly-CSharp}
+      data:
+        id: d52bdbf9-ff08-46c1-ba9b-cfc17eff0d7a
+        name: Mat Switch
+        graph: {fileID: 11400000}
+        graphPosition: {x: 2261.7449, y: -139.04684}
+        m_Ports:
+        - name: Pre
+          fieldName: pre
+          acceptsMultipleConnections: 0
+          isInput: 1
+          m_Connections:
+          - nodeId: 8b7118fc-cb33-40ec-b617-ee7e102abd60
+            portName: Next
+          m_SerializedType: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+            PublicKeyToken=b77a5c561934e089
+        - name: Next
+          fieldName: 
+          acceptsMultipleConnections: 1
+          isInput: 0
+          m_Connections: []
+          m_SerializedType: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+            PublicKeyToken=b77a5c561934e089
+        pre: 0
+        next: 0
+        runOnDisable: 0
+        key: _Color
+        lerpType: 0
+        maskLerpType: 8
+        fadeInType: 4
+        fadeOutType: 8
+        maskX: 0
+        xDesc: 
+        X: 1
+        minX: 0
+        maxX: 0
+        maskY: 0
+        yDesc: 
+        Y: 1
+        minY: 0
+        maxY: 0
+        maskZ: 0
+        zDesc: 
+        Z: 1
+        minZ: 0
+        maxZ: 0
+        maskW: 2
+        wDesc: Alpha
+        W: 0.5
+        minW: 0
+        maxW: 1
+        effectMat: 4
+        canEdit: 1
+        needMainTex: 1
+        needNormal: 0
+    0000001D:
+      type: {class: MatSwitch, ns: CFEngine, asm: Assembly-CSharp}
+      data:
+        id: 90fde693-49fb-4bf2-a13f-eb43078d45f8
+        name: Mat Switch
+        graph: {fileID: 11400000}
+        graphPosition: {x: 1260.865, y: 1502.4131}
+        m_Ports:
+        - name: Pre
+          fieldName: pre
+          acceptsMultipleConnections: 0
+          isInput: 1
+          m_Connections:
+          - nodeId: e8a94e5b-17ed-471b-8017-9000c31e942b
+            portName: Next
+          m_SerializedType: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+            PublicKeyToken=b77a5c561934e089
+        - name: Next
+          fieldName: 
+          acceptsMultipleConnections: 1
+          isInput: 0
+          m_Connections:
+          - nodeId: 99d74728-0027-4de8-b75c-74f91dee95e0
+            portName: Pre
+          m_SerializedType: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+            PublicKeyToken=b77a5c561934e089
+        pre: 0
+        next: 0
+        runOnDisable: 0
+        key: _Param3
+        lerpType: 0
+        maskLerpType: 4
+        fadeInType: 1
+        fadeOutType: 2
+        maskX: 4
+        xDesc: DirIndex
+        X: 1
+        minX: 0
+        maxX: 2
+        maskY: 2
+        yDesc: Offset
+        Y: 0
+        minY: 0
+        maxY: 5
+        maskZ: 2
+        zDesc: Height
+        Z: 0
+        minZ: 0
+        maxZ: 10
+        maskW: 2
+        wDesc: DissolveWidth
+        W: 0
+        minW: 0
+        maxW: 1
+        effectMat: 13
+        canEdit: 0
+        needMainTex: 1
+        needNormal: 1
+    0000001E:
+      type: {class: MatSwitch, ns: CFEngine, asm: Assembly-CSharp}
+      data:
+        id: 080f4123-a41c-440f-ad57-14ea7629d8cb
+        name: Mat Switch
+        graph: {fileID: 11400000}
+        graphPosition: {x: 2376.8503, y: 582.358}
+        m_Ports:
+        - name: Pre
+          fieldName: pre
+          acceptsMultipleConnections: 0
+          isInput: 1
+          m_Connections:
+          - nodeId: d1ef9b37-9ddd-485c-8ef5-a394751c49f2
+            portName: Next
+          m_SerializedType: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+            PublicKeyToken=b77a5c561934e089
+        - name: Next
+          fieldName: 
+          acceptsMultipleConnections: 1
+          isInput: 0
+          m_Connections: []
+          m_SerializedType: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+            PublicKeyToken=b77a5c561934e089
+        pre: 0
+        next: 0
+        runOnDisable: 0
+        key: _Color
+        lerpType: 0
+        maskLerpType: 8
+        fadeInType: 4
+        fadeOutType: 8
+        maskX: 0
+        xDesc: 
+        X: 1
+        minX: 0
+        maxX: 0
+        maskY: 0
+        yDesc: 
+        Y: 1
+        minY: 0
+        maxY: 0
+        maskZ: 0
+        zDesc: 
+        Z: 1
+        minZ: 0
+        maxZ: 0
+        maskW: 2
+        wDesc: Aplha
+        W: 1
+        minW: 0
+        maxW: 1
+        effectMat: 4
+        canEdit: 0
+        needMainTex: 1
+        needNormal: 0
+    0000001F:
+      type: {class: MatSwitch, ns: CFEngine, asm: Assembly-CSharp}
+      data:
+        id: ef92b28b-8fdc-4731-bd3d-f51ce4d945ff
+        name: Mat Switch
+        graph: {fileID: 11400000}
+        graphPosition: {x: 988, y: 2841}
+        m_Ports:
+        - name: Pre
+          fieldName: pre
+          acceptsMultipleConnections: 0
+          isInput: 1
+          m_Connections:
+          - nodeId: a70786e0-4fa1-4545-a40a-124cedac30d5
+            portName: Next
+          m_SerializedType: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+            PublicKeyToken=b77a5c561934e089
+        - name: Next
+          fieldName: 
+          acceptsMultipleConnections: 1
+          isInput: 0
+          m_Connections:
+          - nodeId: 344b24c0-ecf9-4d85-bcce-a0a68064c24b
+            portName: Pre
+          m_SerializedType: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+            PublicKeyToken=b77a5c561934e089
+        pre: 0
+        next: 0
+        runOnDisable: 1
+        key: _Param3
+        lerpType: 0
+        maskLerpType: 4
+        fadeInType: 2
+        fadeOutType: 1
+        maskX: 4
+        xDesc: DirIndex
+        X: 1
+        minX: 0
+        maxX: 2
+        maskY: 2
+        yDesc: Offset
+        Y: 0
+        minY: 0
+        maxY: 5
+        maskZ: 2
+        zDesc: Height
+        Z: 1
+        minZ: 0
+        maxZ: 10
+        maskW: 2
+        wDesc: DissolveWidth
+        W: 0
+        minW: 0
+        maxW: 1
+        effectMat: 13
+        canEdit: 0
+        needMainTex: 1
+        needNormal: 1
+    00000020:
+      type: {class: ScaleParam, ns: CFEngine, asm: Assembly-CSharp}
+      data:
+        id: 04005be4-8fad-4597-bea7-d28371525a7d
+        name: Scale Param
+        graph: {fileID: 11400000}
+        graphPosition: {x: 1025, y: 3568}
+        m_Ports:
+        - name: Pre
+          fieldName: pre
+          acceptsMultipleConnections: 0
+          isInput: 1
+          m_Connections:
+          - nodeId: 061331e3-f734-4df9-99f9-66f28ef1191e
+            portName: Next
+          m_SerializedType: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+            PublicKeyToken=b77a5c561934e089
+        - name: Next
+          fieldName: 
+          acceptsMultipleConnections: 1
+          isInput: 0
+          m_Connections: []
+          m_SerializedType: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+            PublicKeyToken=b77a5c561934e089
+        pre: 0
+        next: 0
+        runOnDisable: 0
+        scale0: 0
+        scale1: 0
+    00000021:
+      type: {class: ShaderRT, ns: CFEngine, asm: Assembly-CSharp}
+      data:
+        id: 3749c543-c4a2-4d22-9f1f-3775b00f43fd
+        name: Shader RT
+        graph: {fileID: 11400000}
+        graphPosition: {x: 1059.3002, y: 4244.2}
+        m_Ports:
+        - name: Pre
+          fieldName: pre
+          acceptsMultipleConnections: 0
+          isInput: 1
+          m_Connections:
+          - nodeId: a614ec87-1525-4704-8b18-79c8975c1936
+            portName: Next
+          m_SerializedType: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+            PublicKeyToken=b77a5c561934e089
+        - name: Next
+          fieldName: 
+          acceptsMultipleConnections: 1
+          isInput: 0
+          m_Connections: []
+          m_SerializedType: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+            PublicKeyToken=b77a5c561934e089
+        pre: 0
+        next: 0
+        runOnDisable: 0
+    00000022:
+      type: {class: EffectTemplate, ns: CFEngine, asm: Assembly-CSharp}
+      data:
+        id: d8f1a993-119e-44c1-8f6b-5b0c7f70766c
+        name: Effect Template
+        graph: {fileID: 11400000}
+        graphPosition: {x: 377.36002, y: 4458.596}
+        m_Ports:
+        - name: Next
+          fieldName: 
+          acceptsMultipleConnections: 1
+          isInput: 0
+          m_Connections:
+          - nodeId: 72c70e20-4142-4628-866f-04b9fb475fab
+            portName: Pre
+          m_SerializedType: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+            PublicKeyToken=b77a5c561934e089
+        effectName: Dissolve
+        groupID: 1400
+        valid: 1
+        applyOnReplaceMat: 1
+        applyOnAddMat: 0
+        hideShadow: 0
+        next: 0
+    00000023:
+      type: {class: MatLoad, ns: CFEngine, asm: Assembly-CSharp}
+      data:
+        id: 72c70e20-4142-4628-866f-04b9fb475fab
+        name: Mat Load
+        graph: {fileID: 11400000}
+        graphPosition: {x: 644.36, y: 4478.596}
+        m_Ports:
+        - name: Pre
+          fieldName: pre
+          acceptsMultipleConnections: 0
+          isInput: 1
+          m_Connections:
+          - nodeId: d8f1a993-119e-44c1-8f6b-5b0c7f70766c
+            portName: Next
+          m_SerializedType: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+            PublicKeyToken=b77a5c561934e089
+        - name: Next
+          fieldName: 
+          acceptsMultipleConnections: 1
+          isInput: 0
+          m_Connections:
+          - nodeId: 3169ef40-7265-4e17-9fa8-ff4e1a3bc206
+            portName: Pre
+          m_SerializedType: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+            PublicKeyToken=b77a5c561934e089
+        pre: 0
+        next: 0
+        runOnDisable: 0
+        needMainTex: 0
+        needNormal: 0
+        copyFromSrc: 1
+        defaultMat: {fileID: 2100000, guid: a050e9224e5f11741a618a261131e720, type: 2}
+        matCanEdit: 1
+    00000024:
+      type: {class: ShaderColor, ns: CFEngine, asm: Assembly-CSharp}
+      data:
+        id: 3169ef40-7265-4e17-9fa8-ff4e1a3bc206
+        name: Shader Color
+        graph: {fileID: 11400000}
+        graphPosition: {x: 973.35986, y: 4505.596}
+        m_Ports:
+        - name: Pre
+          fieldName: pre
+          acceptsMultipleConnections: 0
+          isInput: 1
+          m_Connections:
+          - nodeId: 72c70e20-4142-4628-866f-04b9fb475fab
+            portName: Next
+          m_SerializedType: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+            PublicKeyToken=b77a5c561934e089
+        - name: Next
+          fieldName: 
+          acceptsMultipleConnections: 1
+          isInput: 0
+          m_Connections:
+          - nodeId: 296b255c-1651-426b-a994-393b5e829184
+            portName: Pre
+          m_SerializedType: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+            PublicKeyToken=b77a5c561934e089
+        pre: 0
+        next: 0
+        runOnDisable: 0
+        key: _EdgeColor
+        lerpType: 0
+        maskLerpType: 7
+        fadeInType: 1
+        fadeOutType: 2
+        color: {r: 1, g: 1, b: 1, a: 1}
+        hdr: 1
+        copySrcParam: 0
+        alpha: 0
+        alphaDesc: DissolveTiling
+        alphaModifyType: 2
+        defaultAlpha: 1
+        minA: 0
+        maxA: 5
+    00000025:
+      type: {class: ShaderColor, ns: CFEngine, asm: Assembly-CSharp}
+      data:
+        id: 296b255c-1651-426b-a994-393b5e829184
+        name: Shader Color
+        graph: {fileID: 11400000}
+        graphPosition: {x: 1443.4102, y: 4743.049}
+        m_Ports:
+        - name: Pre
+          fieldName: pre
+          acceptsMultipleConnections: 0
+          isInput: 1
+          m_Connections:
+          - nodeId: 3169ef40-7265-4e17-9fa8-ff4e1a3bc206
+            portName: Next
+          m_SerializedType: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+            PublicKeyToken=b77a5c561934e089
+        - name: Next
+          fieldName: 
+          acceptsMultipleConnections: 1
+          isInput: 0
+          m_Connections:
+          - nodeId: 382b3563-e69b-4bdf-a88f-96c8873e3b10
+            portName: Pre
+          m_SerializedType: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+            PublicKeyToken=b77a5c561934e089
+        pre: 0
+        next: 0
+        runOnDisable: 0
+        key: _BackColor
+        lerpType: 8
+        maskLerpType: 0
+        fadeInType: 0
+        fadeOutType: 0
+        color: {r: 1, g: 1, b: 1, a: 1}
+        hdr: 1
+        copySrcParam: 0
+        alpha: 0
+        alphaDesc: 
+        alphaModifyType: 0
+        defaultAlpha: 0
+        minA: 0
+        maxA: 1
+    00000026:
+      type: {class: GetPos, ns: CFEngine, asm: Assembly-CSharp}
+      data:
+        id: 382b3563-e69b-4bdf-a88f-96c8873e3b10
+        name: Get Pos
+        graph: {fileID: 11400000}
+        graphPosition: {x: 1818.3599, y: 4616.596}
+        m_Ports:
+        - name: Pre
+          fieldName: pre
+          acceptsMultipleConnections: 0
+          isInput: 1
+          m_Connections:
+          - nodeId: 296b255c-1651-426b-a994-393b5e829184
+            portName: Next
+          m_SerializedType: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+            PublicKeyToken=b77a5c561934e089
+        - name: Next
+          fieldName: 
+          acceptsMultipleConnections: 1
+          isInput: 0
+          m_Connections: []
+          m_SerializedType: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+            PublicKeyToken=b77a5c561934e089
+        pre: 0
+        next: 0
+        runOnDisable: 0
+        objectPos: 0
+        hitPos: 1
+    00000027:
+      type: {class: GetPos, ns: CFEngine, asm: Assembly-CSharp}
+      data:
+        id: 99d74728-0027-4de8-b75c-74f91dee95e0
+        name: Get Pos
+        graph: {fileID: 11400000}
+        graphPosition: {x: 1619.2001, y: 1703.5642}
+        m_Ports:
+        - name: Pre
+          fieldName: pre
+          acceptsMultipleConnections: 0
+          isInput: 1
+          m_Connections:
+          - nodeId: 90fde693-49fb-4bf2-a13f-eb43078d45f8
+            portName: Next
+          m_SerializedType: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+            PublicKeyToken=b77a5c561934e089
+        - name: Next
+          fieldName: 
+          acceptsMultipleConnections: 1
+          isInput: 0
+          m_Connections:
+          - nodeId: 96cf5690-08e5-4af2-ba3a-33db4d30a4f4
+            portName: Pre
+          m_SerializedType: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+            PublicKeyToken=b77a5c561934e089
+        pre: 0
+        next: 0
+        runOnDisable: 0
+        objectPos: 1
+        hitPos: 0
+    00000028:
+      type: {class: GetPos, ns: CFEngine, asm: Assembly-CSharp}
+      data:
+        id: 429f6424-373c-412f-98ad-6f686d08fe20
+        name: Get Pos
+        graph: {fileID: 11400000}
+        graphPosition: {x: 1652.5502, y: 3011.85}
+        m_Ports:
+        - name: Pre
+          fieldName: pre
+          acceptsMultipleConnections: 0
+          isInput: 1
+          m_Connections:
+          - nodeId: 344b24c0-ecf9-4d85-bcce-a0a68064c24b
+            portName: Next
+          m_SerializedType: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+            PublicKeyToken=b77a5c561934e089
+        - name: Next
+          fieldName: 
+          acceptsMultipleConnections: 1
+          isInput: 0
+          m_Connections:
+          - nodeId: 1f6d1049-e149-4e04-818f-b4f40f81030b
+            portName: Pre
+          m_SerializedType: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+            PublicKeyToken=b77a5c561934e089
+        pre: 0
+        next: 0
+        runOnDisable: 0
+        objectPos: 1
+        hitPos: 0
+    00000029:
+      type: {class: EffectTemplate, ns: CFEngine, asm: Assembly-CSharp}
+      data:
+        id: ccab02eb-fc6e-4078-b02b-175d0af76314
+        name: Effect Template
+        graph: {fileID: 11400000}
+        graphPosition: {x: 493.2925, y: 5008.3076}
+        m_Ports:
+        - name: Next
+          fieldName: 
+          acceptsMultipleConnections: 1
+          isInput: 0
+          m_Connections:
+          - nodeId: 0d14821a-4054-4dc7-9199-6794d1cbe395
+            portName: Pre
+          m_SerializedType: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+            PublicKeyToken=b77a5c561934e089
+        effectName: MatAdd
+        groupID: 1500
+        valid: 1
+        applyOnReplaceMat: 0
+        applyOnAddMat: 1
+        hideShadow: 0
+        next: 0
+    0000002A:
+      type: {class: MatAdd, ns: CFEngine, asm: Assembly-CSharp}
+      data:
+        id: 0d14821a-4054-4dc7-9199-6794d1cbe395
+        name: Mat Add
+        graph: {fileID: 11400000}
+        graphPosition: {x: 839, y: 5060}
+        m_Ports:
+        - name: Pre
+          fieldName: pre
+          acceptsMultipleConnections: 0
+          isInput: 1
+          m_Connections:
+          - nodeId: ccab02eb-fc6e-4078-b02b-175d0af76314
+            portName: Next
+          m_SerializedType: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+            PublicKeyToken=b77a5c561934e089
+        - name: Next
+          fieldName: 
+          acceptsMultipleConnections: 1
+          isInput: 0
+          m_Connections:
+          - nodeId: 75373b08-ad3a-403c-9ab9-bdb8993dad28
+            portName: Pre
+          m_SerializedType: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+            PublicKeyToken=b77a5c561934e089
+        pre: 0
+        next: 0
+        runOnDisable: 0
+        needMainTex: 1
+        needNormal: 1
+    0000002B:
+      type: {class: ShaderColor, ns: CFEngine, asm: Assembly-CSharp}
+      data:
+        id: 75373b08-ad3a-403c-9ab9-bdb8993dad28
+        name: Shader Color
+        graph: {fileID: 11400000}
+        graphPosition: {x: 1051, y: 4978}
+        m_Ports:
+        - name: Pre
+          fieldName: pre
+          acceptsMultipleConnections: 0
+          isInput: 1
+          m_Connections:
+          - nodeId: 0d14821a-4054-4dc7-9199-6794d1cbe395
+            portName: Next
+          m_SerializedType: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+            PublicKeyToken=b77a5c561934e089
+        - name: Next
+          fieldName: 
+          acceptsMultipleConnections: 1
+          isInput: 0
+          m_Connections: []
+          m_SerializedType: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+            PublicKeyToken=b77a5c561934e089
+        pre: 0
+        next: 0
+        runOnDisable: 0
+        key: _Color
+        lerpType: 0
+        maskLerpType: 8
+        fadeInType: 1
+        fadeOutType: 2
+        color: {r: 1, g: 1, b: 1, a: 1}
+        hdr: 1
+        copySrcParam: 0
+        alpha: 0
+        alphaDesc: Intensity
+        alphaModifyType: 2
+        defaultAlpha: 1
+        minA: 0
+        maxA: 1
+    0000002C:
+      type: {class: ShaderColor, ns: CFEngine, asm: Assembly-CSharp}
+      data:
+        id: 1f6d1049-e149-4e04-818f-b4f40f81030b
+        name: Shader Color
+        graph: {fileID: 11400000}
+        graphPosition: {x: 1934.8175, y: 3084.0698}
+        m_Ports:
+        - name: Pre
+          fieldName: pre
+          acceptsMultipleConnections: 0
+          isInput: 1
+          m_Connections:
+          - nodeId: 429f6424-373c-412f-98ad-6f686d08fe20
+            portName: Next
+          m_SerializedType: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+            PublicKeyToken=b77a5c561934e089
+        - name: Next
+          fieldName: 
+          acceptsMultipleConnections: 1
+          isInput: 0
+          m_Connections: []
+          m_SerializedType: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+            PublicKeyToken=b77a5c561934e089
+        pre: 0
+        next: 0
+        runOnDisable: 0
+        key: _Color5
+        lerpType: 255
+        maskLerpType: 0
+        fadeInType: 0
+        fadeOutType: 0
+        color: {r: 1, g: 1, b: 1, a: 1}
+        hdr: 1
+        copySrcParam: 0
+        alpha: 0
+        alphaDesc: 
+        alphaModifyType: 0
+        defaultAlpha: 0
+        minA: 0
+        maxA: 1
+    0000002D:
+      type: {class: ShaderColor, ns: CFEngine, asm: Assembly-CSharp}
+      data:
+        id: 96cf5690-08e5-4af2-ba3a-33db4d30a4f4
+        name: Shader Color
+        graph: {fileID: 11400000}
+        graphPosition: {x: 1906, y: 1829}
+        m_Ports:
+        - name: Pre
+          fieldName: pre
+          acceptsMultipleConnections: 0
+          isInput: 1
+          m_Connections:
+          - nodeId: 99d74728-0027-4de8-b75c-74f91dee95e0
+            portName: Next
+          m_SerializedType: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+            PublicKeyToken=b77a5c561934e089
+        - name: Next
+          fieldName: 
+          acceptsMultipleConnections: 1
+          isInput: 0
+          m_Connections: []
+          m_SerializedType: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+            PublicKeyToken=b77a5c561934e089
+        pre: 0
+        next: 0
+        runOnDisable: 0
+        key: _Color5
+        lerpType: 255
+        maskLerpType: 0
+        fadeInType: 0
+        fadeOutType: 0
+        color: {r: 1, g: 1, b: 1, a: 1}
+        hdr: 1
+        copySrcParam: 0
+        alpha: 0
+        alphaDesc: 
+        alphaModifyType: 0
+        defaultAlpha: 0
+        minA: 0
+        maxA: 1
+    0000002E:
+      type: {class: EffectTemplate, ns: CFEngine, asm: Assembly-CSharp}
+      data:
+        id: b2a37935-13e8-4b5d-a76b-f78ba79869d4
+        name: Effect Template
+        graph: {fileID: 11400000}
+        graphPosition: {x: 512, y: 5361}
+        m_Ports:
+        - name: Next
+          fieldName: 
+          acceptsMultipleConnections: 1
+          isInput: 0
+          m_Connections:
+          - nodeId: 47117272-6a07-4971-824e-ab6f10aef628
+            portName: Pre
+          m_SerializedType: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+            PublicKeyToken=b77a5c561934e089
+        effectName: Outline Color Replace
+        groupID: 1600
+        valid: 1
+        applyOnReplaceMat: 0
+        applyOnAddMat: 0
+        hideShadow: 0
+        next: 0
+    0000002F:
+      type: {class: ShaderColor, ns: CFEngine, asm: Assembly-CSharp}
+      data:
+        id: 47117272-6a07-4971-824e-ab6f10aef628
+        name: Shader Color
+        graph: {fileID: 11400000}
+        graphPosition: {x: 840, y: 5363}
+        m_Ports:
+        - name: Pre
+          fieldName: pre
+          acceptsMultipleConnections: 0
+          isInput: 1
+          m_Connections:
+          - nodeId: b2a37935-13e8-4b5d-a76b-f78ba79869d4
+            portName: Next
+          m_SerializedType: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+            PublicKeyToken=b77a5c561934e089
+        - name: Next
+          fieldName: 
+          acceptsMultipleConnections: 1
+          isInput: 0
+          m_Connections: []
+          m_SerializedType: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+            PublicKeyToken=b77a5c561934e089
+        pre: 0
+        next: 0
+        runOnDisable: 0
+        key: _MatEffectOutlineParam
+        lerpType: 0
+        maskLerpType: 4294967295
+        fadeInType: 4
+        fadeOutType: 8
+        color: {r: 1, g: 0.5019608, b: 0, a: 1}
+        hdr: 1
+        copySrcParam: 0
+        alpha: 1
+        alphaDesc: Blend
+        alphaModifyType: 0
+        defaultAlpha: 1
+        minA: 0
+        maxA: 5
+    00000030:
+      type: {class: EffectTemplate, ns: CFEngine, asm: Assembly-CSharp}
+      data:
+        id: 97c333be-047f-4c06-9307-9957c7b96cee
+        name: Effect Template
+        graph: {fileID: 11400000}
+        graphPosition: {x: 490, y: 5760}
+        m_Ports:
+        - name: Next
+          fieldName: 
+          acceptsMultipleConnections: 1
+          isInput: 0
+          m_Connections:
+          - nodeId: 0f4e5925-9ae0-469b-8d2e-ecdbdcbd0736
+            portName: Pre
+          m_SerializedType: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+            PublicKeyToken=b77a5c561934e089
+        effectName: Outline Color Multiply
+        groupID: 1700
+        valid: 1
+        applyOnReplaceMat: 0
+        applyOnAddMat: 0
+        hideShadow: 0
+        next: 0
+    00000031:
+      type: {class: ShaderColor, ns: CFEngine, asm: Assembly-CSharp}
+      data:
+        id: 0f4e5925-9ae0-469b-8d2e-ecdbdcbd0736
+        name: Shader Color
+        graph: {fileID: 11400000}
+        graphPosition: {x: 844, y: 5750}
+        m_Ports:
+        - name: Pre
+          fieldName: pre
+          acceptsMultipleConnections: 0
+          isInput: 1
+          m_Connections:
+          - nodeId: 97c333be-047f-4c06-9307-9957c7b96cee
+            portName: Next
+          m_SerializedType: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+            PublicKeyToken=b77a5c561934e089
+        - name: Next
+          fieldName: 
+          acceptsMultipleConnections: 1
+          isInput: 0
+          m_Connections: []
+          m_SerializedType: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+            PublicKeyToken=b77a5c561934e089
+        pre: 0
+        next: 0
+        runOnDisable: 0
+        key: _ColorOutline
+        lerpType: 0
+        maskLerpType: 4294967295
+        fadeInType: 1
+        fadeOutType: 2
+        color: {r: 1, g: 0, b: 0, a: 1}
+        hdr: 1
+        copySrcParam: 0
+        alpha: 1
+        alphaDesc: Width
+        alphaModifyType: 1
+        defaultAlpha: 0
+        minA: 0
+        maxA: 1
+    00000032:
+      type: {class: EffectTemplate, ns: CFEngine, asm: Assembly-CSharp}
+      data:
+        id: 6f274a0e-79bd-453a-9547-39c1aa024568
+        name: Effect Template
+        graph: {fileID: 11400000}
+        graphPosition: {x: 496, y: 6183}
+        m_Ports:
+        - name: Next
+          fieldName: 
+          acceptsMultipleConnections: 1
+          isInput: 0
+          m_Connections:
+          - nodeId: 31f76e48-9a6d-4ddc-a96b-eed92a915543
+            portName: Pre
+          m_SerializedType: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+            PublicKeyToken=b77a5c561934e089
+        effectName: ShaderKeyword
+        groupID: 1800
+        valid: 1
+        applyOnReplaceMat: 0
+        applyOnAddMat: 0
+        hideShadow: 0
+        next: 0
+    00000033:
+      type: {class: ShaderKeyWord, ns: CFEngine, asm: Assembly-CSharp}
+      data:
+        id: 31f76e48-9a6d-4ddc-a96b-eed92a915543
+        name: Shader Key Word
+        graph: {fileID: 11400000}
+        graphPosition: {x: 894, y: 6171}
+        m_Ports:
+        - name: Pre
+          fieldName: pre
+          acceptsMultipleConnections: 0
+          isInput: 1
+          m_Connections:
+          - nodeId: 6f274a0e-79bd-453a-9547-39c1aa024568
+            portName: Next
+          m_SerializedType: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+            PublicKeyToken=b77a5c561934e089
+        - name: Next
+          fieldName: 
+          acceptsMultipleConnections: 1
+          isInput: 0
+          m_Connections:
+          - nodeId: 2daec262-8648-4e70-b986-84093e80598b
+            portName: Pre
+          m_SerializedType: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+            PublicKeyToken=b77a5c561934e089
+        pre: 0
+        next: 0
+        runOnDisable: 0
+    00000034:
+      type: {class: GetPos, ns: CFEngine, asm: Assembly-CSharp}
+      data:
+        id: 2daec262-8648-4e70-b986-84093e80598b
+        name: Get Pos
+        graph: {fileID: 11400000}
+        graphPosition: {x: 1188, y: 6157}
+        m_Ports:
+        - name: Pre
+          fieldName: pre
+          acceptsMultipleConnections: 0
+          isInput: 1
+          m_Connections:
+          - nodeId: 31f76e48-9a6d-4ddc-a96b-eed92a915543
+            portName: Next
+          m_SerializedType: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+            PublicKeyToken=b77a5c561934e089
+        - name: Next
+          fieldName: 
+          acceptsMultipleConnections: 1
+          isInput: 0
+          m_Connections:
+          - nodeId: 0805db58-54a1-4808-b776-1e7ec5016b41
+            portName: Pre
+          m_SerializedType: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+            PublicKeyToken=b77a5c561934e089
+        pre: 0
+        next: 0
+        runOnDisable: 0
+        objectPos: 1
+        hitPos: 0
+    00000035:
+      type: {class: ShaderParam, ns: CFEngine, asm: Assembly-CSharp}
+      data:
+        id: 0805db58-54a1-4808-b776-1e7ec5016b41
+        name: Shader Param
+        graph: {fileID: 11400000}
+        graphPosition: {x: 1529, y: 6017}
+        m_Ports:
+        - name: Pre
+          fieldName: pre
+          acceptsMultipleConnections: 0
+          isInput: 1
+          m_Connections:
+          - nodeId: 2daec262-8648-4e70-b986-84093e80598b
+            portName: Next
+          m_SerializedType: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+            PublicKeyToken=b77a5c561934e089
+        - name: Next
+          fieldName: 
+          acceptsMultipleConnections: 1
+          isInput: 0
+          m_Connections: []
+          m_SerializedType: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+            PublicKeyToken=b77a5c561934e089
+        pre: 0
+        next: 0
+        runOnDisable: 0
+        key: _Color
+        lerpType: 0
+        maskLerpType: 1
+        fadeInType: 4
+        fadeOutType: 8
+        maskX: 2
+        xDesc: Transparency
+        X: 0.5
+        minX: 0
+        maxX: 1
+        maskY: 0
+        yDesc: 
+        Y: 1
+        minY: 0
+        maxY: 0
+        maskZ: 0
+        zDesc: 
+        Z: 1
+        minZ: 0
+        maxZ: 0
+        maskW: 0
+        wDesc: 
+        W: 1
+        minW: 0
+        maxW: 1
+        copySrcParam: 0
+    00000036:
+      type: {class: EffectTemplate, ns: CFEngine, asm: Assembly-CSharp}
+      data:
+        id: 018f2144-f30d-4951-9367-603f33eb196d
+        name: Effect Template
+        graph: {fileID: 11400000}
+        graphPosition: {x: 316, y: 6477}
+        m_Ports:
+        - name: Next
+          fieldName: 
+          acceptsMultipleConnections: 1
+          isInput: 0
+          m_Connections:
+          - nodeId: b009349b-5a0b-4315-8a96-6cc562577f77
+            portName: Pre
+          m_SerializedType: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+            PublicKeyToken=b77a5c561934e089
+        effectName: HitShader
+        groupID: 0
+        valid: 1
+        applyOnReplaceMat: 0
+        applyOnAddMat: 1
+        hideShadow: 0
+        next: 0
+    00000037:
+      type: {class: MatAdd, ns: CFEngine, asm: Assembly-CSharp}
+      data:
+        id: b009349b-5a0b-4315-8a96-6cc562577f77
+        name: Mat Add
+        graph: {fileID: 11400000}
+        graphPosition: {x: 668, y: 6511}
+        m_Ports:
+        - name: Pre
+          fieldName: pre
+          acceptsMultipleConnections: 0
+          isInput: 1
+          m_Connections:
+          - nodeId: 018f2144-f30d-4951-9367-603f33eb196d
+            portName: Next
+          m_SerializedType: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+            PublicKeyToken=b77a5c561934e089
+        - name: Next
+          fieldName: 
+          acceptsMultipleConnections: 1
+          isInput: 0
+          m_Connections:
+          - nodeId: 3f2ebce4-d82a-4f28-bcb8-b2e3e9ed3bb1
+            portName: Pre
+          m_SerializedType: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+            PublicKeyToken=b77a5c561934e089
+        pre: 0
+        next: 0
+        runOnDisable: 0
+        needMainTex: 0
+        needNormal: 0
+    00000038:
+      type: {class: ShaderColor, ns: CFEngine, asm: Assembly-CSharp}
+      data:
+        id: 3f2ebce4-d82a-4f28-bcb8-b2e3e9ed3bb1
+        name: Shader Color
+        graph: {fileID: 11400000}
+        graphPosition: {x: 933, y: 6497}
+        m_Ports:
+        - name: Pre
+          fieldName: pre
+          acceptsMultipleConnections: 0
+          isInput: 1
+          m_Connections:
+          - nodeId: b009349b-5a0b-4315-8a96-6cc562577f77
+            portName: Next
+          m_SerializedType: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+            PublicKeyToken=b77a5c561934e089
+        - name: Next
+          fieldName: 
+          acceptsMultipleConnections: 1
+          isInput: 0
+          m_Connections: []
+          m_SerializedType: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+            PublicKeyToken=b77a5c561934e089
+        pre: 0
+        next: 0
+        runOnDisable: 0
+        key: _MainColor
+        lerpType: 0
+        maskLerpType: 8
+        fadeInType: 1
+        fadeOutType: 2
+        color: {r: 1, g: 1, b: 1, a: 1}
+        hdr: 1
+        copySrcParam: 1
+        alpha: 1
+        alphaDesc: hitalpha
+        alphaModifyType: 1
+        defaultAlpha: 1
+        minA: 0
+        maxA: 1
+    00000039:
+      type: {class: EffectTemplate, ns: CFEngine, asm: Assembly-CSharp}
+      data:
+        id: 067b06db-d98a-448f-82f2-6d493127c13e
+        name: Effect Template
+        graph: {fileID: 11400000}
+        graphPosition: {x: 344, y: 7006}
+        m_Ports:
+        - name: Next
+          fieldName: 
+          acceptsMultipleConnections: 1
+          isInput: 0
+          m_Connections:
+          - nodeId: 4419c8b8-7d7f-4fd8-9650-b7c0554f3579
+            portName: Pre
+          m_SerializedType: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+            PublicKeyToken=b77a5c561934e089
+        effectName: RendererActive
+        groupID: 2000
+        valid: 1
+        applyOnReplaceMat: 0
+        applyOnAddMat: 0
+        hideShadow: 0
+        next: 0
+    0000003A:
+      type: {class: RenderActive, ns: CFEngine, asm: Assembly-CSharp}
+      data:
+        id: 4419c8b8-7d7f-4fd8-9650-b7c0554f3579
+        name: Render Active
+        graph: {fileID: 11400000}
+        graphPosition: {x: 614, y: 7006}
+        m_Ports:
+        - name: Pre
+          fieldName: pre
+          acceptsMultipleConnections: 0
+          isInput: 1
+          m_Connections:
+          - nodeId: 067b06db-d98a-448f-82f2-6d493127c13e
+            portName: Next
+          m_SerializedType: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+            PublicKeyToken=b77a5c561934e089
+        - name: Next
+          fieldName: 
+          acceptsMultipleConnections: 1
+          isInput: 0
+          m_Connections: []
+          m_SerializedType: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+            PublicKeyToken=b77a5c561934e089
+        pre: 0
+        next: 0
+        runOnDisable: 0
+        active: 1
+        activeOnStart: 1
+    0000003B:
+      type: {class: EffectTemplate, ns: CFEngine, asm: Assembly-CSharp}
+      data:
+        id: 87909dfd-0dba-4bde-96dc-a82051158d7e
+        name: Effect Template
+        graph: {fileID: 11400000}
+        graphPosition: {x: 344, y: 7177}
+        m_Ports:
+        - name: Next
+          fieldName: 
+          acceptsMultipleConnections: 1
+          isInput: 0
+          m_Connections:
+          - nodeId: 0928e291-2a3c-4fa1-bded-a0e7009a01b3
+            portName: Pre
+          m_SerializedType: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+            PublicKeyToken=b77a5c561934e089
+        effectName: RendererDeactive
+        groupID: 2100
+        valid: 1
+        applyOnReplaceMat: 0
+        applyOnAddMat: 0
+        hideShadow: 0
+        next: 0
+    0000003C:
+      type: {class: RenderActive, ns: CFEngine, asm: Assembly-CSharp}
+      data:
+        id: 0928e291-2a3c-4fa1-bded-a0e7009a01b3
+        name: Render Active
+        graph: {fileID: 11400000}
+        graphPosition: {x: 629, y: 7177}
+        m_Ports:
+        - name: Pre
+          fieldName: pre
+          acceptsMultipleConnections: 0
+          isInput: 1
+          m_Connections:
+          - nodeId: 87909dfd-0dba-4bde-96dc-a82051158d7e
+            portName: Next
+          m_SerializedType: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+            PublicKeyToken=b77a5c561934e089
+        - name: Next
+          fieldName: 
+          acceptsMultipleConnections: 1
+          isInput: 0
+          m_Connections: []
+          m_SerializedType: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+            PublicKeyToken=b77a5c561934e089
+        pre: 0
+        next: 0
+        runOnDisable: 0
+        active: 0
+        activeOnStart: 0
+    0000003D:
+      type: {class: EffectTemplate, ns: CFEngine, asm: Assembly-CSharp}
+      data:
+        id: 536012d9-9e25-4d2f-86e4-0125369f1a1d
+        name: Effect Template
+        graph: {fileID: 11400000}
+        graphPosition: {x: 915.17, y: 1478.555}
+        m_Ports:
+        - name: Next
+          fieldName: 
+          acceptsMultipleConnections: 1
+          isInput: 0
+          m_Connections:
+          - nodeId: ea140297-31f1-4a44-bb5d-37f31d1e2aa5
+            portName: Pre
+          m_SerializedType: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+            PublicKeyToken=b77a5c561934e089
+        effectName: Wax
+        groupID: 2300
+        valid: 1
+        applyOnReplaceMat: 1
+        applyOnAddMat: 0
+        hideShadow: 0
+        next: 0
+    0000003E:
+      type: {class: MatLoad, ns: CFEngine, asm: Assembly-CSharp}
+      data:
+        id: ea140297-31f1-4a44-bb5d-37f31d1e2aa5
+        name: Mat Load
+        graph: {fileID: 11400000}
+        graphPosition: {x: 1261, y: 1431}
+        m_Ports:
+        - name: Pre
+          fieldName: pre
+          acceptsMultipleConnections: 0
+          isInput: 1
+          m_Connections:
+          - nodeId: 536012d9-9e25-4d2f-86e4-0125369f1a1d
+            portName: Next
+          m_SerializedType: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+            PublicKeyToken=b77a5c561934e089
+        - name: Next
+          fieldName: 
+          acceptsMultipleConnections: 1
+          isInput: 0
+          m_Connections:
+          - nodeId: 24576b0b-40f6-47e8-94e7-f13a161bae18
+            portName: Pre
+          m_SerializedType: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+            PublicKeyToken=b77a5c561934e089
+        pre: 0
+        next: 0
+        runOnDisable: 1
+        needMainTex: 0
+        needNormal: 0
+        copyFromSrc: 0
+        defaultMat: {fileID: 2100000, guid: f28bed67443293b428684c9ec4cbf1e7, type: 2}
+        matCanEdit: 0
+    0000003F:
+      type: {class: ShaderColor, ns: CFEngine, asm: Assembly-CSharp}
+      data:
+        id: 24576b0b-40f6-47e8-94e7-f13a161bae18
+        name: Shader Color
+        graph: {fileID: 11400000}
+        graphPosition: {x: 1600, y: 1507}
+        m_Ports:
+        - name: Pre
+          fieldName: pre
+          acceptsMultipleConnections: 0
+          isInput: 1
+          m_Connections:
+          - nodeId: ea140297-31f1-4a44-bb5d-37f31d1e2aa5
+            portName: Next
+          m_SerializedType: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+            PublicKeyToken=b77a5c561934e089
+        - name: Next
+          fieldName: 
+          acceptsMultipleConnections: 1
+          isInput: 0
+          m_Connections: []
+          m_SerializedType: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+            PublicKeyToken=b77a5c561934e089
+        pre: 0
+        next: 0
+        runOnDisable: 0
+        key: _Color0
+        lerpType: 255
+        maskLerpType: 0
+        fadeInType: 0
+        fadeOutType: 0
+        color: {r: 1, g: 1, b: 1, a: 1}
+        hdr: 0
+        copySrcParam: 0
+        alpha: 1
+        alphaDesc: 
+        alphaModifyType: 0
+        defaultAlpha: 0
+        minA: 0
+        maxA: 1
+    00000040:
+      type: {class: MatAddAndLerp, ns: CFEngine, asm: Assembly-CSharp}
+      data:
+        id: 943cbb99-0d61-42a3-913e-e6ae9ffaf2a5
+        name: Mat Add And Lerp
+        graph: {fileID: 11400000}
+        graphPosition: {x: 643, y: 7501}
+        m_Ports:
+        - name: Pre
+          fieldName: pre
+          acceptsMultipleConnections: 0
+          isInput: 1
+          m_Connections:
+          - nodeId: 2014d9a0-7948-4a6a-87d2-fee55e9582a6
+            portName: Next
+          m_SerializedType: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+            PublicKeyToken=b77a5c561934e089
+        - name: Next
+          fieldName: 
+          acceptsMultipleConnections: 1
+          isInput: 0
+          m_Connections: []
+          m_SerializedType: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+            PublicKeyToken=b77a5c561934e089
+        pre: 0
+        next: 0
+        runOnDisable: 0
+        key: _MainColor
+        lerpType: 0
+        maskLerpType: 8
+        fadeInType: 1
+        fadeOutType: 2
+        needMainTex: 0
+        needNormal: 0
+        color: {r: 1, g: 1, b: 1, a: 1}
+        hdr: 0
+        copySrcParam: 0
+        alpha: 1
+        alphaDesc: HitAlphaModify
+        alphaModifyType: 2
+        defaultAlpha: 1
+        minA: 0
+        maxA: 1
+    00000041:
+      type: {class: EffectTemplate, ns: CFEngine, asm: Assembly-CSharp}
+      data:
+        id: 2014d9a0-7948-4a6a-87d2-fee55e9582a6
+        name: Effect Template
+        graph: {fileID: 11400000}
+        graphPosition: {x: 302, y: 7501}
+        m_Ports:
+        - name: Next
+          fieldName: 
+          acceptsMultipleConnections: 1
+          isInput: 0
+          m_Connections:
+          - nodeId: 943cbb99-0d61-42a3-913e-e6ae9ffaf2a5
+            portName: Pre
+          m_SerializedType: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+            PublicKeyToken=b77a5c561934e089
+        effectName: HitFadeShader
+        groupID: 2200
+        valid: 1
+        applyOnReplaceMat: 0
+        applyOnAddMat: 1
+        hideShadow: 0
+        next: 0

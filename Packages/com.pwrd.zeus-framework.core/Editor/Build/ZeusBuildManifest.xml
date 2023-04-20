@@ -1,0 +1,138 @@
+<!--  
+1.Zeus打包框架配置文件，用于配置打包流程.框架默认配置文件位置：Assets/Zeus/Core/Editor/Build/ZeusBuildManifest.xml，项目如果需要自定义打包流程，复制该文件放置到Assets下，框架会优先使用该目录下配置文件。
+2.打包分为多个步骤，执行顺序依次为：ModifyPlayerSettings -> BeforeBuild -> InternalBeforeBuild -> AfterBuild -> FinallyBuild。
+3.自定义类型要求：
+  1）继承对应接口；
+  2）只能有一个默认构造函数，例如：
+        class ModifyAssetResourceSetting:IModifyPlayerSettings , IFinallyBuild
+        {
+          ......
+          ......
+          public ModifyAssetResourceSetting() { }//或者不写这行
+          
+           public void OnModifyPlayerSettings(BuildTarget target)......//实现IModifyPlayerSettings
+           public void OnFinallyBuild(BuildTarget target, string outputPath)......//实现IFinallyBuild
+          ......  
+        }
+4.如果专属特定平台打包逻辑，需要加上平台标识，例如：<platform>Android</platform>
+
+-->
+<root>
+	<!--  最先执行的打包设置  -->
+	<ModifyPlayerSettings>
+		<class>
+			<class>Zeus.Core.BuildLogFilterProcessor</class>
+		</class>
+
+		<class>
+			<class>Zeus.Core.FileSystem.RedundantFileBuildProcessor</class>
+		</class>
+
+		<class>
+			<class>Zeus.Build.ModifyBuildPlayerOptions</class>
+		</class>
+
+		<class>
+			<class>Zeus.Core.GameBuildProcessor</class>
+		</class>
+
+		<class>
+			<class>Zeus.Framework.Asset.AssetBuildProcessor</class>
+		</class>
+
+		<class>
+			<class>Zeus.Core.EditorSettingManager</class>
+		</class>
+
+		<class>
+			<class>Zeus.Framework.Lua.LuaFileProcessor</class>
+		</class>
+
+		<class>
+			<class>Zeus.Build.ModifyPlayerSettings</class>
+		</class>
+
+		<class>
+			<class>Zeus.Framework.Hotfix.HotfixBuildProcessor</class>
+		</class>
+
+		<class>
+			<class>Zeus.Framework.ConfigDB.ConfigDbBuildProcessor</class>
+		</class>
+
+		<class>
+			<class>Zeus.Framework.Lua.LuaScriptEncryptor</class>
+		</class>
+	</ModifyPlayerSettings>
+
+	<!--  打包之前  -->
+	<BeforeBuild>
+		<class>
+			<class>Zeus.Core.FileSystem.EditorVFileSystem</class>
+		</class>
+
+		<class>
+			<class>Zeus.Framework.Asset.AssetBuildProcessor</class>
+		</class>
+    
+		<class>
+			<class>Zeus.Core.GameBuildProcessor</class>
+		</class>
+
+		<class>
+			<class>Zeus.Framework.Lua.LuaScriptEncryptor</class>
+		</class>
+    
+		<class>
+			<class>Zeus.BuildAndroidProject.BeforeBuild_Android</class>
+			<platform>Android</platform>
+		</class>
+	</BeforeBuild>
+
+	<!--  打包过程中  -->
+	<InternalBeforeBuild>
+		<class>
+			<class>Zeus.Core.FileSystem.RedundantFileBuildProcessor</class>
+		</class>
+		<class>
+			<class>Zeus.Core.GameBuildProcessor</class>
+		</class>
+	</InternalBeforeBuild>
+
+
+	<!--  打包之后  -->
+	<AfterBuild>
+		<class>
+			<class>Zeus.Core.FileSystem.EditorVFileSystem</class>
+		</class>
+
+		<class>
+			<class>Zeus.XCodeEditor.AfterBuildXCode</class>
+			<platform>iOS</platform>
+		</class>
+
+		<class>
+			<class>Zeus.Framework.Asset.AssetBuildProcessor</class>
+		</class>
+	</AfterBuild>
+
+	<!--  打包最后执行  -->
+	<FinallyBuild>
+		<class>
+			<class>Zeus.Framework.Lua.LuaScriptEncryptor</class>
+		</class>
+
+		<class>
+			<class>Zeus.Framework.Asset.AssetBuildProcessor</class>
+		</class>
+
+		<class>
+			<class>Zeus.Core.GameBuildProcessor</class>
+		</class>
+
+		<class>
+			<class>Zeus.Core.BuildLogFilterProcessor</class>
+		</class>
+
+	</FinallyBuild>
+</root>

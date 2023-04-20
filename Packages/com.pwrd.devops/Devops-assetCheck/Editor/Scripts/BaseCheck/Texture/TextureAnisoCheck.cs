@@ -1,0 +1,25 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEditor;
+using UnityEngine;
+namespace AssetCheck
+{
+    [CheckRuleDescription("Texture", "各向异性过滤的纹理", "t:Texture2D", "")]
+    public class TextureAnisoCheck : RuleBase
+    {
+        [PublicMethod]
+        public bool Check(string path, out string output)
+        {
+            output = string.Empty;
+            Texture tex = AssetDatabase.LoadAssetAtPath<Texture>(path);
+            if (tex == null)
+                return true;
+            TextureImporter importer = AssetImporter.GetAtPath(path) as TextureImporter;
+            if (importer == null)
+                return true;
+            output = importer.anisoLevel.ToString();
+            return importer.anisoLevel == 0;
+        }
+    }
+}
+
