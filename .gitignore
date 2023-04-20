@@ -3,3 +3,9 @@ Logs
 Temp
 CSharpAPI
 obj
+.idea
+*.csproj
+*.sln
+*.apk
+UserSettings
+SerializedBuildInfo
