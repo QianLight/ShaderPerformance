@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Runtime.InteropServices;
@@ -33,6 +34,16 @@ namespace Burst.Compiler.IL.Tests
     internal interface IFunctionPointerProvider
     {
         object FromIntPtr(IntPtr ptr);
+    }
+
+    /// <summary>
+    /// Used to implement custom testing behaviour
+    /// </summary>
+    internal interface TestCompilerBaseExtensions
+    {
+        (bool shouldSkip, string skipReason) SkipTest(MethodInfo method);
+        Type FetchAlternateDelegate(out bool isInRegistry, out Func<object, object[], object> caller);
+        object[] ProcessNativeArgsForDelegateCaller(object[] nativeArgs, MethodInfo methodInfo);
     }
 
     [AttributeUsage(AttributeTargets.Method, AllowMultiple = true, Inherited = false)]
@@ -86,6 +97,16 @@ namespace Burst.Compiler.IL.Tests
         /// </summary>
         public object OverrideManagedResult { get; set; }
 
+        /// <summary>
+        /// Use this when a pointer is used in a sizeof computation, since on a 32bit target the result will differ versus our 64bit managed results.
+        /// </summary>
+        public object OverrideOn32BitNative { get; set; }
+
+        /// <summary>
+        /// Use this and specify a TargetPlatform (Host) to have the test ignored when running on that host. Mostly used by WASM at present.
+        /// </summary>
+        public object IgnoreOnPlatform { get; set; }
+
         public bool? IsDeterministic { get; set; }
 
         protected virtual bool SupportException => true;
@@ -94,9 +115,7 @@ namespace Burst.Compiler.IL.Tests
         {
             // If the system doesn't support exceptions (Unity editor for delegates) we should not test with exceptions
             bool skipTest = (ExpectCompilerException || ExpectedException != null) && !SupportException;
-
             var expectResult = !method.ReturnType.IsType(typeof(void));
-            var name = method.Name;
             var arguments = new List<object>(this.Arguments);
 
             // Expand arguments with IntRangeAttributes if we have them
@@ -131,6 +150,10 @@ namespace Burst.Compiler.IL.Tests
                     if (OverrideManagedResult != null)
                     {
                         caseParameters.Properties.Set(nameof(OverrideManagedResult), OverrideManagedResult);
+                    }
+                    if (OverrideOn32BitNative != null)
+                    {
+                        caseParameters.Properties.Set(nameof(OverrideOn32BitNative), OverrideOn32BitNative);
                     }
                 }
 
@@ -218,7 +241,9 @@ namespace Burst.Compiler.IL.Tests
         private readonly bool _compileOnly;
         private readonly Type _expectedException;
         protected readonly bool _expectCompilerException;
-        protected readonly DiagnosticId[] _expectedDiagnosticIds;
+        private readonly DiagnosticId[] _expectedDiagnosticIds;
+
+        protected virtual bool TestInterpreter => false;
 
         protected TestCompilerCommandBase(TestCompilerAttributeBase attribute, Test test, TestMethod originalMethod) : base(test)
         {
@@ -245,6 +270,15 @@ namespace Burst.Compiler.IL.Tests
 
         protected virtual Type CreateNativeDelegateType(Type returnType, Type[] arguments, out bool isInRegistry, out Func<object, object[], object> caller)
         {
+            if (GetExtension() != null)
+            {
+                Type type = GetExtension().FetchAlternateDelegate(out isInRegistry, out caller);
+                if (type != null)
+                {
+                    return type;
+                }
+            }
+
             isInRegistry = false;
             StaticDelegateCallback staticDelegate;
             if (StaticDelegateRegistry.TryFind(returnType, arguments, out staticDelegate))
@@ -272,23 +306,54 @@ namespace Burst.Compiler.IL.Tests
 
         protected bool RunManagedBeforeNative { get; set; }
 
+        protected static readonly Dictionary<string, string> BailedTests = new Dictionary<string, string>();
+
+        private unsafe void ZeroMemory(byte* ptr, int size)
+        {
+            for (int i = 0; i < size; i++)
+            {
+                *(ptr + i) = 0;
+            }
+        }
+
         private unsafe TestResult ExecuteMethod(ExecutionContext context)
         {
             byte* returnBox = stackalloc byte[MaxReturnBoxSize];
             Setup();
             var methodInfo = _originalMethod.Method.MethodInfo;
 
-            if (!RunningArmTestOnIntelCPU(methodInfo))
+            var runTest = TestOnCurrentHostEnvironment(methodInfo);
+
+            if (runTest)
             {
                 var arguments = GetArgumentsArray(_originalMethod);
 
-                // Special case for Compiler Exceptions when IL can't be translated
+                // We can't skip tests during BuildFrom that rely on specific options (e.g. current platform)
+                // So we handle the remaining cases here via extensions
+                if (GetExtension() != null)
+                {
+                    var skip = GetExtension().SkipTest(methodInfo);
+                    if (skip.shouldSkip)
+                    {
+                        // For now, mark the tests as passed rather than skipped, to avoid the log spam
+                        //On wasm this log spam accounts for 33minutes of test execution time!!
+                        //context.CurrentResult.SetResult(ResultState.Skipped, skip.skipReason);
+                        context.CurrentResult.SetResult(ResultState.Success);
+                        return context.CurrentResult;
+                    }
+                }
+
+                // If we expect a compiler exception, then we need to allow argument transformation to fail,
+                // because this may be the actual thing that we're trying to test.
+                object[] nativeArgs = null;
+                Type[] nativeArgTypes = null;
+                Type returnBoxType = null;
+                var transformedArguments = false;
                 if (_expectCompilerException)
                 {
-                    // We still need to transform arguments here in case there's a function pointer that we expect to fail compilation.
                     var expectedExceptionResult = TryExpectedException(
                         context,
-                        () => TransformArguments(_originalMethod.Method.MethodInfo, arguments, out _, out _, returnBox, out _),
+                        () => TransformArguments(_originalMethod.Method.MethodInfo, arguments, out nativeArgs, out nativeArgTypes, returnBox, out returnBoxType),
                         "Transforming arguments",
                         type => true,
                         "Any exception",
@@ -298,26 +363,27 @@ namespace Burst.Compiler.IL.Tests
                     {
                         return context.CurrentResult;
                     }
-
-                    return HandleCompilerException(context, methodInfo);
+                    transformedArguments = true;
                 }
 
-                object[] nativeArgs;
-                Type[] nativeArgTypes;
-                TransformArguments(_originalMethod.Method.MethodInfo, arguments, out nativeArgs, out nativeArgTypes, returnBox, out Type returnBoxType);
+                if (!transformedArguments)
+                {
+                    TransformArguments(_originalMethod.Method.MethodInfo, arguments, out nativeArgs, out nativeArgTypes, returnBox, out returnBoxType);
+                }
 
                 bool isInRegistry = false;
                 Func<object, object[], object> nativeDelegateCaller;
                 var delegateType = CreateNativeDelegateType(_originalMethod.Method.MethodInfo.ReturnType, nativeArgTypes, out isInRegistry, out nativeDelegateCaller);
                 if (!isInRegistry)
                 {
-                    Console.WriteLine($"Warning, the delegate for the method `{_originalMethod.Method}` has not been generated");
+                    TestContext.Out.WriteLine($"Warning, the delegate for the method `{_originalMethod.Method}` has not been generated");
                 }
 
                 Delegate compiledFunction;
+                Delegate interpretDelegate;
                 try
                 {
-                    compiledFunction = CompileDelegate(context, methodInfo, delegateType, returnBox, out _);
+                    compiledFunction = CompileDelegate(context, methodInfo, delegateType, returnBox, out _, out interpretDelegate);
                 }
                 catch (Exception ex) when (_expectedException != null && ex.GetType() == _expectedException)
                 {
@@ -327,11 +393,19 @@ namespace Burst.Compiler.IL.Tests
 
                 Assert.IsTrue(returnBoxType == null || Marshal.SizeOf(returnBoxType) <= MaxReturnBoxSize);
 
+                if (TestInterpreter)
+                {
+                    compiledFunction = interpretDelegate;
+                }
+
                 if (compiledFunction == null)
+                {
                     return context.CurrentResult;
+                }
 
                 if (_compileOnly) // If the test only wants to compile the code, bail now.
                 {
+                    context.CurrentResult.SetResult(ResultState.Success);
                     return context.CurrentResult;
                 }
                 else if (_expectedException != null) // Special case if we have an expected exception
@@ -360,14 +434,45 @@ namespace Burst.Compiler.IL.Tests
                     // ------------------------------------------------------------------
                     // Run Native (Before)
                     // ------------------------------------------------------------------
-                    if (!RunManagedBeforeNative)
+                    if (!RunManagedBeforeNative && !TestInterpreter)
                     {
+                        if (GetExtension() != null)
+                        {
+                            nativeArgs = GetExtension().ProcessNativeArgsForDelegateCaller(nativeArgs, methodInfo);
+                        }
                         resultNative = nativeDelegateCaller(compiledFunction, nativeArgs);
                         if (returnBoxType != null)
                         {
                             resultNative = Marshal.PtrToStructure((IntPtr)returnBox, returnBoxType);
                         }
                     }
+
+                    // ------------------------------------------------------------------
+                    // Run Interpreter
+                    // ------------------------------------------------------------------
+                    object resultInterpreter = null;
+
+                    if (TestInterpreter)
+                    {
+                        ZeroMemory(returnBox, MaxReturnBoxSize);
+                        var name = methodInfo.DeclaringType.FullName + "." + methodInfo.Name;
+                        if (!InterpretMethod(interpretDelegate, methodInfo, nativeArgs, methodInfo.ReturnType,
+                            out var reason, out resultInterpreter))
+                        {
+                            lock (BailedTests)
+                            {
+                                BailedTests[name] = reason;
+                            }
+                        }
+                        else
+                        {
+                            if (returnBoxType != null)
+                            {
+                                resultInterpreter = Marshal.PtrToStructure((IntPtr)returnBox, returnBoxType);
+                            }
+                        }
+                    }
+
 
                     // ------------------------------------------------------------------
                     // Run Managed
@@ -377,11 +482,12 @@ namespace Burst.Compiler.IL.Tests
                     var overrideManagedResult = _originalMethod.Properties.Get("OverrideManagedResult");
                     if (overrideManagedResult != null)
                     {
-                        Console.WriteLine($"Using OverrideManagedResult: `{overrideManagedResult}` to compare to burst `{resultNative}`, managed version not run");
+                        TestContext.Out.WriteLine($"Using OverrideManagedResult: `{overrideManagedResult}` to compare to burst `{resultNative}`, managed version not run");
                         resultClr = overrideManagedResult;
                     }
                     else
                     {
+                        ZeroMemory(returnBox, MaxReturnBoxSize);
                         resultClr = _originalMethod.Method.Invoke(context.TestObject, arguments);
 
                         if (returnBoxType != null)
@@ -393,15 +499,23 @@ namespace Burst.Compiler.IL.Tests
                     var overrideResultOnMono = _originalMethod.Properties.Get("OverrideResultOnMono");
                     if (overrideResultOnMono != null)
                     {
-                        Console.WriteLine($"Using OverrideResultOnMono: `{overrideResultOnMono}` instead of `{resultClr}` compare to burst `{resultNative}`");
+                        TestContext.Out.WriteLine($"Using OverrideResultOnMono: `{overrideResultOnMono}` instead of `{resultClr}` compare to burst `{resultNative}`");
                         resultClr = overrideResultOnMono;
+                    }
+
+                    var overrideOn32BitNative = _originalMethod.Properties.Get("OverrideOn32BitNative");
+                    if (overrideOn32BitNative != null && TargetIs32Bit())
+                    {
+                        TestContext.Out.WriteLine($"Using OverrideOn32BitNative: '{overrideOn32BitNative}' instead of '{resultClr}' compare to burst '{resultNative}' due to 32bit native runtime");
+                        resultClr = overrideOn32BitNative;
                     }
 
                     // ------------------------------------------------------------------
                     // Run Native (After)
                     // ------------------------------------------------------------------
-                    if (RunManagedBeforeNative)
+                    if (RunManagedBeforeNative && !TestInterpreter)
                     {
+                        ZeroMemory(returnBox, MaxReturnBoxSize);
                         resultNative = nativeDelegateCaller(compiledFunction, nativeArgs);
                         if (returnBoxType != null)
                         {
@@ -409,8 +523,15 @@ namespace Burst.Compiler.IL.Tests
                         }
                     }
 
-                    // Use our own version (for handling correctly float precision)
-                    AssertHelper.AreEqual(resultClr, resultNative, GetULP());
+                    if (!TestInterpreter)
+                    {
+                        // Use our own version (for handling correctly float precision)
+                        AssertHelper.AreEqual(resultClr, resultNative, GetULP());
+                    }
+                    else if (resultInterpreter != null)
+                    {
+                        AssertHelper.AreEqual(resultClr, resultInterpreter, GetULP());
+                    }
 
                     // Validate deterministic outputs - Disabled for now
                     //RunDeterminismValidation(_originalMethod, resultNative);
@@ -432,7 +553,7 @@ namespace Burst.Compiler.IL.Tests
             }
 
             // Compile the method once again, this time for Arm CPU to check against gold asm images
-            CompileDelegateForArm(methodInfo);
+            GoldFileTestForOtherPlatforms(methodInfo, runTest);
 
             CompleteTest(context);
 
@@ -675,6 +796,18 @@ namespace Burst.Compiler.IL.Tests
             }
         }
 
+        public static void ReportBailedTests(TextWriter writer = null)
+        {
+            writer = writer ?? Console.Out;
+            lock (BailedTests)
+            {
+                foreach (var bailedTest in BailedTests.OrderBy(kv => kv.Key))
+                {
+                    writer.WriteLine($"{bailedTest.Key}: {bailedTest.Value}");
+                }
+            }
+        }
+
         protected bool CheckExpectedDiagnostics(ExecutionContext context, string contextName)
         {
             var loggedDiagnosticIds = GetLoggedDiagnosticIds().OrderBy(x => x);
@@ -752,17 +885,23 @@ namespace Burst.Compiler.IL.Tests
 
         protected abstract object[] GetArgumentsArray(TestMethod method);
 
-        protected abstract unsafe Delegate CompileDelegate(ExecutionContext context, MethodInfo methodInfo, Type delegateType, byte* returnBox, out Type returnBoxType);
+        protected abstract unsafe Delegate CompileDelegate(ExecutionContext context, MethodInfo methodInfo, Type delegateType, byte* returnBox, out Type returnBoxType, out Delegate interpretDelegate);
 
-        protected abstract void CompileDelegateForArm(MethodInfo methodInfo);
+        protected abstract bool InterpretMethod(Delegate interpretDelegate, MethodInfo methodInfo, object[] args, Type returnType, out string reason, out object result);
 
-        protected abstract bool RunningArmTestOnIntelCPU(MethodInfo methodInfo);
+        protected abstract void GoldFileTestForOtherPlatforms(MethodInfo methodInfo, bool testWasRun);
+
+        protected abstract bool TestOnCurrentHostEnvironment(MethodInfo methodInfo);
 
         protected abstract object CompileFunctionPointer(MethodInfo methodInfo, Type functionType);
 
         protected abstract void Setup();
 
         protected abstract TestResult HandleCompilerException(ExecutionContext context, MethodInfo methodInfo);
+
+        protected abstract TestCompilerBaseExtensions GetExtension();
+
+        protected abstract bool TargetIs32Bit();
     }
 
     [AttributeUsage(AttributeTargets.Parameter, AllowMultiple = false, Inherited = false)]

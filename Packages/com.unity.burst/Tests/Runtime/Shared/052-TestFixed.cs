@@ -88,5 +88,96 @@ namespace Burst.Compiler.IL.Tests
                 return total;
             }
         }
+
+        // The below tests are designed to verify the indexer is treated correctly for various fixed arrays (only the smallest case)
+        //(the bug was actually to do with pointer addition, so see 031-Pointer.cs for additional coverage)
+        //Its not perfect as if the indexer is treated as signed, then in burst we will read off the beginning of the array
+        //which might be into another array or off the beginning of the struct... and the value might accidently be correct.
+        public unsafe struct IndexerStructTestSByte
+        {
+            public fixed sbyte sbyteArray[256];
+
+            public struct Provider : IArgumentProvider
+            {
+                public object Value
+                {
+                    get
+                    {
+                        var s = new IndexerStructTestSByte();
+
+                        for (int a=0;a<256;a++)
+                        {
+                            s.sbyteArray[a] = sbyte.MinValue;
+                        }
+
+                        s.sbyteArray[127] = 127;
+                        s.sbyteArray[128] = 63;
+                        s.sbyteArray[255] = 23;
+
+                        return s;
+                    }
+                }
+            }
+        }
+        public unsafe struct IndexerStructTestByte
+        {
+            public fixed byte byteArray[256];
+
+            public struct Provider : IArgumentProvider
+            {
+                public object Value
+                {
+                    get
+                    {
+                        var s = new IndexerStructTestByte();
+
+                        for (int a=0;a<256;a++)
+                        {
+                            s.byteArray[a] = byte.MinValue;
+                        }
+
+                        s.byteArray[127] = 129;
+                        s.byteArray[128] = 212;
+                        s.byteArray[255] = 165;
+
+                        return s;
+                    }
+                }
+            }
+        }
+        // SByte array with different indexer types
+        [TestCompiler(typeof(IndexerStructTestSByte.Provider),(byte)0)]
+        [TestCompiler(typeof(IndexerStructTestSByte.Provider),(byte)128)]
+        [TestCompiler(typeof(IndexerStructTestSByte.Provider),(byte)255)]
+        public static unsafe sbyte IndexerReadFromSByteArrayWithByteOffset(ref IndexerStructTestSByte s, byte offset)
+        {
+            return s.sbyteArray[offset];
+        }
+
+        [TestCompiler(typeof(IndexerStructTestSByte.Provider),(sbyte)0)]
+        [TestCompiler(typeof(IndexerStructTestSByte.Provider),(sbyte)127)]  // signed offset so limited
+        public static unsafe sbyte IndexerReadFromSByteArrayWithSByteOffset(ref IndexerStructTestSByte s, sbyte offset)
+        {
+            return s.sbyteArray[offset];
+        }
+
+        // Byte array with different indexer types
+        [TestCompiler(typeof(IndexerStructTestByte.Provider),(byte)0)]
+        [TestCompiler(typeof(IndexerStructTestByte.Provider),(byte)128)]
+        [TestCompiler(typeof(IndexerStructTestByte.Provider),(byte)255)]
+        public static unsafe byte IndexerReadFromByteArrayWithByteOffset(ref IndexerStructTestByte s, byte offset)
+        {
+            return s.byteArray[offset];
+        }
+
+        [TestCompiler(typeof(IndexerStructTestByte.Provider),(sbyte)0)]
+        [TestCompiler(typeof(IndexerStructTestByte.Provider),(sbyte)127)]  // signed offset so limited
+        public static unsafe byte IndexerReadFromByteArrayWithSByteOffset(ref IndexerStructTestByte s, sbyte offset)
+        {
+            return s.byteArray[offset];
+        }
     }
+
+
+
 }

@@ -1,3 +1,8 @@
+using System.Collections.Generic;
+using System;
+using UnityEngine;
+
+#if UNITY_EDITOR || BURST_INTERNAL
 namespace Unity.Burst.Editor
 {
     internal partial class BurstDisassembler
@@ -5,7 +10,7 @@ namespace Unity.Burst.Editor
         /// <summary>
         /// <see cref="AsmTokenKind"/> provider for Intel x86-64
         /// </summary>
-        private class X86AsmTokenKindProvider : AsmTokenKindProvider
+        internal class X86AsmTokenKindProvider : AsmTokenKindProvider
         {
             private static readonly string[] Registers = new[]
             {
@@ -181,7 +186,6 @@ namespace Unity.Burst.Editor
                 "btr",
                 "bts",
                 "bzhi",
-                "call",
                 "cbw",
                 "cdq",
                 "cdqe",
@@ -245,10 +249,13 @@ namespace Unity.Burst.Editor
                 "in",
                 "inc",
                 "ins",
+                "cqo",
                 "insb",
                 "insd",
                 "insw",
                 "int",
+                "int1",
+                "int3",
                 "into",
                 "invd",
                 "invept",
@@ -256,39 +263,6 @@ namespace Unity.Burst.Editor
                 "invpcid",
                 "invvpid",
                 "iret",
-                "ja",
-                "jae",
-                "jb",
-                "jbe",
-                "jc",
-                "jcxz",
-                "je",
-                "jecxz",
-                "jg",
-                "jge",
-                "jl",
-                "jle",
-                "jmp",
-                "jna",
-                "jnae",
-                "jnb",
-                "jnbe",
-                "jnc",
-                "jne",
-                "jng",
-                "jnge",
-                "jnl",
-                "jnle",
-                "jno",
-                "jnp",
-                "jns",
-                "jnz",
-                "jo",
-                "jp",
-                "jpe",
-                "jpo",
-                "js",
-                "jz",
                 "lahf",
                 "lar",
                 "lds",
@@ -317,7 +291,7 @@ namespace Unity.Burst.Editor
                 "ltr",
                 "lzcnt",
                 "mov",
-                "movbe1",
+                "movbe",
                 "movabs",
                 "movs",
                 "movsb",
@@ -368,7 +342,6 @@ namespace Unity.Burst.Editor
                 "repne",
                 "repnz",
                 "repz",
-                "ret",
                 "rex64",
                 "rol",
                 "ror",
@@ -475,6 +448,57 @@ namespace Unity.Burst.Editor
                 "xsaveopt",
                 "xsetbv",
                 "xtest",
+            };
+
+            private static readonly string[] CallInstructions = new[]
+            {
+                "call",
+            };
+
+            private static readonly string[] ReturnInstructions = new[]
+            {
+                "ret",
+            };
+
+            private static readonly string[] BranchInstructions = new[]
+            {
+                "ja",
+                "jae",
+                "jb",
+                "jbe",
+                "jc",
+                "jcxz",
+                "je",
+                "jecxz",
+                "jg",
+                "jge",
+                "jl",
+                "jle",
+                "jna",
+                "jnae",
+                "jnb",
+                "jnbe",
+                "jnc",
+                "jne",
+                "jng",
+                "jnge",
+                "jnl",
+                "jnle",
+                "jno",
+                "jnp",
+                "jns",
+                "jnz",
+                "jo",
+                "jp",
+                "jpe",
+                "jpo",
+                "js",
+                "jz",
+            };
+
+            private static readonly string[] JumpInstructions = new[]
+            {
+                "jmp",
             };
 
             private static readonly string[] FpuInstructions = new[]
@@ -1397,7 +1421,16 @@ namespace Unity.Burst.Editor
                 "xsaves64",
             };
 
-            private X86AsmTokenKindProvider() : base(Registers.Length + Qualifiers.Length + Instructions.Length + FpuInstructions.Length + SimdInstructions.Length)
+            private X86AsmTokenKindProvider() : base(
+                Registers.Length +
+                Qualifiers.Length +
+                Instructions.Length +
+                CallInstructions.Length +
+                BranchInstructions.Length +
+                JumpInstructions.Length +
+                ReturnInstructions.Length +
+                FpuInstructions.Length +
+                SimdInstructions.Length)
             {
                 foreach (var register in Registers)
                 {
@@ -1414,6 +1447,26 @@ namespace Unity.Burst.Editor
                     AddTokenKind(instruction, AsmTokenKind.Instruction);
                 }
 
+                foreach (var instruction in CallInstructions)
+                {
+                    AddTokenKind(instruction, AsmTokenKind.CallInstruction);
+                }
+
+                foreach (var instruction in BranchInstructions)
+                {
+                    AddTokenKind(instruction, AsmTokenKind.BranchInstruction);
+                }
+
+                foreach (var instruction in JumpInstructions)
+                {
+                    AddTokenKind(instruction, AsmTokenKind.JumpInstruction);
+                }
+
+                foreach (var instruction in ReturnInstructions)
+                {
+                    AddTokenKind(instruction, AsmTokenKind.ReturnInstruction);
+                }
+
                 foreach (var instruction in FpuInstructions)
                 {
                     AddTokenKind(instruction, AsmTokenKind.Instruction);
@@ -1426,7 +1479,263 @@ namespace Unity.Burst.Editor
             }
 
             public static readonly X86AsmTokenKindProvider Instance = new X86AsmTokenKindProvider();
+
+            /// <summary>
+            /// Returns whether <see cref="instruction"/> is a packed, scalar, or infrastructure SIMD instruction.
+            /// </summary>
+            /// <remarks>
+            /// Assumes that <see cref="instruction"/> is an X86 SIMD instruction.
+            /// </remarks>
+            public override SIMDkind SimdKind(StringSlice instruction) => instruction[instruction.Length - 2] switch
+            {
+                'p' => SIMDkind.Packed,
+                's' => SIMDkind.Scalar,
+                _   => SIMDkind.Infrastructure
+            };
+
+            public override bool RegisterEqual(string regA, string regB)
+            {
+                try
+                {
+                    var regAVal = RegisterMapping(regA);
+                    var regBVal = RegisterMapping(regB);
+                    return regAVal == regBVal;
+                }
+                catch (Exception)
+                {
+                    return false;
+                }
+            }
+
+            private int RegisterMapping(string reg)
+            {
+                switch (reg)
+                {
+                    case "rax":
+                    case "eax":
+                    case "ax":
+                    case "ah":
+                    case "al":
+                        return 0;
+                    case "rbx":
+                    case "ebx":
+                    case "bx":
+                    case "bh":
+                    case "bl":
+                        return 1;
+                    case "rcx":
+                    case "ecx":
+                    case "cx":
+                    case "ch":
+                    case "cl":
+                        return 2;
+                    case "rdx":
+                    case "edx":
+                    case "dx":
+                    case "dh":
+                    case "dl":
+                        return 3;
+                    case "rsi":
+                    case "esi":
+                    case "si":
+                    case "sil":
+                        return 4;
+                    case "rdi":
+                    case "edi":
+                    case "di":
+                    case "dil":
+                        return 5;
+                    case "rsp":
+                    case "esp":
+                    case "sp":
+                    case "spl":
+                        return 6;
+                    case "rbp":
+                    case "ebp":
+                    case "bp":
+                    case "bpl":
+                        return 7;
+                    case "rip":
+                    case "eip":
+                    case "ip":
+                        return 8;
+                    case "r8":
+                    case "r8d":
+                    case "r8w":
+                    case "r8b":
+                        return 9;
+                    case "r9":
+                    case "r9d":
+                    case "r9w":
+                    case "r9b":
+                        return 10;
+                    case "r10":
+                    case "r10d":
+                    case "r10w":
+                    case "r10b":
+                        return 11;
+                    case "r11":
+                    case "r11d":
+                    case "r11w":
+                    case "r11b":
+                        return 12;
+                    case "r12":
+                    case "r12d":
+                    case "r12w":
+                    case "r12b":
+                        return 13;
+                    case "r13":
+                    case "r13d":
+                    case "r13w":
+                    case "r13b":
+                        return 14;
+                    case "r14":
+                    case "r14d":
+                    case "r14w":
+                    case "r14b":
+                        return 15;
+                    case "r15":
+                    case "r15d":
+                    case "r15w":
+                    case "r15b":
+                        return 16;
+                    case "cr0":
+                        return 17;
+                    case "cr2":
+                        return 18;
+                    case "cr3":
+                        return 19;
+                    case "cr4":
+                        return 20;
+                    case "cr8":
+                        return 21;
+                    case "dr0":
+                        return 22;
+                    case "dr1":
+                        return 23;
+                    case "dr2":
+                        return 24;
+                    case "dr3":
+                        return 25;
+                    case "dr6":
+                        return 26;
+                    case "dr7":
+                        return 27;
+                    case "mm0":
+                        return 28;
+                    case "mm1":
+                        return 29;
+                    case "mm2":
+                        return 30;
+                    case "mm3":
+                        return 31;
+                    case "mm4":
+                        return 32;
+                    case "mm5":
+                        return 33;
+                    case "mm6":
+                        return 34;
+                    case "mm7":
+                        return 35;
+                    case "xmm0":
+                        return 36;
+                    case "xmm1":
+                        return 37;
+                    case "xmm2":
+                        return 38;
+                    case "xmm3":
+                        return 39;
+                    case "xmm4":
+                        return 40;
+                    case "xmm5":
+                        return 41;
+                    case "xmm6":
+                        return 42;
+                    case "xmm7":
+                        return 43;
+                    case "xmm8":
+                        return 44;
+                    case "xmm9":
+                        return 45;
+                    case "xmm10":
+                        return 46;
+                    case "xmm11":
+                        return 47;
+                    case "xmm12":
+                        return 48;
+                    case "xmm13":
+                        return 49;
+                    case "xmm14":
+                        return 50;
+                    case "xmm15":
+                        return 51;
+                    case "ymm0":
+                        return 52;
+                    case "ymm1":
+                        return 53;
+                    case "ymm2":
+                        return 54;
+                    case "ymm3":
+                        return 55;
+                    case "ymm4":
+                        return 56;
+                    case "ymm5":
+                        return 57;
+                    case "ymm6":
+                        return 58;
+                    case "ymm7":
+                        return 59;
+                    case "ymm8":
+                        return 60;
+                    case "ymm9":
+                        return 61;
+                    case "ymm10":
+                        return 62;
+                    case "ymm11":
+                        return 63;
+                    case "ymm12":
+                        return 64;
+                    case "ymm13":
+                        return 65;
+                    case "ymm14":
+                        return 66;
+                    case "ymm15":
+                        return 67;
+                    case "st":
+                        return 68;
+                    case "st0":
+                        return 69;
+                    case "st1":
+                        return 70;
+                    case "st2":
+                        return 71;
+                    case "st3":
+                        return 72;
+                    case "st4":
+                        return 73;
+                    case "st5":
+                        return 74;
+                    case "st6":
+                        return 75;
+                    case "st7":
+                        return 76;
+                    case "cs":
+                        return 77;
+                    case "ss":
+                        return 78;
+                    case "ds":
+                        return 79;
+                    case "es":
+                        return 80;
+                    case "fs":
+                        return 81;
+                    case "gs":
+                        return 82;
+                    default:
+                        throw new Exception($"Case for \"{reg}\" not implemented.");
+                }
+            }
         }
     }
 }
-
+#endif

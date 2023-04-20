@@ -104,6 +104,50 @@ namespace Burst.Compiler.IL.Tests
         }
 
         // ---------------------------------------------------------
+        // compress
+        // ---------------------------------------------------------
+        [TestCompiler(DataRange.Standard, DataRange.Standard)]
+        public static unsafe uint CompressUInt4(ref uint4 value, ref bool4 mask)
+        {
+            var temp = default(TestCompressUInt4);
+
+            var ptr = &temp.Value0;
+            var count = math.compress(ptr, 0, value, mask);
+
+            uint result = 0;
+            for (int i = 0; i < count; i++)
+            {
+                result = result * 397 + ptr[i];
+            }
+
+            return result;
+        }
+
+        // ---------------------------------------------------------
+        // compress
+        // ---------------------------------------------------------
+        // IL2CPP codegen on Android fixed in 2023.1
+        // ... but now it's broken on Switch
+#if BURST_TESTS_ONLY || (UNITY_2023_1_OR_NEWER && !UNITY_SWITCH)
+        [TestCompiler(DataRange.Standard, DataRange.Standard)]
+        public static unsafe float CompressFloat4(ref float4 value, ref bool4 mask)
+        {
+            var temp = default(TestCompressFloat4);
+
+            var ptr = &temp.Value0;
+            var count = math.compress(ptr, 0, value, mask);
+
+            float result = 0;
+            for (int i = 0; i < count; i++)
+            {
+                result = result * 397 + ptr[i];
+            }
+
+            return result;
+        }
+#endif
+
+        // ---------------------------------------------------------
         // count_bits
         // ---------------------------------------------------------
         [TestCompiler(DataRange.Standard)]
@@ -1668,6 +1712,26 @@ namespace Burst.Compiler.IL.Tests
             public int Value1;
             public int Value2;
             public int Value3;
+#pragma warning restore 0649
+        }
+
+        struct TestCompressUInt4
+        {
+#pragma warning disable 0649
+            public uint Value0;
+            public uint Value1;
+            public uint Value2;
+            public uint Value3;
+#pragma warning restore 0649
+        }
+
+        struct TestCompressFloat4
+        {
+#pragma warning disable 0649
+            public float Value0;
+            public float Value1;
+            public float Value2;
+            public float Value3;
 #pragma warning restore 0649
         }
     }

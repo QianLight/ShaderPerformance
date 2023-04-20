@@ -62,7 +62,7 @@ namespace Unity.Burst
         ERR_InstructionStfldToManagedObjectNotSupported = 1043,
         ERR_InstructionLdlenNonConstantLengthNotSupported = 1044,
         ERR_StructWithAutoLayoutNotSupported = 1045,
-        ERR_StructWithPackNotSupported = 1046,
+        //ERR_StructWithPackNotSupported = 1046,
         ERR_StructWithGenericParametersAndExplicitLayoutNotSupported = 1047,
         ERR_StructSizeNotSupported = 1048,
         ERR_StructZeroSizeNotSupported = 1049,
@@ -95,6 +95,9 @@ namespace Unity.Burst
 
         // JitCompiler
         ERR_MissingExternBindings = 1068,
+
+        // More ExternalFunctionParameterChecks
+        ERR_MarshalAsNativeTypeOnReturnTypeNotSupported = 1069,
 
         // AssertProcessor
         ERR_AssertTypeNotSupported = 1071,
@@ -142,6 +145,8 @@ namespace Unity.Burst
         ERR_BinaryOperationNotSupported = 1097,
         ERR_CalliWithThisNotSupported = 1098,
         ERR_CalliNonCCallingConventionNotSupported = 1099,
+        ERR_StringLiteralTooBig = 1100,
+        ERR_LdftnNonCCallingConventionNotSupported = 1101,
 
         // CheckIntrinsicUsageTransform
         ERR_InstructionTargetCpuFeatureNotAllowedInThisBlock = 1200,
@@ -188,6 +193,9 @@ namespace Unity.Burst
         ERR_StringArrayInvalidArrayIndex = 1353,
         ERR_StringArrayInvalidArrayIndexOutOfRange = 1354,
 
+        ERR_UnmanagedStringMethodMissing = 1355,
+        ERR_UnmanagedStringMethodInvalid = 1356,
+
         // Static constructor
         ERR_ManagedStaticConstructor = 1360,
         ERR_StaticConstantArrayInStaticConstructor = 1361,
@@ -195,7 +203,21 @@ namespace Unity.Burst
         // Safety check warning
         WRN_ExceptionThrownInNonSafetyCheckGuardedFunction = 1370,
 
+        // Discarded method warning
+        WRN_ACallToMethodHasBeenDiscarded = 1371,
+
         // Accessing a nested managed array is not supported
         ERR_AccessingNestedManagedArrayNotSupported = 1380,
+
+        // Loading from a non-pointer / non-reference is not supported
+        ERR_LdobjFromANonPointerNonReference = 1381,
+
+        ERR_StringLiteralRequired = 1382,
+
+        ERR_MultiDimensionalArrayUnsupported = 1383,
+
+        ERR_NonBlittableAndNonManagedSequentialStructNotSupported = 1384,
+
+        ERR_VarArgFunctionNotSupported = 1385,
     }
 }

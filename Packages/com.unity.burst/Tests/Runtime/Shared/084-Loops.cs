@@ -18,7 +18,7 @@ namespace Burst.Compiler.IL.Tests
             }
         }
 
-        [TestCompiler(100)]
+        [TestCompiler(100, IgnoreOnPlatform = Backend.TargetPlatform.Wasm)]
         [OptimizationsOnly("Loops are not vectorized when optimizations are disabled")]
         public static unsafe void CheckExpectVectorized(int count)
         {
@@ -39,7 +39,8 @@ namespace Burst.Compiler.IL.Tests
             }
         }
 
-        [TestCompiler(100, ExpectCompilerException = true, ExpectedDiagnosticId = DiagnosticId.ERR_LoopUnexpectedAutoVectorization)]
+        [TestCompiler(100, ExpectCompilerException = true, ExpectedDiagnosticId = DiagnosticId.ERR_LoopUnexpectedAutoVectorization, IgnoreOnPlatform = Backend.TargetPlatform.Wasm)]
+        [OptimizationsOnly("Intrinsics are not evaluated when optimizations are disabled")]
         public static unsafe void CheckExpectVectorizedNoOptimizations(int count)
         {
             var a = stackalloc int[count];
@@ -59,7 +60,7 @@ namespace Burst.Compiler.IL.Tests
             }
         }
 
-        [TestCompiler(100)]
+        [TestCompiler(100, IgnoreOnPlatform = Backend.TargetPlatform.Wasm)]
         public static unsafe void CheckExpectNotVectorizedNoOptimizations(int count)
         {
             var a = stackalloc int[count];
@@ -68,7 +69,7 @@ namespace Burst.Compiler.IL.Tests
             CheckExpectNotVectorizedNoOptimizationsImpl(a, b, count);
         }
 
-        [MethodImpl(MethodImplOptions.NoInlining)]
+        [MethodImpl(MethodImplOptions.NoOptimization)]
         private static unsafe void CheckExpectVectorizedOptimizationsDisabledImpl([NoAlias] int* a, [NoAlias] int* b, int count)
         {
             for (var i = 0; i < count; i++)
@@ -79,8 +80,8 @@ namespace Burst.Compiler.IL.Tests
             }
         }
 
-        [TestCompiler(100, ExpectCompilerException = true, ExpectedDiagnosticId = DiagnosticId.ERR_LoopUnexpectedAutoVectorization)]
-        [OptimizationsDisabled("Test Loop.ExpectVectorized behavior when optimizations are disabled")]
+        [TestCompiler(100, ExpectCompilerException = true, ExpectedDiagnosticId = DiagnosticId.ERR_LoopUnexpectedAutoVectorization, IgnoreOnPlatform = Backend.TargetPlatform.Wasm)]
+        [OptimizationsOnly("We only validate loop intrinsics with optimizations enabled")]
         public static unsafe void CheckExpectVectorizedOptimizationsDisabled(int count)
         {
             var a = stackalloc int[count];
@@ -105,7 +106,7 @@ namespace Burst.Compiler.IL.Tests
             }
         }
 
-        [TestCompiler(100)]
+        [TestCompiler(100, IgnoreOnPlatform = Backend.TargetPlatform.Wasm)]
         public static unsafe void CheckExpectNotVectorized(int count)
         {
             var a = stackalloc int[count];
@@ -130,7 +131,8 @@ namespace Burst.Compiler.IL.Tests
             }
         }
 
-        [TestCompiler(100, ExpectCompilerException = true, ExpectedDiagnosticId = DiagnosticId.ERR_LoopUnexpectedAutoVectorization)]
+        [TestCompiler(100, ExpectCompilerException = true, ExpectedDiagnosticId = DiagnosticId.ERR_LoopUnexpectedAutoVectorization, IgnoreOnPlatform = Backend.TargetPlatform.Wasm)]
+        [OptimizationsOnly("Intrinsics are not evaluated when optimizations are disabled")]
         public static unsafe void CheckExpectVectorizedFail(int count)
         {
             var a = stackalloc int[count];
@@ -150,7 +152,7 @@ namespace Burst.Compiler.IL.Tests
             }
         }
 
-        [TestCompiler(100, ExpectCompilerException = true, ExpectedDiagnosticId = DiagnosticId.ERR_LoopUnexpectedAutoVectorization)]
+        [TestCompiler(100, ExpectCompilerException = true, ExpectedDiagnosticId = DiagnosticId.ERR_LoopUnexpectedAutoVectorization, IgnoreOnPlatform = Backend.TargetPlatform.Wasm)]
         [OptimizationsOnly("Loops are not vectorized when optimizations are disabled")]
         public static unsafe void CheckExpectNotVectorizedFail(int count)
         {
@@ -160,13 +162,15 @@ namespace Burst.Compiler.IL.Tests
             CheckExpectNotVectorizedFailImpl(a, b, count);
         }
 
-        [TestCompiler(ExpectCompilerException = true, ExpectedDiagnosticId = DiagnosticId.ERR_LoopIntrinsicMustBeCalledInsideLoop)]
+        [TestCompiler(ExpectCompilerException = true, ExpectedDiagnosticId = DiagnosticId.ERR_LoopIntrinsicMustBeCalledInsideLoop, IgnoreOnPlatform = Backend.TargetPlatform.Wasm)]
+        [OptimizationsOnly("Intrinsics are not evaluated when optimizations are disabled")]
         public static unsafe void CheckExpectVectorizedOutsideLoop()
         {
             Loop.ExpectVectorized();
         }
 
-        [TestCompiler(ExpectCompilerException = true, ExpectedDiagnosticId = DiagnosticId.ERR_LoopIntrinsicMustBeCalledInsideLoop)]
+        [TestCompiler(ExpectCompilerException = true, ExpectedDiagnosticId = DiagnosticId.ERR_LoopIntrinsicMustBeCalledInsideLoop, IgnoreOnPlatform = Backend.TargetPlatform.Wasm)]
+        [OptimizationsOnly("Intrinsics are not evaluated when optimizations are disabled")]
         public static unsafe void CheckExpectNotVectorizedOutsideLoop()
         {
             Loop.ExpectNotVectorized();
@@ -185,7 +189,7 @@ namespace Burst.Compiler.IL.Tests
             }
         }
 
-        [TestCompiler(100)]
+        [TestCompiler(100, IgnoreOnPlatform = Backend.TargetPlatform.Wasm)]
         [OptimizationsOnly("Loops are not vectorized when optimizations are disabled")]
         public static unsafe void CheckExpectVectorizedMultipleCalls(int count)
         {
@@ -209,7 +213,7 @@ namespace Burst.Compiler.IL.Tests
             }
         }
 
-        [TestCompiler(100, ExpectedDiagnosticId = DiagnosticId.WRN_LoopIntrinsicCalledButLoopOptimizedAway)]
+        [TestCompiler(100, ExpectedDiagnosticId = DiagnosticId.WRN_LoopIntrinsicCalledButLoopOptimizedAway, IgnoreOnPlatform = Backend.TargetPlatform.Wasm)]
         [OptimizationsOnly("Loops are not vectorized when optimizations are disabled")]
         public static unsafe void CheckExpectVectorizedUnrolledLoop(int count)
         {
@@ -234,7 +238,7 @@ namespace Burst.Compiler.IL.Tests
             return sum;
         }
 
-        [TestCompiler(100)]
+        [TestCompiler(100, IgnoreOnPlatform = Backend.TargetPlatform.Wasm)]
         [OptimizationsOnly("Loops are not vectorized when optimizations are disabled")]
         public static unsafe int CheckExpectVectorizedPartiallyUnrolledLoop(int count)
         {
@@ -246,7 +250,7 @@ namespace Burst.Compiler.IL.Tests
             return CheckExpectVectorizedPartiallyUnrolledLoopImpl(a, count);
         }
 
-        [TestCompiler(100, ExpectedDiagnosticId = DiagnosticId.WRN_LoopIntrinsicCalledButLoopOptimizedAway)]
+        [TestCompiler(100, ExpectedDiagnosticId = DiagnosticId.WRN_LoopIntrinsicCalledButLoopOptimizedAway, IgnoreOnPlatform = Backend.TargetPlatform.Wasm)]
         [OptimizationsOnly("Loops are not vectorized when optimizations are disabled")]
         public static unsafe void CheckExpectVectorizedRemovedLoop(int count)
         {
@@ -282,7 +286,7 @@ namespace Burst.Compiler.IL.Tests
             }
         }
 
-        [TestCompiler(100)]
+        [TestCompiler(100, IgnoreOnPlatform = Backend.TargetPlatform.Wasm)]
         [OptimizationsOnly("Loops are not vectorized when optimizations are disabled")]
         public static unsafe void CheckExpectVectorizedNested(int count)
         {

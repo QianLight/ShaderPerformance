@@ -16,13 +16,11 @@ namespace Burst.Compiler.IL.Tests
             return BurstCompiler.IsEnabled ? 1 : 0;
         }
 
-#if BURST_INTERNAL || UNITY_BURST_EXPERIMENTAL_PAUSE_INTRINSIC
         [TestCompiler]
         public static void CheckPause()
         {
             Pause();
         }
-#endif
 
         public unsafe struct Buffer : IDisposable
         {
@@ -155,5 +153,63 @@ namespace Burst.Compiler.IL.Tests
             *high = myHigh;
             return result;
         }
+
+#if BURST_INTERNAL || UNITY_BURST_EXPERIMENTAL_ATOMIC_INTRINSICS
+        [TestCompiler(42, 13)]
+        public static int CheckInterlockedAndInt(int x, int y)
+        {
+            InterlockedAnd(ref x, y);
+            return  x;
+        }
+
+        [TestCompiler(42U, 13U)]
+        public static uint CheckInterlockedAndUint(uint x, uint y)
+        {
+            InterlockedAnd(ref x, y);
+            return x;
+        }
+
+        [TestCompiler(42L, 13L)]
+        public static long CheckInterlockedAndLong(long x, long y)
+        {
+            InterlockedAnd(ref x, y);
+            return x;
+        }
+
+        [TestCompiler(42UL, 13UL)]
+        public static ulong CheckInterlockedAndUlong(ulong x, ulong y)
+        {
+            InterlockedAnd(ref x, y);
+            return x;
+        }
+
+        [TestCompiler(42, 13)]
+        public static int CheckInterlockedOrInt(int x, int y)
+        {
+            InterlockedOr(ref x, y);
+            return x;
+        }
+
+        [TestCompiler(42U, 13U)]
+        public static uint CheckInterlockedOrUint(uint x, uint y)
+        {
+            InterlockedOr(ref x, y);
+            return x;
+        }
+
+        [TestCompiler(42L, 13L)]
+        public static long CheckInterlockedOrLong(long x, long y)
+        {
+            InterlockedOr(ref x, y);
+            return  x;
+        }
+
+        [TestCompiler(42UL, 13UL)]
+        public static ulong CheckInterlockedOrUlong(ulong x, ulong y)
+        {
+            InterlockedOr(ref x, y);
+            return  x;
+        }
+#endif
     }
 }

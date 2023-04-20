@@ -1,8 +1,11 @@
+using System;
+
+#if UNITY_EDITOR || BURST_INTERNAL
 namespace Unity.Burst.Editor
 {
     internal partial class BurstDisassembler
     {
-        private class WasmAsmTokenKindProvider : AsmTokenKindProvider
+        internal class WasmAsmTokenKindProvider : AsmTokenKindProvider
         {
             private static readonly string[] Registers = new[]
             {
@@ -43,13 +46,11 @@ namespace Unity.Burst.Editor
                 "end",
                 "block",
                 "end_block",
+                "end_loop",
+                "end_function",
                 "loop",
                 "unreachable",
                 "nop",
-                "br",
-                "br_if",
-                "br_table",
-                "return",
                 "call",
                 "call_indirect",
 
@@ -109,11 +110,11 @@ namespace Unity.Burst.Editor
                 "trunc_f64_s",
                 "trunc_f64_u",
                 "extend_i32_s",
-                "extend_i64_u",
-                "convert_f32_s",
-                "convert_f32_u",
-                "convert_f64_s",
-                "convert_f64_u",
+                "extend_i32_u",
+                "convert_i32_s",
+                "convert_i32_u",
+                "convert_i64_s",
+                "convert_i64_u",
                 "demote_f64",
                 "promote_f32",
                 "reinterpret_f32",
@@ -122,11 +123,34 @@ namespace Unity.Burst.Editor
                 "reinterpret_i64",
             };
 
+            private static readonly string[] BranchInstructions = new string[]
+            {
+                "br_if",
+            };
+
+            private static readonly string[] JumpInstructions = new string[]
+            {
+                "br",
+                "br_table"
+            };
+
+            private static readonly string[] ReturnInstructions = new string[]
+            {
+                "return",
+            };
+
             private static readonly string[] SimdInstructions = new string[]
             {
             };
 
-            private WasmAsmTokenKindProvider() : base(Registers.Length + Qualifiers.Length + Instructions.Length + SimdInstructions.Length)
+            private WasmAsmTokenKindProvider() : base(
+                Registers.Length +
+                Qualifiers.Length +
+                Instructions.Length +
+                BranchInstructions.Length +
+                JumpInstructions.Length +
+                ReturnInstructions.Length +
+                SimdInstructions.Length)
             {
                 foreach (var register in Registers)
                 {
@@ -143,6 +167,21 @@ namespace Unity.Burst.Editor
                     AddTokenKind(instruction, AsmTokenKind.Instruction);
                 }
 
+                foreach (var instruction in BranchInstructions)
+                {
+                    AddTokenKind(instruction, AsmTokenKind.BranchInstruction);
+                }
+
+                foreach (var instruction in JumpInstructions)
+                {
+                    AddTokenKind(instruction, AsmTokenKind.JumpInstruction);
+                }
+
+                foreach (var instruction in ReturnInstructions)
+                {
+                    AddTokenKind(instruction, AsmTokenKind.ReturnInstruction);
+                }
+
                 foreach (var instruction in SimdInstructions)
                 {
                     AddTokenKind(instruction, AsmTokenKind.InstructionSIMD);
@@ -154,9 +193,20 @@ namespace Unity.Burst.Editor
                 return c == '.';
             }
 
+            public override bool IsInstructionOrRegisterOrIdentifier(char c)
+            {
+                // Wasm should not take '.' with it as this will take register.instruction combo as one.
+                return c >= 'a' && c <= 'z' || c >= 'A' && c <= 'Z' || c >= '0' && c <= '9' || c == '_' ||
+                       c == '@';
+            }
+
+            public override SIMDkind SimdKind(StringSlice instruction)
+            {
+                throw new NotImplementedException("WASM does not contain any SIMD instruction.");
+            }
 
             public static readonly WasmAsmTokenKindProvider Instance = new WasmAsmTokenKindProvider();
         }
     }
 }
-
+#endif

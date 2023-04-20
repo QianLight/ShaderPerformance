@@ -2,10 +2,10 @@
     "name": "Unity.Burst.Editor.Tests",
     "references": [
         "Unity.Burst",
-        "Unity.Burst.Editor",
         "Unity.Mathematics",
         "Unity.Burst.Tests.UnitTests",
-        "SeparateAssembly"
+        "SeparateAssembly",
+        "Unity.Burst.Editor"
     ],
     "optionalUnityReferences": [
         "TestAssemblies"

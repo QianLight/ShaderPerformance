@@ -1,9 +1,7 @@
 using System;
+using System.Diagnostics;
 using System.Runtime.InteropServices;
 using System.Text;
-#if !BURST_COMPILER_SHARED
-using Unity.Burst.LowLevel;
-#endif
 
 namespace Unity.Burst
 {
@@ -90,6 +88,7 @@ namespace Unity.Burst
         }
 
         // method internal as it is used by the compiler directly
+        // WARNING: This **must** be kept in sync with the definition in ILPostProcessing.cs!
         internal static long HashStringWithFNV1A64(string text)
         {
             // Using http://www.isthe.com/chongo/tech/comp/fnv/index.html#FNV-1a
@@ -98,11 +97,13 @@ namespace Unity.Burst
             const ulong prime = 1099511628211;
 
             ulong result = offsetBasis;
+
             foreach (var c in text)
             {
                 result = prime * (result ^ (byte)(c & 255));
                 result = prime * (result ^ (byte)(c >> 8));
             }
+
             return (long)result;
         }
 
@@ -116,89 +117,80 @@ namespace Unity.Burst
             public static readonly long Value = HashStringWithFNV1A64(typeof(T).AssemblyQualifiedName);
         }
 
-
 #if !BURST_COMPILER_SHARED
 
-#if UNITY_2020_1_OR_NEWER
-        internal static void Initialize()
+        /// <summary>
+        /// Allows for loading additional Burst native libraries
+        /// Important: Designed for Play mode / Desktop Standalone Players ONLY
+        /// In Editor, any libraries that have been loaded will be unloaded on exit of playmode
+        /// Only supported from 2021.1 and later. You can use BurstCompiler.IsLoadAdditionalLibrarySupported() to confirm it is available.
+        /// </summary>
+        /// <param name="pathToLibBurstGenerated">Absolute filesystem location of bursted library to load</param>
+        /// <returns>true if the library was loaded successfully</returns>
+        public static bool LoadAdditionalLibrary(string pathToLibBurstGenerated)
         {
-        }
-
-	internal class PreserveAttribute : System.Attribute {}
-
-	[Preserve]
-        internal static unsafe void Log(byte* message, int logType, byte* fileName, int lineNumber)
-        {
-            BurstCompilerService.Log((byte*) 0, (BurstCompilerService.BurstLogType)logType, message, fileName, lineNumber);
-        }
-#elif UNITY_2019_4_OR_NEWER
-        // Because we can't back-port the new API BurstCompilerService.Log introduced in 2020.1
-        // we are still trying to allow to log on earlier version of Unity by going back to managed
-        // code when we are using Debug.Log. It is not great in terms of performance but it should not
-        // be a matter when debugging.
-
-        internal static unsafe void Log(byte* message, int logType, byte* fileName, int lineNumber)
-        {
-            var fp = LogHelper.Instance.Data;
-            // If we have a domain reload, the function pointer will be cleared, so we can't call it.
-            if (fp.IsCreated)
+            if (BurstCompiler.IsLoadAdditionalLibrarySupported())
             {
-                fp.Invoke(message, logType, fileName, lineNumber);
+                return LoadAdditionalLibraryInternal(pathToLibBurstGenerated);
             }
+            return false;
         }
 
-        private unsafe delegate void NativeLogDelegate(byte* message, int logType, byte* filename, int lineNumber);
-
-        private static readonly unsafe NativeLogDelegate ManagedNativeLog = ManagedNativeLogImpl;
-
-        [AOT.MonoPInvokeCallback(typeof(NativeLogDelegate))]
-        private static unsafe void ManagedNativeLogImpl(byte* message, int logType, byte* filename, int lineNumber)
+        internal static bool LoadAdditionalLibraryInternal(string pathToLibBurstGenerated)
         {
-            if (message == null) return;
-            int byteCount = 0;
-            while (message[byteCount] != 0) byteCount++;
-
-            var managedText = Encoding.UTF8.GetString(message, byteCount);
-            switch (logType)
-            {
-                case 1:
-                    UnityEngine.Debug.LogWarning(managedText);
-                    break;
-                case 2:
-                    UnityEngine.Debug.LogError(managedText);
-                    break;
-                default:
-                    UnityEngine.Debug.Log(managedText);
-                    break;
-            }
-        }
-
-        private class LogHelper
-        {
-            public static readonly SharedStatic<FunctionPointer<NativeLogDelegate>> Instance = SharedStatic<FunctionPointer<NativeLogDelegate>>.GetOrCreate<LogHelper>();
-        }
-
-        static BurstRuntime()
-        {
-            LogHelper.Instance.Data = new FunctionPointer<NativeLogDelegate>(Marshal.GetFunctionPointerForDelegate(ManagedNativeLog));
-        }
-
-        [UnityEngine.RuntimeInitializeOnLoadMethod(UnityEngine.RuntimeInitializeLoadType.AfterAssembliesLoaded)]
-        internal static void Initialize()
-        {
-        }
+#if !UNITY_DOTSRUNTIME
+            return (bool)typeof(Unity.Burst.LowLevel.BurstCompilerService).GetMethod("LoadBurstLibrary").Invoke(null, new object[] { pathToLibBurstGenerated });
 #else
+            return false;
+#endif
+        }
+
+
+#if UNITY_2022_1_OR_NEWER
+        [Preserve]
+        internal static unsafe void RuntimeLog(byte* message, int logType, byte* fileName, int lineNumber)
+        {
+            Unity.Burst.LowLevel.BurstCompilerService.RuntimeLog((byte*) 0, (Unity.Burst.LowLevel.BurstCompilerService.BurstLogType)logType, message, fileName, lineNumber);
+        }
+#endif
+
         internal static void Initialize()
         {
         }
 
+        // Prevent BurstCompilerService.Log from being stripped, introduce PreserveAttribute to avoid
+        //requiring a unityengine using directive, il2cpp will see the attribute and know to not strip
+        //the Log method and its BurstCompilerService.Log dependency
+        internal class PreserveAttribute : System.Attribute {}
+
+        [Preserve]
+        internal static void PreventRequiredAttributeStrip()
+        {
+            new BurstDiscardAttribute();
+            // We also need to retain [Condition("UNITY_ASSERTION")] attributes in order to compile
+            // some assertion correctly (i.e. not compile them)
+            new ConditionalAttribute("HEJSA");
+        }
+
+        [Preserve]
         internal static unsafe void Log(byte* message, int logType, byte* fileName, int lineNumber)
         {
+            Unity.Burst.LowLevel.BurstCompilerService.Log((byte*) 0, (Unity.Burst.LowLevel.BurstCompilerService.BurstLogType)logType, message, (byte*) 0, lineNumber);
         }
-#endif // !UNITY_2020_1_OR_NEWER
 
 #endif // !BURST_COMPILER_SHARED
 
+
+        /// <summary>
+        /// Return a pointer to read-only memory consisting of the literal UTF-8 bytes of a string constant.
+        /// </summary>
+        /// <param name="str">A string which must a string literal</param>
+        /// <param name="byteCount">Receives the number of UTF-8 encoded bytes the constant contains (excluding null terminator)</param>
+        /// <returns>A pointer to constant data representing the UTF-8 encoded bytes of the string literal, terminated with a null terminator</returns>
+        public unsafe static byte* GetUTF8LiteralPointer(string str, out int byteCount)
+        {
+            throw new NotImplementedException("This function only works from Burst");
+        }
 
     }
 }

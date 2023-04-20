@@ -758,7 +758,7 @@ namespace Unity.Burst.Intrinsics
             [DebuggerStepThrough]
             public static v128 cmp_pd(v128 a, v128 b, int imm8)
             {
-                switch ((CMP)imm8)
+                switch ((CMP)(imm8 & 0x1F))
                 {
                     // The first variants map to SSE variants
                     case CMP.EQ_OQ: return Sse2.cmpeq_pd(a, b);
@@ -773,7 +773,7 @@ namespace Unity.Burst.Intrinsics
                     case CMP.EQ_UQ: return Sse2.or_pd(Sse2.cmpeq_pd(a, b), Sse2.cmpunord_pd(a, b));
                     case CMP.NGE_UQ: return Sse2.or_pd(Sse2.cmpnge_pd(a, b), Sse2.cmpunord_pd(a, b));
                     case CMP.NGT_US: return Sse2.or_pd(Sse2.cmpngt_pd(a, b), Sse2.cmpunord_pd(a, b));
-                    case CMP.FALSE_OQ: return default(v128);
+                    case CMP.FALSE_OQ: return default;
                     case CMP.NEQ_OQ: return Sse2.and_pd(Sse2.cmpneq_pd(a, b), Sse2.cmpord_pd(a, b));
                     case CMP.GE_OS: return Sse2.and_pd(Sse2.cmpge_pd(a, b), Sse2.cmpord_pd(a, b));
                     case CMP.GT_OS: return Sse2.and_pd(Sse2.cmpgt_pd(a, b), Sse2.cmpord_pd(a, b));
@@ -790,13 +790,12 @@ namespace Unity.Burst.Intrinsics
                     case CMP.EQ_US: return Sse2.or_pd(Sse2.cmpeq_pd(a, b), Sse2.cmpunord_pd(a, b));
                     case CMP.NGE_US: return Sse2.or_pd(Sse2.cmpnge_pd(a, b), Sse2.cmpunord_pd(a, b));
                     case CMP.NGT_UQ: return Sse2.or_pd(Sse2.cmpngt_pd(a, b), Sse2.cmpunord_pd(a, b));
-                    case CMP.FALSE_OS: return default(v128);
+                    case CMP.FALSE_OS: return default;
                     case CMP.NEQ_OS: return Sse2.and_pd(Sse2.cmpneq_pd(a, b), Sse2.cmpord_pd(a, b));
                     case CMP.GE_OQ: return Sse2.and_pd(Sse2.cmpge_pd(a, b), Sse2.cmpord_pd(a, b));
                     case CMP.GT_OQ: return Sse2.and_pd(Sse2.cmpgt_pd(a, b), Sse2.cmpord_pd(a, b));
-                    case CMP.TRUE_US: return new v128(-1);
                     default:
-                        throw new InvalidOperationException($"invalid imm8 value {imm8} for comparison");
+                        return new v128(-1);
                 }
             }
 
@@ -845,7 +844,7 @@ namespace Unity.Burst.Intrinsics
             [DebuggerStepThrough]
             public static v128 cmp_ps(v128 a, v128 b, int imm8)
             {
-                switch ((CMP)imm8)
+                switch ((CMP)(imm8 & 0x1F))
                 {
                     // The first variants map to SSE variants
                     case CMP.EQ_OQ: return Sse.cmpeq_ps(a, b);
@@ -860,7 +859,7 @@ namespace Unity.Burst.Intrinsics
                     case CMP.EQ_UQ: return Sse.or_ps(Sse.cmpeq_ps(a, b), Sse.cmpunord_ps(a, b));
                     case CMP.NGE_UQ: return Sse.or_ps(Sse.cmpnge_ps(a, b), Sse.cmpunord_ps(a, b));
                     case CMP.NGT_US: return Sse.or_ps(Sse.cmpngt_ps(a, b), Sse.cmpunord_ps(a, b));
-                    case CMP.FALSE_OQ: return default(v128);
+                    case CMP.FALSE_OQ: return default;
                     case CMP.NEQ_OQ: return Sse.and_ps(Sse.cmpneq_ps(a, b), Sse.cmpord_ps(a, b));
                     case CMP.GE_OS: return Sse.and_ps(Sse.cmpge_ps(a, b), Sse.cmpord_ps(a, b));
                     case CMP.GT_OS: return Sse.and_ps(Sse.cmpgt_ps(a, b), Sse.cmpord_ps(a, b));
@@ -877,13 +876,12 @@ namespace Unity.Burst.Intrinsics
                     case CMP.EQ_US: return Sse.or_ps(Sse.cmpeq_ps(a, b), Sse.cmpunord_ps(a, b));
                     case CMP.NGE_US: return Sse.or_ps(Sse.cmpnge_ps(a, b), Sse.cmpunord_ps(a, b));
                     case CMP.NGT_UQ: return Sse.or_ps(Sse.cmpngt_ps(a, b), Sse.cmpunord_ps(a, b));
-                    case CMP.FALSE_OS: return default(v128);
+                    case CMP.FALSE_OS: return default;
                     case CMP.NEQ_OS: return Sse.and_ps(Sse.cmpneq_ps(a, b), Sse.cmpord_ps(a, b));
                     case CMP.GE_OQ: return Sse.and_ps(Sse.cmpge_ps(a, b), Sse.cmpord_ps(a, b));
                     case CMP.GT_OQ: return Sse.and_ps(Sse.cmpgt_ps(a, b), Sse.cmpord_ps(a, b));
-                    case CMP.TRUE_US: return new v128(-1);
                     default:
-                        throw new InvalidOperationException($"invalid imm8 value {imm8} for comparison");
+                        return new v128(-1);
                 }
             }
 
@@ -1089,6 +1087,7 @@ namespace Unity.Burst.Intrinsics
 			/// <param name="a">Vector a</param>
 			/// <returns>Vector</returns>
             [DebuggerStepThrough]
+            [BurstTargetCpu(BurstTargetCpu.AVX)]
             public static v128 mm256_cvtpd_epi32(v256 a)
             {
                 v128 q = Sse2.cvtpd_epi32(new v128(a.Double0, a.Double1));
@@ -1390,10 +1389,7 @@ namespace Unity.Burst.Intrinsics
                     case 0: return src1.Lo128;
                     case 1: return src1.Hi128;
                     case 2: return src2.Lo128;
-                    case 3: return src2.Hi128;
-                    default:
-                        // Not possible
-                        throw new InvalidOperationException();
+                    default: return src2.Hi128;
                 }
             }
 
@@ -1466,7 +1462,7 @@ namespace Unity.Burst.Intrinsics
             [DebuggerStepThrough]
             public static v256 mm256_broadcast_ss(void* ptr)
             {
-                return new v256(*(float*)ptr);
+                return new v256(*(uint*)ptr);
             }
 
             /// <summary>
@@ -1480,7 +1476,7 @@ namespace Unity.Burst.Intrinsics
             [DebuggerStepThrough]
             public static v128 broadcast_ss(void* ptr)
             {
-                return new v128(*(float*)ptr);
+                return new v128(*(uint*)ptr);
             }
 
             /// <summary>
@@ -1781,6 +1777,7 @@ namespace Unity.Burst.Intrinsics
 			/// <param name="loaddr">Low address pointer</param>
 			/// <returns>Vector</returns>
             [DebuggerStepThrough]
+            [BurstTargetCpu(BurstTargetCpu.AVX)]
             public static v256 mm256_loadu2_m128(void* hiaddr, void* loaddr)
             {
                 return mm256_set_m128(Sse.loadu_ps(hiaddr), Sse.loadu_ps(loaddr));
@@ -1799,6 +1796,7 @@ namespace Unity.Burst.Intrinsics
 			/// <param name="loaddr">Low address pointer</param>
 			/// <returns>Vector</returns>
             [DebuggerStepThrough]
+            [BurstTargetCpu(BurstTargetCpu.AVX)]
             public static v256 mm256_loadu2_m128d(void* hiaddr, void* loaddr)
             {
                 return mm256_loadu2_m128(hiaddr, loaddr);
@@ -1816,6 +1814,7 @@ namespace Unity.Burst.Intrinsics
 			/// <param name="loaddr">Low address pointer</param>
 			/// <returns>Vector</returns>
             [DebuggerStepThrough]
+            [BurstTargetCpu(BurstTargetCpu.AVX)]
             public static v256 mm256_loadu2_m128i(void* hiaddr, void* loaddr)
             {
                 return mm256_loadu2_m128(hiaddr, loaddr);
@@ -1849,6 +1848,7 @@ namespace Unity.Burst.Intrinsics
 			/// <param name="loaddr">Low address pointer</param>
 			/// <param name="val">Value</param>
             [DebuggerStepThrough]
+            [BurstTargetCpu(BurstTargetCpu.AVX)]
             public static void mm256_storeu2_m128(void* hiaddr, void* loaddr, v256 val)
             {
                 Sse.storeu_ps(hiaddr, val.Hi128);
@@ -1868,6 +1868,7 @@ namespace Unity.Burst.Intrinsics
 			/// <param name="loaddr">Low address pointer</param>
 			/// <param name="val">Value</param>
             [DebuggerStepThrough]
+            [BurstTargetCpu(BurstTargetCpu.AVX)]
             public static void mm256_storeu2_m128d(void* hiaddr, void* loaddr, v256 val)
             {
                 Sse.storeu_ps(hiaddr, val.Hi128);
@@ -1886,6 +1887,7 @@ namespace Unity.Burst.Intrinsics
 			/// <param name="loaddr">Low address pointer</param>
 			/// <param name="val">Value</param>
             [DebuggerStepThrough]
+            [BurstTargetCpu(BurstTargetCpu.AVX)]
             public static void mm256_storeu2_m128i(void* hiaddr, void* loaddr, v256 val)
             {
                 Sse.storeu_ps(hiaddr, val.Hi128);
@@ -2256,6 +2258,7 @@ namespace Unity.Burst.Intrinsics
 			/// <param name="val">Value</param>
 			/// <returns>Vector</returns>
             [DebuggerStepThrough]
+            [BurstTargetCpu(BurstTargetCpu.AVX)]
             public static v256 mm256_ceil_pd(v256 val)
             {
                 return mm256_round_pd(val, (int)RoundingMode.FROUND_CEIL);
@@ -2269,6 +2272,7 @@ namespace Unity.Burst.Intrinsics
 			/// <param name="val">Value</param>
 			/// <returns>Vector</returns>
             [DebuggerStepThrough]
+            [BurstTargetCpu(BurstTargetCpu.AVX)]
             public static v256 mm256_floor_pd(v256 val)
             {
                 return mm256_round_pd(val, (int)RoundingMode.FROUND_FLOOR);
@@ -2307,6 +2311,7 @@ namespace Unity.Burst.Intrinsics
 			/// <param name="val">Value</param>
 			/// <returns>Vector</returns>
             [DebuggerStepThrough]
+            [BurstTargetCpu(BurstTargetCpu.AVX)]
             public static v256 mm256_ceil_ps(v256 val)
             {
                 return mm256_round_ps(val, (int)RoundingMode.FROUND_CEIL);
@@ -2320,6 +2325,7 @@ namespace Unity.Burst.Intrinsics
 			/// <param name="val">Value</param>
 			/// <returns>Vector</returns>
             [DebuggerStepThrough]
+            [BurstTargetCpu(BurstTargetCpu.AVX)]
             public static v256 mm256_floor_ps(v256 val)
             {
                 return mm256_round_ps(val, (int)RoundingMode.FROUND_FLOOR);
@@ -2371,6 +2377,7 @@ namespace Unity.Burst.Intrinsics
 			/// <param name="b">Vector b</param>
 			/// <returns>Vector</returns>
             [DebuggerStepThrough]
+            [BurstTargetCpu(BurstTargetCpu.AVX)]
             public static v256 mm256_unpackhi_ps(v256 a, v256 b)
             {
                 return new v256(Sse.unpackhi_ps(a.Lo128, b.Lo128), Sse.unpackhi_ps(a.Hi128, b.Hi128));
@@ -2388,6 +2395,7 @@ namespace Unity.Burst.Intrinsics
 			/// <param name="b">Vector b</param>
 			/// <returns>Vector</returns>
             [DebuggerStepThrough]
+            [BurstTargetCpu(BurstTargetCpu.AVX)]
             public static v256 mm256_unpacklo_ps(v256 a, v256 b)
             {
                 return new v256(Sse.unpacklo_ps(a.Lo128, b.Lo128), Sse.unpacklo_ps(a.Hi128, b.Hi128));
@@ -3196,7 +3204,7 @@ namespace Unity.Burst.Intrinsics
 			/// <param name="a">8-bit integer</param>
 			/// <returns>Vector</returns>
             [DebuggerStepThrough]
-            public static v256 mm256_set1_epi8(char a)
+            public static v256 mm256_set1_epi8(byte a)
             {
                 return new v256(a);
             }
@@ -3306,6 +3314,7 @@ namespace Unity.Burst.Intrinsics
             /// <summary>Return a 128-bit vector with undefined contents.</summary>
 			/// <returns>Vector</returns>
             [DebuggerStepThrough]
+            [BurstTargetCpu(BurstTargetCpu.AVX)]
             public static v128 undefined_pd()
             {
                 return undefined_ps();
@@ -3314,6 +3323,7 @@ namespace Unity.Burst.Intrinsics
             /// <summary>Return a 128-bit vector with undefined contents.</summary>
 			/// <returns>Vector</returns>
             [DebuggerStepThrough]
+            [BurstTargetCpu(BurstTargetCpu.AVX)]
             public static v128 undefined_si128()
             {
                 return undefined_ps();
@@ -3330,6 +3340,7 @@ namespace Unity.Burst.Intrinsics
             /// <summary>Return a 256-bit vector with undefined contents.</summary>
 			/// <returns>Vector</returns>
             [DebuggerStepThrough]
+            [BurstTargetCpu(BurstTargetCpu.AVX)]
             public static v256 mm256_undefined_pd()
             {
                 return mm256_undefined_ps();
@@ -3338,6 +3349,7 @@ namespace Unity.Burst.Intrinsics
             /// <summary>Return a 256-bit vector with undefined contents.</summary>
 			/// <returns>Vector</returns>
             [DebuggerStepThrough]
+            [BurstTargetCpu(BurstTargetCpu.AVX)]
             public static v256 mm256_undefined_si256()
             {
                 return mm256_undefined_ps();
@@ -3363,6 +3375,7 @@ namespace Unity.Burst.Intrinsics
 			/// <param name="a">Vector a</param>
 			/// <returns>Vector</returns>
             [DebuggerStepThrough]
+            [BurstTargetCpu(BurstTargetCpu.AVX)]
             public static v256 mm256_zextpd128_pd256(v128 a) { return mm256_zextps128_ps256(a); }
 
             /// <summary>
@@ -3373,6 +3386,7 @@ namespace Unity.Burst.Intrinsics
 			/// <param name="a">Vector a</param>
 			/// <returns>Vector</returns>
             [DebuggerStepThrough]
+            [BurstTargetCpu(BurstTargetCpu.AVX)]
             public static v256 mm256_zextsi128_si256(v128 a) { return mm256_zextps128_ps256(a); }
 
 

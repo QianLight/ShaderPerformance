@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using Unity.Burst;
 using Unity.Collections;
 using Unity.Collections.LowLevel.Unsafe;
+using System.Runtime.CompilerServices;
 
 namespace Burst.Compiler.IL.Tests
 {
@@ -36,6 +37,62 @@ namespace Burst.Compiler.IL.Tests
 
             return i; // both case 10 and -10
         }
+
+        static void Oof()
+        {
+        }
+
+        [TestCompiler]
+        public static void TryFinallyFirstBlock()
+        {
+            try
+            {
+            }
+            finally
+            {
+                Oof();
+            }
+        }
+
+        static int MagicA(int b, int f, int h, CustomBuffer s)
+        {
+            return b+s.Hash()+f-h;
+        }
+    
+        static bool MagicB(int c,out int t)
+        {
+            t = 0;
+            if (c>10)
+            {
+                t = c;
+                return true;
+            }
+            return false;
+        }
+
+        // This test catches an issue with the de-stackifier. (see ILBuilder.cs:1254 (flushStack))
+        // Needs to be unoptimised to trigger
+        [TestCompiler(0)]
+        [TestCompiler(99)]
+        [MethodImpl(MethodImplOptions.NoOptimization | MethodImplOptions.NoInlining)]
+        public static int TryUnbalancedFinally(int i)
+        {
+            // this if is required to force the destackifier to process the final block, before processing the block the contains the endfinally
+            if (i == 99)
+            {
+                return default;
+            }
+
+            int resultB = i;
+
+            using var buffer = new CustomBuffer(32);
+
+            return resultB + MagicA(i,
+               MagicB(i*2, out var r) ? r : default,
+               MagicB(i, out var t) ? t : default,
+               buffer);
+        }
+
 
         [TestCompiler(-3)]
         [TestCompiler(0)]
@@ -127,6 +184,53 @@ namespace Burst.Compiler.IL.Tests
             return i + 1; // case 10
         }
 
+
+        [TestCompiler(0)]
+        [TestCompiler(1)]
+        [TestCompiler(10)]
+        [TestCompiler(20)]
+        public static int TryFinallyComplex3(int x)
+        {
+            bool k = true;
+            int num = 0;
+            try
+            {
+                while (k)
+                {
+                    if (x < 10)
+                    {
+                        num |= 2;
+                        try
+                        {
+                            if (x == 1) return num;
+                        }
+                        finally
+                        {
+                            k = false;
+                        }
+
+                        continue;
+                    }
+
+                    num |= 1;
+                    try
+                    {
+                        if (x == 20) return num;
+                    }
+                    finally
+                    {
+                        k = false;
+                    }
+                }
+            }
+            finally
+            {
+                num |= 4;
+            }
+
+            return num;
+        }
+
         [TestCompiler]
         public static int TryUsingDispose()
         {
@@ -205,7 +309,7 @@ namespace Burst.Compiler.IL.Tests
                 _from = @from;
                 _to = to;
             }
-            
+
             public Enumerator GetEnumerator()
             {
                 return new Enumerator();

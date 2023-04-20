@@ -135,6 +135,7 @@ namespace Burst.Compiler.IL.Tests
             return 0;
         }
 
+#if !BURST_APPLE_SILICON_TESTING // https://jira.unity3d.com/browse/UUM-9159
         [TestCompiler(42.0f)]
         public static float CompareExchangeFloat(ref float f)
         {
@@ -145,6 +146,7 @@ namespace Burst.Compiler.IL.Tests
 
             return 0;
         }
+#endif
 
         [TestCompiler(42.0)]
         public static double CompareExchangeDouble(ref double d)

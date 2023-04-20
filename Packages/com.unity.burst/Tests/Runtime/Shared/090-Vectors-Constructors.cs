@@ -59,6 +59,19 @@ namespace Burst.Compiler.IL.Tests
             return Vectors.ConvertToFloat((float4)new float4(h).x);
         }
 
+        [TestCompiler(DataRange.Standard)]
+        public static float Float4HalfExplicit(float a)
+        {
+            return Vectors.ConvertToFloat((float4) new half(a));
+        }
+
+        [TestCompiler(DataRange.Standard)]
+        public static float Float4HalfImplicit(float a)
+        {
+            float4 x =new half(a);
+            return Vectors.ConvertToFloat(x);
+        }
+
         // ---------------------------------------------------
         // float3
         // ---------------------------------------------------
@@ -402,6 +415,27 @@ namespace Burst.Compiler.IL.Tests
         {
             var h = new half2(a);
             return Vectors.ConvertToDouble((double2)new double2(h).x);
+        }
+
+
+        [TestCompiler(uint.MaxValue, uint.MaxValue / 2 + 1)]
+        public static float Float2UInt2(uint a, uint b)
+        {
+            return Vectors.ConvertToFloat(new float2(new uint2(a, b)));
+        }
+
+        [TestCompiler(uint.MaxValue, uint.MaxValue / 2 + 1)]
+        public static float Float4UIntUIntUInt2Implicit(uint a, uint b)
+        {
+            var u = new uint2(a, b);
+            return Vectors.ConvertToFloat(new float4(a, b, u));
+        }
+
+        [TestCompiler(uint.MaxValue, uint.MaxValue / 2 + 1)]
+        public static float Float4UIntUIntUInt2Explicit(uint a, uint b)
+        {
+            var u = new uint2(a, b);
+            return Vectors.ConvertToFloat(new float4(a, b, (float2) u));
         }
     }
 }

@@ -15,34 +15,37 @@ namespace Burst.Compiler.IL.Tests.Helpers
             typeof(IntPtr)
         };
 
-        private static readonly Dictionary<DelegateKey, Type> DelegateTypes = new Dictionary<DelegateKey, Type>();
+        private static readonly Dictionary<DelegateKey, Type> DelegateTypes = new();
 
         public static Type NewDelegateType(Type ret, Type[] parameters)
         {
-            var key = new DelegateKey(ret, (Type[])parameters.Clone());
-            Type delegateType;
-            if (!DelegateTypes.TryGetValue(key, out delegateType))
+            lock (DelegateTypes)
             {
-                var assemblyName = Guid.NewGuid().ToString();
+                var key = new DelegateKey(ret, (Type[])parameters.Clone());
+                Type delegateType;
+                if (!DelegateTypes.TryGetValue(key, out delegateType))
+                {
+                    var assemblyName = Guid.NewGuid().ToString();
 
-                var name = new AssemblyName(assemblyName);
-                var assemblyBuilder = AppDomain.CurrentDomain.DefineDynamicAssembly(name, AssemblyBuilderAccess.Run);
-                var moduleBuilder = assemblyBuilder.DefineDynamicModule(name.Name);
-                assemblyBuilder.DefineVersionInfoResource();
+                    var name = new AssemblyName(assemblyName);
+                    var assemblyBuilder = AppDomain.CurrentDomain.DefineDynamicAssembly(name, AssemblyBuilderAccess.Run);
+                    var moduleBuilder = assemblyBuilder.DefineDynamicModule(name.Name);
+                    assemblyBuilder.DefineVersionInfoResource();
 
-                var typeBuilder = moduleBuilder.DefineType("CustomDelegate", System.Reflection.TypeAttributes.Public | System.Reflection.TypeAttributes.Sealed | System.Reflection.TypeAttributes.AutoClass, typeof(MulticastDelegate));
-                var constructor = typeof(UnmanagedFunctionPointerAttribute).GetConstructors()[0];
+                    var typeBuilder = moduleBuilder.DefineType("CustomDelegate", System.Reflection.TypeAttributes.Public | System.Reflection.TypeAttributes.Sealed | System.Reflection.TypeAttributes.AutoClass, typeof(MulticastDelegate));
+                    var constructor = typeof(UnmanagedFunctionPointerAttribute).GetConstructors()[0];
 
-                // Make sure that we setup the C calling convention on the unmanaged delegate
-                var customAttribute = new CustomAttributeBuilder(constructor, new object[] { CallingConvention.Cdecl });
-                typeBuilder.SetCustomAttribute(customAttribute);
-                typeBuilder.DefineConstructor(System.Reflection.MethodAttributes.Public | System.Reflection.MethodAttributes.HideBySig | System.Reflection.MethodAttributes.RTSpecialName, CallingConventions.Standard, _DelegateCtorSignature).SetImplementationFlags(System.Reflection.MethodImplAttributes.CodeTypeMask);
-                typeBuilder.DefineMethod("Invoke", System.Reflection.MethodAttributes.Public | System.Reflection.MethodAttributes.Virtual | System.Reflection.MethodAttributes.HideBySig | System.Reflection.MethodAttributes.VtableLayoutMask, ret, parameters).SetImplementationFlags(System.Reflection.MethodImplAttributes.CodeTypeMask);
-                delegateType = typeBuilder.CreateType();
+                    // Make sure that we setup the C calling convention on the unmanaged delegate
+                    var customAttribute = new CustomAttributeBuilder(constructor, new object[] { CallingConvention.Cdecl });
+                    typeBuilder.SetCustomAttribute(customAttribute);
+                    typeBuilder.DefineConstructor(System.Reflection.MethodAttributes.Public | System.Reflection.MethodAttributes.HideBySig | System.Reflection.MethodAttributes.RTSpecialName, CallingConventions.Standard, _DelegateCtorSignature).SetImplementationFlags(System.Reflection.MethodImplAttributes.CodeTypeMask);
+                    typeBuilder.DefineMethod("Invoke", System.Reflection.MethodAttributes.Public | System.Reflection.MethodAttributes.Virtual | System.Reflection.MethodAttributes.HideBySig | System.Reflection.MethodAttributes.VtableLayoutMask, ret, parameters).SetImplementationFlags(System.Reflection.MethodImplAttributes.CodeTypeMask);
+                    delegateType = typeBuilder.CreateType();
 
-                DelegateTypes.Add(key, delegateType);
+                    DelegateTypes.Add(key, delegateType);
+                }
+                return delegateType;
             }
-            return delegateType;
         }
 
         private struct DelegateKey : IEquatable<DelegateKey>

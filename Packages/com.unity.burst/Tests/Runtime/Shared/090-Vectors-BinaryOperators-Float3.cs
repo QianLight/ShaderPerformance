@@ -142,6 +142,40 @@ namespace Burst.Compiler.IL.Tests
         }
 
         [TestCompiler]
+        public static float Mod()
+        {
+            var left = new float3(1.0f, 2.0f, 3.0f);
+            var right = new float3(2.0f, 1.0f, 3.0f);
+            var result = left % right;
+            return Vectors.ConvertToFloat(result);
+        }
+
+        [TestCompiler]
+        public static float ModFloatLeft()
+        {
+            var left = 15.0f;
+            var right = new float3(2.0f, 1.0f, 3.0f);
+            var result = left % right;
+            return Vectors.ConvertToFloat(result);
+        }
+
+        [TestCompiler]
+        public static float ModFloatRight()
+        {
+            var left = new float3(2.0f, 1.0f, 3.0f);
+            var right = 15.0f;
+            var result = left % right;
+            return Vectors.ConvertToFloat(result);
+        }
+
+        [TestCompiler(DataRange.Standard, DataRange.Standard)]
+        public static float ModByArgs(ref float3 left, ref float3 right)
+        {
+            var result = left % right;
+            return Vectors.ConvertToFloat(result);
+        }
+
+        [TestCompiler]
         public static float Neg()
         {
             var left = new float3(1.0f, 2.0f, 3.0f);

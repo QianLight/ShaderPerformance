@@ -1,7 +1,15 @@
 {
     "name": "Unity.Burst",
-    "references": [ ],
+    "references": [],
     "includePlatforms": [],
     "excludePlatforms": [],
-	"allowUnsafeCode": true
+    "allowUnsafeCode": true,
+    "overrideReferences": true,
+    "precompiledReferences": [
+        "Unity.Burst.Unsafe.dll"
+    ],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
 }

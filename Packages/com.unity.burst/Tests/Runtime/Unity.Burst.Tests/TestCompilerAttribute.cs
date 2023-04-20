@@ -1,39 +1,27 @@
 using System;
-using System.CodeDom;
-using System.Collections;
-using System.Collections.Generic;
-using System.IO;
 using System.Linq;
 using System.Reflection;
-using Burst.Compiler.IL.Tests.Helpers;
-using NUnit.Framework;
 using NUnit.Framework.Interfaces;
 using NUnit.Framework.Internal;
 using NUnit.Framework.Internal.Builders;
 using Unity.Burst;
-using Unity.Mathematics;
-using UnityBenchShared;
 using UnityEngine;
-using UnityEngine.Networking;
 
 namespace Burst.Compiler.IL.Tests
 {
 
     internal class TestCompilerAttribute : TestCompilerAttributeBase
     {
-#pragma warning disable 0414
-        private readonly NUnitTestCaseBuilder _builder = new NUnitTestCaseBuilder();
-#pragma warning restore 0414
         public TestCompilerAttribute(params object[] arguments) : base(arguments)
         {
         }
 
-        protected override Boolean IsCommandLine()
+        protected override bool IsCommandLine()
         {
             return false;
         }
 
-        protected override Boolean IsMono()
+        protected override bool IsMono()
         {
             return true;
         }
@@ -49,7 +37,6 @@ namespace Burst.Compiler.IL.Tests
         {
             return new TestCompilerCommand(attribute, test, originalMethod);
         }
-
 
         public class TestCompilerCommand : TestCompilerCommandBase
         {
@@ -77,9 +64,16 @@ namespace Burst.Compiler.IL.Tests
                 return method.parms.Arguments.ToArray();
             }
 
+            protected unsafe Delegate CompileDelegate(ITestExecutionContext context, MethodInfo methodInfo,
+                                                               Type delegateType, byte* returnBox, out Type returnBoxType) {
+                return CompileDelegate(context, methodInfo, delegateType, returnBox, out returnBoxType, out _);
+            }
+
             protected unsafe override Delegate CompileDelegate(ITestExecutionContext context, MethodInfo methodInfo,
-                Type delegateType, byte* returnBox, out Type returnBoxType)
+                                                               Type delegateType, byte* returnBox, out Type returnBoxType,
+                                                               out Delegate interpretDelegate)
             {
+                interpretDelegate = null;
                 returnBoxType = null;
 
                 var functionDelegate = Delegate.CreateDelegate(delegateType, methodInfo);
@@ -88,14 +82,28 @@ namespace Burst.Compiler.IL.Tests
                 return compiledFunction;
             }
 
-            protected override void CompileDelegateForArm(MethodInfo methodInfo)
+            protected override void GoldFileTestForOtherPlatforms(MethodInfo methodInfo, bool testWasRun)
             {
-                // This is a no-op here; used to generate Arm asm files and compare them to gold files.
+                // This is a no-op here.
+            }
+            
+            protected override bool TestOnCurrentHostEnvironment(MethodInfo methodInfo)
+            {
+                // Query architecture via burst to avoid mono bug in detecting processor architecture
+                if (BurstCompiler.IsHostEditorArm())
+                    return !methodInfo.CustomAttributes.Any((e) => e.AttributeType.Name == "TestCpuAttribute");
+                return true;
             }
 
             protected override object CompileFunctionPointer(MethodInfo methodInfo, Type functionType)
             {
                 throw new NotImplementedException();
+            }
+
+            protected override bool InterpretMethod(Delegate interpretDelegate, MethodInfo methodInfo, object[] args, Type returnType, out string reason, out object result) {
+                reason = null;
+                result = null;
+                return false;
             }
 
             protected override void Setup()
@@ -155,7 +163,12 @@ namespace Burst.Compiler.IL.Tests
                         method.Method.ReturnType.IsType(typeof(float)));
             }
 
-            protected override bool RunningArmTestOnIntelCPU(MethodInfo methodInfo)
+            protected override TestCompilerBaseExtensions GetExtension()
+            {
+                return null;
+            }
+
+            protected override bool TargetIs32Bit()
             {
                 return false;
             }

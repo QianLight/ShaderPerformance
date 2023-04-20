@@ -5,6 +5,11 @@ using Unity.Burst;
 using Unity.Burst.Editor;
 using Unity.Jobs;
 
+// This concrete generic type is only referenced in this assembly-level attribute,
+// not anywhere else in code. This is to test that such types can be picked up
+// by BurstReflection.
+[assembly: BurstReflectionTests.RegisterGenericJobType(typeof(BurstReflectionTests.GenericParallelForJob<int>))]
+
 [TestFixture]
 public class BurstReflectionTests
 {
@@ -32,6 +37,7 @@ public class BurstReflectionTests
     [TestCase("BurstReflectionTests.GenericType`1.NestedNonGeneric[System.Int32].TestMethod2()")]
     [TestCase("BurstReflectionTests.GenericType`1.NestedGeneric`1[System.Int32,System.Single].TestMethod3()")]
     [TestCase("BurstReflectionTests.MyGenericJobSeparateAssembly`1[System.Int32] - (BurstReflectionTestsSeparateAssembly.IMyGenericJobSeparateAssembly`1[System.Int32])")]
+    [TestCase("BurstReflectionTests.GenericParallelForJob`1[System.Int32] - (IJobParallelFor)")]
     public void CanFindJobType(string compileTargetName)
     {
         var result = BurstReflection.FindExecuteMethods(_assemblies, BurstReflectionAssemblyOptions.None);
@@ -165,6 +171,27 @@ public class BurstReflectionTests
         [BurstCompile]
         private static void GenericMethod<T>(T p)
         {
+        }
+    }
+
+    [AttributeUsage(AttributeTargets.Assembly, AllowMultiple = true)]
+    internal class RegisterGenericJobTypeAttribute : Attribute
+    {
+        public Type ConcreteType;
+
+        public RegisterGenericJobTypeAttribute(Type type)
+        {
+            ConcreteType = type;
+        }
+    }
+
+    [BurstCompile]
+    internal struct GenericParallelForJob<T> : IJobParallelFor
+        where T : struct
+    {
+        public void Execute(int index)
+        {
+            throw new System.NotImplementedException();
         }
     }
 }

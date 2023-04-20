@@ -11,24 +11,29 @@ using System.Threading;
 using System.Diagnostics;
 using UnityEditor;
 using Debug = UnityEngine.Debug;
+using System.Text.RegularExpressions;
+using Unity.Profiling;
+using UnityEditor.Compilation;
+using System.IO;
 
 [TestFixture]
 public class EditModeTest
 {
     private const int MaxIterations = 500;
 
-//    [UnityTest]
+    [UnityTest]
     public IEnumerator CheckBurstJobEnabledDisabled()
     {
         BurstCompiler.Options.EnableBurstCompileSynchronously = true;
-#if UNITY_2019_3_OR_NEWER
-        foreach(var item in CheckBurstJobDisabled()) yield return item;
-        foreach(var item in CheckBurstJobEnabled()) yield return item;
-#else
-        foreach(var item in CheckBurstJobEnabled()) yield return item;
-        foreach(var item in CheckBurstJobDisabled()) yield return item;
-#endif
-        BurstCompiler.Options.EnableBurstCompilation = true;
+        try
+        {
+            foreach(var item in CheckBurstJobDisabled()) yield return item;
+            foreach(var item in CheckBurstJobEnabled()) yield return item;
+        }
+        finally
+        {
+            BurstCompiler.Options.EnableBurstCompilation = true;
+        }
     }
 
     private IEnumerable CheckBurstJobEnabled()
@@ -57,9 +62,7 @@ public class EditModeTest
         }
     }
 
-#if UNITY_2019_3_OR_NEWER
     [UnityTest]
-    [UnityPlatform(RuntimePlatform.OSXEditor, RuntimePlatform.WindowsEditor)]
     public IEnumerator CheckJobWithNativeArray()
     {
         BurstCompiler.Options.EnableBurstCompileSynchronously = true;
@@ -83,7 +86,6 @@ public class EditModeTest
             job.Result.Dispose();
         }
     }
-#endif
 
 
 #if UNITY_BURST_BUG_FUNCTION_POINTER_FIXED
@@ -139,9 +141,7 @@ public class EditModeTest
         Assert.AreEqual(hash2, hash3, "BurstRuntime.GetHashCode32<SomeStruct<int>>() has returned two different hashes");
     }
 
-#if UNITY_2019_3_OR_NEWER
     [UnityTest]
-    [UnityPlatform(RuntimePlatform.OSXEditor, RuntimePlatform.WindowsEditor)]
     public IEnumerator CheckSafetyChecksWithDomainReload()
     {
         {
@@ -202,7 +202,6 @@ public class EditModeTest
             BurstCompiler.Options.EnableBurstSafetyChecks = true;
         }
     }
-#endif
 
     [BurstCompile(CompileSynchronously = true)]
     private struct DebugLogJob : IJob
@@ -224,6 +223,27 @@ public class EditModeTest
         };
         job.Schedule().Complete();
     }
+
+        [BurstCompile(CompileSynchronously = true, Debug = true)]
+        struct DebugLogErrorJob : IJob
+        {
+            public void Execute()
+            {
+                UnityEngine.Debug.LogError("X");
+            }
+        }
+
+        [UnityTest]
+        public IEnumerator DebugLogError()
+        {
+            LogAssert.Expect(LogType.Error, "X");
+
+            var jobData = new DebugLogErrorJob();
+            jobData.Run();
+
+            yield return null;
+        }
+
 
 
     [BurstCompile(CompileSynchronously = true)]
@@ -276,9 +296,7 @@ public class EditModeTest
         }
     }
 
-#if UNITY_2019_3_OR_NEWER
     [UnityTest]
-    [UnityPlatform(RuntimePlatform.OSXEditor, RuntimePlatform.WindowsEditor)]
     public IEnumerator CheckSafetyChecksOffGloballyAndOnInJob()
     {
         BurstCompiler.Options.EnableBurstSafetyChecks = false;
@@ -305,7 +323,6 @@ public class EditModeTest
     }
 
     [UnityTest]
-    [UnityPlatform(RuntimePlatform.OSXEditor, RuntimePlatform.WindowsEditor)]
     public IEnumerator CheckSafetyChecksOffGloballyAndOffInJob()
     {
         BurstCompiler.Options.EnableBurstSafetyChecks = false;
@@ -332,7 +349,6 @@ public class EditModeTest
     }
 
     [UnityTest]
-    [UnityPlatform(RuntimePlatform.OSXEditor, RuntimePlatform.WindowsEditor)]
     public IEnumerator CheckSafetyChecksOnGloballyAndOnInJob()
     {
         BurstCompiler.Options.EnableBurstSafetyChecks = true;
@@ -359,7 +375,6 @@ public class EditModeTest
     }
 
     [UnityTest]
-    [UnityPlatform(RuntimePlatform.OSXEditor, RuntimePlatform.WindowsEditor)]
     public IEnumerator CheckSafetyChecksOnGloballyAndOffInJob()
     {
         BurstCompiler.Options.EnableBurstSafetyChecks = true;
@@ -386,7 +401,6 @@ public class EditModeTest
     }
 
     [UnityTest]
-    [UnityPlatform(RuntimePlatform.OSXEditor, RuntimePlatform.WindowsEditor)]
     public IEnumerator CheckForceSafetyChecksWorks()
     {
         BurstCompiler.Options.ForceEnableBurstSafetyChecks = true;
@@ -413,7 +427,6 @@ public class EditModeTest
     }
 
     [UnityTest]
-    [UnityPlatform(RuntimePlatform.OSXEditor, RuntimePlatform.WindowsEditor)]
     public IEnumerator CheckSharedStaticWithDomainReload()
     {
         // Check that on a first access, SharedStatic is always empty
@@ -444,7 +457,7 @@ public class EditModeTest
         Assert.AreEqual(0, TestSharedStatic.SharedValue.Data.Value3);
         Assert.AreEqual(0, TestSharedStatic.SharedValue.Data.Value4);
     }
-    
+
     private struct TestSharedStatic
     {
         public static readonly SharedStatic<TestSharedStatic> SharedValue = SharedStatic<TestSharedStatic>.GetOrCreate<TestSharedStatic>();
@@ -490,7 +503,6 @@ public class EditModeTest
     }
 
     [UnityTest]
-    [UnityPlatform(RuntimePlatform.OSXEditor, RuntimePlatform.WindowsEditor)]
     public IEnumerator CheckSafetyChecksOffGloballyAndOffInFunctionPointer()
     {
         BurstCompiler.Options.EnableBurstSafetyChecks = false;
@@ -505,7 +517,6 @@ public class EditModeTest
     }
 
     [UnityTest]
-    [UnityPlatform(RuntimePlatform.OSXEditor, RuntimePlatform.WindowsEditor)]
     public IEnumerator CheckSafetyChecksOffGloballyAndOnInFunctionPointer()
     {
         BurstCompiler.Options.EnableBurstSafetyChecks = false;
@@ -520,7 +531,6 @@ public class EditModeTest
     }
 
     [UnityTest]
-    [UnityPlatform(RuntimePlatform.OSXEditor, RuntimePlatform.WindowsEditor)]
     public IEnumerator CheckSafetyChecksOnGloballyAndOffInFunctionPointer()
     {
         BurstCompiler.Options.EnableBurstSafetyChecks = true;
@@ -535,7 +545,6 @@ public class EditModeTest
     }
 
     [UnityTest]
-    [UnityPlatform(RuntimePlatform.OSXEditor, RuntimePlatform.WindowsEditor)]
     public IEnumerator CheckSafetyChecksOnGloballyAndOnInFunctionPointer()
     {
         BurstCompiler.Options.EnableBurstSafetyChecks = true;
@@ -550,7 +559,6 @@ public class EditModeTest
     }
 
     [UnityTest]
-    [UnityPlatform(RuntimePlatform.OSXEditor, RuntimePlatform.WindowsEditor)]
     public IEnumerator CheckFunctionPointerForceSafetyChecksWorks()
     {
         BurstCompiler.Options.ForceEnableBurstSafetyChecks = true;
@@ -563,5 +571,142 @@ public class EditModeTest
         // has been set which overrides any other requested behaviour.
         Assert.AreEqual(1, funcPtr.Invoke());
     }
-#endif
+
+    [BurstCompile(CompileSynchronously = true)]
+    private struct DebugDrawLineJob : IJob
+    {
+        public void Execute()
+        {
+            Debug.DrawLine(new Vector3(0, 0, 0), new Vector3(5, 0, 0), Color.green);
+        }
+    }
+
+    [Test]
+    public void TestDebugDrawLine()
+    {
+        var job = new DebugDrawLineJob();
+        job.Schedule().Complete();
+    }
+
+    [BurstCompile]
+    private static class ProfilerMarkerWrapper
+    {
+        private static readonly ProfilerMarker StaticMarker = new ProfilerMarker("TestStaticBurst");
+
+        [BurstCompile(CompileSynchronously = true)]
+        public static int CreateAndUseProfilerMarker(int start)
+        {
+            using (StaticMarker.Auto())
+            {
+                var p = new ProfilerMarker("TestBurst");
+                p.Begin();
+                var result = 0;
+                for (var i = start; i < start + 100000; i++)
+                {
+                    result += i;
+                }
+                p.End();
+                return result;
+            }
+        }
+    }
+
+    private delegate int IntReturnIntDelegate(int param);
+
+    [Test]
+    public void TestCreateProfilerMarker()
+    {
+        var fp = BurstCompiler.CompileFunctionPointer<IntReturnIntDelegate>(ProfilerMarkerWrapper.CreateAndUseProfilerMarker);
+        fp.Invoke(5);
+    }
+
+    [BurstCompile]
+    private static class EnsureAssemblyBuilderDoesNotInvalidFunctionPointers
+    {
+        [BurstDiscard]
+        private static void MessOnManaged(ref int x) => x = 42;
+
+        [BurstCompile(CompileSynchronously = true)]
+        public static int WithBurst()
+        {
+            int x = 13;
+            MessOnManaged(ref x);
+            return x;
+        }
+    }
+
+    #if !UNITY_2023_1_OR_NEWER
+    [Test]
+    public void TestAssemblyBuilder()
+    {
+        var preBuilder = EnsureAssemblyBuilderDoesNotInvalidFunctionPointers.WithBurst();
+        Assert.AreEqual(13, preBuilder);
+
+        var tempDirectory = Path.GetTempPath();
+
+        var script = Path.Combine(tempDirectory, "BurstGeneratedAssembly.cs");
+
+        File.WriteAllText(script, @"
+using Unity.Burst;
+
+namespace BurstGeneratedAssembly
+{
+    [BurstCompile]
+    public static class MyStuff
+    {
+        [BurstCompile(CompileSynchronously = true)]
+        public static int BurstedFunction(int x) => x + 1;
+    }
+}
+
+");
+
+        var dll = Path.Combine(tempDirectory, "BurstGeneratedAssembly.dll");
+
+        var builder = new AssemblyBuilder(dll, script);
+
+        Assert.IsTrue(builder.Build());
+
+        // Busy wait for the build to be done.
+        while (builder.status != AssemblyBuilderStatus.Finished)
+        {
+            Assert.AreEqual(preBuilder, EnsureAssemblyBuilderDoesNotInvalidFunctionPointers.WithBurst());
+            Thread.Sleep(10);
+        }
+
+        Assert.AreEqual(preBuilder, EnsureAssemblyBuilderDoesNotInvalidFunctionPointers.WithBurst());
+    }
+    #endif
+
+    [UnityTest]
+    public IEnumerator CheckChangingScriptOptimizationMode()
+    {
+        static void CheckBurstIsEnabled()
+        {
+            using (var jobTester = new BurstJobTester2())
+            {
+                var result = jobTester.Calculate();
+                Assert.AreNotEqual(0.0f, result);
+            }
+        }
+
+        CheckBurstIsEnabled();
+
+        // Switch scripting code optimization mode from Release to Debug.
+        Assert.AreEqual(CodeOptimization.Release, CompilationPipeline.codeOptimization);
+        CompilationPipeline.codeOptimization = CodeOptimization.Debug;
+
+        // Wait for the domain reload to be completed
+        yield return new WaitForDomainReload();
+
+        CheckBurstIsEnabled();
+
+        // Set scripting code optimization mode back to Release.
+        CompilationPipeline.codeOptimization = CodeOptimization.Release;
+
+        // Wait for the domain reload to be completed
+        yield return new WaitForDomainReload();
+
+        CheckBurstIsEnabled();
+    }
 }

@@ -147,6 +147,108 @@ namespace Burst.Compiler.IL.Tests.Helpers
                 return;
             }
 
+            if (expected is v64x2 && result is v64x2)
+            {
+                if (!AreVectorsEqual(((v64x2)expected).v64_0, ((v64x2)result).v64_0))
+                {
+                    Assert.Fail("First component of v64x2 differs: " + FormatVectorFailure64(((v64x2)expected).v64_0, ((v64x2)result).v64_0));
+                }
+                if (!AreVectorsEqual(((v64x2)expected).v64_1, ((v64x2)result).v64_1))
+                {
+                    Assert.Fail("Second component of v64x2 differs: " + FormatVectorFailure64(((v64x2)expected).v64_1, ((v64x2)result).v64_1));
+                }
+                return;
+            }
+
+            if (expected is v64x3 && result is v64x3)
+            {
+                if (!AreVectorsEqual(((v64x3)expected).v64_0, ((v64x3)result).v64_0))
+                {
+                    Assert.Fail("First component of v64x3 differs: " + FormatVectorFailure64(((v64x3)expected).v64_0, ((v64x3)result).v64_0));
+                }
+                if (!AreVectorsEqual(((v64x3)expected).v64_1, ((v64x3)result).v64_1))
+                {
+                    Assert.Fail("Second component of v64x3 differs: " + FormatVectorFailure64(((v64x3)expected).v64_1, ((v64x3)result).v64_1));
+                }
+                if (!AreVectorsEqual(((v64x3)expected).v64_2, ((v64x3)result).v64_2))
+                {
+                    Assert.Fail("Third component of v64x3 differs: " + FormatVectorFailure64(((v64x3)expected).v64_2, ((v64x3)result).v64_2));
+                }
+                return;
+            }
+
+            if (expected is v64x4 && result is v64x4)
+            {
+                if (!AreVectorsEqual(((v64x4)expected).v64_0, ((v64x4)result).v64_0))
+                {
+                    Assert.Fail("First component of v64x4 differs: " + FormatVectorFailure64(((v64x4)expected).v64_0, ((v64x4)result).v64_0));
+                }
+                if (!AreVectorsEqual(((v64x4)expected).v64_1, ((v64x4)result).v64_1))
+                {
+                    Assert.Fail("Second component of v64x4 differs: " + FormatVectorFailure64(((v64x4)expected).v64_1, ((v64x4)result).v64_1));
+                }
+                if (!AreVectorsEqual(((v64x4)expected).v64_2, ((v64x4)result).v64_2))
+                {
+                    Assert.Fail("Third component of v64x4 differs: " + FormatVectorFailure64(((v64x4)expected).v64_2, ((v64x4)result).v64_2));
+                }
+                if (!AreVectorsEqual(((v64x4)expected).v64_3, ((v64x4)result).v64_3))
+                {
+                    Assert.Fail("Fourth component of v64x4 differs: " + FormatVectorFailure64(((v64x4)expected).v64_3, ((v64x4)result).v64_3));
+                }
+                return;
+            }
+
+            if (expected is v128x2 && result is v128x2)
+            {
+                if (!AreVectorsEqual(((v128x2)expected).v128_0, ((v128x2)result).v128_0))
+                {
+                    Assert.Fail("First component of v128x2 differs: " + FormatVectorFailure128(((v128x2)expected).v128_0, ((v128x2)result).v128_0));
+                }
+                if (!AreVectorsEqual(((v128x2)expected).v128_1, ((v128x2)result).v128_1))
+                {
+                    Assert.Fail("Second component of v128x2 differs: " + FormatVectorFailure128(((v128x2)expected).v128_1, ((v128x2)result).v128_1));
+                }
+                return;
+            }
+
+            if (expected is v128x3 && result is v128x3)
+            {
+                if (!AreVectorsEqual(((v128x3)expected).v128_0, ((v128x3)result).v128_0))
+                {
+                    Assert.Fail("First component of v128x3 differs: " + FormatVectorFailure128(((v128x3)expected).v128_0, ((v128x3)result).v128_0));
+                }
+                if (!AreVectorsEqual(((v128x3)expected).v128_1, ((v128x3)result).v128_1))
+                {
+                    Assert.Fail("Second component of v128x3 differs: " + FormatVectorFailure128(((v128x3)expected).v128_1, ((v128x3)result).v128_1));
+                }
+                if (!AreVectorsEqual(((v128x3)expected).v128_2, ((v128x3)result).v128_2))
+                {
+                    Assert.Fail("Third component of v128x3 differs: " + FormatVectorFailure128(((v128x3)expected).v128_2, ((v128x3)result).v128_2));
+                }
+                return;
+            }
+
+            if (expected is v128x4 && result is v128x4)
+            {
+                if (!AreVectorsEqual(((v128x4)expected).v128_0, ((v128x4)result).v128_0))
+                {
+                    Assert.Fail("First component of v128x4 differs: " + FormatVectorFailure128(((v128x4)expected).v128_0, ((v128x4)result).v128_0));
+                }
+                if (!AreVectorsEqual(((v128x4)expected).v128_1, ((v128x4)result).v128_1))
+                {
+                    Assert.Fail("Second component of v128x4 differs: " + FormatVectorFailure128(((v128x4)expected).v128_1, ((v128x4)result).v128_1));
+                }
+                if (!AreVectorsEqual(((v128x4)expected).v128_2, ((v128x4)result).v128_2))
+                {
+                    Assert.Fail("Third component of v128x4 differs: " + FormatVectorFailure128(((v128x4)expected).v128_2, ((v128x4)result).v128_2));
+                }
+                if (!AreVectorsEqual(((v128x4)expected).v128_3, ((v128x4)result).v128_3))
+                {
+                    Assert.Fail("Fourth component of v128x4 differs: " + FormatVectorFailure128(((v128x4)expected).v128_3, ((v128x4)result).v128_3));
+                }
+                return;
+            }
+
             if (expected is v256 && result is v256)
             {
                 if (!AreVectorsEqual((v256)expected, (v256)result))

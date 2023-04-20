@@ -91,7 +91,7 @@ namespace Burst.Compiler.IL.Tests
             }
         }
 
-        [TestCompiler(ExpectCompilerException = true, ExpectedDiagnosticId = DiagnosticId.ERR_InstructionLdlenNonConstantLengthNotSupported)]
+        [TestCompiler]
         public static int TestStaticReadonlyArrayNonConstantLength()
         {
             return StructP.Value.Length;
@@ -112,7 +112,7 @@ namespace Burst.Compiler.IL.Tests
             }
         }
 
-        [TestCompiler(ExpectCompilerException = true, ExpectedDiagnosticIds = new[] { DiagnosticId.ERR_AccessingManagedArrayNotSupported, DiagnosticId.ERR_ManagedStaticConstructor })]
+        [TestCompiler]
         public static int TestStaticReadonlyArrayWithNonConstantStelemIndex()
         {
             return StructQ.Value[1];
@@ -130,7 +130,7 @@ namespace Burst.Compiler.IL.Tests
             }
         }
 
-        [TestCompiler(ExpectCompilerException = true, ExpectedDiagnosticId = DiagnosticId.ERR_LoadingFromNonReadonlyStaticFieldNotSupported)]
+        [TestCompiler(ExpectCompilerException = true, ExpectedDiagnosticId = DiagnosticId.ERR_LoadingFromManagedNonReadonlyStaticFieldNotSupported)]
         public static int TestStaticReadonlyArrayExplicitConstructionOfUninitialized()
         {
             return StructR.Value.Length;
@@ -155,8 +155,7 @@ namespace Burst.Compiler.IL.Tests
             }
         }
 
-        // Right now we don't support initialization of readonly arrays outside the array constructor
-        [TestCompiler(ExpectCompilerException = true, ExpectedDiagnosticIds = new[] { DiagnosticId.ERR_AccessingManagedArrayNotSupported, DiagnosticId.ERR_ManagedStaticConstructor })]
+        [TestCompiler]
         public static int TestStaticReadonlyArrayExplicitConstruction()
         {
             int sum = 0;
@@ -274,6 +273,41 @@ namespace Burst.Compiler.IL.Tests
         {
             public int a;
             public int b;
+        }
+
+        public struct NullArrayHolder
+        {
+            public static readonly int[] Array = null;
+        }
+
+        [TestCompiler()]
+        public static int TestStaticReadonlyNullArray()
+        {
+            if (NullArrayHolder.Array == null)
+            {
+                return 40;
+            }
+
+            return 3;
+        }
+
+        private static readonly int[] SomeArray = { 42, 13 };
+
+        [TestCompiler(42)]
+        public static int StoreNullIntoLocalArray(int x)
+        {
+            int[] someArray;
+
+            if (x == 0)
+            {
+                someArray = SomeArray;
+            }
+            else
+            {
+                someArray = null;
+            }
+
+            return someArray?.Length ?? 0;
         }
     }
 }

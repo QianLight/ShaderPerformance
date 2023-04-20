@@ -9,7 +9,7 @@ using static Unity.Burst.CompilerServices.Aliasing;
 
 namespace Burst.Compiler.IL.Tests
 {
-    internal class Aliasing
+    internal partial class Aliasing
     {
         public unsafe struct NoAliasField
         {

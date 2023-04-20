@@ -50,7 +50,7 @@ public abstract class BurstCompiler
     public abstract bool UseOwnToolchain { get; set; }
     public virtual bool OnlyStaticMethods { get; set; } = false;
 
-    public virtual string BurstBackend { get; set; } = "burst-llvm-10";	// Bumping this, but really should not be specifying by default, or when we bump llvm dots runtime gets left behind
+    public virtual string BurstBackend { get; set; }
 
     // Options
     public virtual bool SafetyChecks { get; set; } = false;
@@ -67,6 +67,8 @@ public abstract class BurstCompiler
     public virtual bool EnableDirectExternalLinking { get; set; } = false;
     public virtual string DisableWarnings { get; set; } = "";  // ; seperated list of ids, e.g. BC1370;BC1322
 
+    public virtual bool EmitLlvmObjects { get; set; } = false;  // Added because burst now compiles/links wasm code as native objects by default
+
     static string[] GetBurstCommandLineArgs(
         BurstCompiler compiler,
         NPath outputPrefixForObjectFile,
@@ -80,18 +82,19 @@ public abstract class BurstCompiler
             $"--target={compiler.TargetArchitecture}",
             $"--format={compiler.ObjectFormat}",
             compiler.SafetyChecks ? "--safety-checks" : "",
-            $"--dump=\"None\"",
+            $"--dump=None",
             compiler.DisableVectors ? "--disable-vectors" : "",
             compiler.Link ? "" : "--nolink",
             $"--float-precision={compiler.FloatPrecision}",
             $"--keep-intermediate-files",
+            compiler.EmitLlvmObjects?"--emit-llvm-objects":"",
             compiler.Verbose ? "--verbose" : "",
             $"--patch-assemblies-into={outputDirForPatchedAssemblies}",
             $"--output={outputPrefixForObjectFile}",
             compiler.OnlyStaticMethods ? "--only-static-methods" : "",
             "--method-prefix=burstedmethod_",
             $"--pinvoke-name={pinvokeName}",
-            $"--backend={compiler.BurstBackend}",
+            (compiler.BurstBackend == null) ? "" : $"--backend={compiler.BurstBackend}",
             $"--execute-method-name={compiler.ExecuteMethodName}",
             "--debug=Full",
             compiler.EnableDirectExternalLinking ? "--enable-direct-external-linking" : "",
@@ -126,6 +129,26 @@ public abstract class BurstCompiler
             });
     }
 
+    static string[] ArgumentsToResponseFile(bool usesMono, NPath targetDir, string[] commandLineArgs, out NPath responseFile)
+    {
+        var remainingArgs = usesMono? commandLineArgs.Skip(1) : commandLineArgs;
+        var joinedArgs = String.Join(Environment.NewLine, remainingArgs.Where(s => !String.IsNullOrEmpty(s)));
+        KnuthHash hash = new KnuthHash();
+        hash.Add(joinedArgs);
+        responseFile  = targetDir.Combine($"{hash.Value}.rsp");
+
+        Backend.Current.AddWriteTextAction(
+                responseFile,
+                joinedArgs,
+                "BurstResponseFile");
+
+        if (usesMono)
+        {
+            return new [] { commandLineArgs[0], $"@{responseFile}"};
+        }
+        return new [] {$"@{responseFile}"};
+    }
+
     public static BagOfObjectFilesLibrary SetupBurstCompilationForAssemblies(
         BurstCompiler compiler,
         DotNetAssembly unpatchedInputAssembly,
@@ -145,7 +168,8 @@ public abstract class BurstCompiler
             outputDirForPatchedAssemblies,
             (inputAssemblies, targetDir) =>
             {
-                var executableStringFor = HostPlatform.IsWindows ? BurstExecutable.ToString(SlashMode.Native) : "mono";
+                var usesMono = HostPlatform.IsWindows ? false : true;
+                var executableStringFor = !usesMono ? BurstExecutable.ToString(SlashMode.Native) : "mono";
                 var commandLineArgs = GetBurstCommandLineArgs(
                     compiler,
                     outputDirForObjectFile.Combine(pinvokeName),
@@ -156,13 +180,15 @@ public abstract class BurstCompiler
                 var inputPaths = AddDebugSymbolPaths(inputAssemblies);
                 var targetFiles = inputPaths.Select(p => targetDir.Combine(p.FileName));
 
+                var finalArguments = ArgumentsToResponseFile(usesMono, targetDir, commandLineArgs, out var responseFile);
+
                 Backend.Current.AddAction(
                     "Burst",
                     //todo: make burst process pdbs
                     targetFiles.ToArray(),
-                    inputPaths.Concat(new[] {BurstExecutable}).ToArray(),
+                    inputPaths.Concat(new[] {BurstExecutable, responseFile}).ToArray(),
                     executableStringFor,
-                    commandLineArgs,
+                    finalArguments,
                     targetDirectories: new[] {outputDirForObjectFile}
                 );
             });
@@ -195,7 +221,8 @@ public abstract class BurstCompiler
             outputDirForPatchedAssemblies,
             (inputAssemblies, targetDir) =>
             {
-                var executableStringFor = HostPlatform.IsWindows ? BurstExecutable.ToString(SlashMode.Native) : "mono";
+                var usesMono = HostPlatform.IsWindows ? false : true;
+                var executableStringFor = !usesMono ? BurstExecutable.ToString(SlashMode.Native) : "mono";
 
                 var pinvokeName = HostPlatform.IsWindows
                     ? targetNativeLibrary.FileNameWithoutExtension
@@ -211,13 +238,16 @@ public abstract class BurstCompiler
                 var targetFiles = inputPaths.Select(p => targetDir.Combine(p.FileName))
                     .Concat(new[] {targetNativeLibrary});
 
+                var finalArguments = ArgumentsToResponseFile(usesMono, targetDir, commandLineArgs, out var responseFile);
+
                 Backend.Current.AddAction(
                     "Burst",
                     //todo: make burst process pdbs
                     targetFiles.ToArray(),
-                    inputPaths.Concat(new[] {BurstExecutable}).ToArray(),
+                    inputPaths.Concat(new[] {BurstExecutable, responseFile}).ToArray(),
                     executableStringFor,
-                    commandLineArgs);
+                    finalArguments
+                    );
             });
 
         return new DynamicLibrary(targetNativeLibrary, symbolFiles: null);
@@ -238,6 +268,7 @@ public class BurstCompilerForEmscripten : BurstCompiler
     public override bool EnableStaticLinkage { get; set; } = true;
     public override bool EnableJobMarshalling { get; set; } = false;
     public override bool EnableDirectExternalLinking { get; set; } = true;
+    public override bool EmitLlvmObjects { get; set; } = true;  // Added because burst now compiles/links wasm code as native objects by default
 }
 
 public class BurstCompilerForWindows : BurstCompiler
@@ -274,6 +305,23 @@ public class BurstCompilerForMac : BurstCompiler
     //    AARCH64|THUMB2_NEON32> Default: Auto
     public override string TargetArchitecture { get; set; } = "X64_SSE2";
     public override string ObjectFormat { get; set; } = "MachO";
+    public override string FloatPrecision { get; set; } = "High";
+    public override bool SafetyChecks { get; set; } = true;
+    public override bool DisableVectors { get; set; } = false;
+    public override bool Link { get; set; } = false;
+    public override string ObjectFileExtension { get; set; } = ".o";
+    public override bool UseOwnToolchain { get; set; } = true;
+}
+
+public class BurstCompilerForLinux : BurstCompiler
+{
+    public override string TargetPlatform { get; set; } = "Linux";
+
+    //--target=VALUE         Target CPU <Auto|X86_SSE2|X86_SSE4|X64_SSE2|X64_
+    //    SSE4|AVX|AVX2|AVX512|WASM32|ARMV7A_NEON32|ARMV8A_
+    //    AARCH64|THUMB2_NEON32> Default: Auto
+    public override string TargetArchitecture { get; set; } = "X64_SSE2";
+    public override string ObjectFormat { get; set; } = "Elf";
     public override string FloatPrecision { get; set; } = "High";
     public override bool SafetyChecks { get; set; } = true;
     public override bool DisableVectors { get; set; } = false;

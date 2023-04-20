@@ -11,7 +11,7 @@ namespace Burst.Compiler.IL.Tests.Helpers
     internal enum DataRange
     {
         // Standard Test (Zero, Minus100To100, Inf, Nan)
-        Standard = Zero | Minus100To100 | Inf | NaN,
+        Standard = Zero | Minus100To100 | Inf | NaN | HighIntRange,
 
         // Standard Test (Zero, ZeroExclusiveTo100, Inf, Nan)
         StandardPositive = Zero | ZeroExclusiveTo100 | Inf | NaN,
@@ -26,97 +26,102 @@ namespace Burst.Compiler.IL.Tests.Helpers
         ZeroExclusiveTo100 = 1 << 5,
         Inf = 1 << 6,
         NaN = 1 << 7,
+        HighIntRange = 1 << 8,
     }
 
     internal static class DataRangeExtensions
     {
         private const int VectorsCount = 6;
 
+        private static bool IsIntegerType(Type type)
+        {
+            if (type == typeof(byte)) return true;
+            if (type == typeof(sbyte)) return true;
+            if (type == typeof(short)) return true;
+            if (type == typeof(ushort)) return true;
+            if (type == typeof(int)) return true;
+            if (type == typeof(uint)) return true;
+            if (type == typeof(long)) return true;
+            if (type == typeof(ulong)) return true;
+
+            return false;
+        }
+
+        private static bool IsSignedIntegerType(Type type)
+        {
+            if (type == typeof(sbyte)) return true;
+            if (type == typeof(short)) return true;
+            if (type == typeof(int)) return true;
+            if (type == typeof(long)) return true;
+
+            return false;
+        }
+
         public static IEnumerable<object> ExpandRange(this DataRange dataRange, Type type, int seed)
         {
-            if (type == typeof(bool))
+            if (IsIntegerType(type))
+            {
+                var isSigned = IsSignedIntegerType(type);
+
+                foreach (var value in ExpandRange(dataRange & ~(DataRange.Inf | DataRange.NaN), typeof(double), seed))
+                {
+                    var d = (double)value;
+
+                    if (!isSigned && (d < 0.0))
+                    {
+                        continue;
+                    }
+
+                    yield return Convert.ChangeType(d, type);
+                }
+
+                if (0 != (dataRange & DataRange.HighIntRange))
+                {
+                    double rangeLow = 100;
+                    double rangeHigh = 101;
+
+                    if (type == typeof(byte)) rangeHigh = byte.MaxValue;
+                    if (type == typeof(sbyte)) rangeHigh = sbyte.MaxValue;
+                    if (type == typeof(short)) rangeHigh = short.MaxValue;
+                    if (type == typeof(ushort)) rangeHigh = ushort.MaxValue;
+                    if (type == typeof(int)) rangeHigh = int.MaxValue;
+                    if (type == typeof(uint)) rangeHigh = uint.MaxValue;
+                    if (type == typeof(long)) rangeHigh = long.MaxValue;
+                    if (type == typeof(ulong)) rangeHigh = ulong.MaxValue;
+
+                    var random = new System.Random(seed);
+
+                    int total = 8;
+
+                    if (!isSigned)
+                    {
+                        total *= 2;
+                    }
+
+                    for (int i = 0; i < total; i++)
+                    {
+                        var next = random.NextDouble();
+                        var d = rangeLow + (rangeHigh - rangeLow) * next;
+
+                        yield return Convert.ChangeType(d, type);
+
+                        if (isSigned)
+                        {
+                            yield return Convert.ChangeType(-d, type);
+                        }
+                    }
+                }
+            }
+            else if (type == typeof(bool))
             {
                 yield return true;
                 yield return false;
-            }
-            else if (type == typeof(int))
-            {
-                foreach (var value in ExpandRange(dataRange & ~(DataRange.Inf | DataRange.NaN), typeof(double), seed))
-                {
-                    yield return (int)(double)value;
-                }
-            }
-            else if (type == typeof(uint))
-            {
-                foreach (var value in ExpandRange(dataRange & ~(DataRange.Inf | DataRange.NaN), typeof(double), seed))
-                {
-                    var d = (double) value;
-                    if (d >= 0.0)
-                    {
-                        yield return (uint) d;
-                    }
-                }
-            }
-            else if (type == typeof(long))
-            {
-                foreach (var value in ExpandRange(dataRange & ~(DataRange.Inf | DataRange.NaN), typeof(double), seed))
-                {
-                    yield return (long)(double)value;
-                }
-            }
-            else if (type == typeof(ulong))
-            {
-                foreach (var value in ExpandRange(dataRange & ~(DataRange.Inf | DataRange.NaN), typeof(double), seed))
-                {
-                    var d = (double)value;
-                    if (d >= 0.0)
-                    {
-                        yield return (ulong)d;
-                    }
-                }
-            }
-            else if (type == typeof(short))
-            {
-                foreach (var value in ExpandRange(dataRange & ~(DataRange.Inf | DataRange.NaN), typeof(double), seed))
-                {
-                    yield return (short)(double)value;
-                }
-            }
-            else if (type == typeof(ushort))
-            {
-                foreach (var value in ExpandRange(dataRange & ~(DataRange.Inf|DataRange.NaN), typeof(double), seed))
-                {
-                    var d = (double)value;
-                    if (d >= 0.0)
-                    {
-                        yield return (ushort)d;
-                    }
-                }
-            }
-            else if (type == typeof(sbyte))
-            {
-                foreach (var value in ExpandRange(dataRange & ~(DataRange.Inf | DataRange.NaN), typeof(double), seed))
-                {
-                    var d = (double)value;
-                    yield return (sbyte) d;
-                }
-            }
-            else if (type == typeof(ushort))
-            {
-                foreach (var value in ExpandRange(dataRange & ~(DataRange.Inf | DataRange.NaN), typeof(double), seed))
-                {
-                    var d = (double)value;
-                    if (d >= 0.0)
-                    {
-                        yield return (byte)d;
-                    }
-                }
             }
             else if (type == typeof(float))
             {
                 foreach (var value in ExpandRange(dataRange, typeof(double), seed))
                 {
-                    var d = (double) value;
+                    var d = (double)value;
                     if (double.IsNaN(d))
                     {
                         yield return float.NaN;
@@ -131,7 +136,7 @@ namespace Burst.Compiler.IL.Tests.Helpers
                     }
                     else
                     {
-                        yield return (float) (double) value;
+                        yield return (float)(double)value;
                     }
                 }
             }
@@ -144,10 +149,12 @@ namespace Burst.Compiler.IL.Tests.Helpers
                     yield return -50.0;
                     yield return -36.5;
                     yield return -9.1;
+
                     if ((dataRange & (DataRange.Zero)) != 0)
                     {
                         yield return 0.0;
                     }
+
                     yield return 5.1;
                     yield return 43.5;
                     yield return 50.0;
@@ -347,6 +354,58 @@ namespace Burst.Compiler.IL.Tests.Helpers
                                 var z = uints[NextIndex(random, indices, originalIndices)];
                                 var w = uints[NextIndex(random, indices, originalIndices)];
                                 yield return new uint4(x, y, z, w);
+                            }
+                            break;
+                        default:
+                            throw new NotSupportedException($"Unsupported DataRange type `{type}`");
+                    }
+                }
+                else if (type.Name.StartsWith("half"))
+                {
+                    var size = (uint)(type.Name["half".Length] - '0');
+                    var floats = ExpandRange(dataRange & ~(DataRange.NaN | DataRange.Inf), typeof(float), seed).OfType<float>().ToList();
+                    var originalIndices = Enumerable.Range(0, floats.Count).ToList();
+                    var indices = new List<int>(originalIndices);
+                    // We only put NaN and Inf in the first set of values
+                    if ((dataRange & DataRange.NaN) != 0)
+                    {
+                        indices.Add(floats.Count);
+                        floats.Add(float.NaN);
+                    }
+                    if ((dataRange & DataRange.Inf) != 0)
+                    {
+                        indices.Add(floats.Count);
+                        floats.Add(float.PositiveInfinity);
+                    }
+
+                    var random = new System.Random(seed);
+                    switch (size)
+                    {
+                        case 2:
+                            for (int i = 0; i < VectorsCount; i++)
+                            {
+                                var x = floats[NextIndex(random, indices, originalIndices)];
+                                var y = floats[NextIndex(random, indices, originalIndices)];
+                                yield return new half2(new float2(x, y));
+                            }
+                            break;
+                        case 3:
+                            for (int i = 0; i < VectorsCount; i++)
+                            {
+                                var x = floats[NextIndex(random, indices, originalIndices)];
+                                var y = floats[NextIndex(random, indices, originalIndices)];
+                                var z = floats[NextIndex(random, indices, originalIndices)];
+                                yield return new half3(new float3(x, y, z));
+                            }
+                            break;
+                        case 4:
+                            for (int i = 0; i < VectorsCount; i++)
+                            {
+                                var x = floats[NextIndex(random, indices, originalIndices)];
+                                var y = floats[NextIndex(random, indices, originalIndices)];
+                                var z = floats[NextIndex(random, indices, originalIndices)];
+                                var w = floats[NextIndex(random, indices, originalIndices)];
+                                yield return new half4(new float4(x, y, z, w));
                             }
                             break;
                         default:

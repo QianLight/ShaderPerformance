@@ -4,7 +4,6 @@ using System.Runtime.InteropServices;
 using Burst.Compiler.IL.Tests.Helpers;
 using NUnit.Framework;
 using Unity.Burst;
-using Unity.Collections;
 using Unity.Collections.LowLevel.Unsafe;
 using Unity.Mathematics;
 using UnityBenchShared;
@@ -218,53 +217,6 @@ namespace Burst.Compiler.IL.Tests
             color.B = v;
         }
 
-        [StructLayout(LayoutKind.Explicit, Size = 8)]
-        private unsafe struct CheckHoleInner
-        {
-            [FieldOffset(0)]
-            public byte* m_Ptr;
-        }
-
-        private struct CheckHoleOuter
-        {
-            public CheckHoleInner a;
-            public int b;
-            public CheckHoleInner c;
-        }
-
-        [TestCompiler]
-        public static unsafe int TestCheckHoleSize()
-        {
-            return UnsafeUtility.SizeOf<CheckHoleOuter>();
-        }
-
-        [TestCompiler]
-        public static unsafe int TestCheckHoleFieldOffsetA()
-        {
-            var value = new CheckHoleOuter();
-            var addressStart = &value;
-            var addressField = &value.a;
-            return (int)((byte*)addressField - (byte*)addressStart);
-        }
-
-        [TestCompiler]
-        public static unsafe int TestCheckHoleFieldOffsetB()
-        {
-            var value = new CheckHoleOuter();
-            var addressStart = &value;
-            var addressField = &value.b;
-            return (int)((byte*)addressField - (byte*)addressStart);
-        }
-
-        [TestCompiler]
-        public static unsafe int TestCheckHoleFieldOffsetC()
-        {
-            var value = new CheckHoleOuter();
-            var addressStart = &value;
-            var addressField = &value.c;
-            return (int)((byte*)addressField - (byte*)addressStart);
-        }
-
         [StructLayout(LayoutKind.Explicit)]
         private unsafe struct ExplicitLayoutStructUnaligned
         {
@@ -332,39 +284,10 @@ namespace Burst.Compiler.IL.Tests
             [FieldOffset(5)] public int c;
         }
 
-        [TestCompiler]
-        [Ignore("UnsafeUtility not working properly with explicit sizing")]
+        [TestCompiler(ExpectCompilerException = true, ExpectedDiagnosticId = DiagnosticId.ERR_StructSizeNotSupported)]
         public static unsafe int TestStructSizingExplicitStructWithSize()
         {
             return UnsafeUtility.SizeOf<ExplicitStructWithSize>();
-        }
-
-        [StructLayout(LayoutKind.Explicit)]
-        public struct ExplicitStructWithoutSize
-        {
-            [FieldOffset(0)] public int a;
-            [FieldOffset(4)] public sbyte b;
-            [FieldOffset(5)] public int c;
-        }
-
-        [TestCompiler]
-        public static unsafe int TestStructSizingExplicitStructWithoutSize()
-        {
-            return UnsafeUtility.SizeOf<ExplicitStructWithoutSize>();
-        }
-
-        [StructLayout(LayoutKind.Explicit)]
-        public struct ExplicitStructWithoutSize2
-        {
-            [FieldOffset(0)] public long a;
-            [FieldOffset(8)] public sbyte b;
-            [FieldOffset(9)] public int c;
-        }
-
-        [TestCompiler]
-        public static unsafe int TestStructSizingExplicitStructWithoutSize2()
-        {
-            return UnsafeUtility.SizeOf<ExplicitStructWithoutSize2>();
         }
 
         [StructLayout(LayoutKind.Sequential, Size = 9)]
@@ -395,32 +318,138 @@ namespace Burst.Compiler.IL.Tests
             return UnsafeUtility.SizeOf<SequentialStructWithSize2>();
         }
 
+        [StructLayout(LayoutKind.Sequential, Size = 12, Pack = 8)]
+        private struct StructSequentialWithSizeAndPack8
+        {
+            public double FieldA;
+            public int FieldB;
+        }
+
+        [TestCompiler(ExpectCompilerException = true, ExpectedDiagnosticId = DiagnosticId.ERR_StructSizeNotSupported)]
+        public static unsafe int TestStructSizingSequentialStructWithSizeAndPack8()
+        {
+            return UnsafeUtility.SizeOf<StructSequentialWithSizeAndPack8>();
+        }
+
+        [StructLayout(LayoutKind.Explicit, Size = 12, Pack = 8)]
+        private struct StructExplicitWithSizeAndPack8
+        {
+            [FieldOffset(0)]
+            public double FieldA;
+            [FieldOffset(8)]
+            public int FieldB;
+        }
+
+        [TestCompiler(ExpectCompilerException = true, ExpectedDiagnosticId = DiagnosticId.ERR_StructSizeNotSupported)]
+        public static unsafe int TestStructSizingExplicitStructWithSizeAndPack8()
+        {
+            return UnsafeUtility.SizeOf<StructExplicitWithSizeAndPack8>();
+        }
+
+        private struct StructExplicitWithSizeAndPack8Wrapper
+        {
+            public byte FieldA;
+            public StructExplicitWithSizeAndPack8 FieldB;
+
+            public StructExplicitWithSizeAndPack8Wrapper(byte a, StructExplicitWithSizeAndPack8 b)
+            {
+                FieldA = a;
+                FieldB = b;
+            }
+        }
+
+        [TestCompiler(ExpectCompilerException = true, ExpectedDiagnosticId = DiagnosticId.ERR_StructSizeNotSupported)]
+        public static unsafe int TestStructExplicitWithSizeAndPack8Wrapper()
+        {
+            return UnsafeUtility.SizeOf<StructExplicitWithSizeAndPack8Wrapper>();
+        }
+
+        [StructLayout(LayoutKind.Sequential, Size = 10)]
+        private struct StructSequentialWithSizeSmallerThanActual
+        {
+            public double FieldA;
+            public int FieldB;
+        }
+
+        [TestCompiler(ExpectCompilerException = true, ExpectedDiagnosticId = DiagnosticId.ERR_StructSizeNotSupported)]
+        public static unsafe int TestStructSequentialWithSizeSmallerThanActual()
+        {
+            return UnsafeUtility.SizeOf<StructSequentialWithSizeSmallerThanActual>();
+        }
+
         [StructLayout(LayoutKind.Sequential, Size = 12)]
-        public struct SequentialStructWithSize3
+        private struct StructSequentialWithSizeSmallerThanNatural
         {
-            public int a;
-            public int b;
-            public sbyte c;
+            public double FieldA;
+            public int FieldB;
         }
 
-        [TestCompiler]
-        public static unsafe int TestStructSizingSequentialStructWithSize3()
+        [TestCompiler(ExpectCompilerException = true, ExpectedDiagnosticId = DiagnosticId.ERR_StructSizeNotSupported)]
+        public static unsafe int TestStructSequentialWithSizeSmallerThanNatural()
         {
-            return UnsafeUtility.SizeOf<SequentialStructWithSize3>();
+            return UnsafeUtility.SizeOf<StructSequentialWithSizeSmallerThanNatural>();
         }
 
-        [StructLayout(LayoutKind.Sequential)]
-        public struct SequentialStructWithoutSize
+        [StructLayout(LayoutKind.Explicit, Size = 10)]
+        private struct StructExplicitWithSizeSmallerThanActual
         {
-            public int a;
-            public int b;
-            public sbyte c;
+            [FieldOffset(0)]
+            public double FieldA;
+            [FieldOffset(8)]
+            public int FieldB;
         }
 
-        [TestCompiler]
-        public static unsafe int TestStructSizingSequentialStructWithoutSize()
+        [TestCompiler(ExpectCompilerException = true, ExpectedDiagnosticId = DiagnosticId.ERR_StructSizeNotSupported)]
+        public static unsafe int TestStructExplicitWithSizeSmallerThanActual()
         {
-            return UnsafeUtility.SizeOf<SequentialStructWithoutSize>();
+            return UnsafeUtility.SizeOf<StructExplicitWithSizeSmallerThanActual>();
+        }
+
+        [StructLayout(LayoutKind.Explicit, Size = 12)]
+        private struct StructExplicitWithSizeAndOverlappingFields
+        {
+            [FieldOffset(0)]
+            public double FieldA;
+            [FieldOffset(4)]
+            public int FieldB;
+            [FieldOffset(8)]
+            public int FieldC;
+        }
+
+        [TestCompiler(ExpectCompilerException = true, ExpectedDiagnosticId = DiagnosticId.ERR_StructSizeNotSupported)]
+        public static unsafe int TestStructExplicitWithSizeAndOverlappingFields()
+        {
+            return UnsafeUtility.SizeOf<StructExplicitWithSizeAndOverlappingFields>();
+        }
+
+        [StructLayout(LayoutKind.Explicit, Size = 12)]
+        private struct StructExplicitWithSize
+        {
+            [FieldOffset(0)]
+            public double FieldA;
+            [FieldOffset(8)]
+            public int FieldB;
+        }
+
+        [TestCompiler(ExpectCompilerException = true, ExpectedDiagnosticId = DiagnosticId.ERR_StructSizeNotSupported)]
+        public static unsafe int TestStructExplicitWithSize()
+        {
+            return UnsafeUtility.SizeOf<StructExplicitWithSize>();
+        }
+
+        [StructLayout(LayoutKind.Explicit, Size = 17)]
+        private struct StructExplicitWithSize17
+        {
+            [FieldOffset(0)]
+            public double FieldA;
+            [FieldOffset(8)]
+            public int FieldB;
+        }
+
+        [TestCompiler(ExpectCompilerException = true, ExpectedDiagnosticId = DiagnosticId.ERR_StructSizeNotSupported)]
+        public static unsafe int TestStructExplicitWithSize17()
+        {
+            return UnsafeUtility.SizeOf<StructExplicitWithSize17>();
         }
 
         [StructLayout(LayoutKind.Explicit)]
@@ -524,38 +553,6 @@ namespace Burst.Compiler.IL.Tests
         {
 
             return UnsafeUtility.SizeOf<NestedExplicit0>();
-        }
-
-        [StructLayout(LayoutKind.Explicit)]
-        public struct ExplicitStrictWithEmptySequentialFields
-        {
-            [FieldOffset(0)]
-            public SequentialStructEmptyNoAttributes FieldA;
-
-            [FieldOffset(0)]
-            public SequentialStructEmptyNoAttributes FieldB;
-        }
-
-        [TestCompiler]
-        public static unsafe int TestExplicitStrictWithEmptySequentialFields()
-        {
-            return UnsafeUtility.SizeOf<ExplicitStrictWithEmptySequentialFields>();
-        }
-
-        [StructLayout(LayoutKind.Explicit)]
-        public struct ExplicitStrictWithEmptyAndNonEmptySequentialFields
-        {
-            [FieldOffset(0)]
-            public SequentialStructEmptyNoAttributes FieldA;
-
-            [FieldOffset(0)]
-            public SequentialStructWithoutSize FieldB;
-        }
-
-        [TestCompiler]
-        public static unsafe int TestExplicitStrictWithEmptyAndNonEmptySequentialFields()
-        {
-            return UnsafeUtility.SizeOf<ExplicitStrictWithEmptyAndNonEmptySequentialFields>();
         }
 
         [TestCompiler]
@@ -1643,6 +1640,126 @@ namespace Burst.Compiler.IL.Tests
         public static unsafe int TestExplicitSizesMatch()
         {
             return sizeof(ExplicitSizesMatch);
+        }
+
+#if BURST_TESTS_ONLY
+        private struct ExplicitLayoutAndBoolStruct
+        {
+            [StructLayout(LayoutKind.Explicit)]
+            public struct ExplicitLayoutStruct
+            {
+                [FieldOffset(0)]
+                public byte Byte;
+            }
+
+            // Having `bool` AND a field whose type is an explicit-layout struct
+            // causes .NET to fallback to auto-layout for the containing struct.
+            public bool Bool;
+            public ExplicitLayoutStruct ExplicitLayout;
+            public long Int64;
+        }
+
+        // This test just exists to verify that .NET does indeed do the fallback
+        // to auto-layout that we expect it does, since this is the underlying
+        // reason for us to prevent the combination of
+        // "bool + explicit-layout struct".
+        [Test]
+        [RestrictPlatform(".NET falls back to auto-layout for this struct, but Mono doesn't", Platform.Windows)]
+        public static unsafe void TestExplicitLayoutAndBoolCausesDotNetToFallbackToAutoLayout()
+        {
+            var s = new ExplicitLayoutAndBoolStruct();
+
+            var offsetStart = (IntPtr)(&s);
+            var offsetField = (IntPtr)(&s.Int64);
+
+            var offset = offsetField.ToInt64() - offsetStart.ToInt64();
+
+            // We would expect the offset to the `Int64` field to be 8.
+            // But because .NET falls back to auto-layout,
+            // and places the `Int64` field first,
+            // the offset is actually 0.
+            Assert.AreEqual((long)0, offset);
+        }
+
+        [TestCompiler(EnableAutoLayoutFallbackCheck = true, ExpectCompilerException = true, ExpectedDiagnosticId = DiagnosticId.ERR_NonBlittableAndNonManagedSequentialStructNotSupported)]
+        public static long TestExplicitLayoutAndBoolIsNotSupported()
+        {
+            return new ExplicitLayoutAndBoolStruct { Int64 = 8 }.Int64;
+        }
+
+        private struct ExplicitLayoutNestedAndBoolStruct
+        {
+            public struct SequentialLayoutStruct
+            {
+#pragma warning disable 0649
+                public ExplicitLayoutStruct ExplicitLayout;
+#pragma warning restore 0649
+            }
+
+            [StructLayout(LayoutKind.Explicit)]
+            public struct ExplicitLayoutStruct
+            {
+                [FieldOffset(0)]
+                public byte Byte;
+            }
+
+#pragma warning disable 0649
+            public bool Bool;
+            public SequentialLayoutStruct SequentialLayout;
+#pragma warning restore 0649
+            public long Int64;
+        }
+
+        [TestCompiler(EnableAutoLayoutFallbackCheck = true, ExpectCompilerException = true, ExpectedDiagnosticId = DiagnosticId.ERR_NonBlittableAndNonManagedSequentialStructNotSupported)]
+        public static long TestExplicitLayoutNestedAndBoolIsNotSupported()
+        {
+            return new ExplicitLayoutNestedAndBoolStruct { Int64 = 8 }.Int64;
+        }
+
+        private struct ExplicitLayoutStructAndBoolWithMarshalAs
+        {
+            [StructLayout(LayoutKind.Explicit)]
+            public struct ExplicitLayoutStruct
+            {
+                [FieldOffset(0)]
+                public byte Byte;
+            }
+
+#pragma warning disable 0649
+            [MarshalAs(UnmanagedType.U1)]
+            public bool Bool;
+            public ExplicitLayoutStruct ExplicitLayout;
+#pragma warning restore 0649
+            public long Int64;
+        }
+
+        [TestCompiler(EnableAutoLayoutFallbackCheck = true, ExpectCompilerException = true, ExpectedDiagnosticId = DiagnosticId.ERR_NonBlittableAndNonManagedSequentialStructNotSupported)]
+        public static unsafe long TestExplicitLayoutAndBoolWithMarshalAsIsNotSupported()
+        {
+            return new ExplicitLayoutStructAndBoolWithMarshalAs { Int64 = 8 }.Int64;
+        }
+#endif
+
+        private struct SequentialLayoutAndBoolStruct
+        {
+            public struct SequentialLayoutStruct
+            {
+#pragma warning disable 0649
+                public byte Byte;
+#pragma warning restore 0649
+            }
+
+#pragma warning disable 0649
+            public bool Bool;
+            public SequentialLayoutStruct SequentialLayout;
+#pragma warning restore 0649
+            public long Int64;
+        }
+
+        [TestCompiler]
+        public static unsafe long TestSequentialLayoutAndBoolIsSupported()
+        {
+            return new SequentialLayoutAndBoolStruct { Int64 = 8 }.Int64;
         }
     }
 }

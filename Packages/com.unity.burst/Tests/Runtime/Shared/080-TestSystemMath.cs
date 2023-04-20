@@ -1,6 +1,5 @@
 using System;
 using Burst.Compiler.IL.Tests.Helpers;
-using Unity.Burst;
 
 namespace Burst.Compiler.IL.Tests
 {
@@ -9,8 +8,6 @@ namespace Burst.Compiler.IL.Tests
     /// </summary>
     internal class TestSystemMath
     {
-        // TODO: Make all these tests args more automatic and shared with ranges, inf, nan...etc.
-
         [TestCompiler(DataRange.Standard)]
         public static double TestCos(float value)
         {

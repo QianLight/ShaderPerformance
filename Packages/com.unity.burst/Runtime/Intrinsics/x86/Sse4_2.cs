@@ -276,7 +276,7 @@ namespace Unity.Burst.Intrinsics
                                 else if (aInvalid && bInvalid)
                                     match = true;
                                 break;
-                            case 3:  // equal ordered
+                            default:  // equal ordered
                                 match = EqualityComparer<T>.Default.Equals(aCh, bCh);
                                 if (!aInvalid && bInvalid)
                                     match = false;
@@ -285,8 +285,6 @@ namespace Unity.Burst.Intrinsics
                                 else if (aInvalid && bInvalid)
                                     match = true;
                                 break;
-                            default:
-                                throw new InvalidOperationException("bad mode");
                         }
 
                         boolRes.SetBit(i, j, match);
@@ -635,10 +633,9 @@ namespace Unity.Burst.Intrinsics
             [DebuggerStepThrough]
             public static int cmpestrs(v128 a, int la, v128 b, int lb, int imm8)
             {
-                if ((imm8 & 1 << 0) == 0)
-                    return la < 16 ? 1 : 0;
-                else
-                    return la < 8 ? 1 : 0;
+                int size = (imm8 & 1) == 1 ? 16 : 8;
+                int upperBound = (128 / size) - 1;
+                return la <= upperBound ? 1 : 0;
             }
 
             /// <summary>
@@ -789,10 +786,23 @@ namespace Unity.Burst.Intrinsics
             /// Starting with the initial value in crc, accumulates a CRC32 value for unsigned 64-bit integer v, and stores the result in dst.
             /// </summary>
 			/// <param name="crc_ul">Initial value</param>
+			/// <param name="v">Signed 64-bit integer</param>
+			/// <returns>Result</returns>
+            [DebuggerStepThrough]
+            [Obsolete("Use the ulong version of this intrinsic instead.")]
+            public static ulong crc32_u64(ulong crc_ul, long v)
+            {
+                return crc32_u64(crc_ul, (ulong)v);
+            }
+
+            /// <summary>
+            /// Starting with the initial value in crc, accumulates a CRC32 value for unsigned 64-bit integer v, and stores the result in dst.
+            /// </summary>
+			/// <param name="crc_ul">Initial value</param>
 			/// <param name="v">Unsigned 64-bit integer</param>
 			/// <returns>Result</returns>
             [DebuggerStepThrough]
-            public static ulong crc32_u64(ulong crc_ul, long v)
+            public static ulong crc32_u64(ulong crc_ul, ulong v)
             {
                 uint crc = (uint)crc_ul;
 

@@ -230,44 +230,26 @@ namespace Unity.Burst.Intrinsics
 #endif
 
 #if !BURST_INTERNAL && !UNITY_DOTSPLAYER
-        private static void BurstIntrinsicSetCSRFromManaged(int bits) { }
-        private static int BurstIntrinsicGetCSRFromManaged() { return 0;  }
+        private static void BurstIntrinsicSetCSRFromManaged(int _) { }
+        private static int BurstIntrinsicGetCSRFromManaged() { return 0; }
 
-        internal delegate void SetCSRDelegate(int bits);
-        internal delegate int GetCSRDelegate();
+        internal static int getcsr_raw() => DoGetCSRTrampoline();
 
-        private static GetCSRDelegate ManagedGetCSRTrampoline;
-        private static SetCSRDelegate ManagedSetCSRTrampoline;
-
-        internal static void CompileManagedCsrAccessors()
-        {
-            // Force burst compilation at startup or job threads will blow up
-            ManagedGetCSRTrampoline = BurstCompiler.CompileFunctionPointer<GetCSRDelegate>(DoGetCSRTrampoline).Invoke;
-            ManagedSetCSRTrampoline = BurstCompiler.CompileFunctionPointer<SetCSRDelegate>(DoSetCSRTrampoline).Invoke;
-        }
-
-        internal static int getcsr_raw()
-        {
-            return ManagedGetCSRTrampoline();
-        }
-
-        internal static void setcsr_raw(int bits)
-        {
-            ManagedSetCSRTrampoline(bits);
-        }
+        internal static void setcsr_raw(int bits) => DoSetCSRTrampoline(bits);
 
         [BurstCompile(CompileSynchronously = true)]
-        [MonoPInvokeCallback(typeof(SetCSRDelegate))]
         private static void DoSetCSRTrampoline(int bits)
         {
-            BurstIntrinsicSetCSRFromManaged(bits);
+            if (Sse.IsSseSupported)
+                BurstIntrinsicSetCSRFromManaged(bits);
         }
 
         [BurstCompile(CompileSynchronously = true)]
-        [MonoPInvokeCallback(typeof(GetCSRDelegate))]
         private static int DoGetCSRTrampoline()
         {
-            return BurstIntrinsicGetCSRFromManaged();
+            if (Sse.IsSseSupported)
+                return BurstIntrinsicGetCSRFromManaged();
+            return 0;
         }
 
 #elif BURST_INTERNAL
@@ -284,10 +266,12 @@ namespace Unity.Burst.Intrinsics
         /// </summary>
         public static MXCSRBits MXCSR
         {
+            [BurstTargetCpu(BurstTargetCpu.X64_SSE2)]
             get
             {
                 return (MXCSRBits)getcsr_raw();
             }
+            [BurstTargetCpu(BurstTargetCpu.X64_SSE2)]
             set
             {
                 setcsr_raw((int)value);

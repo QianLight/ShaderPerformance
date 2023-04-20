@@ -1,7 +1,4 @@
 using System;
-using NUnit.Framework;
-using NUnit.Framework.Interfaces;
-using NUnit.Framework.Internal;
 
 namespace Burst.Compiler.IL.Tests
 {
@@ -11,20 +8,13 @@ namespace Burst.Compiler.IL.Tests
 #else
     internal
 #endif
-    class MonoOnlyAttribute : IgnoreAttribute, IApplyToTest
+    class MonoOnlyAttribute : Attribute
     {
 #pragma warning disable CS0414
-        public MonoOnlyAttribute(string reason) : base(reason)
+        public MonoOnlyAttribute(string reason)
         {
         }
 #pragma warning restore CS0414
 
-        void IApplyToTest.ApplyToTest(Test test)
-        {
-            if (Type.GetType("Mono.Runtime") == null)
-            {
-                base.ApplyToTest(test);
-            }
-        }
     }
 }

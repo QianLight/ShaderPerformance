@@ -668,22 +668,35 @@ namespace Burst.Compiler.IL.Tests
             Case3,
         }
 
-        [TestCompiler(ExpectedException = typeof(InvalidOperationException))]
+        [TestCompiler(long.MaxValue)]
+        [TestCompiler(long.MinValue)]
+        [TestCompiler(0)]
+        public static byte SwitchExpression(long a)
+        {
+            return a switch
+            {
+                long.MaxValue => 1,
+                long.MinValue => 2,
+                _ => 0,
+            };
+        }
+
+        [TestCompiler(ExpectedException = typeof(InvalidOperationException), ExpectedDiagnosticId = DiagnosticId.WRN_ExceptionThrownInNonSafetyCheckGuardedFunction)]
         [MonoOnly(".NET CLR does not support burst.abort correctly")]
         public static int ExceptionReachedReturn()
         {
             throw new InvalidOperationException("This is bad 1");
         }
 
-        [TestCompiler(ExpectedException = typeof(InvalidOperationException))]
+        [TestCompiler(ExpectedException = typeof(InvalidOperationException), ExpectedDiagnosticId = DiagnosticId.WRN_ExceptionThrownInNonSafetyCheckGuardedFunction)]
         [MonoOnly(".NET CLR does not support burst.abort correctly")]
         public static void ExceptionReached()
         {
             throw new InvalidOperationException("This is bad 2");
         }
 
-        [TestCompiler(1)]
-        [TestCompiler(2)]
+        [TestCompiler(1, ExpectedDiagnosticId = DiagnosticId.WRN_ExceptionThrownInNonSafetyCheckGuardedFunction)]
+        [TestCompiler(2, ExpectedDiagnosticId = DiagnosticId.WRN_ExceptionThrownInNonSafetyCheckGuardedFunction)]
         public static void ExceptionNotReached(int a)
         {
             if (a > 10)
@@ -692,8 +705,8 @@ namespace Burst.Compiler.IL.Tests
             }
         }
 
-        [TestCompiler(1)]
-        [TestCompiler(2)]
+        [TestCompiler(1, ExpectedDiagnosticId = DiagnosticId.WRN_ExceptionThrownInNonSafetyCheckGuardedFunction)]
+        [TestCompiler(2, ExpectedDiagnosticId = DiagnosticId.WRN_ExceptionThrownInNonSafetyCheckGuardedFunction)]
         public static void ExceptionMultipleNotReached(int a)
         {
             if (a > 10)
@@ -716,8 +729,31 @@ namespace Burst.Compiler.IL.Tests
             }
         }
 
+        private struct SmallStruct
+        {
+            public int I;
+            public float F;
+        }
 
-        [TestCompiler(1)]
+        private static SmallStruct UnreachedException(bool b)
+        {
+            if (b)
+            {
+                throw new Exception("Never here!");
+            }
+
+            return new SmallStruct { I = 42, F = 42.0f };
+        }
+
+        [TestCompiler(0, ExpectedDiagnosticId = DiagnosticId.WRN_ExceptionThrownInNonSafetyCheckGuardedFunction)]
+        public static double UnreachedExceptionInCalledFunction(int a)
+        {
+            var result = UnreachedException(a != 0);
+
+            return result.I + result.F;
+        }
+
+        [TestCompiler(1, ExpectedDiagnosticId = DiagnosticId.WRN_ExceptionThrownInNonSafetyCheckGuardedFunction)]
         public static int ExceptionNotReachedReturn(int a)
         {
             int b = a;
@@ -729,8 +765,9 @@ namespace Burst.Compiler.IL.Tests
             return b;
         }
 
-        [TestCompiler(13)]
-        [TestCompiler(1)]
+
+        [TestCompiler(13, ExpectedDiagnosticId = DiagnosticId.WRN_ExceptionThrownInNonSafetyCheckGuardedFunction)]
+        [TestCompiler(1, ExpectedDiagnosticId = DiagnosticId.WRN_ExceptionThrownInNonSafetyCheckGuardedFunction)]
         public static int ExceptionMultipleNotReachedReturn(int a)
         {
             if (a > 10)

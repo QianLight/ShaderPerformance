@@ -13,7 +13,6 @@ namespace Burst.Compiler.IL.Tests
 {
     internal class Pointers
     {
-#if UNITY_2019_1_OR_NEWER
         [TestCompiler(1)]
         [TestCompiler(4)]
         [TestCompiler(5)]
@@ -41,7 +40,6 @@ namespace Burst.Compiler.IL.Tests
                 }
             }
         }
-#endif
 
         [TestCompiler(0, MyCastEnum.Value2)]
         [TestCompiler(1, MyCastEnum.Value0)]
@@ -180,14 +178,14 @@ namespace Burst.Compiler.IL.Tests
             return new IntPtr(a).ToInt64();
         }
 
-        [TestCompiler]
+        [TestCompiler(OverrideOn32BitNative = 4)]
         public static int IntPtrSize()
         {
             return IntPtr.Size;
         }
 
         // asserted in IntPtrProcessor
-        [TestCompiler]
+        [TestCompiler(OverrideOn32BitNative = true)]
         public static bool IntPtrSizeCompared()
         {
             return IntPtr.Size == 4;
@@ -543,7 +541,7 @@ namespace Burst.Compiler.IL.Tests
         }
 
 
-        [TestCompiler]
+        [TestCompiler(ExpectedDiagnosticId = DiagnosticId.WRN_ExceptionThrownInNonSafetyCheckGuardedFunction)]
         public static void TestBlobAssetReferenceData()
         {
             var blob = new BlobAssetReferenceData(IntPtr.Zero);
@@ -701,6 +699,230 @@ namespace Burst.Compiler.IL.Tests
             if (sizeof(int*) == 4)
                 return (Int64)(UInt32)(job.pointers[40]);   // Workaround IL2CPP 32bit Bug : https://fogbugz.unity3d.com/f/cases/1254635/
             return (Int64)job.pointers[40];
+        }
+
+        private struct TestData
+        {
+            public int3 Min;
+            public int Size;
+        }
+
+        [TestCompiler]
+        public static unsafe int TestPointerWithIn()
+        {
+            var foo = stackalloc TestData[1];
+
+            *foo = new TestData { Min = new int3(0, 1, 2), Size = 3 };
+
+            return SubFunctionWithInPointer(in foo);
+        }
+
+        private static unsafe int SubFunctionWithInPointer(in TestData* node)
+        {
+            int3 data = node->Min;
+
+            return node->Size + data.x + data.y + data.z;
+        }
+
+        [TestCompiler]
+        public static unsafe int TestSystemBufferMemoryCopy()
+        {
+            var a = stackalloc int[2];
+            a[0] = 42;
+            System.Buffer.MemoryCopy(a + 0, a + 1, UnsafeUtility.SizeOf<int>(), UnsafeUtility.SizeOf<int>());
+            return a[1];
+        }
+
+        [TestCompiler(0ul, byte.MinValue)]
+        [TestCompiler(0ul, byte.MaxValue)]
+        public static unsafe IntPtr PointerMathAddPNTypesByte(UInt64 p,byte a)
+        {
+            var pointer = (byte*)p;
+            return new IntPtr(pointer + a);   // Pointer LHS
+        }
+
+        [TestCompiler(0ul, byte.MinValue)]
+        [TestCompiler(0ul, byte.MaxValue)]
+        public static unsafe IntPtr PointerMathAddNPTypesByte(UInt64 p,byte a)
+        {
+            var pointer = (byte*)p;
+            return new IntPtr(a + pointer);   // Pointer RHS
+        }
+
+        [TestCompiler(0ul, byte.MinValue)]
+        [TestCompiler(0ul, byte.MaxValue)]
+        public static unsafe IntPtr PointerMathSubPNTypesByte(UInt64 p,byte a)
+        {
+            var pointer = (byte*)p;
+            return new IntPtr(pointer - a);   // Pointer LHS (no RHS since not legal in C#)
+        }
+
+        [TestCompiler(0ul, sbyte.MinValue)]
+        [TestCompiler(0ul, sbyte.MaxValue)]
+        public static unsafe IntPtr PointerMathAddPNTypesSByte(UInt64 p,sbyte a)
+        {
+            var pointer = (sbyte*)p;
+            return new IntPtr(pointer + a);   // Pointer LHS
+        }
+
+        [TestCompiler(0ul, sbyte.MinValue)]
+        [TestCompiler(0ul, sbyte.MaxValue)]
+        public static unsafe IntPtr PointerMathAddNPTypesSByte(UInt64 p,sbyte a)
+        {
+            var pointer = (sbyte*)p;
+            return new IntPtr(a + pointer);   // Pointer RHS
+        }
+
+        [TestCompiler(0ul, sbyte.MinValue)]
+        [TestCompiler(0ul, sbyte.MaxValue)]
+        public static unsafe IntPtr PointerMathSubPNTypesSByte(UInt64 p,sbyte a)
+        {
+            var pointer = (sbyte*)p;
+            return new IntPtr(pointer - a);   // Pointer LHS (no RHS since not legal in C#)
+        }
+
+        [TestCompiler(0ul, short.MinValue)]
+        [TestCompiler(0ul, short.MaxValue)]
+        public static unsafe IntPtr PointerMathAddPNTypesShort(UInt64 p,short a)
+        {
+            var pointer = (short*)p;
+            return new IntPtr(pointer + a);   // Pointer LHS
+        }
+
+        [TestCompiler(0ul, short.MinValue)]
+        [TestCompiler(0ul, short.MaxValue)]
+        public static unsafe IntPtr PointerMathAddNPTypesShort(UInt64 p,short a)
+        {
+            var pointer = (short*)p;
+            return new IntPtr(a + pointer);   // Pointer RHS
+        }
+
+        [TestCompiler(0ul, short.MinValue)]
+        [TestCompiler(0ul, short.MaxValue)]
+        public static unsafe IntPtr PointerMathSubPNTypesShort(UInt64 p,short a)
+        {
+            var pointer = (short*)p;
+            return new IntPtr(pointer - a);   // Pointer LHS (no RHS since not legal in C#)
+        }
+
+        [TestCompiler(0ul, ushort.MinValue)]
+        [TestCompiler(0ul, ushort.MaxValue)]
+        public static unsafe IntPtr PointerMathAddPNTypesUShort(UInt64 p,ushort a)
+        {
+            var pointer = (ushort*)p;
+            return new IntPtr(pointer + a);   // Pointer LHS
+        }
+
+        [TestCompiler(0ul, ushort.MinValue)]
+        [TestCompiler(0ul, ushort.MaxValue)]
+        public static unsafe IntPtr PointerMathAddNPTypesUShort(UInt64 p,ushort a)
+        {
+            var pointer = (ushort*)p;
+            return new IntPtr(a + pointer);   // Pointer RHS
+        }
+
+        [TestCompiler(0ul, ushort.MinValue)]
+        [TestCompiler(0ul, ushort.MaxValue)]
+        public static unsafe IntPtr PointerMathSubPNTypesUShort(UInt64 p,ushort a)
+        {
+            var pointer = (ushort*)p;
+            return new IntPtr(pointer - a);   // Pointer LHS (no RHS since not legal in C#)
+        }
+
+        [TestCompiler(0ul, int.MinValue)]
+        [TestCompiler(0ul, int.MaxValue)]
+        public static unsafe IntPtr PointerMathAddPNTypesInt(UInt64 p,int a)
+        {
+            var pointer = (int*)p;
+            return new IntPtr(pointer + a);   // Pointer LHS
+        }
+
+        [TestCompiler(0ul, int.MinValue)]
+        [TestCompiler(0ul, int.MaxValue)]
+        public static unsafe IntPtr PointerMathAddNPTypesInt(UInt64 p,int a)
+        {
+            var pointer = (int*)p;
+            return new IntPtr(a + pointer);   // Pointer RHS
+        }
+
+        [TestCompiler(0ul, int.MinValue)]
+        [TestCompiler(0ul, int.MaxValue)]
+        public static unsafe IntPtr PointerMathSubPNTypesInt(UInt64 p,int a)
+        {
+            var pointer = (int*)p;
+            return new IntPtr(pointer - a);   // Pointer LHS (no RHS since not legal in C#)
+        }
+
+        [TestCompiler(0ul, uint.MinValue)]
+        [TestCompiler(0ul, uint.MaxValue)]
+        public static unsafe IntPtr PointerMathAddPNTypesUInt(UInt64 p,uint a)
+        {
+            var pointer = (uint*)p;
+            return new IntPtr(pointer + a);   // Pointer LHS
+        }
+
+        [TestCompiler(0ul, uint.MinValue)]
+        [TestCompiler(0ul, uint.MaxValue)]
+        public static unsafe IntPtr PointerMathAddNPTypesUInt(UInt64 p,uint a)
+        {
+            var pointer = (uint*)p;
+            return new IntPtr(a + pointer);   // Pointer RHS
+        }
+
+        [TestCompiler(0ul, uint.MinValue)]
+        [TestCompiler(0ul, uint.MaxValue)]
+        public static unsafe IntPtr PointerMathSubPNTypesUInt(UInt64 p,uint a)
+        {
+            var pointer = (uint*)p;
+            return new IntPtr(pointer - a);   // Pointer LHS (no RHS since not legal in C#)
+        }
+
+        [TestCompiler(0ul, long.MinValue)]
+        [TestCompiler(0ul, long.MaxValue)]
+        public static unsafe IntPtr PolongerMathAddPNTypesLong(UInt64 p,long a)
+        {
+            var polonger = (long*)p;
+            return new IntPtr(polonger + a);   // Polonger LHS
+        }
+
+        [TestCompiler(0ul, long.MinValue)]
+        [TestCompiler(0ul, long.MaxValue)]
+        public static unsafe IntPtr PolongerMathAddNPTypesLong(UInt64 p,long a)
+        {
+            var polonger = (long*)p;
+            return new IntPtr(a + polonger);   // Polonger RHS
+        }
+
+        [TestCompiler(0ul, long.MinValue)]
+        [TestCompiler(0ul, long.MaxValue)]
+        public static unsafe IntPtr PolongerMathSubPNTypesLong(UInt64 p,long a)
+        {
+            var polonger = (long*)p;
+            return new IntPtr(polonger - a);   // Polonger LHS (no RHS since not legal in C#)
+        }
+
+        [TestCompiler(0ul, ulong.MinValue)]
+        [TestCompiler(0ul, ulong.MaxValue)]
+        public static unsafe IntPtr PolongerMathAddPNTypesULong(UInt64 p,ulong a)
+        {
+            var polonger = (ulong*)p;
+            return new IntPtr(polonger + a);   // Polonger LHS
+        }
+
+        [TestCompiler(0ul, ulong.MinValue)]
+        [TestCompiler(0ul, ulong.MaxValue)]
+        public static unsafe IntPtr PolongerMathAddNPTypesULong(UInt64 p,ulong a)
+        {
+            var polonger = (ulong*)p;
+            return new IntPtr(a + polonger);   // Polonger RHS
+        }
+
+        [TestCompiler(0ul, ulong.MinValue)]
+        [TestCompiler(0ul, ulong.MaxValue)]
+        public static unsafe IntPtr PolongerMathSubPNTypesULong(UInt64 p,ulong a)
+        {
+            var polonger = (ulong*)p;
+            return new IntPtr(polonger - a);   // Polonger LHS (no RHS since not legal in C#)
         }
     }
 }

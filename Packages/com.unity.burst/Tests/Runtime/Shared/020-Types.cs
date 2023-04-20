@@ -1,10 +1,18 @@
 using System;
-using System.IO;
-using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using Unity.Collections.LowLevel.Unsafe;
-using NUnit.Framework;
 using Unity.Burst;
+using UnityBenchShared;
+using System.Runtime.CompilerServices;
+
+#if UNITY_2022_1_OR_NEWER
+// Enables support for { init; } keyword globally: https://docs.unity3d.com/2022.1/Documentation/Manual/CSharpCompiler.html
+namespace System.Runtime.CompilerServices
+{
+    [ComponentModel.EditorBrowsable(ComponentModel.EditorBrowsableState.Never)]
+    public static class IsExternalInit { }
+}
+#endif
 
 namespace Burst.Compiler.IL.Tests
 {
@@ -36,6 +44,89 @@ namespace Burst.Compiler.IL.Tests
         public static bool BoolArgAndReturnCall(bool value)
         {
             return BoolArgAndReturnSubFunction(value);
+        }
+
+        [MethodImpl(MethodImplOptions.NoInlining)]
+        [return: MarshalAs(UnmanagedType.U1)]
+        private static bool BoolMarshalAsU1(bool b) => b;
+
+        [TestCompiler(true)]
+        [TestCompiler(false)]
+        public static bool BoolMarshalAsU1Call(bool value)
+        {
+            return BoolMarshalAsU1(value);
+        }
+
+        [MethodImpl(MethodImplOptions.NoInlining)]
+        [return: MarshalAs(UnmanagedType.I1)]
+        private static bool BoolMarshalAsI1(bool b) => b;
+
+        [TestCompiler(true)]
+        [TestCompiler(false)]
+        public static bool BoolMarshalAsI1Call(bool value)
+        {
+            return BoolMarshalAsI1(value);
+        }
+
+        [MethodImpl(MethodImplOptions.NoInlining)]
+        [return: MarshalAs(UnmanagedType.R4)]
+        private static bool BoolMarshalAsR4(bool b) => b;
+
+        [TestCompiler(true, ExpectCompilerException = true, ExpectedDiagnosticId = DiagnosticId.ERR_MarshalAsNativeTypeOnReturnTypeNotSupported)]
+        public static bool BoolMarshalAsR4Call(bool value)
+        {
+            return BoolMarshalAsR4(value);
+        }
+
+        [MethodImpl(MethodImplOptions.NoInlining)]
+        private static bool BoolMarshalAsU1Param([MarshalAs(UnmanagedType.U1)] bool b) => b;
+
+        [TestCompiler(true)]
+        [TestCompiler(false)]
+        public static bool BoolMarshalAsU1CallParam(bool value)
+        {
+            return BoolMarshalAsU1Param(value);
+        }
+
+        [MethodImpl(MethodImplOptions.NoInlining)]
+        private static bool BoolMarshalAsI1Param([MarshalAs(UnmanagedType.I1)] bool b) => b;
+
+        [TestCompiler(true)]
+        [TestCompiler(false)]
+        public static bool BoolMarshalAsI1CallParam(bool value)
+        {
+            return BoolMarshalAsI1Param(value);
+        }
+
+        [MethodImpl(MethodImplOptions.NoInlining)]
+        private static bool BoolMarshalAsR4Param([MarshalAs(UnmanagedType.R4)] bool b) => b;
+
+        [TestCompiler(true, ExpectCompilerException = true, ExpectedDiagnosticId = DiagnosticId.ERR_MarshalAsOnParameterNotSupported)]
+        public static bool BoolMarshalAsR4CallParam(bool value)
+        {
+            return BoolMarshalAsR4Param(value);
+        }
+
+        [MethodImpl(MethodImplOptions.NoInlining)]
+        [return: MarshalAs(UnmanagedType.U1)]
+        private static bool BoolMarshalAsU1AndI1Param([MarshalAs(UnmanagedType.I1)] bool b) => b;
+
+        [TestCompiler(true)]
+        [TestCompiler(false)]
+        public static bool BoolMarshalAsU1AndI1CallParam(bool value)
+        {
+            return BoolMarshalAsU1AndI1Param(value);
+        }
+
+        [MethodImpl(MethodImplOptions.NoInlining)]
+        [return: MarshalAs(UnmanagedType.I1)]
+        private static bool BoolMarshalAsI1AndU1Param([MarshalAs(UnmanagedType.U1)] bool b) => b;
+
+        [TestCompiler(true)]
+        [TestCompiler(false)]
+        public static bool BoolMarshalAsI1AndU1CallParam(bool value)
+        {
+            return BoolMarshalAsI1AndU1Param(value);
         }
 
         [TestCompiler]
@@ -148,13 +239,7 @@ namespace Burst.Compiler.IL.Tests
             return b.b1;
         }
 
-        [TestCompiler(ExpectCompilerException = true, ExpectedDiagnosticId = DiagnosticId.ERR_StructWithPackNotSupported)]
-        public static int CheckStructWithPack()
-        {
-            return UnsafeUtility.SizeOf<StructWithPack>();
-        }
-
-        [TestCompiler(ExpectCompilerException = true, ExpectedDiagnosticId = DiagnosticId.ERR_InstructionLdstrNotSupported)]
+        [TestCompiler(ExpectCompilerException = true, ExpectedDiagnosticId = DiagnosticId.ERR_CallingManagedMethodNotSupported)]
         public static int TestUsingReferenceType()
         {
             return "this is not supported by burst".Length;
@@ -220,14 +305,6 @@ namespace Burst.Compiler.IL.Tests
             public int FieldB;
         }
 
-        [StructLayout(LayoutKind.Sequential, Pack = 8)]
-        private struct StructWithPack
-        {
-            public int FieldA;
-
-            public int FieldB;
-        }
-
         [StructLayout(LayoutKind.Sequential, Size = 1024)]
         private struct StructWithSize
         {
@@ -246,5 +323,220 @@ namespace Burst.Compiler.IL.Tests
 
             Tada2 = 2
         }
+
+        private static ValueTuple<int> ReturnValueTuple1() => ValueTuple.Create(42);
+
+        [TestCompiler]
+        public static long TestValueTuple1Return()
+        {
+            var tuple = ReturnValueTuple1();
+
+            return tuple.Item1;
+        }
+
+        private static (int, uint) ReturnValueTuple2() => (42, 13);
+
+        [TestCompiler]
+        public static long TestValueTuple2Return()
+        {
+            var tuple = ReturnValueTuple2();
+
+            return tuple.Item1 + tuple.Item2;
+        }
+
+        private static (int, uint, byte) ReturnValueTuple3() => (42, 13, 13);
+
+        [TestCompiler]
+        public static long TestValueTuple3Return()
+        {
+            var tuple = ReturnValueTuple3();
+
+            return tuple.Item1 + tuple.Item2 + tuple.Item3;
+        }
+
+        private static (int, uint, byte, sbyte) ReturnValueTuple4() => (42, 13, 13, -13);
+
+        [TestCompiler]
+        public static long TestValueTuple4Return()
+        {
+            var tuple = ReturnValueTuple4();
+
+            return tuple.Item1 + tuple.Item2 + tuple.Item3 + tuple.Item4;
+        }
+
+        private static (int, uint, byte, sbyte, long) ReturnValueTuple5() => (42, 13, 13, -13, 53);
+
+        [TestCompiler]
+        public static long TestValueTuple5Return()
+        {
+            var tuple = ReturnValueTuple5();
+
+            return tuple.Item1 + tuple.Item2 + tuple.Item3 + tuple.Item4 + tuple.Item5;
+        }
+
+        private struct SomeStruct
+        {
+            public int X;
+        }
+
+        private static (int, uint, byte, sbyte, long, SomeStruct) ReturnValueTuple6() => (42, 13, 13, -13, 535353, new SomeStruct { X = 42 } );
+
+        [TestCompiler]
+        public static long TestValueTuple6Return()
+        {
+            var tuple = ReturnValueTuple6();
+
+            return tuple.Item1 + tuple.Item2 + tuple.Item3 + tuple.Item4 + tuple.Item5 + tuple.Item6.X;
+        }
+
+        private static (int, uint, byte, sbyte, long, SomeStruct, short) ReturnValueTuple7() => (42, 13, 13, -13, 535353, new SomeStruct { X = 42 }, 400);
+
+        [TestCompiler]
+        public static long TestValueTuple7Return()
+        {
+            var tuple = ReturnValueTuple7();
+
+            return tuple.Item1 + tuple.Item2 + tuple.Item3 + tuple.Item4 + tuple.Item5 + tuple.Item6.X + tuple.Item7;
+        }
+
+        private static (int, uint, byte, sbyte, long, SomeStruct, short, int) ReturnValueTuple8() => (42, 13, 13, -13, 535353, new SomeStruct { X = 42 }, 400, -400);
+
+        [TestCompiler]
+        public static long TestValueTuple8Return()
+        {
+            var tuple = ReturnValueTuple8();
+
+            return tuple.Item1 + tuple.Item2 + tuple.Item3 + tuple.Item4 + tuple.Item5 + tuple.Item6.X + tuple.Item7 + tuple.Item8;
+        }
+
+        private static (int, uint, byte, sbyte, long, SomeStruct, short, int, long) ReturnValueTuple9() => (42, 13, 13, -13, 535353, new SomeStruct { X = 42 }, 400, -400, 48);
+
+        [TestCompiler]
+        public static long TestValueTuple9Return()
+        {
+            var tuple = ReturnValueTuple9();
+
+            return tuple.Item1 + tuple.Item2 + tuple.Item3 + tuple.Item4 + tuple.Item5 + tuple.Item6.X + tuple.Item7 + tuple.Item8 + tuple.Item9;
+        }
+
+        private static long ValueTuple1Arg(ValueTuple<int> tuple)
+        {
+            return tuple.Item1;
+        }
+
+        [TestCompiler]
+        public static long TestValueTuple1Arg()
+        {
+            return ValueTuple1Arg(ValueTuple.Create(42));
+        }
+
+        private static long ValueTuple2Arg((int, uint) tuple)
+        {
+            return tuple.Item1 + tuple.Item2;
+        }
+
+        [TestCompiler]
+        public static long TestValueTuple2Arg()
+        {
+            return ValueTuple2Arg((42, 13));
+        }
+
+        private static long ValueTuple3Arg((int, uint, byte) tuple)
+        {
+            return tuple.Item1 + tuple.Item2 + tuple.Item3;
+        }
+
+        [TestCompiler]
+        public static long TestValueTuple3Arg()
+        {
+            return ValueTuple3Arg((42, 13, 13));
+        }
+
+        private static long ValueTuple4Arg((int, uint, byte, sbyte) tuple)
+        {
+            return tuple.Item1 + tuple.Item2 + tuple.Item3 + tuple.Item4;
+        }
+
+        [TestCompiler]
+        public static long TestValueTuple4Arg()
+        {
+            return ValueTuple4Arg((42, 13, 13, -13));
+        }
+
+        private static long ValueTuple5Arg((int, uint, byte, sbyte, long) tuple)
+        {
+            return tuple.Item1 + tuple.Item2 + tuple.Item3 + tuple.Item4 + tuple.Item5;
+        }
+
+        [TestCompiler]
+        public static long TestValueTuple5Arg()
+        {
+            return ValueTuple5Arg((42, 13, 13, -13, 535353));
+        }
+
+        private static long ValueTuple6Arg((int, uint, byte, sbyte, long, SomeStruct) tuple)
+        {
+            return tuple.Item1 + tuple.Item2 + tuple.Item3 + tuple.Item4 + tuple.Item5 + tuple.Item6.X;
+        }
+
+        [TestCompiler]
+        public static long TestValueTuple6Arg()
+        {
+            return ValueTuple6Arg((42, 13, 13, -13, 535353, new SomeStruct { X = 42 }));
+        }
+
+        private static long ValueTuple7Arg((int, uint, byte, sbyte, long, SomeStruct, short) tuple)
+        {
+            return tuple.Item1 + tuple.Item2 + tuple.Item3 + tuple.Item4 + tuple.Item5 + tuple.Item6.X + tuple.Item7;
+        }
+
+        [TestCompiler]
+        public static long TestValueTuple7Arg()
+        {
+            return ValueTuple7Arg((42, 13, 13, -13, 535353, new SomeStruct { X = 42 }, 400));
+        }
+
+        private static long ValueTuple8Arg((int, uint, byte, sbyte, long, SomeStruct, short, int) tuple)
+        {
+            return tuple.Item1 + tuple.Item2 + tuple.Item3 + tuple.Item4 + tuple.Item5 + tuple.Item6.X + tuple.Item7 + tuple.Item8;
+        }
+
+        [TestCompiler]
+        public static long TestValueTuple8Arg()
+        {
+            return ValueTuple8Arg((42, 13, 13, -13, 535353, new SomeStruct { X = 42 }, 400, -400));
+        }
+
+        private static long ValueTuple9Arg((int, uint, byte, sbyte, long, SomeStruct, short, int, long) tuple)
+        {
+            return tuple.Item1 + tuple.Item2 + tuple.Item3 + tuple.Item4 + tuple.Item5 + tuple.Item6.X + tuple.Item7 + tuple.Item8 + tuple.Item9;
+        }
+
+        [TestCompiler]
+        public static long TestValueTuple9Arg()
+        {
+            return ValueTuple9Arg((42, 13, 13, -13, 535353, new SomeStruct { X = 42 }, 400, -400, 48));
+        }
+
+        // This needs to be here because the static delegate registry refers to it.
+        public struct SomeStructWithValueTuple
+        {
+            public ValueTuple<int, float> X;
+
+            public struct Provider : IArgumentProvider
+            {
+                public object Value => new SomeStructWithValueTuple { X = (42, 42.0f) };
+            }
+        }
+
+#if UNITY_2022_1_OR_NEWER
+        public readonly struct InitOnly
+        {
+            public readonly float Value { get; init; }
+        }
+
+        [TestCompiler]
+        public static float TestInitOnly() => new InitOnly { Value = default }.Value;
+#endif
     }
 }

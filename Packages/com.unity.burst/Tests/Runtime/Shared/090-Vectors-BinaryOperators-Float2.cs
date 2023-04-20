@@ -4,7 +4,7 @@ using Unity.Mathematics;
 
 namespace Burst.Compiler.IL.Tests
 {
-    internal class VectorsBinOpFloat2
+    internal partial class VectorsBinOpFloat2
     {
         [TestCompiler]
         public static float Add()
@@ -139,6 +139,39 @@ namespace Burst.Compiler.IL.Tests
         public static float DivByArgs(ref float2 left, ref float2 right)
         {
             var result = left / right;
+            return Vectors.ConvertToFloat(result);
+        }
+        [TestCompiler]
+        public static float Mod()
+        {
+            var left = new float2(1.0f, 2.0f);
+            var right = new float2(2.0f, 1.0f);
+            var result = left % right;
+            return Vectors.ConvertToFloat(result);
+        }
+
+        [TestCompiler]
+        public static float ModFloatLeft()
+        {
+            var left = 15.0f;
+            var right = new float2(2.0f, 1.0f);
+            var result = left % right;
+            return Vectors.ConvertToFloat(result);
+        }
+
+        [TestCompiler]
+        public static float ModFloatRight()
+        {
+            var left = new float2(2.0f, 1.0f);
+            var right = 15.0f;
+            var result = left % right;
+            return Vectors.ConvertToFloat(result);
+        }
+
+        [TestCompiler(DataRange.Standard, DataRange.Standard)]
+        public static float ModByArgs(ref float2 left, ref float2 right)
+        {
+            var result = left % right;
             return Vectors.ConvertToFloat(result);
         }
 

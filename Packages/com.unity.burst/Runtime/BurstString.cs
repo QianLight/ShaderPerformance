@@ -14,6 +14,33 @@ namespace Unity.Burst
     internal static partial class BurstString
 #endif
     {
+        // Prevent Format from being stripped, otherwise, the string format transform passes will fail, and code that was compileable
+        //before stripping, will no longer compile. 
+        internal class PreserveAttribute : System.Attribute {}
+        /// <summary>
+        /// Copies a Burst managed UTF8 string prefixed by a ushort length to a FixedString with the specified maximum length.
+        /// </summary>
+        /// <param name="dest">Pointer to the fixed string.</param>
+        /// <param name="destLength">Maximum number of UTF8 the fixed string supports without including the zero character.</param>
+        /// <param name="src">The UTF8 Burst managed string prefixed by a ushort length and zero terminated.
+        /// <param name="srcLength">Number of UTF8 the fixed string supports without including the zero character.</param>
+        /// </param>
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        [Preserve]
+        public static unsafe void CopyFixedString(byte* dest, int destLength, byte* src, int srcLength)
+        {
+            // TODO: should we throw an exception instead if the string doesn't fit?
+            var finalLength = srcLength > destLength ? destLength : srcLength;
+            // Write the length and zero null terminated
+            *((ushort*)dest - 1) = (ushort)finalLength;
+            dest[finalLength] = 0;
+#if BURST_COMPILER_SHARED
+            Unsafe.CopyBlock(dest, src, (uint)finalLength);
+#else
+            UnsafeUtility.MemCpy(dest, src, finalLength);
+#endif
+        }
+
         /// <summary>
         /// Format a UTF-8 string (with a specified source length) to a destination buffer.
         /// </summary>
@@ -23,6 +50,7 @@ namespace Unity.Burst
         /// <param name="src">The source buffer of the string to copy from.</param>
         /// <param name="srcLength">The length of the string from the source buffer.</param>
         /// <param name="formatOptionsRaw">Formatting options encoded in raw format.</param>
+        [Preserve]
         public static unsafe void Format(byte* dest, ref int destIndex, int destLength, byte* src, int srcLength, int formatOptionsRaw)
         {
             var options = *(FormatOptions*)&formatOptionsRaw;
@@ -54,6 +82,7 @@ namespace Unity.Burst
         /// <param name="destLength">Maximum length of destination buffer.</param>
         /// <param name="value">The value to format.</param>
         /// <param name="formatOptionsRaw">Formatting options encoded in raw format.</param>
+        [Preserve]
         public static unsafe void Format(byte* dest, ref int destIndex, int destLength, float value, int formatOptionsRaw)
         {
             var options = *(FormatOptions*)&formatOptionsRaw;
@@ -68,6 +97,7 @@ namespace Unity.Burst
         /// <param name="destLength">Maximum length of destination buffer.</param>
         /// <param name="value">The value to format.</param>
         /// <param name="formatOptionsRaw">Formatting options encoded in raw format.</param>
+        [Preserve]
         public static unsafe void Format(byte* dest, ref int destIndex, int destLength, double value, int formatOptionsRaw)
         {
             var options = *(FormatOptions*)&formatOptionsRaw;
@@ -83,6 +113,7 @@ namespace Unity.Burst
         /// <param name="value">The value to format.</param>
         /// <param name="formatOptionsRaw">Formatting options encoded in raw format.</param>
         [MethodImpl(MethodImplOptions.NoInlining)]
+        [Preserve]
         public static unsafe void Format(byte* dest, ref int destIndex, int destLength, bool value, int formatOptionsRaw)
         {
             var length = value ? 4 : 5; // True = 4 chars, False = 5 chars
@@ -94,13 +125,13 @@ namespace Unity.Burst
             if (value)
             {
                 if (destIndex >= destLength) return;
-                dest[destIndex++] = (byte) 'T';
+                dest[destIndex++] = (byte)'T';
                 if (destIndex >= destLength) return;
-                dest[destIndex++] = (byte) 'r';
+                dest[destIndex++] = (byte)'r';
                 if (destIndex >= destLength) return;
-                dest[destIndex++] = (byte) 'u';
+                dest[destIndex++] = (byte)'u';
                 if (destIndex >= destLength) return;
-                dest[destIndex++] = (byte) 'e';
+                dest[destIndex++] = (byte)'e';
             }
             else
             {
@@ -129,6 +160,7 @@ namespace Unity.Burst
         /// <param name="value">The value to format.</param>
         /// <param name="formatOptionsRaw">Formatting options encoded in raw format.</param>
         [MethodImpl(MethodImplOptions.NoInlining)]
+        [Preserve]
         public static unsafe void Format(byte* dest, ref int destIndex, int destLength, char value, int formatOptionsRaw)
         {
             var length = value <= 0x7f ? 1 : value <= 0x7FF ? 2 : 3;
@@ -194,6 +226,7 @@ namespace Unity.Burst
         /// <param name="destLength">Maximum length of destination buffer.</param>
         /// <param name="value">The value to format.</param>
         /// <param name="formatOptionsRaw">Formatting options encoded in raw format.</param>
+        [Preserve]
         public static unsafe void Format(byte* dest, ref int destIndex, int destLength, byte value, int formatOptionsRaw)
         {
             Format(dest, ref destIndex, destLength, (ulong)value, formatOptionsRaw);
@@ -207,6 +240,7 @@ namespace Unity.Burst
         /// <param name="destLength">Maximum length of destination buffer.</param>
         /// <param name="value">The value to format.</param>
         /// <param name="formatOptionsRaw">Formatting options encoded in raw format.</param>
+        [Preserve]
         public static unsafe void Format(byte* dest, ref int destIndex, int destLength, ushort value, int formatOptionsRaw)
         {
             Format(dest, ref destIndex, destLength, (ulong)value, formatOptionsRaw);
@@ -220,6 +254,7 @@ namespace Unity.Burst
         /// <param name="destLength">Maximum length of destination buffer.</param>
         /// <param name="value">The value to format.</param>
         /// <param name="formatOptionsRaw">Formatting options encoded in raw format.</param>
+        [Preserve]
         public static unsafe void Format(byte* dest, ref int destIndex, int destLength, uint value, int formatOptionsRaw)
         {
             var options = *(FormatOptions*)&formatOptionsRaw;
@@ -234,6 +269,7 @@ namespace Unity.Burst
         /// <param name="destLength">Maximum length of destination buffer.</param>
         /// <param name="value">The value to format.</param>
         /// <param name="formatOptionsRaw">Formatting options encoded in raw format.</param>
+        [Preserve]
         public static unsafe void Format(byte* dest, ref int destIndex, int destLength, ulong value, int formatOptionsRaw)
         {
             var options = *(FormatOptions*)&formatOptionsRaw;
@@ -248,6 +284,7 @@ namespace Unity.Burst
         /// <param name="destLength">Maximum length of destination buffer.</param>
         /// <param name="value">The value to format.</param>
         /// <param name="formatOptionsRaw">Formatting options encoded in raw format.</param>
+        [Preserve]
         public static unsafe void Format(byte* dest, ref int destIndex, int destLength, sbyte value, int formatOptionsRaw)
         {
             var options = *(FormatOptions*)&formatOptionsRaw;
@@ -269,6 +306,7 @@ namespace Unity.Burst
         /// <param name="destLength">Maximum length of destination buffer.</param>
         /// <param name="value">The value to format.</param>
         /// <param name="formatOptionsRaw">Formatting options encoded in raw format.</param>
+        [Preserve]
         public static unsafe void Format(byte* dest, ref int destIndex, int destLength, short value, int formatOptionsRaw)
         {
             var options = *(FormatOptions*)&formatOptionsRaw;
@@ -292,6 +330,7 @@ namespace Unity.Burst
         /// <param name="value">The value to format.</param>
         /// <param name="formatOptionsRaw">Formatting options encoded in raw format.</param>
         [MethodImpl(MethodImplOptions.NoInlining)]
+        [Preserve]
         public static unsafe void Format(byte* dest, ref int destIndex, int destLength, int value, int formatOptionsRaw)
         {
             var options = *(FormatOptions*)&formatOptionsRaw;
@@ -313,6 +352,7 @@ namespace Unity.Burst
         /// <param name="destLength">Maximum length of destination buffer.</param>
         /// <param name="value">The value to format.</param>
         /// <param name="formatOptionsRaw">Formatting options encoded in raw format.</param>
+        [Preserve]
         public static unsafe void Format(byte* dest, ref int destIndex, int destLength, long value, int formatOptionsRaw)
         {
             var options = *(FormatOptions*)&formatOptionsRaw;
@@ -513,7 +553,7 @@ namespace Unity.Burst
             return (byte)'?';
         }
 
-        private static readonly char[] SplitByColon = new char[] { ':'};
+        private static readonly char[] SplitByColon = new char[] { ':' };
 
 #if !NET_DOTS
         private static void OptsSplit(string fullFormat, out string padding, out string format)
@@ -528,7 +568,7 @@ namespace Unity.Burst
             }
             else if (split.Length == 1)
             {
-                if (format[0]==',')
+                if (format[0] == ',')
                 {
                     padding = format;
                     format = null;
@@ -663,7 +703,7 @@ namespace Unity.Burst
 
             if (!string.IsNullOrEmpty(padding))
             {
-                if (padding[0]!=',')
+                if (padding[0] != ',')
                 {
                     throw new ArgumentException($"Invalid padding `{padding}`, expecting to start with a leading `,` comma.");
                 }

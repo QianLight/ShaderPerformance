@@ -1,12 +1,8 @@
-using System;
-using System.Reflection;
-using NUnit.Framework;
 using Unity.Collections.LowLevel.Unsafe;
 using Unity.Burst;
-#if BURST_TESTS_ONLY
-using Burst.Compiler.IL.DebugInfo;
-using Burst.Compiler.IL.Jit;
+using Unity.Burst.CompilerServices;
 
+#if BURST_TESTS_ONLY
 namespace Unity.Collections.LowLevel.Unsafe
 {
     internal class DisposeSentinel
@@ -57,17 +53,7 @@ namespace Burst.Compiler.IL.Tests
 #pragma warning restore 0219
         }
 
-#if BURST_TESTS_ONLY
-        [Test]
-        public void TestThrowExceptionOnNonExistingMethod()
-        {
-            MethodInfo info = typeof(PartialManaged).GetMethod("NonExistingMethod");
-            JitCompiler compiler = new JitCompiler(new PortablePdbCache());
-            Assert.Throws<ArgumentNullException>(() => compiler.CompileMethod(info));
-        }
-#endif
-
-        [TestCompiler(ExpectCompilerException = true, ExpectedDiagnosticId = DiagnosticId.ERR_InstructionLdstrNotSupported)]
+        [TestCompiler(ExpectCompilerException = true, ExpectedDiagnosticId = DiagnosticId.ERR_CallingManagedMethodNotSupported)]
         public static int GetIndexOfCharFomString()
         {
             return "abc".IndexOf('b');
@@ -140,6 +126,59 @@ namespace Burst.Compiler.IL.Tests
         private class MyClass
         {
             public int value;
+        }
+
+        private class SomeClassWithMixedStatics
+        {
+            public static int SomeInt = 42;
+
+            public static readonly SharedStatic<int> SomeSharedStatic = SharedStatic<int>.GetOrCreate<int>();
+
+            [BurstDiscard]
+            private static void DoSomethingWithStaticInt(ref int x) => x = SomeInt;
+
+            [IgnoreWarning(1371)]
+            public static int DoSomething()
+            {
+                ref var data = ref SomeSharedStatic.Data;
+                DoSomethingWithStaticInt(ref data);
+                return SomeSharedStatic.Data;
+            }
+        }
+
+        [TestCompiler(OverrideManagedResult = 0)]
+        public static int DoSomethingThatUsesMixedStatics()
+        {
+            return SomeClassWithMixedStatics.DoSomething();
+        }
+
+        private class SomeClassWithMixedStaticsWithExplicitStaticConstructor
+        {
+            public static int SomeInt = 42;
+
+            public static readonly SharedStatic<int> SomeSharedStatic = SharedStatic<int>.GetOrCreate<int>();
+
+            static SomeClassWithMixedStaticsWithExplicitStaticConstructor()
+            {
+                SomeInt = 1;
+            }
+
+            [BurstDiscard]
+            private static void DoSomethingWithStaticInt(ref int x) => x = SomeInt;
+
+            [IgnoreWarning(1371)]
+            public static int DoSomething()
+            {
+                ref var data = ref SomeSharedStatic.Data;
+                DoSomethingWithStaticInt(ref data);
+                return SomeSharedStatic.Data;
+            }
+        }
+
+        [TestCompiler(OverrideManagedResult = 0)]
+        public static int DoSomethingThatUsesMixedStaticsWithExplicitStaticConstructor()
+        {
+            return SomeClassWithMixedStaticsWithExplicitStaticConstructor.DoSomething();
         }
     }
 }

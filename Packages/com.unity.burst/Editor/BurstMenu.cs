@@ -23,13 +23,13 @@ namespace Unity.Burst.Editor
         // ----------------------------------------------------------------------------------------------
         // #1 Enable Compilation
         // ----------------------------------------------------------------------------------------------
-        [MenuItem(EnableBurstCompilationText, false)]
+        [MenuItem(EnableBurstCompilationText, false, 1)]
         private static void EnableBurstCompilation()
         {
             ChangeOptionSafely(() => BurstEditorOptions.EnableBurstCompilation = !BurstEditorOptions.EnableBurstCompilation);
         }
 
-        [MenuItem(EnableBurstCompilationText, true)]
+        [MenuItem(EnableBurstCompilationText, true, 1)]
         private static bool EnableBurstCompilationValidate()
         {
             Menu.SetChecked(EnableBurstCompilationText, BurstEditorOptions.EnableBurstCompilation);
@@ -39,7 +39,7 @@ namespace Unity.Burst.Editor
         // ----------------------------------------------------------------------------------------------
         // #2 Safety Checks
         // ----------------------------------------------------------------------------------------------
-        [MenuItem(EnableSafetyChecksTextOff, false)]
+        [MenuItem(EnableSafetyChecksTextOff, false, 1)]
         private static void EnableBurstSafetyChecksOff()
         {
             ChangeOptionSafely(() =>
@@ -52,14 +52,14 @@ namespace Unity.Burst.Editor
             Menu.SetChecked(EnableSafetyChecksTextForceOn, false);
         }
 
-        [MenuItem(EnableSafetyChecksTextOff, true)]
+        [MenuItem(EnableSafetyChecksTextOff, true, 1)]
         private static bool EnableBurstSafetyChecksOffValidate()
         {
             Menu.SetChecked(EnableSafetyChecksTextOff, !BurstEditorOptions.EnableBurstSafetyChecks && !BurstEditorOptions.ForceEnableBurstSafetyChecks);
             return BurstCompilerService.IsInitialized && BurstEditorOptions.EnableBurstCompilation;
         }
 
-        [MenuItem(EnableSafetyChecksTextOn, false)]
+        [MenuItem(EnableSafetyChecksTextOn, false, 2)]
         private static void EnableBurstSafetyChecksOn()
         {
             ChangeOptionSafely(() =>
@@ -72,14 +72,14 @@ namespace Unity.Burst.Editor
             Menu.SetChecked(EnableSafetyChecksTextForceOn, false);
         }
 
-        [MenuItem(EnableSafetyChecksTextOn, true)]
+        [MenuItem(EnableSafetyChecksTextOn, true, 2)]
         private static bool EnableBurstSafetyChecksOnValidate()
         {
             Menu.SetChecked(EnableSafetyChecksTextOn, BurstEditorOptions.EnableBurstSafetyChecks && !BurstEditorOptions.ForceEnableBurstSafetyChecks);
             return BurstCompilerService.IsInitialized && BurstEditorOptions.EnableBurstCompilation;
         }
 
-        [MenuItem(EnableSafetyChecksTextForceOn, false)]
+        [MenuItem(EnableSafetyChecksTextForceOn, false, 3)]
         private static void EnableBurstSafetyChecksForceOn()
         {
             ChangeOptionSafely(() =>
@@ -92,7 +92,7 @@ namespace Unity.Burst.Editor
             Menu.SetChecked(EnableSafetyChecksTextForceOn, true);
         }
 
-        [MenuItem(EnableSafetyChecksTextForceOn, true)]
+        [MenuItem(EnableSafetyChecksTextForceOn, true, 3)]
         private static bool EnableBurstSafetyChecksForceOnValidate()
         {
             Menu.SetChecked(EnableSafetyChecksTextForceOn, BurstEditorOptions.ForceEnableBurstSafetyChecks);
@@ -102,13 +102,13 @@ namespace Unity.Burst.Editor
         // ----------------------------------------------------------------------------------------------
         // #3 Synchronous Compilation
         // ----------------------------------------------------------------------------------------------
-        [MenuItem(ForceSynchronousCompilesText, false)]
+        [MenuItem(ForceSynchronousCompilesText, false, 5)]
         private static void ForceSynchronousCompiles()
         {
             BurstEditorOptions.EnableBurstCompileSynchronously = !BurstEditorOptions.EnableBurstCompileSynchronously;
         }
 
-        [MenuItem(ForceSynchronousCompilesText, true)]
+        [MenuItem(ForceSynchronousCompilesText, true, 5)]
         private static bool ForceSynchronousCompilesValidate()
         {
             Menu.SetChecked(ForceSynchronousCompilesText, BurstEditorOptions.EnableBurstCompileSynchronously);
@@ -118,7 +118,7 @@ namespace Unity.Burst.Editor
         // ----------------------------------------------------------------------------------------------
         // #4 Synchronous Compilation
         // ----------------------------------------------------------------------------------------------
-        [MenuItem(EnableDebugCompilationText, false)]
+        [MenuItem(EnableDebugCompilationText, false, 6)]
         private static void EnableDebugMode()
         {
             ChangeOptionSafely(() =>
@@ -127,7 +127,7 @@ namespace Unity.Burst.Editor
             });
         }
 
-        [MenuItem(EnableDebugCompilationText, true)]
+        [MenuItem(EnableDebugCompilationText, true, 6)]
         private static bool EnableDebugModeValidate()
         {
             Menu.SetChecked(EnableDebugCompilationText, BurstEditorOptions.EnableBurstDebug);
@@ -137,13 +137,13 @@ namespace Unity.Burst.Editor
         // ----------------------------------------------------------------------------------------------
         // #5 Show Timings
         // ----------------------------------------------------------------------------------------------
-        [MenuItem(ShowBurstTimingsText, false)]
+        [MenuItem(ShowBurstTimingsText, false, 7)]
         private static void ShowBurstTimings()
         {
             BurstEditorOptions.EnableBurstTimings = !BurstEditorOptions.EnableBurstTimings;
         }
-        
-        [MenuItem(ShowBurstTimingsText, true)]
+
+        [MenuItem(ShowBurstTimingsText, true, 7)]
         private static bool ShowBurstTimingsValidate()
         {
             Menu.SetChecked(ShowBurstTimingsText, BurstEditorOptions.EnableBurstTimings);
@@ -153,7 +153,7 @@ namespace Unity.Burst.Editor
         // ----------------------------------------------------------------------------------------------
         // #6 Open Inspector...
         // ----------------------------------------------------------------------------------------------
-        [MenuItem(BurstInspectorText, false)]
+        [MenuItem(BurstInspectorText, false, 8)]
         private static void BurstInspector()
         {
             // Get existing open window or if none, make a new one:
@@ -161,7 +161,7 @@ namespace Unity.Burst.Editor
             window.Show();
         }
 
-        [MenuItem(BurstInspectorText, true)]
+        [MenuItem(BurstInspectorText, true, 8)]
         private static bool BurstInspectorValidate()
         {
             return BurstCompilerService.IsInitialized;

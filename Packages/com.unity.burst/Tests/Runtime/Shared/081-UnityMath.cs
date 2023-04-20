@@ -333,5 +333,19 @@ namespace Burst.Compiler.IL.Tests
         {
             return math.all(new int2(0, 0) <= i) ? 1 : 0;
         }
+
+        [TestCompiler(42.0f)]
+        public static float TestSqrtAndAcosIsDefinedBehaviour(float a)
+        {
+            // This sqrt call will get folded away, but we need it here because it exhibits the bug.
+            if (math.sqrt(4) == 2)
+            {
+                return math.acos(a);
+            }
+            else
+            {
+                return 42;
+            }
+        }
     }
 }

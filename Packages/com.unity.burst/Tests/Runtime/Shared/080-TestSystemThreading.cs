@@ -141,7 +141,6 @@ namespace Burst.Compiler.IL.Tests
             return result + data;
         }
 
-        /* Workaround IL2CPP bug https://fogbugz.unity3d.com/f/cases/1240541/
         [TestCompiler(42u)]
         public static uint TestWriteUInt(ref uint data)
         {
@@ -149,7 +148,6 @@ namespace Burst.Compiler.IL.Tests
             Volatile.Write(ref data, 6);
             return result + data;
         }
-        */
 
         [TestCompiler((long)42)]
         public static long TestWriteLong(ref long data)
@@ -159,7 +157,6 @@ namespace Burst.Compiler.IL.Tests
             return result + data;
         }
 
-        /* Workaround IL2CPP bug https://fogbugz.unity3d.com/f/cases/1240541/
         [TestCompiler((ulong)42)]
         public static ulong TestWriteULong(ref ulong data)
         {
@@ -167,7 +164,6 @@ namespace Burst.Compiler.IL.Tests
             Volatile.Write(ref data, 8);
             return result + data;
         }
-        */
 
         [TestCompiler(42.0f)]
         public static float TestWriteFloat(ref float data)

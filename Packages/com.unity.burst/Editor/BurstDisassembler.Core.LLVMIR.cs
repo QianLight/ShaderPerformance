@@ -1,3 +1,4 @@
+#if UNITY_EDITOR || BURST_INTERNAL
 namespace Unity.Burst.Editor
 {
     internal partial class BurstDisassembler
@@ -155,9 +156,13 @@ namespace Unity.Burst.Editor
                 }
             }
 
+            public override SIMDkind SimdKind(StringSlice instruction)
+            {
+                throw new System.NotImplementedException("Syntax Highlighting is not implemented for LLVM IR.");
+            }
+
             public static readonly LLVMIRAsmTokenKindProvider Instance = new LLVMIRAsmTokenKindProvider();
         }
     }
 }
-
-
+#endif

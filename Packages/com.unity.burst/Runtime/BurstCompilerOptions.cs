@@ -1,4 +1,4 @@
-// As BurstCompiler.Compile is not supported on Tiny/ZeroPlayer, we can ifdef the entire file
+// BurstCompiler.Compile is not supported on Tiny/ZeroPlayer
 #if !UNITY_DOTSPLAYER && !NET_DOTS
 using System;
 using System.ComponentModel;
@@ -8,16 +8,28 @@ using System.Text;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
-#if !BURST_COMPILER_SHARED
+#if BURST_COMPILER_SHARED
+using Burst.Compiler.IL.Helpers;
+#else
 using Unity.Jobs.LowLevel.Unsafe;
+using Unity.Burst;
 #endif
 
 // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 // NOTE: This file is shared via a csproj cs link in Burst.Compiler.IL
 // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
+#endif //!UNITY_DOTSPLAYER && !NET_DOTS
 namespace Unity.Burst
 {
+    internal enum GlobalSafetyChecksSettingKind
+    {
+        Off = 0,
+        On = 1,
+        ForceOn = 2,
+    }
+
+#if !UNITY_DOTSPLAYER && !NET_DOTS
     /// <summary>
     /// Options available at Editor time and partially at runtime to control the behavior of the compilation and to enable/disable burst jobs.
     /// </summary>
@@ -34,28 +46,36 @@ namespace Unity.Burst
         internal const string DefaultLibraryName = "lib_burst_generated";
 
         internal const string BurstInitializeName = "burst.initialize";
+        internal const string BurstInitializeExternalsName = "burst.initialize.externals";
+        internal const string BurstInitializeStaticsName = "burst.initialize.statics";
 
+#if BURST_COMPILER_SHARED || UNITY_EDITOR
         internal static readonly string DefaultCacheFolder = Path.Combine(Environment.CurrentDirectory, "Library", "BurstCache", "JIT");
         internal const string DeleteCacheMarkerFileName = "DeleteCache.txt";
+#endif
 
-        internal const string OptionDoNotEagerCompile = "do-not-eager-compile";
-        internal const string DoNotEagerCompile = "--" + OptionDoNotEagerCompile;
+#if UNITY_EDITOR
+        private static readonly string BackendNameOverride = Environment.GetEnvironmentVariable("UNITY_BURST_BACKEND_NAME_OVERRIDE");
+#endif
 
         // -------------------------------------------------------
         // Common options used by the compiler
         // -------------------------------------------------------
+        internal const string OptionBurstcSwitch = "+burstc";
         internal const string OptionGroup = "group";
         internal const string OptionPlatform = "platform=";
         internal const string OptionBackend = "backend=";
-        internal const string OptionSafetyChecks = "safety-checks";
+        internal const string OptionGlobalSafetyChecksSetting = "global-safety-checks-setting=";
         internal const string OptionDisableSafetyChecks = "disable-safety-checks";
         internal const string OptionDisableOpt = "disable-opt";
         internal const string OptionFastMath = "fastmath";
         internal const string OptionTarget = "target=";
-        internal const string OptionIROpt = "ir-opt";
-        internal const string OptionCpuOpt = "cpu-opt=";
+        internal const string OptionOptLevel = "opt-level=";
+        internal const string OptionLogTimings = "log-timings";
+        internal const string OptionOptForSize = "opt-for-size";
         internal const string OptionFloatPrecision = "float-precision=";
         internal const string OptionFloatMode = "float-mode=";
+        internal const string OptionBranchProtection = "branch-protection=";
         internal const string OptionDisableWarnings = "disable-warnings=";
         internal const string OptionCompilationDefines = "compilation-defines=";
         internal const string OptionDump = "dump=";
@@ -69,6 +89,9 @@ namespace Unity.Burst
         internal const string OptionTempDirectory = "temp-folder=";
         internal const string OptionEnableDirectExternalLinking = "enable-direct-external-linking";
         internal const string OptionLinkerOptions = "linker-options=";
+        internal const string OptionEnableAutoLayoutFallbackCheck = "enable-autolayout-fallback-check";
+        internal const string OptionGenerateLinkXml = "generate-link-xml=";
+        internal const string OptionMetaDataGeneration = "meta-data-generation=";
 
         // -------------------------------------------------------
         // Options used by the Jit and Bcl compilers
@@ -78,23 +101,18 @@ namespace Unity.Burst
         // -------------------------------------------------------
         // Options used by the Jit compiler
         // -------------------------------------------------------
-
         internal const string OptionJitDisableFunctionCaching = "disable-function-caching";
         internal const string OptionJitDisableAssemblyCaching = "disable-assembly-caching";
         internal const string OptionJitEnableAssemblyCachingLogs = "enable-assembly-caching-logs";
         internal const string OptionJitEnableSynchronousCompilation = "enable-synchronous-compilation";
         internal const string OptionJitCompilationPriority = "compilation-priority=";
 
-        // TODO: Remove this option and use proper dump flags or revisit how we log timings
-        internal const string OptionJitLogTimings = "log-timings";
-
         internal const string OptionJitIsForFunctionPointer = "is-for-function-pointer";
 
         internal const string OptionJitManagedFunctionPointer = "managed-function-pointer=";
+        internal const string OptionJitManagedDelegateHandle = "managed-delegate-handle=";
 
-        internal const string OptionJitProvider = "jit-provider=";
-        internal const string OptionJitSkipCheckDiskCache = "skip-check-disk-cache";
-        internal const string OptionJitSkipBurstInitialize = "skip-burst-initialize";
+        internal const string OptionEnableInterpreter = "enable-interpreter";
 
         // -------------------------------------------------------
         // Options used by the Aot compiler
@@ -112,10 +130,10 @@ namespace Unity.Burst
         internal const string OptionAotPinvokeNameToPatch = "pinvoke-name=";
         internal const string OptionAotExecuteMethodNameToFind = "execute-method-name=";
 
-        internal const string OptionAotUsePlatformSDKLinkers = "use-platform-sdk-linkers";
         internal const string OptionAotOnlyStaticMethods = "only-static-methods";
         internal const string OptionMethodPrefix = "method-prefix=";
-        internal const string OptionAotNoNativeToolchain = "no-native-toolchain";        
+        internal const string OptionAotNoNativeToolchain = "no-native-toolchain";
+        internal const string OptionAotEmitLlvmObjects = "emit-llvm-objects";
         internal const string OptionAotKeyFolder = "key-folder=";
         internal const string OptionAotDecodeFolder = "decode-folder=";
         internal const string OptionVerbose = "verbose";
@@ -126,22 +144,54 @@ namespace Unity.Burst
         internal const string OptionOutputMode = "output-mode=";
         internal const string OptionAlwaysCreateOutput = "always-create-output=";
         internal const string OptionAotPdbSearchPaths = "pdb-search-paths=";
+        internal const string OptionSafetyChecks = "safety-checks";
+        internal const string OptionLibraryOutputMode = "library-output-mode=";
+        internal const string OptionCompilationId = "compilation-id=";
 
         internal const string CompilerCommandShutdown = "$shutdown";
         internal const string CompilerCommandCancel = "$cancel";
         internal const string CompilerCommandEnableCompiler = "$enable_compiler";
         internal const string CompilerCommandDisableCompiler = "$disable_compiler";
+        internal const string CompilerCommandSetDefaultOptions = "$set_default_options";
+        internal const string CompilerCommandTriggerSetupRecompilation = "$trigger_setup_recompilation";
+        internal const string CompilerCommandIsCurrentCompilationDone = "$is_current_compilation_done";
+
+        // This one is annoying special - the Unity editor has a detection for this string being in the command and does some
+        // job specific logic - meaning that we **cannot** have this string be present in any other command or bugs will occur.
         internal const string CompilerCommandTriggerRecompilation = "$trigger_recompilation";
-        internal const string CompilerCommandEagerCompileMethods = "$eager_compile_methods";
-        internal const string CompilerCommandWaitUntilCompilationFinished = "$wait_until_compilation_finished";
-        internal const string CompilerCommandClearEagerCompilationQueues = "$clear_eager_compilation_queues";
-        internal const string CompilerCommandCancelEagerCompilation = "$cancel_eager_compilation";
-        internal const string CompilerCommandReset = "$reset";
+        internal const string CompilerCommandInitialize = "$initialize";
         internal const string CompilerCommandDomainReload = "$domain_reload";
-        internal const string CompilerCommandUpdateAssemblyFolders = "$update_assembly_folders";
         internal const string CompilerCommandVersionNotification = "$version";
-        internal const string CompilerCommandSetProgressCallback = "$set_progress_callback";
-        internal const string CompilerCommandRequestClearJitCache = "$request_clear_jit_cache";
+        internal const string CompilerCommandSetProfileCallbacks = "$set_profile_callbacks";
+        internal const string CompilerCommandUnloadBurstNatives = "$unload_burst_natives";
+        internal const string CompilerCommandIsNativeApiAvailable = "$is_native_api_available";
+        internal const string CompilerCommandILPPCompilation = "$ilpp_compilation";
+        internal const string CompilerCommandIsArmTestEnv = "$is_arm_test_env";
+        internal const string CompilerCommandNotifyAssemblyCompilationNotRequired = "$notify_assembly_compilation_not_required";
+        internal const string CompilerCommandNotifyAssemblyCompilationFinished = "$notify_assembly_compilation_finished";
+        internal const string CompilerCommandNotifyCompilationStarted = "$notify_compilation_started";
+        internal const string CompilerCommandNotifyCompilationFinished = "$notify_compilation_finished";
+        internal const string CompilerCommandAotCompilation = "$aot_compilation";
+        internal const string CompilerCommandRequestInitialiseDebuggerCommmand = "$request_debug_command";
+        internal const string CompilerCommandInitialiseDebuggerCommmand = "$load_debugger_interface";
+        internal const string CompilerCommandRequestSetProtocolVersionEditor = "$request_set_protocol_version_editor";
+        internal const string CompilerCommandSetProtocolVersionBurst = "$set_protocol_version_burst";
+
+        internal static string SerialiseCompilationOptionsSafe(string[] roots, string[] folders, string options)
+        {
+            var finalSerialise = new string[3];
+            finalSerialise[0] = SafeStringArrayHelper.SerialiseStringArraySafe(roots);
+            finalSerialise[1] = SafeStringArrayHelper.SerialiseStringArraySafe(folders);
+            finalSerialise[2] = options;
+            return SafeStringArrayHelper.SerialiseStringArraySafe(finalSerialise);
+        }
+
+        internal static (string[] roots, string[] folders, string options) DeserialiseCompilationOptionsSafe(string from)
+        {
+            var set = SafeStringArrayHelper.DeserialiseStringArraySafe(from);
+
+            return (SafeStringArrayHelper.DeserialiseStringArraySafe(set[0]), SafeStringArrayHelper.DeserialiseStringArraySafe(set[1]), set[2]);
+        }
 
         // All the following content is exposed to the public interface
 
@@ -149,6 +199,7 @@ namespace Unity.Burst
         // These fields are only setup at startup
         internal static readonly bool ForceDisableBurstCompilation;
         private static readonly bool ForceBurstCompilationSynchronously;
+        internal static readonly bool IsSecondaryUnityProcess;
 
 #if UNITY_EDITOR
         internal bool IsInitializing;
@@ -211,11 +262,6 @@ namespace Unity.Burst
                 if (IsGlobal && ForceDisableBurstCompilation) value = false;
 
                 bool changed = _enableBurstCompilation != value;
-
-                if (changed && value)
-                {
-                    MaybePreventChangingOption();
-                }
 
                 _enableBurstCompilation = value;
 
@@ -285,11 +331,6 @@ namespace Unity.Burst
             {
                 bool changed = _enableBurstSafetyChecks != value;
 
-                if (changed)
-                {
-                    MaybePreventChangingOption();
-                }
-
                 _enableBurstSafetyChecks = value;
                 if (changed)
                 {
@@ -314,11 +355,6 @@ namespace Unity.Burst
             {
                 bool changed = _forceEnableBurstSafetyChecks != value;
 
-                if (changed)
-                {
-                    MaybePreventChangingOption();
-                }
-
                 _forceEnableBurstSafetyChecks = value;
                 if (changed)
                 {
@@ -327,7 +363,7 @@ namespace Unity.Burst
                 }
             }
         }
-		/// <summary> 
+		/// <summary>
 		/// Enable debugging mode
 		/// </summary>
         public bool EnableBurstDebug
@@ -336,11 +372,6 @@ namespace Unity.Burst
             set
             {
                 bool changed = _enableBurstDebug != value;
-
-                if (changed)
-                {
-                    MaybePreventChangingOption();
-                }
 
                 _enableBurstDebug = value;
                 if (changed)
@@ -408,7 +439,7 @@ namespace Unity.Burst
             return clone;
         }
 
-        private static bool TryGetAttribute(MemberInfo member, out BurstCompileAttribute attribute, bool isForEagerCompilation = false)
+        private static bool TryGetAttribute(MemberInfo member, out BurstCompileAttribute attribute)
         {
             attribute = null;
             // We don't fail if member == null as this method is being called by native code and doesn't expect to crash
@@ -424,13 +455,22 @@ namespace Unity.Burst
                 return false;
             }
 
-            // If we're compiling for eager compilation, and this method has requested not to be eager-compiled... don't compile it.
-            if (isForEagerCompilation && (attribute.Options?.Contains(DoNotEagerCompile) ?? false))
+            return true;
+        }
+
+        private static bool TryGetAttribute(Assembly assembly, out BurstCompileAttribute attribute)
+        {
+            // We don't fail if assembly == null as this method is being called by native code and doesn't expect to crash
+            if (assembly == null)
             {
+                attribute = null;
                 return false;
             }
 
-            return true;
+            // Fetch options from attribute
+            attribute = assembly.GetCustomAttribute<BurstCompileAttribute>();
+
+            return attribute != null;
         }
 
         private static BurstCompileAttribute GetBurstCompileAttribute(MemberInfo memberInfo)
@@ -447,16 +487,6 @@ namespace Unity.Burst
                 if (attributeType.FullName == "Burst.Compiler.IL.Tests.TestCompilerAttribute")
                 {
                     var options = new List<string>();
-
-                    // Don't eager-compile tests that we expect to fail compilation.
-                    var expectCompilerExceptionProperty = attributeType.GetProperty("ExpectCompilerException");
-                    var expectCompilerException = (expectCompilerExceptionProperty != null)
-                        ? (bool)expectCompilerExceptionProperty.GetValue(a)
-                        : false;
-                    if (expectCompilerException)
-                    {
-                        options.Add(DoNotEagerCompile);
-                    }
 
                     return new BurstCompileAttribute(FloatPrecision.Standard, FloatMode.Default)
                     {
@@ -477,58 +507,95 @@ namespace Unity.Burst
         }
 
         /// <summary>
-        /// Gets the options for the specified member. Returns <c>false</c> if the `[BurstCompile]` attribute was not found
+        /// Merges the attributes from the assembly into the member attribute, such that if any field of the member attribute
+        /// was not specifically set by the user (or is a default), the assembly level setting is used for the Burst compilation.
+        /// </summary>
+        internal static void MergeAttributes(ref BurstCompileAttribute memberAttribute, in BurstCompileAttribute assemblyAttribute)
+        {
+            if (memberAttribute.FloatMode == FloatMode.Default)
+            {
+                memberAttribute.FloatMode = assemblyAttribute.FloatMode;
+            }
+
+            if (memberAttribute.FloatPrecision == FloatPrecision.Standard)
+            {
+                memberAttribute.FloatPrecision = assemblyAttribute.FloatPrecision;
+            }
+
+            if (memberAttribute.OptimizeFor == OptimizeFor.Default)
+            {
+                memberAttribute.OptimizeFor = assemblyAttribute.OptimizeFor;
+            }
+
+            if (!memberAttribute._compileSynchronously.HasValue && assemblyAttribute._compileSynchronously.HasValue)
+            {
+                memberAttribute._compileSynchronously = assemblyAttribute._compileSynchronously;
+            }
+
+            if (!memberAttribute._debug.HasValue && assemblyAttribute._debug.HasValue)
+            {
+                memberAttribute._debug = assemblyAttribute._debug;
+            }
+
+            if (!memberAttribute._disableDirectCall.HasValue && assemblyAttribute._disableDirectCall.HasValue)
+            {
+                memberAttribute._disableDirectCall = assemblyAttribute._disableDirectCall;
+            }
+
+            if (!memberAttribute._disableSafetyChecks.HasValue && assemblyAttribute._disableSafetyChecks.HasValue)
+            {
+                memberAttribute._disableSafetyChecks = assemblyAttribute._disableSafetyChecks;
+            }
+        }
+
+        /// <summary>
+        /// Gets the options for the specified member. Returns <c>false</c> if the `[BurstCompile]` attribute was not found.
         /// </summary>
         /// <returns><c>false</c> if the `[BurstCompile]` attribute was not found; otherwise <c>true</c></returns>
-        internal bool TryGetOptions(MemberInfo member, bool isJit, out string flagsOut, bool isForEagerCompilation = false)
+        internal bool TryGetOptions(MemberInfo member, bool isJit, out string flagsOut, bool isForILPostProcessing = false)
         {
             flagsOut = null;
-            BurstCompileAttribute attr;
-            if (!TryGetAttribute(member, out attr, isForEagerCompilation))
+            if (!TryGetAttribute(member, out var memberAttribute))
             {
                 return false;
             }
 
-            flagsOut = GetOptions(isJit, attr, isForEagerCompilation);
+            if (TryGetAttribute(member.Module.Assembly, out var assemblyAttribute))
+            {
+                MergeAttributes(ref memberAttribute, in assemblyAttribute);
+            }
+
+            flagsOut = GetOptions(isJit, memberAttribute, isForILPostProcessing);
             return true;
         }
 
-        internal string GetOptions(bool isJit, BurstCompileAttribute attr = null, bool isForEagerCompilation = false)
+        internal string GetOptions(bool isJit, BurstCompileAttribute attr = null, bool isForILPostProcessing = false, bool isForCompilerClient = false)
         {
             // Add debug to Jit options instead of passing it here
             // attr.Debug
 
             var flagsBuilderOut = new StringBuilder();
 
-            if (isJit && !isForEagerCompilation && ((attr?.CompileSynchronously ?? false) || RequiresSynchronousCompilation))
+            if (isJit && !isForCompilerClient && ((attr?.CompileSynchronously ?? false) || RequiresSynchronousCompilation))
             {
                 AddOption(flagsBuilderOut, GetOption(OptionJitEnableSynchronousCompilation));
             }
 
-            var shouldEnableSafetyChecks = EnableBurstSafetyChecks;
-            
-            if (isJit && isForEagerCompilation)
+            if (isJit)
             {
-                // Eager compilation must always be asynchronous.
-                // - For synchronous jobs, we set the compilation priority to HighPriority.
-                //   This has two effects:
-                //   - These synchronous jobs will be compiled before asynchronous jobs.
-                //   - We will block on these compilations when entering PlayMode.
-                // - For asynchronous jobs, we set the compilation priority to LowPriority.
-                //   These jobs will be compiled after "normal" compilation requests
-                //   for asynchronous jobs.
-                // Note that we ignore the global "compile synchronously" option here because:
-                // - If it's set when entering play mode, then we'll wait for all
-                //   methods to be compiled anyway.
-                // - If it's not set when entering play mode, then we only want to wait
-                //   for methods that explicitly have CompileSynchronously=true on their attributes.
-                var priority = (attr?.CompileSynchronously ?? false)
-                    ? CompilationPriority.HighPriority
-                    : CompilationPriority.LowPriority;
-                AddOption(flagsBuilderOut, GetOption(OptionJitCompilationPriority, priority));
+                AddOption(flagsBuilderOut, GetOption(OptionDebug,
+#if UNITY_EDITOR
+                    BurstCompiler.IsScriptDebugInfoEnabled && EnableBurstDebug ? "Full" : "LineOnly"
+#else
+                    "LineOnly"
+#endif
+                ));
+            }
 
-                // Don't call `burst.initialize` when we're eager-compiling.
-                AddOption(flagsBuilderOut, GetOption(OptionJitSkipBurstInitialize));
+            if (isForILPostProcessing)
+            {
+                // IL Post Processing compiles are the only thing set to low priority.
+                AddOption(flagsBuilderOut, GetOption(OptionJitCompilationPriority, CompilationPriority.ILPP));
             }
 
             if (attr != null)
@@ -543,49 +610,73 @@ namespace Unity.Burst
                     AddOption(flagsBuilderOut, GetOption(OptionFloatPrecision, attr.FloatPrecision));
                 }
 
-                // [BurstCompile(DisableSafetyChecks = true)] takes precedence over EnableBurstSafetyChecks
+                // We disable safety checks for jobs with `[BurstCompile(DisableSafetyChecks = true)]`.
                 if (attr.DisableSafetyChecks)
                 {
-                    shouldEnableSafetyChecks = false;
+                    AddOption(flagsBuilderOut, GetOption(OptionDisableSafetyChecks));
                 }
 
                 if (attr.Options != null)
                 {
                     foreach (var option in attr.Options)
                     {
-                        if (!String.IsNullOrEmpty(option))
+                        if (!string.IsNullOrEmpty(option))
                         {
                             AddOption(flagsBuilderOut, option);
                         }
                     }
                 }
+
+                switch (attr.OptimizeFor)
+                {
+                    case OptimizeFor.Default:
+                    case OptimizeFor.Balanced:
+                        AddOption(flagsBuilderOut, GetOption(OptionOptLevel, 2));
+                        break;
+                    case OptimizeFor.Performance:
+                        AddOption(flagsBuilderOut, GetOption(OptionOptLevel, 3));
+                        break;
+                    case OptimizeFor.Size:
+                        AddOption(flagsBuilderOut, GetOption(OptionOptForSize));
+                        AddOption(flagsBuilderOut, GetOption(OptionOptLevel, 3));
+                        break;
+                    case OptimizeFor.FastCompilation:
+                        AddOption(flagsBuilderOut, GetOption(OptionOptLevel, 1));
+                        break;
+                }
             }
 
-            // ForceEnableBurstSafetyChecks takes precedence over any other setting.
             if (ForceEnableBurstSafetyChecks)
             {
-                shouldEnableSafetyChecks = true;
+                AddOption(flagsBuilderOut, GetOption(OptionGlobalSafetyChecksSetting, GlobalSafetyChecksSettingKind.ForceOn));
             }
-
-            // Fetch options from attribute
-            if (shouldEnableSafetyChecks)
+            else if (EnableBurstSafetyChecks)
             {
-                AddOption(flagsBuilderOut, GetOption(OptionSafetyChecks));
+                AddOption(flagsBuilderOut, GetOption(OptionGlobalSafetyChecksSetting, GlobalSafetyChecksSettingKind.On));
             }
             else
             {
-                AddOption(flagsBuilderOut, GetOption(OptionDisableSafetyChecks));
+                AddOption(flagsBuilderOut, GetOption(OptionGlobalSafetyChecksSetting, GlobalSafetyChecksSettingKind.Off));
             }
 
             if (isJit && EnableBurstTimings)
             {
-                AddOption(flagsBuilderOut, GetOption(OptionJitLogTimings));
+                AddOption(flagsBuilderOut, GetOption(OptionLogTimings));
             }
 
             if (EnableBurstDebug || (attr?.Debug ?? false))
             {
                 AddOption(flagsBuilderOut, GetOption(OptionDebugMode));
             }
+
+#if UNITY_EDITOR
+            if (BackendNameOverride != null)
+            {
+                AddOption(flagsBuilderOut, GetOption(OptionBackend, BackendNameOverride));
+            }
+#endif
+
+            AddOption(flagsBuilderOut, GetOption(OptionTempDirectory, Path.Combine(Environment.CurrentDirectory, "Temp", "Burst")));
 
             return flagsBuilderOut.ToString();
         }
@@ -610,7 +701,7 @@ namespace Unity.Burst
 
         private void MaybeTriggerRecompilation()
         {
-#if UNITY_EDITOR && UNITY_2019_3_OR_NEWER
+#if UNITY_EDITOR
             if (IsGlobal && IsEnabled && !IsInitializing)
             {
                 UnityEditor.EditorUtility.DisplayProgressBar("Burst", "Waiting for compilation to finish", -1);
@@ -621,30 +712,6 @@ namespace Unity.Burst
                 finally
                 {
                     UnityEditor.EditorUtility.ClearProgressBar();
-                }
-            }
-#endif
-        }
-
-        /// <summary>
-        /// This method should be called before changing any option that requires
-        /// an Editor restart in versions older than 2019.3.
-        ///
-        /// This is because Editors older than 2019.3 don't support recompilation
-        /// of already-compiled jobs.
-        /// </summary>
-        private void MaybePreventChangingOption()
-        {
-#if UNITY_EDITOR && !UNITY_2019_3_OR_NEWER
-            if (IsGlobal && !IsInitializing)
-            {
-                if (RequiresRestartUtility.CalledFromUI)
-                {
-                    RequiresRestartUtility.RequiresRestart = true;
-                }
-                else
-                {
-                    throw new InvalidOperationException("This option cannot be set programmatically in 2019.2 and older versions of the Editor");
                 }
             }
 #endif
@@ -664,18 +731,45 @@ namespace Unity.Burst
                         ForceDisableBurstCompilation = true;
                         break;
                     case ForceSynchronousCompilationArg:
-                        ForceBurstCompilationSynchronously = false;
+                        ForceBurstCompilationSynchronously = true;
                         break;
                 }
             }
+
+            if (CheckIsSecondaryUnityProcess())
+            {
+                ForceDisableBurstCompilation = true;
+                IsSecondaryUnityProcess = true;
+            }
+        }
+
+        private static bool CheckIsSecondaryUnityProcess()
+        {
+#if UNITY_EDITOR
+#if UNITY_2021_1_OR_NEWER
+            if (UnityEditor.MPE.ProcessService.level == UnityEditor.MPE.ProcessLevel.Secondary
+                || UnityEditor.AssetDatabase.IsAssetImportWorkerProcess())
+            {
+                return true;
+            }
+#else
+            if (UnityEditor.MPE.ProcessService.level == UnityEditor.MPE.ProcessLevel.Slave
+                || UnityEditor.AssetDatabase.IsAssetImportWorkerProcess())
+            {
+                return true;
+            }
+#endif
+#endif
+
+            return false;
         }
 #endif
 #endif // !BURST_COMPILER_SHARED
-                }
+    }
 
 #if UNITY_EDITOR
-                // NOTE: This must be synchronized with Backend.TargetPlatform
-        internal enum TargetPlatform
+    // NOTE: This must be synchronized with Backend.TargetPlatform
+    internal enum TargetPlatform
     {
         Windows = 0,
         macOS = 1,
@@ -683,17 +777,33 @@ namespace Unity.Burst
         Android = 3,
         iOS = 4,
         PS4 = 5,
-        XboxOne = 6,
+        XboxOne_Deprecated = 6,
         WASM = 7,
         UWP = 8,
         Lumin = 9,
         Switch = 10,
-        Stadia = 11,
+        Stadia_Deprecated = 11,
         tvOS = 12,
+        EmbeddedLinux = 13,
+        GameCoreXboxOne = 14,
+        GameCoreXboxSeries = 15,
+        PS5 = 16,
+        QNX = 17,
     }
+#endif
 
+    // Need this enum for CPU intrinsics to work, so exposing it to Tiny too
+#endif //!UNITY_DOTSPLAYER && !NET_DOTS
+    // Don't expose the enum in Burst.Compiler.IL, need only in Unity.Burst.dll which is referenced by Burst.Compiler.IL.Tests
+#if !BURST_COMPILER_SHARED
+// Make the enum public for btests via Unity.Burst.dll; leave it internal in the package
+#if BURST_INTERNAL
+    public
+#else
+    internal
+#endif
     // NOTE: This must be synchronized with Backend.TargetCpu
-    internal enum TargetCpu
+    enum BurstTargetCpu
     {
         Auto = 0,
         X86_SSE2 = 1,
@@ -707,11 +817,14 @@ namespace Unity.Burst
         ARMV8A_AARCH64 = 9,
         THUMB2_NEON32 = 10,
         ARMV8A_AARCH64_HALFFP = 11,
+        ARMV9A = 12,
     }
 #endif
+#if !UNITY_DOTSPLAYER && !NET_DOTS
 
     /// <summary>
     /// Flags used by <see cref="NativeCompiler.CompileMethod"/> to dump intermediate compiler results.
+    /// Note please ensure MonoDebuggerHandling/Constants.h is updated if you change this enum
     /// </summary>
     [Flags]
 #if BURST_COMPILER_SHARED
@@ -731,9 +844,9 @@ namespace Unity.Burst
         IL = 1 << 0,
 
         /// <summary>
-        /// Dumps the reformated backend API Calls
+        /// Unused dump state.
         /// </summary>
-        Backend = 1 << 1,
+        Unused = 1 << 1,
 
         /// <summary>
         /// Dumps the generated module without optimizations
@@ -771,9 +884,14 @@ namespace Unity.Burst
         ILPre = 1 << 8,
 
         /// <summary>
+        /// Dumps the per-entry-point module
+        /// </summary>
+        IRPerEntryPoint = 1 << 9,
+
+        /// <summary>
         /// Dumps all normal output.
         /// </summary>
-        All = IL | ILPre | IR | IROptimized | Asm | Function | Analysis | IRPassAnalysis
+        All = IL | ILPre | IR | IROptimized | IRPerEntryPoint | Asm | Function | Analysis | IRPassAnalysis
     }
 
 #if BURST_COMPILER_SHARED
@@ -782,9 +900,10 @@ namespace Unity.Burst
     internal enum CompilationPriority
 #endif
     {
-        HighPriority     = 0,
-        StandardPriority = 1,
-        LowPriority      = 2,
+        EagerCompilationSynchronous  = 0,
+        Asynchronous                 = 1,
+        ILPP                         = 2,
+        EagerCompilationAsynchronous = 3,
     }
 
 #if UNITY_EDITOR
@@ -802,17 +921,5 @@ namespace Unity.Burst
         public static bool RequiresRestart;
     }
 #endif
-
-    internal readonly struct EagerCompilationRequest
-    {
-        public EagerCompilationRequest(string encodedMethod, string options)
-        {
-            EncodedMethod = encodedMethod;
-            Options = options;
-        }
-
-        public readonly string EncodedMethod;
-        public readonly string Options;
-    }
+#endif //!UNITY_DOTSPLAYER && !NET_DOTS
 }
-#endif
