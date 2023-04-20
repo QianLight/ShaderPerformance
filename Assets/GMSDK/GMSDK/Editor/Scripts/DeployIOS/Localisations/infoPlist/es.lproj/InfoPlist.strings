@@ -1,0 +1,14 @@
+/* Localized versions of Info.plist keys */
+"NSMicrophoneUsageDescription" = "Habilita el acceso al micrófono para enviar mensajes de voz.";
+"NSLocationWhenInUseUsageDescription" = "Activa el servicio de ubicación para ayudarnos a proporcionar servicios relacionados con la ubicación.";
+"NSPhotoLibraryUsageDescription" = "Permita el acceso a tu biblioteca de fotos para compartirlas en las redes sociales.";
+"NSPhotoLibraryAddUsageDescription" = "Permita el acceso a tu biblioteca de fotos para guardar las fotos que deseas.";
+"NSCameraUsageDescription" = "Permita el acceso a la cámara para tomar fotografías y grabar videos.";
+"NSContactsUsageDescription" = "Esto nos permite encontrar a tus amigos que también juegan a este juego.";
+"NSUserTrackingUsageDescription" = "Usaremos solo el identificador de dispositivo para ofrecer una mejor experiencia de usuario y mejorar la seguridad del servicio. Esto no nos permitirá acceder a sus datos privados en otros sitios.";
+"NSLocationAlwaysUsageDescription" = "Activa la ubicación en segundo plano para disfrutar de funciones avanzadas.";
+"NSCalendarsUsageDescription" = "Esta función necesita acceder a tu calendario.";
+"NSRemindersUsageDescription" = "Permítanos enviarte notificaciones.";
+"NSSpeechRecognitionUsageDescription" = "Permítanos utilizar el Reconocimiento de Voz.";
+"NSSiriUsageDescription" = "Permita la interacción con Siri.";
+"NSFaceIDUsageDescription" = "Permítanos usar Face ID para verificar tu identidad.";

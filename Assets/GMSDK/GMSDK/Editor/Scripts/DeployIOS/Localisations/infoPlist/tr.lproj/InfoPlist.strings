@@ -1,0 +1,14 @@
+/* Localized versions of Info.plist keys */
+"NSMicrophoneUsageDescription" = "Sesli mesaj göndermek için mikrofon erişimini etkinleştirin.";
+"NSLocationWhenInUseUsageDescription" = "Konumla ilgili hizmetleri sağlamamıza yardımcı olması için konum hizmetini açın.";
+"NSPhotoLibraryUsageDescription" = "Sosyal medyada fotoğraf paylaşımını etkinleştirmek için fotoğraf kitaplığınıza erişime izin verin.";
+"NSPhotoLibraryAddUsageDescription" = "Beğendiğiniz fotoğrafları kaydetmek için fotoğraf kitaplığınıza erişime izin verin.";
+"NSCameraUsageDescription" = "Fotoğraf çekmek ve video kaydetmek için kameraya erişime izin verin.";
+"NSContactsUsageDescription" = "Bu, aynı zamanda bu oyunu oynayan arkadaşlarınızı bulmamızı sağlar.";
+"NSUserTrackingUsageDescription" = "Lütfen diğer uygulamalarda gizliliğinize ulaşamayacağımızdan emin olabilirsiniz, açma izni sadece cihazı tanımlamak , hizmet güvenliğini korumak ve oyun deneyimini geliştirmek için kullanılır.";
+"NSLocationAlwaysUsageDescription" = "Gelişmiş özelliklerin keyfini çıkarmak için arka planda konumu açın.";
+"NSCalendarsUsageDescription" = "Bu özelliğin takviminize erişmesi gerekiyor.";
+"NSRemindersUsageDescription" = "Size bildirim göndermemize izin verin.";
+"NSSpeechRecognitionUsageDescription" = "Konuşma Tanıma'yı kullanmamıza izin verin.";
+"NSSiriUsageDescription" = "Siri ile etkileşime izin verin.";
+"NSFaceIDUsageDescription" = "Kimliğinizi doğrulamak için Face ID kullanmamıza izin verin.";

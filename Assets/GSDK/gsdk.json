@@ -1,0 +1,98 @@
+{
+    "build_id": "63329451f44954002b10652d",
+    "dsl": {
+        "baseline": "3.15.2.0",
+        "region": "domestic",
+        "platform": "unity",
+        "components": [
+            {
+                "name": "Account",
+                "version": "3.14.0.0",
+                "modules": [
+                    "AccountBytedance/AccountCommon",
+                    "AccountBytedance/AccountTapTap"
+                ]
+            },
+            {
+                "name": "Compliance",
+                "version": "3.12.1.0",
+                "modules": [
+                    "ComplianceAntiAddiction",
+                    "ComplianceInstallPopup",
+                    "CompliancePermission",
+                    "CompliancePrivacy",
+                    "ComplianceProtocol"
+                ]
+            },
+            {
+                "name": "GPM",
+                "version": "3.14.0.0",
+                "modules": null
+            },
+            {
+                "name": "Main",
+                "version": "3.15.2.0",
+                "modules": [
+                    "ASR",
+                    "Core",
+                    "Debug",
+                    "DeepLink",
+                    "ForceUpdate",
+                    "IM",
+                    "Location",
+                    "QRCode",
+                    "SSL"
+                ]
+            },
+            {
+                "name": "Pay",
+                "version": "3.14.0.0",
+                "modules": null
+            },
+            {
+                "name": "Push",
+                "version": "3.13.0.0",
+                "modules": null
+            },
+            {
+                "name": "RN",
+                "version": "3.15.1.1",
+                "modules": null
+            },
+            {
+                "name": "RNCore",
+                "version": "3.15.1.1",
+                "modules": null
+            },
+            {
+                "name": "RTC",
+                "version": "3.37.203.002002",
+                "modules": null
+            },
+            {
+                "name": "Share",
+                "version": "3.14.0.0",
+                "modules": [
+                    "ShareDouyin",
+                    "ShareImage",
+                    "ShareQQ",
+                    "ShareWeChat",
+                    "ShareWeibo"
+                ]
+            },
+            {
+                "name": "Voice",
+                "version": "3.15.2.0",
+                "modules": null
+            },
+            {
+                "name": "Webview",
+                "version": "3.13.0.0",
+                "modules": null
+            }
+        ],
+        "pkg_type": "unitypackage"
+    },
+    "version": "3.15.2.0",
+    "region": "domestic"
+}

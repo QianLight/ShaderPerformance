@@ -1,0 +1,15 @@
+{
+    "group": "GMSDKConfig",
+    "libs": [
+	"libbz2.tbd"
+    ],
+    "frameworks": [],
+    "embed_binaries": [],
+    "headerpaths": [],
+    "files": [
+    ],
+    "folders": [],
+    "excludes": [],
+    "compiler_flags": [],
+    "linker_flags": ["-ObjC"],
+}

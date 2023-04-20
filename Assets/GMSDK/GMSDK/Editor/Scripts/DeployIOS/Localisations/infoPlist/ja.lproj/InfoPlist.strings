@@ -1,0 +1,14 @@
+/* Localized versions of Info.plist keys */
+"NSMicrophoneUsageDescription" = "マイクへのアクセスを許可して、音声メッセージを送信します。";
+"NSLocationWhenInUseUsageDescription" = "位置情報サービスへのアクセスを許可して、特殊の状況下で位置を取得します。";
+"NSPhotoLibraryUsageDescription" = "写真へのアクセスを許可してシェアします。";
+"NSPhotoLibraryAddUsageDescription" = "写真へのアクセスを許可して、画像を保存します。";
+"NSCameraUsageDescription" = "カメラへのアクセスを許可して、シェアします。";
+"NSContactsUsageDescription" = "連絡先へのアクセスを許可して、フレンドのおすすめ機能を使用します。";
+"NSUserTrackingUsageDescription" = "この権限はデバイスの識別とサービス体験やセキュリティ向上のみに使われます。他のアプリやサイトでの個人情報を取得できません。";
+"NSLocationAlwaysUsageDescription" = "位置情報サービスへのアクセスを許可します。";
+"NSCalendarsUsageDescription" = "カレンダーへのアクセスを許可します。";
+"NSRemindersUsageDescription" = "リマインダーへのアクセスを許可します。";
+"NSSpeechRecognitionUsageDescription" = "音声認識へのアクセスを許可します。";
+"NSSiriUsageDescription" = "Siriモジュールへのアクセスを許可します。";
+"NSFaceIDUsageDescription" = "FaceIDへのアクセスを許可します。";

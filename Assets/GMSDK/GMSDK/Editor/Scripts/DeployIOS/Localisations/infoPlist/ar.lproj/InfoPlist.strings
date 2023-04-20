@@ -1,0 +1,14 @@
+/* Localized versions of Info.plist keys */
+"NSMicrophoneUsageDescription" = "قم بتمكين الوصول إلى الميكروفون لإرسال رسائل صوتية.";
+"NSLocationWhenInUseUsageDescription" = "قم بتمكين خدمة الموقع لمساعدتنا في تقديم الخدمات المتعلقة بالموقع.";
+"NSPhotoLibraryUsageDescription" = "قم بتمكين الوصول إلى مكتبة الصور الخاصة بك لمشاركة الصور على وسائل التواصل الاجتماعي.";
+"NSPhotoLibraryAddUsageDescription" = "قم بتمكين الوصول إلى مكتبة الصور لحفظ الصور التي تريدها. ";
+"NSCameraUsageDescription" = "قم بتمكين الوصول إلى الكاميرا لالتقاط الصور وتسجيل مقاطع الفيديو.";
+"NSContactsUsageDescription" = "قم بتمكين الوصول إلى دليل العناوين لتحديد على أصدقائك الذين يلعبون هذه اللعبة أيضًا.";
+"NSUserTrackingUsageDescription" = "يُرجى الاطمئنان إلى أنه لا يمكننا الدخول على خصوصيتك عبر التطبيقات الأخرى، حيث ان يتم استخدام هذا الإذن فقط لتحديد الجهاز ولضمان أمان الخدمة وتحسين تجربة العب";
+"NSLocationAlwaysUsageDescription" = "قم بتشغيل في الخلفية للاستمتاع الميزات المتقدمة.";
+"NSCalendarsUsageDescription" = "تحتاج الوصول إلى التقويم للاستمتاع هذه الميزة ";
+"NSRemindersUsageDescription" = " اسمح لـنا بإرسال إشعارات إليك";
+"NSSpeechRecognitionUsageDescription" = "اسمح لنا باستخدام التعرف على الكلام.";
+"NSSiriUsageDescription" = "السماح بالتفاعل مع Siri.";
+"NSFaceIDUsageDescription" = "اسمح لنا باستخدام Face ID للتحقق من هويتك.";

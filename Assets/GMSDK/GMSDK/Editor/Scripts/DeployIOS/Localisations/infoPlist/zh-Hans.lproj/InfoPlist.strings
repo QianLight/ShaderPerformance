@@ -1,0 +1,14 @@
+/* Localized versions of Info.plist keys */
+"NSMicrophoneUsageDescription" = "申请麦克风权限，用于发送语音消息";
+"NSLocationWhenInUseUsageDescription" = "申请定位信息，用于特殊情况下获取粗略定位";
+"NSPhotoLibraryUsageDescription" = "申请访问相册，用于社交分享";
+"NSPhotoLibraryAddUsageDescription" = "申请存储图片到相册，用于社交分享";
+"NSCameraUsageDescription" = "申请拍摄权限，用于社交分享";
+"NSContactsUsageDescription" = "需要您的通讯录权限，进行好友推荐";
+"NSUserTrackingUsageDescription" = "请放心，我们无法获取你在其他应用内的隐私，开启权限仅用于标识设备并保障服务安全与提升游戏体验";
+"NSLocationAlwaysUsageDescription" = "获取持续使用位置隐私权限";
+"NSCalendarsUsageDescription" = "获取日历读取隐私权限";
+"NSRemindersUsageDescription" = "获取添加提醒隐私权限";
+"NSSpeechRecognitionUsageDescription" = "获取语音识别隐私权限";
+"NSSiriUsageDescription" = "获取Siri模块隐私权限";
+"NSFaceIDUsageDescription" = "获取FaceID使用隐私权限";

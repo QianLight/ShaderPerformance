@@ -1,0 +1,378 @@
+<key>CFBundleIdentifier</key>
+    <string>com.zxgn.gsdk</string>
+<key>CFBundleDisplayName</key>
+    <string>bytesdk</string>
+<key>CFBundleURLTypes</key>
+<array>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLName</key>
+			<string>toutiao</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>tt36726cde40f34a</string>
+			</array>
+		</dict>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLName</key>
+			<string>douyin</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>aw23de2a2b443d0f</string>
+			</array>
+		</dict>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLName</key>
+			<string>huoshan</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>hsdba1cg7vxuyhyk</string>
+			</array>
+		</dict>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLName</key>
+			<string>xiguaopen</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>xgiazh1nyqvb7meb</string>
+			</array>
+		</dict>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLName</key>
+			<string>tencentApiIdentifier</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>tencent101640741</string>
+			</array>
+		</dict>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLName</key>
+			<string>weixin</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>wx463174d38b672a3c</string>
+			</array>
+		</dict>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLName</key>
+			<string>weibo</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>wb1750597832</string>
+			</array>
+		</dict>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLName</key>
+			<string>own</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>snssdklive1781</string>
+			</array>
+		</dict>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLName</key>
+			<string>own</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>snssdk1781</string>
+			</array>
+		</dict>
+</array>
+<key>LSApplicationQueriesSchemes</key>
+<array>
+		<string>toutiaoopensdk</string>
+		<string>douyinopensdk</string>
+		<string>douyinopensdksm</string>
+		<string>huoshanopensdk</string>
+		<string>xiguaopensdk</string>
+		<string>snssdk32</string>
+		<string>wechat</string>
+		<string>weixin</string>
+		<string>weixinULAPI</string>
+		<string>sinaweibosso.com.ss.iphone.article.news</string>
+		<string>sinaweibosso.ss.essay.joke</string>
+		<string>sinaweibosso</string>
+		<string>sinaweibo</string>
+		<string>sinaweibohd</string>
+		<string>sinaweibohdsso</string>
+		<string>weibosdk</string>
+		<string>weibosdk2.5</string>
+		<string>weibo</string>
+		<string>douyinsharesdk</string>
+		<string>awemesso</string>
+		<string>snssdk1128</string>
+		<string>mqqsecure</string>
+		<string>wtloginmqq2</string>
+		<string>mqqopensdkapiV3</string>
+		<string>mqqwpa</string>
+		<string>mqqOpensdkSSoLogin</string>
+		<string>mqq</string>
+		<string>mqqapi</string>
+		<string>mqqopensdkapiV2</string>
+		<string>mqzoneopensdk</string>
+		<string>mqzoneopensdkapi</string>
+		<string>mqzoneopensdkapi19</string>
+		<string>mqzoneopensdkapiV2</string>
+		<string>mqqOpensdkSSoLogin</string>
+		<string>mqzone</string>
+</array>
+<key>GameConfig</key>
+<dict>
+				<key>usePacketChannel</key>
+				<true/>
+		<key>appId</key>
+		<string>1781</string>
+		<key>appName</key>
+		<string>bytesdk</string>
+		<key>gsdk_init_timeout</key>
+		<real>30</real>
+		<key>LoginItems</key>
+		<array>
+			<dict>
+				<key>key</key>
+				<string>tt36726cde40f34a</string>
+				<key>platformId</key>
+				<string>485</string>
+				<key>type</key>
+				<string>tt</string>
+				<key>friend_permission</key>
+				<true/>
+			</dict>
+			<dict>
+				<key>key</key>
+				<string>aw23de2a2b443d0f</string>
+				<key>platformId</key>
+				<string>486</string>
+				<key>type</key>
+				<string>awe</string>
+				<key>friend_permission</key>
+				<true/>
+				<key>relationFollow_permission</key>
+				<true/>
+				<key>aweme_relation_follow_default_check</key>
+				<true/>
+				<key>video_permission</key>
+				<true/>
+				<key>realNameAuth_permission</key>
+				<true/>
+				<key>mobile_permission</key>
+				<true/>
+			</dict>
+			<dict>
+				<key>key</key>
+				<string>hsdba1cg7vxuyhyk</string>
+				<key>platformId</key>
+				<string>1400</string>
+				<key>type</key>
+				<string>huoshan</string>
+			</dict>
+			<dict>
+				<key>key</key>
+				<string>xgiazh1nyqvb7meb</string>
+				<key>platformId</key>
+				<string>1517</string>
+				<key>type</key>
+				<string>ixigua</string>
+			</dict>
+			<dict>
+				<key>platformId</key>
+				<string>589</string>
+				<key>type</key>
+				<string>apple</string>
+			</dict>
+		</array>
+		<key>phoneOperator</key>
+		<array>
+			<dict>
+				<key>key</key>
+				<string>300011944594</string>
+				<key>secret</key>
+				<string>3E810C7B7A48FDB7FBA81BABE9AA9CA4</string>
+				<key>name</key>
+				<string>mobile</string>
+			</dict>
+			<dict>
+				<key>key</key>
+				<string>8236416728</string>
+				<key>secret</key>
+				<string>KQfHDXWnlLCdZ7kseqvqdrMfa4rT8iXq</string>
+				<key>name</key>
+				<string>telecom</string>
+			</dict>
+			<dict>
+				<key>key</key>
+				<string>99166000000000001437</string>
+				<key>secret</key>
+				<string>90958b7f6d6b48e55e2599f0cf785718</string>
+				<key>name</key>
+				<string>union</string>
+			</dict>
+		</array>
+<key>DeepLink</key><dict><key>host</key><string>https://i.snssdk.com/luckycat/share_api/v1/</string><key>schemeList</key><array><string>deeplink_test</string><string>hparents</string><string>snssdk1781</string></array></dict><key>rtc_init_appId</key>
+<string>5c9099fa685f7c0032f4e6ce</string>
+	<key>ATTPopUpConfig</key>
+	<dict>
+			<key>useCustomCallTiming</key>
+			<false/>
+			<key>useFullCustomView</key>
+			<false/>
+		<key>CoverView</key>
+		<dict>
+			<key>coverContentColor</key>
+			<string>0x0000FF</string>
+			<key>coverAlpha</key>
+			<real>0.5</real>
+			<key>coverContent</key>
+			<string>「测试」IDFA仅用于提供更契合您兴趣的信息广告与安全风控，以尽量减少无关信息广告对您的打扰。该授权无法使我们获取你在其他App和网站的隐私信息。您也可以拒绝授权，但是信息广告的相关性会下降。</string>
+			<key>needCover</key>
+			<true/>
+		</dict>
+	</dict>
+		<key>sharePanelID</key>
+		<string>1781_game_1</string>		<key>sharePanelCoverAlpha</key>
+		<string>0.3</string>		<key>ShareItems</key>
+		<array>
+			<dict>
+				<key>key</key>
+				<string>101640741</string>
+				<key>source</key>
+				<string>qq</string>
+				<key>universal</key>
+				<string>https://gsdk.snssdk.com/qq_conn/101640741</string>
+			</dict>
+			<dict>
+				<key>key</key>
+				<string>101640741</string>
+				<key>source</key>
+				<string>qzone</string>
+				<key>universal</key>
+				<string>https://gsdk.snssdk.com/qq_conn/101640741</string>
+			</dict>
+			<dict>
+				<key>key</key>
+				<string>wx463174d38b672a3c</string>
+				<key>source</key>
+				<string>wechat</string>
+				<key>universal</key>
+				<string>https://gsdk.snssdk.com/gsdk/</string>
+			</dict>
+			<dict>
+				<key>key</key>
+				<string>wx463174d38b672a3c</string>
+				<key>source</key>
+				<string>wechatTimeline</string>
+				<key>universal</key>
+				<string>https://gsdk.snssdk.com/gsdk/</string>
+			</dict>
+			<dict>
+				<key>key</key>
+				<string>1750597832</string>
+				<key>source</key>
+				<string>weibo</string>
+			</dict>
+			<dict>
+				<key>key</key>
+				<string>aw23de2a2b443d0f</string>
+				<key>source</key>
+				<string>awe</string>
+			</dict>
+			<dict>
+				<key>key</key>
+				<string>aw23de2a2b443d0f</string>
+				<key>source</key>
+				<string>aweim</string>
+			</dict>
+		</array>
+		<key>ReplayConfig</key>
+		<dict>
+			<key>ReplayAppID</key>
+			<string>312620</string>
+			<key>ReplayToken</key>
+			<string>bd3639c8e3e0bf69f79b13d8f423497131e15ef2dfb5e8ecef94135f743db8a7def34da38e6776cbf3b8e9ac01b2fd3344ee1ecbe0eeaf9c3f5293d4bc46cdb9</string>
+		</dict><key>IMConfig</key>
+	<dict>
+<key>IMAppID</key>
+	<string>1781</string>
+<key>IMFrontierMethodKey</key>
+	<integer>1</integer>
+<key>IMFrontierServiceKey</key>
+	<integer>2</integer>
+<key>IMFrontierBOEBaseURL</key>
+	<string>ws://frontier-boe.bytedance.net/ws/v2</string>
+<key>IMFrontierBaseURL</key>
+	<string>wss://frontier.snssdk.com/ws/v2</string>
+<key>IMFrontierID</key>
+	<string>89</string>
+<key>IMHTTPBaseURL</key>
+	<string>https://imapi2.snssdk.com/</string>
+<key>IMHTTPBOEBaseURL</key>
+	<string>http://imapi.snssdk.com/</string>
+<key>IMFrontierAppKey</key>
+	<string>e0f82475ab9dbf5717d18b4a9c0d7fd0</string>
+<key>IMInboxes</key>
+	<array>
+	<string>0</string>
+<string>10</string>
+</array>
+    </dict>
+    <key>appleStoreAppId</key>
+    <string>id529092160</string>
+    <key>skin</key>
+    <string>purple</string>
+				<key>isNeedAntiAddiction</key>
+				<true/>
+				<key>isNeedServiceMouth</key>
+				<true/>
+				<key>enableSDKAuthPoping</key>
+				<true/>
+		<key>AdConfig</key>
+		<dict>
+			<key>PangleAppID</key>
+			<string>5177848</string>
+		</dict>
+		</dict>
+<key>SKAdNetworkItems</key>
+<array>
+	<dict>
+		<key>SKAdNetworkIdentifier</key>
+		<string>238da6jt44.skadnetwork</string>
+	</dict>
+	<dict>
+		<key>SKAdNetworkIdentifier</key>
+		<string>x2jnk7ly8j.skadnetwork</string>
+	</dict>
+	<dict>
+		<key>SKAdNetworkIdentifier</key>
+	<string>f7s53z58qe.skadnetwork</string>
+	</dict>
+</array><key>NSMicrophoneUsageDescription</key>
+	<string>需要授权麦克风权限（SDK Demo）</string>
+<key>NSPhotoLibraryUsageDescription</key>
+	<string>方便您获取图片，上传发布照片视频（SDK Demo）</string>
+<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>方便您保存图片，上传发布照片视频（SDK Demo）</string>
+<key>NSCameraUsageDescription</key>
+	<string>方便您拍摄，上传发布照片视频</string>
+<key>NSContactsUsageDescription</key>
+	<string>需要您的通讯录权限，进行好友推荐</string>
+<key>NSUserTrackingUsageDescription</key>
+	<string>请放心，我们无法获取你在其他应用内的隐私，开启权限仅用于标识设备并保障服务安全与提升游戏体验</string>
+<key>NSLocationWhenInUseUsageDescription</key>
+	<string>用于测试locationSDK需要用到定位权限（SDK Demo）</string>

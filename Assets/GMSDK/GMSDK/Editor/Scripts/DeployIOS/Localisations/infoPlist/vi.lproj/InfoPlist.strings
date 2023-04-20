@@ -1,0 +1,16 @@
+/* Localized versions of Info.plist keys */
+"NSMicrophoneUsageDescription" = "Bật quyền truy cập micrô để gửi tin nhắn thoại.";
+"NSLocationWhenInUseUsageDescription" = "Bật dịch vụ vị trí để giúp chúng tôi cung cấp các dịch vụ liên quan đến vị trí.";
+"NSPhotoLibraryUsageDescription" = "Cho phép truy cập vào thư viện ảnh của bạn để cho phép chia sẻ ảnh lên mạng xã hội.";
+"NSPhotoLibraryAddUsageDescription" = "Cho phép truy cập vào thư viện ảnh của bạn để lưu ảnh bạn thích.";
+"NSCameraUsageDescription" = "Cho phép truy cập vào máy ảnh để chụp ảnh và quay video.";
+"NSContactsUsageDescription" = "Điều này cho phép chúng tôi tìm bạn bè của bạn cũng đang chơi trò chơi này.";
+"NSUserTrackingUsageDescription" = "Bạn hoàn toàn có thể yên tâm, chúng tôi không thể lấy thông tin cá nhân của bạn ở các ứng dụng khác. Bật quyền truy cập chỉ dùng để nhận biết thiết bị và đảm bảo an toàn dịch vụ, nâng cao trải nghiệm trò chơi.";
+"NSLocationAlwaysUsageDescription" = "Bật vị trí nền để tận hưởng các tính năng nâng cao.";
+"NSCalendarsUsageDescription" = "Tính năng này cần truy cập vào lịch của bạn.";
+"NSRemindersUsageDescription" = "Cho phép chúng tôi gửi thông báo cho bạn.";
+"NSSpeechRecognitionUsageDescription" = "Cho phép chúng tôi sử dụng Nhận dạng giọng nói.";
+"NSSiriUsageDescription" = "Cho phép tương tác với Siri.";
+"NSFaceIDUsageDescription" = "Cho phép chúng tôi sử dụng Face ID để xác minh danh tính của bạn.";
+
+

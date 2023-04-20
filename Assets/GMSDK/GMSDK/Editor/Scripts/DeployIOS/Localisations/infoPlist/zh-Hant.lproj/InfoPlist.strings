@@ -1,0 +1,14 @@
+/* Localized versions of Info.plist keys */
+"NSMicrophoneUsageDescription" = "開啟麥克風訪問權限以發送語音消息";
+"NSLocationWhenInUseUsageDescription" = "開啟定位服務以幫助我們提供位置相關的服務";
+"NSPhotoLibraryUsageDescription" = "允許訪問您的照片庫以允許將照片共享到社交媒體";
+"NSPhotoLibraryAddUsageDescription" = "允許訪問您的照片庫以保存您喜歡的照片";
+"NSCameraUsageDescription" = "允許使用相機拍照和錄製視頻";
+"NSContactsUsageDescription" = "允許訪問通訊錄，使我們可以找到也在玩此遊戲的朋友";
+"NSUserTrackingUsageDescription" = "請放心，我們無法獲取你在其他應用內的隱私，開啟權限僅用於標識設備並保障服務安全與提升遊戲體驗";
+"NSLocationAlwaysUsageDescription" = "獲取持續使用位置隱私權限";
+"NSCalendarsUsageDescription" = "此功能需要訪問您的日曆";
+"NSRemindersUsageDescription" = "允許我們向您發送通知";
+"NSSpeechRecognitionUsageDescription" = "允許我們使用語音識別";
+"NSSiriUsageDescription" = "允許我們與Siri互動";
+"NSFaceIDUsageDescription" = "允許我們使用Face ID驗證您的身份";

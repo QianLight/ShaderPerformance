@@ -1,0 +1,21 @@
+{
+	"app": {
+		"app_id": "7002",
+		"app_name": "piegame",
+		"display_name": "piegame",
+		"package_name": "com.pie.piegame",
+		"window_class_name": "UnityWndClass",
+		"is_need_anti_addiction": true,
+		"download_source": ""
+	},
+	"loginWayShow": {
+		"scan": true,
+		"mobile_code": true,
+		"mobile_pw": true,
+		"douyin": false
+	},
+	"channel": {
+		"douyin_client_key": "",
+		"douyin_platform_appid": ""
+	}
+}

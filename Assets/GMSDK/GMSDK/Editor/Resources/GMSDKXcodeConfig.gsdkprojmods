@@ -1,0 +1,19 @@
+{
+    "group": "GMSDKConfig",
+    "libs":[ 
+    ],
+    "frameworks": [
+        
+	],
+    "embed_binaries": [],
+    "headerpaths": [],
+    "files": [
+        "/Volumes/bd-jqdisk/repos/gsdk/un/xcode/GMSDK/app.entitlements",
+        "/Volumes/bd-jqdisk/repos/gsdk/un/xcode/GMSDK/gsdk.json",
+        "/Volumes/bd-jqdisk/repos/gsdk/un/xcode/GMSDK/dSYMUpload.sh",
+    ],
+    "folders": [],
+    "excludes": [],
+    "compiler_flags": [],
+    "linker_flags": ["-ObjC"],
+}

@@ -1,0 +1,15 @@
+/* Localized versions of Info.plist keys */
+"NSMicrophoneUsageDescription" = "อนุญาตให้แอปสามารถบันทึกเสียงด้วยไมโครโฟน";
+"NSLocationWhenInUseUsageDescription" = "เปิดใช้งานบริการระบุตำแหน่งในกรณีพิเศษ";
+"NSPhotoLibraryUsageDescription" = "อนุญาตให้แอปเข้าถึงรูปภาพของคุณ เพื่อแบ่งปันไปยังโซเชียลมีเดีย";
+"NSPhotoLibraryAddUsageDescription" = "อนุญาตให้แอปบันทึกรูปภาพ เพื่อแบ่งปันไปยังโซเชียลมีเดีย";
+"NSCameraUsageDescription" = "อนุญาตให้แอปถ่ายภาพและวิดีโอด้วยกล้องถ่ายรูป เพื่อแบ่งปันไปยังโซเชียลมีเดีย";
+"NSContactsUsageDescription" = "ขอเข้าถึงรายชื่อผู้ติดต่อของคุณ เพื่อค้นหาเพื่อนที่เล่นเกมเดียวกัน";
+"NSUserTrackingUsageDescription" = "โปรดมั่นใจได้ว่า ทางเราไม่สามารถดูข้อมูลส่วนตัวของท่านจากช่องทางอื่นๆได้ การอนุญาติครั้งนี้จะใช้เพื่อการระบุตั้งค่าอุปกรณ์เพิ่มความปลอดภัยในการให้บริการเท่านั้น";
+"NSLocationAlwaysUsageDescription" = "อนุญาตให้แอปเข้าถึงตำแหน่งของคุณตลอดเวลา";
+"NSCalendarsUsageDescription" = "อนุญาตให้แอปอ่านเหตุการณ์บนปฏิทินและรายละเอียด";
+"NSRemindersUsageDescription" = "อนุญาตให้แอปส่งการแจ้งเตือน";
+"NSSpeechRecognitionUsageDescription" = "อนุญาตให้แอปใช้บริการการรู้จักเสียง";
+"NSSiriUsageDescription" = "อนุญาตให้แอปใช้งาน Siri";
+"NSFaceIDUsageDescription" = "อนุญาตให้แอปใช้งาน Face ID เพื่อยืนยันตัวตน";
+

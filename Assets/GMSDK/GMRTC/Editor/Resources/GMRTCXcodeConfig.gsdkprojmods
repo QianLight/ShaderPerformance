@@ -1,0 +1,15 @@
+{
+    "group": "GMSDKConfig",
+    "libs": [
+
+    ],
+    "frameworks": [],
+    "embed_binaries": [],
+    "headerpaths": [],
+    "files": [
+    ],
+    "folders": [],
+    "excludes": [],
+    "compiler_flags": [],
+    "linker_flags": ["-ObjC"],
+}

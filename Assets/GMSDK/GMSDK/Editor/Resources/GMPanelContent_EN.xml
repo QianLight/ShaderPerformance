@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="Common_Param_Declaration">The following configs are only for the specified platform if marked with
+        "Android/iOS-Specific", otherwise shared by both platforms. You can use "|" separated strings to indicate
+        different configs in the same field if needed ("AndroidConfig|iOSconfig", Android first and iOS second).
+    </string>
+    <string name="Common_App_Display_Name_Tips">App Name</string>
+    <string name="Common_Title">General</string>
+    <string name="Common_App_English_Name">App's English name provided by ByteDance</string>
+    <string name="Common_App_Package_Name">Android APK package name</string>
+    <string name="Common_App_BundleID">iOS Bundle ID</string>
+    <string name="Common_Init_Timeout">Initialization timeout (milliseconds)</string>
+    <string name="Common_Init_DROptimization">Initialization Optimization</string>
+    <string name="Common_Account_Init_Timeout">Initialization timeout (When block-free init is enabled)</string>
+    <string name="Common_Init_DRCount">Initialization retry count</string>
+    <string name="Common_Game_Security">Game security secondary channel</string>
+    <string name="Common_Need_Modify_Info_Plist">GSDK configure info.plist according to config inputs.(Yes by default)
+    </string>
+    <string name="Common_Override_Plist">On: Overwrite content when GSDK modifies info.plist; Off: Ignore and skip
+    </string>
+    <string name="Common_Server_Region">GSDK Server Location</string>
+    <string name="Common_Server_Region_Tips">10 - Singapore; 20 - US-East</string>
+    <string name="Common_Skin">GSDK UI theme color (purple as default)</string>
+    <string name="Common_Need_Antiaddiction">Enable client-side anti-addiction (isNeedAntiAddiction)</string>
+    <string name="Common_Need_Service_Mouth">Show custom service link in realname dialog (isNeedServiceMouth)</string>
+    <string name="Common_Screen_Orientation">Screen orientation</string>
+    <string name="Common_Main_Activity">mainActivity</string>
+    <string name="Common_Main_Activity_Tips">Full name of the game entrance activity</string>
+    <string name="Common_Has_Splash">Need Splash screen</string>
+    <string name="Common_Splash_Interval">Splash screen display time in milliseconds (splashInterval)</string>
+    <string name="Common_Launch_Trace">Enable performance monitoring (launchTrace)</string>
+    <string name="Common_Launch_Trace_Tips">Enable startup time cost analysis with default scheme (False by default)
+    </string>
+    <string name="Common_Clean">Lite version</string>
+    <string name="Common_Clean_Tips">Enable Lite version to remove login with ByteDance Apps</string>
+    <string name="Common_Dsym_Auto_Upload">Enable Dsym file auto upload (build process might be longer)</string>
+    <string name="Common_Dsym_Upload_Key">Please get Key from GPM platform.</string>
+    <string name="Common_Project_Target_Name">Unity project name. Please ignore if it is not modified.</string>
+    <string name="Common_FrameWork_Target_Name">Unity dynamic library name, fill in if any</string>
+    <string name="Common_Associated_Domains_List_Size">Associated Domains List Size in Xcode Project (for App launch
+        with Universal Link)
+    </string>
+    <string name="Common_Associated_Domains_List">Associated Domains List in Xcode Project (for App launch with
+        Universal Link)
+    </string>
+    <string name="Common_OwnUrl_Scheme_List_Size">General URL schemes list size (CFBundleURLType) for external
+        invocation
+    </string>
+    <string name="Common_OwnUrl_Scheme_List">General URL scheme list for external invokes</string>
+    <string name="Common_Application_Queries_Schemes_List_Size">APPSchemes list size (LSApplicationQueriesSchemes) that
+        allows detection
+    </string>
+    <string name="Common_Application_Queries_Schemes_List">List of APPSchemes that allow detection
+        (LSApplicationQueriesSchemes)
+    </string>
+    <string name="Common_Mobile_Provision">Select mobileProvision file (with MacOS)</string>
+    <string name="Common_Debug_Mobile_Provision">[Debug Env] Select the mobileProvision file (with MacOS)
+    </string>
+    <string name="Common_Provisioning_Guid">provisioning GUID, automatically generated according to the file</string>
+    <string name="Common_TeamID">Team ID, automatically generated according to the file</string>
+    <string name="Common_Cert_Name">The name of the certificate, automatically generated according to the file</string>
+    <string name="Common_Debug">[Debug Env]</string>
+    <string name="Common_Download_From">Download from</string>
+    <string name="Common_MagicBox">Import MagicBox (for testing only! please remove it in prod env)</string>
+    <string name="Common_Skad_Endpoint_Url">Set SKAdNetwork Report Endpoint (NSAdvertisingAttributionReportEndpoint)
+    </string>
+    <string name="Common_Skad_Endpoint_Url_Tips">Apple will send SKAdNetwork’s attribution data directly to this
+        endpoint.
+        It helps aggregate SKAN attribution data and prevent fraud.
+    </string>
+    <string name="Common_Pull_Param_Gdev">Retrieve configs from GDev Platform</string>
+    <string name="Common_Manifest_tips">(Please add the code provided on GDev Platform into `AndroidManifest.xml`)</string>
+    <string name="Common_Doc_tips">(Please configure according to information provided on GDev Platform)</string>
+    <string name="Common_Param_Pulling">Retrieving configs, please wait...</string>
+    <string name="Common_Param_Pull_Success">Configs have been retrieved</string>
+    <string name="Common_Param_Pull_Error">Failed to retrieve configs</string>
+    <string name="Common_Tips">Tips</string>
+    <string name="Common_Conditions_Use">We recommend new projects to use this feature. If you've already completed configurations before, please ignore it.</string>
+    <string name="Common_Pull">Retrieve</string>
+    <string name="Common_Cancel">Cancel</string>
+    <string name="Common_Request_Cloud_NO_DB_Default">Store remote config info in luffy? False by default</string>
+    <string name="Common_Settings_Default_Tips">Backup config when Settings retrieval fails</string>
+    <string name="Panel_Ios_Specific">iOS-Specific Settings</string>
+    <string name="Panel_Android_Specific">Android-Specific Settings</string>
+    <string name="Privacy_Title">Permission Settings (Please check wanted items and fill in desc)</string>
+    <string name="Privacy_Permission_Pop">Enable GSDK permission request popups</string>
+    <string name="Privacy_Need_Protection">(Mainland China only) Personal data protection guideline pop-up</string>
+    <string name="Privacy_Microphone_Permisson">Microphone Usage</string>
+    <string name="Privacy_Photo_Library">Photo Library Usage</string>
+    <string name="Privacy_Stored_Pictures">Photo Library Add Usage</string>
+    <string name="Privacy_Camera">Camera Usage</string>
+    <string name="Privacy_Contacts">Contacts Usage</string>
+    <string name="Privacy_Tracking">User Tracking Usage (IDFA)</string>
+    <string name="Privacy_Location_Inuse_Usage">Location When In Use Usage</string>
+    <string name="Privacy_Location_Always_Usage">Location Always Usage</string>
+    <string name="Privacy_Calendars">Calendars Usage</string>
+    <string name="Privacy_Reminders">Reminders Usage</string>
+    <string name="Privacy_Speech_Recognition">Speech Recognition Usage</string>
+    <string name="Privacy_Siri">Siri Usage</string>
+    <string name="Privacy_FaceID">FaceID Usage</string>
+    <string name="Privacy_Idfa">IDFA Acquisition Request</string>
+    <string name="Privacy_Idfa_Enable">Enable IDFA acquisition request pop-up</string>
+    <string name="Privacy_Idfa_Pop">Customize pop-up timing</string>
+    <string name="Privacy_Idfa_Pop_Style">Customize pop-up style</string>
+    <string name="Privacy_Idfa_Pop_Ui">Customize prompt UI provided by GSDK</string>
+    <string name="Privacy_Idfa_Cancel_Color">'Cancel' button text color</string>
+    <string name="Privacy_Idfa_Cancel_Button_Color">'Cancel' button color</string>
+    <string name="Privacy_Idfa_Cancel_Button_Text">'Cancel' button text</string>
+    <string name="Privacy_Idfa_Confirm_Color">'Confirm' button text color</string>
+    <string name="Privacy_Idfa_Confirm_Button_Color">'Confirm' button color</string>
+    <string name="Privacy_Idfa_Confirm_Text">'Confirm' button text</string>
+    <string name="Privacy_Idfa_Text">Text</string>
+    <string name="Privacy_Idfa_Title">Title</string>
+    <string name="Privacy_Globalization_Enable">Enable permission description internationalization</string>
+    <string name="Privacy_Globalization_Enable_Tips">When internalization is enabled, you can modify multi-language Desc in 'Assets/GMSDK/GMConfigSettings/Localisation' folder
+    </string>
+    <string name="Privacy_ar">Arabic (ar)</string>
+    <string name="Privacy_de">German (de)</string>
+    <string name="Privacy_en">English (en)</string>
+    <string name="Privacy_es">Spanish (es)</string>
+    <string name="Privacy_fr">French (fr)</string>
+    <string name="Privacy_id">Indonesian (id)</string>
+    <string name="Privacy_it">Italian (it)</string>
+    <string name="Privacy_ja">Japanese (ja)</string>
+    <string name="Privacy_ko">Korean (ko)</string>
+    <string name="Privacy_pt">Portuguese (pt)</string>
+    <string name="Privacy_ru">Russian (ru)</string>
+    <string name="Privacy_th">Thai (th)</string>
+    <string name="Privacy_tr">Turkish (tr)</string>
+    <string name="Privacy_vi">Vietnamese (vi)</string>
+    <string name="Privacy_ZHHans">Simplified Chinese (zh-Hans)</string>
+    <string name="Privacy_ZHHant">Traditional Chinese (zh-Hant)</string>
+    <string name="Privacy_Save_Globalization">Save multi-language Desc contents to
+        Assets/GMSDK/GMConfigSettings/Localisation folder
+    </string>
+    <string name="Privacy_Save_Globalization_Result">Status of saving multi-language Desc: </string>
+    <string name="Login_Title">Login Configs</string>
+    <string name="Login_TouTiao_Enable">Enable Toutiao Login</string>
+    <string name="Login_TouTiao_PlatformId">ToutiaoPlatformId</string>
+    <string name="Login_TouTiao_PlatformKey">ToutiaoPlatformKey</string>
+    <string name="Login_TouTiao_Friend">Enable Toutiao friends list access (toutiaoFriendPermission)</string>
+    <string name="Login_DouYin_Enable">Enable Douyin Login</string>
+    <string name="Login_DouYin_PlatformId">DouyinPlatformId</string>
+    <string name="Login_DouYin_PlatformKey">DouyinPlatformKey</string>
+    <string name="Login_DouYin_Friend">Enable Douyin friends list access (awemeFriendPermission)</string>
+    <string name="Login_DouYin_Video">Enable Douyin video content access when linked (awemeVideoListDataPermission)
+    </string>
+    <string name="Login_DouYin_Relation_Follow">Enable following Douyin official account
+        permission(awemeRelationFollow)
+    </string>
+    <string name="Login_DouYin_Relation_Follow_Default">Check "Follow Douyin Official Account" by default (awemeRelationFollowDefaultCheck)
+    </string>
+    <string name="Login_DouYin_RealName">Enable Douyin real-name info sync 
+        (awemeDyRealNamePermission)
+    </string>
+    <string name="Login_DouYin_Mobile">Enable Douyin mobile phone number sync
+        (awemeMobilePermission)
+    </string>
+    <string name="Login_DouYin_Video_Create">Enable Douyin video create, Douyin silent sharing depends on
+        this permission (awemeVideoCreate) (Android)
+    </string>
+    <string name="Login_DouYin_FriendList">Enable Douyin friends list access (new) (awemeFriendListPermission)</string>
+    <string name="Login_DouYin_Card">Enable Douyin namecard permission(awemeCardPermission)</string>
+    <string name="Login_DouYin_Relation_User_Follow">Enable following specific users(awemeRelationUserFollowPermission)</string>
+    <string name="Login_DouYin_User_External_Data_Permission">Enable access to Douyin follower count(awemeUserExternalDataPermission)</string>
+    <string name="Login_Apple_Title">Sign in with Apple</string>
+    <string name="Login_Apple_Enable">Enable Sign in with Apple</string>
+    <string name="Login_Apple_PlatformId">Apple PlatformId</string>
+    <string name="Login_HuoShan_Enable">Enable Douyin Volcano Edition Login</string>
+    <string name="Login_HuoShan_PlatformId">Douyin Volcano Edition PlatformId</string>
+    <string name="Login_HuoShan_PlatformKey">Douyin Volcano Edition PlatformKey</string>
+    <string name="Login_XiGua_Enable">Enable Xigua Login</string>
+    <string name="Login_XiGua_PlatformId">Xigua PlatformId</string>
+    <string name="Login_XiGua_PlatformKey">Xigua PlatformKey</string>
+    <string name="Login_TapTap_Title">TapTap Login (Android only)</string>
+    <string name="Login_Taptap_Enable">Enable TapTap Login</string>
+    <string name="Login_CloudGame_Title">Cloud Game Login (Android only)</string>
+    <string name="Login_CloudGame_Enable">Enable Cloud Game</string>
+    <string name="Login_CloudGame_PlatformId">Cloud Game PlatformId</string>
+    <string name="Login_CloudGame_Package_Name">Cloud Game Application Package Name</string>
+    <string name="Login_OneKey_Title">Phone Number 1-Click Login</string>
+    <string name="Login_OneKey_CT">China Telecom Configuration</string>
+    <string name="Login_OneKey_CT_AppKey">China Telecom login AppKey</string>
+    <string name="Login_OneKey_CT_AppSecret">China Telecom login AppSecret</string>
+    <string name="Login_OneKey_CM">China Mobile Configuration</string>
+    <string name="Login_OneKey_CM_AppId">China Mobile login AppId</string>
+    <string name="Login_OneKey_CM_AppKey">China Mobile login AppKey</string>
+    <string name="Login_OneKey_CU">China Unicom Configuration</string>
+    <string name="Login_OneKey_CU_AppKey">China Unicom login AppKey</string>
+    <string name="Login_OneKey_CU_AppSecret">China Unicom login AppSecret</string>
+    <string name="Login_Need_Visitor">Display guest login entrance as local setting</string>
+    <string name="Login_Need_Visitor_Tips">When getting remote config failed, do you want to display guest login icon?
+        Yes by default
+    </string>
+    <string name="Login_Google_Enable">Enable Google Login</string>
+    <string name="Login_Facebook_Enable">Enable Facebook Login</string>
+    <string name="Login_Facebook_Friend_Tips">Enable Facebook friend list access</string>
+    <string name="Login_Line_Enable">Enable Line Login</string>
+    <string name="Login_Kakao_Enable">Enable Kakao Login</string>
+    <string name="Login_VK_Enable">Enable VK Login</string>
+    <string name="Login_Twitter_Enable">Enable Twitter Login</string>
+    <string name="Login_Tiktok_Enable">Enable TikTok Login</string>
+    <string name="Login_GooglePlay_Enable">Enable Google Play Games Login</string>
+    <string name="Login_Account_Sort">Platform display order</string>
+    <string name="Login_Account_Sort_Tips">Platform display order, separated by commas</string>
+    <string name="Login_Panel_Close">Login panel can be closed</string>
+    <string name="Login_Aoligame_Enable">Enable Aoli Cloud Gaming Login</string>
+    <string name="Login_Aoligame_PlatformId">Aoli PlatformId</string>
+    <string name="Login_Google_Services_Plist">Download GoogleService-Info.plist</string>
+    <string name="Login_Google_Services_Json">Download google-services.json</string>
+    <string name="Login_User_Info_NO_DB_Default">Store BSDK user info in luffy? False by default</string>
+    <string name="Login_Fusion_User_NO_DB_Default">Store Aggregated layer user info in luffy? False by default</string>
+    <string name="Login_priority">Local Config for login method display order (0 by default, [0,1,2,3,4]</string>
+    <string name="Pay_Title">Payment</string>
+    <string name="Pay_Tips">Google In-App Billing Key</string>
+    <string name="Share_Title">Sharing</string>
+    <string name="Share_Dim_Enable">Sharing panel transparency</string>
+    <string name="Share_Dim">Configure transparency</string>
+    <string name="Share_Dim_Tips">Value: 0~1</string>
+    <string name="Share_QQ_Enable">QQ Share</string>
+    <string name="Share_QQ_Key">QQ Share Key</string>
+    <string name="Share_QQ_Universal">QQ share Universal link</string>
+    <string name="Share_WX_Enable">WeChat Share</string>
+    <string name="Share_WX_Key">WeChat Share Key</string>
+    <string name="Share_WX_Universal">Share Universal link on WeChat</string>
+    <string name="Share_WeiBo_Enable">Share to Weibo</string>
+    <string name="Share_WeiBo_Key">Weibo Share Key</string>
+    <string name="Share_WeiBo_Universal">Share Universal link on Weibo</string>
+    <string name="Share_WeiBo_Url">Weibo Share URL</string>
+    <string name="Share_DouYin_Enable">Share to Douyin</string>
+    <string name="Share_DouYin_Key">Douyin Share Key</string>
+    <string name="Share_Tiktok_Enable">Share to TikTok</string>
+    <string name="Share_Tiktok_Key">TikTok share key</string>
+    <string name="Share_Facebook_Enable">Share to Facebook</string>
+    <string name="Share_Whatsapp_Enable">Share to WhatsApp</string>
+    <string name="Share_Instagram_Enable">Share to Instagram</string>
+    <string name="Share_Link_Enable">Share to Line</string>
+    <string name="Share_Kakao_Enable">Share to Kakao</string>
+    <string name="Share_VK_Enable">Share to VK</string>
+    <string name="Share_VKKey">VK Share Key</string>
+    <string name="Share_Messenger_Enable">Share to messenger</string>
+    <string name="Share_Twitter_Enable">Share to Twitter</string>
+    <string name="Share_Twitter_Key">Twitter share key</string>
+    <string name="Share_Twitter_Secret">Twitter share Secret</string>
+    <string name="Push_Title">Push Notification</string>
+    <string name="Push_Enable">Enable Push</string>
+    <string name="Push_AppName">App English name set for Push</string>
+    <string name="AppStore_Title">App Store Review Config (iOS)</string>
+    <string name="AppStore_ID">App Store App ID</string>
+    <string name="DeepLink_Title">DeepLink</string>
+    <string name="DeepLink_Enable">Enable DeepLink</string>
+    <string name="DeepLink_ShemeList_Size">Number of Schemes</string>
+    <string name="DeepLink_ShemeList">Configure scheme list to identify clipboard content</string>
+    <string name="DeepLink_Url">Request URL to get invitation code</string>
+    <string name="DeepLink_Host_ListSize">Number of AppLink short link domains</string>
+    <string name="DeepLink_Host_List">AppLink short link domains</string>
+    <string name="DeepLink_Host_List_Tips">Domain name of the AppLink configured on the zlink platform, used to determine whether the AppLink call is by zlink
+    </string>
+    <string name="DeepLink_Delay_Millis">Delay time (in milliseconds) for processing the clipboard content when
+        switching App between In Use and In Background
+    </string>
+    <string name="DeepLink_Delay_Value">Recommended value: 500</string>
+    <string name="DeepLink_Regex_ListSize">Set DeepLink regex list size</string>
+    <string name="DeepLink_Regex_List">Set DeepLink regex list, for referral events</string>
+    <string name="IM_Title">Instant Messaging</string>
+    <string name="IM_Enable">Enable IM function</string>
+    <string name="IM_MethodId">Frontier required service's method id</string>
+    <string name="IM_ServiceId">Frontier required service's service id</string>
+    <string name="IM_Frontier_BoeUrl">IM long link address in BOE environment</string>
+    <string name="IM_Frontier_Url">IM long link address</string>
+    <string name="IM_Inbox_Size">Number of inboxes supported by IM</string>
+    <string name="IM_Inbox">IM supported inboxes</string>
+    <string name="IM_FrontierId">Frontier required product line id</string>
+    <string name="IM_Http_Url">IM short link address</string>
+    <string name="IM_Http_BoeUrl">IM short link address in BOE environment</string>
+    <string name="IM_AppKey">Frontier AppKey</string>
+    <string name="IM_Enter_Number"> (Integer type only)</string>
+    <string name="Live_Title">Live Streaming</string>
+    <string name="Live_Enable">Enable Live Streaming</string>
+    <string name="Live_DouYin_Key">Douyin_Key (Android)</string>
+    <string name="Live_Scheme">Live Streaming Scheme (iOS)</string>
+    <string name="Live_UrlType_Id">Kh UrlType Id (iOS)</string>
+    <string name="Live_UrlType_Schema">Kh UrlScheme (iOS)</string>
+    <string name="RTC_Title">Enable RTC Voice Chat</string>
+    <string name="Adattribution_Title">Ad Attribution (Adjust, AppsFlyer, Firebase) configuration</string>
+    <string name="Adjust_Title">Adjust</string>
+    <string name="Adjust_Enable">Enable Adjust</string>
+    <string name="Appsflyer_Title">AppsFlyer</string>
+    <string name="Appsflyer_Enable">Enable AppsFlyer</string>
+    <string name="Appsflyer_Link">App Link Configs</string>
+    <string name="Firebase_Title">Firebase (iOS)</string>
+    <string name="Firebase_Google_Service_File">Select the GoogleService-Info.plist file (with MacOS)</string>
+    <string name="Firebase_Google_Service_File_Save_Result">Result:</string>
+    <string name="Firebase_Google_File_Cancel">Cancelled</string>
+    <string name="Firebase_Google_File_Saved">File has been saved</string>
+    <string name="AD_Title">Ad Monetization Configs</string>
+    <string name="AD_Pangle_Title">CSJ Ad Mediation Config</string>
+    <string name="AD_Pangle_Enable">Enable CSJ Ad Mediation</string>
+    <string name="AD_IronSource_Title">IronSouce</string>
+    <string name="AD_IronSource_Enable">Enable IronSource</string>
+    <string name="AD_AppLovin_Title">AppLovin</string>
+    <string name="AD_AppLovin_Enable">Enable AppLovin</string>
+    <string name="Thanos_Title">Thanos Configs (Android)</string>
+    <string name="Thanos_SaveSubChannel">Reserve subchannel info when updating (SaveSubChannel)</string>
+</resources>

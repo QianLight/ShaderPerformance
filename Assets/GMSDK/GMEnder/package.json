@@ -1,0 +1,8 @@
+{
+    "name": "com.zxgn.ender.unity",
+    "description": "Ender",
+    "version": "1.1.0",
+    "unity": "2018.3",
+    "displayName": "GMEnder",
+    "dependencies": {},
+}

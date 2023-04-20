@@ -1,0 +1,19 @@
+{
+    "group": "GMSDKConfig",
+    "libs": [
+    ],
+    "frameworks": [
+	],
+    "embed_binaries": [ ]
+    "headerpaths": [],
+    "files": [
+        "/Volumes/Samsung_T5/Code/Unity/BDGameDomesticSDKUnityPlugin_Alt/xcode/GMSDK/GoogleService-Info.plist",
+        "/Volumes/Samsung_T5/Code/Unity/BDGameDomesticSDKUnityPlugin_Alt/xcode/GMSDK/app.entitlements",
+        "/Volumes/Samsung_T5/Code/Unity/BDGameDomesticSDKUnityPlugin_Alt/xcode/GMSDK/gsdk.json",
+        "/Volumes/Samsung_T5/Code/Unity/BDGameDomesticSDKUnityPlugin_Alt/xcode/GMSDK/dSYMUpload.sh", 
+    ],
+    "folders": [],
+    "excludes": [],
+    "compiler_flags": [],
+    "linker_flags": ["-ObjC"],
+}

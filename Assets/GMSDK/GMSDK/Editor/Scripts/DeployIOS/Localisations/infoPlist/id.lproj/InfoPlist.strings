@@ -1,0 +1,14 @@
+/* Localized versions of Info.plist keys */
+"NSMicrophoneUsageDescription" = "Aktifkan akses mikrofon untuk mengirim pesan suara.";
+"NSLocationWhenInUseUsageDescription" = "Aktifkan layanan lokasi untuk membantu kami menyediakan layanan terkait lokasi.";
+"NSPhotoLibraryUsageDescription" = "Izinkan akses ke perpustakaan foto Anda untuk mengaktifkan berbagi foto ke media sosial.";
+"NSPhotoLibraryAddUsageDescription" = "Izinkan akses ke perpustakaan foto Anda untuk menyimpan foto yang Anda suka.";
+"NSCameraUsageDescription" = "Izinkan akses ke kamera untuk mengambil gambar dan merekam video.";
+"NSContactsUsageDescription" = "Ini memungkinkan kami menemukan teman Anda yang juga memainkan game ini.";
+"NSUserTrackingUsageDescription" = "Jangan khawatir, kami tidak dapat memperoleh informasi pribadi Anda pada aplikasi lain. Pengaktifan izin hanya digunakan untuk mengidentifikasi perangkat dan untuk memastikan keamanan layanan serta meningkatkan pengalaman bermain game.";
+"NSLocationAlwaysUsageDescription" = "Aktifkan lokasi latar belakang untuk menikmati fitur lanjutan.";
+"NSCalendarsUsageDescription" = "Fitur ini perlu mengakses kalender Anda.";
+"NSRemindersUsageDescription" = "Izinkan kami mengirimkan pemberitahuan kepada Anda.";
+"NSSpeechRecognitionUsageDescription" = "Izinkan kami menggunakan Pengenalan Ucapan.";
+"NSSiriUsageDescription" = "Izinkan interaksi dengan Siri.";
+"NSFaceIDUsageDescription" = "Izinkan kami menggunakan ID Wajah untuk memverifikasi identitas Anda.";
