@@ -1,159 +1,681 @@
 # Changelog
 
-## [1.4.6] - 2021-02-19
+## [1.8.4] - 2023-03-20
 
 ### Fixed
-- Fixed a bug where eager-compilation could pick up out-of-date global Burst menu options for compiling.
-
-## [1.4.5] - 2021-02-17
-
+- Fixed possible deadlock when compiling after domain reload
+- Fixed incorrect codegen when having multiple `try`-`finally` blocks inside another `try`-`finally` block (for example from `foreach` loops)
+- Domain completed stall when switching between debug/release scripting modes when burst compilation is needed for items in the new domain.
+- Fixed "An item with the same key has already been added" compiler error that could occur when duplicate field names were present in obfuscated assemblies
+- Fixed "Failed to find entry-points: Mono.Cecil.AssemblyResolutionException: Failed to resolve assembly" error that was displayed when Burst tried to compile an assembly that had C# compilation errors
+- Fixed code-gen issue where side-effects before a conditional throw would be ignored
+- Burst managed breakpoints might fail to work, after a domain reload.
+- Fixed that some changes made to versioned assemblies wouldn't get picked up and compiled by Burst
+- Fixed line highlight and register highlight not clearing when Burst Inspector settings change.
+- Fixed Burst compilation error relating to `UnityEngine.Assertions.Assert.Fail` when doing player builds with high stripping settings
+- Fixed a `BadImageFormatException` error that could occur in some player builds
+- Neon intrinsics: fixed default target CPU for Arm Mac Standalone builds
+- Fixed `MethodDecoderException` when trying to call `CompileFunctionPointer` on a nested static method
+- Fixed incorrect pdb path for AoT dll libraries
+- Fixed inaccurate stacktraces when throwing an exception from Burst in specific cases
+- Fixed "An item with the same key has already been added" hashing error that could occur if obfuscators changed nested type names to have the same name and different namespaces
 
 ### Added
+- Add support for ChromeOS in Unity versions 2020.3 and 2019.4.
+- Windows/ARM64 targeting support
 
 ### Removed
 
 ### Changed
-- DOTS Runtime shares the logging code path with the general case
-
-### Fixed
-- Corrected 'Enable safety checks tooltip`.
-- String interpolation issues when using Dots / Tiny runtime.
-- Fixed a very obscure bug where if you had a function-pointer that was called from another function-pointer of job, and that function-pointer happened to be compiled in a player build in the same bucket as the caller, and the no-alias cloning analysis identified that it could clone the original function-pointer to enable more aliasing optimizations, it could create a duplicate symbol error.
-- String support for DOTS Runtime required removing conditional compilation from BurstString.cs
-- Added PreserveAttribute to prevent the internal log from being stripped in il2cpp builds.
+- Changed Burst Inspector input handling so that arrow-keys can be used to select in search boxes.
+- Made Burst Inspector's target job load asynchronous.
 
 ### Known Issues
 
-## [1.4.4] - 2021-01-18
+## [1.8.3] - 2023-01-30
+
+### Added
+- Added selection of line and highlight of selected line and selected lines register usage.
+- FunctionPointer<delegate>()::Invoke usage is now checked and patched to ensure the calling convention is compatible with burst.
+- Added SIMD smell test to the Burst Inspector, highlighting ARM or x86-64 SIMD instruction differently depending on whether they work for packed or scalar inputs.
+- Added a toggle for filtering out ".Generated" jobs from the Burst Inspector target job list.
+- Added a Burst AOT setting for the kind of debug information generated for player builds
+
+### Fixed
+- Fixed AoT linking error on Windows Link based linkers when file paths (typically user names/home folders) contain non-ASCII characters.
+- Fixed ARM vector registers not being highlighted.
+- Fixed Burst Inspector sometimes throwing ArugmentOutOfRangeException when copying without color-tags from assembly that is colored.
+- Fixes error when calling direct call method from background thread without having previously called a `BurstCompiler` API from the main thread
+- Fixes "Plain Without Debug Information" outputting assembly with debug information.
+- Fixed a hashing error that could occur when a struct implements a generic interface multiple times with different generic parameters
+- An issue that could cause function pointers to point to the wrong burst function, if a domain reload occurs and a compilation started before the reload, completes soon after.
+- Fixed bug in a small set of managed fallback versions of intrinsics, where the bitwise representation of float values would not be maintained
+- Fixed player build error that could occur if the project contains an assembly whose name doesn't match the assembly filename
+- Crashes on 32bit cpus when an entry point with byvalue paramaters was called, when using dispatch (multiple supported cpu targets).
+- Fixed module verification errors when using overloaded functions as function pointers
+- Fixed an issue the definition order of overloaded methods with function pointer parameters would decide which overload was actually being used
+- Fixed compiler AccessViolationException that could occur when compiling two or more types with the same name but different source assemblies
+- Burst now updates its list of assembly paths if they change, for instance - adding packages that contain precompiled assemblies.
+- Fixed a stall that could occur at Editor shutdown
+- Fixed BC1361 error when trying to compile large static readonly arrays.
+- Fixed compilation error when using `CompileFunctionPointer` from Burst in code compiled with Roslyn on  .NET 7+
+- Fixed a `BadImageFormatException` error that could occur in DOTS Runtime builds
+- Fixed the inspector job tree view splitting jobs, with '.' in their parameters.
+- Fixed internal compiler error when implcitly converting an array to a `Span`
+- Fixed managed fallback implementation of `Sse4_2.cmpestrs`
+- "LLVM IR Optimisation Diagnostics" tab in Burst Inspector was blank if "Native Debug Mode Compilation" was enabled; this is now fixed
+- Fixed burst tree view items leading to wrong job if some jobs where hidden from view by filter or similar.
+- Fixed "Callee/caller attribute ABI did not match!" error that could occur in certain player builds when calling an entry point that had at least one struct-by-value parameter
+- Fixed namespace collision that could occur between Unity.Burst.Cecil.dll and the com.unity.nuget.mono-cecil package
+- Enum values cast to integers in a format string previously output the enum type name; now the integer value is correctly output
+- Fix Burst compilation on QNX Arm
+- Fixed visual artifact in Burst Inspector, where block of enhanced code was cut at the bottom.
+- Fixed compiler crash when invoking `FunctionPointer`s based on a generic delegate in DOTS Runtime
+- Fixed internal compiler error that occurred when creating debug metadata from certain obfuscated dlls
+- Fixed "Assertion failed on expression: "exception == SCRIPTING_NULL" errors and editor crash when the project path contained multi-byte Unicode characters
+
+### Changed
+- Changed burst inspector source location comments from "===" to either ";" or "#" depending on the given assembly kind.
+- Changed horizontal code focus in the Burst Inspector to only scroll when branches fill more than half the space
+- Changes so target job list in the Burst Inspector is a fold-able/expandable tree view, instead of a simple list.
+- Improved how optimisation remarks are displayed in the "LLVM IR Optimisation Diagnostics" tab in Burst Inspector to make them more useful
+- Burst now only generates full debug information when "Native Debug Mode Compilation" and script debug information is enabled
+
+### Removed
+
+### Known Issues
+
+## [1.8.2] - 2022-11-18
 
 
 ### Added
 
-### Removed
-
 ### Changed
 
 ### Fixed
+- Fixed an issue where sometimes the wrong body of an overloaded entrypoint would be used
+- Failing to link if ; in path
+- Fixed Burst being disabled in the Editor after changing script optimization mode (i.e. from Release to Debug or vica-versa)
+- C# Debug information was incorrectly ignored for methods that had multiple source files. This caused native debug information to be dropped for code generated methods, and prevented the disabling of burst for such methods when a managed break point was set in Unity 2022.2 or greater (see https://docs.unity3d.com/Packages/com.unity.burst@1.8/manual/debugging-profiling-tools.html).
+- Pointer addition of byte would incorrectly sign extend the byte, instead of zero extend.
+- lib_burst_generated.txt was not being output.
+- Player stripping levels higher than minimal would fail to build with burst if they used String.Formatters, String Copy, or BurstDiscard.
+- Fixed error when building player caused by calling an entrypoint method from within other Burst-compiled code
+- iOS/tvOS burst libraries are now using explicit min os version, as configured in player settings.
+- Fixed Burst AOT setting "Enable Optimizations" not being applied in player builds
+- Fixed player builds not being recompiled when changing only Burst AOT settings (and changing nothing else) in Unity 2022.2+
+- Error caused by the MonoDebuggerHandling.dll requiring VCRuntime to be installed.
+
+### Removed
+
+### Known Issues
+
+## [1.8.1] - 2022-10-12
+
+
+### Added
+- Added a custom `lld` wrapper, to save package space in transit and on disk.
+- Added hover box information for assembly instructions.
+
+### Changed
+- Upgraded Burst to use LLVM Version 14.0.6 by default, bringing the latest optimization improvements from the LLVM project.
+- Ensured our executables and libraries on macOS and Linux are stripped to reduce package size.
+- Changed how we handle domain reloads within Burst to avoid paying a 250ms cost on each domain reload when using Burst.
+- With the relaxation in Unity 2022.2 or newer that we can call `CompileFunctionPointer` from a background thread, we now use this mechanism in Burst to handle Direct Call methods, resulting in a cost saving during Domain Reload.
+- Added a categorized index of Neon intrinsics supported in Burst to the Manual
+- Changed the documentation so that it is super clear that exceptions in player builds cause the application to abort.
+
+### Fixed
+- Fixed a compiler crash that could occur with code that followed the pattern `Debug.Log($"{variable}")`
+- Compiling with line only debug information could cause a compiler crash on certain platforms
+- PDB path associated with windows player dll had the wrong filename, resulting in broken symbols.
+- Fixed documentation issues with Neon intrinsics where the comparison operation would not match the actual one
+- Fixed bug that could occur when swapping large structs by value
+- Fixed "Unable to resolve type T. Reason: Unknown." error when accessing a field of a struct referenced via a pointer behind a reference.
+- Fixed some arm64 instructions not being labelled as instructions.
+- If burst is disabled, and an assembly is changed, burst won't recompile that assembly once burst is re-enabled.
+
+### Removed
+
+### Known Issues
+
+## [1.8.0] - 2022-09-13
+
+### Added
+- Added experimental atomic and/or operations to Burst.
+
+### Changed
+- `math.fmod` in combination with a Burst job compiled with `FloatPrecision.Low` will now generate a more optimized low-precision version of the function.
+- Burst now respects the checkbox "Enable Armv9 Security Features for Arm64" in the Player settings, making Android builds generate PAC/BTI instructions if enabled.
+- In Burst AOT Settings, only the relevant CPU Architectures dropdowns for the current build target and architecture are now displayed
+- The callstack of the invalid external call is now included when reporting BC1091
+- Changed so code is focused when branch arrows are present.
+- Changed so Burst reported errors are not collapsible.
+
+### Removed
+
+### Fixed
+- An Internal Compiler Error that could occur if a function that requires a struct ret (due to ABI) has been discarded by other logic.
+- Fixed a bug with locally declared array variables in functions where storing `null` into them could cause invalid codegen.
+- Fixed a bug in Burst player builds where sufficiently complicated Bursted code could cause a deadlock deep within LLVM.
+- Fixed that UWP builds wouldn't respect the specified "Target SDK Version" and "Visual Studio Version" settings
+- Fixed Burst inspector sometimes freezing when selecting between blocks.
+- Fixed the Burst Inspector sometimes becoming unresponsive when selecting text.
+- Fixed a race condition with the Burst log timings such that previously reported results could be included in subsequently reported timings.
+- Fixed the managed fallbacks for `bzhi` and `bextr` to match what the native hardware instructions do.
+- Fixed a bug in the static readonly constant expression evaluation (what we call the IL interpreter) whereby it would not truncate unsigned integers correctly.
+- Fixed that compilation would have full debug info forced on
+- Fixed incorrect code-gen when a function is both used normally and as a function-pointer
+
+### Known Issues
+- The PDB path associated with the Windows Player dll is incorrect, resulting in broken symbols.
+
+## [1.8.0-pre.2] - 2022-08-03
+
+
+### Fixed
+- Fixed hashing bug that could occur when a function pointer type is used in a method parameter
+- Fix selection and copying of folded blocks
+- Fixed hashing error that could occur in the presence of multiple synthesized explicit interface implementations with the same name and signature
+- Fixed a compiler crash if users used `__refvalue` or `__arglist` in Burst. Neither of these are supported, but now we will nicely tell you via a compiler error that they aren't supported.
+- Fixed a compiler error when trying to acquire the function pointer of a generic function from Bursted code.
+- Fix some ARM branch instructions not being processed as such.
+- Using a function only through a C# function pointer could cause a crash
+- Whitespace changes in ILPP'd assemblies would not be detected.
+- Issue where a warning could be generated about the debug information version mismatching `warning: ignoring debug info with an invalid version (0)` during link.
+- Interface methods where not being hashed correctly for constrained types, which would result in burst failing to recompile code that had changed in an implementation class.
+- Fixed a safety check bug with `Span`/`ReadOnlySpan` and `Slice(start, length)` where if `start` + `length` was equal to the `Length` of the original span, the safety check would incorrectly report an out-of-bounds access.
+- Linking issue when exports differ only by module.
+- Disabling Burst from the command line via `--burst-disable-compilation` no longer results in Burst errors when building a player for Android
+- Corrupted binary could be produced on M1 if there was not enough space for UUID+codesign injection.
+- ;'s in paths would cause burst to fail. Note - Also requires a fix in the Editor, so if your project has ;'s in its path, the workaround is to remove the ; from the folder name for now.
+- Fixed error when compiling assemblies with spaces in their names
+- Fixed access violation race condition bug
+- Fixed a bug where static fields in generic types could in some situations be initialized with the incorrect value
+- Fixed last line in Burst Inspector not being select-able using the mouse cursor.
+- Fix error that occurs with a specific formulation of IL, using xx with an early out escape and unbalanced calculation stack. (Object reference not set to an instance of ... in CollectBlock.ToVisitOrder)
+
+### Changed
+- Changed burst inspector toggles to popup menus.
+- Removed label from burst inspector popup menu into the menu itself.
+- Used explicit namespace for UnityEditor.PackageManager.Events to avoid conflicts.
+- Improved "hashing" performance. This is the part of Burst that determines whether anything significant has changed in .NET assemblies, and therefore whether that assembly to be compiled.
+- Entry point function names weren't always included in crash callstacks; now they are
+- Search pattern from previous job is not carried over to the new.
+- Changed so block of 1 line cannot be folded in the Burst Inspector
+
+### Added
+- Setting a breakpoint in an attached managed debugger (Rider/VS Unity Debugger...) on a method that is burst compiled, will switch off the burst code path for that method, allowing it to be debugged as normal.
+- Added toggle to filter Unity tests on and off.
+- Assembly is now searchable either through `CTRL + f` or the contex menu associated with the inspector view. Search options include case sensitivity, whole word match, and regex.
+- Intrinsic support for UnsafeUtility.IsNativeContainerType<T>
+- Added an actual definition for `HPC#` in the package docs.
+- Check that calling convention is correctly set to Cdecl for functions whose addresses are taken via `ldftn`.
+- Added focus on current job in the burst inspector.
+- Added copy to burst inspector, which ignores underlying color tags.
+
+### Removed
+
+### Known Issues
+
+## [1.8.0-pre.1] - 2022-05-06
+
+
+### Changed
+- Always preserve frame pointers in Burst. This results in a neglible performance hit (less than 0.5% in benchmarks), but ensures that stack recovery for stack traces is always possible.
+- Class libraries are now built with netstandard 2.0
+- The minimum Xcode version to build for iOS, iPadOS, and tvOS with Burst is now 12.0.0.
+- Upgraded Burst to use LLVM Version 13.0.1 by default, bringing the latest optimization improvements from the LLVM project.
+- Fixed "error while hashing" message that could appear during compilation
+- Made Burst explicitly check for any compilation requests that came from `AssemblyBuilder`, and do not compile these with Burst. These exist outside the normal compilation pipeline, and Burst could not support them (but we now explicitly check for that case).
+- Made Burst's ILPP 22% faster by caching dependent assemblies that the being-processed assembly uses.
+- Changed how we process static readonly fields in static constructors such that we'll allow more computational budget per static field. This fixes the case where having too many static readonly variables in a single static constructor could fail to compile, while they would work if each was in their own static constructors.
+- Collapsed block of code in burst inspector now shows the blocks first line of code.
+- Upgraded Burst to use LLVM Version 14.0.0 by default, bringing the latest optimization improvements from the LLVM project.
+- Changed the default alignment for `SharedStatic`'s from 4 to 16.
+
+### Added
+- Branches now highlights when you hover them.
+- Branches are clickable; directing the view to the other end of the branch when clicked.
+- Added support for the `System.Runtime.CompilerServices.IsExternalInit` workaround documented [here](https://docs.unity3d.com/2022.1/Documentation/Manual/CSharpCompiler.html) into Burst when used in 2022.1+.
+- Enabled keyboard navigation in the right pane of the burst inspector.
+- Added version number to debug metadata for llvm
+- Experimental support for Armv9 SVE2 CPU target for Android
+- Added a Target Arm64 CPU setting in Burst AOT Settings for Android
+
+### Removed
+- Removed the requirement that `BurstLoader` has to initialize `BurstReflection` during a domain reload, making `BurstLoader` setup 2x faster during domain reloads.
+
+### Fixed
+- Error if install in build folder is used without ever using a regular build.
+- Fixed a performance regression with `IJobParallelFor` where vectorization didn't happen for cases where it previously would have.
+- Fixed a compiler miscompile if you loaded a `static readonly v128` and passed it straight to a function as an argument.
+- Removed implicit dependencies to pre-compile binaries in CodeGen which would otherwise cause assembly resolution conflicts.
+- Fixed a Unity 2021.2 and newer bug that manifested with UWP builds - we were using the wrong `unityaot` folder in the Unity editor distribution with Burst.
+- Fixed a really subtle caching bug in the compiler where if you had a job that compiled successfully at least once, then it failed (you used managed state for instance), then you closed the editor and restarted, if the compiler threads started in precisely a strange combination then Burst might accidentally never recompile the job which failed previously.
+- Fixed potential hang in Editor when compiling a Burst entry point method that is defined in a generic class
+- Fix for the `X.pdb: The process cannot access the file because it is being used by another process` issue our users were seeing. We were taking a `FileShare.Read` lock, when we needed to take `FileShare.ReadWrite`.
+- Fixed a bug where the compiler would reject a `try`/`finally` statement if it was the first thing in a method
+- Fixed a performance regression affecting some vectorization in Burst 1.7+ (LLVM 12+).
+- Inspector performance regression.
+- Improved UWP linker error message to clarify which VS components need to be installed for UWP
+- Fixed a bug that meant Burst was accidentally enabled in secondary Unity processes, including the asset import worker and out-of-process profiler (see changelog entry for 1.6.0-pre.1 for more context around this)
+- Keybindings for copy and selection did not depend on OS.
+- Right pane vertical scrollbar not always showing correctly.
+- Inspector font style changing when entering and exiting play mode.
+- Fixed access violation error that could occur when reading from a static readonly variable
+- Made `--burst-force-sync-compilation` command-line option actually work
+- Fixed a bug that was exposed by a Script Updater running against the Entities tests, whereby if some sort of pre-domain-reload code (some sort of teardown like thing) called into Burst, the script updater could have caused Burst to purge valid function pointers, resulting in us trying to execute a DLL location that we had already unloaded.
+- Fixed a super rare bug whereby if you kicked off two compilations very close together (most likely when running Unity in some sort of headless build-a-player mode), Burst could throw an exception on a burst hash cache file being locked by the process.
+- Fix a bug where if you had a long running compilation and a new compilation came in, some threads in the thread pool could (if unlucky) block trying to dirty the assembly in our Burst caching infrastructure while waiting for the compilation to complete.
+- Fix a bug where codegen differences could occur when using a local vector variable that was being captured by reference and passed to a called function, versus when it wasn't.
+- Fixed an exception that could occur if you had the Burst AOT Settings menu docked in the Editor, and then did a player build. Trying to change any of the Burst AOT Settings would throw an exception (unless you closed and reopened the Burst AOT Settings).
+- Fixed a bug where we could leave background tasks around forever when we had actually completed them (could only happen if two re-compilation requests arrived close together, meaning we'd cancel the first but never report to the background tasks that we had cancelled them!).
+- Fix the Burst `link.xml` output to preserve C# methods we rely on, alongside the static constructors that we preserved previously.
+- Fixed errors when working with paths containing special characters
+- Fixed a bug where if you used `FloatMode.Fast` with `math.pow`, where the `y` argument to `math.pow` was actually sourced from an integer, illegal codegen would be generated (LLVM would try and call out to `powf` from the cstdlib).
+- Worked around an ordering issue with post-processing in 2020.3 and earlier by deferring the early compilation of script assemblies in the editor until the entire pipeline has completed.
+- Fixed a bug in 2022.1+ where calling `Debug.Log` in a static constructor would result in a Burst failure.
+- Fixed another rare case of the file-is-locked bug where the Burst IL Post Processor could incorrectly hold a file lock on a pdb.
+- Fixed a bug when calling profiling `CreateMarker` on iOS, Burst could fail at runtime saying it was unable to find `CreateMarker__Unmanaged`.
+- Fixed that the `crc32_u64` second parameter should have been a `ulong`. Added a new `ulong` variant and marked the old `long` variant as `[Obsolete]`.
+- Fixed a bug where using `ReinterpretStore(someIndex, (ushort)someValue)` could cause an internal compiler error in Burst.
+- Fixed a potential deadlock whereby if Burst was compiling in the background (the background tasks window showed Burst in it) and a user switched from release to debug in the editor, Burst could cause a deadlock.
+- A potential issue with the debug info mover pass, that meant it only affected the first entry point in a module
+- Fixed hashing error that could occur with unbound generic type
+- Fixed a bug where if you had synchronous compilation on a job, disabled Burst compilation and entered playmode, then exited playmode, and finally re-enabled Burst compilation, a hang could occur.
+- Fixed a bug where toggling Burst enable <-> disable during a playmode execution using Burst, and then attaching the managed debugger, could cause an editor crash.
+- Fixed a memory leak where during hashing we'd pin a GC object and never unpin and free it.
+- Fix burst inspector sometimes stalling during loading for script reloads.
+- Fixed a super rare bug where Burst could hit an internal error with `System.InvalidOperationException: Nullable object must have a value`.
+- Fixed a regression where out parameters of C# 9.0 function pointers weren't working in Burst.
+- Fixed internal compiler error when encountering a `calli` with closed generics
+- Fixed bug in static constructor ordering in the presence of indirect dependencies between static constructors (i.e. static constructor -> static method -> static constructor) that could result in a runtime crash
+- Added workaround for "cannot dlopen until fork() handlers have completed" issue seen in macOS 12.3
+- Fixed compiler crash when trying to dynamically call `BurstCompiler.CompileFunctionPointer`  in Burst-compiled code
+- Fix compiler crash when the only usage of a static field was in a formatted exception string
+- Fixed burst inspector sometimes not rendering text or rendering text on top of other text.
+- Fixed selection rendering off-by-one error at last line of each block.
+- Fixed a bug with `Span` and `ReadOnlySpan` types where if the indices used were not already 32-bit signed integers, an internal compiler error would occur if running with safety checks enabled.
+- Fixed a really convoluted bug that could manifest in Burst returning out of date cached libraries, which would manifest as random exceptions in Burst jobs/function-pointers (users deleting the BurstCache would workaround the bug).
+
+### Known Issues
+
+## [1.7.0-pre.2] - 2021-12-06
+
+
+### Changed
+- Improved the compiler performance when doing large struct copies by detecting more cases where a load/store can be safely converted to a move-memory operation.
+- Used `BuildReport::summary::subtarget` to detect headless (server) player builds on 2022.1+.
+- Don't move pdbs out of build folder for UWP builds.
+- Changed how we display the timings when a user has the **Show Timings** option enabled in the Burst menu, by cleaning up and presenting the information in a (hopefully!) clearer way.
+
+### Fixed
+- Fixed constant folding when using `Hint.Likely` or `Hint.Unlikely` intrinsics - the compiler is now able to fold these calls away entirely if the input value is constant.
+- Fixed an internal compiler error when casting a void* to a pointer-to-vector and then access the element.
+- One Definition Rule optimisation would break if multiple modules shared static constructors due to an issue with sharing code but not data.
+- Fixed type initialization error, and invalid log messages about needing to add `[MonoPInvokeCallback]` to be compatible with IL2CPP, that could occur in a player build with Burst disabled
+- ILPP issue for dots runtime whereby a calli patch could generate bad IL if the first instruction replaced was the target of a branch.
+- Fixed a bug where `fixed` used in conjunction with `Span` or `ReadOnlySpan` would cause a compiler error.
+- Fixed a codegen issue with Unity 2021.2 and `System.Buffer.MemoryCopy`.
+- Fixed compiler crash when trying to load a generic static field
+- Fixed "UnityException: CompileAsyncDelegateMethod can only be called from the main thread." error that was logged in standalone players when the first invocation of a direct-call method was from a background thread
+- Fix the very rare bug whereby the Burst Hash Cache files (*.bhc) will sometimes cause an exception in the editor log.
+- Fixed the documentation to note that the `System.Runtime.CompilerServices` attributes `[CallerLineNumber]`, `[CallerMemberName]`, and `[CallerFilePath]` work with Burst, with the restriction that you cannot format the `[CallerMemberName]`, and `[CallerFilePath]` strings yet.
+- Fixed an issue where with optimizations disabled, using half conversions on platforms that did not natively support half could cause linker errors.
+- Fix error when trying to Direct Call a method belonging to a private nested type
+- Fixed some memory leaks between the C# and C++ parts of the Burst compiler, and added some CI tooling to ensure this doesn't happen again.
+- Fixed a bug where our `[BurstCompile]` job finding code would not find methods in generic base classes in places where we knew the concrete-generic type (for instance `struct Foo<T> { [BurstCompile] struct MyJob : IJob { void Execute() {} } }`, `struct Bar<T> : Foo<T> {}`, and `struct Haz : Bar<int> {}` - we wouldn't find the concrete `Foo<int>::MyJob` in Burst).
+- Fixed editor crash when trying to debug a DirectCalled method
+- Fixed a bug whereby complicated `try`/`finally` nesting could trip up the compiler.
+- Fixed a bug in the fixed string processing whereby we'd miscompile a fixed string that was within a struct inside a `SharedStatic` (depending on how it was used).
+- Fixed a bug in the entry-point finding code whereby we wouldn't correctly resolve a nested generic struct's job if it was within a concrete generic class that was outwith the root assembly set.
+
+### Added
+- Ability to partially select and copy text in the burst inspector.
+- Right clicking the inspector view reveals a context menu, allowing selecting all text and copying selection.
+
+### Removed
+- The button "Copy to Clipboard".
+- Removed Newtonsoft.Json as a dependency
+
+### Known Issues
+
+## [1.7.0-pre.1] - 2021-10-21
+
+
+### Fixed
+- Fixed an issue where dsym folders would be not be copied across to the DoNotShip folder when building a multi architecture build for mac os.
+- Fixed bug that could lead to "Failed to resolve method with name hash X and signature hash Y" compiler error
+- Fixed compiler error that occurred when calling `BurstCompiler.CompileFunctionPointer` with a delegate type that was decorated with a custom attribute
+- Linking would fail on non-Windows platforms if the project folder contained a single-quote
+- Fixed the "could not find path tempburstlibs" error message popping up when building for Android and Burst is disabled
+- Fixed bug that could lead to incorrect compiler errors for calls to `GetHashCode` from a generic type
+- Incorrect conversions between signed and unsigned vector types
+- Detects if the simulator is the target of a player build for iOS/tvOS and disables burst, as at present this configuration is not supported by burst.
+- `[SkipLocalsInit]` now correctly doesn't zero-initialize variables in a function (previously it only avoided zero-initialization of `stackalloc` created variables).
+- Fixed a bug whereby sometimes some LLVM intrinsics could be incorrectly marked as unused causing invalid codegen with calls to `math.acos`.
+- The cache for pdbs was becoming stale. This caused issues with wrong source information being shown in the inspector, and potentially wrong debug information being generated for bursted code in editor sessions.
+- Missing output messages from some tools when a failure occurred.
+- Fixed a bug with `sqrt_ps` for 128-bit types where it would crash the compiler.
+- `ArgumentOutOfRangeException` due to `_renderBlockStart` and `_renderBlockEnd` not being probably initialized when all blocks were above the scroll position.
+- Arrows were rendered even though they were not within the current view.
+- Made it save the actual line numbers for code blocks in `_blockLine` even when the block is below the view.
+- Removed the starting newline character when copying, and when rendering plain assembly kind.
+- Fixed a bug where a player build that had multiple assemblies that had structs declared with the same name and same contents but different `[BurstCompile]` methods in them, would wrongly only pick a single struct to Burst-compile.
+- Crash in burst module initialization if multiple modules are compiled and then linked in a different order.
+- Fixed our platform documentation to accurately reflect the current supported platforms with Burst.
+- Inspector menu buttons were seen as available, even though they were not supported, when viewing i.e. .NET IL code.
+- Burst will now handle projects special characters in their project-name
+- Static constructor sorting didn't account for dependencies within calls' IL
+- Static constructor cyclic checks also included method calls when this is not necessary and fails on burst runtime logging code
+- Fixed the [bug @tertle found](https://forum.unity.com/threads/burst-error-bc0102-unexpected-internal-compiler-error.1173977/) when loading a vector from a struct pointer that is marked as `in`.
+- Fixed that implicitly casting a scalar half to a vector type would cause the compiler to crash
+- Fixed a crash that could occur when loading legacy Burst AOT settings and then entering play mode
+- Stack overflow caused by placement of alloca under certain function transforms.
+- linker errors on macOS due to long command lines, swapped to using filelists for inputs.
+- Fixed issue that could cause bcl.exe to fail with an exit code of 1 but not output any compilation errors
+
+### Added
+- Added support for DOTS Runtime running / loading .Net Core assemblies.
+- Added support for `System.Span<T>` and `System.ReadOnlySpan<T>` within Bursted code. These types are not allowed as entry-point arguments.
+- Folding/collapsing code in inspector
+- Branch arrows (can be switched off)
+- Automatically collapses less important blocks of disasssembly (focuses on code).
+- Burst now generates a link.xml automatically to avoid issues with stripping causing missing symbols at runtime from static constructor usage.
+
+### Removed
+- Removed the `Use Platform SDK Linker` option from Burst AOT Settings for desktop platforms.
+- Removed the player build `BC1370` exception warnings as users only found them annoying.
+
+### Changed
+- Made the cost of initializing Direct Call methods for execution 33x faster during domain reload.
+- Upgraded Burst to use LLVM Version 12.0.0 by default, bringing the latest optimization improvements from the LLVM project.
+- Change the optimization pipeline to run the loop unroller _exclusively_ after the loop vectorizer. This improves codegen in a lot of cases (mostly because the SLP vectorizer is unable to vectorize all the code that the loop unroller could have).
+- Intrinsics: Neon vst1 APIs are now fully supported
+- Made `fmod` and floating-point modulus use a faster algorithm to improve performance.
+- Made the `SharedStatic` initialization cost during static constructor initialization time 13.3x faster.
+- Improved iteration time by triggering Burst compilation immediately after .NET assemblies have been compiled
+- Upgraded the minimum supported PS4 SDK to 8.00.
+- Updated the minimum Xcode required for Burst to compile for the Apple iOS/tvOS plaforms to 12.0.
+- Burst now waits for all threads to complete on shutdown, rather than performing a thread abort, as that could lead to a race condition with Dispose.
+
+### Known Issues
+- Burst does not work correctly when a project has a semi-colon in its name
+
+## [1.6.0-pre.3] - 2021-07-27
+
+
+### Fixed
+- Fixed a bug where methods with the same name and namespace, but in different assemblies, could resolve to the wrong method.
+- Burst no longer logs a warning when opening the standalone Profiler
+- Fixed an `UnauthorizedAccessException` that could occur when using Burst in players built for the macOS App Sandbox
+- Fixed a bug that could cause an incorrect compilation error when using a primitive type as a generic argument in a static method entry point
+- Crash due to member function debug information on tvOS.
+- Fix documentation to make clear that `ref` / `out` parameters are supported on `[BurstDiscard]` methods.
+- Fixed a `NullReferenceException` in the Burst compiler when multi-dimensional arrays were used. The compiler now produces a correct error message telling users that multi-dimensional arrays are not supported by Burst.
+- Fixed DOTS Runtime Job Marshalling behaviour to properly handle marshalling generic Job types when not all closed forms of the generic type require marshalling.
+- Fixed a Burst package warning in our editor compiler integration with respect to `BuildOptions.EnableHeadlessMode`.
+- Fixed small race which could cause an unexpected exception when finishing a standalone compilation task.
+- Building for Apple Silicon architecture on macOS would produce a universal binary, now it behaves correctly.
+- tvOS/iOS and other statically linked platforms would fail to burst compile if the burst compiled code contained references to functions that were `[DllImport("__Internal")]`, due to a mismatch in calling convention.
+- Fixed a bug whereby if you had `$"{too} {many} {fixed} {string} {formatted} {arguments}"` in a string formatter, Burst wouldn't be able to correctly understand how to transform this for the purposes of logging or fixed-string construction.
+- Fixed where `Unity.Burst.CompilerServices.Constant.IsConstantExpression` is evaluated to be later in the compilation pipeline, to let it catch more constant expressions (for instance post-inlining).
+- Rare non zero return code from bcl after successfully building..
+- Only check assembly cache when the main-thread is requesting some Burst code - meaning that kicking off eager compilation is 1.6x faster than before.
+- `stackalloc byte[]` with an array initializer was previously only supported when the `stackalloc` size was 8 or less. Sizes greater than 8 are now supported.
+- Fixed an error that could occur with the form "System.InvalidOperationException: Could not find `burst.initialize` function in library 'SomeLibrary'"
+- Fixed incorrect runtime behavior that could occur when casting a pointer to a generic type
+- Fixed a bug where stackalloc's could be wrongly hoisted out of loops.
+- Added [Preserve] attribute to prevent stripping a compiler service call
+- Fixed incorrect compiler error that could occur when casting a pointer to a generic type and then calling a method with generic parameters
+- Fixed incorrect compiler error that could occur with explicit-layout structs when setting a `Size` smaller than the natural struct size
+
+### Added
+- Universal (Apple Silicon + X64) versions of extra build tools
+- Add Android x86_64 and re-enable x86 support
+- Added support for having `[MarshalAs(UnmanagedType.U1)]` or `[MarshalAs(UnmanagedType.I1)]` on a `bool` external function parameter.
+- Neon intrinsics: Added vst1* experimental APIs
+- Added a global player build setting to let users specify the default optimization choice for Burst.
+- Native support for Apple Silicon.
+- Added support for `StructLayoutAttribute.Pack`
+- Additional notes about `BurstCompiler.CompileFunctionPointer<T>` regarding; avoid wrapping in another open generic method, and interoperability with IL2CPP.
+
+### Removed
+- Removed the `Enable Safety Checks` option for player builds, since it didn't actually enable safety checks in containers, which are editor only in Unity.
+
+### Changed
+- Changed how we link object files for iOS and tvOS platforms such that Burst will now create the object file and hand it off to XCode for linking only.
+- Assembly-level attributes (such as `[assembly: RegisterGenericJobType]`) are now scanned for generic job types to compile
+- Fixed a regression that caused eager-compilation at Editor startup to be slower than it should have been
+- `math.f16tof32` now uses hardware intrinsics where available (AVX2 / NEON).
+- `half` to `float` or `double` vector conversions now produce more optimal codegen.
+- Burst Inspector now remembers scroll position between domain reloads
+- Changed how we schedule Burst eager compilation threads. Previously we'd spawn at most 8 of the threads, and only allow 2 to make progress while in the Editor (to ensure the editor UX/UI was as responsive as possible). Instead we now spawn `number_of_cores - 1` threads at a lower thread priority, ensuring that any computing power slack can be consumed to speed up Burst compilation. On a 24 core machine this resulted in 2.5x reduction in time taken for Burst to fully compile a large project.
+- Fixed a potential error related to duplicate symbols when calling `BurstCompiler.CompileFunctionPointer` from inside Burst code
+- Improved performance of checking the cache to see if methods have already been compiled
+- For player builds : lib_burst_generated.txt, pdbs (in non development mode) and dysm folders are now placed into a xxx_BurstDebugInformation_DoNotShip folder alongside the data folder, this is to ensure it is easy to remove the files that you should not ship with your player.
+
+### Known Issues
+- Code that previously mixed managed or non-`readonly` static fields with Burst compiled code will now fail to compile.
+
+## [1.6.0-pre.2] - 2021-04-15
+
+
+### Fixed
+- Fixed obsolete API in package code.
+
+
+## [1.6.0-pre.1] - 2021-04-14
+
+
+### Changed
+- Start 1.6 release cycle
+- Changed how we resolve function references in the compiler to improve resolving an existing function reference by 3x.
+- Improve how we handle generic resolution in Cecil to cache the strictly resolved generic types and save a bunch of time in the compiler.
+- Exception strings no longer contain the entry-point name of the job/function-pointer that caused the throw. This change was required because the Burst compiler has to produce deterministic results from any given compile, which is fundamentally opposed to per-entry-point function derivations.
+- Changed how SLEEF global variables for trig functions are pulled into Burst to reduce duplications.
+- Changed how exceptions throw types and messages are stored in our Burst binaries to reduce binary size.
+- Constant array data is now named after the static field it belongs to in assembly
+- Upgraded Burst to use LLVM Version 11.0.1 by default, bringing the latest optimization improvements from the LLVM project.
+- The `Unity.Burst.Intrinsics.Common.Pause` intrinsic is no longer experimental.
+- DOTS Runtime shares the logging code path with the general case
+- Armv8.2 Neon intrinsics are now fully supported
+- Disable threading within the `lld` linker instances we use for in-editor and desktop cross compilation, because we're already threading seperate process instances of `lld` and it results in lot of OS context switching.
+- Tweaked how the IL Post Processed 'direct call' Burst function pointers are compiled so that the compilation is deferred until they are needed (previously we'd enqueue them all for compilation on a domain reload).
+- Changed Burst minimum editor version to 2019.4
+- Use rpmalloc as our native allocator on Windows to speed up concurrently executing LLVM work.
+- When Burst has previously compiled a method, and neither the assembly containing that method nor any of that assembly's dependencies have changed, it was possible after a domain reload for the Mono version of the method to be used for a short time before being replaced by the Burst version. This has now been improved such that the Burst version will be used immediately.
+- Improved iteration speed by reducing the time it takes for Burst to check if any Burst-compilable code has changed
+- Change our link step to not use response files if the command line was smaller enough, saving the cost of the round-trip to the disk.
+- Made half <-> float / double conversions use native hardware where possible (Arm or AVX2 targets).
+- In order to prevent conflicts with the main Unity process, Burst is now inactive in secondary Unity processes, including the asset import worker and out-of-process profiler. This means that in those secondary processes, code that would normally be Burst-compiled will now run under Mono. In a future release of Burst, we hope to lift this restriction and allow Burst-compiled code to run in secondary Unity processes.
+
+### Fixed
+- Fixed a bug in LLVM that it would incorrectly convert some memset -> memcpy if both pointers derived from the same memory address, and where one indexed into the 0th element of the pointer.
+- Fixed namespace issue triggering a warning in the editor.
+- Made `math.shuffle` compile correctly when non-constant `ShuffleComponent`'s are used.
+- Fixed alignment issues associated with xxHash3 on ArmV7 (case 1288992)
+- Fixed managed implementation of sub_ss intrinsic
+- Fixed a bug that occurred when an explicitly laid out struct was used by a `dup` instruction, which caused an internal compiler error.
+- Fixes DOTS Runtime JobProducer Bursting code to support JobProducers with multiple generic arguments, complex job wrapper and generic jobs.
+- Fixed a bug where if a user had defined multiple implicit or explicit casts, the compiler could resolve to the wrong cast.
+- Fixed a bug where explicitly casting from an int to `IntPtr` would not sign extend the value.
+- String interpolation issues when using Dots / Tiny runtime.
+- Fixed managed implementations of blend_epi32 and mm256_blend_epi32 intrinsics on Mono
+- Fixed a bug where loading from a vector within a struct, that was got from a `NativeArray` using an indexer, would cause the compiler to crash.
+- Fixed an issue where Burst would erroneously error on `BurstCompile.CompileFunctionPointer ` calls when building for the DOTS Runtime.
 - clang segmentation fault on iOS when member function debug information was emitted, it is disabled for this platform now.
 - Intrinsics: Neon - fixed vget_low and vget_high producing suboptimal code
+- Private `[BurstCompile]` methods no longer throw `MethodAccessException`
+- Fixed a bug where the Burst post-processing for direct call would cause duplicate function pointers to be compiled, wasting compile time in the editor and caused an Editor launch stall.
+- Corrected 'Enable safety checks tooltip`.
+- Fixed a minor debug information bug where built-in types with methods (like `System.Int32`) would generate incorrect debug information.
+- Fixed a very obscure bug where if you had a function-pointer that was called from another function-pointer of job, and that function-pointer happened to be compiled in a player build in the same bucket as the caller, and the no-alias cloning analysis identified that it could clone the original function-pointer to enable more aliasing optimizations, it could create a duplicate symbol error.
+- Revert to internal linkage for Android X86 (32bit) to ensure ABI compliance.
+- Fixed compilation errors when targeting Arm CPUs and using some of the Intel intrinsics
+- Added PreserveAttribute to prevent the internal log from being stripped in il2cpp builds.
+- IL Function Pointer Invoke Transformation updated to handle transforms that affect instructions that are the destination of a branch.
+- IL Function Pointer Invoke Transformation now uses correct runtime library for dots runtime.
+- Fixed compilation errors when targeting Intel CPUs and using some of the Arm Neon intrinsics
+- Fixed a bug where eager-compilation could pick up out-of-date global Burst menu options for compiling.
+- Fixed a bug where the progress bar would report double the amount of pending compile jobs if a user changed the Burst options while background compilation was going on.
+- Fixed some intrinsics not checking target CPU against required CPU, so it was possible to use some intrinsics without an IsXXXSupported check
+- Fixed a bug where having any `[DllImport]` in a class that used the Direct Call mechanism could result in an illegal `CompileFunctionPointer` call being produced by our post processor.
+- Fixed an issue where if a user used a math function (like `cos`, `sin`, etc) then LLVM would preserve both the scalar and vector implementations even if they were trivially dead, causing us to inject otherwise dead functions into the resulting binary.
+- PDB debug information for instance methods that also used struct return were incorrect.
+- When generating Line Table only debug information, an unreachable could occur due to a missing check.
+- Fixed the 1.5 restriction that Direct Call methods can only be called from the main thread, now they work when called from any thread.
+- Internal Compiler Error if a call was discarded (via BurstDiscard for example), but the callsites required an ABI transform e.g. struct return.
+- Fixed a bug with using multiple `IsXXXSupported` intrinsics in the same boolean condition would fail.
+- Broken link restored for known issues with debugging and profiling.
+- The Direct Call injected delegate now has a unique suffix to avoid type-name clashes.
+- Dots runtime function pointer transform has been simplified, making it less brittle and fixing some bad IL generation.
+- Fixed crashes on 32 bit windows when calling function pointers from managed code and using IL2CPP.
+- Fixed a possible DivideByZeroException due to race condition in TermInfoDriver initialization code.
+- Fixed a bug where the multi-CPU dispatcher (used for player builds targetting multiple CPU architectures) could end up generating invalid instructions.
+- Gracefully handle failing to find a particular assembly in the ILPP to prevent an ICE.
+- function calls using in modifiers on blittable structs where being treated as non blittable.
+- crash when extracting sequence point information for error reporting/debug information generation.
+- Direct Call extension methods that only differ on argument types are now supported (previously Burst's `AssemblyLoader` would complain about multiple matches).
+- Fixed a regression where managed static fields, in static constructors that would also be compiled with Burst, could cause a compile time failure for mixing managed and unmanaged state.
+
+### Added
+- Added links to blog posts from the burst team to the Burst documentation.
+- Intrinsics: Neon - Added support for basic vld1 APIs
+- Can now call BurstCompiler.CompileFunctionPointer() in Burst code
+- Add support for the C# 8.0 construct `default(T) is null` to Burst by transforming the generated `Box` + 'is the box non-null?' at compile time.
+- Make it possible to get a pointer to UTF-8 encoded string literal data in HPC# code via StringLiteral.UTF8()
+- Add an `OptimizeFor` option to `[BurstCompile]`, allowing users to say they want fast code, small code, or fastly compiled code.
+- Known issue with Windows Native Debuggers and Dll numbers + workarounds.
+- Assemblies are now allowed to have an `[assembly: BurstCompile()]` attribute to let users specify compile options that should apply assembly wide (for instance `[assembly: BurstCompile(OptimizeFor = OptimizeFor.FastCompilation)]`).
+- Automatically add [UnmanagedFunctionPointer(CallingConvention.Cdecl)] to any delegates that are used for BurstCompiler.CompileFunctionPointer<>() or error if the delegate has the attribute and it is not Cdecl.
+- Source location metadata into hash cache.
+- Added support for having `[return: MarshalAs(UnmanagedType.U1)]` or `[return: MarshalAs(UnmanagedType.I1)]` on a `bool` return external function.
+- An additional warning about delegates being used by `BurstCompiler.CompileFunctionPointer` that are not decorated as expected. In most cases, Burst will automatically add the C-declaration attribute in IL Post Processing, but if the usage of CompileFunctionPointer is abstracted away behind an open generic implementation, then Burst will not be able to automatically correct the delegate declaration, and thus this warning will fire.
+- new `burst_TargetPlatform_EmbeddedLinux`
+- new `AotNativeLinkEmbeddedLinux` for EmbeddedLinux
+- Added a new `OptimizeFor` mode `Balanced`. This becomes the default optimization mode, and trades off slightly lower maximum performance for much faster compile times.
+- Added experimental half precision floating point type f16
+- Added experimental support for half precision floating point Arm Neon intrinsics
+
+### Removed
 
 ### Known Issues
+- Direct Call methods only execute using Burst after an initial execution of them on the main-thread.
 
-## [1.4.4-preview.2] - 2021-01-06
+### Notes
+- BurstAotCompiler integration done using reflection and raw values, since the platform will only be officially available for 2021.2+ and we special customer versions (shadow branches) for 2019.4 & 2020.3.
+- AotNativeLinkEmbeddedLinux implementation gets the toolchain from environment vars.
 
-
-### Fixed
-- Fixed a bug where explicitly casting from an int to `IntPtr` would not sign extend the value.
-- Fixed managed implementations of blend_epi32 and mm256_blend_epi32 intrinsics on Mono
-- Fixed an issue where Burst would erroneously error on `BurstCompile.CompileFunctionPointer ` calls when building for the DOTS Runtime.
-
-## [1.4.4-preview.1] - 2020-12-07
-
-
-### Fixed
-- Fixes DOTS Runtime JobProducer Bursting code to support JobProducers with multiple generic arguments, complex job wrapper and generic jobs.
-- Fixed a bug that occurred when an explicitly laid out struct was used by a `dup` instruction, which caused an internal compiler error.
-
-## [1.4.3] - 2020-12-03
-
+## [1.5.0-pre.2] - 2020-12-01
 
 ### Added
 
 ### Removed
 
 ### Changed
-- Preserve the frame pointer when debugging is enabled to aid debugging.
 
 ### Fixed
 - Fixed a failure on linux builds where libdl.so cannot be found.
-- Fixed a bug in LLVM that it would incorrectly convert some memset -> memcpy if both pointers derived from the same memory address, and where one indexed into the 0th element of the pointer.
-- Fixed alignment issues associated with xxHash3 on ArmV7 (case 1288992)
-- Fixed managed implementation of sub_ss intrinsic
-- Made `math.shuffle` compile correctly when non-constant `ShuffleComponent`'s are used.
 
 ### Known Issues
 
-## [1.4.2] - 2020-11-26
 
+## [1.5.0-pre.1] - 2020-11-26
 
-### Fixed
-- Fixed a bug whereby if you had an assembly that was guarded by `UNITY_SERVER`, Burst would be unable to find the assembly when `Server Build` was ticked.
-- When "Enable Compilation" was unchecked in the Burst menu, Burst was incorrectly enabled after an Editor restart. This is now _actually_ fixed.
-- Fixed issues with Intel intrinsics mm256_inserti128_si256, mm256_bslli_epi128, mm256_bsrli_epi128
-- Debug information for instance methods is now correctly scoped. This means instance variables can now be inspected correctly.
-- Fixed managed (reference) implementation of mm256_cvttps_epi32 (case 1288563)
 
 ### Added
-
-### Removed
-
-### Changed
-- Improved the performance of in-compiler hashing by 1.2x.
-- Improved our hashing performance some more by re-using fixed-sized buffers in the compiler to improve eager-compilation / warm-cache costs by 1.25x.
-
-### Known Issues
-
-## [1.4.1] - 2020-10-27
-
-### Removed
-- Temporarily removed the Burst compiler warning about exception throws not in `[Conditional("ENABLE_UNITY_COLLECTIONS_CHECKS")]` methods, to let us address user feedback. The next minor version of Burst will reincorporate this in a more friendly manner.
-
-## [1.4.1-pre.2] - 2020-10-21
-
+- New intrinsics `Hint.Likely`, `Hint.Unlikely`, and `Hint.Assume` to let our users tell the compiler some additional information which could aid optimization.
+- New `Bmi1` and `Bmi2` x86 intrinsics. These are gated on `AVX2` being supported to keep the feature sets that Burst has to support small.
+- You can now select explicit x86/x64 architecture SIMD target for Universal Windows Platform.
+- Added Apple silicon and macOS universal binaries support to Burst.
+- An extra alloca hoisting step to ensure that allocas that occur deep within functions are correctly allocated in the function entry block (which LLVM requires for optimization purposes).
+- Added the missing `clflush` intrinsic to the SSE2 intrinsics.
+- An optimize-for-size option to bcl to let select users focus the optimization passes to create smaller executables.
+- Added a `Unity.Burst.CompilerServices.SkipLocalsInitAttribute` attribute that lets developers tell the compiler that stack-allocations do not need to be zero initialized for a given function.
+- Added a new attribute `[IgnoreWarnings]` that can be specified per method, for users that really want the compiler to be quiet.
+- Support for RDMA, crypto, dotprod Armv8.2-A Neon intrinsics
+- An error message if attempting to BurstCompiler.CompileFunctionPointer() on a multicast delegate, since this is not supported in Burst.
+- Burst detects removal of the burst package in 2020.2 editors and beyond, and displays a dialog asking the user to restart the editor.
+- Added a pass that will classify and remove dead loops for improved code generation.
+- Add support for using `ValueTuple` types like `(int, float)` from within Burst code, as long as the types do not enter or escape the Burst function boundaries.
+- Added a new intrinsic `Unity.Burst.CompilerServices.Constant.IsConstantExpression` that will return true if an expression is known to be a compile-time constant in Bursted code.
+- Added support for PlayMode / Desktop Standalone Players to load additional burst compiled libraries for use in Modding.
+- Add support for calling Burst code directly from C# without using function pointers.
+- In Unity 2020.2 and above, you can now call `new ProfilerMarker("MarkerName")` from Burst code
+- Add a compiler error if a `ldobj` tries to source its address to load from a non-pointer/non-reference. C# frontends should never generate this pattern, but we did see it with code generation.
 
 ### Fixed
-- Fixed a bug where if you used an enum argument to a function to index into a fixed array, a codegen error would occur.
+- Fixed an issue where a function with a `[return: AssumeRange(13, 42)]` could lose this information during inlining.
+- Storing into `Lo64` or `Hi64` would cause a compiler exception.
+- Hitting a `ldobj` of a pointer-to-vector would incorrectly load the vector rather than the pointer.Burst only generates unaligned stores.
+- Fix that the parameter to mm256_set1_epi8 should be a byte instead of a char.
+- Fix sqrt_ss would fail because LLVM version later than 6 changed the encoding.
+- Fixed the comi*_ss intrinsics which would generate invalid code.
+- Pdb location for player builds is now linked relative to the final lib_burst_generated.dll, this allows the crashdump utility to access the symbols and provide better callstacks.
+- Support negative intrinsics features checks to enable usage like `if (!IsSse41Supported) return;`.
+- Clean up linker temp response files on successful build
+- Wasm ABI issue with pointers
+- Pause intrinsic in wasm (ignored)
+- fmod expansion to sleef for wasm
+- The AOT option for disabling optimizations now actually disables optimizations in player builds.
+- Fix a bug where a `static readonly` variable that was a `System.Guid` would result in an internal compiler error.
+- bitmask intrinsic was broken on non intel platforms
+- When "Enable Compilation" was unchecked in the Burst menu, Burst was incorrectly enabled after an Editor restart. This is now fixed.
+- Fixed a bug where a cloned function (say through no-aliasing propagation cloning) would re-create any global variables used rather than use the original variable.
+- If the only reference to an external function was discarded, don't attempt to add it to the burst initialisation block (which caused on ICE on prior versions).
+- Fixed a case where extracting a `FixedString4096` from a parent struct could cause very slow compile times.
 - Fixed a poor error message when a generic unsupported type (like a class or an auto-layout struct) combined with an unsupported managed array (like `(int, float)[]`) wouldn't give the user any context on where the code went wrong.
+- Fixed a bug where if you used an enum argument to a function to index into a fixed array, a codegen error would occur.
 - If targeting multiple iOS architectures, produce a combined burst library containing all architectures, this fixes "New Build System" on xcode version 12.
+- Static method parameters are now validated correctly during eager-compilation
 - Fixed permissions error when running lipo tool to combine libraries.
+- Fixed compiler error that could occur when calling a `[BurstDiscard]` method with an argument that is also used elsewhere in the method
+- Fixed an issue that could prevent the Editor from shutting down
 - Fixed an internal compiler error when nested managed static readonly arrays were used (produces a proper Burst error instead now).
 - Fixed a bug whereby for platforms that require us to write intermediate LLVM bitcode files, UTF paths would be incorrectly handled.
-
-### Changed
-- Open-generic static methods are not supported by Burst, but they were previously visible in Burst Inspector - they are now hidden
-- Eager-compilation is now cancelled when script compilation starts, to prevent spurious errors related to recompiled assemblies
-
-### Added
+- Correctly marked Neon intrinsics vmovn_high_* as ArmV7 and not ArmV8
+- On windows, the pdb location for burst cached dll's now points to the correct path. Native debuggers attached to the Editor should now locate the symbols without requiring adding the Library/Burst/JitCache folder to the symbol search.
+- Re-enabled `BC1370` exception warnings but only for player builds.
+- Fixed a bug whereby if you had an assembly that was guarded by `UNITY_SERVER`, Burst would be unable to find the assembly when `Server Build` was ticked.
+- When "Enable Compilation" was unchecked in the Burst menu, Burst was incorrectly enabled after an Editor restart. This is now _actually_ fixed.
+- `static readonly` array with enum elements would cause the compiler to crash.
+- Fixed managed (reference) implementation of mm256_cvttps_epi32 (case 1288563)
+- Debug information for instance methods is now correctly scoped. This means instance variables can now be inspected correctly.
 
 ### Removed
-
-### Known Issues
-
-## [1.4.1-pre.1] - 2020-10-14
-
-### Fixed
-- Fixed an issue that could prevent the Editor from shutting down
-
-## [1.4.0-pre.1] - 2020-10-01
+- Removed support for XCode SDKs less than version 11.0.0.
+- Removed support for platform SDKs that used the older LLVM 6 and 7 in the codebase to significantly simply our code and reduce the package size.
 
 ### Changed
-- Update package version to begin pre-release phase
-
-## [1.4.0-preview.5] - 2020-09-23
-
-
-### Added
-- You can now select explicit x86/x64 architecture SIMD target for Universal Windows Platform.
-- An error message if attempting to BurstCompiler.CompileFunctionPointer() on a multicast delegate, since this is not supported in Burst.
-
-### Changed
+- Minimum SDK version for iOS/tvOS increased to 13. See https://developer.apple.com/news/?id=03042020b for details.
 - When using "Executable Only" build type on Universal Windows Platform, Burst will now only generate code for a single CPU architecture that you're building for.
+- The inliner heuristics have been modified to inline less functions, but improve compile times and reduce executable size.
+- The minimum XCode SDK required to compile for iOS/iPadOS/tvOS is now 11.0.0.
 - We now copy the lib_burst_generated.pdb into the root of the player build (in addition to being alongside the lib_burst_generated.dll), this allows the unity crash handler to resolve the callstacks from burst code.
+- Made Arm Neon intrinsics fully supported (removed the guarding define)
 - Improved eager-compilation performance
 - Improved Burst Inspector loading time
 - Improved Burst initialization time
-
-### Removed
-
-### Fixed
-- Pdb location for player builds is now linked relative to the final lib_burst_generated.dll, this allows the crashdump utility to access the symbols and provide better callstacks.
-- bitmask intrinsic was broken on non intel platforms
-- Fix a bug where a `static readonly` variable that was a `System.Guid` would result in an internal compiler error.
-- Fixed a bug where `math.fmod` would be unable to find the correct SLEEF math function when compiling for double support on 32-bit platforms.
-- When "Enable Compilation" was unchecked in the Burst menu, Burst was incorrectly enabled after an Editor restart. This is now fixed.
-- Fixed a bug where a cloned function (say through no-aliasing propagation cloning) would re-create any global variables used rather than use the original variable.
+- If an argument to a BurstDiscard method is discarded, and that argument is a method call, then a warning is now generated to indicate the function call no longer happens.
+- Changed how struct-return and indirect arguments use stack allocations to significantly reduce stack usage and improve performance in these cases.
+- Improved the compilers ability to deduce dead memory operations (memcpy, memset, etc) to improve performance.
+- Improved error message seen when scheduling Burst compilation during domain reload
+- Open-generic static methods are not supported by Burst, but they were previously visible in Burst Inspector - they are now hidden
+- In Burst Inspector, the "Safety Checks" checkbox now defaults to unchecked
+- Burst Inspector no longer loses the search filter and "Safety Checks" option after domain reload
+- Changed exception throws to allow more vectorization chances surrounding them.
+- Upgraded Burst to use LLVM Version 11.0.0 by default, bringing the latest optimization improvements from the LLVM project.
+- Eager-compilation is now cancelled when script compilation starts, to prevent spurious errors related to recompiled assemblies
+- Strings can now be passed between methods within Burst code. Previously, string literals used for e.g. `Debug.Log` calls could only appear in the same method where they were used; now the string literal can be in one method, and passed to another method via a `string` parameter.
+- Transitioning from burst disabled to burst enabled in editor, will perform a re-initialise of some internal state in use by Direct Call methods.
+- Improved the performance of in-compiler hashing by 1.2x.
+- Improved our hashing performance some more by re-using fixed-sized buffers in the compiler to improve eager-compilation / warm-cache costs by 1.25x.
+- Improved compile time by ~37% on big projects by reworking some core compiler infrastructure.
 
 ### Known Issues
+- In player builds, exceptions can report the wrong job that they were thrown from.
 
 ## [1.4.0-preview.4] - 2020-08-17
 
