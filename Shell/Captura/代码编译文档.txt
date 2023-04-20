@@ -1,0 +1,10 @@
+
+
+主要修改的是这个git项目  https://github.com/dongshuyan/Captura
+
+ffmpeg的执行包是从https://ffmpeg.org/download.html 这里下载的
+
+
+主要修改了ConsoleManager.cs 这个类 修改之后的文件在本文件夹同级目录下面 git源码就不放上来了
+
+

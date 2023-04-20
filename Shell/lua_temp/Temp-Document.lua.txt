@@ -1,0 +1,17 @@
+--  #SCRIPTNAME#
+--  Created by #AuthorName# on #CreateTime#
+local ActivityDocument = BaseClass(DocumentID.Activity,Document)
+local base = Document
+
+local function OnCreate(self)
+    --true:注册Update函数,false:Update不执行
+    self:EnableUpdate(false)
+end
+
+
+local function Update(self)
+end
+
+#SCRIPTNAME#.OnCreate = OnCreate
+#SCRIPTNAME#.Update = Update
+return #SCRIPTNAME#

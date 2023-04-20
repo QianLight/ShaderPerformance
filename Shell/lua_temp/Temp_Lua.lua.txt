@@ -1,0 +1,32 @@
+--
+--  #SCRIPTNAME#
+--  Created by #AuthorName# on #CreateTime#
+--
+local #SCRIPTTITLE# = BaseClass("#SCRIPTTITLE#",UIBaseView)
+local base = UIBaseView
+
+
+--需要注册执行回调函数,把‘--’去掉
+local function OnCreate(self)
+	base.OnCreate(self)
+	--self.header:SetOnInitialize(BindCallback(self,OnInitial)) --初始化
+	--self.header:SetOnFlushData(BindCallback(self,Flush)) --刷新数据
+	--self.header:SetOnShow(BindCallback(self,OnShow)) --显示
+	--self.header:SetOnRender(BindCallback(self,OnRender)) --是否渲染
+	--self.header:SetOnFlushRedPoint(BindCallback(self,OnFlushRedPoint))--刷新红点
+	--self.header:SetOnHide(BindCallback(self,OnHide)) --关闭显示
+	--self.header:SetOnRecycle(BindCallback(self,OnRecycle)) --回收
+	--self.header:SetOnHandlerNotification(BindCallback(self, OnHandlerNotification)) --事件响应
+	--self.header:SetHandle( Event ID  ) --注册事件
+end
+
+--外部调用,需要注册对外函数。
+#SCRIPTTITLE#.OnCreate = OnCreate
+--#SCRIPTTITLE#.OnInitialize = OnInitial --初始化
+--#SCRIPTTITLE#.OnFlushData = Flush --刷新数据
+--#SCRIPTTITLE#.OnShow = OnShow --显示
+--#SCRIPTTITLE#.OnRender = OnRender --是否渲染
+--#SCRIPTTITLE#.OnFlushRedPoint = OnFlushRedPoint--刷新红点
+--#SCRIPTTITLE#.OnHide = OnHide) --关闭显示
+--#SCRIPTTITLE#.OnRecycle = OnRecycle --回收
+return #SCRIPTTITLE# 
