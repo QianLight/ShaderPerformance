@@ -25,9 +25,9 @@ namespace Blueprint.Logic
 		[RuntimeInitializeOnLoadMethod]
 		public static void BlueprintClientStaticInit()
 		{
-			BPInit.Init();
-			var init = new Blueprint.Logic.BpClientStart();
-			init.Start();
+			//BPInit.Init();
+			//var init = new Blueprint.Logic.BpClientStart();
+			//init.Start();
 			
 		}
 		

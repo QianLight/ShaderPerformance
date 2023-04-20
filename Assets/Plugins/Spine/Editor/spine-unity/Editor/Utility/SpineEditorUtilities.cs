@@ -94,9 +94,9 @@ namespace Spine.Unity.Editor {
 
 			// we copy the list here to prevent nested calls to OnPostprocessAllAssets() triggering a Clear() of the list
 			// in the middle of execution.
-			var texturesWithoutMetaFileCopy = new List<string>(texturesWithoutMetaFile);
-			AssetUtility.HandleOnPostprocessAllAssets(imported, texturesWithoutMetaFileCopy);
-			texturesWithoutMetaFile.Clear();
+			//var texturesWithoutMetaFileCopy = new List<string>(texturesWithoutMetaFile);
+			//AssetUtility.HandleOnPostprocessAllAssets(imported, texturesWithoutMetaFileCopy);
+			//texturesWithoutMetaFile.Clear();
 		}
 
 #if HAS_ON_POSTPROCESS_PREFAB
