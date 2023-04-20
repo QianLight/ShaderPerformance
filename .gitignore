@@ -11,3 +11,4 @@ UserSettings
 SerializedBuildInfo
 .vs
 Packages/com.unity.burst/.Runtime/libburst-llvm-14.dylib
+Packages/com.unity.burst/.Runtime
