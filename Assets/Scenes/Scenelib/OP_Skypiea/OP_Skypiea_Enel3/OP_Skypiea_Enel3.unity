@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 1904503005}
+  m_SkyboxMaterial: {fileID: 451575816}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -207,8 +207,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1534331}
-  m_LocalRotation: {x: 0.03363668, y: -0.8609988, z: 0.057435904, w: 0.50423294}
-  m_LocalPosition: {x: 169.98282, y: 54.954384, z: 359.79935}
+  m_LocalRotation: {x: -0.09463123, y: -0.87325984, z: 0.18805541, w: -0.43942842}
+  m_LocalPosition: {x: 43.176216, y: 60.303444, z: 203.86255}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -655,7 +655,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 76ac4ba064d5c4c4bb1a55796aa4ba41,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 76ac4ba064d5c4c4bb1a55796aa4ba41,
         type: 3}
@@ -1074,7 +1074,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &132500965
 Transform:
   m_ObjectHideFlags: 0
@@ -3037,6 +3037,36 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1429270130}
   m_PrefabAsset: {fileID: 0}
+--- !u!21 &451575816
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: URP/Scene/Skybox
+  m_Shader: {fileID: 4800000, guid: 18fc9f51470247c4185144e2c91337c4, type: 3}
+  m_ShaderKeywords: _CUSTOM_BACKGROUND
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _BaseTex:
+        m_Texture: {fileID: 8900000, guid: 47307845193bae949b82f8df754d584c, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MaskTex:
+        m_Texture: {fileID: 8900000, guid: 9964bb24cfa30f147be69e86c761fc8f, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats: []
+    m_Colors: []
+  m_BuildTextureStacks: []
 --- !u!1 &491647611
 GameObject:
   m_ObjectHideFlags: 0
@@ -7487,7 +7517,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 842264fcf776af24782f9e48cf3484e6,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 842264fcf776af24782f9e48cf3484e6, type: 3}
@@ -8524,7 +8554,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1110191221
 Transform:
   m_ObjectHideFlags: 0
@@ -9162,7 +9192,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1201239843
 Transform:
   m_ObjectHideFlags: 0
@@ -14929,7 +14959,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 1.3563156e-19, z: 1.3563156e-19, w: 8e-44}
+  m_BoundingSphereOverride: {x: 9.1835e-41, y: 0, z: 0, w: 0}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
@@ -15921,36 +15951,6 @@ Transform:
   m_Father: {fileID: 1149887647}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!21 &1904503005
-Material:
-  serializedVersion: 6
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: URP/Scene/Skybox
-  m_Shader: {fileID: 4800000, guid: 18fc9f51470247c4185144e2c91337c4, type: 3}
-  m_ShaderKeywords: _CUSTOM_BACKGROUND
-  m_LightmapFlags: 4
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  disabledShaderPasses: []
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs:
-    - _BaseTex:
-        m_Texture: {fileID: 8900000, guid: 47307845193bae949b82f8df754d584c, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _MaskTex:
-        m_Texture: {fileID: 8900000, guid: 9964bb24cfa30f147be69e86c761fc8f, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Floats: []
-    m_Colors: []
-  m_BuildTextureStacks: []
 --- !u!1 &1915567366
 GameObject:
   m_ObjectHideFlags: 0
