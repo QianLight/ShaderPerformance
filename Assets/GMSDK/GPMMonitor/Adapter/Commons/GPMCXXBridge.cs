@@ -14,42 +14,42 @@ namespace GMSDK
         public static void LogSceneStart(string type, string name)
         {
 #if ((UNITY_IOS || UNITY_ANDROID) && !UNITY_EDITOR) || (GMEnderOn && UNITY_EDITOR)
-            GPM_CXX_LogSceneStart(type, name);   
+           // GPM_CXX_LogSceneStart(type, name);   
 #endif
         }
 
         public static void LogSceneLoaded(string type, string name)
         {
 #if ((UNITY_IOS || UNITY_ANDROID) && !UNITY_EDITOR) || (GMEnderOn && UNITY_EDITOR)
-            GPM_CXX_LogSceneLoaded(type, name);
+           // GPM_CXX_LogSceneLoaded(type, name);
 #endif
         }
 
         public static void LogSceneEnd(string type, string name, bool isUpload)
         {
 #if ((UNITY_IOS || UNITY_ANDROID) && !UNITY_EDITOR) || (GMEnderOn && UNITY_EDITOR)
-            GPM_CXX_LogSceneEnd(type, name, isUpload);
+           // GPM_CXX_LogSceneEnd(type, name, isUpload);
 #endif
         }
 
         public static void LogFrameEnd()
         {
 #if ((UNITY_IOS || UNITY_ANDROID) && !UNITY_EDITOR) || (GMEnderOn && UNITY_EDITOR)
-            GPM_CXX_LogFrameEnd();
+          //  GPM_CXX_LogFrameEnd();
 #endif
         }
 
         public static void LogCPUUsage()
         {
 #if ((UNITY_IOS || UNITY_ANDROID) && !UNITY_EDITOR) || (GMEnderOn && UNITY_EDITOR)
-            GPM_CXX_LogCPUUsage();
+            //GPM_CXX_LogCPUUsage();
 #endif
         }
 
         public static void LogMemoryUsage()
         {
 #if ((UNITY_IOS || UNITY_ANDROID) && !UNITY_EDITOR) || (GMEnderOn && UNITY_EDITOR)
-            GPM_CXX_LogMemoryUsage();
+           // GPM_CXX_LogMemoryUsage();
 #endif
         }
 
@@ -63,7 +63,7 @@ namespace GMSDK
         public static void LogGlobalInfo(string type, string key, int value)
         {
 #if ((UNITY_IOS || UNITY_ANDROID) && !UNITY_EDITOR) || (GMEnderOn && UNITY_EDITOR)
-            GPM_CXX_LogGlobalInfoInt(type, key, value);
+            //GPM_CXX_LogGlobalInfoInt(type, key, value);
 #endif
         }
 
@@ -71,35 +71,35 @@ namespace GMSDK
         public static void LogGlobalInfo(string type, string key)
         {
 #if ((UNITY_IOS || UNITY_ANDROID) && !UNITY_EDITOR) || (GMEnderOn && UNITY_EDITOR)
-            GPM_CXX_LogGlobalInfoKey(type, key);
+           // GPM_CXX_LogGlobalInfoKey(type, key);
 #endif
         }
 
         public static void LogSceneInfo(string type, string name, string key, string value)
         {
 #if ((UNITY_IOS || UNITY_ANDROID) && !UNITY_EDITOR) || (GMEnderOn && UNITY_EDITOR)
-            GPM_CXX_LogSceneInfoStr(type, name, key, value);
+            //GPM_CXX_LogSceneInfoStr(type, name, key, value);
 #endif
         }
 
         public static void LogSceneInfo(string type, string name, string key, int value)
         {
 #if ((UNITY_IOS || UNITY_ANDROID) && !UNITY_EDITOR) || (GMEnderOn && UNITY_EDITOR)
-            GPM_CXX_LogSceneInfoInt(type, name, key, value);
+           // GPM_CXX_LogSceneInfoInt(type, name, key, value);
 #endif
         }
 
         public static void LogSceneInfo(string type, string name, string key)
         {
 #if ((UNITY_IOS || UNITY_ANDROID) && !UNITY_EDITOR) || (GMEnderOn && UNITY_EDITOR)
-            GPM_CXX_LogSceneInfoKey(type, name, key);
+           // GPM_CXX_LogSceneInfoKey(type, name, key);
 #endif
         }
 
         public static int RequestGraphicLevel()
         {
 #if ((UNITY_IOS || UNITY_ANDROID) && !UNITY_EDITOR) || (GMEnderOn && UNITY_EDITOR)
-            return GPM_CXX_RequestGraphicLevel();
+            return 0;
 #else
             return 0;
 #endif
