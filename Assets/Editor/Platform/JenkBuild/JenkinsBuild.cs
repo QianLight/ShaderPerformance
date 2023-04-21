@@ -404,11 +404,11 @@ public partial class JenkinsBuild
         PlayerSettings.gcIncremental = false;
         if (_macro.Contains("_USE_DEV_BUILD"))
         {
-            EditorUserBuildSettings.iOSBuildConfigType = iOSBuildType.Debug;
+            EditorUserBuildSettings.iOSXcodeBuildConfig = XcodeBuildConfig.Debug;
         }
         else
         {
-            EditorUserBuildSettings.iOSBuildConfigType = iOSBuildType.Release;
+            EditorUserBuildSettings.iOSXcodeBuildConfig = XcodeBuildConfig.Release;
         }
         
     }
@@ -424,7 +424,7 @@ public partial class JenkinsBuild
         BuildBundleConfig.RecordTime("PlayerSettings.Android.bundleVersionCode: " + bundleVersionCode);
         PlayerSettings.SetScriptingBackend(BuildTargetGroup.Android, ScriptingImplementation.IL2CPP);
         PlayerSettings.Android.targetArchitectures = AndroidArchitecture.All;
-        PlayerSettings.Android.minSdkVersion = AndroidSdkVersions.AndroidApiLevel19;
+        PlayerSettings.Android.minSdkVersion = AndroidSdkVersions.AndroidApiLevel22;
         PlayerSettings.Android.preferredInstallLocation = AndroidPreferredInstallLocation.Auto;
         PlayerSettings.Android.forceSDCardPermission = true;
         PlayerSettings.Android.forceInternetPermission = true;

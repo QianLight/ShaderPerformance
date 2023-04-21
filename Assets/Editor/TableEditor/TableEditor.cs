@@ -313,7 +313,7 @@ namespace TableEditor
             }
             else
             {
-                TableListView.Refresh();
+                TableListView.Rebuild();
                 if (activeTable[activeTableIndex].scrollerVale > 0)
                 {
                     Scroller scroller = TableListView.Query<Scroller>().Last();
@@ -357,7 +357,7 @@ namespace TableEditor
 
         public void RefreshListView()
         {
-            TableListView.Refresh();
+            TableListView.Rebuild();
         }
         private void InitListView(ListView listView)
         {

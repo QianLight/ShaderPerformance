@@ -1,6 +1,6 @@
 using System;
 using System.Collections.Generic;
-using UnityEditor.Experimental.SceneManagement;
+
 using UnityEngine;
 using UnityEngine.Timeline;
 
@@ -123,7 +123,7 @@ namespace UnityEditor.Timeline
 
                 if (PrefabUtility.IsPartOfPrefabAsset(state.editSequence.director))
                 {
-                    var stage = PrefabStageUtility.GetCurrentPrefabStage();
+                    var stage = UnityEditor.SceneManagement.PrefabStageUtility.GetCurrentPrefabStage();
                     if (stage == null || !stage.IsPartOfPrefabContents(state.editSequence.director.gameObject))
                         return s_PrefabOutOfContextMode;
                 }
@@ -223,7 +223,7 @@ namespace UnityEditor.Timeline
         }
 
         /// <summary>
-        /// ¿ÉÄÜ»áÓÐ¶à²ãµÄgroup£¬ËùÒÔÊ¹ÓÃµÝ¹éµÄ·½·¨½øÐÐÒÆ¶¯
+        /// ï¿½ï¿½ï¿½Ü»ï¿½ï¿½Ð¶ï¿½ï¿½ï¿½groupï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¹ï¿½ÃµÝ¹ï¿½Ä·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ¶ï¿½
         /// </summary>
         /// <param name="trackAsset"></param>
         /// <param name="start"></param>

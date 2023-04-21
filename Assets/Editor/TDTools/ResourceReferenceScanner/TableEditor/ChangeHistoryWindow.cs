@@ -28,9 +28,9 @@ namespace TDTools.ResourceScanner {
             bar.Add(btnClose);
 
             Button btnClear = new Button();
-            btnClear.text = "É¾³ýËùÑ¡";
+            btnClear.text = "É¾ï¿½ï¿½ï¿½ï¿½Ñ¡";
             btnClear.clicked += () => {
-                if (!EditorUtility.DisplayDialog("È·ÈÏÇå³ýÀúÊ·¼ÇÂ¼", "È·ÈÏÒªÇå³ýËùÑ¡µÄÀúÊ·¼ÇÂ¼Âð£¿´Ë²Ù×÷²»¿ÉÄæ", "È·ÈÏ", "È¡Ïû"))
+                if (!EditorUtility.DisplayDialog("È·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê·ï¿½ï¿½Â¼", "È·ï¿½ï¿½Òªï¿½ï¿½ï¿½ï¿½ï¿½Ñ¡ï¿½ï¿½ï¿½ï¿½Ê·ï¿½ï¿½Â¼ï¿½ð£¿´Ë²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½", "È·ï¿½ï¿½", "È¡ï¿½ï¿½"))
                     return;
 
                 var r = ResourceReferenceInspector.Instance.Records;
@@ -39,12 +39,12 @@ namespace TDTools.ResourceScanner {
                         r.RemoveAt(i);
                         i--;
                     }
-                _listView.Refresh();
+                _listView.Rebuild();
             };
             bar.Add(btnClear);
 
             Button btnApply = new Button();
-            btnApply.text = "ÔÙ´ÎÓ¦ÓÃ»ò³·»Ø";
+            btnApply.text = "ï¿½Ù´ï¿½Ó¦ï¿½Ã»ò³·»ï¿½";
             btnApply.clicked += () => {
                 var l = ResourceReferenceInspector.Instance.Records;
                 List<TableChangeRecord> list = new List<TableChangeRecord>();
@@ -67,7 +67,7 @@ namespace TDTools.ResourceScanner {
                 for (int i = 0; i < r.Count; i++)
                     r[i].Selected = selectAll;
                 selectAll = !selectAll;
-                _listView.Refresh();
+                _listView.Rebuild();
             };
             bar.Add(btnSelectAll);
 
@@ -111,7 +111,7 @@ namespace TDTools.ResourceScanner {
         }
 
         public void Refresh() {
-            _listView.Refresh();
+            _listView.Rebuild();
         }
 
 

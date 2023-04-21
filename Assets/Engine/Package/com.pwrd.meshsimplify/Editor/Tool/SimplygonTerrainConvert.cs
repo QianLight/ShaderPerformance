@@ -1623,7 +1623,7 @@ namespace Athena.MeshSimplify
       if ((UnityEngine.Object) texture2D == (UnityEngine.Object) null)
         texture2D = new Texture2D(renderTexture.width, renderTexture.height, format, true);
       else if (texture2D.width != renderTexture.width || texture2D.height != renderTexture.height)
-        texture2D.Resize(renderTexture.width, renderTexture.height, format, true);
+        texture2D.Reinitialize(renderTexture.width, renderTexture.height, format, true);
       texture2D.ReadPixels(new Rect(0.0f, 0.0f, (float) renderTexture.width, (float) renderTexture.height), 0, 0);
       texture2D.Apply();
       RenderTexture.active = Application.isPlaying ? active : (RenderTexture) null;

@@ -30,7 +30,7 @@ namespace UsingTheirs.ShaderHotSwap
         // done: res, error
         static IEnumerator PostImpl(string url, string reqContent, System.Action<string, string> done)
         {
-            var www = UnityWebRequest.Post(url, reqContent);
+            var www = UnityWebRequest.PostWwwForm(url, reqContent);
             UnityWebRequestAsyncOperation op = www.SendWebRequest();
             yield return new EditorCoroutine.CustomYieldInstruction(() => op.isDone);
 

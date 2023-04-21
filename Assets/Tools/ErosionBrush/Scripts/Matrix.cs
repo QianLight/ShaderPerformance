@@ -268,7 +268,7 @@ namespace ErosionBrushPlugin
 			{
 				//creating or resizing texture
 				if (texture == null) texture = new Texture2D(rect.size.x, rect.size.z);
-				if (resizeTexture) texture.Resize(rect.size.x, rect.size.z);
+				if (resizeTexture) texture.Reinitialize(rect.size.x, rect.size.z);
 				
 				//finding matrix-texture intersection
 				Coord textureSize = new Coord(texture.width, texture.height);
@@ -367,7 +367,7 @@ namespace ErosionBrushPlugin
 			public Texture2D SimpleToTexture (Texture2D texture=null, Color[] colors=null, float rangeMin=0, float rangeMax=1, string savePath=null)
 			{
 				if (texture == null) texture = new Texture2D(rect.size.x, rect.size.z);
-				if (texture.width != rect.size.x || texture.height != rect.size.z) texture.Resize(rect.size.x, rect.size.z);
+				if (texture.width != rect.size.x || texture.height != rect.size.z) texture.Reinitialize(rect.size.x, rect.size.z);
 				if (colors == null || colors.Length != rect.size.x*rect.size.z) colors = new Color[rect.size.x*rect.size.z];
 
 				for (int i=0; i<count; i++) 

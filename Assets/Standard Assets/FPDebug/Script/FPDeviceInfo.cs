@@ -85,7 +85,7 @@ public class FPDeviceInfo
         info.TargetFrame = Application.targetFrameRate;
         info.AactiveColorSpace = QualitySettings.activeColorSpace;
         info.LightCount = QualitySettings.pixelLightCount;
-        info.TextureLimit = QualitySettings.masterTextureLimit;
+        info.TextureLimit = QualitySettings.globalTextureMipmapLimit;
         info.ShadowmaskMode = QualitySettings.shadowmaskMode;
 
         if (info.URP)
@@ -135,7 +135,7 @@ public class FPDeviceInfo
     {
         bool URP = UnityEngine.Rendering.GraphicsSettings.renderPipelineAsset != null;
         QualitySettings.pixelLightCount = info.LightCount;
-        QualitySettings.masterTextureLimit = info.TextureLimit;
+        QualitySettings.globalTextureMipmapLimit = info.TextureLimit;
         QualitySettings.shadowmaskMode = info.ShadowmaskMode;
         QualitySettings.vSyncCount = info.SyncCount;
         Application.targetFrameRate = info.TargetFrame;

@@ -873,7 +873,7 @@ namespace Impostors.Managers
         public int GetUsedBytes()
         {
             int res = 0;
-            res += MemoryUsageUtility.GetMemoryUsage(_impostorableObjects);
+            //res += MemoryUsageUtility.GetMemoryUsage(_impostorableObjects);
             res += MemoryUsageUtility.GetMemoryUsage(_updateQueue);
             // todo chunk pool memory
             res += _commandBufferProxy.CommandBuffer.sizeInBytes;

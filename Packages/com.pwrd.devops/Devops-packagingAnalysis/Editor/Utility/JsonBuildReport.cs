@@ -146,7 +146,7 @@ namespace Trident.JsonReport
             //  源文件，如 Assets/Resources/test.mat
             JsonSourceFileMap sourceFileMap = new JsonSourceFileMap(report, detialAssetType, displayProgressBar);
             //  输出文件，如 Bundle，Assembly，LuaFile之类的
-            JsonOutputFileMap outputFileMap = new JsonOutputFileMap(report.files, sourceFileMap, displayProgressBar);
+            JsonOutputFileMap outputFileMap = new JsonOutputFileMap(report.GetFiles(), sourceFileMap, displayProgressBar);
             //  打包步骤，如 Build Bundle, Build Player 之类的
             JsonBuildStepMap buildStepMap = new JsonBuildStepMap(report.steps, displayProgressBar);
             //  Save Json 文件

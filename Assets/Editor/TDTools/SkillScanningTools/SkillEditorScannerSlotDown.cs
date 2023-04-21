@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 public class SkillEditorScannerSlotDown : EditorWindow
 {
-    [MenuItem("Tools/TDTools/·ÏÆú¹¤¾ß/¼¼ÄÜslotdownÉ¨Ãè¹¤¾ß")]
+    [MenuItem("Tools/TDTools/ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½/ï¿½ï¿½ï¿½ï¿½slotdownÉ¨ï¿½è¹¤ï¿½ï¿½")]
     public static void ShowExample()
     {
         SkillEditorScannerSlotDown wnd = GetWindow<SkillEditorScannerSlotDown>();
@@ -21,7 +21,7 @@ public class SkillEditorScannerSlotDown : EditorWindow
 
         Toolbar toolbar = new Toolbar();
         ToolbarButton scanButton = new ToolbarButton();
-        scanButton.text = "É¨Ãè";
+        scanButton.text = "É¨ï¿½ï¿½";
         toolbar.Add(scanButton);
         root.Add(toolbar);
 
@@ -40,16 +40,16 @@ public class SkillEditorScannerSlotDown : EditorWindow
             await task;
             results = task.Result;
             resutsListView.itemsSource = results;
-            resutsListView.Refresh();
+            resutsListView.Rebuild();
         };
 
         ToolbarButton saveToFileButton = new ToolbarButton();
         toolbar.Add(saveToFileButton);
-        saveToFileButton.text = "±£´æ½á¹ûµ½txt";
+        saveToFileButton.text = "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½txt";
         saveToFileButton.clicked += () => {
             if (results.Count == 0)
                 return;
-            string path = EditorUtility.SaveFilePanel("±£´æ½á¹û", "", "É¨Ãè½á¹û", "txt");
+            string path = EditorUtility.SaveFilePanel("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½", "", "É¨ï¿½ï¿½ï¿½ï¿½", "txt");
             if (path == "")
                 return;
             Task.Run(() => {
@@ -66,7 +66,7 @@ public class SkillEditorScannerSlotDown : EditorWindow
         List<string> results = new List<string>();
         string path = $@"{Application.dataPath}\BundleRes\SkillPackage\";
         var skills = GetAllSkillFiles(new DirectoryInfo(path));
-        int progressID = Progress.Start("É¨Ãè¼¼ÄÜSlotdown");
+        int progressID = Progress.Start("É¨ï¿½è¼¼ï¿½ï¿½Slotdown");
         await Task.Run(()=>{
             for (int i = 0; i < skills.Count; i++) {
                 Progress.Report(progressID, i / (float)skills.Count);

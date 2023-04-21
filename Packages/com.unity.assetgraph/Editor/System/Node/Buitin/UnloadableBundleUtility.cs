@@ -124,7 +124,7 @@ namespace UnityEngine.AssetGraph
                 {
                     return true;
                 }
-                else if(setting.loadType == AudioClipLoadType.CompressedInMemory && !audioImporter.preloadAudioData)
+                else if(setting.loadType == AudioClipLoadType.CompressedInMemory )
                 {
                     return true;
                 }

@@ -17,21 +17,21 @@ namespace TDTools {
         List<string> results;
         ListView listView;
 
-        [MenuItem("Tools/TDTools/·ÏÆú¹¤¾ß/Prefab¹Ç÷ÀÉ¨Ãè¹¤¾ß")]
+        [MenuItem("Tools/TDTools/ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½/Prefabï¿½ï¿½ï¿½ï¿½É¨ï¿½è¹¤ï¿½ï¿½")]
         public static void ShowWindow() {
             GetWindow<PrefabBoneScanner>();
         }
 
         public void CreateGUI() {
             results = new List<string>();
-            titleContent = new GUIContent("Prefab¹Ç÷ÀÉ¨Ãè¹¤¾ß");
+            titleContent = new GUIContent("Prefabï¿½ï¿½ï¿½ï¿½É¨ï¿½è¹¤ï¿½ï¿½");
             var root = rootVisualElement;
             Toolbar bar = new Toolbar();
             bar.style.flexShrink = 0;
             root.Add(bar);
 
             ToolbarButton buttonStart = new ToolbarButton();
-            buttonStart.text = "¿ªÊ¼É¨Ãè";
+            buttonStart.text = "ï¿½ï¿½Ê¼É¨ï¿½ï¿½";
             buttonStart.clicked += Scan;
             bar.Add(buttonStart);
 
@@ -47,9 +47,9 @@ namespace TDTools {
             root.Add(listView);
 
             ToolbarButton buttonSave = new ToolbarButton();
-            buttonSave.text = "±£´æ½á¹û";
+            buttonSave.text = "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½";
             buttonSave.clicked += () => {
-                string path = EditorUtility.SaveFilePanel("±£´æ½á¹û", "", "¹Ç÷ÀÉ¨Ãè½á¹û", "txt");
+                string path = EditorUtility.SaveFilePanel("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½", "", "ï¿½ï¿½ï¿½ï¿½É¨ï¿½ï¿½ï¿½ï¿½", "txt");
                 using StreamWriter sw = new StreamWriter(path, false, System.Text.Encoding.UTF8);
                 for (int i = 0; i < results.Count; i++)
                     sw.WriteLine(results[i]);
@@ -61,7 +61,7 @@ namespace TDTools {
         void Scan() {
             results.Clear();
             var table = TableChecker.TableChecker.ReadTable("XEntityPresentation");
-            var boneTable = TableChecker.TableChecker.ReadTable(EditorUtility.OpenFilePanel("´ò¿ª±í¸ñ", "", "txt"), true);
+            var boneTable = TableChecker.TableChecker.ReadTable(EditorUtility.OpenFilePanel("ï¿½ò¿ª±ï¿½ï¿½ï¿½", "", "txt"), true);
 
             Dictionary<string, List<Bone>> dic = new Dictionary<string, List<Bone>>();
 
@@ -101,10 +101,10 @@ namespace TDTools {
                         var child = rootTransform.Find(list2[j].Value);
                         values.Add(list2[j].Value);
                         if (child == null) {
-                            results.Add($"ÒÑÅäÕÒ²»µ½\t{row["Prefab"]}\t{list2[j].Value}");
+                            results.Add($"ï¿½ï¿½ï¿½ï¿½ï¿½Ò²ï¿½ï¿½ï¿½\t{row["Prefab"]}\t{list2[j].Value}");
                         } else {
                             keys.Add(list2[j].Key);
-                            results.Add($"ÒÑÅä\t{row["Prefab"]}\t{list2[j].Value}");
+                            results.Add($"ï¿½ï¿½ï¿½ï¿½\t{row["Prefab"]}\t{list2[j].Value}");
                         }
                     }
                 }
@@ -121,9 +121,9 @@ namespace TDTools {
                     var child = rootTransform.Find(list[j].Value);
                     values.Add(list[j].Value);
                     if (child == null) {
-                        result1.Add($"Ä¬ÈÏ1ÕÒ²»µ½\t{row["Prefab"]}\t{list[j].Value}");
+                        result1.Add($"Ä¬ï¿½ï¿½1ï¿½Ò²ï¿½ï¿½ï¿½\t{row["Prefab"]}\t{list[j].Value}");
                     } else {
-                        found1.Add($"Ä¬ÈÏ1\t{row["Prefab"]}\t{list[j].Value}");
+                        found1.Add($"Ä¬ï¿½ï¿½1\t{row["Prefab"]}\t{list[j].Value}");
                     }
                 }
 
@@ -134,9 +134,9 @@ namespace TDTools {
                     var child = rootTransform.Find(list[j].Value);
                     values.Add(list[j].Value);
                     if (child == null) {
-                        result2.Add($"Ä¬ÈÏ2ÕÒ²»µ½\t{row["Prefab"]}\t{list[j].Value}");
+                        result2.Add($"Ä¬ï¿½ï¿½2ï¿½Ò²ï¿½ï¿½ï¿½\t{row["Prefab"]}\t{list[j].Value}");
                     } else {
-                        found2.Add($"Ä¬ÈÏ2\t{row["Prefab"]}\t{list[j].Value}");
+                        found2.Add($"Ä¬ï¿½ï¿½2\t{row["Prefab"]}\t{list[j].Value}");
                     }
                 }
 
@@ -149,7 +149,7 @@ namespace TDTools {
                 }
             }
             listView.itemsSource = results;
-            listView.Refresh();
+            listView.Rebuild();
         }
     }
 }

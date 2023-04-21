@@ -84,14 +84,14 @@ namespace TDTools.SkillEditorTemplate {
                     return;
                 }
                 listLocal.RemoveAt(localListView.selectedIndex);
-                localListView.Refresh();
+                localListView.Rebuild();
             } else {
                 template = listProject[projectListView.selectedIndex];
                 if (!EditorUtility.DisplayDialog("删除模板", $"确认要删除模板{template.TemplateName}", "删除", "取消")) {
                     return;
                 }
                 listProject.RemoveAt(projectListView.selectedIndex);
-                projectListView.Refresh();
+                projectListView.Rebuild();
             }
 
             try {
@@ -256,7 +256,7 @@ namespace TDTools.SkillEditorTemplate {
                         Debug.Log(e.Message);
                     }
                 }
-                listView.Refresh();
+                listView.Rebuild();
                 listView.style.height = 48 * list.Count;
             }
         }

@@ -368,7 +368,7 @@ namespace Impostors
 
             res += MemoryUsageUtility.GetMemoryUsage(_impostors);
             res += MemoryUsageUtility.GetMemoryUsage(_emptyPlaces);
-            res += MemoryUsageUtility.GetMemoryUsage(_instanceIdsToRemove);
+           // res += MemoryUsageUtility.GetMemoryUsage(_instanceIdsToRemove);
 
             return res;
         }

@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.Timeline;
 using UnityEngine.Playables;
 using Object = UnityEngine.Object;
-using UnityEditor.Experimental.SceneManagement;
+
 
 namespace UnityEditor.Timeline
 {
@@ -110,7 +110,7 @@ namespace UnityEditor.Timeline
                 HideFlags.HideInHierarchy | HideFlags.HideInInspector |
                 HideFlags.DontSaveInEditor | HideFlags.NotEditable;
 
-            var prefabMode = PrefabStageUtility.GetCurrentPrefabStage();
+            var prefabMode = UnityEditor.SceneManagement.PrefabStageUtility.GetCurrentPrefabStage();
 
             var inScene = new List<PlayableDirector>();
             var allDirectors = Resources.FindObjectsOfTypeAll(typeof(PlayableDirector)) as PlayableDirector[];

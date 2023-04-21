@@ -223,7 +223,7 @@ public class RuntimeProfilerCtrl : MonoBehaviour
         var url = ServiceUrl + path;
         var json = JsonUtility.ToJson(obj);
         byte[] postData = Encoding.UTF8.GetBytes(json);
-        using (UnityWebRequest webRequest = UnityWebRequest.Post(url, UnityWebRequest.kHttpVerbPOST))
+        using (UnityWebRequest webRequest = UnityWebRequest.PostWwwForm(url, UnityWebRequest.kHttpVerbPOST))
         {
             webRequest.chunkedTransfer = false;
             webRequest.uploadHandler = new UploadHandlerRaw(postData);

@@ -328,7 +328,7 @@ namespace UnityEngine.Rendering.Universal
             GraphicsSettings.lightsUseLinearIntensity = (QualitySettings.activeColorSpace == ColorSpace.Linear);
             GraphicsSettings.useScriptableRenderPipelineBatching = asset.useSRPBatcher;
             SetupPerFrameShaderConstants();
-            setupPerFrameData?.Invoke(renderContext, cameras);
+            setupPerFrameData?.Invoke(renderContext, cameras.ToArray());
             
 #if ENABLE_VR && ENABLE_XR_MODULE
             // Update XR MSAA level per frame.

@@ -8,7 +8,7 @@ using System;
 namespace TDTools.ResourceScanner {
 
     /// <summary>
-    /// ÓÃÀ´Í¼ÐÎ»¯ÏÔÊ¾Êý¾Ý×ÊÔ´µÈ¹ØÁª¹ØÏµµÄ¹¤¾ß
+    /// ï¿½ï¿½ï¿½ï¿½Í¼ï¿½Î»ï¿½ï¿½ï¿½Ê¾ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô´ï¿½È¹ï¿½ï¿½ï¿½ï¿½ï¿½Ïµï¿½Ä¹ï¿½ï¿½ï¿½
     /// </summary>
     public class ResourceReferenceInspector : EditorWindow {
 
@@ -113,14 +113,14 @@ namespace TDTools.ResourceScanner {
             _changeHistoryWindow?.Close();
         }
 
-        [MenuItem("Tools/TDTools/ÅäÖÃ¼ì²é¹¤¾ß/ÒýÓÃ¿ÉÊÓ»¯¹¤¾ß")]
+        [MenuItem("Tools/TDTools/ï¿½ï¿½ï¿½Ã¼ï¿½é¹¤ï¿½ï¿½/ï¿½ï¿½ï¿½Ã¿ï¿½ï¿½Ó»ï¿½ï¿½ï¿½ï¿½ï¿½")]
         public static void ShowWindow() {
             ResourceReferenceInspector wnd = GetWindow<ResourceReferenceInspector>();
         }
 
         void CreateGUI() {
             rootVisualElement.Clear();
-            titleContent = new GUIContent("ÒýÓÃ¼ì²â¹¤¾ß");
+            titleContent = new GUIContent("ï¿½ï¿½ï¿½Ã¼ï¿½â¹¤ï¿½ï¿½");
 
             
             CreateListView();
@@ -176,12 +176,12 @@ namespace TDTools.ResourceScanner {
             bar.style.justifyContent = Justify.SpaceBetween;
 
             Button buttonClearAll = new Button();
-            buttonClearAll.text = "Çå³ýËùÓÐ";
+            buttonClearAll.text = "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½";
             buttonClearAll.clicked += ClearBoard;
             rightToolBar.Add(buttonClearAll);
 
             Button buttonRefresh = new Button();
-            buttonRefresh.text = "Ë¢ÐÂ±í¸ñ";
+            buttonRefresh.text = "Ë¢ï¿½Â±ï¿½ï¿½ï¿½";
             buttonRefresh.clicked += RefreshTables;
             rightToolBar.Add(buttonRefresh);
 
@@ -189,7 +189,7 @@ namespace TDTools.ResourceScanner {
             Zoom = 1.0f;
 
             Button resetZoomButton = new Button();
-            resetZoomButton.text = "ÖØÖÃËõ·Å";
+            resetZoomButton.text = "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½";
             resetZoomButton.clicked += () => {
                 zoomSlider.value = 1.0f;
             };
@@ -220,7 +220,7 @@ namespace TDTools.ResourceScanner {
             rightToolBar.style.flexDirection = FlexDirection.Row;
             bool hiden = false;
             Button hideLeft = new Button();
-            hideLeft.text = "Òþ²Ø±ßÀ¸";
+            hideLeft.text = "ï¿½ï¿½ï¿½Ø±ï¿½ï¿½ï¿½";
             hideLeft.style.flexShrink = 0;
             hideLeft.clicked +=()=>{
                 hiden = !hiden;
@@ -233,7 +233,7 @@ namespace TDTools.ResourceScanner {
             leftToolBar.Add(hideLeft);
 
             Button buttonHistory = new Button();
-            buttonHistory.text = "ÐÞ¸ÄÀúÊ·(ºÏ±í¹¤¾ß)";
+            buttonHistory.text = "ï¿½Þ¸ï¿½ï¿½ï¿½Ê·(ï¿½Ï±ï¿½ï¿½ï¿½ï¿½ï¿½)";
             buttonHistory.style.flexShrink = 0;
             buttonHistory.clicked += () => {
                 if (_changeHistoryWindow == null) {
@@ -367,8 +367,8 @@ namespace TDTools.ResourceScanner {
             tableList.Add(new TableNodeType(data.GetTable("SceneList", "SceneID", "SceneList {row}:\t{SceneID} {SceneTitle}"), NodeType.Scene));
 
             List<string> tableNames = new List<string>();
-            tableNames.Add("È«²¿±í¸ñ");
-            tableNames.Add("ÊÕ²ØµÄ");
+            tableNames.Add("È«ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
+            tableNames.Add("ï¿½Õ²Øµï¿½");
             for (int i = 0; i < tableList.Count; i++) {
                 tableNames.Add(tableList[i].node.TableName);
                 var nameList = tableList[i].node.GetNameList();
@@ -409,17 +409,17 @@ namespace TDTools.ResourceScanner {
                         return;
                     GenericMenu menu = new GenericMenu();
                     if (!filtered[index].IsFavorite) {
-                        menu.AddItem(new GUIContent($"ÊÕ²Ø: {filtered[index].ID}"), false, () => {
+                        menu.AddItem(new GUIContent($"ï¿½Õ²ï¿½: {filtered[index].ID}"), false, () => {
                             favoriatedItems.Add(filtered[index]);
                             OnSearchChange(searchField.value);
                         });
                     } else {
-                        menu.AddItem(new GUIContent($"É¾³ýÊÕ²Ø: {filtered[index].ID}"), false, () => {
+                        menu.AddItem(new GUIContent($"É¾ï¿½ï¿½ï¿½Õ²ï¿½: {filtered[index].ID}"), false, () => {
                             favoriatedItems.Remove(filtered[index].type, filtered[index].ID);
                             OnSearchChange(searchField.value);
                         });
                     }
-                    menu.AddItem(new GUIContent($"¸´ÖÆ: {filtered[index].ID}"), false, () => { GUIUtility.systemCopyBuffer = filtered[index].ID; });
+                    menu.AddItem(new GUIContent($"ï¿½ï¿½ï¿½ï¿½: {filtered[index].ID}"), false, () => { GUIUtility.systemCopyBuffer = filtered[index].ID; });
                     InspectorElement.AddGMMenu(menu, filtered[index].type, filtered[index].ID);
                     menu.ShowAsContext();
                 });
@@ -456,7 +456,7 @@ namespace TDTools.ResourceScanner {
             });
 
             Button buttonAdd = new Button();
-            buttonAdd.text = "Ìí¼Ó";
+            buttonAdd.text = "ï¿½ï¿½ï¿½ï¿½";
             buttonAdd.style.flexShrink = 0;
             buttonAdd.clicked += () => {
                 SearchOption o = (SearchOption)listView.selectedItem;
@@ -529,14 +529,14 @@ namespace TDTools.ResourceScanner {
                 }
 
                 listView.itemsSource = filtered;
-                listView.Refresh();
+                listView.Rebuild();
             }
 
         }
 
         #endregion
 
-        #region ½Úµã²Ù×÷
+        #region ï¿½Úµï¿½ï¿½ï¿½ï¿½
 
         void ClearBoard() {
             list.Clear();
@@ -577,7 +577,7 @@ namespace TDTools.ResourceScanner {
 
         #endregion
 
-        #region ÒýÓÃ·´ÏòÉ¨Ãè
+        #region ï¿½ï¿½ï¿½Ã·ï¿½ï¿½ï¿½É¨ï¿½ï¿½
 
         public void SetScanResult(Dictionary<ReferenceRecord, int> results) {
             List<KeyValuePair<ReferenceRecord, int>> list = new List<KeyValuePair<ReferenceRecord, int>>();
@@ -585,13 +585,13 @@ namespace TDTools.ResourceScanner {
                 list.Add(pair);
             }
             RefereceRecordListView.itemsSource = list;
-            RefereceRecordListView.Refresh();
+            RefereceRecordListView.Rebuild();
             ReferenceRecordContainer.style.display = DisplayStyle.Flex;
         }
 
         #endregion
 
-        #region ÍÏ×§
+        #region ï¿½ï¿½×§
         void PointerDownHandler(PointerDownEvent evt) {
             if (evt.button == 0) {
                 _pointerStartPosition = evt.position;
@@ -718,7 +718,7 @@ namespace TDTools.ResourceScanner {
 
         #endregion
 
-        #region ±à¼­ÀúÊ·
+        #region ï¿½à¼­ï¿½ï¿½Ê·
 
         public void AddRecord(TableChangeRecord record) {
             Records.Add(record);

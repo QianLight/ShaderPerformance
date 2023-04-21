@@ -2988,7 +2988,7 @@ namespace XLua.CSObjectWrap
                 ObjectTranslator translator = ObjectTranslatorPool.Instance.Find(L);
 			
                 UnityEngine.Animator gen_to_be_invoked = (UnityEngine.Animator)translator.FastGetCSObj(L, 1);
-                LuaAPI.lua_pushboolean(L, gen_to_be_invoked.keepAnimatorControllerStateOnDisable);
+                LuaAPI.lua_pushboolean(L, gen_to_be_invoked.keepAnimatorStateOnDisable);
             } catch(System.Exception gen_e) {
                 return LuaAPI.luaL_error(L, "c# exception:" + gen_e);
             }
@@ -3280,7 +3280,7 @@ namespace XLua.CSObjectWrap
                 ObjectTranslator translator = ObjectTranslatorPool.Instance.Find(L);
 			
                 UnityEngine.Animator gen_to_be_invoked = (UnityEngine.Animator)translator.FastGetCSObj(L, 1);
-                gen_to_be_invoked.keepAnimatorControllerStateOnDisable = LuaAPI.lua_toboolean(L, 2);
+                gen_to_be_invoked.keepAnimatorStateOnDisable = LuaAPI.lua_toboolean(L, 2);
             
             } catch(System.Exception gen_e) {
                 return LuaAPI.luaL_error(L, "c# exception:" + gen_e);

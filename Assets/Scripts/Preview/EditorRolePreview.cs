@@ -61,7 +61,7 @@ public static class EditorRolePreview
 
     private static void Initialize()
     {
-        int sceneCount = EditorSceneManager.loadedSceneCount;
+        int sceneCount = SceneManager.loadedSceneCount;
         Scene activeScene = EditorSceneManager.GetActiveScene();
         for (int i = 0; i < sceneCount; i++)
         {

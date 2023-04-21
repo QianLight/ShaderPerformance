@@ -425,7 +425,7 @@ public void SetConfiguration(int fW, int fH)
 
     void SetTextureLevel(RenderQualityLevel level)
     {
-        QualitySettings.masterTextureLimit = level <= RenderQualityLevel.Medium ? 1 : 0;
+        QualitySettings.globalTextureMipmapLimit = level <= RenderQualityLevel.Medium ? 1 : 0;
     }
 
     void SetAfterEffectLevel(RenderQualityLevel level)

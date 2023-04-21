@@ -38,10 +38,10 @@ namespace Impostors.MemoryUsage
             return dictionary.Count * (keySize + valueSize);
         }
 
-        public static int GetMemoryUsage<T>(NativeList<T> list) where T : struct
-        {
-            return list.Capacity * Marshal.SizeOf<T>();
-        }
+        // public static int GetMemoryUsage<T>(NativeList<T> list) where T : struct
+        // {
+        //     return list.Capacity * Marshal.SizeOf<T>();
+        // }
 
         public static int GetMemoryUsage<T>(NativeArray<T> array) where T : struct
         {

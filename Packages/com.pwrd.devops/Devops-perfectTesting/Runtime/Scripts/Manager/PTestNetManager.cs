@@ -145,7 +145,7 @@ public class PTestNetManager : Singleton<PTestNetManager>
 
     IEnumerator Post<T>(string api, Action<RequestData<T>, bool> action)
     {
-        UnityWebRequest request = UnityWebRequest.Post(PTestNetConfig.url + api, "");
+        UnityWebRequest request = UnityWebRequest.PostWwwForm(PTestNetConfig.url + api, "");
         yield return request.SendWebRequest();
 
 

@@ -380,7 +380,7 @@ namespace TDTools.SkillEditorTemplate {
                 labelName.text = buffer.Nodes[index].NodeName;
             }
 
-            listView.Refresh();
+            listView.Rebuild();
         }
 
     }

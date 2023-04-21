@@ -189,7 +189,7 @@ namespace TDTools.ResourceScanner {
             async Task ShowResult(ScannerResult result) {
                 requiredFiles.Clear();
                 requiredFiles.AddRange(result.AllFiles);
-                requiredFileListView.Refresh();
+                requiredFileListView.Rebuild();
                 _onResultChange?.Invoke();
 
                 ScannerResult allFiles = new ScannerResult();
@@ -224,11 +224,11 @@ namespace TDTools.ResourceScanner {
                 notRequiredFiles.Clear();
                 allFiles.Difference(result);
                 notRequiredFiles.AddRange(allFiles.AllFiles);
-                notRequiredFileListView.Refresh();
+                notRequiredFileListView.Rebuild();
 
                 missingFiles.Clear();
                 missingFiles.AddRange(result.MissingFiles);
-                missingFilesListView.Refresh();
+                missingFilesListView.Rebuild();
 
                 _onResultChange?.Invoke();
                 await Task.Yield();
@@ -320,8 +320,8 @@ namespace TDTools.ResourceScanner {
                 requiredFiles.Clear();
                 notRequiredFiles.Clear();
                 _timelineToScan.Clear();
-                requiredFileListView.Refresh();
-                notRequiredFileListView.Refresh();
+                requiredFileListView.Rebuild();
+                notRequiredFileListView.Rebuild();
                 await Task.Yield();
 
                 int progressID = Progress.Start("扫描文件...");
@@ -475,7 +475,7 @@ namespace TDTools.ResourceScanner {
                     matchCount.style.display = DisplayStyle.Flex;
                     saveSearchedOnly.style.display = DisplayStyle.Flex;
                 }
-                listView.Refresh();
+                listView.Rebuild();
             });
 
             _onResultChange += () => {

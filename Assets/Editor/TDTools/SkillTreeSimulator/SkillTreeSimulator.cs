@@ -57,7 +57,7 @@ namespace TDTools.SkillTreeSimulator {
                     _owner.PointSpent++;
                     if (history) {
                         _owner.History.Add("+ " + row["SkillScript"]);
-                        _owner.veList.Refresh();
+                        _owner.veList.Rebuild();
                     }
                     if (!ignoreLimits)
                         _owner.ChangePointSpent();
@@ -76,7 +76,7 @@ namespace TDTools.SkillTreeSimulator {
                 _owner.ChangePointSpent();
                 if (history) {
                     _owner.History.Add("- " + row["SkillScript"]);
-                    _owner.veList.Refresh();
+                    _owner.veList.Rebuild();
                 }
             }
 
@@ -208,7 +208,7 @@ namespace TDTools.SkillTreeSimulator {
                         pair.Value.Level--;
                         ChangePointSpent();
                         History.Add("- " + pair.Key);
-                        veList.Refresh();
+                        veList.Rebuild();
                         return;
                     }
                 }
@@ -229,7 +229,7 @@ namespace TDTools.SkillTreeSimulator {
             } else {
                 _skills[last[1]].AddLevel(false);
             }
-            veList.Refresh();
+            veList.Rebuild();
         }
 
         #endregion
@@ -583,7 +583,7 @@ namespace TDTools.SkillTreeSimulator {
                 }
 
                 Repaint();
-                veList.Refresh();
+                veList.Rebuild();
             }
         }
 
