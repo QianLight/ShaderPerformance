@@ -113,32 +113,32 @@ namespace GMSDK
 #endif
 
 #if (UNITY_IOS || UNITY_ANDROID) && !UNITY_EDITOR
-        [DllImport(libname)]
-        private static extern void GPM_CXX_LogSceneStart(string type, string name);
-        [DllImport(libname)]
-        private static extern void GPM_CXX_LogSceneLoaded(string type, string name);
-        [DllImport(libname)]
-        private static extern void GPM_CXX_LogSceneEnd(string type, string name, bool isUpload);
-        [DllImport(libname)]
-        private static extern void GPM_CXX_LogFrameEnd();
-        [DllImport(libname)]
-        private static extern void GPM_CXX_LogCPUUsage();
-        [DllImport(libname)]
-        private static extern void GPM_CXX_LogMemoryUsage();
-        [DllImport(libname)]
-        private static extern void GPM_CXX_LogGlobalInfoStr(string type, string key, string value);
-        [DllImport(libname)]
-        private static extern void GPM_CXX_LogGlobalInfoInt(string type, string key, int value);
-        [DllImport(libname)]
-        private static extern void GPM_CXX_LogGlobalInfoKey(string type, string key);
-        [DllImport(libname)]
-        private static extern void GPM_CXX_LogSceneInfoStr(string type, string name, string key, string value);
-        [DllImport(libname)]
-        private static extern void GPM_CXX_LogSceneInfoInt(string type, string name, string key, int value);
-        [DllImport(libname)]
-        private static extern void GPM_CXX_LogSceneInfoKey(string type, string name, string key);
-        [DllImport(libname)]
-        private static extern int GPM_CXX_RequestGraphicLevel();
+        // [DllImport(libname)]
+        // private static extern void GPM_CXX_LogSceneStart(string type, string name);
+        // [DllImport(libname)]
+        // private static extern void GPM_CXX_LogSceneLoaded(string type, string name);
+        // [DllImport(libname)]
+        // private static extern void GPM_CXX_LogSceneEnd(string type, string name, bool isUpload);
+        // [DllImport(libname)]
+        // private static extern void GPM_CXX_LogFrameEnd();
+        // [DllImport(libname)]
+        // private static extern void GPM_CXX_LogCPUUsage();
+        // [DllImport(libname)]
+        // private static extern void GPM_CXX_LogMemoryUsage();
+        // [DllImport(libname)]
+        // private static extern void GPM_CXX_LogGlobalInfoStr(string type, string key, string value);
+        // [DllImport(libname)]
+        // private static extern void GPM_CXX_LogGlobalInfoInt(string type, string key, int value);
+        // [DllImport(libname)]
+        // private static extern void GPM_CXX_LogGlobalInfoKey(string type, string key);
+        // [DllImport(libname)]
+        // private static extern void GPM_CXX_LogSceneInfoStr(string type, string name, string key, string value);
+        // [DllImport(libname)]
+        // private static extern void GPM_CXX_LogSceneInfoInt(string type, string name, string key, int value);
+        // [DllImport(libname)]
+        // private static extern void GPM_CXX_LogSceneInfoKey(string type, string name, string key);
+        // [DllImport(libname)]
+        // private static extern int GPM_CXX_RequestGraphicLevel();
 #elif GMEnderOn && UNITY_EDITOR
         private static void GPM_CXX_LogSceneStart(string type, string name)
         {
@@ -147,171 +147,172 @@ namespace GMSDK
             //StackFrame sf = st.GetFrame(0);
             //Console.WriteLine(" Method: {0}", sf.GetMethod().Name);
 
-            GMEnderCFunction function = new GMEnderCFunction(
-                GMEnderValueType.type_void,
-                "GPM_CXX_LogSceneStart",
-                new List<GMEnderCFuncParam>() {
-                    new GMEnderCFuncParam(GMEnderValueType.type_string, type),
-                    new GMEnderCFuncParam(GMEnderValueType.type_string, name)
-                }
-                );
-            GMEnderMgr.instance.callEnder(function);
+            // GMEnderCFunction function = new GMEnderCFunction(
+            //     GMEnderValueType.type_void,
+            //     "GPM_CXX_LogSceneStart",
+            //     new List<GMEnderCFuncParam>() {
+            //         new GMEnderCFuncParam(GMEnderValueType.type_string, type),
+            //         new GMEnderCFuncParam(GMEnderValueType.type_string, name)
+            //     }
+            //     );
+            // GMEnderMgr.instance.callEnder(function);
         }
         
         private static void GPM_CXX_LogSceneLoaded(string type, string name)
         {
-            GMEnderCFunction function = new GMEnderCFunction(
-                GMEnderValueType.type_void,
-                "GPM_CXX_LogSceneLoaded",
-                new List<GMEnderCFuncParam>() {
-                    new GMEnderCFuncParam(GMEnderValueType.type_string, type),
-                    new GMEnderCFuncParam(GMEnderValueType.type_string, name)
-                }
-                );
-            GMEnderMgr.instance.callEnder(function);
+            // GMEnderCFunction function = new GMEnderCFunction(
+            //     GMEnderValueType.type_void,
+            //     "GPM_CXX_LogSceneLoaded",
+            //     new List<GMEnderCFuncParam>() {
+            //         new GMEnderCFuncParam(GMEnderValueType.type_string, type),
+            //         new GMEnderCFuncParam(GMEnderValueType.type_string, name)
+            //     }
+            //     );
+            // GMEnderMgr.instance.callEnder(function);
         }
 
         private static void GPM_CXX_LogSceneEnd(string type, string name, bool isUpload)
         {
-            GMEnderCFunction function = new GMEnderCFunction(
-                GMEnderValueType.type_void,
-                "GPM_CXX_LogSceneEnd",
-                new List<GMEnderCFuncParam>() {
-                    new GMEnderCFuncParam(GMEnderValueType.type_string, type),
-                    new GMEnderCFuncParam(GMEnderValueType.type_string, name),
-                    new GMEnderCFuncParam(GMEnderValueType.type_bool, isUpload)
-                }
-                );
-            GMEnderMgr.instance.callEnder(function);
+            // GMEnderCFunction function = new GMEnderCFunction(
+            //     GMEnderValueType.type_void,
+            //     "GPM_CXX_LogSceneEnd",
+            //     new List<GMEnderCFuncParam>() {
+            //         new GMEnderCFuncParam(GMEnderValueType.type_string, type),
+            //         new GMEnderCFuncParam(GMEnderValueType.type_string, name),
+            //         new GMEnderCFuncParam(GMEnderValueType.type_bool, isUpload)
+            //     }
+            //     );
+            // GMEnderMgr.instance.callEnder(function);
         }
 
         private static void GPM_CXX_LogFrameEnd()
         {
-            GMEnderCFunction function = new GMEnderCFunction(
-                GMEnderValueType.type_void,
-                "GPM_CXX_LogFrameEnd"
-                );
-            GMEnderMgr.instance.callEnder(function);
+            // GMEnderCFunction function = new GMEnderCFunction(
+            //     GMEnderValueType.type_void,
+            //     "GPM_CXX_LogFrameEnd"
+            //     );
+            // GMEnderMgr.instance.callEnder(function);
         }
 
         private static void GPM_CXX_LogCPUUsage()
         {
-            GMEnderCFunction function = new GMEnderCFunction(
-                GMEnderValueType.type_void,
-                "GPM_CXX_LogCPUUsage"
-                );
-            GMEnderMgr.instance.callEnder(function);
+            // GMEnderCFunction function = new GMEnderCFunction(
+            //     GMEnderValueType.type_void,
+            //     "GPM_CXX_LogCPUUsage"
+            //     );
+            // GMEnderMgr.instance.callEnder(function);
         }
 
         private static void GPM_CXX_LogMemoryUsage()
         {
-            GMEnderCFunction function = new GMEnderCFunction(
-                GMEnderValueType.type_void,
-                "GPM_CXX_LogMemoryUsage"
-                );
-            GMEnderMgr.instance.callEnder(function);
+            // GMEnderCFunction function = new GMEnderCFunction(
+            //     GMEnderValueType.type_void,
+            //     "GPM_CXX_LogMemoryUsage"
+            //     );
+            // GMEnderMgr.instance.callEnder(function);
         }
 
         private static void GPM_CXX_LogGlobalInfoStr(string type, string key, string value)
         {
-            GMEnderCFunction function = new GMEnderCFunction(
-                GMEnderValueType.type_void,
-                "GPM_CXX_LogGlobalInfoStr",
-                new List<GMEnderCFuncParam>() {
-                    new GMEnderCFuncParam(GMEnderValueType.type_string, type),
-                    new GMEnderCFuncParam(GMEnderValueType.type_string, key),
-                    new GMEnderCFuncParam(GMEnderValueType.type_string, value)
-                }
-                );
-            GMEnderMgr.instance.callEnder(function);
+            // GMEnderCFunction function = new GMEnderCFunction(
+            //     GMEnderValueType.type_void,
+            //     "GPM_CXX_LogGlobalInfoStr",
+            //     new List<GMEnderCFuncParam>() {
+            //         new GMEnderCFuncParam(GMEnderValueType.type_string, type),
+            //         new GMEnderCFuncParam(GMEnderValueType.type_string, key),
+            //         new GMEnderCFuncParam(GMEnderValueType.type_string, value)
+            //     }
+            //     );
+            // GMEnderMgr.instance.callEnder(function);
         }
 
         private static void GPM_CXX_LogGlobalInfoInt(string type, string key, int value)
         {
-            GMEnderCFunction function = new GMEnderCFunction(
-                GMEnderValueType.type_void,
-                "GPM_CXX_LogGlobalInfoInt",
-                new List<GMEnderCFuncParam>() {
-                    new GMEnderCFuncParam(GMEnderValueType.type_string, type),
-                    new GMEnderCFuncParam(GMEnderValueType.type_string, key),
-                    new GMEnderCFuncParam(GMEnderValueType.type_int, value)
-                }
-                );
-            GMEnderMgr.instance.callEnder(function);
+            // GMEnderCFunction function = new GMEnderCFunction(
+            //     GMEnderValueType.type_void,
+            //     "GPM_CXX_LogGlobalInfoInt",
+            //     new List<GMEnderCFuncParam>() {
+            //         new GMEnderCFuncParam(GMEnderValueType.type_string, type),
+            //         new GMEnderCFuncParam(GMEnderValueType.type_string, key),
+            //         new GMEnderCFuncParam(GMEnderValueType.type_int, value)
+            //     }
+            //     );
+            // GMEnderMgr.instance.callEnder(function);
         }
 
         private static void GPM_CXX_LogGlobalInfoKey(string type, string key)
         {
-            GMEnderCFunction function = new GMEnderCFunction(
-                GMEnderValueType.type_void,
-                "GPM_CXX_LogGlobalInfoKey",
-                new List<GMEnderCFuncParam>() {
-                    new GMEnderCFuncParam(GMEnderValueType.type_string, type),
-                    new GMEnderCFuncParam(GMEnderValueType.type_string, key)
-                }
-                );
-            GMEnderMgr.instance.callEnder(function);
+            // GMEnderCFunction function = new GMEnderCFunction(
+            //     GMEnderValueType.type_void,
+            //     "GPM_CXX_LogGlobalInfoKey",
+            //     new List<GMEnderCFuncParam>() {
+            //         new GMEnderCFuncParam(GMEnderValueType.type_string, type),
+            //         new GMEnderCFuncParam(GMEnderValueType.type_string, key)
+            //     }
+            //     );
+            // GMEnderMgr.instance.callEnder(function);
         }
 
         private static void GPM_CXX_LogSceneInfoStr(string type, string name, string key, string value)
         {
-            GMEnderCFunction function = new GMEnderCFunction(
-                GMEnderValueType.type_void,
-                "GPM_CXX_LogSceneInfoStr",
-                new List<GMEnderCFuncParam>() {
-                    new GMEnderCFuncParam(GMEnderValueType.type_string, type),
-                    new GMEnderCFuncParam(GMEnderValueType.type_string, name),
-                    new GMEnderCFuncParam(GMEnderValueType.type_string, key),
-                    new GMEnderCFuncParam(GMEnderValueType.type_string, value)
-                }
-                );
-            GMEnderMgr.instance.callEnder(function);
+            // GMEnderCFunction function = new GMEnderCFunction(
+            //     GMEnderValueType.type_void,
+            //     "GPM_CXX_LogSceneInfoStr",
+            //     new List<GMEnderCFuncParam>() {
+            //         new GMEnderCFuncParam(GMEnderValueType.type_string, type),
+            //         new GMEnderCFuncParam(GMEnderValueType.type_string, name),
+            //         new GMEnderCFuncParam(GMEnderValueType.type_string, key),
+            //         new GMEnderCFuncParam(GMEnderValueType.type_string, value)
+            //     }
+            //     );
+            // GMEnderMgr.instance.callEnder(function);
         }
 
         private static void GPM_CXX_LogSceneInfoInt(string type, string name, string key, int value)
         {
-            GMEnderCFunction function = new GMEnderCFunction(
-                GMEnderValueType.type_void,
-                "GPM_CXX_LogSceneInfoInt",
-                new List<GMEnderCFuncParam>() {
-                    new GMEnderCFuncParam(GMEnderValueType.type_string, type),
-                    new GMEnderCFuncParam(GMEnderValueType.type_string, name),
-                    new GMEnderCFuncParam(GMEnderValueType.type_string, key),
-                    new GMEnderCFuncParam(GMEnderValueType.type_int, value)
-                }
-                );
-            GMEnderMgr.instance.callEnder(function);
+            // GMEnderCFunction function = new GMEnderCFunction(
+            //     GMEnderValueType.type_void,
+            //     "GPM_CXX_LogSceneInfoInt",
+            //     new List<GMEnderCFuncParam>() {
+            //         new GMEnderCFuncParam(GMEnderValueType.type_string, type),
+            //         new GMEnderCFuncParam(GMEnderValueType.type_string, name),
+            //         new GMEnderCFuncParam(GMEnderValueType.type_string, key),
+            //         new GMEnderCFuncParam(GMEnderValueType.type_int, value)
+            //     }
+            //     );
+            // GMEnderMgr.instance.callEnder(function);
         }
 
         private static void GPM_CXX_LogSceneInfoKey(string type, string name, string key)
         {
-            GMEnderCFunction function = new GMEnderCFunction(
-                GMEnderValueType.type_void,
-                "GPM_CXX_LogSceneInfoKey",
-                new List<GMEnderCFuncParam>() {
-                    new GMEnderCFuncParam(GMEnderValueType.type_string, type),
-                    new GMEnderCFuncParam(GMEnderValueType.type_string, name),
-                    new GMEnderCFuncParam(GMEnderValueType.type_string, key)
-                }
-                );
-            GMEnderMgr.instance.callEnder(function);
+            // GMEnderCFunction function = new GMEnderCFunction(
+            //     GMEnderValueType.type_void,
+            //     "GPM_CXX_LogSceneInfoKey",
+            //     new List<GMEnderCFuncParam>() {
+            //         new GMEnderCFuncParam(GMEnderValueType.type_string, type),
+            //         new GMEnderCFuncParam(GMEnderValueType.type_string, name),
+            //         new GMEnderCFuncParam(GMEnderValueType.type_string, key)
+            //     }
+            //     );
+            // GMEnderMgr.instance.callEnder(function);
         }
 
         private static int GPM_CXX_RequestGraphicLevel()
         {
-            GMEnderCFunction function = new GMEnderCFunction(
-                GMEnderValueType.type_int,
-                "GPM_CXX_RequestGraphicLevel"
-                );
-            object ret = GMEnderMgr.instance.callEnder(function);
-            if (ret != null)
-            {
-                return (int)ret;
-            }
-            else
-            {
-                return 0;
-            }
+             return 0;
+            // GMEnderCFunction function = new GMEnderCFunction(
+            //     GMEnderValueType.type_int,
+            //     "GPM_CXX_RequestGraphicLevel"
+            //     );
+            // object ret = GMEnderMgr.instance.callEnder(function);
+            // if (ret != null)
+            // {
+            //     return (int)ret;
+            // }
+            // else
+            // {
+            //     return 0;
+            // }
         }
 #endif
     }

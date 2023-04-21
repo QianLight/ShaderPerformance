@@ -20,11 +20,11 @@ namespace UNBridgeLib
         //以下接口为iOS使用，用于调用OC代码。
 
 #if UNITY_IOS
-        [DllImport("__Internal")]
-        private static extern void iosHandleMsgFromUnity(string msg);
-
-        [DllImport("__Internal")]
-        private static extern string iosHandleMsgFromUnitySync(string msg);
+        // [DllImport("__Internal")]
+        // private static extern void iosHandleMsgFromUnity(string msg);
+        //
+        // [DllImport("__Internal")]
+        // private static extern string iosHandleMsgFromUnitySync(string msg);
 #endif
 
         /// <summary>
@@ -60,9 +60,9 @@ namespace UNBridgeLib
         public static void CallNative(string msg)
         {
             LogUtils.D("CallNative:", msg);
-#if UNITY_IOS
-			iosHandleMsgFromUnity(msg);
-#endif          
+// #if UNITY_IOS
+// 			iosHandleMsgFromUnity(msg);
+// #endif          
         }
 
 
@@ -88,9 +88,9 @@ namespace UNBridgeLib
         {
             LogUtils.D("CallNativeSync:", msg);
             string result = "";
-#if UNITY_IOS
-            result = iosHandleMsgFromUnitySync(msg);
-#endif
+// #if UNITY_IOS
+//             result = iosHandleMsgFromUnitySync(msg);
+// #endif
             LogUtils.D("CallNativeSync result:",result);
             return MsgUtils.ParseResult(result);
         }

@@ -17,10 +17,10 @@ public class UNBridge : MonoBehaviour
     public const int ERROR_CODE_DISASTER_RECOVERY = -9999;
     public const string ERROR_MSG_DISASTER_RECOVERY = "method invalid";
     public delegate void sendToUnityObject(string json);
-#if UNITY_IOS
-    [DllImport("__Internal")]
-    private static extern void setiOSUnityObject(sendToUnityObject unityObject);
-#endif
+// #if UNITY_IOS
+//     [DllImport("__Internal")]
+//     private static extern void setiOSUnityObject(sendToUnityObject unityObject);
+// #endif
 
     private static bool initialized;
     private static bool settingRegister;
@@ -96,9 +96,9 @@ public class UNBridge : MonoBehaviour
         else if (Application.platform == RuntimePlatform.IPhonePlayer)
         {
             IosUtils.Init();
-#if UNITY_IOS
-            setiOSUnityObject(HandleMsgFromiOSNative);
-#endif
+// #if UNITY_IOS
+//             setiOSUnityObject(HandleMsgFromiOSNative);
+// #endif
             LogUtils.D("Init iOS");
         }
         else if (Application.platform == RuntimePlatform.WebGLPlayer)
