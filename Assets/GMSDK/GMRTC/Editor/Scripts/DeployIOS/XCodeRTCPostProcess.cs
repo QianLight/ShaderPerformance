@@ -6,7 +6,7 @@ using UnityEngine;
 public static class XCodeRTCPostProcess
 {
 #if UNITY_EDITOR && UNITY_IOS
-    [PostProcessBuild(GMSDKEnv.XCodePostProcessPriority+2)]
+    //[PostProcessBuild(GMSDKEnv.XCodePostProcessPriority+2)]
     public static void OnPostProcessBuild_CF(BuildTarget target, string pathToBuildProject)
     {
         if (target == BuildTarget.iOS)

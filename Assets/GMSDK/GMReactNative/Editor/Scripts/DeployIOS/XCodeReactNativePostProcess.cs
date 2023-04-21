@@ -12,7 +12,7 @@ using System.IO;
 public static class XCodeReactNativePostProcess {
 
 	#if UNITY_EDITOR && UNITY_IOS
-	[PostProcessBuild(GMSDKEnv.XCodePostProcessPriority+13)]
+	//[PostProcessBuild(GMSDKEnv.XCodePostProcessPriority+13)]
 	public static void OnPostProcessBuild_CF( BuildTarget target, string pathToBuiltProject )
 	{
 	#if UNITY_5||UNITY_2017||UNITY_2017_1_OR_NEWER

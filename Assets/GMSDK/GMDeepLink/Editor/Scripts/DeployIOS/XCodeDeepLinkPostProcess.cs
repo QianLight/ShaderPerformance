@@ -8,7 +8,7 @@ using UnityEngine;
 public class XCodeDeepLinkPostProcess
 {
 #if UNITY_EDITOR && UNITY_IOS
-    [PostProcessBuild(GMSDKEnv.XCodePostProcessPriority+3)]
+    //[PostProcessBuild(GMSDKEnv.XCodePostProcessPriority+3)]
     public static void OnPostProcessBuild_CF(BuildTarget target, string pathToBuildProject)
     {
         if (target == BuildTarget.iOS)
