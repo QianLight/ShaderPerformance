@@ -219,34 +219,34 @@ namespace LiteWebView
     class LiteIosWebView : Lite4Platform
     {
 
-#if UNITY_IOS
-        [DllImport ("__Internal")]
-        private static extern void _registCallBackGameObjectName (string gameObjectName);
-
-        [DllImport ("__Internal")]
-        private static extern void _show (int top, int bottom, int left, int right);
-
-        [DllImport ("__Internal")]
-        private static extern void _loadUrl (string url);
-
-        [DllImport ("__Internal")]
-        private static extern void _close ();
-
-        [DllImport ("__Internal")]
-        private static extern void _callJS (string funName, string msg);
-#endif
+// #if UNITY_IOS
+//         [DllImport ("__Internal")]
+//         private static extern void _registCallBackGameObjectName (string gameObjectName);
+//
+//         [DllImport ("__Internal")]
+//         private static extern void _show (int top, int bottom, int left, int right);
+//
+//         [DllImport ("__Internal")]
+//         private static extern void _loadUrl (string url);
+//
+//         [DllImport ("__Internal")]
+//         private static extern void _close ();
+//
+//         [DllImport ("__Internal")]
+//         private static extern void _callJS (string funName, string msg);
+// #endif
 
         public LiteIosWebView(string gameObjectName)
         {
 #if UNITY_IOS
-            _registCallBackGameObjectName (gameObjectName);
+            //_registCallBackGameObjectName (gameObjectName);
 #endif
         }
 
         public override void CallJS(string funName, string msg)
         {
 #if UNITY_IOS
-            _callJS (funName, msg);
+           // _callJS (funName, msg);
 #endif
 
         }
@@ -254,21 +254,21 @@ namespace LiteWebView
         public override void Close()
         {
 #if UNITY_IOS
-            _close ();
+           // _close ();
 #endif
         }
 
         public override void LoadUrl(string url)
         {
 #if UNITY_IOS
-            _loadUrl (url);
+      //      _loadUrl (url);
 #endif
         }
 
         public override void Show(int top, int bottom, int left, int right)
         {
 #if UNITY_IOS
-            _show (top, bottom, left, right);
+           // _show (top, bottom, left, right);
 #endif
         }
     }
