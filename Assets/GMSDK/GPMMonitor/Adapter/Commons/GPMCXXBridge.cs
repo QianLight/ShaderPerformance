@@ -56,7 +56,7 @@ namespace GMSDK
         public static void LogGlobalInfo(string type, string key, string value)
         {
 #if ((UNITY_IOS || UNITY_ANDROID) && !UNITY_EDITOR) || (GMEnderOn && UNITY_EDITOR)
-            GPM_CXX_LogGlobalInfoStr(type, key, value);
+          //  GPM_CXX_LogGlobalInfoStr(type, key, value);
 #endif
         }
 
