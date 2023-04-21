@@ -9,7 +9,7 @@ namespace GSDK.UnityEditor
     public class BuildPostProcessor
     {
         [PostProcessBuild(GMSDKEnv.XCodePostProcessPriority)]
-        public static void OnPostprocessBuild(BuildTarget target, string pathToBuiltProject)
+        public static void OnPostProcessBuild_CF(BuildTarget target, string pathToBuiltProject)
         {
             // Only Windows x86 and x86_64 atm.
             if (target != BuildTarget.StandaloneWindows && target != BuildTarget.StandaloneWindows64)

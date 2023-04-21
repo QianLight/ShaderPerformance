@@ -23,7 +23,7 @@ public static class XCodePostProcessSDK
 
 #if UNITY_EDITOR && UNITY_IOS
 	[PostProcessBuild(GMSDKEnv.XCodePostProcessPriority)]
-	public static void OnPostProcessBuild( BuildTarget target, string pathToBuiltProject )
+	public static void OnPostProcessBuild_CF( BuildTarget target, string pathToBuiltProject )
 	{
 		
 #if UNITY_5 || UNITY_2017 || UNITY_2017_1_OR_NEWER
@@ -59,7 +59,7 @@ public static class XCodePostProcessSDK
     }
 
 	[PostProcessBuild(GMSDKEnv.XCodePostProcessPriority+1001)]
-	public static void OnPostProcessBuildProjsMod( BuildTarget target, string pathToBuiltProject )
+	public static void OnPostProcessBuild_CFProjsMod( BuildTarget target, string pathToBuiltProject )
 	{
 #if UNITY_5 || UNITY_2017 || UNITY_2017_1_OR_NEWER
 		if (target == BuildTarget.iOS)

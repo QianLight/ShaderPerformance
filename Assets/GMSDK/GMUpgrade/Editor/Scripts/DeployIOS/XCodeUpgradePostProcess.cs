@@ -9,7 +9,7 @@ public class XCodeUpgradePostProcess
 {
 #if UNITY_EDITOR && UNITY_IOS
     [PostProcessBuild(GMSDKEnv.XCodePostProcessPriority+3)]
-    public static void OnPostProcessBuild(BuildTarget target, string pathToBuildProject)
+    public static void OnPostProcessBuild_CF(BuildTarget target, string pathToBuildProject)
     {
         if (target == BuildTarget.iOS)
         {
