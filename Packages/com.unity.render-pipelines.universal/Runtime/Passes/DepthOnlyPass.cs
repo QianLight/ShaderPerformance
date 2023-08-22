@@ -51,6 +51,9 @@ namespace UnityEngine.Rendering.Universal.Internal
             ConfigureClear(ClearFlag.All, Color.black);
         }
 
+
+        public static Action<CommandBuffer> customDrawDepth;
+        
         /// <inheritdoc/>
         public override void Execute(ScriptableRenderContext context, ref RenderingData renderingData)
         {
@@ -82,6 +85,12 @@ namespace UnityEngine.Rendering.Universal.Internal
                     GPUInstancingManager.Instance.Render(cmd, 2);//012 第三个pass画深度
                 }
             }
+
+            if (customDrawDepth != null)
+            {
+                customDrawDepth(cmd);
+            }
+
             context.ExecuteCommandBuffer(cmd);
             CommandBufferPool.Release(cmd);
         }

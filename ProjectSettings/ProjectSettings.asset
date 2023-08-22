@@ -3,7 +3,7 @@
 --- !u!129 &1
 PlayerSettings:
   m_ObjectHideFlags: 0
-  serializedVersion: 22
+  serializedVersion: 26
   productGUID: 7004e8ed07bd44340a85a8d083f90558
   AndroidProfiler: 0
   AndroidFilterTouchesWhenObscured: 0
@@ -50,14 +50,15 @@ PlayerSettings:
   defaultScreenHeightWeb: 450
   m_StereoRenderingPath: 0
   m_ActiveColorSpace: 1
+  m_SpriteBatchVertexThreshold: 300
   m_MTRendering: 1
   mipStripping: 0
   numberOfMipsStripped: 0
+  numberOfMipsStrippedPerMipmapLimitGroup: {}
   m_StackTraceTypes: 010000000100000001000000010000000100000001000000
   iosShowActivityIndicatorOnLoading: -1
   androidShowActivityIndicatorOnLoading: -1
   iosUseCustomAppBackgroundBehavior: 0
-  iosAllowHTTPDownload: 1
   allowedAutorotateToPortrait: 0
   allowedAutorotateToPortraitUpsideDown: 0
   allowedAutorotateToLandscapeRight: 1
@@ -121,8 +122,11 @@ PlayerSettings:
   switchNVNShaderPoolsGranularity: 33554432
   switchNVNDefaultPoolsGranularity: 16777216
   switchNVNOtherPoolsGranularity: 16777216
+  switchGpuScratchPoolGranularity: 2097152
+  switchAllowGpuScratchShrinking: 0
   switchNVNMaxPublicTextureIDCount: 0
   switchNVNMaxPublicSamplerIDCount: 0
+  switchNVNGraphicsFirmwareMemory: 32
   stadiaPresentMode: 0
   stadiaTargetFramerate: 0
   vulkanNumSwapchainBuffers: 3
@@ -130,14 +134,10 @@ PlayerSettings:
   vulkanEnablePreTransform: 0
   vulkanEnableLateAcquireNextImage: 0
   vulkanEnableCommandBufferRecycling: 1
-  m_SupportedAspectRatios:
-    4:3: 1
-    5:4: 1
-    16:10: 1
-    16:9: 1
-    Others: 1
+  loadStoreDebugModeEnabled: 0
   bundleVersion: 0.0.0
-  preloadedAssets: []
+  preloadedAssets:
+  - {fileID: 11400000, guid: da57c49f122768b458abcdb2384b13c5, type: 2}
   metroInputSource: 0
   wsaTransparentSwapchain: 0
   m_HolographicPauseOnTrackingLoss: 1
@@ -147,11 +147,13 @@ PlayerSettings:
     enable360StereoCapture: 0
   isWsaHolographicRemotingEnabled: 0
   enableFrameTimingStats: 0
+  enableOpenGLProfilerGPURecorders: 1
   useHDRDisplay: 0
   D3DHDRBitDepth: 0
   m_ColorGamuts: 00000000
   targetPixelDensity: 300
   resolutionScalingMode: 0
+  resetResolutionOnWindowResize: 0
   androidSupportedAspectRatio: 1
   androidMaxAspectRatio: 2.1
   applicationIdentifier:
@@ -166,7 +168,7 @@ PlayerSettings:
     tvOS: 0
   overrideDefaultApplicationIdentifier: 1
   AndroidBundleVersionCode: 23108
-  AndroidMinSdkVersion: 19
+  AndroidMinSdkVersion: 22
   AndroidTargetSdkVersion: 0
   AndroidPreferredInstallLocation: 0
   aotOptions: nrgctx-trampolines=4096,nimt-trampolines=4096,ntrampolines=4096
@@ -179,12 +181,13 @@ PlayerSettings:
   APKExpansionFiles: 0
   keepLoadedShadersAlive: 0
   StripUnusedMeshComponents: 0
+  strictShaderVariantMatching: 0
   VertexChannelCompressionMask: 214
   iPhoneSdkVersion: 988
-  iOSTargetOSVersionString: 11.0
+  iOSTargetOSVersionString: 12.0
   tvOSSdkVersion: 0
   tvOSRequireExtendedGameController: 0
-  tvOSTargetOSVersionString: 11.0
+  tvOSTargetOSVersionString: 12.0
   uIPrerenderedIcon: 0
   uIRequiresPersistentWiFi: 0
   uIRequiresFullScreen: 1
@@ -222,6 +225,7 @@ PlayerSettings:
   iOSLaunchScreeniPadCustomStoryboardPath: 
   iOSDeviceRequirements: []
   iOSURLSchemes: []
+  macOSURLSchemes: []
   iOSBackgroundModes: 0
   iOSMetalForceHardShadows: 0
   metalEditorSupport: 1
@@ -254,6 +258,7 @@ PlayerSettings:
   androidSplashScreen: {fileID: 0}
   AndroidKeystoreName: '{inproject}: Assets/Editor/Platform/JenkBuild/android.keystore'
   AndroidKeyaliasName: yunstudio
+  AndroidEnableArmv9SecurityFeatures: 0
   AndroidBuildApkPerCpuArchitecture: 0
   AndroidTVCompatibility: 0
   AndroidIsGame: 1
@@ -267,7 +272,6 @@ PlayerSettings:
     banner: {fileID: 0}
   androidGamepadSupportLevel: 0
   chromeosInputEmulation: 1
-  AndroidMinifyWithR8: 0
   AndroidMinifyRelease: 0
   AndroidMinifyDebug: 0
   AndroidValidateAppBundleSize: 1
@@ -585,6 +589,7 @@ PlayerSettings:
   - m_BuildTarget: iPhone
     m_StaticBatching: 0
     m_DynamicBatching: 1
+  m_BuildTargetShaderSettings: []
   m_BuildTargetGraphicsJobs:
   - m_BuildTarget: MacStandaloneSupport
     m_GraphicsJobs: 0
@@ -621,7 +626,7 @@ PlayerSettings:
     m_GraphicsJobMode: 0
   m_BuildTargetGraphicsAPIs:
   - m_BuildTarget: WindowsStandaloneSupport
-    m_APIs: 1200000002000000
+    m_APIs: 120000001500000002000000
     m_Automatic: 0
   - m_BuildTarget: AndroidPlayer
     m_APIs: 0b000000
@@ -630,6 +635,8 @@ PlayerSettings:
     m_APIs: 10000000
     m_Automatic: 1
   m_BuildTargetVRSettings: []
+  m_DefaultShaderChunkSizeInMB: 16
+  m_DefaultShaderChunkCount: 0
   openGLRequireES31: 0
   openGLRequireES31AEP: 0
   openGLRequireES32: 0
@@ -645,8 +652,17 @@ PlayerSettings:
     m_EncodingQuality: 1
   - m_BuildTarget: PS4
     m_EncodingQuality: 1
+  m_BuildTargetGroupHDRCubemapEncodingQuality:
+  - m_BuildTarget: Standalone
+    m_EncodingQuality: 2
+  - m_BuildTarget: XboxOne
+    m_EncodingQuality: 2
+  - m_BuildTarget: PS4
+    m_EncodingQuality: 2
   m_BuildTargetGroupLightmapSettings: []
+  m_BuildTargetGroupLoadStoreDebugModeSettings: []
   m_BuildTargetNormalMapEncoding: []
+  m_BuildTargetDefaultTextureCompressionFormat: []
   playModeTestRunnerEnabled: 0
   runPlayModeTestAsEditModeTest: 0
   actionOnDotNetUnhandledException: 1
@@ -657,6 +673,7 @@ PlayerSettings:
   locationUsageDescription: 
   microphoneUsageDescription: 
   bluetoothUsageDescription: 
+  macOSTargetOSVersion: 10.13.0
   switchNMETAOverride: 
   switchNetLibKey: 
   switchSocketMemoryPoolSize: 6144
@@ -665,8 +682,10 @@ PlayerSettings:
   switchScreenResolutionBehavior: 2
   switchUseCPUProfiler: 0
   switchUseGOLDLinker: 0
+  switchLTOSetting: 0
   switchApplicationID: 0x01004b9000490000
   switchNSODependencies: 
+  switchCompilerFlags: 
   switchTitleNames_0: 
   switchTitleNames_1: 
   switchTitleNames_2: 
@@ -740,7 +759,6 @@ PlayerSettings:
   switchReleaseVersion: 0
   switchDisplayVersion: 1.0.0
   switchStartupUserAccount: 0
-  switchTouchScreenUsage: 0
   switchSupportedLanguagesMask: 0
   switchLogoType: 0
   switchApplicationErrorCodeCategory: 
@@ -782,6 +800,7 @@ PlayerSettings:
   switchNativeFsCacheSize: 32
   switchIsHoldTypeHorizontal: 0
   switchSupportedNpadCount: 8
+  switchEnableTouchScreen: 1
   switchSocketConfigEnabled: 0
   switchTcpInitialSendBufferSize: 32
   switchTcpInitialReceiveBufferSize: 64
@@ -794,8 +813,11 @@ PlayerSettings:
   switchNetworkInterfaceManagerInitializeEnabled: 1
   switchPlayerConnectionEnabled: 1
   switchUseNewStyleFilepaths: 0
+  switchUseLegacyFmodPriorities: 0
   switchUseMicroSleepForYield: 1
+  switchEnableRamDiskSupport: 0
   switchMicroSleepForYieldTime: 25
+  switchRamDiskSpaceSize: 12
   ps4NPAgeRating: 12
   ps4NPTitleSecret: 
   ps4NPTrophyPackPath: 
@@ -880,6 +902,7 @@ PlayerSettings:
   webGLMemorySize: 256
   webGLExceptionSupport: 1
   webGLNameFilesAsHashes: 0
+  webGLShowDiagnostics: 0
   webGLDataCaching: 0
   webGLDebugSymbols: 0
   webGLEmscriptenArgs: 
@@ -892,29 +915,30 @@ PlayerSettings:
   webGLLinkerTarget: 1
   webGLThreadsSupport: 0
   webGLDecompressionFallback: 0
+  webGLInitialMemorySize: 32
+  webGLMaximumMemorySize: 2048
+  webGLMemoryGrowthMode: 2
+  webGLMemoryLinearGrowthStep: 16
+  webGLMemoryGeometricGrowthStep: 0.2
+  webGLMemoryGeometricGrowthCap: 96
+  webGLPowerPreference: 2
   scriptingDefineSymbols:
-    1: FMOD_LIVEUPDATE;UNITY_POST_PROCESSING_STACK_V2;CINEMACHINE_TIMELINE;ENGINE_LIB;AMPLIFY_SHADER_EDITOR;PIPELINE_URP;TERRAINPACKAGE_EXIST;SHOW_FPS_FLAG;USE_GM;ODIN_INSPECTOR;ODIN_INSPECTOR_3;EMMYLUA_DEBUG;SHOW_WATERMARK
-    4: 'FMOD_LIVEUPDATE;UNITY_POST_PROCESSING_STACK_V2;CINEMACHINE_TIMELINE;BUGLY
+    : UNITY_POST_PROCESSING_STACK_V2;CINEMACHINE_TIMELINE;ENGINE_LIB
+    Android: FMOD_LIVEUPDATE;UNITY_POST_PROCESSING_STACK_V2;CINEMACHINE_TIMELINE;HOTFIX_ENABLE;BUGLY_LEVEL;SHOW_FPS_FLAG;MT_RENDERING;TBT_TEST;_USE_DEV_BUILD;IL2CPP_CONFIG_DEBUG;_USE_DEEP_PROFILER
+    GameCoreXboxOne: ENGINE_LIB
+    LinuxHeadlessSimulation: ENGINE_LIB
+    Nintendo Switch: UNITY_POST_PROCESSING_STACK_V2;CINEMACHINE_TIMELINE;ENGINE_LIB
+    PS4: UNITY_POST_PROCESSING_STACK_V2;CINEMACHINE_TIMELINE;ENGINE_LIB
+    PS5: ENGINE_LIB
+    Stadia: UNITY_POST_PROCESSING_STACK_V2;CINEMACHINE_TIMELINE;ENGINE_LIB
+    Standalone: FMOD_LIVEUPDATE;UNITY_POST_PROCESSING_STACK_V2;CINEMACHINE_TIMELINE;ENGINE_LIB;AMPLIFY_SHADER_EDITOR;PIPELINE_URP;TERRAINPACKAGE_EXIST;SHOW_FPS_FLAG;USE_GM;ODIN_INSPECTOR;ODIN_INSPECTOR_3;EMMYLUA_DEBUG;SHOW_WATERMARK
+    WebGL: UNITY_POST_PROCESSING_STACK_V2;CINEMACHINE_TIMELINE;ENGINE_LIB
+    Windows Store Apps: ENGINE_LIB
+    XboxOne: UNITY_POST_PROCESSING_STACK_V2;CINEMACHINE_TIMELINE;ENGINE_LIB
+    iPhone: 'FMOD_LIVEUPDATE;UNITY_POST_PROCESSING_STACK_V2;CINEMACHINE_TIMELINE;BUGLY
 
       ;AMPLIFY_SHADER_EDITOR;ENGINE_LIB;PIPELINE_URP;SHOW_FPS_FLAG'
-    7: FMOD_LIVEUPDATE;UNITY_POST_PROCESSING_STACK_V2;CINEMACHINE_TIMELINE;HOTFIX_ENABLE;BUGLY_LEVEL;SHOW_FPS_FLAG;MT_RENDERING;TBT_TEST;_USE_DEV_BUILD;IL2CPP_CONFIG_DEBUG;_USE_DEEP_PROFILER
-    13: UNITY_POST_PROCESSING_STACK_V2;CINEMACHINE_TIMELINE;ENGINE_LIB
-    14: ENGINE_LIB
-    17: UNITY_POST_PROCESSING_STACK_V2;CINEMACHINE_TIMELINE
-    18: UNITY_POST_PROCESSING_STACK_V2;CINEMACHINE_TIMELINE
-    19: UNITY_POST_PROCESSING_STACK_V2;CINEMACHINE_TIMELINE;ENGINE_LIB
-    20: UNITY_POST_PROCESSING_STACK_V2;CINEMACHINE_TIMELINE
-    21: UNITY_POST_PROCESSING_STACK_V2;CINEMACHINE_TIMELINE;ENGINE_LIB
-    23: UNITY_POST_PROCESSING_STACK_V2;CINEMACHINE_TIMELINE
-    24: UNITY_POST_PROCESSING_STACK_V2;CINEMACHINE_TIMELINE
-    25: UNITY_POST_PROCESSING_STACK_V2;CINEMACHINE_TIMELINE;ENGINE_LIB
-    26: UNITY_POST_PROCESSING_STACK_V2;CINEMACHINE_TIMELINE;ENGINE_LIB
-    27: UNITY_POST_PROCESSING_STACK_V2;CINEMACHINE_TIMELINE;ENGINE_LIB
-    28: UNITY_POST_PROCESSING_STACK_V2;CINEMACHINE_TIMELINE;ENGINE_LIB
-    29: UNITY_POST_PROCESSING_STACK_V2;CINEMACHINE_TIMELINE;ENGINE_LIB
-    30: ENGINE_LIB
-    32: ENGINE_LIB
-    33: ENGINE_LIB
+    tvOS: UNITY_POST_PROCESSING_STACK_V2;CINEMACHINE_TIMELINE;ENGINE_LIB
   additionalCompilerArguments: {}
   platformArchitecture:
     Android: 1
@@ -925,6 +949,7 @@ PlayerSettings:
     iPhone: 1
   il2cppCompilerConfiguration:
     Android: 0
+  il2cppCodeGeneration: {}
   managedStrippingLevel:
     Android: 0
     Standalone: 1
@@ -934,12 +959,10 @@ PlayerSettings:
   suppressCommonWarnings: 1
   allowUnsafeCode: 1
   useDeterministicCompilation: 1
-  useReferenceAssemblies: 1
-  enableRoslynAnalyzers: 1
+  selectedPlatform: 0
   additionalIl2CppArgs: 
   scriptingRuntimeVersion: 1
   gcIncremental: 1
-  assemblyVersionValidation: 1
   gcWBarrierValidation: 0
   apiCompatibilityLevelPerPlatform:
     Android: 3
@@ -972,6 +995,7 @@ PlayerSettings:
   metroFTAName: 
   metroFTAFileTypes: []
   metroProtocolName: 
+  vcxProjDefaultLanguage: 
   XboxOneProductId: 
   XboxOneUpdateKey: 
   XboxOneSandboxId: 
@@ -1012,8 +1036,14 @@ PlayerSettings:
   luminVersion:
     m_VersionCode: 1
     m_VersionName: 
+  hmiPlayerDataPath: 
+  hmiForceSRGBBlit: 1
+  embeddedLinuxEnableGamepadInput: 1
+  hmiLogStartupTiming: 0
+  hmiCpuConfiguration: 
   apiCompatibilityLevel: 3
   activeInputHandler: 0
+  windowsGamepadBackendHint: 0
   cloudProjectId: 
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
@@ -1021,4 +1051,6 @@ PlayerSettings:
   organizationId: 
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0
+  hmiLoadingImage: {fileID: 0}
   virtualTexturingSupportEnabled: 0
+  insecureHttpOption: 0

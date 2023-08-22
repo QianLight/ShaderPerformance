@@ -11,7 +11,7 @@
     #define _ContrastInsity _AmbientParam2.w
 #endif
 
-inline void CalcSceneColor(inout half3 color,FLOAT srcShadow)
+inline void CalcSceneColor(inout half3 color,half srcShadow)
 {	
     #ifdef _SCENE_EFFECT		
     half3 targetColor = color.xyz * _SceneColor.rgb;
@@ -19,7 +19,7 @@ inline void CalcSceneColor(inout half3 color,FLOAT srcShadow)
     half3 targetColor = color*lerp(_SceneColor.rgb, 1, _SceneColor.a);		
     #endif
     targetColor = lerp(targetColor, 0, _ContrastLight);
-    FLOAT contrastRatio = lerp(0, srcShadow, _ContrastLight);
+    half contrastRatio = lerp(0, srcShadow, _ContrastLight);
     color.xyz = lerp(targetColor, Luminance(color.xyz * _ContrastInsity) * _SceneColor.rgb, contrastRatio);
 }
 

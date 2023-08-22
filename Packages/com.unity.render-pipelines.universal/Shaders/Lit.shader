@@ -56,7 +56,10 @@ Shader "Universal Render Pipeline/Lit"
                 float4 col = tex2D(_BaseMap, i.uv);
                 return col;
             }
-
+            
+            #pragma enable_d3d11_debug_symbols
+            #pragma use_dxc
+            
             #pragma vertex vert
             #pragma fragment frag
 
