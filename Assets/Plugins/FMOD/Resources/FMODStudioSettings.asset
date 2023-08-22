@@ -293,31 +293,8 @@ MonoBehaviour:
   VirtualChannelSettings: []
   RealChannelSettings: []
   Plugins: []
-  MasterBanks:
-  - Master
-  Banks:
-  - Ambient
-  - Buff
-  - Cutscene
-  - Footstep
-  - Game
-  - Hit
-  - Mechanism
-  - Monster
-  - MP4
-  - Music
-  - Role
-  - SFX_TL
-  - Snapshot
-  - SYS
-  - Tone
-  - UI
-  - VOC_ACT
-  - VOC_LEV
-  - VOC_SHOW
-  - VOC_SYS
-  - VOC_TK
-  - VOC_TL
+  MasterBanks: []
+  Banks: []
   BanksToLoad: []
   LiveUpdatePort: 9264
   EnableMemoryTracking: 0

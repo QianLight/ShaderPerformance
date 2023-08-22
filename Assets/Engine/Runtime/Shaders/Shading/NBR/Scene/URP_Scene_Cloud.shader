@@ -42,99 +42,75 @@
     #define _GPU_ANIMATION	
     #define _CUSTOM_INSTANCE_ID
     #define _CUSTOM_GPU_POS
-    #define _CUSTOM_VERTEX_PARAM
     
     //lighting
     //#define _VERTEX_GI
     #define _NO_COMMON_EFFECT
     #define _NO_ADDLIGHT
-    ENDHLSL
 
-    SubShader
+       //----------------------
+    #define URP_BASE
+    #define REDEFINE_URP
+    #define MAIN_LIGHT_CALCULATE_SHADOWS
+    #define _NO_LIGHTMAP
+	#define _SMARTSOFTSHADOW_ON 1
+    #pragma multi_compile_instancing
+    // -------------------------------------
+    // Universal Pipeline keywords
+    //#pragma multi_compile _ _MAIN_LIGHT_SHADOWS 
+    //  || defined(_SHADER_LEVEL_LOW)
+    #pragma multi_compile _SHADER_LEVEL_HIGH _SHADER_LEVEL_MEDIUM _SHADER_LEVEL_LOW _SHADER_LEVEL_VERY_LOW
+    #if defined(_SHADER_LEVEL_VERY_HIGH)
+            #define _MAIN_LIGHT_SHADOWS
+    #elif defined(_SHADER_LEVEL_HIGH) || defined(_SHADER_LEVEL_MEDIUM)
+            #define _MAIN_LIGHT_SHADOWS
+    #endif
+
+    #pragma multi_compile _ _MAIN_LIGHT_SHADOWS_CASCADE
+    //#pragma multi_compile _ _ADDITIONAL_LIGHTS_VERTEX _ADDITIONAL_LIGHTS
+    //#pragma multi_compile_fragment _ _ADDITIONAL_LIGHT_SHADOWS
+    #pragma multi_compile_fragment _ _SHADOWS_SOFT
+    #pragma multi_compile_fragment _ _SCREEN_SPACE_OCCLUSION
+    #pragma multi_compile _ LIGHTMAP_SHADOW_MIXING
+    #pragma multi_compile _ SHADOWS_SHADOWMASK
+
+    // -------------------------------------
+    // Unity defined keywords
+    #pragma multi_compile _ DIRLIGHTMAP_COMBINED
+    //#pragma multi_compile _ LIGHTMAP_ON
+    #define CUMTOM_PRECISION
+    #define FOG_NOISE_OFF
+    //---------------------- 
+    #include "Packages/com.unity.render-pipelines.universal/ShaderLibrary/Lighting.hlsl"
+    #include "../Include/Pragam_Head.hlsl"
+
+    #ifdef _SM_4
+    #pragma target 5.0
+    #else//!_SM_4
+			#pragma target 3.0
+    #endif//_SM_4
+
+    #include "../Scene/Scene_Head.hlsl"
+    #include "../Include/URP_LightingHead.hlsl"
+
+    #define _FurLengthTex _MainTex1
+    #define _FurLengthMin _Param1.z
+    #define _FurLengthMax _Param1.w
+
+    #define _FurLength _Param2.x
+    #define _InstanceCount _Param2.y
+
+    float4 _FurFadeParam;
+    float _CloudAlpha,_CloudLength;
+
+
+
+    uint GetCustomInstanceID(uint instanceID)
     {
-        Tags
-        {
-            "RenderType" = "Transparent" "Queue" = "Transparent" "RenderPipeline" = "UniversalPipeline" "UniversalMaterialType" = "Lit" "IgnoreProjector" = "True"
-        }
+        return instanceID + (uint)_InstanceOffset;
+    }
 
-        ZWrite[_ZWrite]
-//        ZWrite Off
-        Cull back
-
-        Pass
-        {
-            Name "FORWARD"
-            Tags
-            {
-                "LightMode" = "UniversalForward"
-            }
-            Blend[_SrcBlend][_DstBlend]
-
-
-
-            HLSLPROGRAM
-            //----------------------
-            #define URP_BASE
-            #define REDEFINE_URP
-	        #define MAIN_LIGHT_CALCULATE_SHADOWS
-            #define _NO_LIGHTMAP
-			#define _SMARTSOFTSHADOW_ON 1
-            #pragma multi_compile_instancing
-            // -------------------------------------
-            // Universal Pipeline keywords
-            //#pragma multi_compile _ _MAIN_LIGHT_SHADOWS 
-            //  || defined(_SHADER_LEVEL_LOW)
-            #pragma multi_compile _SHADER_LEVEL_HIGH _SHADER_LEVEL_MEDIUM _SHADER_LEVEL_LOW _SHADER_LEVEL_VERY_LOW
-            #if defined(_SHADER_LEVEL_VERY_HIGH)
-                    #define _MAIN_LIGHT_SHADOWS
-            #elif defined(_SHADER_LEVEL_HIGH) || defined(_SHADER_LEVEL_MEDIUM)
-                    #define _MAIN_LIGHT_SHADOWS
-            #endif
-
-            #pragma multi_compile _ _MAIN_LIGHT_SHADOWS_CASCADE
-            //#pragma multi_compile _ _ADDITIONAL_LIGHTS_VERTEX _ADDITIONAL_LIGHTS
-            //#pragma multi_compile_fragment _ _ADDITIONAL_LIGHT_SHADOWS
-            #pragma multi_compile_fragment _ _SHADOWS_SOFT
-            #pragma multi_compile_fragment _ _SCREEN_SPACE_OCCLUSION
-            #pragma multi_compile _ LIGHTMAP_SHADOW_MIXING
-            #pragma multi_compile _ SHADOWS_SHADOWMASK
-
-            // -------------------------------------
-            // Unity defined keywords
-            #pragma multi_compile _ DIRLIGHTMAP_COMBINED
-            //#pragma multi_compile _ LIGHTMAP_ON
-            #define CUMTOM_PRECISION
-            #define FOG_NOISE_OFF
-            //---------------------- 
-            #include "Packages/com.unity.render-pipelines.universal/ShaderLibrary/Lighting.hlsl"
-            #include "../Include/Pragam_Head.hlsl"
-
-            #ifdef _SM_4
-            #pragma target 5.0
-            #else//!_SM_4
-					#pragma target 3.0
-            #endif//_SM_4
-
-            #include "../Scene/Scene_Head.hlsl"
-            #include "../Include/URP_LightingHead.hlsl"
-
-            #define _FurLengthTex _MainTex1
-            #define _FurLengthMin _Param1.z
-            #define _FurLengthMax _Param1.w
-
-            #define _FurLength _Param2.x
-            #define _InstanceCount _Param2.y
-
-            float4 _FurFadeParam;
-            float _CloudAlpha,_CloudLength;
-
-
-
-            uint GetCustomInstanceID(uint instanceID)
-            {
-                return instanceID + (uint)_InstanceOffset;
-            }
-
+    
             FLOAT4 CustomGPUPos(in FVertexInput Input,REAL4 localPos INSTANCE_ID)
             {
                 FLOAT4 FurLength = SAMPLE_TEX2D_LOD(_FurLengthTex, Input.uv0, 0);
@@ -186,7 +162,7 @@
                 //noise
                 REAL2 flowUV = uv * _NoiseScale + _Time.x * _Speed;
                 REAL noise = SAMPLE_TEX2D(_AlphaTex3D, flowUV).r;
-                noise = pow(noise, 1.5);
+                //noise = pow(noise, 1.5); 去除非必要的指数运算 可以修改贴图达到效果
 
                 #ifdef _USE_LIGHTNING
 						//Emissive
@@ -204,8 +180,13 @@
 
                 REAL alpha = saturate((noise - t * t * _Density))+_CloudAlpha;
                 alpha = saturate(alpha * (1 - t));
-             
-					REAL shadow = 1;
+            	
+            	// #ifdef _ALPHATEST_ON
+            	// clip(alpha);
+            	// #endif
+            	
+            	
+            	REAL shadow = 1;
 					
 				#ifdef _MAIN_LIGHT_SHADOWS
                     REAL4 ShadowCoords = TransformWorldToShadowCoord(FragData.WorldPosition);
@@ -233,11 +214,6 @@
             #define GetCustumShadowMapMask GetMassiveShadowMapMask
             #define _CUSTOM_SHADOW_MAP_MASK 
 
-            inline void CustomVertex(in FVertexInput Input, inout FInterpolantsVSToPS Interpolants)
-			{
-            	
-			}
-            
             void CalcMassiveLighting(FFragData FragData, FMaterialData MaterialData, FShadowData ShadowData,
                                      FLOAT ShadowMask, inout REAL3 DirectDiffuse,
                                      inout REAL3 DirectSpecular DEBUG_ARGS)
@@ -253,7 +229,8 @@
                 REAL t = (FragData.InstanceID + 1) / (_InstanceCount + 1);
                 REAL SmoothNL = saturate(pow(abs(NL), 2 - t));
                 BackSSS = saturate(pow((BackSSS), 2 + t * 2) * _BackSSSInt);
-                REAL SmoothNV = saturate(pow(abs(MaterialData.NdotV), 2 - t));
+                //REAL SmoothNV = saturate(pow(abs(MaterialData.NdotV), 2 - t));
+            	REAL SmoothNV = saturate(abs(MaterialData.NdotV));//计算优化
                 //color = lerp( _DarkColor , color , NL)+BackSSS+SmoothNV*0.15;
                 color = lerp(_DarkColor.xyz, color, NL);
                 DirectDiffuse = (color + BackSSS + SmoothNV * 0.15) * _MainLightColor.xyz;
@@ -280,39 +257,81 @@
             //---------------------------------------------------------------------------------
             #include "../Include/URP_Vertex.hlsl"
             #include "../Include/URP_Pixel.hlsl"
-
-            REAL4 fragForwardBaseCloud(in FInterpolantsVSToPS vs2ps, in FLOAT4 SvPosition : SV_Position, REAL facing : VFACE) : SV_Target
-			{
-
-				//return REAL4(vs2ps.InstanceID*0.03,0,0,1);
-				
-				//if(vs2ps.InstanceID==_InstanceCount)
-				//{
-					//return REAL4(1,0,0,1);
-				//}
-				
-				REAL4 rt0 = 0;
-				REAL4 rt1 = REAL4(0, 0, 0, _IsRt1zForUIRT);
-				Frag(vs2ps,SvPosition,rt0,rt1,facing);
-				return rt0;
-			}
-
-            void vertForwardBaseCloud(FVertexInput Input, uint instanceID : SV_InstanceID, out FMobileShadingVSToPS Output)
-            {
-	            vertForwardBase(Input,instanceID,Output);
-            	
-            }
             
             //debug
             //#pragma shader_feature_local _ _DEBUG_APP
 
             //render type
             #pragma shader_feature_local _ _USE_LIGHTNING
-            #pragma enable_d3d11_debug_symbols
+			#pragma enable_d3d11_debug_symbols
+			//#pragma use_dxc
+    
+    ENDHLSL
+
+    SubShader
+    {
+        Tags
+        {
+            "RenderType" = "Transparent" "Queue" = "Transparent" "RenderPipeline" = "UniversalPipeline" "UniversalMaterialType" = "Lit" "IgnoreProjector" = "True"
+        }
+    	
+        Pass
+        {
+            Name "FORWARD"
+            Tags
+            {
+                "LightMode" = "UniversalForward"
+            }
+            Blend[_SrcBlend][_DstBlend]
+	        ZWrite[_ZWrite]
+	//        ZWrite Off
+	        Cull back
+            //ZTest Equal
+        	
+            HLSLPROGRAM
+            #pragma vertex vertForwardBase
+            #pragma fragment fragForwardBase
+            ENDHLSL
+        }
+    	
+    	
+	    Pass
+        {
+            Name "DepthOnly"
+            Tags
+            {
+                "LightMode" = "DepthOnly"
+            }
+        	
+            Cull Off
+            ColorMask 0
+        	
+            HLSLPROGRAM
             
+            #define _ALPHATEST_ON
+            //#define DEPTH_PRE_PASS
             
-            #pragma vertex vertForwardBaseCloud
-            #pragma fragment fragForwardBaseCloud
+            #pragma vertex vertForwardBase
+            #pragma fragment fragForwardBase
+            ENDHLSL
+        }
+    	
+	    Pass
+        {
+            Name "DepthPrepass"
+            Tags
+            {
+                "LightMode" = "DepthPrepass"
+            }
+        	
+            Cull Off
+            ColorMask 0
+        	
+            HLSLPROGRAM
+            #define _ALPHATEST_ON
+            //#define DEPTH_PRE_PASS 
+            #pragma vertex vertForwardBase
+            #pragma fragment fragForwardBase
             ENDHLSL
         }
     }

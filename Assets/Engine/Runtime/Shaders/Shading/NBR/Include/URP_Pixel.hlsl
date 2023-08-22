@@ -31,6 +31,10 @@ half4 _SceneColorAdjustmentParams;
 void Frag(in FInterpolantsVSToPS Interpolants, in FLOAT4 SvPosition, inout REAL4 rt0,inout REAL4 rt1, REAL facing)
 {
 		half3 baseColor = 0;
+		APPLY_FOG(rt0, Interpolants.WorldPosition.xyz);
+		return;
+	    // 
+	    // return;
 #ifdef _CUSTOM_PS
 		rt0 = CustomPS(Interpolants,SvPosition,rt1);
 		baseColor = rt0.xyz;
@@ -71,12 +75,15 @@ void Frag(in FInterpolantsVSToPS Interpolants, in FLOAT4 SvPosition, inout REAL4
 	// 	float3 scatter = GetScatterRGB(normalize(Interpolants.WorldPosition - _WorldSpaceCameraPos), Interpolants.WorldPosition, _WorldSpaceCameraPos, _MainLightDir0.xyz, depth01, _ProjectionParams, _CameraBackward);
 	// 	rt0.rgb = lerp(rt0.rgb, scatter, saturate(depth01 * 2));
 	// }
-	APPLY_FOG(rt0, Interpolants.WorldPosition.xyz);
+	
+
 	#if defined(OUTLINE_DEFINED) || defined(_Role_Lighting)
 		DitherTransparent(SvPosition.xy, _DitherTransparency);
 	#else
 		SphereDitherTransparent(SvPosition, _DitherTransparency);
 	#endif
+	
+	//APPLY_FOG(rt0, Interpolants.WorldPosition.xyz);
 	
 	#ifdef _SCENE_EFFECT
 	rt0.rgb *= _SceneExposure;
@@ -107,11 +114,15 @@ void Frag(in FInterpolantsVSToPS Interpolants, in FLOAT4 SvPosition, inout REAL4
 }
 
 #else//_FRAMEBUFFER_FETCH
-		REAL4 fragForwardBase(in FInterpolantsVSToPS vs2ps, in FLOAT4 SvPosition : SV_Position, REAL facing : VFACE) : SV_Target
+		REAL4 fragForwardBase(in FInterpolantsVSToPS vs2ps) : SV_Target
 		{
-			REAL4 rt0 = 0;
+			
+			REAL4 rt0 = REAL4(1,0,0,1);
+			//return rt0;
+			FLOAT4 SvPosition=vs2ps.WorldPosition;
+			
 			REAL4 rt1 = REAL4(0, 0, 0, _IsRt1zForUIRT);
-			Frag(vs2ps,SvPosition,rt0,rt1,facing);
+			Frag(vs2ps,SvPosition,rt0,rt1,1);
 			#ifndef _NOIMPOSTOR
 			UNITY_FLATTEN
 			if(IMPOSTORENABLE)
@@ -132,6 +143,12 @@ void Frag(in FInterpolantsVSToPS Interpolants, in FLOAT4 SvPosition, inout REAL4
 			rt0.rgb = _Color.a < 1? rt0.rgb : lerp(0.05, rt0.rgb, _Color.r);
 			#endif
 			// End Add
+
+			if(rt0.w<=0)
+			{
+				//clip(rt0);
+			}
+			
 			return rt0;
 		}
 #endif//_FRAMEBUFFER_FETCH

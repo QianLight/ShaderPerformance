@@ -8,7 +8,7 @@ Shader "URP/Scene/Skybox"
 
 	HLSLINCLUDE
 		//float _LightingOnBool;
-		// #define PRECOMPUTE_SCATTER
+		 #define PRECOMPUTE_SCATTER
 		// #define PRECOMPUTE_SCATTER_LEGACY
 		#define FOG_NOISE_OFF
 
@@ -18,7 +18,9 @@ Shader "URP/Scene/Skybox"
 		#endif
 		half4 _MainLightDir0;
 		half4 _MainLightColor0;
-	
+		#pragma enable_d3d11_debug_symbols
+		#pragma use_dxc
+			
 		#include "../StdLib.hlsl"
 		#include "../../Include/PrecomputedScatter.hlsl"
 		#include "../Include/Fog.hlsl"

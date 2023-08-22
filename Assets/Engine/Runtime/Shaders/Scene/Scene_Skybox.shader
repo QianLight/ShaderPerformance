@@ -24,6 +24,8 @@
 			Tags{"LightMode"="ForwardBase"}
 			HLSLPROGRAM
 			#pragma target 3.0
+			#pragma enable_d3d11_debug_symbols
+			//#pragma use_dxc
 			// #pragma only_renderers d3d11
 	        // #pragma shader_feature WEATHER_EFFECT_ON
 	        // #pragma shader_feature RAIN_EFFECT_ON

@@ -84,6 +84,31 @@ FLOAT4 _FogNoiseScaleOffset;
 
 uniform FLOAT _FogToggle;
 
+
+float3 GetFogSunVdlScatter1(float vdl)
+{
+    return float3(1,1,1);
+    vdl = vdl * 0.5 + 0.5;
+    vdl *= vdl;
+    vdl *= vdl;
+    vdl *= 32 - 1;
+    float3 data1= SAMPLE_TEX3D(_Noise3DTex, floor(vdl)).xyz;
+    float3 data2= SAMPLE_TEX3D(_Noise3DTex, ceil(vdl)).xyz;
+    
+    return lerp(data1, data2, frac(vdl));
+}
+
+float3 GetFogSunDepthScatter1(float depth)
+{
+    return float3(1,1,1);
+    
+    depth *= 32 - 1;
+    // lerp(array[floor(v)].xyz, array[ceil(v)].xyz, frac(v)
+    float3 data1= SAMPLE_TEX3D(_Noise3DTex, floor(depth)).xyz;
+    float3 data2= SAMPLE_TEX3D(_Noise3DTex, ceil(depth)).xyz;
+    return lerp(data1, data2, frac(depth));
+}
+
 FLOAT4 ApplyFog(FLOAT3 wpos)
 {
     TYPE3 delta = wpos - _WorldSpaceCameraPos;

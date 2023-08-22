@@ -12,7 +12,7 @@ using UnityEngineEditor = UnityEditor.Editor;
 #endif
 
 using   UsingTheirs.ShaderHotSwap;
-
+using UnityEngine.Rendering.Universal.Internal;
 namespace CFEngine
 {
     public enum MultiLayerQuality
@@ -89,6 +89,7 @@ namespace CFEngine
         private void Start()
         {
             HandlerSwapShaders.HandlerSwapShadersAction += HotSwapShader;
+            DepthOnlyPass.customDrawDepth += DrawDepth;
             
             if (Object.Equals(cloudSetting, null))
                 InitDefaultCloudSetting();
@@ -242,11 +243,14 @@ namespace CFEngine
         {
             DestroySplitMesh();
             HandlerSwapShaders.HandlerSwapShadersAction -= HotSwapShader;
+            DepthOnlyPass.customDrawDepth -= DrawDepth;
         }
 
 
         private void Update()
         {
+            Application.targetFrameRate = 1000;
+            
             UpdateLastState();
             UpdateCullingData();
             UpdateShow();
@@ -262,11 +266,18 @@ namespace CFEngine
             }
         }
 
-        private void UpdateShow()
+        private bool CheckIsVisiable()
         {
             if (!isPlaying || m_RenderMesh==null || Object.Equals(m_Trans, null) ||
-                Object.Equals(mat, null)) return;
+                Object.Equals(mat, null)) return false;
 
+            return true;
+        }
+
+        private void UpdateShow()
+        {
+            if(!CheckIsVisiable()) return;
+            
             if (safeMode)
             {
                 UpdateShow_SafeMode();
@@ -327,6 +338,8 @@ namespace CFEngine
                         matricies[i] = m_Trans.localToWorldMatrix;
                     }
                 }
+                
+                //Debug.Log("DrawRender:"+Time.frameCount+"  "+Time.realtimeSinceStartup);
                 Graphics.DrawMeshInstanced(m_RenderMesh, 0, mat, matricies, count, mpb);
             }
             else if (argBuffer != null)
@@ -348,6 +361,13 @@ namespace CFEngine
                     }
                 }
             }
+        }
+
+        public void DrawDepth(CommandBuffer cmd)
+        {
+            if (!CheckIsVisiable()) return;
+            //Debug.Log("DrawDepth:"+Time.frameCount+"  "+Time.realtimeSinceStartup);
+            cmd.DrawMeshInstanced(m_RenderMesh, 0, mat, 1, matricies, m_CloudSettingData.m_LayerCount, mpb);
         }
 
         private void UpdateShow_SafeMode()

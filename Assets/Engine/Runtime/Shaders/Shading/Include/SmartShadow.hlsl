@@ -60,7 +60,7 @@
 	#if defined(_SMARTSOFTSHADOW_ON)
 	#define SHADOW_STEP_COUNT 16.0h
 	#define SHADOW_TEPS float2(0.7959264f,0.3337449f), float2(-0.6917467f,0.4299984f), float2(-0.9272978f,-0.1487869f), float2(0.8660969f,-0.2434426f), float2(0.6313812f,0.01367807f), float2(-0.6743931f,0.172285f), float2(-0.2139604f,-0.6011167f), float2(0.5947536f,-0.1896544f), float2(0.3239655f,0.02670089f), float2(-0.4613352f,0.1297973f), float2(-0.07539916f,-0.4849357f), float2(0.3865351f,-0.01647747f), float2(0.003096877f,0.05768799f), float2(-0.1802002f,0.05737141f), float2(-0.001134997f,-0.06556179f), float2(5.539278E-05f,-0.001563253f)
-	static const float2 ShadowConst[SHADOW_STEP_COUNT] = { SHADOW_TEPS };
+	static const float2 ShadowConst[16] = { SHADOW_TEPS };
 	#endif
 
 

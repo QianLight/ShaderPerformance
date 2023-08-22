@@ -17,6 +17,8 @@ class TransformComponentInfoProcessor : IPreprocessBuild
 
     public void OnPreprocessBuild(BuildTarget target, string path)
     {
+        return;
+        
         Debug.Log("begin transform gsdk.json content to android platform content.");
         
         string gsdkJsonPath = Path.Combine(GMSDKEnv.Instance.PATH_ASSETS_GSDK, "gsdk.json");

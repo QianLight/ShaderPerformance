@@ -43,6 +43,9 @@ void vertForwardBase(FVertexInput Input, uint instanceID : SV_InstanceID, out FM
 {  
 	INITIALIZE_OUTPUT(FMobileShadingVSToPS, Output);
 
+	Output.Position=TransformWorldToHClip(TransformObjectToWorld(Input.Position));
+	//return;
+	
 #ifdef _TERRAIN_LODCULL
 	FLOAT inRangeMask = InRange(Input.uv0,_TerrainLodCull);
 	if(inRangeMask>0.99)

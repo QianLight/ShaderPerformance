@@ -39,7 +39,7 @@ public class DomesticConfigSetting : BaseSDKConfigSetting
 
     public override void androidSaveConfigToPluginAssets()
     {
-        
+        return;   
         DomesticConfig domesticConfig = new AndroidSaveConfig().androidSaveConfigToPluginAssets(_sdkConfigModule);
         string dir = Path.Combine(GMSDKEnv.Instance.PATH_PUGLIN_ANDROID, "assets");
         if (!Directory.Exists(dir))
